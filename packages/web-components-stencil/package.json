@@ -1,0 +1,50 @@
+{
+  "name": "@example/web-components-stencil",
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "Stencil web components bundle based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/components.d.ts",
+  "collection": "./dist/collection/collection-manifest.json",
+  "collection:main": "./dist/collection/collection-manifest.json",
+  "unpkg": "./dist/example/example.esm.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/example.git",
+    "directory": "packages/web-components-stencil"
+  },
+  "scripts": {
+    "build": "npm-run-all clean build:**",
+    "build:stencil": "stencil build",
+    "build:typescript": "tsc",
+    "clean": "rimraf dist/ ../web-components-react/src/components.ts ../web-components-react/src/react-component-lib/",
+    "start": "stencil build --dev --watch --serve",
+    "watch": "npm-run-all --parallel watch:**",
+    "watch:stencil": "chokidar --follow-symlinks --initial --command 'pnpm run build:stencil' '../../components/**/*.(js|jsx|ts|tsx)'",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@example/components-css": "workspace:*",
+    "@stencil/react-output-target": "0.5.3",
+    "@stencil/sass": "3.0.12",
+    "@types/jest": "29.5.12",
+    "chokidar-cli": "3.0.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "6.0.1",
+    "tslib": "2.6.3",
+    "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "@stencil/core": "4.20.0"
+  }
+}

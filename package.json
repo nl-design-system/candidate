@@ -1,0 +1,81 @@
+{
+  "name": "@example/design-system",
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "Design system based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/example.git",
+    "directory": "."
+  },
+  "engines": {
+    "node": "^20",
+    "pnpm": "^9"
+  },
+  "workspaces": [
+    "./packages/*",
+    "./proprietary/*"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "2.27.7",
+    "@types/node": "22.2.0",
+    "@typescript-eslint/eslint-plugin": "8.1.0",
+    "@typescript-eslint/parser": "8.1.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-json": "3.1.0",
+    "eslint-plugin-mdx": "3.1.5",
+    "eslint-plugin-react": "7.35.0",
+    "husky": "9.1.4",
+    "lint-staged": "15.2.9",
+    "markdownlint-cli": "0.41.0",
+    "npm-check-updates": "17.0.6",
+    "npm-package-json-lint": "8.0.0",
+    "npm-run-all": "4.1.5",
+    "postcss": "8.4.41",
+    "prettier": "3.3.3",
+    "stylelint": "16.8.1",
+    "stylelint-config-standard-scss": "13.1.0",
+    "stylelint-order": "6.0.4",
+    "typescript": "5.5.4"
+  },
+  "scripts": {
+    "build": "pnpm --recursive run build",
+    "clean": "pnpm --recursive run clean",
+    "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
+    "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
+    "lint:js": "eslint --ext .js,.cjs,.mjs,.json,.jsx,.mdx,.ts,.tsx --report-unused-disable-directives .",
+    "lint:md": "markdownlint '**/*.md'",
+    "lint:package-json": "npmPkgJsonLint .",
+    "lint:package-lock": "pnpm ls --recursive",
+    "lint-fix": "npm-run-all --continue-on-error lint-fix:** prettier",
+    "lint-fix:css": "stylelint --fix '**/*.{css,scss}'",
+    "lint-fix:js": "eslint --ext .js,.cjs,.mjs,.json,.jsx,.mdx,.ts,.tsx --fix --report-unused-disable-directives .",
+    "lint-fix:md": "markdownlint --fix '**/*.md'",
+    "lint-workspaces": "pnpm --recursive --if-present run lint",
+    "lint-build": "pnpm --recursive --if-present run lint-build",
+    "prepare": "husky",
+    "prettier": "prettier --write .",
+    "publish:changeset": "changeset publish",
+    "start": "http-server packages/storybook/dist/",
+    "storybook": "npm-run-all --parallel watch:**",
+    "test": "pnpm run test-workspaces",
+    "test-update": "npm-run-all --sequential clean lint build test",
+    "test-workspaces": "pnpm --recursive --if-present run test",
+    "update-patch": "npm-check-updates --configFileName .ncurc.patch.cjs",
+    "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",
+    "update-major": "npm-check-updates --configFileName .ncurc.major.cjs",
+    "watch:storybook": "pnpm --filter @example/web-components-stencil run build:stencil && pnpm --filter @example/design-tokens run build:style-dictionary && pnpm --filter ./packages/storybook run storybook",
+    "watch:style-dictionary": "pnpm --filter @example/design-tokens run watch:style-dictionary"
+  },
+  "dependencies": {
+    "http-server": "14.1.1"
+  },
+  "packageManager": "pnpm@9.7.0"
+}

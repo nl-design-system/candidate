@@ -1,0 +1,32 @@
+{
+  "name": "@example/design-tokens",
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "Example design tokens",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/example.git",
+    "directory": "proprietary/design-tokens"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "npm-run-all clean build:**",
+    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
+    "watch": "npm-run-all watch:**",
+    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'pnpm run build' 'src/**/*.tokens.json'"
+  },
+  "devDependencies": {
+    "chokidar-cli": "3.0.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "6.0.1",
+    "style-dictionary": "3.9.2"
+  }
+}
