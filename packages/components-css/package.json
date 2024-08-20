@@ -1,6 +1,6 @@
 {
-  "name": "@example/components-css",
-  "version": "1.0.0-alpha.0",
+  "name": "@nl-design-system-candidate/components-css",
+  "version": "1.0.0",
   "author": "Community for NL Design System",
   "description": "CSS Components for a design system based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -10,7 +10,7 @@
   "private": true,
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/example.git",
+    "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/components-css"
   }
 }

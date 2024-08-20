@@ -1,6 +1,5 @@
 {
-  "name": "@example/design-system",
-  "version": "1.0.0-alpha.0",
+  "name": "@nl-design-system-candidate/design-system",
   "author": "Community for NL Design System",
   "description": "Design system based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -10,7 +9,7 @@
   "private": true,
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/example.git",
+    "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "."
   },
   "engines": {
@@ -71,8 +70,8 @@
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.cjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs",
-    "watch:storybook": "pnpm --filter @example/web-components-stencil run build:stencil && pnpm --filter @example/design-tokens run build:style-dictionary && pnpm --filter ./packages/storybook run storybook",
-    "watch:style-dictionary": "pnpm --filter @example/design-tokens run watch:style-dictionary"
+    "watch:storybook": "pnpm --filter @nl-design-system-candidate/web-components-stencil run build:stencil && pnpm --filter @nl-design-system-candidate/design-tokens run build:style-dictionary && pnpm --filter @nl-design-system-candidate/storybook run storybook",
+    "watch:style-dictionary": "pnpm --filter @nl-design-system-candidate/design-tokens run watch:style-dictionary"
   },
   "dependencies": {
     "http-server": "14.1.1"

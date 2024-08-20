@@ -1,5 +1,5 @@
 {
-  "name": "@example/storybook",
+  "name": "@nl-design-system-candidate/storybook",
   "author": "Community for NL Design System",
   "description": "Storybook based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -9,7 +9,7 @@
   "private": true,
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/example.git",
+    "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/storybook"
   },
   "scripts": {
@@ -21,12 +21,12 @@
   "devDependencies": {
     "@babel/core": "7.25.2",
     "@etchteam/storybook-addon-status": "5.0.0",
-    "@example/assets": "workspace:*",
-    "@example/components-css": "workspace:*",
-    "@example/design-tokens": "workspace:*",
-    "@example/font": "workspace:*",
-    "@example/web-components-react": "workspace:*",
-    "@example/web-components-stencil": "workspace:*",
+    "@nl-design-system-candidate/assets": "workspace:*",
+    "@nl-design-system-candidate/components-css": "workspace:*",
+    "@nl-design-system-candidate/design-tokens": "workspace:*",
+    "@nl-design-system-candidate/font": "workspace:*",
+    "@nl-design-system-candidate/web-components-react": "workspace:*",
+    "@nl-design-system-candidate/web-components-stencil": "workspace:*",
     "@storybook/addon-a11y": "8.2.9",
     "@storybook/addon-actions": "8.2.9",
     "@storybook/addon-docs": "8.2.9",

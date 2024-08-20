@@ -1,6 +1,6 @@
-import '@example/design-tokens/dist/index.css';
-import '@example/font/src/index.scss';
-import { defineCustomElements } from '@example/web-components-stencil/loader/index.js';
+import '@nl-design-system-candidate/design-tokens/dist/index.css';
+import '@nl-design-system-candidate/font/src/index.scss';
+import { defineCustomElements } from '@nl-design-system-candidate/web-components-stencil/loader/index.js';
 import type { Preview } from '@storybook/react';
 import { ParametersArgsDecorator } from './ParametersArgsDecorator';
 
