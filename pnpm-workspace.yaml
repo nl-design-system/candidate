@@ -1,4 +1,3 @@
 packages:
-  - "components/**"
-  - "packages/*"
-  - "proprietary/*"
+  - packages/*
+  - packages/components-react/*
