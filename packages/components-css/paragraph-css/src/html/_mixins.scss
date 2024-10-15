@@ -1,0 +1,7 @@
+@import "../mixins";
+
+@mixin p {
+  p {
+    @include nl-paragraph;
+  }
+}
