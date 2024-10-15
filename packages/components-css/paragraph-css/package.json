@@ -1,0 +1,24 @@
+{
+  "name": "@nl-design-system-candidate/paragraph-css",
+  "version": "1.0.0",
+  "description": "Styles for Paragraph component",
+  "license": "EUPL-1.2",
+  "private": true,
+  "files": [
+    "./dist/",
+    "./src/"
+  ],
+  "exports": {
+    "./*.css": "./dist/*.css",
+    "./*.scss": "./src/*.scss"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-css/paragraph-css"
+  },
+  "scripts": {
+    "build": "sass ./src/:./dist/",
+    "clean": "rimraf ./dist/"
+  }
+}

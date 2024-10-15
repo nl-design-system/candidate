@@ -1,0 +1,17 @@
+@import "./mixins";
+
+.nl-paragraph {
+  @include nl-paragraph;
+}
+
+.nl-paragraph--lead {
+  @include nl-paragraph--lead;
+}
+
+.nl-paragraph--small {
+  @include nl-paragraph--small;
+}
+
+.nl-paragraph__b {
+  @include nl-paragraph__b;
+}
