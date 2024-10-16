@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Displays a paragraph of text",
   "license": "EUPL-1.2",
-  "private": true,
   "type": "module",
   "main": "./dist/paragraph.js",
   "files": [
