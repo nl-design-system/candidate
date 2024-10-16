@@ -23,6 +23,9 @@
     "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/components-react/paragraph-react"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs",
     "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/",
