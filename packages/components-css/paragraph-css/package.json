@@ -16,6 +16,9 @@
     "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/components-css/paragraph-css"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "sass ./src/:./dist/",
     "clean": "rimraf ./dist/"
