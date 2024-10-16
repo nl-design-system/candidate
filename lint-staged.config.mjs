@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   '*': 'prettier --ignore-unknown --write',
   'package.json': 'npmPkgJsonLint --allowEmptyTargets',
   '*.md': 'markdownlint',
