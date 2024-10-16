@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Styles for Paragraph component",
   "license": "EUPL-1.2",
-  "private": true,
   "files": [
     "./dist/",
     "./src/"
