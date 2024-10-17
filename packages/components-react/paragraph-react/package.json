@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/paragraph-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Displays a paragraph of text",
   "license": "EUPL-1.2",
   "type": "module",
