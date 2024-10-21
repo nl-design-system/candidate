@@ -14,7 +14,7 @@
   },
   "packageManager": "pnpm@9.12.1",
   "engines": {
-    "//comment": "Update @types/node when updating this node version",
+    "//": "Update @types/node when updating this node version",
     "node": "^20",
     "pnpm": "^9"
   },
