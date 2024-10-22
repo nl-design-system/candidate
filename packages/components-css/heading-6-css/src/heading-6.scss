@@ -1,0 +1,5 @@
+@use "./mixins";
+
+.nl-heading-6 {
+  @include mixins.nl-heading-6;
+}
