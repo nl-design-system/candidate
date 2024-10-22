@@ -1,0 +1,28 @@
+{
+  "name": "@nl-design-system-candidate/heading-3-css",
+  "version": "0.0.0",
+  "description": "Styles for Paragraph component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-css/heading-3-css#readme",
+  "files": [
+    "./dist/",
+    "./src/"
+  ],
+  "exports": {
+    "./*.css": "./dist/*.css",
+    "./*.scss": "./src/*.scss"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-css/heading-3-css"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "sass ./src/:./dist/",
+    "clean": "rimraf ./dist/"
+  }
+}
