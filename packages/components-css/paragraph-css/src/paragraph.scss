@@ -1,17 +1,17 @@
-@import "./mixins";
+@use "mixins";
 
 .nl-paragraph {
-  @include nl-paragraph;
+  @include mixins.nl-paragraph;
 }
 
 .nl-paragraph--lead {
-  @include nl-paragraph--lead;
+  @include mixins.nl-paragraph--lead;
 }
 
 .nl-paragraph--small {
-  @include nl-paragraph--small;
+  @include mixins.nl-paragraph--small;
 }
 
 .nl-paragraph__b {
-  @include nl-paragraph__b;
+  @include mixins.nl-paragraph__b;
 }
