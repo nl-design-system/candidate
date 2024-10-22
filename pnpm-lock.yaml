@@ -142,6 +142,8 @@ importers:
 
   packages/components-css/heading-3-css: {}
 
+  packages/components-css/heading-4-css: {}
+
   packages/components-css/paragraph-css: {}
 
   packages/components-react/heading-1-react:
@@ -194,6 +196,25 @@ importers:
       '@nl-design-system-candidate/heading-3-css':
         specifier: workspace:*
         version: link:../../components-css/heading-3-css
+      '@types/react':
+        specifier: 18.3.11
+        version: 18.3.11
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+
+  packages/components-react/heading-4-react:
+    dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+    devDependencies:
+      '@babel/runtime':
+        specifier: 7.25.7
+        version: 7.25.7
+      '@nl-design-system-candidate/heading-4-css':
+        specifier: workspace:*
+        version: link:../../components-css/heading-4-css
       '@types/react':
         specifier: 18.3.11
         version: 18.3.11
