@@ -1,0 +1,20 @@
+{
+  "name": "@nl-design-system-candidate/paragraph-tokens",
+  "version": "0.0.0",
+  "description": "Design tokens voor het Paragraph component",
+  "license": "EUPL-1.2",
+  "main": "./tokens.json",
+  "exports": "./tokens.json",
+  "files": [
+    "./tokens.json"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/tokens/paragraph-tokens"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}
