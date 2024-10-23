@@ -145,6 +145,8 @@ importers:
 
   packages/components-css/link-css: {}
 
+  packages/components-css/mark-css: {}
+
   packages/components-css/paragraph-css: {}
 
   packages/components-css/skip-link-css: {}
@@ -347,6 +349,25 @@ importers:
       '@nl-design-system-candidate/link-css':
         specifier: workspace:*
         version: link:../../components-css/link-css
+      '@types/react':
+        specifier: 18.3.11
+        version: 18.3.11
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+
+  packages/components-react/mark-react:
+    dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+    devDependencies:
+      '@babel/runtime':
+        specifier: 7.25.7
+        version: 7.25.7
+      '@nl-design-system-candidate/mark-css':
+        specifier: workspace:*
+        version: link:../../components-css/mark-css
       '@types/react':
         specifier: 18.3.11
         version: 18.3.11
