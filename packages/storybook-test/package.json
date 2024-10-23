@@ -1,0 +1,28 @@
+{
+  "name": "@nl-design-system-candidate/storybook-tests",
+  "description": "Storybook for extensive visual regression testing",
+  "license": "EUPL-1.2",
+  "type": "module",
+  "scripts": {
+    "build": "storybook build --config-dir ./config/ --output-dir ./dist/",
+    "clean": "rimraf ./dist/",
+    "start": "storybook dev --config-dir ./config/ --port 6007"
+  },
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/storybook-tests"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "8.3.5",
+    "@storybook/react": "8.3.5",
+    "@storybook/react-vite": "8.3.5",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "storybook": "8.3.5",
+    "vite": "5.4.9"
+  }
+}
