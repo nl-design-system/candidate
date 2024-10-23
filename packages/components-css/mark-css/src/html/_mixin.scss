@@ -1,0 +1,7 @@
+@use "../mixin";
+
+@mixin mark {
+  mark {
+    @include mixin.nl-mark;
+  }
+}
