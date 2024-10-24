@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 import type { HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
 
-type Heading5Props = HTMLAttributes<HTMLHeadingElement>;
+export type Heading5Props = HTMLAttributes<HTMLHeadingElement>;
 
 export const Heading5 = forwardRef<HTMLHeadingElement, Heading5Props>(function Heading5(props, forwardedRef) {
   const { children, className, ...restProps } = props;
