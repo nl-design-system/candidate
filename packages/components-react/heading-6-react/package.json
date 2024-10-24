@@ -1,0 +1,50 @@
+{
+  "name": "@nl-design-system-candidate/heading-6-react",
+  "version": "0.0.0",
+  "description": "",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/heading-6-react#readme",
+  "type": "module",
+  "main": "./dist/heading-6.js",
+  "files": [
+    "./dist/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/heading-6.d.ts",
+      "import": "./dist/heading-6.js"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.js"
+    }
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-react/heading-6-react"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup --config ./rollup.config.mjs",
+    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/",
+    "test": "jest",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.25.7",
+    "@nl-design-system-candidate/heading-6-css": "workspace:*",
+    "@types/react": "18.3.11",
+    "react": "18.3.1"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7",
+    "react": "^18"
+  },
+  "dependencies": {
+    "clsx": "2.1.1"
+  }
+}
