@@ -162,6 +162,15 @@ importers:
       '@etchteam/storybook-addon-status':
         specifier: 5.0.0
         version: 5.0.0
+      '@fontsource/fira-sans':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@fontsource/source-serif-pro':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@nl-design-system-unstable/voorbeeld-design-tokens':
+        specifier: 3.1.0
+        version: 3.1.0
       '@storybook/addon-a11y':
         specifier: 8.3.5
         version: 8.3.5(storybook@8.3.5)
@@ -1143,6 +1152,12 @@ packages:
   '@etchteam/storybook-addon-status@5.0.0':
     resolution: {integrity: sha512-0Dg94xQ3T+rYTi6ekFkaH0XU9k0IQOqidiSmwN47Oqw4u1qjxK6m7wV3j7C0deLEuf4U4PrAcsDfDjyehKne2A==}
 
+  '@fontsource/fira-sans@5.1.0':
+    resolution: {integrity: sha512-qfAjF5WcrL6qQh9eIWLK7lOh9wbCgCnVWh2Nu2gozrTgsUgYBLR8sbCGYwlK1K0yZoQsR2i9VSiQ16wwPCBkSw==}
+
+  '@fontsource/source-serif-pro@5.1.0':
+    resolution: {integrity: sha512-t8bZNbn5qFm0dOVBijRS4AuLFUvPk/wVy6U+hYc7ZfiA+0AfKvO+TRfFdL7ZYPNdZPtvHDQXPmrfge1xFEK2kQ==}
+
   '@humanfs/core@0.19.0':
     resolution: {integrity: sha512-2cbWIHbZVEweE853g8jymffCA+NCMiuqeECeBBLm8dg2oFdjuGJhgN4UAbI+6v0CKbbhvtXA4qV8YR5Ji86nmw==}
     engines: {node: '>=18.18.0'}
@@ -1275,6 +1290,9 @@ packages:
     peerDependencies:
       '@types/react': '>=16'
       react: '>=16'
+
+  '@nl-design-system-unstable/voorbeeld-design-tokens@3.1.0':
+    resolution: {integrity: sha512-FiJvNzCnG3bO/cCm3ZhggCpS8H4d7CPRXe99f5BEj+3cOeM+lPZvU6qMGgevU7x1BrnfzBwzB4S4TtB8IgcGBA==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -6903,6 +6921,10 @@ snapshots:
     dependencies:
       lodash: 4.17.21
 
+  '@fontsource/fira-sans@5.1.0': {}
+
+  '@fontsource/source-serif-pro@5.1.0': {}
+
   '@humanfs/core@0.19.0': {}
 
   '@humanfs/node@0.16.5':
@@ -7143,6 +7165,8 @@ snapshots:
       '@types/mdx': 2.0.5
       '@types/react': 18.3.11
       react: 18.3.1
+
+  '@nl-design-system-unstable/voorbeeld-design-tokens@3.1.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

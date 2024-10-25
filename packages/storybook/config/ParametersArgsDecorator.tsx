@@ -4,7 +4,7 @@ export const ParametersArgsDecorator: Decorator = (Story, context) => {
   context.parameters['args'] = context.args;
 
   return (
-    <div className="example-theme">
+    <div className="voorbeeld-theme">
       <Story />
     </div>
   );
