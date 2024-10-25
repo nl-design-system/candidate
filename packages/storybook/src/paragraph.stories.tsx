@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Paragraph } from '../../components-react/paragraph-react/src/paragraph';
+import { Paragraph } from '../../components-react/paragraph-react/src/css';
 
 const meta = {
   component: Paragraph,

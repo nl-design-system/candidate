@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/react';
 import { ParametersArgsDecorator } from './ParametersArgsDecorator';
+import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
+import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
 
 const preview: Preview = {
   parameters: {
