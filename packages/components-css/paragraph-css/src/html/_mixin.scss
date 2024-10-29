@@ -1,0 +1,7 @@
+@use "../mixin";
+
+@mixin p {
+  p {
+    @include mixin.nl-paragraph;
+  }
+}
