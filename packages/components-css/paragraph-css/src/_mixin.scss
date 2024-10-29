@@ -16,7 +16,7 @@
 }
 
 @mixin nl-paragraph--small {
-  color: var(--nl-paragraph-small-color, var(--nl-paragraph-color,  inherit));
+  color: var(--nl-paragraph-small-color, var(--nl-paragraph-color, inherit));
   font-size: var(--nl-paragraph-small-font-size, var(--nl-paragraph-font-size, inherit));
   font-weight: var(--nl-paragraph-small-font-weight, var(--nl-paragraph-font-weight, inherit));
   line-height: var(--nl-paragraph-small-line-height, var(--nl-paragraph-line-height, inherit));

@@ -1,17 +1,17 @@
-@use "mixins";
+@use "mixin";
 
 .nl-paragraph {
-  @include mixins.nl-paragraph;
+  @include mixin.nl-paragraph;
 }
 
 .nl-paragraph--lead {
-  @include mixins.nl-paragraph--lead;
+  @include mixin.nl-paragraph--lead;
 }
 
 .nl-paragraph--small {
-  @include mixins.nl-paragraph--small;
+  @include mixin.nl-paragraph--small;
 }
 
 .nl-paragraph__b {
-  @include mixins.nl-paragraph__b;
+  @include mixin.nl-paragraph__b;
 }
