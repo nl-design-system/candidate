@@ -9,10 +9,15 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   appearance?: HeadingAppearance;
 }
 
-export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(function Heading(props, forwardedRef) {
-  const { level, appearance = `level-${level}`, className: extraClassName, children, ...restProps } = props;
-  const type = `h${level}` as keyof JSX.IntrinsicElements;
-  const className = `nl-heading-${appearance.split('-')[1]}`;
+const appearanceToHeading = (appearance: HeadingAppearance) => appearance.replace('level', 'nl-heading');
 
-  return createElement(type, { className: clsx(className, extraClassName), ref: forwardedRef, ...restProps }, children);
+export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(function Heading(props, forwardedRef) {
+  const { level, appearance = `level-${level}`, className, children, ...restProps } = props;
+  const type = `h${level}` as keyof JSX.IntrinsicElements;
+
+  return createElement(
+    type,
+    { className: clsx(appearanceToHeading(appearance), className), ref: forwardedRef, ...restProps },
+    children,
+  );
 });
