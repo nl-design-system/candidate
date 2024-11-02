@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "@nl-design-system/tsconfig",
   "compilerOptions": {
     "module": "esnext",
     "moduleResolution": "bundler"

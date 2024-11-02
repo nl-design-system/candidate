@@ -33,6 +33,9 @@ importers:
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.0
         version: 1.0.0(@types/babel__core@7.20.5)(postcss@8.4.47)(rollup@4.24.0)(tslib@2.6.3)(typescript@5.6.3)
+      '@nl-design-system/tsconfig':
+        specifier: 1.0.0
+        version: 1.0.0
       '@testing-library/dom':
         specifier: 10.4.0
         version: 10.4.0
@@ -1524,6 +1527,9 @@ packages:
     resolution: {integrity: sha512-suDpyI3lpJ7IXjmRwyhdXDrVHeFzHW5yVPmcElA3lorw1HUSzb2+JaR/TkVi+Nr5tWjqGQDR7oF3jSsRLL+rwQ==}
     peerDependencies:
       rollup: 4.24.3
+
+  '@nl-design-system/tsconfig@1.0.0':
+    resolution: {integrity: sha512-dcs9mKnGL+FIf+9YBPe+s+LcEK4kSt/eIxGao4MU4Lq95cbqK2t4aD7NFw4JymZT6sz72S/xWT0SIAo9dcvJig==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -7472,6 +7478,8 @@ snapshots:
       - ts-node
       - tslib
       - typescript
+
+  '@nl-design-system/tsconfig@1.0.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
