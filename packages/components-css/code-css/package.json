@@ -1,0 +1,27 @@
+{
+  "name": "@nl-design-system-candidate/code-css",
+  "version": "1.0.2",
+  "description": "CSS voor het Code component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-css/code-css#readme",
+  "files": [
+    "./dist/",
+    "./src/"
+  ],
+  "exports": {
+    "./*.css": "./dist/*.css",
+    "./*.scss": "./src/*.scss"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-css/code-css"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "sass ./src/:./dist/",
+    "clean": "rimraf ./dist/"
+  }
+}

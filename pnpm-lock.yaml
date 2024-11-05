@@ -127,6 +127,8 @@ importers:
         specifier: 8.9.0
         version: 8.9.0(eslint@9.12.0)(typescript@5.6.3)
 
+  packages/components-css/code-css: {}
+
   packages/components-css/heading-1-css: {}
 
   packages/components-css/heading-2-css: {}
@@ -144,6 +146,25 @@ importers:
   packages/components-css/paragraph-css: {}
 
   packages/components-css/skip-link-css: {}
+
+  packages/components-react/code-react:
+    dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+    devDependencies:
+      '@babel/runtime':
+        specifier: 7.25.7
+        version: 7.25.7
+      '@nl-design-system-candidate/code-css':
+        specifier: workspace:*
+        version: link:../../components-css/code-css
+      '@types/react':
+        specifier: 18.3.11
+        version: 18.3.11
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
 
   packages/components-react/heading-1-react:
     dependencies:
@@ -349,6 +370,8 @@ importers:
       react:
         specifier: 18.3.1
         version: 18.3.1
+
+  packages/docs/paragraph-docs: {}
 
   packages/storybook:
     devDependencies:
