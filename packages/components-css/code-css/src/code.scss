@@ -1,0 +1,5 @@
+@use "mixin";
+
+.nl-code {
+  @include mixin.nl-code;
+}

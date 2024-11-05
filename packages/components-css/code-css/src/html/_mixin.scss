@@ -1,0 +1,7 @@
+@use "../mixin";
+
+@mixin code {
+  code {
+    @include mixin.nl-code;
+  }
+}
