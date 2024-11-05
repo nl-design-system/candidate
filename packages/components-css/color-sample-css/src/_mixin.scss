@@ -1,0 +1,3 @@
+@mixin nl-color-sample {
+  background-color: var(--nl-color-sample-background-color, currentcolor);
+}
