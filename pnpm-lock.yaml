@@ -131,6 +131,8 @@ importers:
 
   packages/components-css/code-css: {}
 
+  packages/components-css/color-sample-css: {}
+
   packages/components-css/heading-1-css: {}
 
   packages/components-css/heading-2-css: {}
@@ -180,6 +182,25 @@ importers:
       '@nl-design-system-candidate/code-css':
         specifier: workspace:*
         version: link:../../components-css/code-css
+      '@types/react':
+        specifier: 18.3.11
+        version: 18.3.11
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+
+  packages/components-react/color-sample-react:
+    dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+    devDependencies:
+      '@babel/runtime':
+        specifier: 7.25.7
+        version: 7.25.7
+      '@nl-design-system-candidate/color-sample-css':
+        specifier: workspace:*
+        version: link:../../components-css/color-sample-css
       '@types/react':
         specifier: 18.3.11
         version: 18.3.11
