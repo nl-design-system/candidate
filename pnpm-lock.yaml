@@ -140,6 +140,8 @@ importers:
 
   packages/components-css/paragraph-css: {}
 
+  packages/components-css/skip-link-css: {}
+
   packages/components-react/heading-1-react:
     dependencies:
       clsx:
@@ -319,6 +321,25 @@ importers:
       '@nl-design-system-candidate/paragraph-css':
         specifier: workspace:*
         version: link:../../components-css/paragraph-css
+      '@types/react':
+        specifier: 18.3.11
+        version: 18.3.11
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+
+  packages/components-react/skip-link-react:
+    dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+    devDependencies:
+      '@babel/runtime':
+        specifier: 7.25.7
+        version: 7.25.7
+      '@nl-design-system-candidate/skip-link-css':
+        specifier: workspace:*
+        version: link:../../components-css/skip-link-css
       '@types/react':
         specifier: 18.3.11
         version: 18.3.11
