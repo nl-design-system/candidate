@@ -3,8 +3,18 @@ import { Paragraph } from '../../components-react/paragraph-react/src/css';
 
 const meta = {
   component: Paragraph,
+  tags: ['autodocs'],
+  argTypes: {
+    children: { table: { category: 'API' } },
+    purpose: {
+      options: [undefined, 'lead'],
+      control: { type: 'select', labels: { undefined: '(undefined)' } },
+      table: { category: 'API' },
+    },
+  },
   args: {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
+    purpose: undefined,
   },
 } satisfies Meta<typeof Paragraph>;
 
@@ -14,6 +24,4 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const Lead: Story = { args: { appearance: 'lead' } };
-
-export const Small: Story = { args: { appearance: 'small' } };
+export const Lead: Story = { args: { purpose: 'lead' } };

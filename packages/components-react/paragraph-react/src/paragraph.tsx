@@ -1,31 +1,23 @@
 import { clsx } from 'clsx';
-import { forwardRef } from 'react';
 import type { HTMLAttributes } from 'react';
+import { forwardRef } from 'react';
 
-export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
-  appearance?: 'lead' | 'small';
+export type ParagraphPurpose = 'lead';
+
+interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
+  purpose?: ParagraphPurpose;
 }
 
 export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(function Paragraph(props, forwardedRef) {
-  const { appearance, children, className, ...restProps } = props;
+  const { purpose, children, className, ...restProps } = props;
 
   return (
     <p
-      className={clsx(
-        'nl-paragraph',
-        { ['nl-paragraph--lead']: appearance === 'lead', ['nl-paragraph--small']: appearance === 'small' },
-        className,
-      )}
+      className={clsx('nl-paragraph', { ['nl-paragraph--lead']: purpose === 'lead' }, className)}
       ref={forwardedRef}
       {...restProps}
     >
-      {appearance === 'lead' ? (
-        <b className="nl-paragraph__b">{children}</b>
-      ) : appearance === 'small' ? (
-        <small className="nl-paragraph__small">{children}</small>
-      ) : (
-        children
-      )}
+      {purpose === 'lead' ? <b className="nl-paragraph__b">{children}</b> : children}
     </p>
   );
 });
