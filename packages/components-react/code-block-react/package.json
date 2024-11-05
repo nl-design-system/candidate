@@ -1,0 +1,51 @@
+{
+  "name": "@nl-design-system-candidate/code-block-react",
+  "version": "0.0.0",
+  "description": "Blok met 1 of meerdere regels computercode.",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/code-block-react#readme",
+  "type": "module",
+  "main": "./dist/code-block.js",
+  "files": [
+    "./dist/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/code-block.d.ts",
+      "import": "./dist/code-block.js"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.js"
+    }
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-react/code-block-react"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup --config ./rollup.config.mjs",
+    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.25.7",
+    "@nl-design-system-candidate/code-block-css": "workspace:*",
+    "@types/react": "18.3.11",
+    "react": "18.3.1"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7",
+    "react": "^18"
+  },
+  "dependencies": {
+    "clsx": "2.1.1"
+  }
+}
