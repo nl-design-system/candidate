@@ -133,6 +133,8 @@ importers:
 
   packages/components-css/color-sample-css: {}
 
+  packages/components-css/data-badge-css: {}
+
   packages/components-css/heading-1-css: {}
 
   packages/components-css/heading-2-css: {}
@@ -203,6 +205,25 @@ importers:
       '@nl-design-system-candidate/color-sample-css':
         specifier: workspace:*
         version: link:../../components-css/color-sample-css
+      '@types/react':
+        specifier: 18.3.11
+        version: 18.3.11
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+
+  packages/components-react/data-badge-react:
+    dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+    devDependencies:
+      '@babel/runtime':
+        specifier: 7.25.7
+        version: 7.25.7
+      '@nl-design-system-candidate/data-badge-css':
+        specifier: workspace:*
+        version: link:../../components-css/data-badge-css
       '@types/react':
         specifier: 18.3.11
         version: 18.3.11

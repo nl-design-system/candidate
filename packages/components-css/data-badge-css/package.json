@@ -1,0 +1,28 @@
+{
+  "name": "@nl-design-system-candidate/data-badge-css",
+  "version": "0.0.0",
+  "description": "CSS voor het Data Badge component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-css/data-badge-css#readme",
+  "files": [
+    "./dist/",
+    "./src/"
+  ],
+  "exports": {
+    "./*.css": "./dist/*.css",
+    "./*.scss": "./src/*.scss"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-css/data-badge-css"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "sass ./src/:./dist/",
+    "clean": "rimraf ./dist/"
+  }
+}
