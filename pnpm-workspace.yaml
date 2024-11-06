@@ -2,3 +2,4 @@ packages:
   - packages/*
   - packages/components-react/*
   - packages/components-css/*
+  - packages/docs/*
