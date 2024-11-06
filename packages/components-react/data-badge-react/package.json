@@ -1,0 +1,51 @@
+{
+  "name": "@nl-design-system-candidate/data-badge-react",
+  "version": "0.0.0",
+  "description": "Label met extra informatie, zoals een categorie of een eigenschap.",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/data-badge-react#readme",
+  "type": "module",
+  "main": "./dist/data-badge.js",
+  "files": [
+    "./dist/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/data-badge.d.ts",
+      "import": "./dist/data-badge.js"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.js"
+    }
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-react/data-badge-react"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup --config ./rollup.config.mjs",
+    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.25.7",
+    "@nl-design-system-candidate/data-badge-css": "workspace:*",
+    "@types/react": "18.3.11",
+    "react": "18.3.1"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7",
+    "react": "^18"
+  },
+  "dependencies": {
+    "clsx": "2.1.1"
+  }
+}

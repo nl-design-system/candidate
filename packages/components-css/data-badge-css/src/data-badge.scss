@@ -1,0 +1,5 @@
+@use "./mixin";
+
+.nl-data-badge {
+  @include mixin.nl-data-badge;
+}
