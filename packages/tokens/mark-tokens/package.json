@@ -1,0 +1,18 @@
+{
+  "name": "@nl-design-system-candidate/mark-tokens",
+  "version": "0.0.0",
+  "description": "Design tokens voor het Mark component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/mark-tokens#readme",
+  "main": "./tokens.json",
+  "exports": "./tokens.json",
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/tokens/mark-tokens"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}
