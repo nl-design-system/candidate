@@ -83,10 +83,10 @@ headingLevels.forEach((level) => {
       expect(heading).toHaveClass('nl-heading', `nl-heading--level-${level}`, extraClassName);
     });
 
-    it('forwards React refs to the HTMLHeading heading element', () => {
+    it('forwards React refs to the HTMLHeadingElement', () => {
       const ref = createRef<HTMLHeadingElement>();
-      const { container } = render(<Heading level={level} ref={ref} />);
-      const heading = container.querySelector(':only-child');
+      render(<Heading level={level} ref={ref} />);
+      const heading = screen.getByRole('heading');
 
       expect(ref.current).toBe(heading);
       expect(ref.current).toBeInstanceOf(HTMLHeadingElement);
