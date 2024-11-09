@@ -1,0 +1,25 @@
+{
+  "name": "@nl-design-system-candidate/mark-docs",
+  "version": "0.0.0",
+  "description": "Documentatie voor het Mark component",
+  "license": "CC0-1.0",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/mark-docs#readme",
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "mark",
+    "mark-component"
+  ],
+  "files": [
+    "./docs/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/docs/mark-docs"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@nl-design-system-candidate/link-docs",
+  "version": "0.0.0",
+  "description": "Documentatie voor het Link component",
+  "license": "CC0-1.0",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/link-docs#readme",
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "link",
+    "link-component"
+  ],
+  "files": [
+    "./docs/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/docs/link-docs"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}

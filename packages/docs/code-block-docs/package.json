@@ -1,0 +1,25 @@
+{
+  "name": "@nl-design-system-candidate/code-block-docs",
+  "version": "0.0.0",
+  "description": "Documentatie voor het Code Block component",
+  "license": "CC0-1.0",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/code-block-docs#readme",
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "code-block",
+    "code-block-component"
+  ],
+  "files": [
+    "./docs/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/docs/code-block-docs"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}

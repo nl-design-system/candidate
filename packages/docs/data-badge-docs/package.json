@@ -1,0 +1,25 @@
+{
+  "name": "@nl-design-system-candidate/data-badge-docs",
+  "version": "0.0.0",
+  "description": "Documentatie voor het Data Badge component",
+  "license": "CC0-1.0",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/data-badge-docs#readme",
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "data-badge",
+    "data-badge-component"
+  ],
+  "files": [
+    "./docs/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/docs/data-badge-docs"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}
