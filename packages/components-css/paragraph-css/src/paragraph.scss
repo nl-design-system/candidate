@@ -12,6 +12,6 @@
   @include mixin.nl-paragraph--small;
 }
 
-.nl-paragraph__b {
-  @include mixin.nl-paragraph__b;
+.nl-paragraph__lead {
+  @include mixin.nl-paragraph__lead-scss-workaround;
 }

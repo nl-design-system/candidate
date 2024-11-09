@@ -17,7 +17,7 @@ export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(functi
       ref={forwardedRef}
       {...restProps}
     >
-      {purpose === 'lead' ? <b className="nl-paragraph__b">{children}</b> : children}
+      {purpose === 'lead' ? <b className="nl-paragraph__lead">{children}</b> : children}
     </p>
   );
 });
