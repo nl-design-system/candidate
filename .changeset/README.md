@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Changeset sjabloon
 
 Kopieer en plak het onderstaande sjabloon. Je kunt hiervoor de kopieer knop linksboven in het template gebruiken.
