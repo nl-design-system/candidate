@@ -1,5 +1,5 @@
-import { clsx } from 'clsx';
 import type { DataHTMLAttributes, ForwardedRef, HTMLAttributes, TimeHTMLAttributes } from 'react';
+import { clsx } from 'clsx';
 import { forwardRef } from 'react';
 
 interface DataBadgePropsForTime extends TimeHTMLAttributes<HTMLTimeElement> {

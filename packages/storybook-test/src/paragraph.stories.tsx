@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Paragraph } from '../../components-react/paragraph-react/src/paragraph';
 
 const meta = {
-  component: Paragraph,
   args: {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
   },
+  component: Paragraph,
 } satisfies Meta<typeof Paragraph>;
 
 export default meta;

@@ -2,20 +2,20 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Paragraph } from '../../components-react/paragraph-react/src/css';
 
 const meta = {
-  component: Paragraph,
-  tags: ['autodocs'],
-  argTypes: {
-    children: { table: { category: 'API' } },
-    purpose: {
-      options: [undefined, 'lead'],
-      control: { type: 'select', labels: { undefined: '(undefined)' } },
-      table: { category: 'API' },
-    },
-  },
   args: {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
     purpose: undefined,
   },
+  argTypes: {
+    children: { table: { category: 'API' } },
+    purpose: {
+      control: { labels: { undefined: '(undefined)' }, type: 'select' },
+      options: [undefined, 'lead'],
+      table: { category: 'API' },
+    },
+  },
+  component: Paragraph,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Paragraph>;
 
 export default meta;

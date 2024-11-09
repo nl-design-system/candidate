@@ -66,7 +66,7 @@ headingLevels.forEach((level) => {
     it(`supports hiding the HTML h${level} element visually and from the accessibility tree using the global HTML attribute "hidden"`, () => {
       expect.assertions(2);
       render(<Heading level={level} hidden />);
-      const heading = screen.getByRole('heading', { level, hidden: true });
+      const heading = screen.getByRole('heading', { hidden: true, level });
 
       try {
         screen.getByRole('heading', { level });
