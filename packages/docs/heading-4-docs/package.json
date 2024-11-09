@@ -1,0 +1,25 @@
+{
+  "name": "@nl-design-system-candidate/heading-4-docs",
+  "version": "0.0.0",
+  "description": "Documentatie voor het Heading4 component",
+  "license": "CC0-1.0",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/heading-4-docs#readme",
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "heading-4",
+    "heading-4-component"
+  ],
+  "files": [
+    "./docs/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/docs/heading-4-docs"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}
