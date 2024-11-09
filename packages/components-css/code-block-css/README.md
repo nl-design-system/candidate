@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Code Block
 
 Styles voor het tonen van een blok met 1 of meerdere regels computercode.
