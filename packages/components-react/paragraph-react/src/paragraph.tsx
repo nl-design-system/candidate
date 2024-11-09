@@ -1,5 +1,5 @@
-import { clsx } from 'clsx';
 import type { HTMLAttributes } from 'react';
+import { clsx } from 'clsx';
 import { forwardRef } from 'react';
 
 export type ParagraphPurpose = 'lead';
@@ -9,7 +9,7 @@ interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
 }
 
 export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(function Paragraph(props, forwardedRef) {
-  const { purpose, children, className, ...restProps } = props;
+  const { children, className, purpose, ...restProps } = props;
 
   return (
     <p

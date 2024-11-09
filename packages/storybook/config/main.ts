@@ -1,7 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*stories.@(ts|tsx)', '../src/**/*.mdx'],
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
@@ -9,10 +8,6 @@ const config: StorybookConfig = {
     '@whitespace/storybook-addon-html',
     '@etchteam/storybook-addon-status',
   ],
-  framework: {
-    name: '@storybook/react-vite',
-    options: {},
-  },
   core: {
     disableTelemetry: true,
     disableWhatsNewNotifications: true,
@@ -20,6 +15,11 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
+  },
+  stories: ['../src/**/*stories.@(ts|tsx)', '../src/**/*.mdx'],
 };
 
 export default config;

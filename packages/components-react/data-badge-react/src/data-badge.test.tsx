@@ -1,8 +1,8 @@
 import { describe, it } from '@jest/globals';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import { DataBadge } from './data-badge';
 import { createRef } from 'react';
+import { DataBadge } from './data-badge';
 
 const dateTime = '19700101T00:00:00Z';
 const dateTimeText = '1 januari 1970 om middernacht';

@@ -1,5 +1,5 @@
-import { clsx } from 'clsx';
 import type { HTMLAttributes } from 'react';
+import { clsx } from 'clsx';
 import { forwardRef, createElement } from 'react';
 
 export const headingLevels = [1, 2, 3, 4, 5, 6] as const;
@@ -14,7 +14,7 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 }
 
 export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(function Heading(props, forwardedRef) {
-  const { level, appearance = `level-${level}`, className, children, ...restProps } = props;
+  const { level, appearance = `level-${level}`, children, className, ...restProps } = props;
   const type = `h${level}` as keyof JSX.IntrinsicElements;
 
   return createElement(

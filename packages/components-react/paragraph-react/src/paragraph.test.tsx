@@ -1,8 +1,8 @@
 import { describe, it } from '@jest/globals';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import { Paragraph } from './paragraph';
 import { createRef } from 'react';
+import { Paragraph } from './paragraph';
 
 const text = 'Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen.';
 const extraClassName = 'extra-classname';

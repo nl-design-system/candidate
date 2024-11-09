@@ -4,16 +4,17 @@ import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
 
 const preview: Preview = {
+  decorators: [ParametersArgsDecorator],
   parameters: {
     controls: { expanded: false },
     options: { panelPosition: 'right' },
     status: {
       statuses: {
-        PRODUCTION: {
-          background: '#088008',
-          color: '#ffffff',
+        ALPHA: {
+          background: '#e0bc2e',
+          color: '#000000',
           description:
-            'Used in production in a variety of situations, well tested, stable APIs, mostly patches and minor releases.',
+            'Used in prototypes and in projects that are still in development, breaking changes occur frequently and are not communicated.',
         },
         BETA: {
           background: '#3065ee',
@@ -21,11 +22,11 @@ const preview: Preview = {
           description:
             'Used in production in a specific situation, evolving APIs based on feedback, breaking changes are still likely.',
         },
-        ALPHA: {
-          background: '#e0bc2e',
-          color: '#000000',
+        PRODUCTION: {
+          background: '#088008',
+          color: '#ffffff',
           description:
-            'Used in prototypes and in projects that are still in development, breaking changes occur frequently and are not communicated.',
+            'Used in production in a variety of situations, well tested, stable APIs, mostly patches and minor releases.',
         },
         'WORK IN PROGRESS': {
           background: '#cc0000',
@@ -36,7 +37,6 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [ParametersArgsDecorator],
 };
 
 export default preview;
