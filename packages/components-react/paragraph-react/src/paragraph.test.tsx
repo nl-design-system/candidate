@@ -111,6 +111,18 @@ describe('Paragraph', () => {
       expect(paragraph).toContainElement(b);
     });
 
+    it('renders an HTML b element that contains the contents', () => {
+      const { container } = render(
+        <Paragraph purpose="lead">
+          <span data-testid={testId}>{text}</span>
+        </Paragraph>,
+      );
+      const b = container.querySelector('b');
+      const contents = screen.getByTestId(testId);
+
+      expect(b).toContainElement(contents);
+    });
+
     it('renders a block level element', () => {
       render(<Paragraph purpose="lead">{text}</Paragraph>);
       const paragraph = screen.getByRole('paragraph');
@@ -160,13 +172,20 @@ describe('Paragraph', () => {
       expect(paragraph).toHaveClass('nl-paragraph', 'nl-paragraph--lead', extraClassName);
     });
 
-    it('renders an element with class names "nl-paragraph" and "nl-paragraph--lead" that contains an element with class name "nl-paragraph__b"', () => {
+    it('renders an HTML b element with class name "nl-paragraph__lead"', () => {
+      const { container } = render(<Paragraph purpose="lead">{text}</Paragraph>);
+      const b = container.querySelector('b');
+
+      expect(b).toHaveClass('nl-paragraph__lead');
+    });
+
+    it('renders an element with class names "nl-paragraph" and "nl-paragraph--lead" that contains an element with class name "nl-paragraph__lead"', () => {
       render(<Paragraph purpose="lead">{text}</Paragraph>);
       const paragraph = screen.getByRole('paragraph');
       const b = paragraph.querySelector(':only-child');
 
       expect(paragraph).toContainElement(b);
-      expect(b).toHaveClass('nl-paragraph__b');
+      expect(b).toHaveClass('nl-paragraph__lead');
     });
 
     it(`renders an element with text "${text}"`, () => {
