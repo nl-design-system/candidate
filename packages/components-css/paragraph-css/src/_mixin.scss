@@ -4,22 +4,12 @@
   font-size: var(--nl-paragraph-font-size, inherit);
   font-weight: var(--nl-paragraph-font-weight, inherit);
   line-height: var(--nl-paragraph-line-height, inherit);
-  margin-block-end: calc(var(--nl-space-around, 0) * var(--nl-paragraph-margin-block-end, 0));
-  margin-block-start: calc(var(--nl-space-around, 0) * var(--nl-paragraph-margin-block-start, 0));
 }
 
 @mixin nl-paragraph--lead {
-  color: var(--nl-paragraph-lead-color, var(--nl-paragraph-color, inherit));
   font-size: var(--nl-paragraph-lead-font-size, var(--nl-paragraph-font-size, inherit));
   font-weight: var(--nl-paragraph-lead-font-weight, var(--nl-paragraph-font-weight, inherit));
   line-height: var(--nl-paragraph-lead-line-height, var(--nl-paragraph-line-height, inherit));
-}
-
-@mixin nl-paragraph--small {
-  color: var(--nl-paragraph-small-color, var(--nl-paragraph-color, inherit));
-  font-size: var(--nl-paragraph-small-font-size, var(--nl-paragraph-font-size, inherit));
-  font-weight: var(--nl-paragraph-small-font-weight, var(--nl-paragraph-font-weight, inherit));
-  line-height: var(--nl-paragraph-small-line-height, var(--nl-paragraph-line-height, inherit));
 }
 
 /*

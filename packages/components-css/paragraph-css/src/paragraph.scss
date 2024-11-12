@@ -8,10 +8,6 @@
   @include mixin.nl-paragraph--lead;
 }
 
-.nl-paragraph--small {
-  @include mixin.nl-paragraph--small;
-}
-
 .nl-paragraph__lead {
   @include mixin.nl-paragraph__lead-scss-workaround;
 }
