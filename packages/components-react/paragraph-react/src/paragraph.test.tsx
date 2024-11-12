@@ -105,7 +105,7 @@ describe('Paragraph', () => {
     it('renders an HTML p element that contains an HTML b element', () => {
       const { container } = render(<Paragraph purpose="lead">{text}</Paragraph>);
       const paragraph = container.querySelector('p:only-child');
-      const b = container.querySelector('b:only-child');
+      const b = container.querySelector<HTMLElement>('b:only-child');
 
       expect(paragraph).toBeInTheDocument();
       expect(paragraph).toContainElement(b);
@@ -182,7 +182,7 @@ describe('Paragraph', () => {
     it('renders an element with class names "nl-paragraph" and "nl-paragraph--lead" that contains an element with class name "nl-paragraph__lead"', () => {
       render(<Paragraph purpose="lead">{text}</Paragraph>);
       const paragraph = screen.getByRole('paragraph');
-      const b = paragraph.querySelector(':only-child');
+      const b = paragraph.querySelector<HTMLElement>(':only-child');
 
       expect(paragraph).toContainElement(b);
       expect(b).toHaveClass('nl-paragraph__lead');
