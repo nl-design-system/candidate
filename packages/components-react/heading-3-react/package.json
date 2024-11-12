@@ -32,6 +32,7 @@
     "build": "rollup --config ./rollup.config.mjs",
     "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/",
     "test": "jest",
+    "test:watch": "jest --watch",
     "typecheck": "tsc"
   },
   "devDependencies": {
