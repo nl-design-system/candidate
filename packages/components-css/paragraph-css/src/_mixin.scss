@@ -26,7 +26,7 @@
  * In SCSS the following mixins will overwrite each other:
  *
  * 1. `@mixin nl-paragraph--lead`
- * 2. `@mixin nl-paragraph--lead`
+ * 2. `@mixin nl-paragraph__lead`
  *
  * Avoid this situation by using an alternative name for this mixin.
  */
