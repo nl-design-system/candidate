@@ -8,8 +8,8 @@ export const Heading2 = forwardRef<HTMLHeadingElement, Heading2Props>(function H
   const { children, className, ...restProps } = props;
 
   return (
-    <h1 {...restProps} className={clsx('nl-heading-2', className)} ref={forwardedRef}>
+    <h2 {...restProps} className={clsx('nl-heading-2', className)} ref={forwardedRef}>
       {children}
-    </h1>
+    </h2>
   );
 });
