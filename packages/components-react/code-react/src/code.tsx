@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 
 export type CodeProps = HTMLAttributes<HTMLElement>;
 
-export const Code = forwardRef<HTMLHeadingElement, CodeProps>(function Code(props, forwardedRef) {
+export const Code = forwardRef<HTMLElement, CodeProps>(function Code(props, forwardedRef) {
   const { children, className, ...restProps } = props;
 
   return (
