@@ -3,3 +3,4 @@ packages:
   - packages/components-react/*
   - packages/components-css/*
   - packages/docs/*
+  - packages/tokens/*
