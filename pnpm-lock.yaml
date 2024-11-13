@@ -139,6 +139,8 @@ importers:
 
   packages/components-css/mark-css: {}
 
+  packages/components-css/number-badge-css: {}
+
   packages/components-css/paragraph-css: {}
 
   packages/components-css/skip-link-css: {}
@@ -405,6 +407,25 @@ importers:
         specifier: 18.3.1
         version: 18.3.1
 
+  packages/components-react/number-badge-react:
+    dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+    devDependencies:
+      '@babel/runtime':
+        specifier: 7.26.0
+        version: 7.26.0
+      '@nl-design-system-candidate/number-badge-css':
+        specifier: workspace:*
+        version: link:../../components-css/number-badge-css
+      '@types/react':
+        specifier: 18.3.12
+        version: 18.3.12
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+
   packages/components-react/paragraph-react:
     dependencies:
       clsx:
@@ -468,6 +489,8 @@ importers:
   packages/docs/link-docs: {}
 
   packages/docs/mark-docs: {}
+
+  packages/docs/number-badge-docs: {}
 
   packages/docs/paragraph-docs: {}
 
@@ -581,6 +604,8 @@ importers:
   packages/tokens/link-tokens: {}
 
   packages/tokens/mark-tokens: {}
+
+  packages/tokens/number-badge-tokens: {}
 
   packages/tokens/paragraph-tokens: {}
 

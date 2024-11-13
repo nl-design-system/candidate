@@ -1,0 +1,51 @@
+{
+  "name": "@nl-design-system-candidate/number-badge-react",
+  "version": "1.0.0",
+  "description": "Toont een klein label dat de aandacht trekt en informeert over een aantal.",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/number-badge-react#readme",
+  "type": "module",
+  "main": "./dist/number-badge.js",
+  "files": [
+    "./dist/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/number-badge.d.ts",
+      "import": "./dist/number-badge.js"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.js"
+    }
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-react/number-badge-react"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup --config ./rollup.config.mjs",
+    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.26.0",
+    "@nl-design-system-candidate/number-badge-css": "workspace:*",
+    "@types/react": "18.3.12",
+    "react": "18.3.1"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7",
+    "react": "^18"
+  },
+  "dependencies": {
+    "clsx": "2.1.1"
+  }
+}

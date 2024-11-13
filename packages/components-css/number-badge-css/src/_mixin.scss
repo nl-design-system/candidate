@@ -1,0 +1,3 @@
+@mixin nl-number-badge {
+  font-size: var(--nl-number-badge-font-size, revert);
+}
