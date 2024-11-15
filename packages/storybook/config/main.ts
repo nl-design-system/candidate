@@ -6,6 +6,7 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
     '@storybook/addon-viewport',
     '@whitespace/storybook-addon-html',
+    '@whitespace/storybook-addon-html',
     '@etchteam/storybook-addon-status',
   ],
   core: {
@@ -13,13 +14,14 @@ const config: StorybookConfig = {
     disableWhatsNewNotifications: true,
   },
   docs: {
-    autodocs: 'tag',
+    autodocs: 'tag', // allow stories to opt out of docs if necessary
+    defaultName: 'Documentatie',
   },
   framework: {
     name: '@storybook/react-vite',
     options: {},
   },
-  stories: ['../src/**/*stories.@(ts|tsx)', '../src/**/*.mdx'],
+  stories: ['../stories/**/*stories.@(ts|tsx)', '../docs/**/*.mdx'],
 };
 
 export default config;

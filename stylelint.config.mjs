@@ -1,6 +1,6 @@
 export default {
   extends: ['stylelint-config-standard-scss'],
-  ignoreFiles: ['**/dist/'],
+  ignoreFiles: ['node_modules', '**/dist/**/*'],
   plugins: ['stylelint-order'],
   rules: {
     'alpha-value-notation': ['percentage'],
