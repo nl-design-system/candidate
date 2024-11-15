@@ -7,10 +7,14 @@ interface DataBadgePropsForTime extends TimeHTMLAttributes<HTMLTimeElement> {
   value?: never;
 }
 
+const isDataBadgePropsForTime = (props: DataBadgeProps): props is DataBadgePropsForTime => 'dateTime' in props;
+
 interface DataBadgePropsForData extends DataHTMLAttributes<HTMLDataElement> {
   dateTime?: never;
   value: DataHTMLAttributes<HTMLTimeElement>['value'];
 }
+
+const isDataBadgePropsForData = (props: DataBadgeProps): props is DataBadgePropsForData => 'value' in props;
 
 export type DataBadgeProps = DataBadgePropsForTime | DataBadgePropsForData | HTMLAttributes<HTMLSpanElement>;
 
@@ -19,8 +23,8 @@ export const DataBadge = forwardRef<HTMLTimeElement | HTMLDataElement | HTMLSpan
     const { children, ...restProps } = props;
     const className = clsx('nl-data-badge', props.className);
 
-    if ('dateTime' in props) {
-      const { dateTime, ...timeRestProps } = restProps as React.TimeHTMLAttributes<HTMLTimeElement>;
+    if (isDataBadgePropsForTime(restProps)) {
+      const { dateTime, ...timeRestProps } = restProps;
       return (
         <time {...timeRestProps} dateTime={dateTime} className={className} ref={ref as ForwardedRef<HTMLTimeElement>}>
           {children}
@@ -28,8 +32,8 @@ export const DataBadge = forwardRef<HTMLTimeElement | HTMLDataElement | HTMLSpan
       );
     }
 
-    if ('value' in props) {
-      const { value, ...dataRestProps } = restProps as React.DataHTMLAttributes<HTMLDataElement>;
+    if (isDataBadgePropsForData(restProps)) {
+      const { value, ...dataRestProps } = restProps;
       return (
         <data {...dataRestProps} value={value} className={className} ref={ref as ForwardedRef<HTMLDataElement>}>
           {children}
