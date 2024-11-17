@@ -30,8 +30,9 @@
   },
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs",
-    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/",
+    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/ ./coverage/",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "typecheck": "tsc"
   },
