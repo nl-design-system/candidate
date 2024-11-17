@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import { createRef } from 'react';
 import { CodeBlock } from './code-block';
 
-const testCode = "import { CodeBlock } from '@nl-design-system-candidate/code-block';";
+const testCode = "import { CodeBlock } from '@nl-design-system-candidate/code-block-react';";
 const extraClassName = 'extra-classname';
 
 describe('Code Block', () => {
