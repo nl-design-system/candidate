@@ -1,9 +1,6 @@
 /**
  * @type {import('jest').Config}
  * */
-/**
- * @type {import('jest').Config}
- * */
 export default {
   coverageProvider: 'v8',
   coverageThreshold: {
