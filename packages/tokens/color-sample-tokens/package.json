@@ -1,0 +1,20 @@
+{
+  "name": "@nl-design-system-candidate/color-sample-tokens",
+  "version": "0.0.0",
+  "description": "Design tokens voor het Color Sample component",
+  "license": "EUPL-1.2",
+  "main": "./tokens.json",
+  "exports": "./tokens.json",
+  "files": [
+    "./tokens.json"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/tokens/color-sample-tokens"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}
