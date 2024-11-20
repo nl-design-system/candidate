@@ -37,7 +37,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const HeadingLevel1: Story = {
-  name: 'Heading 1',
+  name: 'Heading level 1',
   args: {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 1,
@@ -45,7 +45,7 @@ export const HeadingLevel1: Story = {
 };
 
 export const HeadingLevel2: Story = {
-  name: 'Heading 2',
+  name: 'Heading level 2',
   args: {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 2,
@@ -53,7 +53,7 @@ export const HeadingLevel2: Story = {
 };
 
 export const HeadingLevel3: Story = {
-  name: 'Heading 3',
+  name: 'Heading level 3',
   args: {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 3,
@@ -61,7 +61,7 @@ export const HeadingLevel3: Story = {
 };
 
 export const HeadingLevel4: Story = {
-  name: 'Heading 4',
+  name: 'Heading level 4',
   args: {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 4,
@@ -69,7 +69,7 @@ export const HeadingLevel4: Story = {
 };
 
 export const HeadingLevel5: Story = {
-  name: 'Heading 5',
+  name: 'Heading level 5',
   args: {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 5,
@@ -77,63 +77,9 @@ export const HeadingLevel5: Story = {
 };
 
 export const HeadingLevel6: Story = {
-  name: 'Heading 6',
+  name: 'Heading level 6',
   args: {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 6,
-  },
-};
-
-export const HeadingLevel1ApperanceLevel1: Story = {
-  name: 'Heading 1 als "level-1"',
-  args: {
-    appearance: 'level-1',
-    children: 'Knappe Koppen Van Droom naar Realiteit',
-    level: 1,
-  },
-};
-
-export const HeadingLevel1AppearanceLevel2: Story = {
-  name: 'Heading 1 als "level-2"',
-  args: {
-    appearance: 'level-2',
-    children: 'Knappe Koppen Van Droom naar Realiteit',
-    level: 1,
-  },
-};
-
-export const HeadingLevel1AppearanceLevel3: Story = {
-  name: 'Heading 1 als "level-3"',
-  args: {
-    appearance: 'level-3',
-    children: 'Knappe Koppen Van Droom naar Realiteit',
-    level: 1,
-  },
-};
-
-export const HeadingLevel1AppearanceLevel4: Story = {
-  name: 'Heading 1 als "level-4"',
-  args: {
-    appearance: 'level-4',
-    children: 'Knappe Koppen Van Droom naar Realiteit',
-    level: 1,
-  },
-};
-
-export const HeadingLevel1AppearanceLevel5: Story = {
-  name: 'Heading 1 als "level-5"',
-  args: {
-    appearance: 'level-5',
-    children: 'Knappe Koppen Van Droom naar Realiteit',
-    level: 1,
-  },
-};
-
-export const HeadingLevel1AppearanceLevel6: Story = {
-  name: 'Heading 1 als "level-6"',
-  args: {
-    appearance: 'level-6',
-    children: 'Knappe Koppen Van Droom naar Realiteit',
-    level: 1,
   },
 };
