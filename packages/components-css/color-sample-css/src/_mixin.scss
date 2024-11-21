@@ -1,3 +1,21 @@
 @mixin nl-color-sample {
   background-color: var(--nl-color-sample-background-color, currentcolor);
+  block-size: var(--nl-color-sample-block-size);
+  border-color: var(--nl-color-sample-border-color);
+  border-radius: var(--nl-color-sample-border-radius);
+  border-style: solid;
+  border-width: var(--nl-color-sample-border-width);
+  display: inline-block;
+  forced-color-adjust: none; // [1]
+  inline-size: var(--nl-color-sample-inline-size);
+
+  @media (prefers-color-scheme: dark) {
+    --nl-color-sample-border-color: var(--nl-color-sample-dark-border-color);
+  }
+
+  @media (prefers-color-scheme: light) {
+    --nl-color-sample-border-color: var(--nl-color-sample-light-border-color);
+  }
 }
+
+// [1]: the purpose of this component is to display an exact color sample, we don't ever want the browser to interfere
