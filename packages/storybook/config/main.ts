@@ -6,7 +6,6 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
     '@storybook/addon-viewport',
     '@whitespace/storybook-addon-html',
-    '@whitespace/storybook-addon-html',
     '@etchteam/storybook-addon-status',
   ],
   core: {
