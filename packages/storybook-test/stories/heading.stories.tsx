@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { useTranslation } from 'react-i18next';
 import packageJSON from '../../components-react/heading-react/package.json';
 import { Heading } from '../../components-react/heading-react/src/css';
+import { I18n } from '../src/I18n';
 
 const meta = {
   argTypes: {
@@ -65,6 +67,23 @@ export const HeadingLevel1Zoom400: Story = {
   globals: {
     viewport: { value: undefined },
     zoom: 4,
+  },
+};
+
+export const HeadingLevel1Arabic: Story = {
+  name: 'Heading 1 (Arabic)',
+  args: {
+    children: 'voorbeeld',
+    level: 1,
+  },
+  decorators: [I18n],
+  globals: {
+    locale: 'ar',
+  },
+  render({ children, ...restProps }) {
+    const { t } = useTranslation('translation', { keyPrefix: 'heading' });
+
+    return <Heading {...restProps}>{t(children as string)}</Heading>;
   },
 };
 
