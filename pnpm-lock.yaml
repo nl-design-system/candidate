@@ -135,6 +135,8 @@ importers:
 
   packages/components-css/heading-6-css: {}
 
+  packages/components-css/heading-css: {}
+
   packages/components-css/link-css: {}
 
   packages/components-css/mark-css: {}
@@ -344,24 +346,9 @@ importers:
       '@babel/runtime':
         specifier: 7.26.0
         version: 7.26.0
-      '@nl-design-system-candidate/heading-1-css':
+      '@nl-design-system-candidate/heading-css':
         specifier: workspace:*
-        version: link:../../components-css/heading-1-css
-      '@nl-design-system-candidate/heading-2-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-2-css
-      '@nl-design-system-candidate/heading-3-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-3-css
-      '@nl-design-system-candidate/heading-4-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-4-css
-      '@nl-design-system-candidate/heading-5-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-5-css
-      '@nl-design-system-candidate/heading-6-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-6-css
+        version: link:../../components-css/heading-css
       '@types/react':
         specifier: 18.3.12
         version: 18.3.12

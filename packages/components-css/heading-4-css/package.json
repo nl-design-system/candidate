@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/heading-4-css",
   "version": "0.0.0",
-  "description": "Styles for Paragraph component",
+  "description": "Styles for the Heading 4 component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-css/heading-4-css#readme",
   "files": [

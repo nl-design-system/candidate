@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/heading-react",
   "version": "0.0.0",
-  "description": "",
+  "description": "Koptekst die in de koppenstructuur ingesteld kan worden op het juiste niveau.",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/heading-react#readme",
   "type": "module",
@@ -38,12 +38,7 @@
   },
   "devDependencies": {
     "@babel/runtime": "7.26.0",
-    "@nl-design-system-candidate/heading-1-css": "workspace:*",
-    "@nl-design-system-candidate/heading-2-css": "workspace:*",
-    "@nl-design-system-candidate/heading-3-css": "workspace:*",
-    "@nl-design-system-candidate/heading-4-css": "workspace:*",
-    "@nl-design-system-candidate/heading-5-css": "workspace:*",
-    "@nl-design-system-candidate/heading-6-css": "workspace:*",
+    "@nl-design-system-candidate/heading-css": "workspace:*",
     "@types/react": "18.3.12",
     "react": "18.3.1"
   },
