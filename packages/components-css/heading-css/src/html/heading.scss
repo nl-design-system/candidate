@@ -1,0 +1,13 @@
+@use "./mixin";
+
+@include mixin.h1;
+
+@include mixin.h2;
+
+@include mixin.h3;
+
+@include mixin.h4;
+
+@include mixin.h5;
+
+@include mixin.h6;
