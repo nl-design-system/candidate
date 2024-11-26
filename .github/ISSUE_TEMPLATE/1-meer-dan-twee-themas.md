@@ -1,11 +1,10 @@
 ---
-name: Candidate Component Issue
-about: Voeg een nieuwe Candidate-component toe aan het NL Design System
+name: Meer dan twee themas
+about: Criteria; Ingezet door 2 of meer organisaties met verschillende huisstijlen.
 title: ">2 thema's {component-name}"
 labels:
-  - candidate
   - documentation
-  - community collaboration
+  - community collaboration 🤝
 ---
 
 ### Criteria
