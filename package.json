@@ -75,6 +75,7 @@
     "publish:changeset": "changeset publish",
     "start": "http-server packages/storybook/dist/",
     "storybook": "npm-run-all --parallel watch:**",
+    "storybook-test": "pnpm --filter @nl-design-system-candidate/storybook-test run storybook",
     "test": "pnpm --recursive run test",
     "test:coverage": "pnpm --recursive run test:coverage",
     "test-update": "npm-run-all --sequential clean lint build test",
