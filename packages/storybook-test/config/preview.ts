@@ -3,6 +3,7 @@ import { DocsPage } from '../src/DocsPage';
 import { StoryRoot, storyRootClassname } from '../src/StoryRoot';
 import { DEFAULT_ZOOM, Zoom } from '../src/Zoom';
 import { viewports } from './viewports';
+import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 
 const preview: Preview = {
   // StoryRoot has to be the first decorator for `parameters.html.root` below to work properly
