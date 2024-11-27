@@ -17,12 +17,13 @@
   "devDependencies": {
     "@etchteam/storybook-addon-status": "5.0.0",
     "@nl-design-system-unstable/voorbeeld-design-tokens": "3.2.0",
-    "@storybook/addon-a11y": "8.4.2",
-    "@storybook/addon-docs": "8.4.2",
-    "@storybook/addon-toolbars": "8.4.2",
-    "@storybook/addon-viewport": "8.4.2",
-    "@storybook/react": "8.4.2",
-    "@storybook/react-vite": "8.4.2",
+    "@storybook/addon-a11y": "8.4.5",
+    "@storybook/addon-controls": "8.4.5",
+    "@storybook/addon-docs": "8.4.5",
+    "@storybook/addon-toolbars": "8.4.5",
+    "@storybook/addon-viewport": "8.4.5",
+    "@storybook/react": "8.4.5",
+    "@storybook/react-vite": "8.4.5",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "@whitespace/storybook-addon-html": "6.1.1",
@@ -33,7 +34,7 @@
     "react-dom": "18.3.1",
     "react-i18next": "15.1.1",
     "react-syntax-highlighter": "15.6.1",
-    "storybook": "8.4.2",
+    "storybook": "8.4.5",
     "vite": "5.4.10"
   }
 }
