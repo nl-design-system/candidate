@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { useTranslation } from 'react-i18next';
 import packageJSON from '../../components-react/heading-react/package.json';
 import { Heading } from '../../components-react/heading-react/src/css';
-import { I18n } from '../src/I18n';
+import { I18nDecorator } from '../src/I18nDecorator';
 
 const meta = {
   argTypes: {
@@ -76,7 +76,7 @@ export const HeadingLevel1Arabic: Story = {
     children: 'voorbeeld',
     level: 1,
   },
-  decorators: [I18n],
+  decorators: [I18nDecorator],
   globals: {
     locale: 'ar',
   },
