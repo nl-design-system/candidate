@@ -3,6 +3,7 @@ import type { StorybookConfig } from '@storybook/react-vite';
 const config: StorybookConfig = {
   addons: [
     '@storybook/addon-a11y',
+    '@storybook/addon-controls',
     '@storybook/addon-docs',
     '@storybook/addon-toolbars',
     '@storybook/addon-viewport',
