@@ -8,7 +8,7 @@ i18n.on('languageChanged', function changeDocumentDirection(locale) {
   document.documentElement.lang = locale;
 });
 
-export const I18n: Decorator = (Story, context) => {
+export const I18nDecorator: Decorator = (Story, context) => {
   const { locale } = context.globals;
 
   useEffect(() => {
