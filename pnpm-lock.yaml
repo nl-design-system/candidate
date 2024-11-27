@@ -570,6 +570,9 @@ importers:
       '@etchteam/storybook-addon-status':
         specifier: 5.0.0
         version: 5.0.0
+      '@nl-design-system-unstable/voorbeeld-design-tokens':
+        specifier: 3.2.0
+        version: 3.2.0
       '@storybook/addon-a11y':
         specifier: 8.4.2
         version: 8.4.2(storybook@8.4.2(prettier@3.3.3))
@@ -1749,6 +1752,9 @@ packages:
 
   '@nl-design-system-unstable/voorbeeld-design-tokens@3.1.0':
     resolution: {integrity: sha512-FiJvNzCnG3bO/cCm3ZhggCpS8H4d7CPRXe99f5BEj+3cOeM+lPZvU6qMGgevU7x1BrnfzBwzB4S4TtB8IgcGBA==}
+
+  '@nl-design-system-unstable/voorbeeld-design-tokens@3.2.0':
+    resolution: {integrity: sha512-Cz2F/pBYTbQhzxCzc4I2Qs4oF1qCFr4PbmiAxRcL6j4FUxRSrTkaYrdtP3PkpuhHTFVGZlTXI2IrUduin6urXQ==}
 
   '@nl-design-system/eslint-config@0.0.1':
     resolution: {integrity: sha512-zgKEBk0S88bkRX4zRihhoOidQtekpvOHWOOPl0aJhTy5aF2hyFzbzDTGjPgpseo0lDbwZjd7LUwLJevOj83WYg==}
@@ -7383,6 +7389,8 @@ snapshots:
       react: 18.3.1
 
   '@nl-design-system-unstable/voorbeeld-design-tokens@3.1.0': {}
+
+  '@nl-design-system-unstable/voorbeeld-design-tokens@3.2.0': {}
 
   '@nl-design-system/eslint-config@0.0.1(eslint@9.14.0)(typescript@5.6.3)':
     dependencies:
