@@ -3,3 +3,7 @@
 .nl-code-block {
   @include mixin.nl-code-block;
 }
+
+.nl-code-block__content {
+  @include mixin.nl-code-block__content;
+}
