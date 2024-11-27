@@ -3,6 +3,7 @@ name: Content flexibel
 about: Component kan omgaan met verschillende soorten content.
 title: '{component-name} - Content flexibel'
 labels:
+  - community collaboration 🤝
   - desk research
   - figma
   - storybook
