@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../components-react/heading-react/package.json';
 import { Heading } from '../../components-react/heading-react/src/css';
-import { Arabic } from '../src/Arabic';
-import { German } from '../src/German';
 
 const meta = {
   argTypes: {
@@ -76,7 +74,9 @@ export const HeadingLevel1Arabic: Story = {
     children: 'مثال',
     level: 1,
   },
-  decorators: [Arabic],
+  globals: {
+    lang: 'ar',
+  },
 };
 
 export const HeadingLevel1German: Story = {
@@ -85,7 +85,9 @@ export const HeadingLevel1German: Story = {
     children: 'Rechtsschutzversicherungsgesellschaften',
     level: 1,
   },
-  decorators: [German],
+  globals: {
+    lang: 'de',
+  },
 };
 
 export const HeadingLevel2: Story = {
