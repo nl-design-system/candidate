@@ -15,6 +15,11 @@ const meta = {
   },
   component: Link,
   parameters: {
+    docs: {
+      description: {
+        component: '',
+      },
+    },
     externalLinks: [
       {
         name: 'Open in Figma',
@@ -36,23 +41,100 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   name: 'Link',
   args: {
-    children: 'voorbeeldsite',
+    children: 'voorbeeldsite (opent in een nieuw venster)',
     href: 'https://example.com',
     target: '_blank',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een enkele Link.',
+      },
+    },
+  },
+};
+
+export const ArabicLink: Story = {
+  name: 'Link (Arabisch)',
+  args: {
+    children: 'الرابط التشعبي (يفتح في نافذة جديدة)',
+    dir: 'rtl',
+    href: 'https://example.com',
+    lang: 'ar',
+    target: '_blank',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een enkele Link in het Arabisch.',
+      },
+    },
   },
 };
 
 export const LinkInParagraph: Story = {
-  name: 'Link in een Parargraph',
+  name: 'Link (in Paragraph)',
   args: {
+    children: 'voorbeeldsite (opent in een nieuw venster)',
     href: 'https://example.com',
     target: '_blank',
   },
-  render(args) {
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een Link in een Paragraph.',
+      },
+    },
+  },
+  render({ children, ...restProps }) {
     return (
       <Paragraph>
-        In deze paragraaf staat een <Link {...args}>link naar een voorbeeldsite</Link>.
+        In deze paragraaf staat een link naar <Link {...restProps}>{children}</Link>.
       </Paragraph>
     );
+  },
+};
+
+export const LinkInGermanParagraph: Story = {
+  name: 'Link (in Paragraph, Duits)',
+  args: {
+    children: 'eine Beispielsite (wird in einem neuen Fenster geöffnet)',
+    href: 'https://example.com',
+    target: '_blank',
+  },
+  globals: {
+    lang: 'de',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een Link in een Paragraph in een container met een lang attribuut met als waarde "de".',
+      },
+    },
+  },
+  render({ children, ...restProps }) {
+    return (
+      <Paragraph>
+        Dies ist ein Link in einem Absatz, der auf <Link {...restProps}>{children}</Link> verweist.
+      </Paragraph>
+    );
+  },
+};
+
+export const ExtremelyLongLink: Story = {
+  name: 'Link',
+  args: {
+    children:
+      'Supercalifragilisticexpialidocioussupercalifragilisticexpialidocioussupercalifragilisticexpialidocioussupercalifragilisticexpialidocioussupercalifragilisticexpialidocioussupercalifragilisticexpialidocioussupercalifragilisticexpialidocious (opens in a new window)',
+    href: 'https://example.com',
+    lang: 'en',
+    target: '_blank',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een link met een extreem lang woord.',
+      },
+    },
   },
 };
