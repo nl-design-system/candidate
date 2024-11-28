@@ -1,14 +1,16 @@
+import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import type { Preview } from '@storybook/react';
 import { DocsPage } from '../src/DocsPage';
-import { StoryRoot, storyRootClassname } from '../src/StoryRoot';
-import { DEFAULT_ZOOM, Zoom } from '../src/Zoom';
+import { StoryRootDecorator } from '../src/StoryRootDecorator';
 import { viewports } from './viewports';
-import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
+
+const storyRootClassname = 'voorbeeld-theme';
 
 const preview: Preview = {
-  // StoryRoot has to be the first decorator for `parameters.html.root` below to work properly
-  decorators: [StoryRoot, Zoom],
+  // StoryRootDecorator has to be the first decorator for `parameters.html.root` below to work properly
+  decorators: [StoryRootDecorator],
   globalTypes: {
+    // Zoom control in the Storybook toolbar
     zoom: {
       description: 'Bepaalt het zoom niveau voor een story',
       toolbar: {
@@ -16,7 +18,7 @@ const preview: Preview = {
         icon: 'zoom',
         items: [
           { title: '50%', value: 0.5 },
-          { title: '100%', value: 1 },
+          { title: '100%', value: undefined },
           { title: '200%', value: 2 },
           { title: '400%', value: 4 },
         ],
@@ -24,8 +26,11 @@ const preview: Preview = {
     },
   },
   initialGlobals: {
+    dir: undefined,
+    lang: undefined,
+    storyRootClassname,
     viewport: { value: undefined },
-    zoom: DEFAULT_ZOOM,
+    zoom: undefined,
   },
   parameters: {
     controls: { expanded: false },

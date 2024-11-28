@@ -19,6 +19,7 @@ const config: StorybookConfig = {
     defaultName: 'Documentatie',
   },
   features: {
+    // Make @storybook/addon-viewport use Storybook's globals
     viewportStoryGlobals: true,
   },
   framework: {
