@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/heading-3-docs",
-  "version": "0.0.0",
-  "description": "Documentatie voor het Heading3 component",
+  "version": "1.0.0",
+  "description": "Documentatie voor de Heading 3 component",
   "license": "CC0-1.0",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/heading-3-docs#readme",
   "scripts": {},

@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/color-sample-docs",
-  "version": "0.0.0",
-  "description": "Documentatie voor het Color Sample component",
+  "version": "1.0.0",
+  "description": "Documentatie voor de Color Sample component",
   "license": "CC0-1.0",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/color-sample-docs#readme",
   "scripts": {},
@@ -18,7 +18,6 @@
     "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/docs/color-sample-docs"
   },
-  "private": true,
   "publishConfig": {
     "access": "public"
   }
