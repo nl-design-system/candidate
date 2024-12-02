@@ -4,4 +4,8 @@
   pre {
     @include mixin.nl-code-block;
   }
+
+  pre > code {
+    @include mixin.nl-code-block__content;
+  }
 }

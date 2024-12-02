@@ -1,5 +1,5 @@
 {
-  "name": "@nl-design-system-candidate/storybook-tests",
+  "name": "@nl-design-system-candidate/storybook-test",
   "description": "Storybook for extensive visual regression testing",
   "license": "EUPL-1.2",
   "type": "module",
