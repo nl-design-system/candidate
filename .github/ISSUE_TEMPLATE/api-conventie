@@ -1,0 +1,16 @@
+---
+name: API conventie
+about: API volgt conventies en is geprefixed met 'nl'.
+title: "{component-name} - API conventie"
+labels:
+  - documentation
+  - community collaboration 🤝
+---
+
+### Criteria
+
+API volgt conventies en is geprefixed met 'nl'.
+
+### Taken
+
+- [ ] Zorg dat alle props consistent zijn met bestaande NLDS naming conventions. En controleer of alle prefixen die worden gebruikt, beginnen met 'nl-'
