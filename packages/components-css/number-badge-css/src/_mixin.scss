@@ -1,3 +1,16 @@
 @mixin nl-number-badge {
-  font-size: var(--nl-number-badge-font-size, revert);
+  background-color: var(--nl-number-badge-background-color);
+  border-color: var(--nl-number-badge-border-color);
+  border-radius: var(--nl-number-badge-border-radius);
+  border-style: solid;
+  border-width: var(--nl-number-badge-border-width);
+  color: var(--nl-number-badge-color);
+  font-family: var(--nl-number-badge-font-family);
+  font-size: var(--nl-number-badge-font-size);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-weight: var(--nl-number-badge-font-weight);
+  min-block-size: var(--nl-number-badge-min-block-size);
+  min-inline-size: var(--nl-number-badge-min-inline-size);
+  padding-block: var(--nl-number-badge-padding-block);
+  padding-inline: var(--nl-number-badge-padding-inline);
 }
