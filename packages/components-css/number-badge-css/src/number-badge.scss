@@ -3,3 +3,9 @@
 .nl-number-badge {
   @include mixin.nl-number-badge;
 }
+
+@media screen and (forced-colors: active) {
+  .nl-number-badge {
+    @include mixin.nl-number-badge--forced-colors;
+  }
+}
