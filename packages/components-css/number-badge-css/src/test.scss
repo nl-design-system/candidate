@@ -1,0 +1,5 @@
+@use "./mixin";
+
+.nl-number-badge--forced-colors {
+  @include mixin.nl-number-badge--forced-colors;
+}
