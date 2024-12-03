@@ -4,15 +4,21 @@ import { Paragraph } from '../../components-react/paragraph-react/src/css';
 
 const meta = {
   argTypes: {
-    children: { table: { category: 'API' } },
+    children: { name: 'text', table: { category: 'API' } },
     purpose: {
       control: { labels: { undefined: '(undefined)' }, type: 'select' },
       options: [undefined, 'lead'],
       table: { category: 'API' },
+      type: 'string',
     },
   },
   component: Paragraph,
   parameters: {
+    docs: {
+      description: {
+        component: '',
+      },
+    },
     externalLinks: [
       {
         name: 'Open in Figma',
@@ -40,13 +46,13 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een paragraaf bestaand uit één zin.',
+        story: 'Een paragraaf bestaand uit één alinea.',
       },
     },
   },
 };
 
-export const Lead: Story = {
+export const ParagraphLead: Story = {
   name: 'Paragraph Lead',
   args: {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
@@ -55,14 +61,19 @@ export const Lead: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een lead paragraaf bestaand uit één zin.',
+        story: 'Een lead paragraaf bestaand uit één alinea.',
       },
     },
   },
 };
 
-export const Friesland: Story = {
+export const ParagraphLeadPlusParagraph: Story = {
   name: 'Paragraph Lead + Paragraph',
+  args: {
+    children:
+      'Ditmaal hebben wij het in Friesland gezocht, en ik mag wel zeggen, wij hebben het er gevonden ook. Want dat gewest geeft een afwisseling van velerlei moois te water en te land, oud en nieuw.',
+    purpose: 'lead',
+  },
   parameters: {
     docs: {
       description: {
@@ -71,13 +82,10 @@ export const Friesland: Story = {
       },
     },
   },
-  render() {
+  render({ children, ...restProps }) {
     return (
       <>
-        <Paragraph purpose="lead">
-          Ditmaal hebben wij het in Friesland gezocht, en ik mag wel zeggen, wij hebben het er gevonden ook. Want dat
-          gewest geeft een afwisseling van velerlei moois te water en te land, oud en nieuw.
-        </Paragraph>
+        <Paragraph {...restProps}>{children}</Paragraph>
         <Paragraph>
           Wij hebben er heel wat rondgezworven, maar zijn er zeker van, dat we nog menig mooi en belangrijk plekje
           gemist hebben. Dat is maar goed ook; nu hebben wij een reden, om nog dikwijls terug te keeren naar de
@@ -89,37 +97,35 @@ export const Friesland: Story = {
   },
 };
 
-export const Arabic: Story = {
+export const ParagraphArabic: Story = {
   name: 'Paragraph (Arabic)',
   args: {
     children: 'هذه فقرة نصية. وهي ليست فقرة نصية طويلة جدًا، ولكنها فقرة نصية على أية حال.',
-    purpose: undefined,
-  },
-  globals: {
+    dir: 'rtl',
     lang: 'ar',
+    purpose: undefined,
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een paragraaf met Arabische tekst.',
+        story: 'Een paragraaf met één alinea Arabische tekst.',
       },
     },
   },
 };
 
-export const LeadArabic: Story = {
+export const ParagraphLeadArabic: Story = {
   name: 'Paragraph Lead (Arabic)',
   args: {
     children: 'هذه فقرة نصية. وهي ليست فقرة نصية طويلة جدًا، ولكنها فقرة نصية على أية حال.',
-    purpose: 'lead',
-  },
-  globals: {
+    dir: 'rtl',
     lang: 'ar',
+    purpose: 'lead',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een lead paragraaf met Arabische tekst.',
+        story: 'Een lead paragraaf met één alinea Arabische tekst.',
       },
     },
   },
