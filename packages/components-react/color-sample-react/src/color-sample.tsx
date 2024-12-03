@@ -1,23 +1,31 @@
-import type { HTMLAttributes } from 'react';
+import type { CSSProperties, HTMLAttributes } from 'react';
 import { clsx } from 'clsx';
-import { forwardRef } from 'react';
+import { forwardRef, useId } from 'react';
 
-export interface ColorSampleProps extends HTMLAttributes<HTMLDataElement> {
-  value: string;
+interface ColorSampleProps extends HTMLAttributes<SVGSVGElement> {
+  value: CSSProperties['color'];
 }
 
-export const ColorSample = forwardRef<HTMLDataElement, ColorSampleProps>(function ColorSample(props, forwardedRef) {
-  const { children, className, style, value, ...restProps } = props;
+export const ColorSample = forwardRef<SVGSVGElement, ColorSampleProps>(function ColorSampe(props, forwardedRef) {
+  const id = useId();
+  const { className, style, title, value, ...restProps } = props;
+  const hasTitle = typeof title === 'string';
+  const ariaLabelledBy = [hasTitle ? id : undefined, props['aria-labelledby']].filter(Boolean).join(' ') || undefined;
 
   return (
-    <data
+    <svg
       {...restProps}
+      aria-labelledby={ariaLabelledBy}
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      height="16"
+      width="16"
       className={clsx('nl-color-sample', className)}
       style={{ ...style, color: value }}
-      value={value}
       ref={forwardedRef}
     >
-      {children}
-    </data>
+      {hasTitle && <title id={id}>{title}</title>}
+      <path d="M0 0H32V32H0Z" fill="currentcolor" />
+    </svg>
   );
 });
