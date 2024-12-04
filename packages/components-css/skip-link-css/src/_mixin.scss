@@ -1,3 +1,44 @@
-/* stylelint-disable-next-line block-no-empty */
 @mixin nl-skip-link {
+  /* Calculate the `max-inline-size` to always leave room for the focus ring */
+  align-items: center;
+  background-color: var(--nl-skip-link-background-color, CanvasText);
+  box-sizing: border-box;
+  color: var(--nl-skip-link-color, LinkText);
+  display: inline-flex;
+  justify-content: center;
+  max-inline-size: calc(100% - 2 * var(--_nl-skip-link-inset, 0));
+  min-block-size: var(--nl-skip-link-min-block-size, 44px);
+  min-inline-size: var(--nl-skip-link-min-inline-size, 44px);
+  padding-block: var(--nl-skip-link-padding-block);
+  padding-inline: var(--nl-skip-link-padding-inline);
+  text-decoration-thickness: max(var(--nl-skip-link-text-decoration-thickness, 0px), initial);
+  text-underline-offset: var(--nl-skip-link-text-underline-offset, initial);
+}
+
+@mixin nl-skip-link--focus-visible {
+  background-color: var(--nl-skip-link-focus-visible-background-color);
+  color: var(--nl-skip-link-focus-visible-color);
+}
+
+@mixin nl-skip-link--hidden {
+  inset-block-start: -200%;
+  position: fixed;
+}
+
+@mixin nl-skip-link--visible {
+  /**
+   * WCAG 2.2 / 2.4.12: "No part of the focus indicator is hidden by author-created content".
+   * To go the extra mile, ensure the focus indicator is inside the viewport.
+   * 
+   * Assume 2px is the browser default focus ring size.
+   * */
+  --_nl-skip-link-inset: calc(var(--nl-focus-outline-width, 2px) + var(--nl-focus-outline-offset, 2px));
+
+  inset-block-start: var(--_nl-skip-link-inset, 0);
+  inset-inline-start: var(--_nl-skip-link-inset, 0);
+  position: fixed;
+}
+
+@mixin nl-skip-link--visible-on-focus {
+  @include nl-skip-link--hidden;
 }
