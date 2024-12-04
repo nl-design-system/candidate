@@ -1,3 +1,18 @@
-/* stylelint-disable-next-line block-no-empty */
 @mixin nl-skip-link {
+  background-color: var(--nl-skip-link-background-color, Canvas);
+  color: var(--nl-skip-link-color, LinkText);
+  inset-inline-start: -100%;
+  min-block-size: var(--nl-skip-link-min-block-size, 44px);
+  min-inline-size: var(--nl-skip-link-min-inline-size, 44px);
+  padding-block: var(--nl-skip-link-padding-block);
+  padding-inline: var(--nl-skip-link-padding-inline);
+  position: fixed;
+  text-decoration: var(--nl-skip-link-text-decoration);
+}
+
+@mixin nl-skip-link--focus-visible {
+  background-color: var(--nl-skip-link-focus-visible-background-color);
+  color: var(--nl-skip-link-focus-visible-color);
+  position: static;
+  text-decoration: var(--nl-skip-link-focus-visible-text-decoration);
 }
