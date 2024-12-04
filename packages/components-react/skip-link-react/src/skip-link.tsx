@@ -10,7 +10,7 @@ export const SkipLink = forwardRef<HTMLAnchorElement, SkipLinkProps>(function Sk
   const { children, className, ...restProps } = props;
 
   return (
-    <a {...restProps} className={clsx('nl-skip-link', className)} ref={forwardedRef}>
+    <a {...restProps} className={clsx('nl-skip-link', 'nl-skip-link--visible-on-focus', className)} ref={forwardedRef}>
       {children}
     </a>
   );
