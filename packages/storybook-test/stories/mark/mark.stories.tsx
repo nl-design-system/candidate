@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/mark-react/package.json';
 import { Mark } from '../../../components-react/mark-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
+import componentMarkdown from '../../../docs/mark-docs/docs/component.md?raw';
 
 const meta = {
   argTypes: {
@@ -9,6 +10,11 @@ const meta = {
   },
   component: Mark,
   parameters: {
+    docs: {
+      description: {
+        component: componentMarkdown,
+      },
+    },
     externalLinks: [
       {
         name: 'Open in Figma',
@@ -38,14 +44,17 @@ export const Default: Story = {
 };
 
 export const MarkInParagraph: Story = {
-  name: 'Mark in een Parargraph',
+  name: 'Mark in een Paragraph',
+  args: {
+    children: 'gemarkeerde tekst',
+  },
   parameters: {
     status: { type: [] },
   },
-  render() {
+  render({ children }) {
     return (
       <Paragraph>
-        In deze paragraaf staat een stukje <Mark>gemarkeerde tekst</Mark>.
+        In deze paragraaf staat een stukje <Mark>{children}</Mark>.
       </Paragraph>
     );
   },

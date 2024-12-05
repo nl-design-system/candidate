@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/code-react/package.json';
 import { Code } from '../../../components-react/code-react/src/css';
+import componentMarkdown from '../../../docs/code-docs/docs/component.md?raw';
 
 const meta = {
   argTypes: {
@@ -8,6 +9,11 @@ const meta = {
   },
   component: Code,
   parameters: {
+    docs: {
+      description: {
+        component: componentMarkdown,
+      },
+    },
     externalLinks: [
       {
         name: 'Open in Figma',
