@@ -1,46 +1,83 @@
 ---
-name: A11y getest
+name: A11y review component (Community of Candidate)
 about: Implementatie en documentatie is op toegankelijkheid getest door leden van het kernteam.
-title: '{component-name} - Anatomie vastleggen'
+title: '{component-name} - {status} {owner} - A11y getest'
 labels:
-  - development
-  - documentation
-  - figma
+  - accessibility
 ---
 
-### Criteria
+## Review toegankelijkheid voor de {component-name} component {status} {owner}
 
-Implementatie en documentatie is op toegankelijkheid getest door leden van het kernteam.
+## Criteria
 
-### Hoe te testen
+Implementatie en documentatie is op toegankelijkheid getest door leden van het kernteam volgemd de richtlijnen en acceptatiecriteria van het NL Design System.
+
+- Te reviewen: {component-name} in StoryBook {owner}
+- Acceptatiecriteria: NL Design System Acceptatiecriteria voor {component-name}
+
+## Hoe te testen
 
 Ga naar de te reviewen component in Storybook
 
-- Bij de component, kies in de zijbalk de view Default
+- Bij de component, kies in de zijbalk de betreffende story
 - Klik op het open nieuwe tab icon rechtsboven in de taakbalk.
 - Je ziet nu alleen de component met de bijbehorende CSS.
+- Test alle stories van deze component
 
-### Taken
+## Review toegankelijkheid door {name} op {date}
 
-Algemene toegankelijkheid
+**Samenvatting:** de {component-name} component in {status} bij {owner} 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk' voor de acceptatiecriteria voor toegankelijkheid van het NL Design System.  
+Eventuele korte toelichting.
 
-- [ ] Content is duidelijk en begrijpelijk WCAG 2.4.6 Koppen en labels Oordeel:
-- [ ] HTML structuur is correct geïmplementeerd WCAG 4.1.1 Parsen Oordeel:
+Gereviewd {component-name} in StoryBook {owner}
 
-Visueel ontwerp
+- Default (plus link)
+- Story 1 (plus link)
+- Story 2 (plus link)
+- etc
 
-- [ ] Tekstkleur heeft voldoende contrast met achtergrond WCAG 1.4.3 Contrast (minimum) Oordeel:
-- [ ] Niet-tekstuele content heeft voldoende contrast WCAG 1.4.11 Contrast van niet-tekstuele content Oordeel:
+Zet hier eventuele codevoorbeelden en berekeningen kleurcontrasten.
 
-Zoom en herschaling
+### Acceptatiecriteria NL Design System
 
-- [ ] Content blijft leesbaar bij 200% zoom WCAG 1.4.4 Herschalen van tekst Oordeel:
-- [ ] Content blijft intact bij aangepaste tekstafstand WCAG 1.4.12 Tekstafstand Oordeel:
+#### Toegankelijkheid algemeen
 
-Screenreader toegankelijkheid
+- Titel en link acceptatiecriterium.
+  Oordeel: 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk'
+- Titel en link acceptatiecriterium.
+  Oordeel: 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk'
+- etc ...
 
-- [ ] Niet-tekstuele content heeft tekstalternatief WCAG 1.1.1 Niet-tekstuele content Oordeel:
-- [ ] Content heeft logische semantische structuur WCAG 1.3.1 Info en relaties Oordeel:
-- [ ] Leesvolgorde is logisch en begrijpelijk WCAG 1.3.2 Betekenisvolle volgorde Oordeel:
+#### Toegankelijkheid visueel ontwerp
+
+- Titel en linkacceptatiecriterium.
+  Oordeel: 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk'
+- Titel en link acceptatiecriterium.
+  Oordeel: 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk'
+- etc ...
+
+#### Toegankelijkheid zoom en herschaling
+
+- Titel en link acceptatiecriterium.
+  Oordeel: 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk'
+- Titel en link acceptatiecriterium.
+  Oordeel: 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk'
+- etc ...
+
+#### Toegankelijkheid toetsenbord
+
+- Titel en link acceptatiecriterium.
+  Oordeel: 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk'
+- Titel en link acceptatiecriterium.
+  Oordeel: 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk'
+- etc ...
+
+#### Screenreader toegankelijkheid
+
+- Titel en link acceptatiecriterium.
+  Oordeel: 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk'
+- Titel en link acceptatiecriterium.
+  Oordeel: 'voldoet'/'voldoet niet'/'niet van toepassing'/'niet te beoordelen, contextafhankelijk'
+- etc ...
 
 [De nieuwste versie van het "A11y getest" stappenplan](https://github.com/nl-design-system/candidate/blob/main/.github/ISSUE_TEMPLATE/a11y-getest.md) vind je in de Git repository. Controleer voor het afronden van dit GitHub Issue of de stappen hier boven volledig zijn.
