@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/data-badge-react/package.json';
 import { DataBadge } from '../../../components-react/data-badge-react/src/css';
+import componentMarkdown from '../../../docs/data-badge-docs/docs/component.md?raw';
 
 const meta = {
   argTypes: {
@@ -10,6 +11,11 @@ const meta = {
   },
   component: DataBadge,
   parameters: {
+    docs: {
+      description: {
+        component: componentMarkdown,
+      },
+    },
     externalLinks: [
       {
         name: 'Open in Figma',

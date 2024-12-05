@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/color-sample-react/package.json';
 import { ColorSample } from '../../../components-react/color-sample-react/src/css';
+import componentMarkdown from '../../../docs/color-sample-docs/docs/component.md?raw';
 
 const meta = {
   argTypes: {
@@ -8,6 +9,11 @@ const meta = {
   },
   component: ColorSample,
   parameters: {
+    docs: {
+      description: {
+        component: componentMarkdown,
+      },
+    },
     externalLinks: [
       {
         name: 'Open in Figma',

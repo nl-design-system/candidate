@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/link-react/package.json';
 import { Link } from '../../../components-react/link-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
+import componentMarkdown from '../../../docs/link-docs/docs/component.md?raw';
 
 const meta = {
   argTypes: {
@@ -17,7 +18,7 @@ const meta = {
   parameters: {
     docs: {
       description: {
-        component: '',
+        component: componentMarkdown,
       },
     },
     externalLinks: [
