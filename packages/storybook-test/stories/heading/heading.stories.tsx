@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import packageJSON from '../../components-react/heading-react/package.json';
-import { Heading } from '../../components-react/heading-react/src/css';
+import packageJSON from '../../../components-react/heading-react/package.json';
+import { Heading } from '../../../components-react/heading-react/src/css';
 
 const meta = {
   argTypes: {
@@ -42,6 +42,9 @@ export const HeadingLevel1: Story = {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 1,
   },
+  parameters: {
+    status: { type: [] },
+  },
 };
 
 export const HeadingLevel1SmallViewport: Story = {
@@ -53,6 +56,9 @@ export const HeadingLevel1SmallViewport: Story = {
   globals: {
     viewport: { value: 'phone' },
     zoom: 1,
+  },
+  parameters: {
+    status: { type: [] },
   },
 };
 
@@ -66,6 +72,9 @@ export const HeadingLevel1Zoom400: Story = {
     viewport: { value: undefined },
     zoom: 4,
   },
+  parameters: {
+    status: { type: [] },
+  },
 };
 
 export const HeadingLevel1Arabic: Story = {
@@ -76,6 +85,9 @@ export const HeadingLevel1Arabic: Story = {
   },
   globals: {
     lang: 'ar',
+  },
+  parameters: {
+    status: { type: [] },
   },
 };
 
@@ -88,6 +100,9 @@ export const HeadingLevel1German: Story = {
   globals: {
     lang: 'de',
   },
+  parameters: {
+    status: { type: [] },
+  },
 };
 
 export const HeadingLevel2: Story = {
@@ -95,6 +110,9 @@ export const HeadingLevel2: Story = {
   args: {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 2,
+  },
+  parameters: {
+    status: { type: [] },
   },
 };
 
@@ -104,6 +122,9 @@ export const HeadingLevel3: Story = {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 3,
   },
+  parameters: {
+    status: { type: [] },
+  },
 };
 
 export const HeadingLevel4: Story = {
@@ -111,6 +132,9 @@ export const HeadingLevel4: Story = {
   args: {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 4,
+  },
+  parameters: {
+    status: { type: [] },
   },
 };
 
@@ -120,6 +144,9 @@ export const HeadingLevel5: Story = {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 5,
   },
+  parameters: {
+    status: { type: [] },
+  },
 };
 
 export const HeadingLevel6: Story = {
@@ -127,5 +154,8 @@ export const HeadingLevel6: Story = {
   args: {
     children: 'Knappe Koppen Van Droom naar Realiteit',
     level: 6,
+  },
+  parameters: {
+    status: { type: [] },
   },
 };

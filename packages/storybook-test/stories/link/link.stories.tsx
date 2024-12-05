@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import packageJSON from '../../components-react/link-react/package.json';
-import { Link } from '../../components-react/link-react/src/css';
-import { Paragraph } from '../../components-react/paragraph-react/src/css';
+import packageJSON from '../../../components-react/link-react/package.json';
+import { Link } from '../../../components-react/link-react/src/css';
+import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 
 const meta = {
   argTypes: {
@@ -51,6 +51,7 @@ export const Default: Story = {
         story: 'Een enkele Link.',
       },
     },
+    status: { type: [] },
   },
 };
 
@@ -69,6 +70,7 @@ export const ArabicLink: Story = {
         story: 'Een enkele Link in het Arabisch.',
       },
     },
+    status: { type: [] },
   },
 };
 
@@ -85,6 +87,7 @@ export const LinkInParagraph: Story = {
         story: 'Een Link in een Paragraph.',
       },
     },
+    status: { type: [] },
   },
   render({ children, ...restProps }) {
     return (
@@ -111,6 +114,7 @@ export const LinkInGermanParagraph: Story = {
         story: 'Een Link in een Paragraph in een container met een lang attribuut met als waarde "de".',
       },
     },
+    status: { type: [] },
   },
   render({ children, ...restProps }) {
     return (
@@ -136,5 +140,6 @@ export const ExtremelyLongLink: Story = {
         story: 'Een link met een extreem lang woord.',
       },
     },
+    status: { type: [] },
   },
 };

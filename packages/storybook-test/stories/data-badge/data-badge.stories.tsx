@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import packageJSON from '../../components-react/data-badge-react/package.json';
-import { DataBadge } from '../../components-react/data-badge-react/src/css';
+import packageJSON from '../../../components-react/data-badge-react/package.json';
+import { DataBadge } from '../../../components-react/data-badge-react/src/css';
 
 const meta = {
   argTypes: {
@@ -33,6 +33,9 @@ export const Default: Story = {
   args: {
     children: '42',
   },
+  parameters: {
+    status: { type: [] },
+  },
 };
 
 export const DataBadgeWithValue: Story = {
@@ -41,6 +44,9 @@ export const DataBadgeWithValue: Story = {
     children: '42',
     value: '42',
   },
+  parameters: {
+    status: { type: [] },
+  },
 };
 
 export const DataBadgeWithDateTime: Story = {
@@ -48,5 +54,8 @@ export const DataBadgeWithDateTime: Story = {
   args: {
     children: 'Donderdag 1 januari 1970 om 01:00:00',
     dateTime: '1970-01-01T00:00:00+01:00',
+  },
+  parameters: {
+    status: { type: [] },
   },
 };

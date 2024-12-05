@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import packageJSON from '../../components-react/code-react/package.json';
-import { Code } from '../../components-react/code-react/src/css';
+import packageJSON from '../../../components-react/code-react/package.json';
+import { Code } from '../../../components-react/code-react/src/css';
 
 const meta = {
   argTypes: {
@@ -30,5 +30,8 @@ export const Default: Story = {
   name: 'Code',
   args: {
     children: `import { Code } from '@nl-design-system-candidate/code-react';`,
+  },
+  parameters: {
+    status: { type: [] },
   },
 };

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import packageJSON from '../../components-react/mark-react/package.json';
-import { Mark } from '../../components-react/mark-react/src/css';
-import { Paragraph } from '../../components-react/paragraph-react/src/css';
+import packageJSON from '../../../components-react/mark-react/package.json';
+import { Mark } from '../../../components-react/mark-react/src/css';
+import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 
 const meta = {
   argTypes: {
@@ -32,10 +32,16 @@ export const Default: Story = {
   args: {
     children: 'Gemarkeerde tekst',
   },
+  parameters: {
+    status: { type: [] },
+  },
 };
 
 export const MarkInParagraph: Story = {
   name: 'Mark in een Parargraph',
+  parameters: {
+    status: { type: [] },
+  },
   render() {
     return (
       <Paragraph>
