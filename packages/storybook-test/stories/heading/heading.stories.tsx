@@ -165,3 +165,84 @@ export const HeadingLevel6: Story = {
     status: { type: [] },
   },
 };
+
+export const HeadingLevelColors: Story = {
+  name: 'Heading lettertypes en kleuren',
+  args: {
+    children: 'Knappe Koppen Van Droom naar Realiteit',
+    level: 6,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Elk heading niveau moet een onderscheidend lettertype en kleur kunnen hebben, door middel van design tokens.`,
+      },
+    },
+  },
+  render: ({ children = 'Knappe Koppen Van Droom naar Realiteit' }) => (
+    <div
+      style={{
+        '--nl-heading-level-1-color': 'midnightblue',
+        '--nl-heading-level-1-font-family': 'serif',
+        '--nl-heading-level-2-color': 'maroon',
+        '--nl-heading-level-2-font-family': 'sans-serif',
+        '--nl-heading-level-3-color': 'green',
+        '--nl-heading-level-3-font-family': 'serif',
+        '--nl-heading-level-4-color': 'royalblue',
+        '--nl-heading-level-4-font-family': 'sans-serif',
+        '--nl-heading-level-5-color': 'rebeccapurple',
+        '--nl-heading-level-5-font-family': 'serif',
+        '--nl-heading-level-6-color': 'black',
+        '--nl-heading-level-6-font-family': 'sans-serif',
+        backgroundColor: 'white',
+      }}
+    >
+      <Heading level={1}>{children}</Heading>
+      <Heading level={2}>{children}</Heading>
+      <Heading level={3}>{children}</Heading>
+      <Heading level={4}>{children}</Heading>
+      <Heading level={5}>{children}</Heading>
+      <Heading level={6}>{children}</Heading>
+    </div>
+  ),
+};
+
+export const HeadingLevelSize: Story = {
+  name: 'Heading lettergrootte en line-height',
+  args: {
+    children: 'Knappe Koppen Van Droom naar Realiteit',
+    level: 6,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Elk heading niveau moet een eigen font-size en bijpassende line-height kunnen hebben. Vaak geldt: hoe groter de font-size, hoe kleiner de line-height.`,
+      },
+    },
+  },
+  render: ({ children = 'Knappe Koppen Van Droom naar Realiteit' }) => (
+    <div
+      style={{
+        '--nl-heading-level-1-font-size': '4em',
+        '--nl-heading-level-1-line-height': '1.3',
+        '--nl-heading-level-2-font-size': '3em',
+        '--nl-heading-level-2-line-height': '1.4',
+        '--nl-heading-level-3-font-size': '2em',
+        '--nl-heading-level-3-line-height': '1.5',
+        '--nl-heading-level-4-font-size': '1.6em',
+        '--nl-heading-level-4-line-height': '1.6',
+        '--nl-heading-level-5-font-size': '1.4em',
+        '--nl-heading-level-5-line-height': '1.7',
+        '--nl-heading-level-6-font-size': '1.2em',
+        '--nl-heading-level-6-line-height': '1.8',
+      }}
+    >
+      <Heading level={1}>{children}</Heading>
+      <Heading level={2}>{children}</Heading>
+      <Heading level={3}>{children}</Heading>
+      <Heading level={4}>{children}</Heading>
+      <Heading level={5}>{children}</Heading>
+      <Heading level={6}>{children}</Heading>
+    </div>
+  ),
+};
