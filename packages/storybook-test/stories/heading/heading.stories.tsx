@@ -11,6 +11,15 @@ const meta = {
       table: { category: 'API' },
     },
     children: { table: { category: 'API' } },
+    dir: {
+      control: { type: 'select' },
+      options: [undefined, 'auto', 'ltr', 'rtl'],
+      table: { category: 'API' },
+    },
+    lang: {
+      control: { type: 'text' },
+      table: { category: 'API' },
+    },
     level: {
       control: { type: 'select' },
       options: [1, 2, 3, 4, 5, 6],
@@ -87,10 +96,17 @@ export const HeadingLevel1Arabic: Story = {
   name: 'Heading 1 (Arabic)',
   args: {
     children: 'مثال',
+    dir: 'rtl',
+    lang: 'ar',
     level: 1,
   },
-  globals: {
-    lang: 'ar',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Het moet mogelijk zijn een andere taal en tekstrichting in te stellen voor een heading, met het `lang` en `dir` attribuut. Bijvoorbeeld de taal Arabisch met `lang="ar"` en de right-to-left textrichting (`dir="rtl"`)',
+      },
+    },
   },
   parameters: {
     status: { type: [] },
