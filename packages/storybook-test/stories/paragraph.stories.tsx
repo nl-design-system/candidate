@@ -130,3 +130,60 @@ export const ParagraphLeadArabic: Story = {
     },
   },
 };
+
+export const ParagraphZoom400: Story = {
+  name: 'Paragraph (zoom 400%)',
+  args: {
+    children: 'Knappekoppenbestuursoverlegorgaannotulen',
+    purpose: undefined,
+  },
+  globals: {
+    viewport: { value: undefined },
+    zoom: 4,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een paragraaf met een heel lang woord , gezoomed naar 400%.',
+      },
+    },
+  },
+};
+
+export const ParagraphZoomSmallViewport: Story = {
+  name: 'Paragraph (small viewport)',
+  args: {
+    children: 'Knappekoppenbestuursoverlegorgaannotulen',
+    purpose: undefined,
+  },
+  globals: {
+    viewport: { value: 'phone' },
+    zoom: 1,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een paragraaf met een heel lang woord , in een kleine viewport.',
+      },
+    },
+  },
+};
+
+export const ParagraphZoom400SmallViewport: Story = {
+  name: 'Paragraph (zoom 400%, small viewport)',
+  args: {
+    children: 'Knappekoppenbestuursoverlegorgaannotulen',
+    purpose: undefined,
+  },
+  globals: {
+    viewport: { value: 'phone' },
+    zoom: 4,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een paragraaf met een heel lang woord , gezoomed naar 400%.',
+      },
+    },
+  },
+};
