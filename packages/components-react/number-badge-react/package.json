@@ -39,7 +39,7 @@
   "devDependencies": {
     "@babel/runtime": "7.26.0",
     "@nl-design-system-candidate/number-badge-css": "workspace:*",
-    "@types/react": "18.3.12",
+    "@types/react": "18.3.13",
     "react": "18.3.1"
   },
   "peerDependencies": {
