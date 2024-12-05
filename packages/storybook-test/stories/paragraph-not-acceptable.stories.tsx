@@ -31,7 +31,7 @@ const meta = {
       },
     ],
   },
-  title: 'Componenten/Paragraph/Fout',
+  title: 'Componenten/Paragraph/Onvoldoende',
 } satisfies Meta<typeof Paragraph>;
 
 export default meta;
