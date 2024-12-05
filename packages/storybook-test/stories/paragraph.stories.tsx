@@ -49,6 +49,7 @@ export const Default: Story = {
         story: 'Een paragraaf bestaand uit één alinea.',
       },
     },
+    status: { type: [] },
   },
 };
 
@@ -64,6 +65,7 @@ export const ParagraphLead: Story = {
         story: 'Een lead paragraaf bestaand uit één alinea.',
       },
     },
+    status: { type: [] },
   },
 };
 
@@ -81,6 +83,7 @@ export const ParagraphLeadPlusParagraph: Story = {
           'Een fragment uit “Friesland” door Jac. P. Thijsse, gesplitst in een lead paragraaf en een gewone paragraaf.',
       },
     },
+    status: { type: [] },
   },
   render({ children, ...restProps }) {
     return (
@@ -111,6 +114,7 @@ export const ParagraphArabic: Story = {
         story: 'Een paragraaf met één alinea Arabische tekst.',
       },
     },
+    status: { type: [] },
   },
 };
 
@@ -128,5 +132,6 @@ export const ParagraphLeadArabic: Story = {
         story: 'Een lead paragraaf met één alinea Arabische tekst.',
       },
     },
+    status: { type: [] },
   },
 };

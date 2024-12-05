@@ -2,6 +2,7 @@ import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import type { Preview } from '@storybook/react';
 import { DocsPage } from '../src/DocsPage';
 import { StoryRootDecorator } from '../src/StoryRootDecorator';
+import { statuses } from './statuses';
 import { viewports } from './viewports';
 
 const storyRootClassname = 'voorbeeld-theme';
@@ -42,6 +43,7 @@ const preview: Preview = {
     html: {
       root: `.${storyRootClassname}`,
     },
+    status: { statuses },
     viewport: {
       options: viewports,
     },
