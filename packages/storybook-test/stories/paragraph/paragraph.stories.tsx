@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import packageJSON from '../../components-react/paragraph-react/package.json';
-import { Paragraph } from '../../components-react/paragraph-react/src/css';
+import packageJSON from '../../../components-react/paragraph-react/package.json';
+import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 
 const meta = {
   argTypes: {
@@ -152,6 +152,7 @@ export const ParagraphZoom400: Story = {
         story: 'Een paragraaf met een heel lang woord , gezoomed naar 400%.',
       },
     },
+    status: { type: [] },
   },
 };
 
@@ -171,6 +172,7 @@ export const ParagraphZoomSmallViewport: Story = {
         story: 'Een paragraaf met een heel lang woord , in een kleine viewport.',
       },
     },
+    status: { type: [] },
   },
 };
 
@@ -190,5 +192,6 @@ export const ParagraphZoom400SmallViewport: Story = {
         story: 'Een paragraaf met een heel lang woord , gezoomed naar 400%.',
       },
     },
+    status: { type: [] },
   },
 };

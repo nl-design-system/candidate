@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import packageJSON from '../../components-react/color-sample-react/package.json';
-import { ColorSample } from '../../components-react/color-sample-react/src/css';
+import packageJSON from '../../../components-react/color-sample-react/package.json';
+import { ColorSample } from '../../../components-react/color-sample-react/src/css';
 
 const meta = {
   argTypes: {
@@ -30,5 +30,8 @@ export const Default: Story = {
   name: 'Color Sample',
   args: {
     value: 'deeppink',
+  },
+  parameters: {
+    status: { type: [] },
   },
 };

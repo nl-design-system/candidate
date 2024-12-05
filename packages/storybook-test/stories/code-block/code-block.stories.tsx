@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import packageJSON from '../../components-react/code-block-react/package.json';
-import { CodeBlock } from '../../components-react/code-block-react/src/css';
+import packageJSON from '../../../components-react/code-block-react/package.json';
+import { CodeBlock } from '../../../components-react/code-block-react/src/css';
 
 const meta = {
   argTypes: {
@@ -30,5 +30,8 @@ export const Default: Story = {
   name: 'Code Block',
   args: {
     children: `import { CodeBlock } from '@nl-design-system-candidate/code-block-react';`,
+  },
+  parameters: {
+    status: { type: [] },
   },
 };
