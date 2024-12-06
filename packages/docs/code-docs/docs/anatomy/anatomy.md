@@ -2,4 +2,6 @@
 
 # Anatomie
 
+Code, onderdelen:
+
 1. Code
