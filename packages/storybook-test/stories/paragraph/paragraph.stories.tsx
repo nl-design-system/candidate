@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/paragraph-react/package.json';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import componentMarkdown from '../../../docs/paragraph-docs/docs/component.md?raw';
+import tokens from '../../../tokens/paragraph-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -30,6 +31,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens,
   },
   title: 'Componenten/Paragraph',
 } satisfies Meta<typeof Paragraph>;

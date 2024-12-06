@@ -1,4 +1,5 @@
 import { Controls, Description, Stories, Subtitle } from '@storybook/blocks';
+import { DesignTokens } from './DesignTokens';
 import { DocsHeader } from './DocsHeader';
 
 export const DocsPage = () => (
@@ -8,5 +9,6 @@ export const DocsPage = () => (
     <Description />
     <Controls />
     <Stories />
+    <DesignTokens />
   </>
 );
