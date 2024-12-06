@@ -11,5 +11,11 @@ export function DesignTokens() {
 
   const tokensMap = treeToMap(addPath(tokens, isDesignTokenDefinition), isDesignTokenDefinition);
 
-  return <DesignTokensTable tokens={[]} tokensMap={tokensMap as any} />;
+  const tokensList = Array.from(tokensMap.values()).map((token) => ({
+    ...token,
+    value: '',
+  }));
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return <DesignTokensTable tokens={tokensList as any} tokensMap={tokensMap as any} />;
 }
