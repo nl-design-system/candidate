@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/heading-react/package.json';
 import { Heading } from '../../../components-react/heading-react/src/css';
 import componentMarkdown from '../../../docs/heading-docs/docs/component.md?raw';
+import tokens from '../../../tokens/heading-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -43,6 +44,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens,
   },
   title: 'Componenten/Heading',
 } satisfies Meta<typeof Heading>;
@@ -107,8 +109,6 @@ export const HeadingLevel1Arabic: Story = {
           'Het moet mogelijk zijn een andere taal en tekstrichting in te stellen voor een heading, met het `lang` en `dir` attribuut. Bijvoorbeeld de taal Arabisch met `lang="ar"` en de right-to-left textrichting (`dir="rtl"`)',
       },
     },
-  },
-  parameters: {
     status: { type: [] },
   },
 };

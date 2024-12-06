@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/code-block-react/package.json';
 import { CodeBlock } from '../../../components-react/code-block-react/src/css';
 import componentMarkdown from '../../../docs/code-block-docs/docs/component.md?raw';
+import tokens from '../../../tokens/code-block-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -24,6 +25,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens,
   },
   title: 'Componenten/Code Block',
 } satisfies Meta<typeof CodeBlock>;

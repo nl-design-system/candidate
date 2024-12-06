@@ -3,6 +3,7 @@ import '../../../components-css/number-badge-css/dist/test.css';
 import packageJSON from '../../../components-react/number-badge-react/package.json';
 import { NumberBadge } from '../../../components-react/number-badge-react/src/css';
 import componentMarkdown from '../../../docs/number-badge-docs/docs/component.md?raw';
+import tokens from '../../../tokens/number-badge-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -29,6 +30,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens,
   },
   title: 'Componenten/Number Badge',
 } satisfies Meta<typeof NumberBadge>;

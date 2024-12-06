@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/code-react/package.json';
 import { Code } from '../../../components-react/code-react/src/css';
 import componentMarkdown from '../../../docs/code-docs/docs/component.md?raw';
+import tokens from '../../../tokens/code-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -24,6 +25,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens,
   },
   title: 'Componenten/Code',
 } satisfies Meta<typeof Code>;
