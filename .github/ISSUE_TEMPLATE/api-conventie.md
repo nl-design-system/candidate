@@ -1,7 +1,7 @@
 ---
 name: API conventie
 about: API volgt conventies en is geprefixed met 'nl'.
-title: "{component-name} - API conventie"
+title: '{component-name} - API conventie'
 labels:
   - documentation
   - community collaboration 🤝
