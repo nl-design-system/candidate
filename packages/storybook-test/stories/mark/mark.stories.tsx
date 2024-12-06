@@ -3,6 +3,7 @@ import packageJSON from '../../../components-react/mark-react/package.json';
 import { Mark } from '../../../components-react/mark-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import componentMarkdown from '../../../docs/mark-docs/docs/component.md?raw';
+import tokens from '../../../tokens/mark-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -25,6 +26,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens,
   },
   title: 'Componenten/Mark',
 } satisfies Meta<typeof Mark>;

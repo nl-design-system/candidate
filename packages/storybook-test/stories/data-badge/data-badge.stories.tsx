@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/data-badge-react/package.json';
 import { DataBadge } from '../../../components-react/data-badge-react/src/css';
 import componentMarkdown from '../../../docs/data-badge-docs/docs/component.md?raw';
+import tokens from '../../../tokens/data-badge-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -26,6 +27,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens,
   },
   title: 'Componenten/Data Badge',
 } satisfies Meta<typeof DataBadge>;

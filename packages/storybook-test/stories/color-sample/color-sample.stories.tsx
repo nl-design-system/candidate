@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/color-sample-react/package.json';
 import { ColorSample } from '../../../components-react/color-sample-react/src/css';
 import componentMarkdown from '../../../docs/color-sample-docs/docs/component.md?raw';
+import tokens from '../../../tokens/color-sample-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -24,6 +25,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens,
   },
   title: 'Componenten/Color Sample',
 } satisfies Meta<typeof ColorSample>;

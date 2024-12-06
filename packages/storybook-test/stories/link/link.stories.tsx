@@ -3,6 +3,7 @@ import packageJSON from '../../../components-react/link-react/package.json';
 import { Link } from '../../../components-react/link-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import componentMarkdown from '../../../docs/link-docs/docs/component.md?raw';
+import tokens from '../../../tokens/link-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -31,6 +32,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens,
   },
   title: 'Componenten/Link',
 } satisfies Meta<typeof Link>;
