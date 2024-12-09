@@ -18,7 +18,6 @@
     "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/docs/heading-5-docs"
   },
-  "private": true,
   "publishConfig": {
     "access": "public"
   }
