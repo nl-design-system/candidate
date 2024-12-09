@@ -13,9 +13,6 @@
   "files": [
     "./docs/"
   ],
-  "exports": {
-    "./*.md": "./docs/*.md"
-  },
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/candidate.git",

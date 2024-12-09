@@ -13,14 +13,10 @@
   "files": [
     "./docs/"
   ],
-  "exports": {
-    "./*.md": "./docs/*.md"
-  },
   "repository": {
     "type": "git+ssh",
     "directory": "packages/docs/number-badge-docs"
   },
-  "private": true,
   "publishConfig": {
     "access": "public"
   }
