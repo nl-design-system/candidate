@@ -2,4 +2,4 @@
 
 # Aliassen
 
-Ook bekend als: Titel, Kop en Kopje.
+Ook bekend als: Kop, Subkop, en Kopje.
