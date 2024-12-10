@@ -12,7 +12,15 @@
   font-family: var(--nl-code-block-font-family, monospace), monospace;
   font-size: var(--nl-code-block-font-size);
   line-height: var(--nl-code-block-line-height);
-  overflow: auto;
+
+  /* stylelint-disable order/properties-alphabetical-order */
+
+  /* `overflow-inline` must come after `overflow-x` */
+  overflow-x: auto;
+  overflow-inline: auto;
+
+  /* stylelint-enable order/properties-alphabetical-order */
+
   padding-block: var(--nl-code-block-padding-block);
   padding-inline: var(--nl-code-block-padding-inline);
   white-space: pre;
