@@ -27,11 +27,10 @@ Anatomie van de component is vastgelegd
 - [ ] Exporteer het frame als SVG-bestand met dezelfde naam als het frame
 - [ ] Zorg dat er alternatieve tekst beschikbaar is. Om dit toe te voegen, open je het SVG-bestand in een text editor. Voeg op het `<svg>` element twee attributen toe: `role="img"` en `aria-label=""`. Beschrijf in het `aria-label` attribuut wat er zichtbaar is; benoem wel vormen, geen kleuren.
 
-Voorbeeld: 
+Voorbeeld:
 
-```
-aria-label="Een zin met in de lopende tekst het woord
-'code' dat is opgemaakt met een achtergrond en een ander
+```html
+aria-label="Een zin met in de lopende tekst het woord 'code' dat is opgemaakt met een achtergrond en een ander
 lettertype. Het stukje code is aangeduid met het cijfer 1."
 ```
 
