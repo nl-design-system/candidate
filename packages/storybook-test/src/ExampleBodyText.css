@@ -1,0 +1,60 @@
+/* This component is named after the concept "Body text".
+ * https://en.wikipedia.org/wiki/Body_text
+ */
+.example-body-text {
+  -webkit-hyphenate-limit-after: var(--example-body-text-hyphenate-limit-chars-after, auto);
+  -webkit-hyphenate-limit-before: var(--example-body-text-hyphenate-limit-chars-before, auto);
+  -webkit-hyphenate-limit-chars: var(--example-body-text-hyphenate-limit-chars-word, auto)
+    var(--example-body-text-hyphenate-limit-chars-before) var(--example-body-text-hyphenate-limit-chars-after, auto);
+  -moz-hyphenate-limit-chars: var(--example-body-text-hyphenate-limit-chars-word, auto)
+    var(--example-body-text-hyphenate-limit-chars-before, auto)
+    var(--example-body-text-hyphenate-limit-chars-after, auto);
+  -ms-hyphenate-limit-chars: var(--example-body-text-hyphenate-limit-chars-word, auto)
+    var(--example-body-text-hyphenate-limit-chars-before, auto)
+    var(--example-body-text-hyphenate-limit-chars-after, auto);
+  hyphenate-limit-chars: var(--example-body-text-hyphenate-limit-chars-word, auto)
+    var(--example-body-text-hyphenate-limit-chars-before, auto)
+    var(--example-body-text-hyphenate-limit-chars-after, auto);
+  -webkit-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-last: always;
+  hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-lines: var(--example-body-text-hyphenate-limit-lines, auto);
+  -moz-hyphenate-limit-lines: var(--example-body-text-hyphenate-limit-lines, auto);
+  -ms-hyphenate-limit-lines: var(--example-body-text-hyphenate-limit-lines, auto);
+  hyphenate-limit-lines: var(--example-body-text-hyphenate-limit-lines, auto);
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+
+  /* "Maak regels niet te lang of te kort. 45-75 karakters per regel is acceptabel." */
+
+  /* https://nldesignsystem.nl/richtlijnen/stijl/typografie/regellengte */
+
+  /* `75ch` lijkt dus de ideale default voor maximale regellengte. */
+  max-inline-size: var(--example-body-text-max-inline-size, 75ch);
+  word-break: break-word;
+}
+
+.example-body-text :lang(nl) {
+  --example-body-text-hyphenate-limit-chars-before: 8;
+  --example-body-text-hyphenate-limit-chars-after: 4;
+  --example-body-text-hyphenate-limit-chars-word: 12;
+  --example-body-text-hyphenate-limit-lines: 2;
+}
+
+/* Reset hyphenation when another language is specified inside `:lang(nl)` */
+.example-body-text :not(:lang(nl)) {
+  --example-body-text-hyphenate-limit-chars-before: auto;
+  --example-body-text-hyphenate-limit-chars-after: auto;
+  --example-body-text-hyphenate-limit-chars-word: auto;
+  --example-body-text-hyphenate-limit-lines: auto;
+}
+
+.voorbeeld-theme {
+  --voorbeeld-typography-line-height-xs: 1rem !important;
+  --voorbeeld-typography-line-height-md: 1.25rem !important;
+  --voorbeeld-typography-line-height-lg: 1.5rem !important;
+  --voorbeeld-typography-line-height-xl: 2rem !important;
+}
