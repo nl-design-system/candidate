@@ -38,6 +38,27 @@ describe('Code Block', () => {
     expect(codeBlock).toContainElement(codeBlockContent as HTMLElement);
   });
 
+  it('renders an HTML pre with a dir="ltr" attribute to use left-to-right as default', () => {
+    const { container } = render(<CodeBlock>{testCode}</CodeBlock>);
+    const codeBlock = container.querySelector('pre:only-child');
+
+    expect(codeBlock).toHaveAttribute('dir', 'ltr');
+  });
+
+  it('renders an HTML pre with a dir="rtl" attribute when specified', () => {
+    const { container } = render(<CodeBlock dir="rtl">{testCode}</CodeBlock>);
+    const codeBlock = container.querySelector('pre:only-child');
+
+    expect(codeBlock).toHaveAttribute('dir', 'rtl');
+  });
+
+  it('renders an HTML pre without a dir attribute when set to `undefined`', () => {
+    const { container } = render(<CodeBlock dir={undefined}>{testCode}</CodeBlock>);
+    const codeBlock = container.querySelector('pre:only-child');
+
+    expect(codeBlock).not.toHaveAttribute('dir');
+  });
+
   it('renders an element with class name "nl-code-block" that contains an element with class name "nl-code-block__content"', () => {
     const { container } = render(<CodeBlock>{testCode}</CodeBlock>);
     const codeBlock = container.querySelector('pre:only-child');
