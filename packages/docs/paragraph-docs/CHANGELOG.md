@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/paragraph-docs
 
+## 1.0.2
+
+### Patch Changes
+
+- 4b09e72: Add anatomy docs and SVG image.
+
 ## 1.0.1
 
 ### Patch Changes
