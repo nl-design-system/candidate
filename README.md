@@ -6,9 +6,9 @@
 
 Voorbereiding:
 
-1. Installeer [Node Version Manager "`nvm`"](https://github.com/nvm-sh/nvm), als je die ook wilt gebruiken om makkelijk de goede Node.js versie te gebruiken.
+1. (Optioneel) Installeer [Node Version Manager "`nvm`"](https://github.com/nvm-sh/nvm), als je die ook wilt gebruiken om makkelijk de goede Node.js versie te gebruiken.
 2. [Installeer `pnpm`](https://pnpm.io/installation), hiermee installeer je de dependencies van dit project.
-3. Installeer de juiste Node.js versie, die is vastgelegd in `.nvmrc`. Voer dit uit in de terminal: `nvm install`, en dan `nvm use`.
+3. Installeer de juiste Node.js versie, die is vastgelegd in `.nvmrc`. Als je in stap 1 "`nvm`" heb geïnstalleerd voer je dit uit in de terminal: `nvm install`, en dan `nvm use`. Zo niet dan [download](https://nodejs.org/) je Node.js en volg je de installatie-instructies.
 4. Installeer alle dependencies met `pnpm install`.
 5. Verwijder voor de zekerheid alle oude bestanden met `pnpm run clean`.
 6. Maak het project klaar om op te starten met `pnpm run build`.
