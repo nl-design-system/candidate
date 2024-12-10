@@ -86,6 +86,50 @@ export const FocusedSkipLink: Story = {
   },
 };
 
+export const SkipLinkZoom: Story = {
+  name: 'Skip link (400% zoom)',
+  args: {
+    children: 'naar de inhoud',
+    className: 'nl-skip-link--zoom',
+    href: '#main-story-4',
+  },
+  globals: {
+    viewport: {
+      value: undefined,
+    },
+    zoom: 4,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een skip moet ook op een ingezoomde pagina goed zichtbaar zijn.',
+      },
+    },
+  },
+};
+
+export const LongSkipLink: Story = {
+  name: 'Extra lange skip link tekst (400% zoom)',
+  args: {
+    children: 'naar de supercalifragilisticexpialidocioussupercalifragilisticexpialidocious inhoud',
+    className: 'nl-skip-link--long',
+    href: '#main-story-3',
+  },
+  globals: {
+    viewport: {
+      value: undefined,
+    },
+    zoom: 4,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een skip link met een lange linktekst, moet ook in beeld passen op een kleine viewport.',
+      },
+    },
+  },
+};
+
 export const RightToLeft: Story = {
   name: 'Right-to-left',
   args: {
