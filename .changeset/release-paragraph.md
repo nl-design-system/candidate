@@ -2,4 +2,4 @@
 '@nl-design-system-candidate/paragraph-docs': patch
 ---
 
-Remove exports property from package.json.
+Add anatomy docs and SVG image.
