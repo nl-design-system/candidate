@@ -557,6 +557,12 @@ importers:
       '@etchteam/storybook-addon-status':
         specifier: 5.0.0
         version: 5.0.0
+      '@fontsource/fira-code':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@fontsource/fira-sans':
+        specifier: 5.1.0
+        version: 5.1.0
       '@nl-design-system-unstable/design-tokens-table-react':
         specifier: 1.0.0
         version: 1.0.0(@babel/runtime@7.26.0)(react@18.3.1)
@@ -1596,6 +1602,9 @@ packages:
 
   '@etchteam/storybook-addon-status@5.0.0':
     resolution: {integrity: sha512-0Dg94xQ3T+rYTi6ekFkaH0XU9k0IQOqidiSmwN47Oqw4u1qjxK6m7wV3j7C0deLEuf4U4PrAcsDfDjyehKne2A==}
+
+  '@fontsource/fira-code@5.1.0':
+    resolution: {integrity: sha512-ti2XDP0qthaTDu44QawNP3PjEZIZ/cNl5VUZzvF9oYS/WY4LgmbF43IMTgTUZL33hknwFWBfmLmZCheOQmzJDg==}
 
   '@fontsource/fira-sans@5.1.0':
     resolution: {integrity: sha512-qfAjF5WcrL6qQh9eIWLK7lOh9wbCgCnVWh2Nu2gozrTgsUgYBLR8sbCGYwlK1K0yZoQsR2i9VSiQ16wwPCBkSw==}
@@ -7196,6 +7205,8 @@ snapshots:
   '@etchteam/storybook-addon-status@5.0.0':
     dependencies:
       lodash: 4.17.21
+
+  '@fontsource/fira-code@5.1.0': {}
 
   '@fontsource/fira-sans@5.1.0': {}
 
