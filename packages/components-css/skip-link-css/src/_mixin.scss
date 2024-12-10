@@ -1,7 +1,8 @@
 @mixin nl-skip-link {
   background-color: var(--nl-skip-link-background-color, Canvas);
   color: var(--nl-skip-link-color, LinkText);
-  inset-inline-start: -100%;
+  display: inline-flex;
+  inset-inline-start: -200%;
   min-block-size: var(--nl-skip-link-min-block-size, 44px);
   min-inline-size: var(--nl-skip-link-min-inline-size, 44px);
   padding-block: var(--nl-skip-link-padding-block);
@@ -11,8 +12,15 @@
 }
 
 @mixin nl-skip-link--focus-visible {
+  /**
+   * WCAG 2.2 / 2.4.12: "No part of the focus indicator is hidden by author-created content".
+   * To go the extra mile, ensure the focus indicator is inside the viewport.
+   */
+  --_nl-skip-link-inset: calc(var(--nl-focus-ring-outline-width, 0px) + var(--nl-focus-ring-outline-offset, 0px));
+
   background-color: var(--nl-skip-link-focus-visible-background-color);
   color: var(--nl-skip-link-focus-visible-color);
-  position: static;
+  inset-block-start: var(--_nl-skip-link-inset, 0);
+  inset-inline-start: var(--_nl-skip-link-inset, 0);
   text-decoration: var(--nl-skip-link-focus-visible-text-decoration);
 }
