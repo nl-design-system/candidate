@@ -25,6 +25,16 @@ Anatomie van de component is vastgelegd
 - [ ] Plaats de component uit de 'NLDS Voorbeeld Bibliotheek' op het frame
 - [ ] Voeg annotaties toe met 'Annotation number' en 'Annotation line'. Houd 48 pixels afstand tussen de nummers en de component
 - [ ] Exporteer het frame als SVG-bestand met dezelfde naam als het frame
+- [ ] Zorg dat er alternatieve tekst beschikbaar is. Om dit toe te voegen, open je het SVG-bestand in een text editor. Voeg op het `<svg>` element twee attributen toe: `role="img"` en `aria-label=""`. Beschrijf in het `aria-label` attribuut wat er zichtbaar is; benoem wel vormen, geen kleuren.
+
+Voorbeeld: 
+
+```
+aria-label="Een zin met in de lopende tekst het woord
+'code' dat is opgemaakt met een achtergrond en een ander
+lettertype. Het stukje code is aangeduid met het cijfer 1."
+```
+
 - [ ] Maak een bestand `_anatomy.md` aan in de `docs`folder van de component. Je vindt deze folders in de [docs](https://github.com/nl-design-system/candidate/tree/main/packages/docs) folder van de Candidate repository in GitHub
 - [ ] Voeg de anatomie-documentatie toe aan het bestand volgens deze opzet:
 
