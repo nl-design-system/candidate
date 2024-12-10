@@ -1,4 +1,6 @@
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
+import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
+import '@fontsource/fira-code';
 import type { Preview } from '@storybook/react';
 import { DocsPage } from '../src/DocsPage';
 import { StoryRootDecorator } from '../src/StoryRootDecorator';

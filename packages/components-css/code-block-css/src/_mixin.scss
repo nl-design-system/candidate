@@ -1,3 +1,27 @@
 @mixin nl-code-block {
-  font-family: var(--nl-code-block-font-family, monospace);
+  /* Use `display: block` and `white-space: pre` so the styling will work
+   * consistently, regardless which HTML element is used for rendering.
+   *
+   * Fallback to `monospace` both when the font-family specified in the
+   * design token cannot be loaded, as well as when it is not configured.
+   */
+  background-color: var(--nl-code-block-background-color);
+  border-radius: var(--nl-code-block-border-radius);
+  color: var(--nl-code-block-color);
+  display: block;
+  font-family: var(--nl-code-block-font-family, monospace), monospace;
+  font-size: var(--nl-code-block-font-size);
+  line-height: var(--nl-code-block-line-height);
+  overflow: auto;
+  padding-block: var(--nl-code-block-padding-block);
+  padding-inline: var(--nl-code-block-padding-inline);
+  white-space: pre;
+}
+
+@mixin nl-code-block__code {
+  /* The `code` element must use the `font-family` and `font-size` that are configured for the Code Block.
+   * Remove the default `font-family: monospace` for the `<code>` element in `<pre><code>...</code></pre>`.
+   */
+  font-family: inherit;
+  font-size: inherit;
 }

@@ -1,7 +1,15 @@
 @use "../mixin";
 
 @mixin pre {
-  pre {
+  pre:has(> code:only-child) {
     @include mixin.nl-code-block;
+  }
+
+  pre[hidden]:has(> code:only-child) {
+    display: none;
+  }
+
+  pre:has(> code:only-child) > code {
+    @include mixin.nl-code-block__code;
   }
 }
