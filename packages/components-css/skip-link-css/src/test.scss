@@ -1,0 +1,5 @@
+@use "./mixin";
+
+.nl-skip-link--storybook-focus-visible {
+  @include mixin.nl-skip-link--focus-visible;
+}
