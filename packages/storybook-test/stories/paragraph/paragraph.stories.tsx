@@ -1,9 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { CSSProperties } from 'react';
 import packageJSON from '../../../components-react/paragraph-react/package.json';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import componentMarkdown from '../../../docs/paragraph-docs/docs/component.md?raw';
 import tokens from '../../../tokens/paragraph-tokens/tokens.json';
+import { ExampleBodyTextDecorator } from '../../src/ExampleBodyText';
+import {
+  LargeLetterSpacingDecorator,
+  LargeLineHeightDecorator,
+  LargeWordSpacingDecorator,
+} from '../../src/TextDecorator';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -100,6 +105,7 @@ const meta = {
     },
   },
   component: Paragraph,
+  decorators: ExampleBodyTextDecorator,
   parameters: {
     docs: {
       description: {
@@ -213,26 +219,33 @@ export const Default: Story = {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
     purpose: undefined,
   },
+  globals: {
+    viewport: { value: 'wcag100' },
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Een paragraaf bestaand uit één alinea.',
+        story: 'Dit voorbeeld toont een alinea die bestaat uit 1 korte zin',
       },
     },
     status: { type: [] },
   },
 };
 
-export const ParagraphLead: Story = {
-  name: 'Paragraph Lead',
+export const LeadParagraph: Story = {
+  name: 'Lead Paragraph',
   args: {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
     purpose: 'lead',
   },
+  globals: {
+    viewport: { value: 'wcag100' },
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Een lead paragraaf bestaand uit één alinea.',
+        story:
+          'Dit voorbeeld toont een alinea die bestaat uit 1 korte zin, die opvallender is dan een normale alinea doordat de tekst groter is of vetgedrukt is.',
       },
     },
     status: { type: [] },
@@ -240,16 +253,67 @@ export const ParagraphLead: Story = {
 };
 
 export const LongParagraph: Story = {
-  name: 'Paragraph (lang)',
+  name: 'Paragraph met lange tekst',
   args: {
     children:
       'In de laatste dagen, toen ik uit Italië naar Engeland terugkeerde, besloot ik, liever dan al den tijd, dien ik te paard moest zitten, met smakelooze en onwetenschappelijke praatjes te slijten, zoo nu en dan of bij mij zelf over een onderwerp uit onze gemeenschappelijke letteroefeningen na te denken of mij te vermeien in de herinnering aan de even geleerde als dierbare vrienden, die ik hier had achtergelaten. Onder dezen kwam uw beeld, mijn beste Morus, mij zeker het allereerst voor den geest en de herinnering aan U, ofschoon wij ver van elkander waren, was mij even aangenaam, als uw omgang was, toen ik U nog van aangezicht tot aangezicht placht te zien, het aangenaamste—ik mag sterven, als het niet waar is—van al wat mij ooit in mijn leven te beurt is gevallen. Daarom vatte ik, omdat ik meende in allen gevalle iets te moeten doen en die tijd mij weinig geschikt voorkwam om een ernstig onderwerp te overdenken, het plan op een boertige lofrede op Moria (de Zotheid) te houden. “Welke Pallas heeft U op die gedachte gebracht?” zult ge zeggen. Vooreerst deed uw geslachtsnaam Morus mij dit plan opvatten, die even dicht bij het woord Moria komt, als gij ver van de zaak af zijt of liever, volgens aller eenstemmig getuigenis, daarmede volstrekt niets gemeen hebt. Verder vermoedde ik, dat deze speling van ons vernuft bovenal uw goedkeuring zou wegdragen, omdat gij in dergelijke jokkernijen, waarbij, zoo ik goed zie, nergens geleerdheid en geest kan gemist worden, bijzonder veel smaak vindt en in het dagelijksche leven als een Democritus pleegt op te treden. Ofschoon gij door uw buitengewone scherpzinnigheid gewoonlijk hemelsbreed in gevoelen van het gemeene volk verschilt, zijt gij toch door de ongeloofelijke zachtheid en meegaandheid van uw karakter niet alleen in staat om met allerlei menschen in alle omstandigheden des levens om te gaan, maar vindt gij er ook een genot in. Deze kleine verhandeling zult gij daarom gaarne aannemen als een aandenken van uw vriend en gij zult ook haar verdediging gaarne aanvaarden, want zij is u toegewijd en daarom voortaan Uw eigendom, niet het mijne.',
   },
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    viewport: { value: 'wcag100' },
+  },
   parameters: {
     docs: {
       description: {
-        story:
-          'Een lange paragraaf die over meerdere regels gaat zodat duidelijk is dat de `line-height` van de paragraaf adequaat is. (fragment uit “De Lof der Zotheid” van Desiderius Erasmus)',
+        story: `Dit voorbeeld toont een alinea met een buitengewoon lange tekst uit een oud boek.
+
+Het is een fragment uit “De Lof der Zotheid” van Desiderius Erasmus.
+
+De tekst is op normale schermgroottes verdeeld over meerdere regels, waardoor je duidelijk kan beoordelen of  de \`line-height\` van de Paragraph adequaat is.`,
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+const longWordsNl = [
+  'afvalbrengstation',
+  'burgerservicenummer',
+  'gehandicaptenparkeerkaart',
+  'gehandicaptenparkeerplaats',
+  'godsdienstonderwijs',
+  'huisvestingsvergunning',
+  'jeugdgezondheidszorg',
+  'kamerbemiddelingsbureau',
+  'loonkostenvoordelen',
+  'omgevingsvergunning',
+  'ondersteuningsverklaring',
+  'persoonsgegevens',
+  'precariobelasting',
+  'samenlevingscontract',
+  'standplaatsvergunning',
+  'verkoopdemonstratie',
+  'vluchtelingenpaspoort',
+  'voetgangersgebied',
+  'vreemdelingenpaspoort',
+  'woonwagenstandplaats',
+].sort();
+
+export const ParagraphWordBreak: Story = {
+  name: 'Paragraph met word-break',
+  args: {
+    children: `In de praktijk komen er regelmatig lange woorden voor. Bijvoorbeeld: ${longWordsNl.join(', ')}.`,
+  },
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    viewport: { value: 'wcag100' },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Dit voorbeeld toont een alinea met tekst, die vooral bestaat uit buitengewoon lange woorden. Veel worden worden aan het eind van de regel afgebroken, en vervolgd op de volgende regel.
+
+Woordafbreking gebruiken voor tekst is belangrijk, want je moet voorkomen dat tekst buiten beeld valt. Hoe groter de font-size, hoe vaker woordafbreking nodig is.`,
       },
     },
     status: { type: [] },
@@ -263,11 +327,15 @@ export const ParagraphLeadPlusParagraph: Story = {
       'Ditmaal hebben wij het in Friesland gezocht, en ik mag wel zeggen, wij hebben het er gevonden ook. Want dat gewest geeft een afwisseling van velerlei moois te water en te land, oud en nieuw.',
     purpose: 'lead',
   },
+  globals: {
+    viewport: { value: 'wcag100' },
+  },
   parameters: {
     docs: {
       description: {
-        story:
-          'Een fragment uit “Friesland” door Jac. P. Thijsse, gesplitst in een lead paragraaf en een gewone paragraaf.',
+        story: `Dit voorbeeld toont een Lead Paragraph met daaronder een normale Paragraph. De eerste alinea heeft een groter lettertype dan de tweede alinea, en alleen de eerste alinea is dikgedrukt.
+
+De tekst is een fragment uit “Friesland” door Jac. P. Thijsse, gesplitst in een lead paragraaf en een gewone paragraaf.`,
       },
     },
     status: { type: [] },
@@ -288,17 +356,21 @@ export const ParagraphLeadPlusParagraph: Story = {
 };
 
 export const ParagraphArabic: Story = {
-  name: 'Paragraph (Arabic)',
+  name: 'Paragraph met Arabisch schrift',
   args: {
     children: 'هذه فقرة نصية. وهي ليست فقرة نصية طويلة جدًا، ولكنها فقرة نصية على أية حال.',
     dir: 'rtl',
     lang: 'ar',
     purpose: undefined,
   },
+  globals: {
+    viewport: { value: 'wcag100' },
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Een paragraaf met één alinea Arabische tekst.',
+        story:
+          'Dit voorbeeld toont een alinea die bestaat uit 1 zin in Arabisch schrift, waarvan de schrijfrichting van rechts naar links is.',
       },
     },
     status: { type: [] },
@@ -306,185 +378,115 @@ export const ParagraphArabic: Story = {
 };
 
 export const ParagraphLeadArabic: Story = {
-  name: 'Paragraph Lead (Arabic)',
+  name: 'Lead Paragraph met Arabisch schrift',
   args: {
     children: 'هذه فقرة نصية. وهي ليست فقرة نصية طويلة جدًا، ولكنها فقرة نصية على أية حال.',
     dir: 'rtl',
     lang: 'ar',
     purpose: 'lead',
   },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een lead paragraaf met één alinea Arabische tekst.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const ParagraphZoom200: Story = {
-  name: 'Paragraph (zoom 200%)',
-  args: {
-    children: 'Knappekoppenbestuursoverlegorgaannotulen',
-    purpose: undefined,
-  },
   globals: {
-    viewport: { value: undefined },
-    zoom: '400%',
+    viewport: { value: 'wcag100' },
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een paragraaf met een heel lang woord, gezoomed naar 200%.',
+        story:
+          'Dit voorbeeld toont een Lead Paragraph die bestaat uit 1 zin in Arabisch schrift, waarvan de schrijfrichting van rechts naar links is.',
       },
     },
     status: { type: [] },
   },
 };
 
-export const ParagraphZoom400: Story = {
-  name: 'Paragraph (zoom 400%)',
+export const ParagraphLongSmallViewport: Story = {
+  name: 'Paragraph in een kleine viewport',
   args: {
-    children: 'Knappekoppenbestuursoverlegorgaannotulen',
-    purpose: undefined,
+    ...LongParagraph.args,
   },
+  decorators: [LargeLineHeightDecorator],
   globals: {
-    viewport: { value: undefined },
-    zoom: '400%',
+    viewport: { value: 'wcag400' },
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een paragraaf met een heel lang woord, gezoomed naar 400%.',
+        story: `Dit voorbeeld toont een alinea met tekst in een kleine viewport, vergelijkbaar met 400% zoom. De tekst is over veel regels verdeeld, en je kunt scrollen om alles te kunnen lezen.
+
+Er moet geen tekst buiten beeld vallen aan de rechterkant, en aan de onderkant moet het mogelijk zijn te scrollen.`,
       },
     },
-    status: { type: [] },
+    status: {
+      type: [],
+    },
   },
 };
 
-export const ParagraphSmallViewport: Story = {
-  name: 'Paragraph (small viewport)',
+export const ParagraphLongLargeViewport: Story = {
+  name: 'Paragraph in een grote viewport',
   args: {
-    children: 'Knappekoppenbestuursoverlegorgaannotulen',
-    purpose: undefined,
+    ...LongParagraph.args,
   },
+  decorators: [LargeLineHeightDecorator],
   globals: {
-    viewport: { value: 'phone' },
-    zoom: 1,
+    viewport: { value: 'wcag100' },
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een paragraaf met een heel lang woord, in een kleine viewport.',
+        story: `Dit voorbeeld toont een alinea met tekst in een grote viewport.
+
+Je moet de tekst goed kunnen lezen, en de tekstregels moeten niet breder worden dan circa 75 tekens.`,
       },
     },
-    status: { type: [] },
+    status: {
+      type: [],
+    },
   },
 };
 
-export const ParagraphZoom200SmallViewport: Story = {
-  name: 'Paragraph (zoom 200%, small viewport)',
+export const ParagraphLargeLineHeight: Story = {
+  name: 'Paragraph met grote line-height',
   args: {
-    children: 'Knappekoppenbestuursoverlegorgaannotulen',
-    purpose: undefined,
+    ...LongParagraph.args,
   },
+  decorators: [LargeLineHeightDecorator],
   globals: {
-    viewport: { value: 'phone' },
-    zoom: '200%',
+    viewport: { value: 'wcag100' },
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een paragraaf met een heel lang woord, gezoomed naar 200%.',
+        story: `Dit voorbeeld toont een alinea met tekst waarbij tussen de regels 200% meer afstand is dan normaal.
+
+Voor [WCAG-succescriterium 1.4.12 Tekstafstand](https://nldesignsystem.nl/wcag/1.4.12) is het nodig dat het voor gebruikers mogelijk is om de regelafstand zoveel groter in te stellen.
+
+In CSS kun je dat simuleren door \`:root { line-height: 3 }\`.`,
       },
     },
-    status: { type: [] },
+    status: {
+      type: [],
+    },
   },
 };
 
-export const ParagraphZoom200SmallViewportSpacingOnly: Story = {
-  name: 'Paragraph (zoom 200%, small viewport)',
+export const ParagraphLargeLetterAndWordSpacing: Story = {
+  name: 'Paragraph met grote letter-spacing en grote word-spacing',
   args: {
-    children: 'Knappekoppenbestuursoverlegorgaannotulen',
-    purpose: undefined,
-    style: {
-      'letter-spacing': '0.12em',
-      'word-spacing': '0.16em',
-    } as CSSProperties,
+    ...LongParagraph.args,
   },
+  decorators: [LargeLetterSpacingDecorator, LargeWordSpacingDecorator],
   globals: {
-    viewport: { value: 'phone' },
-    zoom: '200%',
+    viewport: { value: 'wcag100' },
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een paragraaf met een heel lang woord, gezoomed naar 200%.',
-      },
-    },
-    status: { type: [] },
-  },
-};
+        story: `Dit voorbeeld toont een alinea met tekst waarbij tussen de letters 12% meer afstand is dan normaal, en tussen de woorden 16% meer afstand is dan normaal.
 
-export const ParagraphZoom200SmallViewportSpacingAndWordBreak: Story = {
-  name: 'Paragraph (zoom 200%, small viewport)',
-  args: {
-    children: 'Knappekoppenbestuursoverlegorgaannotulen',
-    purpose: undefined,
-    style: {
-      letterSpacing: '0.12em',
-      wordBreak: 'break-word',
-      wordSpacing: '0.16em',
-    },
-  },
-  globals: {
-    viewport: { value: 'phone' },
-    zoom: '200%',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een paragraaf met een heel lang woord, gezoomed naar 200%.',
-      },
-    },
-    status: { type: [] },
-  },
-};
+Voor [WCAG-succescriterium 1.4.12 Tekstafstand](https://nldesignsystem.nl/wcag/1.4.12) is het nodig dat het voor gebruikers mogelijk is om de ruimte tussen letters en tussen worden zoveel groter in te stellen.
 
-export const ParagraphZoom400SmallViewport: Story = {
-  name: 'Paragraph (zoom 400%, small viewport)',
-  args: {
-    children: 'Knappekoppenbestuursoverlegorgaannotulen',
-    purpose: undefined,
-  },
-  globals: {
-    viewport: { value: 'phone' },
-    zoom: '400%',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een paragraaf met een heel lang woord, gezoomed naar 400%.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const ParagraphWithLetterAndWordSpacing: Story = {
-  name: 'Paragraph (letter-spacing + word-spacing)',
-  args: {
-    children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
-    style: {
-      letterSpacing: '0.12em',
-      wordSpacing: '0.16em',
-    },
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een paragraaf bestaand uit één alinea.',
+In CSS kun je dat simuleren door \`letter-spacing: 0.12em;\` en \`word-spacing: 0.16em;\` in te stellen op een element boven een component. Als ruimte tussen letters en woorden toeneemt, dan werkt het component goed.`,
       },
     },
     status: {

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../components-react/paragraph-react/package.json';
 import { Paragraph } from '../../components-react/paragraph-react/src/css';
+import { ExampleBodyTextDecorator } from '../../storybook-test/src/ExampleBodyText';
 
 const meta = {
   argTypes: {
@@ -12,6 +13,7 @@ const meta = {
     },
   },
   component: Paragraph,
+  decorators: ExampleBodyTextDecorator,
   parameters: {
     externalLinks: [
       {
