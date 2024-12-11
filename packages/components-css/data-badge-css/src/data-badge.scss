@@ -3,3 +3,9 @@
 .nl-data-badge {
   @include mixin.nl-data-badge;
 }
+
+@media screen and (forced-colors: active) {
+  .nl-data-badge {
+    @include mixin.nl-data-badge--forced-colors;
+  }
+}
