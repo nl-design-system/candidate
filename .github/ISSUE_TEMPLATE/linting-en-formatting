@@ -1,0 +1,17 @@
+---
+name: Linting en formatting
+about: Codebase gebruikt linting en automatische code-formatting met Prettier volgens NL Design System configuraties.
+title: "{component-name} - Linting en formatting"
+labels:
+  - development
+---
+
+### Criteria
+
+Codebase gebruikt linting en automatische code-formatting met Prettier volgens NL Design System configuraties.
+
+### Taken
+
+- [ ] Controleer of ESLint correct is geconfigureerd volgens NL Design System richtlijnen
+- [ ] Valideer dat Prettier formatting is ingesteld volgens NL Design System standaarden
+- [ ] Verifieer dat alle linting en formatting checks slagen zonder fouten
