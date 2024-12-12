@@ -43,7 +43,7 @@ const preview: Preview = {
     },
     // @whitespace/storybook-addon-html
     html: {
-      root: `.${storyRootClassname}`,
+      root: `.${storyRootClassname} .${storyRootClassname}--overrides`,
     },
     status: { statuses },
     viewport: {
