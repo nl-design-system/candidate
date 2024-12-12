@@ -3,6 +3,7 @@ import { Heading } from '../../components-react/heading-react/src/css';
 import { Paragraph } from '../../components-react/paragraph-react/src/css';
 import packageJSON from '../../components-react/skip-link-react/package.json';
 import { SkipLink } from '../../components-react/skip-link-react/src/css';
+import '../../components-css/skip-link-css/src/test.scss';
 
 const meta = {
   argTypes: {
@@ -62,6 +63,7 @@ export const Default: Story = {
         story: 'Story beschrijving',
       },
     },
+    status: { type: [] },
   },
 };
 
@@ -69,7 +71,7 @@ export const FocusedSkipLink: Story = {
   name: 'Skip Link (gefocust)',
   args: {
     children: 'naar de inhoud',
-    className: 'nl-skip-link--storybook-focus-visible',
+    className: 'nl-skip-link--test-focus-visible',
     href: '#main-story-2',
   },
   parameters: {
@@ -78,5 +80,6 @@ export const FocusedSkipLink: Story = {
         story: 'Story beschrijving',
       },
     },
+    status: { type: [] },
   },
 };

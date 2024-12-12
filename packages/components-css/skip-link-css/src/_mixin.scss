@@ -1,18 +1,34 @@
 @mixin nl-skip-link {
-  background-color: var(--nl-skip-link-background-color, Canvas);
-  color: var(--nl-skip-link-color, LinkText);
-  inset-inline-start: -100%;
+  align-items: center;
+  background-color: var(--nl-skip-link-background-color, ButtonFace);
+  box-sizing: border-box;
+  color: var(--nl-skip-link-color, ButtonText);
+  display: inline-flex;
+  justify-content: center;
   min-block-size: var(--nl-skip-link-min-block-size, 44px);
   min-inline-size: var(--nl-skip-link-min-inline-size, 44px);
   padding-block: var(--nl-skip-link-padding-block);
   padding-inline: var(--nl-skip-link-padding-inline);
-  position: fixed;
   text-decoration: var(--nl-skip-link-text-decoration);
 }
 
 @mixin nl-skip-link--focus-visible {
   background-color: var(--nl-skip-link-focus-visible-background-color);
   color: var(--nl-skip-link-focus-visible-color);
-  position: static;
   text-decoration: var(--nl-skip-link-focus-visible-text-decoration);
+}
+
+@mixin nl-skip-link--hidden {
+  inset-block-start: -200%;
+  position: fixed;
+}
+
+@mixin nl-skip-link--visible {
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  position: fixed;
+}
+
+@mixin nl-skip-link--visible-on-focus {
+  @include nl-skip-link--hidden;
 }
