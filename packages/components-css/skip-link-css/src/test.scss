@@ -1,5 +1,5 @@
 @use "./mixin";
 
 .nl-skip-link--test-focus-visible {
-  @include mixin.nl-skip-link--focus-visible;
+  @include mixin.nl-skip-link--visible;
 }
