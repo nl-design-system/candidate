@@ -13,7 +13,6 @@
     "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/tokens/heading-tokens"
   },
-  "private": true,
   "publishConfig": {
     "access": "public"
   }
