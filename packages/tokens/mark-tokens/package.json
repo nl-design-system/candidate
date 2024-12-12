@@ -11,7 +11,6 @@
     "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/tokens/mark-tokens"
   },
-  "private": true,
   "publishConfig": {
     "access": "public"
   }
