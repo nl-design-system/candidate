@@ -494,6 +494,9 @@ importers:
       '@fontsource/source-serif-pro':
         specifier: 5.1.0
         version: 5.1.0
+      '@nl-design-system-candidate/storybook-shared':
+        specifier: workspace:*
+        version: link:../storybook-shared
       '@nl-design-system-unstable/voorbeeld-design-tokens':
         specifier: 3.1.0
         version: 3.1.0
@@ -552,6 +555,24 @@ importers:
         specifier: 5.4.10
         version: 5.4.10(@types/node@20.17.6)(sass@1.80.6)
 
+  packages/storybook-shared:
+    devDependencies:
+      '@nl-design-system/tsconfig':
+        specifier: 1.0.1
+        version: 1.0.1(typescript@5.6.3)
+      '@storybook/blocks':
+        specifier: 8.4.5
+        version: 8.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.5(prettier@3.3.3))
+      '@storybook/react':
+        specifier: 8.4.5
+        version: 8.4.5(@storybook/test@8.4.5(storybook@8.4.5(prettier@3.3.3)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.5(prettier@3.3.3))(typescript@5.6.3)
+      '@types/react':
+        specifier: 18.3.12
+        version: 18.3.12
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+
   packages/storybook-test:
     devDependencies:
       '@etchteam/storybook-addon-status':
@@ -563,6 +584,9 @@ importers:
       '@fontsource/fira-sans':
         specifier: 5.1.0
         version: 5.1.0
+      '@nl-design-system-candidate/storybook-shared':
+        specifier: workspace:*
+        version: link:../storybook-shared
       '@nl-design-system-unstable/design-tokens-table-react':
         specifier: 1.0.0
         version: 1.0.0(@babel/runtime@7.26.0)(react@18.3.1)

@@ -1,8 +1,8 @@
+import type { Preview } from '@storybook/react';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
-import type { Preview } from '@storybook/react';
+import { StoryRootDecorator } from '@nl-design-system-candidate/storybook-shared/src/StoryRootDecorator';
 import { DocsPage } from '../src/DocsPage';
-import { StoryRootDecorator } from '../src/StoryRootDecorator';
 
 const preview: Preview = {
   decorators: [StoryRootDecorator],
