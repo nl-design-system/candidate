@@ -2,10 +2,13 @@ import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
 import type { Preview } from '@storybook/react';
 import { DocsPage } from '../src/DocsPage';
-import { ParametersArgsDecorator } from '../src/ParametersArgsDecorator';
+import { StoryRootDecorator } from '../src/StoryRootDecorator';
 
 const preview: Preview = {
-  decorators: [ParametersArgsDecorator],
+  decorators: [StoryRootDecorator],
+  initialGlobals: {
+    storyRootClassname: 'voorbeeld-theme',
+  },
   parameters: {
     controls: { expanded: false },
     docs: {
@@ -14,7 +17,7 @@ const preview: Preview = {
     },
     // @whitespace/storybook-addon-html
     html: {
-      root: '.voorbeeld-theme', // use `<div class="voorbeeld-theme"> as the root
+      root: '[data-story-root]',
     },
   },
   tags: [

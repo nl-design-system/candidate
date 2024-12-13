@@ -7,7 +7,7 @@ export const StoryRootDecorator: Decorator = (Story, context) => {
   const dir = lang === 'ar' ? 'rtl' : undefined;
 
   return (
-    <div className={storyRootClassname} lang={lang} dir={dir} style={style}>
+    <div data-story-root className={storyRootClassname} lang={lang} dir={dir} style={style}>
       <Story />
     </div>
   );
