@@ -7,8 +7,6 @@ import { StoryRootDecorator } from '../src/StoryRootDecorator';
 import { statuses } from './statuses';
 import { viewports } from './viewports';
 
-const storyRootClassname = 'voorbeeld-theme';
-
 const preview: Preview = {
   // StoryRootDecorator has to be the first decorator for `parameters.html.root` below to work properly
   decorators: [StoryRootDecorator],
@@ -31,7 +29,7 @@ const preview: Preview = {
   initialGlobals: {
     dir: undefined,
     lang: undefined,
-    storyRootClassname,
+    storyRootClassname: 'voorbeeld-theme',
     viewport: { value: undefined },
     zoom: undefined,
   },
@@ -43,7 +41,7 @@ const preview: Preview = {
     },
     // @whitespace/storybook-addon-html
     html: {
-      root: `.${storyRootClassname} .${storyRootClassname}--overrides`,
+      root: '[data-story-root]',
     },
     status: { statuses },
     viewport: {

@@ -53,8 +53,8 @@
 }
 
 .voorbeeld-theme--overrides {
-  --voorbeeld-typography-line-height-xs: 1 !important;
-  --voorbeeld-typography-line-height-md: 1.25 !important;
-  --voorbeeld-typography-line-height-lg: 1.5 !important;
-  --voorbeeld-typography-line-height-xl: 2 !important;
+  --voorbeeld-typography-line-height-xs: 1;
+  --voorbeeld-typography-line-height-md: 1.25;
+  --voorbeeld-typography-line-height-lg: 1.5;
+  --voorbeeld-typography-line-height-xl: 2;
 }
