@@ -52,7 +52,7 @@
   --example-body-text-hyphenate-limit-lines: auto;
 }
 
-.voorbeeld-theme--overrides {
+.voorbeeld-theme.voorbeeld-theme--overrides {
   --voorbeeld-typography-line-height-xs: 1;
   --voorbeeld-typography-line-height-md: 1.25;
   --voorbeeld-typography-line-height-lg: 1.5;

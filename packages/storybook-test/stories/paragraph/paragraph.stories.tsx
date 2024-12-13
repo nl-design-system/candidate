@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import packageJSON from '../../../components-react/paragraph-react/package.json';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import componentMarkdown from '../../../docs/paragraph-docs/docs/component.md?raw';
 import tokens from '../../../tokens/paragraph-tokens/tokens.json';
-import '../../src/ExampleBodyText.css';
 import {
   LargeLetterSpacingDecorator,
   LargeLineHeightDecorator,
@@ -82,9 +82,7 @@ const meta = {
     },
   },
   component: Paragraph,
-  globals: {
-    storyRootClassname: 'voorbeeld-theme voorbeeld-theme--overrides example-body-text',
-  },
+  decorators: [ExampleBodyTextDecorator],
   parameters: {
     docs: {
       description: {
