@@ -15,6 +15,41 @@ describe('Code', () => {
     expect(code).toBeInTheDocument();
   });
 
+  it('renders an HTML pre with a dir="ltr" attribute to use left-to-right as default', () => {
+    const { container } = render(<Code>{text}</Code>);
+    const codeBlock = container.querySelector('code:only-child');
+
+    expect(codeBlock).toHaveAttribute('dir', 'ltr');
+  });
+
+  it('renders an HTML pre with a dir="rtl" attribute when specified', () => {
+    const { container } = render(<Code dir="rtl">{text}</Code>);
+    const codeBlock = container.querySelector('code:only-child');
+
+    expect(codeBlock).toHaveAttribute('dir', 'rtl');
+  });
+
+  it('renders an HTML pre without a dir attribute when set to `undefined`', () => {
+    const { container } = render(<Code dir={undefined}>{text}</Code>);
+    const codeBlock = container.querySelector('code:only-child');
+
+    expect(codeBlock).not.toHaveAttribute('dir');
+  });
+
+  it('renders an HTML pre with a translate="no" attribute to prevent automatic translations by default', () => {
+    const { container } = render(<Code>{text}</Code>);
+    const codeBlock = container.querySelector('code:only-child');
+
+    expect(codeBlock).toHaveAttribute('translate', 'no');
+  });
+
+  it('renders an HTML pre without a translate attribute when set to `undefined`', () => {
+    const { container } = render(<Code translate={undefined}>{text}</Code>);
+    const codeBlock = container.querySelector('code:only-child');
+
+    expect(codeBlock).not.toHaveAttribute('translate');
+  });
+
   it('renders an element with class name "nl-code"', () => {
     const { container } = render(<Code>{text}</Code>);
     const code = container.querySelector('code:only-child');
