@@ -3,5 +3,6 @@
   color: var(--nl-code-color);
   font-family: var(--nl-code-font-family, monospace), monospace; // always offer monospace as a fallback
   font-size: var(--nl-code-font-size, inherit);
+  hyphens: none;
   line-height: var(--nl-code-line-height);
 }
