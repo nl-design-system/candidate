@@ -163,6 +163,7 @@ export type WcagTest = (typeof WCAG22_AA_LEVEL)[number];
 export const isWcagTest = enumGuard(WCAG22_AA_LEVEL);
 
 export interface WcagAudit {
+  author: string;
   baseline: string;
   date: string;
   fail: WcagTest[];

@@ -101,10 +101,6 @@ const meta = {
     ],
     tokens,
     wcagAudit: {
-      baseline: 'http://nldesignsystem.nl/wcag/baseline#2024-12',
-      cannotTell: [],
-      date: '2024-12-12',
-      fail: [],
       notApplicable: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -157,14 +153,7 @@ const meta = {
         WCAG22_413_STATUS_MESSAGES,
       ],
       notTested: [],
-      pass: [
-        WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
-        WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
-      ],
+      pass: [],
     },
   },
   title: 'Componenten/Paragraph',
@@ -175,12 +164,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: 'Paragraph',
+  name: 'Paragraph: een korte zin',
   args: {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
     purpose: undefined,
   },
   globals: {
+    dir: 'ltr',
+    lang: 'nl',
     viewport: { value: 'wcag100' },
   },
   parameters: {
@@ -190,16 +181,30 @@ export const Default: Story = {
       },
     },
     status: { type: [] },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
   },
 };
 
 export const LeadParagraph: Story = {
-  name: 'Lead Paragraph',
+  name: 'Lead Paragraph: een korte zin',
   args: {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
     purpose: 'lead',
   },
   globals: {
+    dir: 'ltr',
+    lang: 'nl',
     viewport: { value: 'wcag100' },
   },
   parameters: {
@@ -210,17 +215,31 @@ export const LeadParagraph: Story = {
       },
     },
     status: { type: [] },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
   },
 };
 
 export const LongParagraph: Story = {
-  name: 'Paragraph met lange tekst',
+  name: 'Paragraph: een lange alinea',
   args: {
     children:
       'In de laatste dagen, toen ik uit Italië naar Engeland terugkeerde, besloot ik, liever dan al den tijd, dien ik te paard moest zitten, met smakelooze en onwetenschappelijke praatjes te slijten, zoo nu en dan of bij mij zelf over een onderwerp uit onze gemeenschappelijke letteroefeningen na te denken of mij te vermeien in de herinnering aan de even geleerde als dierbare vrienden, die ik hier had achtergelaten. Onder dezen kwam uw beeld, mijn beste Morus, mij zeker het allereerst voor den geest en de herinnering aan U, ofschoon wij ver van elkander waren, was mij even aangenaam, als uw omgang was, toen ik U nog van aangezicht tot aangezicht placht te zien, het aangenaamste—ik mag sterven, als het niet waar is—van al wat mij ooit in mijn leven te beurt is gevallen. Daarom vatte ik, omdat ik meende in allen gevalle iets te moeten doen en die tijd mij weinig geschikt voorkwam om een ernstig onderwerp te overdenken, het plan op een boertige lofrede op Moria (de Zotheid) te houden. “Welke Pallas heeft U op die gedachte gebracht?” zult ge zeggen. Vooreerst deed uw geslachtsnaam Morus mij dit plan opvatten, die even dicht bij het woord Moria komt, als gij ver van de zaak af zijt of liever, volgens aller eenstemmig getuigenis, daarmede volstrekt niets gemeen hebt. Verder vermoedde ik, dat deze speling van ons vernuft bovenal uw goedkeuring zou wegdragen, omdat gij in dergelijke jokkernijen, waarbij, zoo ik goed zie, nergens geleerdheid en geest kan gemist worden, bijzonder veel smaak vindt en in het dagelijksche leven als een Democritus pleegt op te treden. Ofschoon gij door uw buitengewone scherpzinnigheid gewoonlijk hemelsbreed in gevoelen van het gemeene volk verschilt, zijt gij toch door de ongeloofelijke zachtheid en meegaandheid van uw karakter niet alleen in staat om met allerlei menschen in alle omstandigheden des levens om te gaan, maar vindt gij er ook een genot in. Deze kleine verhandeling zult gij daarom gaarne aannemen als een aandenken van uw vriend en gij zult ook haar verdediging gaarne aanvaarden, want zij is u toegewijd en daarom voortaan Uw eigendom, niet het mijne.',
   },
 
   globals: {
+    dir: 'ltr',
+    lang: 'nl',
     viewport: { value: 'wcag100' },
   },
   parameters: {
@@ -234,6 +253,18 @@ De tekst is op normale schermgroottes verdeeld over meerdere regels, waardoor je
       },
     },
     status: { type: [] },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
   },
 };
 
@@ -261,11 +292,13 @@ const longWordsNl = [
 ].sort();
 
 export const ParagraphWordBreak: Story = {
-  name: 'Paragraph met word-break',
+  name: 'Paragraph: woorden die niet op 1 regel passen',
   args: {
     children: `In de praktijk komen er regelmatig lange woorden voor. Bijvoorbeeld: ${longWordsNl.join(', ')}.`,
   },
   globals: {
+    dir: 'ltr',
+    lang: 'nl',
     viewport: { value: 'wcag100' },
   },
   parameters: {
@@ -277,18 +310,36 @@ Woordafbreking gebruiken voor tekst is belangrijk, want je moet voorkomen dat te
       },
     },
     status: { type: [] },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
   },
 };
 
 export const ParagraphLeadPlusParagraph: Story = {
-  name: 'Paragraph Lead + Paragraph',
+  name: 'Lead Paragraph met daar na een Paragraph',
   args: {
     children:
       'Ditmaal hebben wij het in Friesland gezocht, en ik mag wel zeggen, wij hebben het er gevonden ook. Want dat gewest geeft een afwisseling van velerlei moois te water en te land, oud en nieuw.',
     purpose: 'lead',
   },
   globals: {
+    dir: 'ltr',
+    lang: 'nl',
     viewport: { value: 'wcag100' },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+    },
   },
   parameters: {
     docs: {
@@ -299,6 +350,18 @@ De tekst is een fragment uit “Friesland” door Jac. P. Thijsse, gesplitst in 
       },
     },
     status: { type: [] },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
   },
   render({ children, ...restProps }) {
     return (
@@ -315,15 +378,14 @@ De tekst is een fragment uit “Friesland” door Jac. P. Thijsse, gesplitst in 
   },
 };
 
-export const ParagraphArabic: Story = {
-  name: 'Paragraph met Arabisch schrift',
+export const ParagraphArabicPage: Story = {
+  name: 'Paragraph بالنص العربي',
   args: {
     children: 'هذه فقرة نصية. وهي ليست فقرة نصية طويلة جدًا، ولكنها فقرة نصية على أية حال.',
-    dir: 'rtl',
-    lang: 'ar',
-    purpose: undefined,
   },
   globals: {
+    dir: 'rtl',
+    lang: 'ar',
     viewport: { value: 'wcag100' },
   },
   parameters: {
@@ -334,11 +396,59 @@ export const ParagraphArabic: Story = {
       },
     },
     status: { type: [] },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
+  },
+};
+
+export const ParagraphArabic: Story = {
+  name: 'Paragraph met Arabisch schrift in een Nederlandstalige pagina',
+  args: {
+    children: 'هذه فقرة نصية. وهي ليست فقرة نصية طويلة جدًا، ولكنها فقرة نصية على أية حال.',
+    dir: 'rtl',
+    lang: 'ar',
+    purpose: undefined,
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    viewport: { value: 'wcag100' },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Dit voorbeeld toont een alinea die bestaat uit 1 zin in Arabisch schrift, waarvan de schrijfrichting van rechts naar links is.',
+      },
+    },
+    status: { type: [] },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
   },
 };
 
 export const ParagraphLeadArabic: Story = {
-  name: 'Lead Paragraph met Arabisch schrift',
+  name: 'Lead Paragraph met Arabisch schrift in een Nederlandstalige pagina',
   args: {
     children: 'هذه فقرة نصية. وهي ليست فقرة نصية طويلة جدًا، ولكنها فقرة نصية على أية حال.',
     dir: 'rtl',
@@ -346,6 +456,8 @@ export const ParagraphLeadArabic: Story = {
     purpose: 'lead',
   },
   globals: {
+    dir: 'ltr',
+    lang: 'nl',
     viewport: { value: 'wcag100' },
   },
   parameters: {
@@ -356,16 +468,30 @@ export const ParagraphLeadArabic: Story = {
       },
     },
     status: { type: [] },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
   },
 };
 
 export const ParagraphLongSmallViewport: Story = {
-  name: 'Paragraph in een kleine viewport',
+  name: 'Paragraph met een lange alinea in een kleine viewport',
   args: {
     ...LongParagraph.args,
   },
   decorators: [LargeLineHeightDecorator],
   globals: {
+    dir: 'ltr',
+    lang: 'nl',
     viewport: { value: 'wcag400' },
   },
   parameters: {
@@ -379,16 +505,30 @@ Er moet geen tekst buiten beeld vallen aan de rechterkant, en aan de onderkant m
     status: {
       type: [],
     },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
   },
 };
 
 export const ParagraphLongLargeViewport: Story = {
-  name: 'Paragraph in een grote viewport',
+  name: 'Paragraph met een lange alinea in een grote viewport',
   args: {
     ...LongParagraph.args,
   },
   decorators: [LargeLineHeightDecorator],
   globals: {
+    dir: 'ltr',
+    lang: 'nl',
     viewport: { value: 'wcag100' },
   },
   parameters: {
@@ -402,6 +542,18 @@ Je moet de tekst goed kunnen lezen, en de tekstregels moeten niet breder worden 
     status: {
       type: [],
     },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
   },
 };
 
@@ -412,6 +564,9 @@ export const ParagraphLargeLineHeight: Story = {
   },
   decorators: [LargeLineHeightDecorator],
   globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    storyRootClassname: 'voorbeeld-theme voorbeeld-theme--overrides',
     viewport: { value: 'wcag100' },
   },
   parameters: {
@@ -427,6 +582,18 @@ In CSS kun je dat simuleren door \`:root { line-height: 3 }\`.`,
     status: {
       type: [],
     },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2024-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+    },
   },
 };
 
@@ -437,6 +604,8 @@ export const ParagraphLargeLetterAndWordSpacing: Story = {
   },
   decorators: [LargeLetterSpacingDecorator, LargeWordSpacingDecorator],
   globals: {
+    dir: 'ltr',
+    lang: 'nl',
     viewport: { value: 'wcag100' },
   },
   parameters: {
@@ -451,6 +620,18 @@ In CSS kun je dat simuleren door \`letter-spacing: 0.12em;\` en \`word-spacing: 
     },
     status: {
       type: [],
+    },
+    wcagAudit: {
+      author: 'Rian Rietveld',
+      date: '2025-12-12',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1410_REFLOW,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
     },
   },
 };
