@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import packageJSON from '../../../components-react/code-react/package.json';
 import { Code } from '../../../components-react/code-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import componentMarkdown from '../../../docs/code-docs/docs/component.md?raw';
 import tokens from '../../../tokens/code-tokens/tokens.json';
-import { ExampleBodyTextDecorator } from '../../src/ExampleBodyText';
 
 const meta = {
   argTypes: {
@@ -123,6 +123,56 @@ export const HypenatedBodyText: Story = {
     <Paragraph>
       De <Code>sun.swing.plaf.nimbus</Code> package heeft één van de langste class names in Java:{' '}
       <Code>{children}</Code>.
+    </Paragraph>
+  ),
+};
+
+export const WhiteSpaceCharacters: Story = {
+  name: 'Code met white space characters',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een fragment Code waarbij vier spaties aan witruimte zichtbaar is. De witruimte is niet samengevoegd tot 1 spatie.',
+      },
+    },
+    status: { type: [] },
+  },
+  render: () => (
+    <Paragraph>
+      Gebruik het derde argument van deze functie om de hoeveelheid spaties voor inspringing te bepalen:{' '}
+      <Code>{'JSON.stringify(json, null, "    ");'}</Code>
+    </Paragraph>
+  ),
+};
+
+export const NewlineCharacters: Story = {
+  name: 'Code met newline characters',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een fragment Code in een Paragraph waar "newline characters" worden weergegeven, door regels code op een eigen regel te tonen. In tegenstelling tot newline characters die in een Paragraph worden genegeerd, worden new line characters in Code wel weergegeven.',
+      },
+    },
+    status: { type: [] },
+  },
+  render: () => (
+    <Paragraph>
+      Je kunt een comment plaatsen op een eigen regel om uit te leggen dat de fout genegeerd moet worden:{' '}
+      <Code>{'catch (error) {\n  // Een parse-fout kan in deze situatie genegeerd worden\n}'}</Code> Op deze manier is
+      later duidelijk dat er opzettelijk geen code in het <Code>catch</Code>-block staat, en dat het niet per ongeluk is
+      vergeten.
     </Paragraph>
   ),
 };
