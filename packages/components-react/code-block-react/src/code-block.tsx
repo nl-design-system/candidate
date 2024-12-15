@@ -8,7 +8,7 @@ export const CodeBlock = forwardRef<HTMLPreElement, CodeBlockProps>(function Cod
   const { children, className, ...restProps } = props;
 
   return (
-    <pre dir="ltr" {...restProps} className={clsx('nl-code-block', className)} ref={forwardedRef}>
+    <pre dir="ltr" translate="no" {...restProps} className={clsx('nl-code-block', className)} ref={forwardedRef}>
       <code className="nl-code-block__code">{children}</code>
     </pre>
   );

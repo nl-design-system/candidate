@@ -59,6 +59,20 @@ describe('Code Block', () => {
     expect(codeBlock).not.toHaveAttribute('dir');
   });
 
+  it('renders an HTML pre with a translate="no" attribute to prevent automatic translations by default', () => {
+    const { container } = render(<CodeBlock>{testCode}</CodeBlock>);
+    const codeBlock = container.querySelector('pre:only-child');
+
+    expect(codeBlock).toHaveAttribute('translate', 'no');
+  });
+
+  it('renders an HTML pre without a translate attribute when set to `undefined`', () => {
+    const { container } = render(<CodeBlock translate={undefined}>{testCode}</CodeBlock>);
+    const codeBlock = container.querySelector('pre:only-child');
+
+    expect(codeBlock).not.toHaveAttribute('translate');
+  });
+
   it('renders an element with class name "nl-code-block" that contains an element with class name "nl-code-block__code"', () => {
     const { container } = render(<CodeBlock>{testCode}</CodeBlock>);
     const codeBlock = container.querySelector('pre:only-child');
