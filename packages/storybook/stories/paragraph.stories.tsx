@@ -39,6 +39,10 @@ export const Default: Story = {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
     purpose: undefined,
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
 };
 
 export const Lead: Story = {
@@ -46,5 +50,9 @@ export const Lead: Story = {
   args: {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
     purpose: 'lead',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
   },
 };
