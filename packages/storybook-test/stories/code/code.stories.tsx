@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../../components-react/code-react/package.json';
 import { Code } from '../../../components-react/code-react/src/css';
+import { Paragraph } from '../../../components-react/paragraph-react/src/paragraph';
 import componentMarkdown from '../../../docs/code-docs/docs/component.md?raw';
 import tokens from '../../../tokens/code-tokens/tokens.json';
+import { ExampleBodyTextDecorator } from '../../src/ExampleBodyText';
 
 const meta = {
   argTypes: {
@@ -42,4 +44,22 @@ export const Default: Story = {
   parameters: {
     status: { type: [] },
   },
+};
+
+export const BodyText: Story = {
+  name: 'Code in Body Text',
+  args: {
+    children: `aria-required`,
+    lang: 'nl',
+  },
+  decorators: ExampleBodyTextDecorator,
+  parameters: {
+    status: { type: [] },
+  },
+  render: ({ children }) => (
+    <Paragraph>
+      Om specifiek aan hulptechnologieën te communiceren dat een veld verplicht is, kan <Code>{children}</Code>
+      worden gebruikt.
+    </Paragraph>
+  ),
 };
