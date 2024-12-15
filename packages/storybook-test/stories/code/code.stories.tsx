@@ -99,3 +99,30 @@ De ronde haakjes in de code na "parseFloat" worden aan rechts van "parseFloat" g
     </Paragraph>
   ),
 };
+
+export const HypenatedBodyText: Story = {
+  name: 'Code zonder hyphenation in Body Text met hyphenation',
+  args: {
+    children: `InternalFrameInternalFrameTitlePaneInternalFrameTitlePaneMaximizeButtonWindowNotFocusedState`,
+  },
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een lang stuk code dat niet op de regel past, wordt zodat de tekst volledig leesbaar is. Het woord word niet afgebroken met een koppelstreepje (hyphen), zodat er geen onduidelijkheid is of het koppelstreepje onderdeel is van de code.',
+      },
+    },
+    status: { type: [] },
+  },
+  render: ({ children }) => (
+    <Paragraph>
+      De <Code>sun.swing.plaf.nimbus</Code> package heeft één van de langste class names in Java:{' '}
+      <Code>{children}</Code>.
+    </Paragraph>
+  ),
+};
