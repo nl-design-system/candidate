@@ -68,6 +68,7 @@ const meta = {
     children: { control: 'text', table: { category: 'API' } },
   },
   component: Code,
+  decorators: [ExampleBodyTextDecorator],
   parameters: {
     docs: {
       description: {
@@ -210,7 +211,7 @@ export const BodyText: Story = {
 };
 
 export const BodyTextRightToLeft: Story = {
-  name: 'Code in Body Text (right-to-left)',
+  name: 'Code in Body Text in Arabische taal',
   args: {
     children: `parseFloat()`,
   },
@@ -250,7 +251,7 @@ De ronde haakjes in de code na "parseFloat" worden aan rechts van "parseFloat" g
 };
 
 export const HypenatedBodyText: Story = {
-  name: 'Code zonder hyphenation in Body Text met hyphenation',
+  name: 'Code zonder "hyphenation" in Body Text met "hyphenation"',
   args: {
     children: `InternalFrameInternalFrameTitlePaneInternalFrameTitlePaneMaximizeButtonWindowNotFocusedState`,
   },
@@ -290,7 +291,7 @@ export const HypenatedBodyText: Story = {
 };
 
 export const WhiteSpaceCharacters: Story = {
-  name: 'Code met white space characters',
+  name: 'Code met meerdere spaties achter elkaar',
   decorators: ExampleBodyTextDecorator,
   globals: {
     dir: 'ltr',
@@ -327,7 +328,7 @@ export const WhiteSpaceCharacters: Story = {
 };
 
 export const NewlineCharacters: Story = {
-  name: 'Code met newline characters',
+  name: 'Code met "newline characters"',
   decorators: ExampleBodyTextDecorator,
   globals: {
     dir: 'ltr',
