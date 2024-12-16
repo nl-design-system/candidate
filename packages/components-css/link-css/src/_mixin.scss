@@ -1,3 +1,79 @@
 @mixin nl-link {
-  // stylelint-disable: block-no-empty
+  --_nl-link-forced-colors-color: linktext;
+
+  color: var(--_nl-link-state-color, var(--nl-link-color, var(--_nl-link-forced-colors-color)));
+  text-decoration-color: var(
+    --_nl-link-state-text-decoration-color,
+    var(--nl-link-text-decoration-color, currentColor)
+  );
+  text-decoration-line: var(--_nl-link-state-text-decoration-line, var(--nl-link-text-decoration-line, underline));
+
+  /* Ensure text is readable even with letters below the baseline and ensure a difference between default or hover and focus state. */
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: max(
+    var(--_nl-link-state-text-decoration-thickness, var(--nl-link-text-decoration-thickness)),
+    1px
+  );
+  text-underline-offset: var(--nl-link-text-underline-offset);
+}
+
+@mixin nl-link--hover {
+  --_nl-link-forced-colors-color: linktext;
+  --_nl-link-state-color: var(--nl-link-hover-color);
+  --_nl-link-state-text-decoration-line: var(--nl-link-hover-text-decoration-line);
+  --_nl-link-state-text-decoration-thickness: var(--nl-link-hover-text-decoration-thickness);
+
+  /* Ensure underline is extra visible between default or hover and focus states. */
+  text-decoration-skip-ink: none;
+}
+
+@mixin nl-link--active {
+  --_nl-link-forced-colors-color: activetext;
+  --_nl-link-state-color: var(--nl-link-active-color);
+}
+
+@mixin nl-link--placeholder {
+  --_nl-link-forced-colors-color: GrayText;
+  --_nl-link-state-color: var(--nl-link-placeholder-color);
+
+  cursor: var(--nl-link-placeholder-cursor, not-allowed);
+  font-weight: var(--nl-link-placeholder-font-weight);
+
+  /* Ensure visible difference between links and placeholder links */
+  text-decoration-line: none;
+}
+
+@mixin nl-link--current {
+  cursor: var(--nl-link-current-cursor, normal);
+  font-weight: var(--nl-link-current-font-weight);
+}
+
+/**
+ * Simulate forced-colors mode.
+ */
+@mixin nl-link--forced-colors {
+  /* Some others choose `transparent` to trigger `currentColor` for `inverse-outline-color`,
+   * however this doesn't guarantee significant contrast between `outline-color` and `inverse-outline-color`.
+   * That's why we use `Highlight` vs `HighlightText`.
+   */
+  --nl-focus-outline-color: Highlight;
+  --nl-focus-inverse-outline-color: HighlightText;
+  --nl-link-color: linktext;
+  --nl-link-hover-color: linktext;
+  --nl-link-focus-color: linktext;
+  --nl-link-active-color: activetext;
+  --nl-link-placeholder-color: GrayText;
+}
+
+/**
+ * Link around inline-block, inline-flex and inline-grid elements like image or badge.
+ * Changing the `display: inline` to `inline-block` for the link ensures the focus outline is rendered around the entire box in all browsers.
+ */
+@mixin nl-link--inline-box-content {
+  color: unset;
+  display: inline-block;
+  text-decoration-line: unset;
+  text-decoration-skip-ink: unset;
+  text-decoration-thickness: unset;
+  text-underline-offset: unset;
 }
