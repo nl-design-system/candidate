@@ -498,8 +498,8 @@ importers:
         specifier: workspace:*
         version: link:../storybook-shared
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 3.1.0
-        version: 3.1.0
+        specifier: 3.3.0
+        version: 3.3.0
       '@storybook/addon-a11y':
         specifier: 8.4.5
         version: 8.4.5(storybook@8.4.5(prettier@3.3.3))
@@ -594,8 +594,8 @@ importers:
         specifier: 0.1.0
         version: 0.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.5(prettier@3.3.3))
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 3.2.0
-        version: 3.2.0
+        specifier: 3.3.0
+        version: 3.3.0
       '@storybook/addon-a11y':
         specifier: 8.4.5
         version: 8.4.5(storybook@8.4.5(prettier@3.3.3))
@@ -1829,11 +1829,8 @@ packages:
   '@nl-design-system-unstable/tokens-lib@0.1.0':
     resolution: {integrity: sha512-KppSSPf5gNUeKwysRFYJDvF5k17h1Zp5szjrR8HfSwOWP3JnGjfyk9IeuvdiH4NbR2KwIfcvYvSoMGVvXBuvFA==}
 
-  '@nl-design-system-unstable/voorbeeld-design-tokens@3.1.0':
-    resolution: {integrity: sha512-FiJvNzCnG3bO/cCm3ZhggCpS8H4d7CPRXe99f5BEj+3cOeM+lPZvU6qMGgevU7x1BrnfzBwzB4S4TtB8IgcGBA==}
-
-  '@nl-design-system-unstable/voorbeeld-design-tokens@3.2.0':
-    resolution: {integrity: sha512-Cz2F/pBYTbQhzxCzc4I2Qs4oF1qCFr4PbmiAxRcL6j4FUxRSrTkaYrdtP3PkpuhHTFVGZlTXI2IrUduin6urXQ==}
+  '@nl-design-system-unstable/voorbeeld-design-tokens@3.3.0':
+    resolution: {integrity: sha512-ouUbcwlBMt0KHAhbpGGgllUk+knjbP1ijvfVfCIR3xw1eTZvPC+eo3JT/fb+61dcW670xbw3+C121PRfs/u8UA==}
 
   '@nl-design-system/eslint-config@0.0.1':
     resolution: {integrity: sha512-zgKEBk0S88bkRX4zRihhoOidQtekpvOHWOOPl0aJhTy5aF2hyFzbzDTGjPgpseo0lDbwZjd7LUwLJevOj83WYg==}
@@ -7555,9 +7552,7 @@ snapshots:
       - react-dom
       - storybook
 
-  '@nl-design-system-unstable/voorbeeld-design-tokens@3.1.0': {}
-
-  '@nl-design-system-unstable/voorbeeld-design-tokens@3.2.0': {}
+  '@nl-design-system-unstable/voorbeeld-design-tokens@3.3.0': {}
 
   '@nl-design-system/eslint-config@0.0.1(eslint@9.14.0)(typescript@5.6.3)':
     dependencies:

@@ -23,7 +23,7 @@
     "@fontsource/fira-sans": "5.1.0",
     "@fontsource/source-serif-pro": "5.1.0",
     "@nl-design-system-candidate/storybook-shared": "workspace:*",
-    "@nl-design-system-unstable/voorbeeld-design-tokens": "3.1.0",
+    "@nl-design-system-unstable/voorbeeld-design-tokens": "3.3.0",
     "@storybook/addon-a11y": "8.4.5",
     "@storybook/addon-actions": "8.4.5",
     "@storybook/addon-docs": "8.4.5",
