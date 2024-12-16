@@ -39,7 +39,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: 'Color Sample',
+  name: 'Color Sample voor "deep pink"',
   args: { value: '#ff1493' },
   parameters: {
     ariaLabelledBy: 'De kleur "#ff1493".',
@@ -63,7 +63,7 @@ export const Default: Story = {
 };
 
 export const SemiTransparentColorSample: Story = {
-  name: 'Color Sample (Semi-transparente kleur)',
+  name: 'Color Sample met semi-transparente "deep pink"',
   args: { value: '#ff14937f' },
   parameters: {
     ariaLabelledBy: 'De semi-transparante kleur "#ff14937f".',
@@ -87,7 +87,7 @@ export const SemiTransparentColorSample: Story = {
 };
 
 export const SoloColorSample: Story = {
-  name: 'Color Sample met een SVG title element',
+  name: 'Color Sample als afbeelding met toegankelijke naam',
   args: {
     title: 'De kleur "#ff1493".',
     value: '#ff1493',
