@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import packageJSON from '../../../components-react/code-block-react/package.json';
 import { CodeBlock } from '../../../components-react/code-block-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
@@ -67,6 +68,8 @@ const meta = {
     children: { control: 'text', table: { category: 'API' } },
   },
   component: CodeBlock,
+  decorators: [ExampleBodyTextDecorator],
+
   parameters: {
     docs: {
       description: {
@@ -146,11 +149,24 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: 'Code Block',
+  name: 'Code Block met 1 regel ECMAScript',
   args: {
-    children: `import { CodeBlock } from '@nl-design-system-candidate/code-block-react';`,
+    children: `import { Code } from '@nl-design-system/code-react';`,
   },
+  decorators: [ExampleBodyTextDecorator],
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+
   parameters: {
+    docs: {
+      description: {
+        story: `Een Code Block met een regel code van 53 tekens lang.
+
+Op een klein scherm of bij 400% zoom past niet de hele regel op het scherm, dan moet je in de richting van de tekst scrollen om het einde van de regel te zien.`,
+      },
+    },
     status: { type: [] },
     wcagAudit: {
       author: 'Nomen Nescio',
@@ -169,11 +185,22 @@ export const Default: Story = {
 };
 
 export const KorteRegel: Story = {
-  name: 'Korte regel',
+  name: 'Code Block met 1 kort Unix shell commando',
   args: {
     children: `npm install`,
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
   parameters: {
+    docs: {
+      description: {
+        story: `Een Code Block met een regel code van 11 tekens lang.
+
+Op een klein scherm of bij 400% zoom past de tekst op 1 regel, dan scrollen is niet nodig om de hele tekst te zien.`,
+      },
+    },
     wcagAudit: {
       author: 'Nomen Nescio',
       date: '2024-12-17',
@@ -191,17 +218,29 @@ export const KorteRegel: Story = {
 };
 
 export const LangeRegel: Story = {
-  name: 'Lange regel',
+  name: 'Code Block met 1 extra lange regel',
   args: {
-    children: `class ProjectContractChargingPeriodProjectAccountReferenceVM extends AbstractProjectContractChargingPeriodProjectAccountReferenceVM implements ProjectContractChargingPeriodProjectAccountReferenceVMInterface {
-    /* todo */
-}`,
+    children: `<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>wetten.nl - Regeling - Wet aanvulling Algemene wet bestuursrecht met een regeling over de behandeling van klachten door bestuursorganen</title>
+  </head>
+  <body>…</body>
+</html>`,
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
   },
   parameters: {
     docs: {
       description: {
-        story:
-          'De volledige inhoud van de code block moet leesbaar zijn, ook als de content heel lange regels bevat. De code block moet horizontaal kunnen scrollen.',
+        story: `Een Code Block met een lange regel code van 155 tekens lang.
+
+Code conventies gebruiken vaak een uiterste limiet van 120 tekens, maar soms zijn er toch langere regels.
+
+De volledige inhoud van de Code Block moet leesbaar zijn, ook als de content heel lange regels bevat. De Code Block moet horizontaal kunnen scrollen.`,
       },
     },
     wcagAudit: {
@@ -221,14 +260,19 @@ export const LangeRegel: Story = {
 };
 
 export const DefaultFont: Story = {
-  name: 'Default font',
+  name: 'Code Block waar geen design token voor font-family is ingesteld',
   args: {
     children: `De Code Block moet visueel onderscheidbaar zijn.`,
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    storyRootClassname: '',
   },
   parameters: {
     docs: {
       description: {
-        story: 'De Code Block moet visueel onderscheidbaar zijn, ook als er geen font design token is ingesteld.',
+        story: 'De Code Block moet visueel onderscheidbaar zijn, ook als er geen font design tokens is ingesteld.',
       },
     },
     wcagAudit: {
@@ -248,17 +292,22 @@ export const DefaultFont: Story = {
 };
 
 export const FallbackFont: Story = {
-  name: 'Fallback font',
+  name: 'Code Block met fallback font-family',
   args: {
     children: `De Code Block moet visueel onderscheidbaar zijn.`,
     style: {
       '--nl-code-block-font-family': '""',
     } as CSSProperties,
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    storyRootClassname: '',
+  },
   parameters: {
     docs: {
       description: {
-        story: `De Code Block moet visueel onderscheidbaar zijn, ook wanneer de in de design token ingestelde code font niet geladen kan worden.`,
+        story: `De Code Block moet visueel onderscheidbaar zijn, ook wanneer de in de design token ingestelde font-family niet geladen kan worden.`,
       },
     },
     wcagAudit: {
@@ -286,10 +335,15 @@ var nummerB = 6;
 var antwoord = nummerA * nummerB;`,
     lang: 'nl',
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Een Code Block met een codevoorbeeld voor Nederlandstalige lezers.',
+        story:
+          'Een Code Block met een codevoorbeeld voor Nederlandstalige lezers, met namen van variabelen en commentaar in het Nederlands.',
       },
     },
     wcagAudit: {
@@ -317,10 +371,15 @@ var numberB = 6;
 var answer = numberA * numberB;`,
     lang: 'en',
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Een Code Block met een codevoorbeeld voor Engelstalig lezers.',
+        story:
+          'Een Code Block met een codevoorbeeld voor Engelstalig lezers, met namen van variabelen en commentaar in het Engels.',
       },
     },
     wcagAudit: {
@@ -340,7 +399,7 @@ var answer = numberA * numberB;`,
 };
 
 export const ArabicContext: Story = {
-  name: 'Code Block in Engelse taal geplaatst binnen Arabische rechts-naar-links tekst',
+  name: 'Code Block in Engelse taal geplaatst binnen Arabische rechts-naar-links pagina',
   args: {
     children: `var numberA = 7;
 var numberB = 6;
@@ -349,16 +408,22 @@ var answer = numberA * numberB;`,
   },
   decorators: [
     (Story) => (
-      <div lang="ar" dir="rtl">
+      <>
         <Paragraph>في المثال التالي سوف نحسب 7 مرات 6</Paragraph>
         {Story()}
-      </div>
+      </>
     ),
   ],
+  globals: {
+    dir: 'rtl',
+    lang: 'ar',
+    title: 'Code Block باللغة الإنجليزية منشور في الصفحة العربية من اليمين إلى اليسار',
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Een Code Block met een codevoorbeeld voor Engelstalig lezers.',
+        story:
+          'Een Code Block in een codevoorbeeld voor lezers van Arabisch, met namen van variabelen en commentaar in het Engels. De hele pagina is rechts uitegelijnd, maar de tekst van het Code Block is links uitgelijnd.',
       },
     },
     wcagAudit: {
