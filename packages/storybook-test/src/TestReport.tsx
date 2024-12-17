@@ -1,8 +1,13 @@
 import { useOf } from '@storybook/blocks';
 import uniq from 'lodash-es/uniq';
 import without from 'lodash-es/without';
+import { TestResult } from './TestResult';
 import { successCriteria, versionSort } from './wcag22';
-import { isWcagTest, WCAG22_AA_LEVEL, WcagAudit, WcagTest } from './WcagAudit';
+import { isWcagTest, WcagTest } from './WcagTests';
+
+export const isNlDesginSystemTest = (testId: string) => testId === 'https://example.com/';
+
+export const isTestId = (testId: string) => isWcagTest(testId) || isNlDesginSystemTest(testId);
 
 interface WcagReference {
   href: string;
@@ -10,10 +15,10 @@ interface WcagReference {
   sortKey: string;
 }
 
-export function WcagAuditReport() {
+export function TestReport() {
   const meta = useOf<'meta'>('meta');
-  const wcagAudit: WcagAudit = meta.csfFile?.meta?.parameters && meta.csfFile?.meta?.parameters['wcagAudit'];
-  const wcagStories = Object.values(meta.csfFile?.stories || {}); //.filter((story) => story.parameters.wcagAudit);
+  const testResult: TestResult = meta.csfFile?.meta?.parameters && meta.csfFile?.meta?.parameters['testResult'];
+  const wcagStories = Object.values(meta.csfFile?.stories || {}); //.filter((story) => story.parameters.testResult);
 
   const baselineVersions = [
     {
@@ -21,30 +26,24 @@ export function WcagAuditReport() {
       href: 'https://nldesignsystem.nl/baseline/2024-12',
       text: 'NL Design System Baseline: december 2024',
     },
-    {
-      date: '2025-01-01',
-      href: 'https://nldesignsystem.nl/baseline/2025-01',
-      text: 'NL Design System Baseline: januari 2025',
-    },
   ];
 
-  if (!wcagAudit) {
+  if (!testResult) {
     return null;
   }
 
-  const createWcagAudit = (parameters: object & Partial<WcagAudit>) => {
+  const createTestResult = (parameters: object & Partial<TestResult>) => {
     const empty: string[] = [];
-    const cannotTell = uniq(parameters.cannotTell || empty).filter(isWcagTest);
-    const notApplicable = (parameters.notApplicable || empty).filter(isWcagTest);
-    const pass = (parameters.pass || empty).filter(isWcagTest);
-    const fail = (parameters.fail || empty).filter(isWcagTest);
-    const notTested = (parameters.notTested || empty).filter(isWcagTest);
+    const cannotTell = uniq(parameters.cannotTell || empty).filter(isTestId);
+    const notApplicable = (parameters.notApplicable || empty).filter(isTestId);
+    const pass = (parameters.pass || empty).filter(isTestId);
+    const fail = (parameters.fail || empty).filter(isTestId);
+    const notTested = (parameters.notTested || empty).filter(isTestId);
 
     const all: WcagTest[] = [...cannotTell, ...fail, ...notApplicable, ...notTested, ...pass];
 
     return {
       all,
-      author: parameters.author,
       cannotTell,
       date: parameters.date,
       fail,
@@ -54,7 +53,7 @@ export function WcagAuditReport() {
     };
   };
 
-  const extendAudit = (partialAudit: Partial<WcagAudit>, baseAudit: Partial<WcagAudit>) => {
+  const extendAudit = (partialAudit: Partial<TestResult>, baseAudit: Partial<TestResult>) => {
     let cannotTell = uniq([...(baseAudit.cannotTell || []), ...(partialAudit.cannotTell || [])]);
     const fail = uniq([...(baseAudit.fail || []), ...(partialAudit.fail || [])]);
     let notApplicable = uniq([...(baseAudit.notApplicable || []), ...(partialAudit.notApplicable || [])]);
@@ -80,8 +79,8 @@ export function WcagAuditReport() {
     };
   };
 
-  const baseAudit = createWcagAudit(
-    (meta.csfFile?.meta?.parameters && meta.csfFile?.meta?.parameters['wcagAudit']) || {},
+  const baseAudit = createTestResult(
+    (meta.csfFile?.meta?.parameters && meta.csfFile?.meta?.parameters['testResult']) || {},
   );
 
   const createWcagReferences = (list: WcagTest[]): WcagReference[] =>
@@ -111,6 +110,7 @@ export function WcagAuditReport() {
           {createWcagReferences(list).map(({ href, linkText }) => {
             return (
               <li key={href}>
+                {'Test gebaseerd op: '}
                 <a href={href}>{linkText}</a>
               </li>
             );
@@ -127,52 +127,24 @@ export function WcagAuditReport() {
     <>
       <dl>
         <div>
-          <dt>Evaluatiemethode:</dt>
-          <dd>WCAG-EM 1.0</dd>
-        </div>
-        <div>
-          <dt>Beoogd conformiteitsniveau:</dt>
-          <dd>
-            WCAG 2.2 Niveau AA, volgens de <a href="https://nldesignsystem.nl/baseline">NL Design System Baseline</a>
-          </dd>
-        </div>
-        <div>
-          <dt>Opdrachtgever:</dt>
-          <dd>
-            <a href="https://nldesignsystem.nl/project/kernteam">Design System Lead van NL Design System</a>
-          </dd>
-        </div>
-        <div>
-          <dt>Reikweidte van het onderzoek:</dt>
-          <dd>
-            Per story wordt er 1 los WCAG-EM onderzoek gedaan, omdat de stories niet verbonden zijn en geen gedeelde
-            context hebben. De <a href="https://www.w3.org/TR/WCAG-EM/#step1a">reikwijdte van dat onderzoek</a> is dus
-            alleen 1 losse webpagina. Voor de steekproef moet je de webpagina in een eigen window openen, in plaats van
-            als Story bekijken als onderdeel van Storybook.
-          </dd>
-        </div>
-        <div>
-          <dt>Gebruikte technologie:</dt>
+          <dt>Beoogde kwaliteit:</dt>
           <dd>
             <ul>
-              <li>CSS</li>
-              <li>HTML</li>
-              <li>JavaScript</li>
-              <li>React</li>
+              <li>Acceptatiecriteria van NL Design System</li>
+              <li>
+                WCAG 2.2 Niveau AA, volgens de{' '}
+                <a href="https://nldesignsystem.nl/baseline">NL Design System Baseline</a>
+              </li>
             </ul>
           </dd>
         </div>
       </dl>
-      <p>
-        Neem contact op met <a href="https://nldesignsystem.nl/colofon">NL Design System</a> voor vragen over deze
-        toegankelijkheidsverklaring.
-      </p>
     </>
   );
 
   return (
     <div>
-      <h2>Toegankelijkheidsverklaring</h2>
+      <h2>Testresultaten voor acceptatiecriteria</h2>
       {CommonData()}
       {wcagStories.map((story) => {
         const fullReport = false;
@@ -185,41 +157,40 @@ export function WcagAuditReport() {
         }).toString()}`;
         const url = baseUrl ? new URL(relativeUrl, baseUrl).toString() : relativeUrl;
 
-        const partialAudit = createWcagAudit((story.parameters && story.parameters['wcagAudit']) || {});
-        const wcagAudit = extendAudit(partialAudit, baseAudit);
+        const partialAudit = createTestResult((story.parameters && story.parameters['testResult']) || {});
+        const testResult = extendAudit(partialAudit, baseAudit);
 
         const baseline =
-          typeof wcagAudit.date === 'string' &&
-          baselineVersions.findLast((baseline) => Date.parse(wcagAudit.date || '') >= Date.parse(baseline.date));
+          typeof testResult.date === 'string' &&
+          baselineVersions.findLast((baseline) => Date.parse(testResult.date || '') >= Date.parse(baseline.date));
 
         return (
           <div key={story.id}>
-            <h3>
-              <a href={url} target="wcag_evaluation">
-                {story.name}
-              </a>
-            </h3>
+            <h3>{story.name}</h3>
             {fullReport ? CommonData() : null}
             <dl>
               <div>
-                <dt>URL van de steekproef:</dt>
+                <dt>URL die getest is:</dt>
                 <dd>
-                  <code>{url}</code>
+                  <a
+                    href={url}
+                    target="wcag_evaluation"
+                    aria-label={`${
+                      (story.parameters && story.parameters['globals'] && story.parameters['globals'].title) ||
+                      story.name
+                    } (opent in nieuw venster)`}
+                  >
+                    <code>{url}</code> (opent in nieuw venster)
+                  </a>
                 </dd>
               </div>
-              {wcagAudit.author ? (
+              {testResult.date ? (
                 <div>
-                  <dt>Onderzoeker:</dt>
-                  <dd>{wcagAudit.author}</dd>
-                </div>
-              ) : null}
-              {wcagAudit.date ? (
-                <div>
-                  <dt>Datum van het onderzoek:</dt>
+                  <dt>Datum van de test:</dt>
                   <dd>
                     {new Intl.DateTimeFormat('nl-NL', {
                       dateStyle: 'full',
-                    }).format(new Date(wcagAudit.date))}
+                    }).format(new Date(testResult.date))}
                   </dd>
                 </div>
               ) : null}
@@ -232,25 +203,21 @@ export function WcagAuditReport() {
                 </div>
               ) : null}
             </dl>
-            <p>
-              Getoetst op {wcagAudit.all?.length || 0} van de {WCAG22_AA_LEVEL.length} succescriteria voor WCAG 2.2
-              Niveau AA.
-            </p>
             <ul>
               <li>
-                <Result label="Voldoet" list={wcagAudit.pass} />
+                <Result label="Voldoet" list={testResult.pass} />
               </li>
               <li>
-                <Result label="Voldoet niet" list={wcagAudit.fail} />
+                <Result label="Voldoet niet" list={testResult.fail} />
               </li>
               <li>
-                <Result label="Kan niet worden vastgesteld" list={wcagAudit.cannotTell} />
+                <Result label="Kan niet worden vastgesteld" list={testResult.cannotTell} />
               </li>
               <li>
-                <Result label="Niet van toepassing" list={wcagAudit.notApplicable} />
+                <Result label="Niet van toepassing" list={testResult.notApplicable} />
               </li>
               <li>
-                <Result label="Niet getest" list={wcagAudit.notTested} />
+                <Result label="Niet getest" list={testResult.notTested} />
               </li>
             </ul>
           </div>

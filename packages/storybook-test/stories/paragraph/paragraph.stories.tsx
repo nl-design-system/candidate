@@ -65,7 +65,7 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../../src/WcagAudit';
+} from '../../src/WcagTests';
 
 const meta = {
   argTypes: {
@@ -99,8 +99,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
-    tokens,
-    wcagAudit: {
+    testResult: {
       notApplicable: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -155,6 +154,7 @@ const meta = {
       notTested: [],
       pass: [],
     },
+    tokens,
   },
   title: 'Componenten/Paragraph',
 } satisfies Meta<typeof Paragraph>;
@@ -181,8 +181,7 @@ export const Default: Story = {
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -215,8 +214,7 @@ export const LeadParagraph: Story = {
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -253,8 +251,7 @@ De tekst is op normale schermgroottes verdeeld over meerdere regels, waardoor je
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -310,8 +307,7 @@ Woordafbreking gebruiken voor tekst is belangrijk, want je moet voorkomen dat te
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -335,11 +331,10 @@ export const ParagraphLeadPlusParagraph: Story = {
   globals: {
     dir: 'ltr',
     lang: 'nl',
-    viewport: { value: 'wcag100' },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
     },
+    viewport: { value: 'wcag100' },
   },
   parameters: {
     docs: {
@@ -350,8 +345,7 @@ De tekst is een fragment uit “Friesland” door Jac. P. Thijsse, gesplitst in 
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -396,8 +390,7 @@ export const ParagraphArabicPage: Story = {
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -432,8 +425,7 @@ export const ParagraphArabic: Story = {
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -468,8 +460,7 @@ export const ParagraphLeadArabic: Story = {
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -505,8 +496,7 @@ Er moet geen tekst buiten beeld vallen aan de rechterkant, en aan de onderkant m
     status: {
       type: [],
     },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -542,8 +532,7 @@ Je moet de tekst goed kunnen lezen, en de tekstregels moeten niet breder worden 
     status: {
       type: [],
     },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -582,8 +571,7 @@ In CSS kun je dat simuleren door \`:root { line-height: 3 }\`.`,
     status: {
       type: [],
     },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2024-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -621,8 +609,7 @@ In CSS kun je dat simuleren door \`letter-spacing: 0.12em;\` en \`word-spacing: 
     status: {
       type: [],
     },
-    wcagAudit: {
-      author: 'Rian Rietveld',
+    testResult: {
       date: '2025-12-12',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
