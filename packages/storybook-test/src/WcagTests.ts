@@ -1,3 +1,5 @@
+import type { TestResult } from './TestResult';
+
 export const WCAG22_111_NON_TEXT_CONTENT = 'https://www.w3.org/TR/WCAG22/#non-text-content';
 export const WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED =
   'https://www.w3.org/TR/WCAG22/#audio-only-and-video-only-prerecorded';
@@ -162,18 +164,7 @@ export type WcagTest = (typeof WCAG22_AA_LEVEL)[number];
 
 export const isWcagTest = enumGuard(WCAG22_AA_LEVEL);
 
-export interface WcagAudit {
-  author: string;
-  baseline: string;
-  date: string;
-  fail: WcagTest[];
-  pass: WcagTest[];
-  notApplicable: WcagTest[];
-  notTested: WcagTest[];
-  cannotTell: WcagTest[];
-}
-
-export const initialAudit: Partial<WcagAudit> = {
+export const initialAudit: Partial<TestResult> = {
   cannotTell: [],
   fail: [],
   notApplicable: [],

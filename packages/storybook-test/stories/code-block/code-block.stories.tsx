@@ -61,7 +61,7 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../../src/WcagAudit';
+} from '../../src/WcagTests';
 
 const meta = {
   argTypes: {
@@ -86,8 +86,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
-    tokens,
-    wcagAudit: {
+    testReport: {
       notApplicable: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -140,6 +139,7 @@ const meta = {
         WCAG22_413_STATUS_MESSAGES,
       ],
     },
+    tokens,
   },
   title: 'Componenten/Code Block',
 } satisfies Meta<typeof CodeBlock>;
@@ -168,8 +168,7 @@ Op een klein scherm of bij 400% zoom past niet de hele regel op het scherm, dan 
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -201,8 +200,7 @@ export const KorteRegel: Story = {
 Op een klein scherm of bij 400% zoom past de tekst op 1 regel, dan scrollen is niet nodig om de hele tekst te zien.`,
       },
     },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -243,8 +241,7 @@ Code conventies gebruiken vaak een uiterste limiet van 120 tekens, maar soms zij
 De volledige inhoud van de Code Block moet leesbaar zijn, ook als de content heel lange regels bevat. De Code Block moet horizontaal kunnen scrollen.`,
       },
     },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -275,8 +272,7 @@ export const DefaultFont: Story = {
         story: 'De Code Block moet visueel onderscheidbaar zijn, ook als er geen font design tokens is ingesteld.',
       },
     },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -310,8 +306,7 @@ export const FallbackFont: Story = {
         story: `De Code Block moet visueel onderscheidbaar zijn, ook wanneer de in de design token ingestelde font-family niet geladen kan worden.`,
       },
     },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -346,8 +341,7 @@ var antwoord = nummerA * nummerB;`,
           'Een Code Block met een codevoorbeeld voor Nederlandstalige lezers, met namen van variabelen en commentaar in het Nederlands.',
       },
     },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -382,8 +376,7 @@ var answer = numberA * numberB;`,
           'Een Code Block met een codevoorbeeld voor Engelstalig lezers, met namen van variabelen en commentaar in het Engels.',
       },
     },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -426,8 +419,7 @@ var answer = numberA * numberB;`,
           'Een Code Block in een codevoorbeeld voor lezers van Arabisch, met namen van variabelen en commentaar in het Engels. De hele pagina is rechts uitegelijnd, maar de tekst van het Code Block is links uitgelijnd.',
       },
     },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,

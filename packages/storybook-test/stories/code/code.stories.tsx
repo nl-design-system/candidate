@@ -61,7 +61,7 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../../src/WcagAudit';
+} from '../../src/WcagTests';
 
 const meta = {
   argTypes: {
@@ -85,8 +85,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
-    tokens,
-    wcagAudit: {
+    testReport: {
       notApplicable: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -139,6 +138,7 @@ const meta = {
         WCAG22_413_STATUS_MESSAGES,
       ],
     },
+    tokens,
   },
   title: 'Componenten/Code',
 } satisfies Meta<typeof Code>;
@@ -154,8 +154,7 @@ export const Default: Story = {
   },
   parameters: {
     status: { type: [] },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -189,8 +188,7 @@ export const BodyText: Story = {
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -229,8 +227,7 @@ De ronde haakjes in de code na "parseFloat" worden aan rechts van "parseFloat" g
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -268,8 +265,7 @@ export const HypenatedBodyText: Story = {
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -305,8 +301,7 @@ export const WhiteSpaceCharacters: Story = {
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
@@ -342,8 +337,7 @@ export const NewlineCharacters: Story = {
       },
     },
     status: { type: [] },
-    wcagAudit: {
-      author: 'Nomen Nescio',
+    testReport: {
       date: '2024-12-17',
       notTested: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
