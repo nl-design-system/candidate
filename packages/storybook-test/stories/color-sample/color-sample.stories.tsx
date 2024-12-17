@@ -102,16 +102,3 @@ export const SoloColorSample: Story = {
     status: { type: [] },
   },
 };
-
-export const FailedColorSample: Story = {
-  name: 'Color Sample foutief gebruikt',
-  args: { value: '#ff1493' },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Foutief gebruik van de een kleurstaal zonder expliciete beschrijving.',
-      },
-    },
-    status: { type: [] },
-  },
-};
