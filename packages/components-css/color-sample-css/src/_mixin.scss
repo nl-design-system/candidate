@@ -13,14 +13,6 @@
   forced-color-adjust: none; // [1]
   inline-size: var(--nl-color-sample-inline-size);
   pointer-events: none;
-
-  @media (prefers-color-scheme: dark) {
-    --nl-color-sample-border-color: var(--nl-color-sample-dark-border-color);
-  }
-
-  @media (prefers-color-scheme: light) {
-    --nl-color-sample-border-color: var(--nl-color-sample-light-border-color);
-  }
 }
 
 // [1]: the purpose of this component is to display an exact color sample, we don't ever want the browser to interfere
