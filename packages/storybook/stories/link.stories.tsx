@@ -38,7 +38,6 @@ export const Default: Story = {
   args: {
     children: 'voorbeeldsite',
     href: 'https://example.com',
-    target: '_blank',
   },
 };
 
@@ -46,7 +45,6 @@ export const LinkInParagraph: Story = {
   name: 'Link in een Parargraph',
   args: {
     href: 'https://example.com',
-    target: '_blank',
   },
   render(args) {
     return (
