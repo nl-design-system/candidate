@@ -85,7 +85,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
-    testReport: {
+    testResult: {
       notApplicable: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -137,6 +137,7 @@ const meta = {
         WCAG22_412_NAME_ROLE_VALUE,
         WCAG22_413_STATUS_MESSAGES,
       ],
+      notTested: [WCAG22_1410_REFLOW, WCAG22_1411_NON_TEXT_CONTRAST, WCAG22_312_LANGUAGE_OF_PARTS],
     },
     tokens,
   },
@@ -154,17 +155,15 @@ export const Default: Story = {
   },
   parameters: {
     status: { type: [] },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
         WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
 };
@@ -188,17 +187,16 @@ export const BodyText: Story = {
       },
     },
     status: { type: [] },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      notTested: [WCAG22_1410_REFLOW, WCAG22_1411_NON_TEXT_CONTRAST, WCAG22_312_LANGUAGE_OF_PARTS],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
         WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
   render: ({ children }) => (
@@ -227,17 +225,16 @@ De ronde haakjes in de code na "parseFloat" worden aan rechts van "parseFloat" g
       },
     },
     status: { type: [] },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      notTested: [WCAG22_1410_REFLOW, WCAG22_1411_NON_TEXT_CONTRAST, WCAG22_312_LANGUAGE_OF_PARTS],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
         WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
   render: ({ children }) => (
@@ -265,17 +262,16 @@ export const HypenatedBodyText: Story = {
       },
     },
     status: { type: [] },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      notTested: [WCAG22_1410_REFLOW, WCAG22_1411_NON_TEXT_CONTRAST, WCAG22_312_LANGUAGE_OF_PARTS],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
         WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
   render: ({ children }) => (
@@ -301,17 +297,16 @@ export const WhiteSpaceCharacters: Story = {
       },
     },
     status: { type: [] },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      notTested: [WCAG22_1410_REFLOW, WCAG22_1411_NON_TEXT_CONTRAST, WCAG22_312_LANGUAGE_OF_PARTS],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
         WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
   render: () => (
