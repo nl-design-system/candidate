@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import packageJSON from '../../../components-react/data-badge-react/package.json';
 import { DataBadge } from '../../../components-react/data-badge-react/src/css';
+import { Heading } from '../../../components-react/heading-react/src/css';
+import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import componentMarkdown from '../../../docs/data-badge-docs/docs/component.md?raw';
 import tokens from '../../../tokens/data-badge-tokens/tokens.json';
 
@@ -11,6 +14,7 @@ const meta = {
     value: { if: { arg: 'dateTime', exists: false }, table: { category: 'API' } },
   },
   component: DataBadge,
+  decorators: [ExampleBodyTextDecorator],
   parameters: {
     docs: {
       description: {
@@ -39,7 +43,23 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   name: 'Data Badge',
   args: {
-    children: '42',
+    children: 'Bevoegd gezag: Gemeente',
+  },
+  decorators: [
+    (Story) => (
+      <>
+        <Heading level={1}>Zoekresultaat voor “zonnepaneel”</Heading>
+        <Paragraph>
+          Geselecteerde filters: <Story />
+        </Paragraph>
+        <Paragraph>0 resultaten.</Paragraph>
+      </>
+    ),
+  ],
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Zoekresultaat voor "zonnepaneel"',
   },
   parameters: {
     status: { type: [] },
@@ -49,8 +69,24 @@ export const Default: Story = {
 export const DataBadgeWithValue: Story = {
   name: 'Data Badge met "value"',
   args: {
-    children: '42',
-    value: '42',
+    children: 'Succescriterium 1.3.1',
+    value: 'https://www.w3.org/TR/WCAG22/#info-and-relationships',
+  },
+  decorators: [
+    (Story) => (
+      <>
+        <Heading level={1}>Zoekresultaat voor “button”</Heading>
+        <Paragraph>
+          Geselecteerde filters: <Story />
+        </Paragraph>
+        <Paragraph>42 resultaten.</Paragraph>
+      </>
+    ),
+  ],
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Zoekresultaat voor "button"',
   },
   parameters: {
     status: { type: [] },
@@ -60,8 +96,55 @@ export const DataBadgeWithValue: Story = {
 export const DataBadgeWithDateTime: Story = {
   name: 'Data Badge met "dateTime"',
   args: {
-    children: 'Donderdag 1 januari 1970 om 01:00:00',
-    dateTime: '1970-01-01T00:00:00+01:00',
+    children: 'Dinsdag 19 januari 2038 om 03:14:08',
+    dateTime: '2038-01-19T03:14:08',
+  },
+  decorators: [
+    (Story) => (
+      <>
+        <Heading level={1}>Zoekresultaat voor “jaar 2000 probleem”</Heading>
+        <Paragraph>
+          Toon resultaten voor de datum: <Story />
+        </Paragraph>
+        <Paragraph>0 resultaten.</Paragraph>
+      </>
+    ),
+  ],
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Zoekresultaat voor “jaar 2000 probleem”',
+  },
+  parameters: {
+    status: { type: [] },
+  },
+};
+
+export const DataBadgeWithDateTimeEnglish: Story = {
+  name: 'Data Badge met "dateTime" in het Engels',
+  args: {
+    children: new Intl.DateTimeFormat('en', {
+      dateStyle: 'full',
+      timeStyle: 'full',
+      timeZone: 'UTC',
+    }).format(new Date('2038-01-19T03:14:08Z')),
+    dateTime: '2038-01-19T03:14:08Z',
+  },
+  decorators: [
+    (Story) => (
+      <>
+        <Heading level={1}>Search results for “year 2000 problem”</Heading>
+        <Paragraph>
+          Showing results before date: <Story />
+        </Paragraph>
+        <Paragraph>0 results.</Paragraph>
+      </>
+    ),
+  ],
+  globals: {
+    dir: 'ltr',
+    lang: 'en',
+    title: 'Search results for “year 2000 problem”',
   },
   parameters: {
     status: { type: [] },
