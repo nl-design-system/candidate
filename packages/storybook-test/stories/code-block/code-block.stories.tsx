@@ -66,10 +66,15 @@ import {
 const meta = {
   argTypes: {
     children: { control: 'text', table: { category: 'API' } },
+    overflow: {
+      control: { labels: { undefined: '(undefined)' }, type: 'select' },
+      options: [undefined, 'overflow', 'wrap', 'nowrap'],
+      table: { category: 'API' },
+      type: 'string',
+    },
   },
   component: CodeBlock,
   decorators: [ExampleBodyTextDecorator],
-
   parameters: {
     docs: {
       description: {
@@ -86,7 +91,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
-    testReport: {
+    testResult: {
       notApplicable: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -138,6 +143,7 @@ const meta = {
         WCAG22_412_NAME_ROLE_VALUE,
         WCAG22_413_STATUS_MESSAGES,
       ],
+      notTested: [WCAG22_1410_REFLOW, WCAG22_1411_NON_TEXT_CONTRAST, WCAG22_312_LANGUAGE_OF_PARTS],
     },
     tokens,
   },
@@ -153,12 +159,10 @@ export const Default: Story = {
   args: {
     children: `import { Code } from '@nl-design-system/code-react';`,
   },
-  decorators: [ExampleBodyTextDecorator],
   globals: {
     dir: 'ltr',
     lang: 'nl',
   },
-
   parameters: {
     docs: {
       description: {
@@ -168,18 +172,38 @@ Op een klein scherm of bij 400% zoom past niet de hele regel op het scherm, dan 
       },
     },
     status: { type: [] },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      fail: [WCAG22_144_RESIZE_TEXT],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
+  },
+};
+
+export const LineOverflow: Story = {
+  name: 'Code Block met 1 regel ECMAScript, met mogelijk een scrollbalk',
+  args: {
+    children: `import { Code } from '@nl-design-system/code-react';`,
+    overflow: 'overflow',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Code Block met een regel code van 53 tekens lang.
+
+Op een klein scherm of bij 400% zoom past niet de hele regel op het scherm, dan kan je in de richting van de tekst scrollen om het einde van de regel te zien.`,
+      },
+    },
+    status: { type: [] },
   },
 };
 
@@ -200,17 +224,15 @@ export const KorteRegel: Story = {
 Op een klein scherm of bij 400% zoom past de tekst op 1 regel, dan scrollen is niet nodig om de hele tekst te zien.`,
       },
     },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      fail: [WCAG22_144_RESIZE_TEXT],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
 };
@@ -241,17 +263,66 @@ Code conventies gebruiken vaak een uiterste limiet van 120 tekens, maar soms zij
 De volledige inhoud van de Code Block moet leesbaar zijn, ook als de content heel lange regels bevat. De Code Block moet horizontaal kunnen scrollen.`,
       },
     },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      fail: [WCAG22_144_RESIZE_TEXT],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
+    },
+  },
+};
+
+export const LangeRegelLineOverflow: Story = {
+  name: 'Code Block met 1 extra lange regel, die kan scrollen',
+  args: {
+    ...LangeRegel.args,
+    overflow: 'overflow',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Code Block met een lange regel code van 155 tekens lang.
+
+Code conventies gebruiken vaak een uiterste limiet van 120 tekens, maar soms zijn er toch langere regels.
+
+De volledige inhoud van de Code Block moet leesbaar zijn, ook als de content heel lange regels bevat. De Code Block moet horizontaal kunnen scrollen.`,
+      },
+    },
+  },
+};
+
+export const LangeRegelLineNowrap: Story = {
+  name: 'Code Block met 1 extra lange regel zonder line-wrap, die kan scrollen door een container element',
+  args: {
+    ...LangeRegel.args,
+    overflow: 'nowrap',
+  },
+  decorators: [
+    (Story) => (
+      <div tabIndex={0} style={{ overflowInline: 'auto' }}>
+        <Story />
+      </div>
+    ),
+  ],
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Code Block met een lange regel code van 155 tekens lang.
+
+De volledige inhoud van de Code Block moet leesbaar zijn, ook als de content heel lange regels bevat. De Code Block moet horizontaal kunnen scrollen.`,
+      },
     },
   },
 };
@@ -272,17 +343,15 @@ export const DefaultFont: Story = {
         story: 'De Code Block moet visueel onderscheidbaar zijn, ook als er geen font design tokens is ingesteld.',
       },
     },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      fail: [WCAG22_144_RESIZE_TEXT],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
 };
@@ -293,7 +362,7 @@ export const FallbackFont: Story = {
     children: `De Code Block moet visueel onderscheidbaar zijn.`,
     style: {
       '--nl-code-block-font-family': '""',
-    } as CSSProperties,
+    },
   },
   globals: {
     dir: 'ltr',
@@ -306,17 +375,15 @@ export const FallbackFont: Story = {
         story: `De Code Block moet visueel onderscheidbaar zijn, ook wanneer de in de design token ingestelde font-family niet geladen kan worden.`,
       },
     },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      fail: [WCAG22_144_RESIZE_TEXT],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
 };
@@ -341,17 +408,15 @@ var antwoord = nummerA * nummerB;`,
           'Een Code Block met een codevoorbeeld voor Nederlandstalige lezers, met namen van variabelen en commentaar in het Nederlands.',
       },
     },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      fail: [WCAG22_144_RESIZE_TEXT],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
 };
@@ -376,17 +441,15 @@ var answer = numberA * numberB;`,
           'Een Code Block met een codevoorbeeld voor Engelstalig lezers, met namen van variabelen en commentaar in het Engels.',
       },
     },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      fail: [WCAG22_144_RESIZE_TEXT],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
 };
@@ -403,7 +466,7 @@ var answer = numberA * numberB;`,
     (Story) => (
       <>
         <Paragraph>في المثال التالي سوف نحسب 7 مرات 6</Paragraph>
-        {Story()}
+        <Story />
       </>
     ),
   ],
@@ -419,17 +482,15 @@ var answer = numberA * numberB;`,
           'Een Code Block in een codevoorbeeld voor lezers van Arabisch, met namen van variabelen en commentaar in het Engels. De hele pagina is rechts uitegelijnd, maar de tekst van het Code Block is links uitgelijnd.',
       },
     },
-    testReport: {
+    testResult: {
       date: '2024-12-17',
-      notTested: [
+      fail: [WCAG22_144_RESIZE_TEXT],
+      pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1410_REFLOW,
-        WCAG22_1412_TEXT_SPACING,
+        WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_1412_TEXT_SPACING,
       ],
-      pass: [],
     },
   },
 };
