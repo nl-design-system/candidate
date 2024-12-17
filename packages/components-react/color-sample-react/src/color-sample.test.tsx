@@ -6,8 +6,8 @@ import { ColorSample } from './color-sample';
 
 const value = '#ff1493';
 const extraClassName = 'extra-classname';
-const title = 'title';
 const label = 'label';
+const ariaLabelledBy = 'other-element';
 
 describe('Color sample', () => {
   it('renders an svg element', () => {
@@ -38,31 +38,20 @@ describe('Color sample', () => {
     expect(colorSample).toHaveClass('nl-color-sample', extraClassName);
   });
 
-  it(`renders an svg element that contains a title element with text "${title}"`, () => {
-    render(<ColorSample value={value} title={title} />);
+  it(`renders an svg element that contains a title element with text "${label}"`, () => {
+    render(<ColorSample value={value} label={label} />);
     const colorSample = screen.getByRole('img');
     const titleElem = colorSample.querySelector('title');
 
     expect(titleElem).toBeInTheDocument();
-    expect(titleElem).toHaveTextContent(title);
+    expect(titleElem).toHaveTextContent(label);
   });
 
-  it('renders an svg element with an "aria-labelledby" attribute that references its title element', () => {
-    render(<ColorSample value={value} title={title} />);
+  it('renders an svg element with an "aria-labelledby" attribute that references an external element', () => {
+    render(<ColorSample value={value} label={label} aria-labelledby={ariaLabelledBy} />);
     const colorSample = screen.getByRole('img');
-    const titleElem = colorSample.querySelector('title');
-    const ariaLabelleBy = titleElem?.id;
 
-    expect(colorSample).toHaveAttribute('aria-labelledby', ariaLabelleBy);
-  });
-
-  it('renders an svg element with an "aria-labelledby" attribute that references its title element as well as an external element when both "title" and "aria-labelledby" are passed as props', () => {
-    render(<ColorSample value={value} title={title} aria-labelledby={label} />);
-    const colorSample = screen.getByRole('img');
-    const titleElem = colorSample.querySelector('title');
-    const ariaLabelleBy = titleElem?.id;
-
-    expect(colorSample).toHaveAttribute('aria-labelledby', [ariaLabelleBy, label].join(' '));
+    expect(colorSample).toHaveAttribute('aria-labelledby', ariaLabelledBy);
   });
 
   it(`renders an element with a "style" attribute with value "color: ${value}"`, () => {
