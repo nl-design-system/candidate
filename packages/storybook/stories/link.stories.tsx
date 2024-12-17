@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
+import { ParagraphDecorator } from '@nl-design-system-candidate/storybook-shared/src/ParagraphDecorator';
 import packageJSON from '../../components-react/link-react/package.json';
 import { Link } from '../../components-react/link-react/src/css';
 import { Paragraph } from '../../components-react/paragraph-react/src/css';
@@ -14,6 +16,7 @@ const meta = {
     },
   },
   component: Link,
+  decorators: [ParagraphDecorator, ExampleBodyTextDecorator],
   parameters: {
     externalLinks: [
       {
