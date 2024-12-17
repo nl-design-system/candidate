@@ -6,6 +6,64 @@ import { Heading } from '../../../components-react/heading-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import componentMarkdown from '../../../docs/heading-docs/docs/component.md?raw';
 import tokens from '../../../tokens/heading-tokens/tokens.json';
+import {
+  WCAG22_111_NON_TEXT_CONTENT,
+  WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
+  WCAG22_122_CAPTIONS_PRERECORDED,
+  WCAG22_123_AUDIO_DESCRIPTION_OR_MEDIA_ALTERNATIVE_PRERECORDED,
+  WCAG22_124_CAPTIONS_LIVE,
+  WCAG22_125_AUDIO_DESCRIPTION_PRERECORDED,
+  WCAG22_131_INFO_AND_RELATIONSHIPS,
+  WCAG22_132_MEANINGFUL_SEQUENCE,
+  WCAG22_133_SENSORY_CHARACTERISTICS,
+  WCAG22_134_ORIENTATION,
+  WCAG22_135_IDENTIFY_INPUT_PURPOSE,
+  WCAG22_1410_REFLOW,
+  WCAG22_1411_NON_TEXT_CONTRAST,
+  WCAG22_1412_TEXT_SPACING,
+  WCAG22_1413_CONTENT_ON_HOVER_OR_FOCUS,
+  WCAG22_141_USE_OF_COLOR,
+  WCAG22_142_AUDIO_CONTROL,
+  WCAG22_143_CONTRAST_MINIMUM,
+  WCAG22_144_RESIZE_TEXT,
+  WCAG22_145_IMAGES_OF_TEXT,
+  WCAG22_211_KEYBOARD,
+  WCAG22_212_NO_KEYBOARD_TRAP,
+  WCAG22_214_CHARACTER_KEY_SHORTCUTS,
+  WCAG22_221_TIMING_ADJUSTABLE,
+  WCAG22_222_PAUSE_STOP_HIDE,
+  WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+  WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+  WCAG22_241_BYPASS_BLOCKS,
+  WCAG22_242_PAGE_TITLED,
+  WCAG22_243_FOCUS_ORDER,
+  WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+  WCAG22_245_MULTIPLE_WAYS,
+  WCAG22_246_HEADINGS_AND_LABELS,
+  WCAG22_247_FOCUS_VISIBLE,
+  WCAG22_251_POINTER_GESTURES,
+  WCAG22_252_POINTER_CANCELLATION,
+  WCAG22_253_LABEL_IN_NAME,
+  WCAG22_254_MOTION_ACTUATION,
+  WCAG22_257_DRAGGING_MOVEMENTS,
+  WCAG22_258_TARGET_SIZE_MINIMUM,
+  WCAG22_311_LANGUAGE_OF_PAGE,
+  WCAG22_312_LANGUAGE_OF_PARTS,
+  WCAG22_321_ON_FOCUS,
+  WCAG22_322_ON_INPUT,
+  WCAG22_323_CONSISTENT_NAVIGATION,
+  WCAG22_324_CONSISTENT_IDENTIFICATION,
+  WCAG22_326_CONSISTENT_HELP,
+  WCAG22_331_ERROR_IDENTIFICATION,
+  WCAG22_332_LABELS_OR_INSTRUCTIONS,
+  WCAG22_333_ERROR_SUGGESTION,
+  WCAG22_334_ERROR_PREVENTION_LEGAL_FINANCIAL_DATA,
+  WCAG22_337_REDUNDANT_ENTRY,
+  WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
+  WCAG22_411_PARSING,
+  WCAG22_412_NAME_ROLE_VALUE,
+  WCAG22_413_STATUS_MESSAGES,
+} from '../../src/WcagTests';
 
 const meta = {
   argTypes: {
@@ -48,6 +106,67 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    testResult: {
+      notApplicable: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
+        WCAG22_122_CAPTIONS_PRERECORDED,
+        WCAG22_123_AUDIO_DESCRIPTION_OR_MEDIA_ALTERNATIVE_PRERECORDED,
+        WCAG22_124_CAPTIONS_LIVE,
+        WCAG22_125_AUDIO_DESCRIPTION_PRERECORDED,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_134_ORIENTATION,
+        WCAG22_135_IDENTIFY_INPUT_PURPOSE,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_1413_CONTENT_ON_HOVER_OR_FOCUS,
+        WCAG22_211_KEYBOARD,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_214_CHARACTER_KEY_SHORTCUTS,
+        WCAG22_221_TIMING_ADJUSTABLE,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_241_BYPASS_BLOCKS,
+        WCAG22_242_PAGE_TITLED,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_245_MULTIPLE_WAYS,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_251_POINTER_GESTURES,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_254_MOTION_ACTUATION,
+        WCAG22_311_LANGUAGE_OF_PAGE,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_322_ON_INPUT,
+        WCAG22_323_CONSISTENT_NAVIGATION,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_331_ERROR_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+        WCAG22_333_ERROR_SUGGESTION,
+        WCAG22_334_ERROR_PREVENTION_LEGAL_FINANCIAL_DATA,
+        WCAG22_412_NAME_ROLE_VALUE,
+        WCAG22_413_STATUS_MESSAGES,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_257_DRAGGING_MOVEMENTS,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_326_CONSISTENT_HELP,
+        WCAG22_337_REDUNDANT_ENTRY,
+        WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
+      ],
+      notTested: [WCAG22_1410_REFLOW, WCAG22_312_LANGUAGE_OF_PARTS],
+      pass: [],
+    },
     tokens,
   },
   title: 'Componenten/Heading',
@@ -88,6 +207,17 @@ Bron: [Civiel recht (Nederlands) - Wikipedia](https://nl.wikipedia.org/wiki/Civi
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2024-12-17',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_411_PARSING,
+      ],
+    },
   },
 };
 
@@ -116,6 +246,17 @@ export const HeadingLevel2: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2024-12-17',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_411_PARSING,
+      ],
+    },
   },
 };
 
@@ -145,6 +286,17 @@ export const HeadingLevel3: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2024-12-17',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_411_PARSING,
+      ],
+    },
   },
 };
 
@@ -177,6 +329,17 @@ export const HeadingLevel4: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2024-12-17',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_411_PARSING,
+      ],
+    },
   },
 };
 
@@ -203,6 +366,17 @@ export const HeadingLevel5: Story = {
   },
   parameters: {
     status: { type: [] },
+    testResult: {
+      date: '2024-12-17',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_411_PARSING,
+      ],
+    },
   },
 };
 
@@ -238,6 +412,17 @@ export const HeadingLevel6: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2024-12-17',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_411_PARSING,
+      ],
+    },
   },
 };
 
@@ -273,6 +458,10 @@ export const HeadingMultiline: Story = {
         Records in the United States on November 9, 1999, When the Pawn... was wholly written by Apple, with production
         by Jon Brion.
       </Paragraph>
+      <Paragraph>
+        Upon its release, "When the Pawn..." broke the record for longest album title at 444 characters (previously held
+        by a volume in "The Best... Album in the World...Ever!"), though this record was subsequently broken.
+      </Paragraph>
     </>
   ),
   globals: {
@@ -289,6 +478,17 @@ Bron: [When the Pawn... - Wikipedia](https://en.wikipedia.org/wiki/When_the_Pawn
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2024-12-17',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_411_PARSING,
+      ],
+    },
   },
 };
 
@@ -326,13 +526,14 @@ export const HeadingWordBreak: Story = {
 export const HeadingArabic: Story = {
   name: 'Heading met Arabisch schrift in een Nederlandstalige pagina',
   args: {
-    children: 'عيد الفطر',
+    children: 'عيد الفطر (Suikerfeest)',
     dir: 'rtl',
     lang: 'ar',
-    level: 1,
+    level: 2,
   },
   decorators: (Story) => (
     <>
+      <Heading level={1}>Relevante Arabische termen</Heading>
       {Story()}
       <Paragraph>
         Het Suikerfeest, Ramadanfeest of Eid-al-fitr (einde ramadan, Arabisch: عيد الفطر) is een islamitische feestdag
@@ -343,6 +544,7 @@ export const HeadingArabic: Story = {
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'Relevante Arabische termen',
   },
   parameters: {
     docs: {
@@ -353,6 +555,17 @@ Het moet mogelijk zijn een andere taal en tekstrichting in te stellen voor een h
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2024-12-17',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_411_PARSING,
+      ],
+    },
   },
 };
 
@@ -367,6 +580,17 @@ export const HeadingLevelColors: Story = {
       description: {
         story: `Elk heading niveau moet een onderscheidend lettertype en kleur kunnen hebben, door middel van design tokens.`,
       },
+    },
+    testResult: {
+      date: '2024-12-17',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_411_PARSING,
+      ],
     },
   },
   render: () => (
@@ -412,6 +636,17 @@ export const HeadingLevelSize: Story = {
       description: {
         story: `Elk heading niveau moet een eigen font-size en bijpassende line-height kunnen hebben. Vaak geldt: hoe groter de font-size, hoe kleiner de line-height.`,
       },
+    },
+    testResult: {
+      date: '2024-12-17',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_411_PARSING,
+      ],
     },
   },
   render: () => (
