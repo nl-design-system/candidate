@@ -20,7 +20,7 @@ const meta = {
       },
     ],
   },
-  title: 'Componenten/Code Block/Voldoet niet',
+  title: 'Componenten/Code Block',
 } satisfies Meta<typeof CodeBlock>;
 
 export default meta;

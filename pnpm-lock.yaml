@@ -555,6 +555,93 @@ importers:
         specifier: 5.4.10
         version: 5.4.10(@types/node@20.17.6)(sass@1.80.6)
 
+  packages/storybook-non-conforming:
+    devDependencies:
+      '@etchteam/storybook-addon-status':
+        specifier: 5.0.0
+        version: 5.0.0
+      '@fontsource/fira-code':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@fontsource/fira-sans':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@nl-design-system-candidate/storybook-shared':
+        specifier: workspace:*
+        version: link:../storybook-shared
+      '@nl-design-system-unstable/design-tokens-table-react':
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.26.0)(react@18.3.1)
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: 0.1.0
+        version: 0.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.5(prettier@3.3.3))
+      '@nl-design-system-unstable/voorbeeld-design-tokens':
+        specifier: 3.3.0
+        version: 3.3.0
+      '@storybook/addon-a11y':
+        specifier: 8.4.5
+        version: 8.4.5(storybook@8.4.5(prettier@3.3.3))
+      '@storybook/addon-controls':
+        specifier: 8.4.5
+        version: 8.4.5(storybook@8.4.5(prettier@3.3.3))
+      '@storybook/addon-docs':
+        specifier: 8.4.5
+        version: 8.4.5(@types/react@18.3.12)(storybook@8.4.5(prettier@3.3.3))
+      '@storybook/addon-toolbars':
+        specifier: 8.4.5
+        version: 8.4.5(storybook@8.4.5(prettier@3.3.3))
+      '@storybook/addon-viewport':
+        specifier: 8.4.5
+        version: 8.4.5(storybook@8.4.5(prettier@3.3.3))
+      '@storybook/blocks':
+        specifier: 8.4.5
+        version: 8.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.5(prettier@3.3.3))
+      '@storybook/react':
+        specifier: 8.4.5
+        version: 8.4.5(@storybook/test@8.4.5(storybook@8.4.5(prettier@3.3.3)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.5(prettier@3.3.3))(typescript@5.6.3)
+      '@storybook/react-vite':
+        specifier: 8.4.5
+        version: 8.4.5(@storybook/test@8.4.5(storybook@8.4.5(prettier@3.3.3)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.25.0)(storybook@8.4.5(prettier@3.3.3))(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6)(sass@1.80.6))
+      '@tabler/icons-react':
+        specifier: 3.24.0
+        version: 3.24.0(react@18.3.1)
+      '@types/lodash':
+        specifier: 4.17.13
+        version: 4.17.13
+      '@types/react':
+        specifier: 18.3.12
+        version: 18.3.12
+      '@types/react-dom':
+        specifier: 18.3.1
+        version: 18.3.1
+      '@whitespace/storybook-addon-html':
+        specifier: 6.1.1
+        version: 6.1.1(prettier@3.3.3)(react-syntax-highlighter@15.6.1(react@18.3.1))
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      lodash-es:
+        specifier: 4.17.21
+        version: 4.17.21
+      prettier:
+        specifier: 3.3.3
+        version: 3.3.3
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: 18.3.1
+        version: 18.3.1(react@18.3.1)
+      react-syntax-highlighter:
+        specifier: 15.6.1
+        version: 15.6.1(react@18.3.1)
+      storybook:
+        specifier: 8.4.5
+        version: 8.4.5(prettier@3.3.3)
+      vite:
+        specifier: 5.4.10
+        version: 5.4.10(@types/node@20.17.6)(sass@1.80.6)
+
   packages/storybook-shared:
     devDependencies:
       '@nl-design-system/tsconfig':
