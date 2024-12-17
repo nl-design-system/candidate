@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import { Heading } from '../../../components-react/heading-react/src/css';
 import packageJSON from '../../../components-react/mark-react/package.json';
 import { Mark } from '../../../components-react/mark-react/src/css';
@@ -11,6 +12,7 @@ const meta = {
     children: { table: { category: 'API' }, type: 'string' },
   },
   component: Mark,
+  decorators: [ExampleBodyTextDecorator],
   parameters: {
     docs: {
       description: {
@@ -41,17 +43,30 @@ export const Default: Story = {
   args: {
     children: 'Gemarkeerde tekst',
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
   parameters: {
     status: { type: [] },
   },
 };
 
 export const MarkInParagraph: Story = {
-  name: 'Mark voor een volledige Paragraph',
+  name: 'Paragraph met een Mark component voor gemarkeerde tekst',
   args: {
     children: 'gemarkeerde tekst',
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
   parameters: {
+    docs: {
+      description: {
+        story: 'Een zin waar de woorden "gemarkeerde tekst" visueel opvallen door een andere achtergrondkleur.',
+      },
+    },
     status: { type: [] },
   },
   render({ children }) {
@@ -64,14 +79,20 @@ export const MarkInParagraph: Story = {
 };
 
 export const MarkInHeading: Story = {
-  name: 'Mark in een Heading',
+  name: 'Heading met een Mark component voor gemarkeerde tekst',
   args: {
     children: 'gemarkeerde tekst',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een Mark moet zowel werken in gewone lopende tekst, als voor grotere tekst zoals Heading.',
+        story: `Een Heading waar de woorden "gemarkeerde tekst" visueel opvallen door een andere achtergrondkleur.
+
+Een Mark moet zowel werken in gewone lopende tekst, als voor grotere tekst zoals Heading.`,
       },
     },
     status: { type: [] },
@@ -86,14 +107,23 @@ export const MarkInHeading: Story = {
 };
 
 export const MarkInLargeParagraph: Story = {
-  name: 'Mark in een Paragraph',
+  name: 'Paragraph met een volledige alinea aan tekst gemarkeerd met de Mark component',
   args: {
     children: `Wij hebben er heel wat rondgezworven, maar zijn er zeker van, dat we nog menig mooi en belangrijk plekje
           gemist hebben. Dat is maar goed ook; nu hebben wij een reden, om nog dikwijls terug te keeren naar de
           plaatsen, waar het ons zoo goed bevallen is en waar wij nu nog nieuwe en frissche dingen kunnen ontdekken.
           Indien gij daar ook aan wilt doen, zult ge het u niet beklagen.`,
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
   parameters: {
+    docs: {
+      description: {
+        story: 'Een alinea met enkele regels tekst, waar alle tekstregels de achtergrondkleur hebben van Mark.',
+      },
+    },
     status: { type: [] },
   },
   render({ children }) {
@@ -113,7 +143,17 @@ export const MarkLineHeight: Story = {
           plaatsen, waar het ons zoo goed bevallen is en waar wij nu nog nieuwe en frissche dingen kunnen ontdekken.
           Indien gij daar ook aan wilt doen, zult ge het u niet beklagen.`,
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
   parameters: {
+    docs: {
+      description: {
+        story:
+          'Een alinea tekst met meerdere regels, waar alle tekst de achtergrondkleur heeft van Mark. Alleen de tekstregels hebben de achtergrondkleur van Mark, tussen de tekstregels is extra veel witruimte.',
+      },
+    },
     status: { type: [] },
   },
   render({ children }) {
@@ -134,10 +174,17 @@ export const MarkRightToLeft: Story = {
   args: {
     children: `نص لوريم إيبسوم هو نوع من النصوص المؤقتة المستخدمة بشكل شائع في صناعات التصميم والنشر لملء مساحة على الصفحة وإعطاء انطباع عن الشكل النهائي للمحتوى. نص لوريم إيبسوم باللغة العربية مشتق من نص لاتيني كتبه الفيلسوف الروماني شيشرون وقد تم استخدامه منذ ستينيات القرن العشرين. النص غير منطقي ولا ينقل أي معنى محدد، مما يسمح للمصممين بالتركيز على التخطيط والعناصر المرئية دون تشتيت الانتباه بالمحتوى الهادف.`,
   },
+  globals: {
+    dir: 'rtl',
+    lang: 'ar',
+    title: 'نص لوريم إيبسوم',
+  },
   parameters: {
     docs: {
       description: {
-        story: `De Mark component werkt in principe even goed voor left-to-right als voor right-to-left, de schrijfrichting heeft geen invloed op de werking.
+        story: `Een alinea over "Lorem Ipsum" in Arabische taal, waar alle tekstregels de achtergrondkleur hebben van Mark.
+
+De Mark component werkt in principe even goed voor left-to-right als voor right-to-left, de schrijfrichting heeft geen invloed op de werking.
 
 De schrijfrichting van de tekst moet niet beïnvloed worden door de Mark component.`,
       },
