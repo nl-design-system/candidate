@@ -29,6 +29,45 @@ describe('Code Block', () => {
     expect(codeBlock).toHaveClass('nl-code-block', extraClassName);
   });
 
+  it('renders an element with class names "nl-code-block" and "nl-code-block--overflow" when told to overflow', () => {
+    const { container } = render(<CodeBlock overflow="overflow">{testCode}</CodeBlock>);
+    const codeBlock = container.querySelector('pre:only-child');
+
+    expect(codeBlock).toHaveClass('nl-code-block', 'nl-code-block--overflow');
+  });
+
+  it('renders an element with class names "nl-code-block" and "nl-code-block--nowrap" when told not to wrap', () => {
+    const { container } = render(<CodeBlock overflow="nowrap">{testCode}</CodeBlock>);
+    const codeBlock = container.querySelector('pre:only-child');
+
+    expect(codeBlock).toHaveClass('nl-code-block', 'nl-code-block--nowrap');
+  });
+
+  it('renders an element with `tabindex="0" when passed `overflow="overflow"`', () => {
+    const { container } = render(<CodeBlock overflow="overflow">{testCode}</CodeBlock>);
+    const codeBlock = container.querySelector('pre:only-child');
+
+    expect(codeBlock).toHaveAttribute('tabindex', '0');
+  });
+
+  it('allows the tabindex to be overriden even when told to overflow', () => {
+    const { container } = render(
+      <CodeBlock overflow="overflow" tabIndex={undefined}>
+        {testCode}
+      </CodeBlock>,
+    );
+    const codeBlock = container.querySelector('pre:only-child');
+
+    expect(codeBlock).not.toHaveAttribute('tabindex');
+  });
+
+  it('renders an element with only class name "nl-code-block" when told to wrap and when no extra class name is passed', () => {
+    const { container } = render(<CodeBlock overflow="wrap">{testCode}</CodeBlock>);
+    const codeBlock = container.querySelector('pre:only-child');
+
+    expect(codeBlock).toHaveClass('nl-code-block', { exact: true });
+  });
+
   it('renders an HTML pre element that contains an HTML code element', () => {
     const { container } = render(<CodeBlock>{testCode}</CodeBlock>);
     const codeBlock = container.querySelector('pre:only-child');
