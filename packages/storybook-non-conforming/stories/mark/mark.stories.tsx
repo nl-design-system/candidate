@@ -26,7 +26,7 @@ const meta = {
       },
     ],
   },
-  title: 'Componenten/Mark/Voldoet niet',
+  title: 'Componenten/Mark',
 } satisfies Meta<typeof Mark>;
 
 export default meta;

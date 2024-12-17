@@ -31,7 +31,7 @@ const meta = {
       },
     ],
   },
-  title: 'Componenten/Paragraph/Voldoet niet',
+  title: 'Componenten/Paragraph',
 } satisfies Meta<typeof Paragraph>;
 
 export default meta;
