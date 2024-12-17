@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/number-badge-tokens",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Design tokens voor het Number Badge component",
   "license": "EUPL-1.2",
   "main": "./tokens.json",
