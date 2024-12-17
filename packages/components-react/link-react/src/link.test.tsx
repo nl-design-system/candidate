@@ -78,6 +78,72 @@ describe('Link', () => {
     expect(link).toContainElement(richText);
   });
 
+  it('renders an element with aria-current="true" when a "current" prop is passed', () => {
+    render(
+      <Link href={href} current>
+        {text}
+      </Link>,
+    );
+    const link = screen.getByRole('link');
+
+    expect(link).toHaveAttribute('aria-current', 'true');
+  });
+
+  it('renders an element with class name "nl-link--current" when a "current" prop is passed', () => {
+    render(
+      <Link href={href} current>
+        {text}
+      </Link>,
+    );
+    const link = screen.getByRole('link');
+
+    expect(link).toHaveClass('nl-link--current');
+  });
+
+  it('renders an element with aria-disabled="true" when a "placeholder" prop is passed', () => {
+    render(
+      <Link href={href} placeholder>
+        {text}
+      </Link>,
+    );
+    const link = screen.getByRole('link');
+
+    expect(link).toHaveAttribute('aria-disabled', 'true');
+  });
+
+  it('renders an element with class name "nl-link--placeholder" when a "placeholder" prop is passed', () => {
+    render(
+      <Link href={href} placeholder>
+        {text}
+      </Link>,
+    );
+    const link = screen.getByRole('link');
+
+    expect(link).toHaveClass('nl-link--placeholder');
+  });
+
+  it('renders an element without a href attribute when a "placeholder" prop is passed', () => {
+    render(
+      <Link href={href} placeholder>
+        {text}
+      </Link>,
+    );
+    const link = screen.getByRole('link');
+
+    expect(link).not.toHaveAttribute('href');
+  });
+
+  it('renders an element with class name "nl-link--inline-box-content" when a "inlineBoxContent" prop is passed', () => {
+    render(
+      <Link href={href} inlineBoxContent>
+        {text}
+      </Link>,
+    );
+    const link = screen.getByRole('link');
+
+    expect(link).toHaveClass('nl-link--inline-box-content');
+  });
+
   it('forwards React refs to the HTMLAnchorElement', () => {
     const ref = createRef<HTMLAnchorElement>();
     render(
