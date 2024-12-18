@@ -64,6 +64,7 @@ import {
 } from '../../src/WcagTests';
 
 const meta = {
+  id: 'code',
   argTypes: {
     children: { control: 'text', table: { category: 'API' } },
   },
@@ -148,7 +149,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const _10: Story = {
   name: 'Code',
   args: {
     children: `import { Code } from '@nl-design-system-candidate/code-react';`,
@@ -168,7 +169,7 @@ export const Default: Story = {
   },
 };
 
-export const BodyText: Story = {
+export const _20: Story = {
   name: 'Code in Body Text',
   args: {
     children: `parseFloat()`,
@@ -206,7 +207,7 @@ export const BodyText: Story = {
   ),
 };
 
-export const BodyTextRightToLeft: Story = {
+export const _30: Story = {
   name: 'Code in Body Text in Arabische taal',
   args: {
     children: `parseFloat()`,
@@ -244,7 +245,7 @@ De ronde haakjes in de code na "parseFloat" worden aan rechts van "parseFloat" g
   ),
 };
 
-export const HypenatedBodyText: Story = {
+export const _40: Story = {
   name: 'Code zonder "hyphenation" in Body Text met "hyphenation"',
   args: {
     children: `InternalFrameInternalFrameTitlePaneInternalFrameTitlePaneMaximizeButtonWindowNotFocusedState`,
@@ -282,7 +283,7 @@ export const HypenatedBodyText: Story = {
   ),
 };
 
-export const WhiteSpaceCharacters: Story = {
+export const _497dcba3_ecbf_4587_a2dd_5eb0665e6880: Story = {
   name: 'Code met meerdere spaties achter elkaar',
   decorators: ExampleBodyTextDecorator,
   globals: {
