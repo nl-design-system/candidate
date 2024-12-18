@@ -15,10 +15,10 @@ export const StoryRootDecorator: Decorator = (Story, context) => {
   //
   // - Page title: https://nldesignsystem.nl/wcag/2.4.2
   // - Language of the page: https://nldesignsystem.nl/wcag/3.1.1
-  const viewMode = typeof location !== 'undefined' ? new URLSearchParams(location.search).get('viewMode') : '';
+  const { viewMode } = context;
 
   useEffect(() => {
-    if (viewMode === 'story' && typeof document !== 'undefined') {
+    if (viewMode === 'story') {
       document.title = title || context.name;
       document.documentElement.lang = lang;
       document.documentElement.dir = dir || '';
