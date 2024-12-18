@@ -1,10 +1,136 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react';
+import type { PropsWithChildren, ReactNode } from 'react';
+import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import { Heading } from '../../../components-react/heading-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import packageJSON from '../../../components-react/skip-link-react/package.json';
 import { SkipLink } from '../../../components-react/skip-link-react/src/css';
-import { ExampleBodyText } from '../../src/ExampleBodyText';
 import '../../../components-css/skip-link-css/src/test.scss';
+
+interface ExamplePageProps {
+  organisation: ReactNode;
+  heading: ReactNode;
+  mainId?: string;
+  links: { href: string; children: ReactNode }[];
+  paragraph: ReactNode;
+}
+
+interface ExamplePageLocale {
+  dir: string;
+  lang: string;
+  title: string;
+  page: Omit<ExamplePageProps, 'mainId'>;
+}
+
+const dutchLocale: ExamplePageLocale = {
+  dir: 'ltr',
+  lang: 'nl',
+  page: {
+    heading: 'Contact',
+    links: [
+      { children: 'Homepage', href: 'https://example.com/' },
+      { children: 'Over ons', href: 'https://example.com/' },
+      { children: 'Contact', href: 'https://example.com/' },
+    ],
+    organisation: 'Acme Inc.',
+    paragraph: (
+      <>
+        {'Je kunt contact met ons opnemen via ons e-mailadres: '}
+        <a href="mailto:hello@example.com">hello@example.com</a>
+        {'.'}
+      </>
+    ),
+  },
+  title: 'Contact',
+};
+
+const englishLocale: ExamplePageLocale = {
+  dir: 'ltr',
+  lang: 'en',
+  page: {
+    heading: 'Supercalifragilisticexpialidocious',
+    links: [
+      { children: 'Homepage', href: 'https://example.com/' },
+      { children: 'About us', href: 'https://example.com/' },
+      { children: 'Contact', href: 'https://example.com/' },
+    ],
+    organisation: 'Chim Chim Cher-ee Ltd.',
+    paragraph: (
+      <>
+        {'Contact Mary Poppins via e-mail: '}
+        <a href="mailto:mary@example.com">mary@example.com</a>
+        {'.'}
+      </>
+    ),
+  },
+  title: 'Contact',
+};
+
+const arabicLocale: ExamplePageLocale = {
+  dir: 'rtl',
+  lang: 'ar',
+  page: {
+    heading: 'اتصال',
+    links: [
+      { children: 'الصفحة الرئيسية', href: 'https://example.com/' },
+      { children: 'نبذة عنا', href: 'https://example.com/' },
+      { children: 'اتصل بنا', href: 'https://example.com/' },
+    ],
+    organisation: 'Acme Inc.',
+    paragraph: (
+      <>
+        {'يمكنك التواصل معنا عبر عنوان البريد الإلكتروني الخاص بنا:'}
+        <a href="mailto:hello@example.com">hello@example.com</a>
+        {'.'}
+      </>
+    ),
+  },
+  title: 'اتصال',
+};
+
+const ExamplePage = ({
+  children,
+  heading,
+  links,
+  mainId,
+  organisation,
+  paragraph,
+}: PropsWithChildren<ExamplePageProps>) => {
+  return (
+    <>
+      {children}
+      <header>
+        <Paragraph>
+          <bdi>{organisation}</bdi>
+        </Paragraph>
+      </header>
+      <nav>
+        <ul>
+          {links.map(({ children, href }, index) => (
+            <li key={index}>
+              <a href={href}>{children}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <main id={mainId} tabIndex={-1}>
+        <Heading level={1}>{heading}</Heading>
+        <Paragraph>{paragraph}</Paragraph>
+      </main>
+    </>
+  );
+};
+
+const ExamplePageDecorator: Decorator = (Story, context) => {
+  return (
+    <ExamplePage
+      mainId={typeof context.args['href'] === 'string' ? context.args['href'].substring(1) : undefined}
+      {...context.globals['page']}
+    >
+      {Story()}
+    </ExamplePage>
+  );
+};
 
 const meta = {
   argTypes: {
@@ -12,6 +138,7 @@ const meta = {
     href: { table: { category: 'API' } },
   },
   component: SkipLink,
+  decorators: [ExamplePageDecorator, ExampleBodyTextDecorator],
   parameters: {
     docs: {
       description: {
@@ -43,9 +170,7 @@ export const Default: Story = {
     href: '#main-story-1',
   },
   globals: {
-    dir: 'ltr',
-    lang: 'nl',
-    title: 'Contact',
+    ...dutchLocale,
   },
   parameters: {
     docs: {
@@ -57,38 +182,6 @@ Je kunt met \`Tab\` naar de Skip Link die eerst niet zichtbaar is. Daarmee kun j
     },
     status: { type: [] },
   },
-  render(props) {
-    return (
-      <ExampleBodyText>
-        <SkipLink {...props} />
-        <header>
-          <Paragraph>
-            <bdi>Example Inc.</bdi>
-          </Paragraph>
-        </header>
-        <nav>
-          <ul>
-            <li>
-              <a href="https://example.com/">Homepage</a>
-            </li>
-            <li>
-              <a href="https://example.com/">Over ons</a>
-            </li>
-            <li>
-              <a href="https://example.com/">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <main id={props.href?.substring(1)}>
-          <Heading level={1}>Contact</Heading>
-          <Paragraph>
-            Je kunt contact met ons opnemen via ons e-mailadres:{' '}
-            <a href="mailto:hello@example.com">hello@example.com</a>.
-          </Paragraph>
-        </main>
-      </ExampleBodyText>
-    );
-  },
 };
 
 export const FocusedSkipLink: Story = {
@@ -99,7 +192,7 @@ export const FocusedSkipLink: Story = {
     href: '#main-story-2',
   },
   globals: {
-    ...Default.globals,
+    ...dutchLocale,
   },
   parameters: {
     docs: {
@@ -121,9 +214,7 @@ export const RightToLeft: Story = {
     href: '#main-story-3',
   },
   globals: {
-    dir: 'rtl',
-    lang: 'ar',
-    title: 'اتصل بنا',
+    ...arabicLocale,
   },
   parameters: {
     docs: {
@@ -135,36 +226,6 @@ In een right-to-left pagina zoals Arabisch moet de Skip Link rechts uitgelijnd z
     },
     status: { type: [] },
   },
-  render(props) {
-    return (
-      <ExampleBodyText>
-        <SkipLink {...props} />
-        <p>
-          <bdi>Example Inc.</bdi>
-        </p>
-        <nav>
-          <ul>
-            <li>
-              <a href="https://example.com/">الصفحة الرئيسية</a>
-            </li>
-            <li>
-              <a href="https://example.com/">نبذة عنا</a>
-            </li>
-            <li>
-              <a href="https://example.com/">اتصل بنا</a>
-            </li>
-          </ul>
-        </nav>
-        <main id={props.href?.substring(1)}>
-          <Heading level={1}>اتصال</Heading>
-          <Paragraph>
-            يمكنك التواصل معنا عبر عنوان البريد الإلكتروني الخاص بنا:{' '}
-            <a href="mailto:hello@example.com">hello@example.com</a>.
-          </Paragraph>
-        </main>
-      </ExampleBodyText>
-    );
-  },
 };
 
 export const RightToLeftVisible: Story = {
@@ -175,7 +236,7 @@ export const RightToLeftVisible: Story = {
     href: '#main-story-4',
   },
   globals: {
-    ...RightToLeft.globals,
+    ...arabicLocale,
   },
   parameters: {
     docs: {
@@ -196,9 +257,7 @@ export const LongLabel: Story = {
     href: '#main-story-5',
   },
   globals: {
-    dir: 'ltr',
-    lang: 'en',
-    title: 'Contact',
+    ...englishLocale,
   },
   parameters: {
     docs: {
@@ -209,39 +268,5 @@ Je kunt met \`Tab\` naar de Skip Link die eerst niet zichtbaar is. Daarmee kun j
       },
     },
     status: { type: [] },
-  },
-  render(props) {
-    return (
-      <>
-        <ExampleBodyText>
-          <SkipLink {...props} />
-          <header>
-            <Paragraph>
-              <bdi>Chim Chim Cher-ee Ltd.</bdi>
-            </Paragraph>
-          </header>
-          <nav>
-            <ul>
-              <li>
-                <a href="https://example.com/">Homepage</a>
-              </li>
-              <li>
-                <a href="https://example.com/">About us</a>
-              </li>
-              <li>
-                <a href="https://example.com/">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <main id={props.href?.substring(1)}>
-            <Heading level={1}>Supercalifragilisticexpialidocious</Heading>
-            <Paragraph>
-              Contact Mary Poppins via e-mail:
-              <a href="mailto:mary@example.com">mary@example.com</a>.
-            </Paragraph>
-          </main>
-        </ExampleBodyText>
-      </>
-    );
   },
 };
