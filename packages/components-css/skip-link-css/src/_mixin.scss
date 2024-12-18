@@ -5,7 +5,9 @@
   box-sizing: border-box;
   color: var(--nl-skip-link-color, LinkText);
   display: inline-flex;
+  font-size: var(--nl-skip-link-font-size);
   justify-content: center;
+  line-height: var(--nl-skip-link-line-height);
   max-inline-size: calc(100% - 2 * var(--_nl-skip-link-inset, 0));
   min-block-size: var(--nl-skip-link-min-block-size, 44px);
   min-inline-size: var(--nl-skip-link-min-inline-size, 44px);
@@ -32,7 +34,9 @@
    * 
    * Assume 2px is the browser default focus ring size.
    * */
-  --_nl-skip-link-inset: calc(var(--nl-focus-outline-width, 2px) + var(--nl-focus-outline-offset, 2px));
+  --_nl-skip-link-inset: calc(
+    var(--nl-focus-indicator-outline-width, 2px) + var(--nl-focus-indicator-outline-offset, 2px)
+  );
 
   inset-block-start: var(--_nl-skip-link-inset, 0);
   inset-inline-start: var(--_nl-skip-link-inset, 0);
