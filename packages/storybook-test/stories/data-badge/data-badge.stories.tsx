@@ -125,7 +125,7 @@ export const DataBadgeWithDateTimeEnglish: Story = {
   args: {
     children: new Intl.DateTimeFormat('en', {
       dateStyle: 'full',
-      timeStyle: 'full',
+      timeStyle: 'long',
       timeZone: 'UTC',
     }).format(new Date('2038-01-19T03:14:08Z')),
     dateTime: '2038-01-19T03:14:08Z',
