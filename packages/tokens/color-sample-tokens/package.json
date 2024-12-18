@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/color-sample-tokens",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Design tokens voor het Color Sample component",
   "license": "EUPL-1.2",
   "main": "./tokens.json",

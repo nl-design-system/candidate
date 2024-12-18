@@ -1,5 +1,14 @@
 # @nl-design-system-candidate/code-block-react
 
+## 1.2.0
+
+### Minor Changes
+
+- 5557084: Add `overflow` property to `CodeBlock`, with new options:
+
+  - `overflow="nowrap"`: fit content, even for very long lines.
+  - `overflow="overflow"`: provide scrollbars to see very long lines.
+
 ## 1.1.0
 
 ### Minor Changes
