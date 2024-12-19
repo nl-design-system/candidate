@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/number-badge-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Toont een klein label dat de aandacht trekt en informeert over een aantal.",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/number-badge-react#readme",
