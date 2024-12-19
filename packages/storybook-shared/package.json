@@ -4,8 +4,8 @@
   "private": true,
   "devDependencies": {
     "@nl-design-system/tsconfig": "1.0.1",
-    "@storybook/blocks": "8.4.5",
-    "@storybook/react": "8.4.5",
+    "@storybook/blocks": "8.4.7",
+    "@storybook/react": "8.4.7",
     "@types/react": "18.3.12",
     "react": "18.3.1"
   },
