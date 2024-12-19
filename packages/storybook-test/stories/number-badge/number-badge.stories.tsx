@@ -11,6 +11,7 @@ import '../../../components-css/number-badge-css/dist/test.css';
 const meta = {
   argTypes: {
     children: { table: { category: 'API' } },
+    label: { table: { category: 'API' } },
     value: {
       control: 'number',
       table: { category: 'API' },
@@ -127,6 +128,7 @@ export const FlexboxContainerRow: Story = {
   name: 'Number Badge in een flexbox',
   args: {
     children: '42',
+    label: '42 ongelezen berichten',
     value: 42,
   },
   decorators: [
@@ -166,6 +168,7 @@ export const FlexboxContainerColumn: Story = {
   name: 'Number Badge in een flexbox',
   args: {
     children: '42',
+    label: '42 ongelezen berichten',
     value: 42,
   },
   decorators: [
@@ -282,7 +285,6 @@ export const FontRelative: Story = {
   name: 'Number Badge in tekst met grote letters',
   args: {
     children: '1',
-    value: 1,
   },
   decorators: [
     (Story) => (
@@ -333,6 +335,7 @@ export const FontSizeMinimum: Story = {
   name: 'Number Badge moet niet te klein worden',
   args: {
     children: '42',
+    label: '42 ongelezen berichten',
     style: {
       '--nl-number-badge-font-size': '0.6em',
       '--nl-number-badge-padding-block': '0.2em',
@@ -365,6 +368,7 @@ export const NumberBadgeLink: Story = {
   name: 'Number Badge moet niet onderstreept zijn',
   args: {
     children: '42',
+    label: '42 ongelezen berichten',
     value: 42,
   },
   decorators: [
@@ -419,6 +423,7 @@ export const NumberBadgeForcedColorsLink: Story = {
   args: {
     children: '42',
     className: 'nl-number-badge--forced-colors',
+    label: '42 ongelezen berichten',
     value: 42,
   },
   decorators: [
