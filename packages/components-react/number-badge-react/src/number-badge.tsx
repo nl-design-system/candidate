@@ -1,32 +1,56 @@
-import type { DataHTMLAttributes, ForwardedRef, HTMLAttributes } from 'react';
+import type { DataHTMLAttributes, ForwardedRef, HTMLAttributes, ReactNode } from 'react';
 import { clsx } from 'clsx';
 import { forwardRef } from 'react';
 
 interface NumberBadgePropsForData extends DataHTMLAttributes<HTMLDataElement> {
   value: number;
+  label?: ReactNode;
+}
+
+interface NumberBadgePropsForSpan extends HTMLAttributes<HTMLSpanElement> {
+  label?: ReactNode;
 }
 
 const isNumberBadgePropsForData = (props: NumberBadgeProps): props is NumberBadgePropsForData => 'value' in props;
 
-export type NumberBadgeProps = NumberBadgePropsForData | HTMLAttributes<HTMLSpanElement>;
+export type NumberBadgeProps = NumberBadgePropsForData | NumberBadgePropsForSpan;
 
 export const NumberBadge = forwardRef<HTMLDataElement | HTMLSpanElement, NumberBadgeProps>(
   function NumberBadge(props, ref) {
-    const { children, ...restProps } = props;
+    const { children, label, ...restProps } = props;
     const className = clsx('nl-number-badge', props.className);
+
+    /**
+     * When CSS cannot be loaded, the labels must in the opposite way to make sure the meaning is clear without visual aids.
+     *
+     * - without CSS the "hidden label" is visible
+     * - without CSS the "visible label" is hidden
+     */
+    const fragment = (
+      <>
+        {label ? (
+          <span hidden aria-hidden="true" className="nl-number-badge__visible-label">
+            {children}
+          </span>
+        ) : (
+          children
+        )}
+        {label ? <span className="nl-number-badge__hidden-label">{label}</span> : null}
+      </>
+    );
 
     if (isNumberBadgePropsForData(restProps)) {
       const { value, ...dataRestProps } = restProps;
       return (
         <data {...dataRestProps} value={value} className={className} ref={ref as ForwardedRef<HTMLDataElement>}>
-          {children}
+          {fragment}
         </data>
       );
     }
 
     return (
       <span {...restProps} className={className} ref={ref as ForwardedRef<HTMLSpanElement>}>
-        {children}
+        {fragment}
       </span>
     );
   },
