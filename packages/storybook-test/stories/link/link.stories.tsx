@@ -321,12 +321,12 @@ export const Current: Story = {
   },
 };
 
-export const InlineBoxContent: Story = {
+export const inlineBox: Story = {
   name: 'Link rondom image',
   args: {
     children: <ExampleImage />,
     href: 'https://nldesignsystem.nl/',
-    inlineBoxContent: true,
+    inlineBox: true,
   },
   globals: {
     'aria-label': 'NL Design System',
@@ -345,13 +345,13 @@ export const InlineBoxContent: Story = {
   },
 };
 
-export const InlineBoxContentHover: Story = {
+export const inlineBoxHover: Story = {
   name: 'Link rondom image met :hover',
   args: {
     children: <ExampleImage />,
     className: 'nl-link--hover',
     href: 'https://example.com',
-    inlineBoxContent: true,
+    inlineBox: true,
     target: '_blank',
   },
   globals: {
@@ -371,12 +371,12 @@ export const InlineBoxContentHover: Story = {
   },
 };
 
-export const InlineBoxContentCurrent: Story = {
+export const inlineBoxCurrent: Story = {
   name: 'Link rondom image, current page',
   args: {
     children: <ExampleImage />,
     href: 'https://nldesignsystem.nl/',
-    inlineBoxContent: true,
+    inlineBox: true,
   },
   globals: {
     'aria-label': 'homepage · NL Design System',

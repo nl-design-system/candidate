@@ -10,11 +10,10 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(props, forwardedRef) {
-  const { children, className, current, href, inlineBox, placeholder, role, ...restProps } = props;
+  const { children, className, current, href, inlineBox, placeholder, ...restProps } = props;
 
   return (
     <a
-      {...restProps}
       aria-current={current ? true : undefined}
       aria-disabled={placeholder ? 'true' : undefined}
       href={placeholder ? undefined : href}
@@ -25,8 +24,10 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(props
         inlineBox && 'nl-link--inline-box',
         className,
       )}
-      role={role || (placeholder ? 'link' : undefined)}
+      role={placeholder ? 'link' : undefined}
       ref={forwardedRef}
+      /* Let restProps overrid aria-current, aria-disabled and role */
+      {...restProps}
     >
       {children}
     </a>
