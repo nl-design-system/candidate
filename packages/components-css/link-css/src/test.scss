@@ -1,0 +1,17 @@
+@use "./mixin";
+
+/* 
+ * Used for stories in Storybook
+ */
+
+.nl-link--hover {
+  @include mixin.nl-link--hover;
+}
+
+.nl-link--active {
+  @include mixin.nl-link--active;
+}
+
+.nl-link--current {
+  @include mixin.nl-link--current;
+}

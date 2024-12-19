@@ -1,7 +1,31 @@
 @use "../mixin";
 
-@mixin a {
-  a {
+@mixin nl-link--html-a {
+  /* link styles should only apply to links with `href`, not on disabled links */
+  a:any-link {
     @include mixin.nl-link;
+  }
+
+  /*
+ * IMPORTANT: states rely heavily on the CSS order
+ * Keep the order as follows
+ * 1. :visited (not used for privacy reasons)
+ * 2. :hover
+ * 3. :active
+ * 4. :focus (not used for user friendliness)
+ * 5. :focus-visible (todo)
+ */
+
+  a:any-link:hover {
+    @include mixin.nl-link--hover;
+  }
+
+  a:any-link:active {
+    @include mixin.nl-link--active;
+  }
+
+  /* placeholder styles as fallback for all links without `href` attribute when aria-disabled is used properly */
+  a[role="link" i][aria-disabled="true" i] {
+    @include mixin.nl-link--disabled;
   }
 }

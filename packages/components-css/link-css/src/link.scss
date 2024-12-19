@@ -1,5 +1,37 @@
 @use "./mixin";
 
-.nl-link {
+/* link styles should only apply to links with `href`, not on disabled links */
+.nl-link:any-link {
   @include mixin.nl-link;
+}
+
+/*
+ * IMPORTANT: states rely heavily on the CSS order
+ * Keep the order as follows
+ * 1. :visited (not used for privacy reasons)
+ * 2. :hover
+ * 3. :active
+ * 4. :focus (not used for user friendliness)
+ * 5. :focus-visible (todo)
+ */
+
+.nl-link:any-link:hover {
+  @include mixin.nl-link--hover;
+}
+
+.nl-link:any-link:active {
+  @include mixin.nl-link--active;
+}
+
+.nl-link--current:any-link {
+  @include mixin.nl-link--current;
+}
+
+.nl-link--inline-box:any-link {
+  @include mixin.nl-link--inline-box;
+}
+
+/* placeholder styles can be used as fallback for all links without `href` attribute */
+.nl-link--disabled {
+  @include mixin.nl-link--disabled;
 }
