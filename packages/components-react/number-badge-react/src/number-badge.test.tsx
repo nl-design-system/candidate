@@ -61,6 +61,19 @@ describe('Number Badge', () => {
       expect(numberBadge).toContainElement(richText);
     });
 
+    it('renders an accessible label', () => {
+      render(
+        <a href="https://example.com">
+          <NumberBadge value={value} label="42 unread messages">
+            {value}
+          </NumberBadge>
+        </a>,
+      );
+      const numberBadge = screen.getByRole('link', { name: '42 unread messages' });
+
+      expect(numberBadge).toBeInTheDocument();
+    });
+
     it('forwards React refs to the HTMLDataElement', () => {
       const ref = createRef<HTMLDataElement>();
       const { container } = render(
@@ -113,6 +126,17 @@ describe('Number Badge', () => {
       const richText = screen.getByTestId(testId);
 
       expect(numberBadge).toContainElement(richText);
+    });
+
+    it('renders an accessible label', () => {
+      render(
+        <a href="https://example.com">
+          <NumberBadge label="42 unread messages">{value}</NumberBadge>
+        </a>,
+      );
+      const numberBadge = screen.getByRole('link', { name: '42 unread messages' });
+
+      expect(numberBadge).toBeInTheDocument();
     });
 
     it('forwards React refs to the HTMLSpanElement', () => {
