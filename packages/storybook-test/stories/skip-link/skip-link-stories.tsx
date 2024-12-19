@@ -166,7 +166,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   name: 'Skip Link',
   args: {
-    children: 'Naar de inhoud',
+    children: 'Direct naar de hoofdinhoud',
     href: '#main-story-1',
   },
   globals: {
@@ -187,7 +187,7 @@ Je kunt met \`Tab\` naar de Skip Link die eerst niet zichtbaar is. Daarmee kun j
 export const FocusedSkipLink: Story = {
   name: 'Skip Link (zichtbaar)',
   args: {
-    ...Default.args,
+    children: 'Direct naar de hoofdinhoud',
     className: 'nl-skip-link--test-focus-visible',
     href: '#main-story-2',
   },
@@ -210,7 +210,7 @@ Normaalgesproken is de Skip Link alleen zichtbaar als die focus heeft. Problemen
 export const RightToLeft: Story = {
   name: 'Skip Link in pagina met Arabische taal',
   args: {
-    children: 'تخطي إلى المحتوى الرئيسي',
+    children: 'انتقل إلى المحتوى الرئيسي',
     href: '#main-story-3',
   },
   globals: {
@@ -231,7 +231,7 @@ In een right-to-left pagina zoals Arabisch moet de Skip Link rechts uitgelijnd z
 export const RightToLeftVisible: Story = {
   name: 'Skip Link in pagina met Arabische taal (zichtbaar)',
   args: {
-    ...RightToLeft.args,
+    children: 'انتقل إلى المحتوى الرئيسي',
     className: 'nl-skip-link--test-focus-visible',
     href: '#main-story-4',
   },
