@@ -4,6 +4,14 @@
   @include mixin.nl-number-badge;
 }
 
+.nl-number-badge__hidden-label {
+  @include mixin.nl-number-badge__hidden-label;
+}
+
+.nl-number-badge__visible-label {
+  @include mixin.nl-number-badge__visible-label;
+}
+
 @media screen and (forced-colors: active) {
   .nl-number-badge {
     @include mixin.nl-number-badge--forced-colors;

@@ -1,3 +1,23 @@
+/**
+ * @private
+ */
+@mixin invisible-but-accessible {
+  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
+  block-size: 1px !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  inline-size: 1px !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: -1px !important;
+  overflow: hidden !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+}
+
 @mixin nl-number-badge {
   align-items: center;
   background-color: var(--nl-number-badge-background-color);
@@ -22,6 +42,17 @@
   padding-block: var(--nl-number-badge-padding-block);
   padding-inline: var(--nl-number-badge-padding-inline);
   white-space: nowrap;
+}
+
+@mixin nl-number-badge__visible-label {
+  display: inline;
+}
+
+/**
+ * The accessible label for the number badge
+ */
+@mixin nl-number-badge__hidden-label {
+  @include invisible-but-accessible;
 }
 
 @mixin nl-number-badge--forced-colors {
