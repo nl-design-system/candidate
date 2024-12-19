@@ -1,5 +1,14 @@
 # @nl-design-system-candidate/number-badge-css
 
+## 1.1.0
+
+### Minor Changes
+
+- 759acf8: Add class names and mixins:
+
+  - `nl-number-badge__hidden-label`: for the hidden label
+  - `nl-number-badge__visible-label`: for the visible label
+
 ## 1.0.0
 
 ### Major Changes
