@@ -133,15 +133,15 @@ describe('Link', () => {
     expect(link).not.toHaveAttribute('href');
   });
 
-  it('renders an element with class name "nl-link--inline-box-content" when a "inlineBoxContent" prop is passed', () => {
+  it('renders an element with class name "nl-link--inline-box" when a "inlineBox" prop is passed', () => {
     render(
-      <Link href={href} inlineBoxContent>
+      <Link href={href} inlineBox>
         {text}
       </Link>,
     );
     const link = screen.getByRole('link');
 
-    expect(link).toHaveClass('nl-link--inline-box-content');
+    expect(link).toHaveClass('nl-link--inline-box');
   });
 
   it('forwards React refs to the HTMLAnchorElement', () => {

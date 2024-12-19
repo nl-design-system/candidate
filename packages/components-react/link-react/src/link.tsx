@@ -5,12 +5,12 @@ import { forwardRef } from 'react';
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   current?: boolean;
   href: AnchorHTMLAttributes<HTMLAnchorElement>['href'];
-  inlineBoxContent?: boolean;
+  inlineBox?: boolean;
   placeholder?: boolean;
 }
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(props, forwardedRef) {
-  const { children, className, current, href, inlineBoxContent, placeholder, role, ...restProps } = props;
+  const { children, className, current, href, inlineBox, placeholder, role, ...restProps } = props;
 
   return (
     <a
@@ -22,7 +22,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(props
         'nl-link',
         placeholder && 'nl-link--placeholder',
         current && 'nl-link--current',
-        inlineBoxContent && 'nl-link--inline-box-content',
+        inlineBox && 'nl-link--inline-box',
         className,
       )}
       role={role || (placeholder ? 'link' : undefined)}

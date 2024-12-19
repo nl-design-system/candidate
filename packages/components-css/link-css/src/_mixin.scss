@@ -69,7 +69,7 @@
  * Link around inline-block, inline-flex and inline-grid elements like image or badge.
  * Changing the `display: inline` to `inline-block` for the link ensures the focus outline is rendered around the entire box in all browsers.
  */
-@mixin nl-link--inline-box-content {
+@mixin nl-link--inline-box {
   color: unset;
   display: inline-block;
   text-decoration-line: unset;

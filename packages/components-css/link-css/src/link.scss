@@ -27,8 +27,8 @@
   @include mixin.nl-link--current;
 }
 
-.nl-link--inline-box-content:any-link {
-  @include mixin.nl-link--inline-box-content;
+.nl-link--inline-box:any-link {
+  @include mixin.nl-link--inline-box;
 }
 
 /* placeholder styles can be used as fallback for all links without `href` attribute */
