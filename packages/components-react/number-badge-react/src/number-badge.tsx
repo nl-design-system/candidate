@@ -3,7 +3,7 @@ import { clsx } from 'clsx';
 import { forwardRef } from 'react';
 
 interface NumberBadgePropsForData extends DataHTMLAttributes<HTMLDataElement> {
-  value: number;
+  value: number | string;
   label?: ReactNode;
 }
 
