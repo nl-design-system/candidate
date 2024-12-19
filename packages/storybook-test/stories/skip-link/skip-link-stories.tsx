@@ -5,6 +5,7 @@ import { Heading } from '../../../components-react/heading-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import packageJSON from '../../../components-react/skip-link-react/package.json';
 import { SkipLink } from '../../../components-react/skip-link-react/src/css';
+import tokens from '../../../tokens/skip-link-tokens/tokens.json';
 import '../../../components-css/skip-link-css/src/test.scss';
 
 interface ExamplePageProps {
@@ -155,6 +156,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens,
   },
   title: 'Componenten/Skip Link',
 } satisfies Meta<typeof SkipLink>;
