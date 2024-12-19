@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import { ParagraphDecorator } from '@nl-design-system-candidate/storybook-shared/src/ParagraphDecorator';
+import { Heading } from '../../../components-react/heading-react/src/css';
 import packageJSON from '../../../components-react/link-react/package.json';
 import { Link } from '../../../components-react/link-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
@@ -10,7 +11,7 @@ import '../../../components-css/link-css/src/test.scss';
 
 const ExampleImage = () => (
   <svg
-    role="image"
+    role="img"
     aria-label="NL Design System logo"
     width="420"
     height="auto"
@@ -131,13 +132,40 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   name: 'Link',
   args: {
-    children: 'voorbeeldsite',
-    href: 'https://example.com',
+    children: 'Voorbeelddomein',
+    href: 'https://example.com/',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Link van de dag',
   },
   parameters: {
     docs: {
       description: {
         story: 'Een enkele Link.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const Engels: Story = {
+  name: 'Link in Engels',
+  args: {
+    children: 'Example Domain',
+    href: 'https://example.com/',
+    lang: 'en',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Link van de dag',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een enkele Link in het Engels.',
       },
     },
     status: { type: [] },
@@ -147,7 +175,7 @@ export const Default: Story = {
 export const ArabicLink: Story = {
   name: 'Link in Arabisch',
   args: {
-    children: 'الرابط التشعبي (يفتح في نافذة جديدة)',
+    children: 'الرابط التشعبي',
     dir: 'rtl',
     href: 'https://example.com',
     lang: 'ar',
@@ -155,7 +183,9 @@ export const ArabicLink: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een enkele Link in het Arabisch.',
+        story: `Een enkele Link in het Arabisch.
+
+Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
       },
     },
     status: { type: [] },
@@ -165,14 +195,15 @@ export const ArabicLink: Story = {
 export const OpensInNewWindowLink: Story = {
   name: 'Link (opent in een nieuw venster)',
   args: {
-    children: 'voorbeeldsite (opent in een nieuw venster)',
-    href: 'https://example.com',
-    target: '_blank',
+    children: 'Voorbeelddomein',
+    href: 'https://example.com/',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een enkele Link.',
+        story: `Een enkele Link. De Link opent in een nieuw venster.
+
+Het moet mogelijk zijn de Link te openen in een nieuw venster. Maak alleen in uitzonderlijke gevallen gebruik van deze functionaliteit, bijvoorbeeld voor links in een formulier.`,
       },
     },
     status: { type: [] },
@@ -182,13 +213,13 @@ export const OpensInNewWindowLink: Story = {
 export const LinkInParagraph: Story = {
   name: 'Link in Paragraph',
   args: {
-    children: 'voorbeeldsite (opent in een nieuw venster)',
+    children: 'Voorbeelddomein (opent in een nieuw venster)',
     href: 'https://example.com',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een Link in een Paragraph.',
+        story: 'Een Paragraph met een Link die onderdeel is van lopende tekst in een alinea.',
       },
     },
     status: { type: [] },
@@ -202,44 +233,22 @@ export const LinkInParagraph: Story = {
   },
 };
 
-export const LinkInGermanParagraph: Story = {
-  name: 'Link in Paragraph, Duits',
-  args: {
-    children: 'eine Beispielsite (wird in einem neuen Fenster geöffnet)',
-    href: 'https://example.com',
-  },
-  globals: {
-    lang: 'de',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een Link in een Paragraph in een container met een lang attribuut met als waarde "de".',
-      },
-    },
-    status: { type: [] },
-  },
-  render({ children, ...restProps }) {
-    return (
-      <Paragraph>
-        Dies ist ein Link in einem Absatz, der auf <Link {...restProps}>{children}</Link> verweist.
-      </Paragraph>
-    );
-  },
-};
-
 export const ExtremelyLongLink: Story = {
-  name: 'Extreem lange Link',
+  name: 'Link die meerdere regels lang is',
   args: {
     children:
-      'Supercalifragilisticexpialidocioussupercalifragilisticexpialidocioussupercalifragilisticexpialidocioussupercalifragilisticexpialidocioussupercalifragilisticexpialidocioussupercalifragilisticexpialidocioussupercalifragilisticexpialidocious (opens in a new window)',
-    href: 'https://example.com',
-    lang: 'en',
+      'Wijzigingswet Vreemdelingenwet 2000, enz. (vaststelling criteria en instrumenten ter bepaling van de verantwoordelijke lidstaat voor behandeling verzoek om internationale bescherming)',
+    href: 'https://wetten.overheid.nl/jci1.3:c:BWBR0034405&z=2014-01-01&g=2014-01-01',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Link van de dag',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een link met een extreem lang woord.',
+        story: 'Een link die over meerdere regels tekst loopt, omdat de linktekst zo lang is.',
       },
     },
     status: { type: [] },
@@ -247,16 +256,21 @@ export const ExtremelyLongLink: Story = {
 };
 
 export const Hover: Story = {
-  name: 'Link met :hover',
+  name: 'Link met hover state',
   args: {
-    children: 'voorbeeldsite (opent in een nieuw venster)',
+    children: 'Voorbeelddomein',
     className: 'nl-link--hover',
     href: 'https://example.com',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Link van de dag',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een link met :hover state.',
+        story: 'Dit voorbeeld simuleert de stijl van de "hover" state.',
       },
     },
     status: { type: [] },
@@ -264,16 +278,21 @@ export const Hover: Story = {
 };
 
 export const Active: Story = {
-  name: 'Link met :active',
+  name: 'Link met active state',
   args: {
-    children: 'voorbeeldsite (opent in een nieuw venster)',
+    children: 'Voorbeelddomein',
     className: 'nl-link--active',
     href: 'https://example.com',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Link van de dag',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een link met :active state.',
+        story: 'Dit voorbeeld simuleert de stijl van de "active" state.',
       },
     },
     status: { type: [] },
@@ -283,14 +302,19 @@ export const Active: Story = {
 export const Current: Story = {
   name: 'Link voor huidige pagina',
   args: {
-    children: 'voorbeeldsite (opent in een nieuw venster)',
+    children: 'Link van de dag',
     current: true,
     href: 'https://example.com',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Link van de dag',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een link met --current modifier.',
+        story: 'Een link voor de huidige pagina.',
       },
     },
     status: { type: [] },
@@ -301,13 +325,20 @@ export const InlineBoxContent: Story = {
   name: 'Link rondom image',
   args: {
     children: <ExampleImage />,
-    href: 'https://example.com',
+    href: 'https://nldesignsystem.nl/',
     inlineBoxContent: true,
+  },
+  globals: {
+    'aria-label': 'NL Design System',
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Logo van de dag',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een link met een image erin en --inline-box-content modifier.',
+        story:
+          'Een Image die de enige inhoud van de Link is. Als de link focus heeft, dan is staat de focus ring om de afbeelding heen.',
       },
     },
     status: { type: [] },
@@ -323,10 +354,43 @@ export const InlineBoxContentHover: Story = {
     inlineBoxContent: true,
     target: '_blank',
   },
+  globals: {
+    'aria-label': 'NL Design System',
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Logo van de dag',
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Een link met een image erin, --inline-box-content modifier en :hover state.',
+        story:
+          'Een Image die de enige inhoud van de Link is. Dit voorbeeld simuleert de stijl van de "hover" state. De hover state van de Link heeft geen zichtbaar effect, behalve de `cursor`.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const InlineBoxContentCurrent: Story = {
+  name: 'Link rondom image, current page',
+  args: {
+    children: <ExampleImage />,
+    href: 'https://nldesignsystem.nl/',
+    inlineBoxContent: true,
+  },
+  globals: {
+    'aria-label': 'homepage · NL Design System',
+    current: true,
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'homepage · NL Design System',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Image die de enige inhoud van de Link is. De link is gemarkeerd als een link naar de huidige pagina.
+
+De HTML heeft het \`aria-current="true"\` attribuut.`,
       },
     },
     status: { type: [] },
@@ -336,16 +400,49 @@ export const InlineBoxContentHover: Story = {
 export const Placeholder: Story = {
   name: 'Placeholder Link',
   args: {
-    children: 'voorbeeldlink',
-    href: '',
+    children: '2 december',
+    href: 'https://www.htmhell.dev/adventcalendar/2024/2/',
     placeholder: true,
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Adventskalender op 1 december',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een link met --placeholder modifier.',
+        story: `De dagen na 1 december zijn een Placeholder Link. De dagen hebben niet het visueel ontwerp van de link: ze zijn niet onderstreept, en ze hebben niet de link-kleur.
+
+Een Placeholder-link is niet focusbaar. In de accessibility tree staan ze wel, als 'disabled' link. VoiceOver leest de link bijvoorbeeld voor als "2 december, dimmed"`,
       },
     },
     status: { type: [] },
+  },
+  render: (props) => {
+    return (
+      <>
+        <Heading level={1}>Adventskalender</Heading>
+        <Paragraph>Na 1 december wordt de volgende link beschikbaar.</Paragraph>
+        <ul>
+          <li>
+            <Link href="https://www.htmhell.dev/adventcalendar/2024/1/">1 december</Link>
+          </li>
+          <li>
+            <Link {...props} />
+          </li>
+          {Array(22)
+            .fill(0)
+            .map((_, i) => i + 3)
+            .map((day) => (
+              <li key={day}>
+                <Link href={`https://www.htmhell.dev/adventcalendar/2024/${day}/`} placeholder>
+                  {day} december
+                </Link>
+              </li>
+            ))}
+        </ul>
+      </>
+    );
   },
 };
