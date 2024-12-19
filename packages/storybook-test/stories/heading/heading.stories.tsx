@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import type { Meta, StoryObj } from '@storybook/react';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import packageJSON from '../../../components-react/heading-react/package.json';
@@ -429,52 +428,48 @@ export const HeadingLevel6: Story = {
 export const HeadingMultiline: Story = {
   name: 'Heading 1 met meerdere regels tekst',
   args: {
-    children: (
-      <>
-        When the pawn hits the conflicts he thinks like a king
-        <br />
-        What he knows throws the blows when he goes to the fight
-        <br />
-        And he'll win the whole thing 'fore he enters the ring
-        <br />
-        There's no body to batter when your mind is your might
-        <br />
-        So when you go solo, you hold your own hand
-        <br />
-        And remember that depth is the greatest of heights
-        <br />
-        And if you know where you stand, then you know where to land
-        <br />
-        And if you fall it won't matter, cuz you'll know that you're right
-      </>
-    ),
+    children:
+      'Wijzigingswet Vreemdelingenwet 2000, enz. (vaststelling criteria en instrumenten ter bepaling van de verantwoordelijke lidstaat voor behandeling verzoek om internationale bescherming)',
     level: 1,
   },
   decorators: (Story) => (
     <>
       {Story()}
       <Paragraph>
-        "When the Pawn..." is the second studio album by the American singer-songwriter Fiona Apple. Released by Epic
-        Records in the United States on November 9, 1999, When the Pawn... was wholly written by Apple, with production
-        by Jon Brion.
+        Wet van 11 december 2013 tot wijziging van de Vreemdelingenwet 2000 en de Algemene wet bestuursrecht ter
+        uitvoering van de verordening (EU) nr. 604/2013 van het Europees Parlement en de Raad van 26 juni 2013 tot
+        vaststelling van de criteria en instrumenten om te bepalen welke lidstaat verantwoordelijk is voor de
+        behandeling van een verzoek om internationale bescherming dat door een onderdaan van een derde land of een
+        staatloze bij een van de lidstaten wordt ingediend (PbEU 2013, L 180)
       </Paragraph>
       <Paragraph>
-        Upon its release, "When the Pawn..." broke the record for longest album title at 444 characters (previously held
-        by a volume in "The Best... Album in the World...Ever!"), though this record was subsequently broken.
+        Wij Willem-Alexander, bij de gratie Gods, Koning der Nederlanden, Prins van Oranje-Nassau, enz. enz. enz.
+      </Paragraph>
+      <Paragraph>Allen, die deze zullen zien of horen lezen, saluut! doen te weten:</Paragraph>
+      <Paragraph>
+        Alzo Wij in overweging genomen hebben, dat het noodzakelijk is enkele wijzigingen aan te brengen in de
+        Vreemdelingenwet 2000 ter uitvoering van de Verordening (EU) nr. 604/2013 van het Europees Parlement en de Raad
+        van 26 juni 2013 tot vaststelling van de criteria en instrumenten om te bepalen welke lidstaat verantwoordelijk
+        is voor de behandeling van een verzoek om internationale bescherming dat door een onderdaan van een derde land
+        of een staatloze bij een van de lidstaten wordt ingediend;
+      </Paragraph>
+      <Paragraph>
+        Zo is het, dat Wij, de Afdeling advisering van de Raad van State gehoord, en met gemeen overleg der
+        Staten-Generaal, hebben goedgevonden en verstaan, gelijk Wij goedvinden en verstaan bij deze:
       </Paragraph>
     </>
   ),
   globals: {
     dir: 'ltr',
-    lang: 'en',
-    title: 'When the Pawn...',
+    lang: 'nl',
+    title: 'Wijzigingswet Vreemdelingenwet 2000',
   },
   parameters: {
     docs: {
       description: {
-        story: `Een Heading (level 1) met een tekst die met line breaks over meerder regels is verdeeld.
+        story: `Een Heading (level 1) met een tekst die zo lang is dat die over over meerdere regels is verdeeld.
 
-Bron: [When the Pawn... - Wikipedia](https://en.wikipedia.org/wiki/When_the_Pawn...)`,
+Bron: [Wijzigingswet Vreemdelingenwet 2000, enz. (vaststelling criteria en instrumenten ter [...] voor behandeling verzoek om internationale bescherming)](https://wetten.overheid.nl/jci1.3:c:BWBR0034405&z=2014-01-01&g=2014-01-01)`,
       },
     },
     status: { type: [] },
@@ -526,7 +521,15 @@ export const HeadingWordBreak: Story = {
 export const HeadingArabic: Story = {
   name: 'Heading met Arabisch schrift in een Nederlandstalige pagina',
   args: {
-    children: 'عيد الفطر (Suikerfeest)',
+    children: (
+      <>
+        {'عيد الفطر ('}
+        <span lang="nl" dir="ltr">
+          Suikerfeest
+        </span>
+        {')'}
+      </>
+    ),
     dir: 'rtl',
     lang: 'ar',
     level: 2,
