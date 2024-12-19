@@ -6,7 +6,7 @@
     @include mixin.nl-link;
   }
 
-  /* 
+  /*
  * IMPORTANT: states rely heavily on the CSS order
  * Keep the order as follows
  * 1. :visited (not used for privacy reasons)
@@ -26,6 +26,6 @@
 
   /* placeholder styles as fallback for all links without `href` attribute when aria-disabled is used properly */
   a[role="link" i][aria-disabled="true" i] {
-    @include mixin.nl-link--placeholder;
+    @include mixin.nl-link--disabled;
   }
 }
