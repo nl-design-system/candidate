@@ -68,6 +68,66 @@ export const Default: Story = {
     );
   },
 };
+
+export const White: Story = {
+  name: 'Color Sample voor de kleur wit',
+  args: { value: '#FFFFFF' },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Huisstijlkleuren',
+  },
+  parameters: {
+    ariaLabelledBy: 'De kleur "wit".',
+    docs: {
+      description: {
+        story:
+          'Een kleurstaal met voor de kleur "wit". De kleurstaal is te herkennen op een lichte achtergrondkleur door een border-color met voldoende contrast.',
+      },
+    },
+    status: { type: [] },
+  },
+  render(props, context) {
+    const id = useId();
+
+    return (
+      <>
+        <ColorSample {...props} aria-labelledby={id} />
+        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
+      </>
+    );
+  },
+};
+
+export const Black: Story = {
+  name: 'Color Sample voor de kleur zwart',
+  args: { value: '#000000' },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Huisstijlkleuren',
+  },
+  parameters: {
+    ariaLabelledBy: 'De kleur "zwart".',
+    docs: {
+      description: {
+        story: 'Een kleurstaal met voor de kleur "zwart".',
+      },
+    },
+    status: { type: [] },
+  },
+  render(props, context) {
+    const id = useId();
+
+    return (
+      <>
+        <ColorSample {...props} aria-labelledby={id} />
+        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
+      </>
+    );
+  },
+};
+
 export const CssColorCode: Story = {
   name: 'Color Sample voor CSS-kleurcode van "deep pink"',
   args: { value: '#ff1493' },
