@@ -175,7 +175,7 @@ export const Engels: Story = {
 export const ArabicLink: Story = {
   name: 'Link in Arabisch',
   args: {
-    children: 'الرابط التشعبي',
+    children: 'مثال على المجال',
     dir: 'rtl',
     href: 'https://example.com',
     lang: 'ar',
@@ -197,6 +197,7 @@ export const OpensInNewWindowLink: Story = {
   args: {
     children: 'Voorbeelddomein',
     href: 'https://example.com/',
+    target: '_blank',
   },
   parameters: {
     docs: {
@@ -213,7 +214,7 @@ Het moet mogelijk zijn de Link te openen in een nieuw venster. Maak alleen in ui
 export const LinkInParagraph: Story = {
   name: 'Link in Paragraph',
   args: {
-    children: 'Voorbeelddomein (opent in een nieuw venster)',
+    children: 'Voorbeelddomein',
     href: 'https://example.com',
   },
   parameters: {
@@ -324,12 +325,12 @@ export const Current: Story = {
 export const inlineBox: Story = {
   name: 'Link rondom image',
   args: {
+    'aria-label': 'homepage · NL Design System',
     children: <ExampleImage />,
     href: 'https://nldesignsystem.nl/',
     inlineBox: true,
   },
   globals: {
-    'aria-label': 'NL Design System',
     dir: 'ltr',
     lang: 'nl',
     title: 'Logo van de dag',
@@ -348,14 +349,13 @@ export const inlineBox: Story = {
 export const inlineBoxHover: Story = {
   name: 'Link rondom image met :hover',
   args: {
+    'aria-label': 'homepage · NL Design System',
     children: <ExampleImage />,
     className: 'nl-link--hover',
-    href: 'https://example.com',
+    href: 'https://nldesignsystem.nl/',
     inlineBox: true,
-    target: '_blank',
   },
   globals: {
-    'aria-label': 'NL Design System',
     dir: 'ltr',
     lang: 'nl',
     title: 'Logo van de dag',
@@ -374,12 +374,12 @@ export const inlineBoxHover: Story = {
 export const inlineBoxCurrent: Story = {
   name: 'Link rondom image, current page',
   args: {
+    'aria-label': 'homepage · NL Design System',
     children: <ExampleImage />,
     href: 'https://nldesignsystem.nl/',
     inlineBox: true,
   },
   globals: {
-    'aria-label': 'homepage · NL Design System',
     current: true,
     dir: 'ltr',
     lang: 'nl',
