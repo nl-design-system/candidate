@@ -188,12 +188,13 @@ export const SemiTransparentColorSample: Story = {
 export const SoloColorSample: Story = {
   name: 'Color Sample als afbeelding met toegankelijke naam',
   args: {
-    title: 'De kleur "#ff1493".',
+    ['aria-label']: 'De kleur "#ff1493".',
     value: '#ff1493',
   },
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'De kleur "#ff1493".',
   },
   parameters: {
     docs: {
