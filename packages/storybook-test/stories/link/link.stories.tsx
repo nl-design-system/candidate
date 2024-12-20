@@ -407,12 +407,12 @@ De HTML heeft het \`aria-current="true"\` attribuut.`,
   },
 };
 
-export const Placeholder: Story = {
-  name: 'Placeholder Link',
+export const DisabledLink: Story = {
+  name: 'Disabled Link',
   args: {
     children: '2 december',
+    disabled: true,
     href: 'https://www.htmhell.dev/adventcalendar/2024/2/',
-    placeholder: true,
   },
   globals: {
     dir: 'ltr',
@@ -446,7 +446,7 @@ Een Placeholder-link is niet focusbaar. In de accessibility tree staan ze wel, a
             .map((_, i) => i + 3)
             .map((day) => (
               <li key={day}>
-                <Link href={`https://www.htmhell.dev/adventcalendar/2024/${day}/`} placeholder>
+                <Link href={`https://www.htmhell.dev/adventcalendar/2024/${day}/`} disabled>
                   {day} december
                 </Link>
               </li>
