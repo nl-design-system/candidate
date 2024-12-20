@@ -51,7 +51,7 @@ export const Default: Story = {
     ariaLabelledBy: 'De kleur "#ff1493".',
     docs: {
       description: {
-        story: 'Een kleurstaal met beschrijving.',
+        story: 'Een kleurstaal met beschrijving voor een doelgroep die gewend is met kleurcodes te werken.',
       },
     },
     status: { type: [] },
@@ -79,7 +79,8 @@ export const SemiTransparentColorSample: Story = {
     ariaLabelledBy: 'De semi-transparante kleur "#ff14937f".',
     docs: {
       description: {
-        story: 'Een kleurstaal met een semitransparante kleur en beschrijving.',
+        story:
+          'Een kleurstaal met een semitransparante kleur en beschrijving, voor een doelgroep die gewend is [alpha-transparantie](https://en.wikipedia.org/wiki/Alpha_compositing) te beoordelen met een checkerboard pattern. De 8-cijferige hexadecimale kleurcode maakt ook duidelijk dat er transparantie is.',
       },
     },
     status: { type: [] },
@@ -129,7 +130,8 @@ export const Arabic: Story = {
     ariaLabelledBy: 'أخضر',
     docs: {
       description: {
-        story: 'Een kleurstaal met beschrijving in Arabisch.',
+        story:
+          'Een kleurstaal met beschrijving in Arabisch, voor de kleur groen (["أخضر" in Arabisch](https://ar.wikipedia.org/wiki/أخضر)).',
       },
     },
     status: { type: [] },
@@ -159,7 +161,8 @@ export const Japanese: Story = {
     ariaLabelledBy: '緑',
     docs: {
       description: {
-        story: 'Een kleurstaal met beschrijving in het Japans.',
+        story:
+          'Een kleurstaal met beschrijving in het Japans, voor de kleur groen (["緑" in Japans](https://ja.wikipedia.org/wiki/緑)).',
       },
     },
     status: { type: [] },
