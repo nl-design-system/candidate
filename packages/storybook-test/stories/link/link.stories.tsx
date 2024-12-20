@@ -227,6 +227,11 @@ export const LinkInParagraph: Story = {
     children: 'Voorbeelddomein',
     href: 'https://example.com',
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Link van de dag',
+  },
   parameters: {
     docs: {
       description: {
@@ -238,7 +243,7 @@ export const LinkInParagraph: Story = {
   render({ children, ...restProps }) {
     return (
       <Paragraph>
-        In deze paragraaf staat een link naar <Link {...restProps}>{children}</Link>.
+        De link van de dag is: <Link {...restProps}>{children}</Link>.
       </Paragraph>
     );
   },
