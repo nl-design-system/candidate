@@ -180,6 +180,11 @@ export const ArabicLink: Story = {
     href: 'https://example.com',
     lang: 'ar',
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Link van de dag',
+  },
   parameters: {
     docs: {
       description: {
@@ -198,6 +203,11 @@ export const OpensInNewWindowLink: Story = {
     children: 'Voorbeelddomein',
     href: 'https://example.com/',
     target: '_blank',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Link van de dag',
   },
   parameters: {
     docs: {
