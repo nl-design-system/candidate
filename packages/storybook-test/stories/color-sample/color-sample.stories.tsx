@@ -52,7 +52,9 @@ export const Default: Story = {
     ariaLabelledBy: 'De kleur "lintblauw".',
     docs: {
       description: {
-        story: 'Een kleurstaal met beschrijving voor een doelgroep die gewend is met kleurcodes te werken.',
+        story: `Een kleurstaal met beschrijving voor een doelgroep die gewend is met kleurcodes te werken.
+
+De Color Sample en de tekst staan in dezelfde Paragraph, dus het is duidelijk dat ze bij elkaar horen.`,
       },
     },
     status: { type: [] },
@@ -61,11 +63,41 @@ export const Default: Story = {
     const id = useId();
 
     return (
-      <>
-        <ColorSample {...props} aria-labelledby={id} />
-        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
-      </>
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
     );
+  },
+};
+
+export const SoloColorSample: Story = {
+  name: 'Color Sample als zelfstandige afbeelding met toegankelijke naam',
+  args: {
+    ['aria-label']: 'De kleur "#154273".',
+    value: '#154273',
+  },
+  decorators: [
+    (Story, context) => (
+      <>
+        <Paragraph>{Story()}</Paragraph>
+        <Paragraph> {context.args['aria-label']}</Paragraph>
+      </>
+    ),
+    ...meta.decorators,
+  ],
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'De kleur "#154273".',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een kleurstaal met expliciete beschrijving in een `aria-label` attribuut, die helemaal los staat in een element staat die bedoeld is om gerelateerde inhoud te groeperen, zoals een Paragraph, Table Cell of List Item. Deze vorm mag alleen gebruikt worden als de kleur elders in de context toegelicht is.',
+      },
+    },
+    status: { type: [] },
   },
 };
 
@@ -91,10 +123,9 @@ export const White: Story = {
     const id = useId();
 
     return (
-      <>
-        <ColorSample {...props} aria-labelledby={id} />
-        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
-      </>
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
     );
   },
 };
@@ -120,10 +151,9 @@ export const Black: Story = {
     const id = useId();
 
     return (
-      <>
-        <ColorSample {...props} aria-labelledby={id} />
-        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
-      </>
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
     );
   },
 };
@@ -148,10 +178,37 @@ export const CssColorCode: Story = {
     const id = useId();
 
     return (
-      <>
-        <ColorSample {...props} aria-labelledby={id} />
-        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
-      </>
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
+    );
+  },
+};
+
+export const TransparentColorSample: Story = {
+  name: 'Color Sample met een 100% transparante kleur',
+  args: { value: '#ffffff00' },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    ariaLabelledBy: 'De 100% transparante kleur "#ffffff00".',
+    docs: {
+      description: {
+        story:
+          'Een kleurstaal met een 100% transparante kleur en beschrijving, voor een doelgroep die gewend is [alpha-transparantie](https://en.wikipedia.org/wiki/Alpha_compositing) te beoordelen met een checkerboard pattern. De 8-cijferige hexadecimale kleurcode maakt ook duidelijk dat er transparantie is.',
+      },
+    },
+    status: { type: [] },
+  },
+  render(props, context) {
+    const id = useId();
+
+    return (
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
     );
   },
 };
@@ -177,33 +234,10 @@ export const SemiTransparentColorSample: Story = {
     const id = useId();
 
     return (
-      <>
-        <ColorSample {...props} aria-labelledby={id} />
-        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
-      </>
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
     );
-  },
-};
-
-export const SoloColorSample: Story = {
-  name: 'Color Sample als afbeelding met toegankelijke naam',
-  args: {
-    ['aria-label']: 'De kleur "#ff1493".',
-    value: '#ff1493',
-  },
-  globals: {
-    dir: 'ltr',
-    lang: 'nl',
-    title: 'De kleur "#ff1493".',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een kleurstaal zonder expliciete beschrijving. Deze vorm mag alleen gebruikt worden als de kleur elders in de context toegelicht is.',
-      },
-    },
-    status: { type: [] },
   },
 };
 
@@ -229,10 +263,9 @@ export const Arabic: Story = {
     const id = useId();
 
     return (
-      <>
-        <ColorSample {...props} aria-labelledby={id} />
-        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
-      </>
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
     );
   },
 };
@@ -260,10 +293,9 @@ export const Japanese: Story = {
     const id = useId();
 
     return (
-      <>
-        <ColorSample {...props} aria-labelledby={id} />
-        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
-      </>
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
     );
   },
 };
