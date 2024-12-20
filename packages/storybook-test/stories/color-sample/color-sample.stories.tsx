@@ -41,7 +41,35 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: 'Color Sample voor "deep pink"',
+  name: 'Color Sample voor een huisstijlkleur',
+  args: { value: '#154273' },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Huisstijlkleuren',
+  },
+  parameters: {
+    ariaLabelledBy: 'De kleur "lintblauw".',
+    docs: {
+      description: {
+        story: 'Een kleurstaal met beschrijving voor een doelgroep die gewend is met kleurcodes te werken.',
+      },
+    },
+    status: { type: [] },
+  },
+  render(props, context) {
+    const id = useId();
+
+    return (
+      <>
+        <ColorSample {...props} aria-labelledby={id} />
+        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
+      </>
+    );
+  },
+};
+export const CssColorCode: Story = {
+  name: 'Color Sample voor CSS-kleurcode van "deep pink"',
   args: { value: '#ff1493' },
   globals: {
     dir: 'ltr',
