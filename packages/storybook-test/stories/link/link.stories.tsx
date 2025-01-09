@@ -340,7 +340,7 @@ export const Current: Story = {
 export const inlineBox: Story = {
   name: 'Link rondom image',
   args: {
-    'aria-label': 'homepage · NL Design System',
+    'aria-label': 'NL Design System logo, naar de voorpagina',
     children: <ExampleImage />,
     href: 'https://nldesignsystem.nl/',
     inlineBox: true,
@@ -364,7 +364,7 @@ export const inlineBox: Story = {
 export const inlineBoxHover: Story = {
   name: 'Link rondom image met :hover',
   args: {
-    'aria-label': 'homepage · NL Design System',
+    'aria-label': 'NL Design System logo, naar de voorpagina',
     children: <ExampleImage />,
     className: 'nl-link--hover',
     href: 'https://nldesignsystem.nl/',
@@ -389,7 +389,8 @@ export const inlineBoxHover: Story = {
 export const inlineBoxCurrent: Story = {
   name: 'Link rondom image, current page',
   args: {
-    'aria-label': 'homepage · NL Design System',
+    'aria-current': 'true',
+    'aria-label': 'NL Design System logo, naar de voorpagina',
     children: <ExampleImage />,
     href: 'https://nldesignsystem.nl/',
     inlineBox: true,
