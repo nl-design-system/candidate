@@ -12,7 +12,7 @@ import '../../../components-css/link-css/src/test.scss';
 const ExampleImage = () => (
   <svg
     role="img"
-    aria-label="NL Design System logo"
+    aria-label="NL Design System logo, naar de voorpagina"
     width="420"
     height="auto"
     viewBox="0 0 1120 630"
@@ -340,7 +340,6 @@ export const Current: Story = {
 export const inlineBox: Story = {
   name: 'Link rondom image',
   args: {
-    'aria-label': 'homepage · NL Design System',
     children: <ExampleImage />,
     href: 'https://nldesignsystem.nl/',
     inlineBox: true,
@@ -364,7 +363,6 @@ export const inlineBox: Story = {
 export const inlineBoxHover: Story = {
   name: 'Link rondom image met :hover',
   args: {
-    'aria-label': 'homepage · NL Design System',
     children: <ExampleImage />,
     className: 'nl-link--hover',
     href: 'https://nldesignsystem.nl/',
@@ -389,7 +387,7 @@ export const inlineBoxHover: Story = {
 export const inlineBoxCurrent: Story = {
   name: 'Link rondom image, current page',
   args: {
-    'aria-label': 'homepage · NL Design System',
+    'aria-current': 'true',
     children: <ExampleImage />,
     href: 'https://nldesignsystem.nl/',
     inlineBox: true,
