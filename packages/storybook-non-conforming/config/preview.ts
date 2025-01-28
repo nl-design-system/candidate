@@ -27,9 +27,9 @@ const preview: Preview = {
     },
   },
   initialGlobals: {
+    storyRootClassname: 'voorbeeld-theme',
     dir: undefined,
     lang: undefined,
-    storyRootClassname: 'voorbeeld-theme',
     viewport: { value: undefined },
     zoom: undefined,
   },

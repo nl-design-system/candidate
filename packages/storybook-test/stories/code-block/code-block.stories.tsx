@@ -333,9 +333,9 @@ export const DefaultFont: Story = {
     children: `De Code Block moet visueel onderscheidbaar zijn.`,
   },
   globals: {
+    storyRootClassname: '',
     dir: 'ltr',
     lang: 'nl',
-    storyRootClassname: '',
   },
   parameters: {
     docs: {
@@ -365,9 +365,9 @@ export const FallbackFont: Story = {
     },
   },
   globals: {
+    storyRootClassname: '',
     dir: 'ltr',
     lang: 'nl',
-    storyRootClassname: '',
   },
   parameters: {
     docs: {
