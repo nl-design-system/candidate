@@ -7,6 +7,10 @@ module.exports = {
     // @types/node is kept in line with the node version in .nvmrc and package.json#engines.node
     '@types/node',
     'style-dictionary',
+    'react',
+    'react-dom',
+    '@types/react',
+    '@types/react-dom',
   ],
   target: 'latest',
 };

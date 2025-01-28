@@ -553,9 +553,9 @@ export const ParagraphLargeLineHeight: Story = {
   },
   decorators: [LargeLineHeightDecorator],
   globals: {
+    storyRootClassname: 'voorbeeld-theme voorbeeld-theme--overrides',
     dir: 'ltr',
     lang: 'nl',
-    storyRootClassname: 'voorbeeld-theme voorbeeld-theme--overrides',
     viewport: { value: 'wcag100' },
   },
   parameters: {

@@ -2,7 +2,7 @@ import type { Decorator } from '@storybook/react';
 import { useEffect, type CSSProperties } from 'react';
 
 export const StoryRootDecorator: Decorator = (Story, context) => {
-  const { dir, lang, storyRootClassname, title, writingMode, zoom } = context.globals;
+  const { storyRootClassname, dir, lang, title, writingMode, zoom } = context.globals;
   const style: CSSProperties = zoom ? { zoom } : {};
 
   // In Storybook there are different view modes. When looking at all stories,

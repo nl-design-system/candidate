@@ -397,9 +397,9 @@ export const NumberBadgeBorder: Story = {
   args: {
     children: '42',
     style: {
+      '--nl-number-badge-border-width': '0.25em',
       '--nl-number-badge-background-color': 'whitesmoke',
       '--nl-number-badge-border-color': 'dimgray',
-      '--nl-number-badge-border-width': '0.25em',
       '--nl-number-badge-color': 'black',
     },
     value: 42,
