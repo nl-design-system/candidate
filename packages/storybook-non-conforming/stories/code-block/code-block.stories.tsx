@@ -28,7 +28,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const GeenVisueelOnderscheid: Story = {
-  name: 'Geen visueel onderscheid',
+  name: 'Fout: Geen visueel onderscheid',
   args: {
     children: `import { CodeBlock } from '@nl-design-system-candidate/code-block-react';`,
     style: {
