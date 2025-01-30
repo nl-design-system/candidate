@@ -34,7 +34,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const MarkSpan: Story = {
-  name: 'Mark met een span element',
+  name: 'Fout: Mark met een span element',
   args: {
     children: 'gemarkeerde tekst',
   },
@@ -57,7 +57,7 @@ export const MarkSpan: Story = {
 };
 
 export const MarkLowContrast: Story = {
-  name: 'Mark met laag contrast',
+  name: 'Fout: Mark met laag contrast',
   args: {
     children: 'gemarkeerde tekst',
   },

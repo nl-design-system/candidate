@@ -36,7 +36,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const NewlineCharacters: Story = {
-  name: 'Code met "newline characters"',
+  name: 'Fout: Code met "newline characters"',
   decorators: ExampleBodyTextDecorator,
   globals: {
     dir: 'ltr',
