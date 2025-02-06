@@ -1,8 +1,12 @@
-import { describe, expect, it } from '@jest/globals';
-import '@testing-library/jest-dom/jest-globals';
-import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render } from '@testing-library/react';
 import { createRef } from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Code } from './code';
+
+afterEach(() => {
+  cleanup();
+});
 
 const text = 'import';
 const extraClassName = 'extra-classname';

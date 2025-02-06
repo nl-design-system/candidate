@@ -1,8 +1,12 @@
-import { describe, expect, it } from '@jest/globals';
-import '@testing-library/jest-dom/jest-globals';
-import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Heading4 } from './heading-4';
+
+afterEach(() => {
+  cleanup();
+});
 
 const extraClassName = 'extra-classname';
 const testId = 'rich-text';
@@ -45,7 +49,9 @@ describe('Heading 4', () => {
     expect(heading).toBeInTheDocument();
   });
 
-  it(`supports hiding the HTML h${level} element visually and from the accessibility tree using the global HTML attribute "hidden"`, () => {
+  it(`supports hiding the HTML h${level} element visually and from the accessibility tree using the global HTML attribute "hidden"`, ({
+    expect,
+  }) => {
     expect.assertions(2);
     render(<Heading4 hidden />);
     const heading = screen.getByRole('heading', { hidden: true, level });

@@ -1,12 +1,16 @@
-import { describe, expect, it } from '@jest/globals';
-import '@testing-library/jest-dom/jest-globals';
-import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Paragraph } from './paragraph';
 
 const text = 'Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen.';
 const extraClassName = 'extra-classname';
 const testId = 'rich-text';
+
+afterEach(() => {
+  cleanup();
+});
 
 describe('Paragraph', () => {
   describe('default paragraph', () => {
@@ -38,7 +42,9 @@ describe('Paragraph', () => {
       expect(paragraph).toBeVisible();
     });
 
-    it(`supports hiding the HTML p element visually and from the accessibility tree using the global HTML attribute "hidden"`, () => {
+    it(`supports hiding the HTML p element visually and from the accessibility tree using the global HTML attribute "hidden"`, ({
+      expect,
+    }) => {
       expect.assertions(2);
       render(<Paragraph hidden>{text}</Paragraph>);
       const paragraph = screen.getByRole('paragraph', { hidden: true });
@@ -137,7 +143,9 @@ describe('Paragraph', () => {
       expect(paragraph).toBeVisible();
     });
 
-    it(`supports hiding the HTML p element visually and from the accessibility tree using the global HTML attribute "hidden"`, () => {
+    it(`supports hiding the HTML p element visually and from the accessibility tree using the global HTML attribute "hidden"`, ({
+      expect,
+    }) => {
       expect.assertions(2);
       render(
         <Paragraph purpose="lead" hidden>
