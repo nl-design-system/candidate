@@ -1,8 +1,12 @@
-import { describe, expect, it } from '@jest/globals';
-import '@testing-library/jest-dom/jest-globals';
-import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { DataBadge } from './data-badge';
+
+afterEach(() => {
+  cleanup();
+});
 
 const dateTime = '19700101T00:00:00Z';
 const dateTimeText = '1 januari 1970 om middernacht';

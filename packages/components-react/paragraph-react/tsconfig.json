@@ -1,6 +1,7 @@
 {
   "extends": "@nl-design-system/tsconfig",
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "composite": true,
     "lib": ["DOM", "ESNext"],
     "module": "preserve",

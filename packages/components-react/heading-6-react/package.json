@@ -31,9 +31,9 @@
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs",
     "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/ ./coverage/",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
     "typecheck": "tsc"
   },
   "devDependencies": {

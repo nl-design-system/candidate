@@ -24,9 +24,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: |
-          pnpm install --frozen-lockfile
-          pnpm ls --recursive
+        run: pnpm install --frozen-lockfile
 
   lint:
     runs-on: ubuntu-latest
@@ -48,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: "Continuous Integration: lint"
+      - name: Lint
         run: pnpm run --if-present lint
 
   build:
@@ -74,20 +72,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: "Continuous Integration: build"
-        env:
-          BASE_URL: "/utrecht/"
+      - name: Build
         run: pnpm run --if-present build
-
-      - name: "Continuous Integration: lint build"
-        env:
-          BASE_URL: "/utrecht/"
-        run: pnpm run --if-present lint-build
-
-      - name: "Continuous Integration: test build"
-        env:
-          BASE_URL: "/utrecht/"
-        run: pnpm run --if-present test-build
 
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
@@ -114,7 +100,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: "Continuous Integration: test"
+      - name: Build
+        run: pnpm run --if-present build
+
+      - name: Test
         run: pnpm run test:coverage
 
       - name: Upload coverage reports to Codecov

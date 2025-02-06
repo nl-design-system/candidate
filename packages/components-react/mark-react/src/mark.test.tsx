@@ -1,8 +1,12 @@
-import { describe, expect, it } from '@jest/globals';
-import '@testing-library/jest-dom/jest-globals';
-import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Mark } from './mark';
+
+afterEach(() => {
+  cleanup();
+});
 
 const text = 'gemarkeerd';
 const extraClassName = 'extra-classname';
@@ -30,7 +34,9 @@ describe('Mark', () => {
     expect(mark).toBeVisible();
   });
 
-  it(`supports hiding the HTML mark element visually and from the accessibility tree using the global HTML attribute "hidden"`, () => {
+  it(`supports hiding the HTML mark element visually and from the accessibility tree using the global HTML attribute "hidden"`, ({
+    expect,
+  }) => {
     expect.assertions(2);
     render(<Mark hidden>{text}</Mark>);
     const mark = screen.getByRole('mark', { hidden: true });
