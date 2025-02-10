@@ -12,7 +12,7 @@ import '../../../components-css/link-css/src/test.scss';
 const ExampleImage = () => (
   <svg
     role="img"
-    aria-label="NL Design System logo, naar de voorpagina"
+    aria-label="NL Design System logo"
     width="420"
     height="auto"
     viewBox="0 0 1120 630"
@@ -338,8 +338,9 @@ export const Current: Story = {
 };
 
 export const inlineBox: Story = {
-  name: 'Link rondom image',
+  name: 'Link rondom Image',
   args: {
+    'aria-label': 'NL Design System',
     children: <ExampleImage />,
     href: 'https://nldesignsystem.nl/',
     inlineBox: true,
@@ -360,9 +361,34 @@ export const inlineBox: Story = {
   },
 };
 
-export const inlineBoxHover: Story = {
-  name: 'Link rondom image met :hover',
+export const inlineBoxLogo: Story = {
+  name: 'Link logo naar home in header',
   args: {
+    'aria-label': 'NL Design System logo, naar de homepage',
+    children: <ExampleImage />,
+    href: 'https://nldesignsystem.nl/',
+    inlineBox: true,
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Logo van de dag',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een Image in de header met als enige inhoud het logo dat linkt naar de homepage. De toegankelijke naam van de link moet vertellen dat de afbeelding een logo is en dat de link naar de homepage gaat. Lees hierover: <a href="https://htmhell.dev/adventcalendar/2024/1/">A link on a logo in the header, what should the alt-text be?</a>. In dit voorbeeld komt de toegankelijke naam van het `aria-label` op de link: NL Design System logo, naar de voorpagina. Begin de toegankelijke naam altijd met de zichtbare tekst. Als de link focus heeft, dan is staat de focus ring om de afbeelding heen.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const inlineBoxLogoHover: Story = {
+  name: 'Link logo naar home in header:hover',
+  args: {
+    'aria-label': 'NL Design System logo, naar de homepage',
     children: <ExampleImage />,
     className: 'nl-link--hover',
     href: 'https://nldesignsystem.nl/',
@@ -384,10 +410,11 @@ export const inlineBoxHover: Story = {
   },
 };
 
-export const inlineBoxCurrent: Story = {
-  name: 'Link rondom image, current page',
+export const inlineBoxLogoCurrent: Story = {
+  name: 'Link logo naar home in header, current page',
   args: {
     'aria-current': 'true',
+    'aria-label': 'NL Design System logo, naar de homepage',
     children: <ExampleImage />,
     href: 'https://nldesignsystem.nl/',
     inlineBox: true,
@@ -401,7 +428,7 @@ export const inlineBoxCurrent: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Image die de enige inhoud van de Link is. De link is gemarkeerd als een link naar de huidige pagina.
+        story: `Een Image in de header die de enige inhoud van de Link is. De link is gemarkeerd als een link naar de huidige pagina.
 
 De HTML heeft het \`aria-current="true"\` attribuut.`,
       },
