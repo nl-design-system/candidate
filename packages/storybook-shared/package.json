@@ -5,8 +5,8 @@
   "devDependencies": {
     "@nl-design-system/tsconfig": "1.0.1",
     "@nl-design-system-candidate/paragraph-react": "workspace:*",
-    "@storybook/blocks": "8.5.3",
-    "@storybook/react": "8.5.3",
+    "@storybook/blocks": "8.5.4",
+    "@storybook/react": "8.5.4",
     "@types/react": "18.3.18",
     "react": "18.3.1"
   },
