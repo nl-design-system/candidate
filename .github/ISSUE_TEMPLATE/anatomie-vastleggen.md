@@ -25,13 +25,32 @@ Anatomie van de component is vastgelegd
 - [ ] Plaats de component uit de 'NLDS Voorbeeld Bibliotheek' op het frame
 - [ ] Voeg annotaties toe met 'Annotation number' en 'Annotation line'. Houd 48 pixels afstand tussen de nummers en de component
 - [ ] Exporteer het frame als SVG-bestand met dezelfde naam als het frame
-- [ ] Zorg dat er alternatieve tekst beschikbaar is. Om dit toe te voegen, open je het SVG-bestand in een text editor. Voeg op het `<svg>` element twee attributen toe: `role="img"` en `aria-label=""`. Beschrijf in het `aria-label` attribuut wat er zichtbaar is; benoem wel vormen, geen kleuren.
+- [ ] Zorg dat er alternatieve tekst beschikbaar is. Om dit toe te voegen, open je het SVG-bestand in een text editor. Voeg op het `<svg>` element twee elementen toe, een `<title>` en een `<desc>`. In de `<title>` zet je een korte samenvatting, in de `<desc>` beschrijf je in meer detail wat er op de afbeelding staat. `
 
 Voorbeeld:
 
 ```html
-aria-label="Een zin met in de lopende tekst het woord 'code' dat is opgemaakt met een achtergrond en een ander
-lettertype. Het stukje code is aangeduid met het cijfer 1."
+<svg>
+  <title>Samenstelling “code” component</title>
+  <desc>
+    Een zin met in de lopende tekst het woord 'code' dat is opgemaakt met een achtergrond en een ander lettertype. Het
+    stukje code is aangeduid met het cijfer 1.
+  </desc>
+</svg>
+```
+
+Zorg ook dat er unieke ID's zitten op de `<title>` en `<desc>`, die kunnen we later, op bv de documentatiesite, gebruiken om toegankelijkheid te verbeteren.
+
+Volledig voorbeeld:
+
+```html
+<svg>
+  <title id="code-anatomy-title">Samenstelling “code” component</title>
+  <desc id="code-anatomy-desc">
+    Een zin met in de lopende tekst het woord 'code' dat is opgemaakt met een achtergrond en een ander lettertype. Het
+    stukje code is aangeduid met het cijfer 1.
+  </desc>
+</svg>
 ```
 
 - [ ] Maak een bestand `_anatomy.md` aan in de `docs`folder van de component. Je vindt deze folders in de [docs](https://github.com/nl-design-system/candidate/tree/main/packages/docs) folder van de Candidate repository in GitHub
