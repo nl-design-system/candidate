@@ -48,6 +48,6 @@ body:
   - type: textarea
     attributes:
       label: Werkelijk gedrag
-      description: Een beknopte beschrijving van wat je
+      description: Een beknopte beschrijving van wat je had verwacht.
     validations:
       required: true
