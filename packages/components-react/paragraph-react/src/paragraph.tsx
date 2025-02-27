@@ -8,6 +8,7 @@ interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
   purpose?: ParagraphPurpose;
 }
 
+/* comment */
 export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(function Paragraph(props, forwardedRef) {
   const { children, className, purpose, ...restProps } = props;
 
