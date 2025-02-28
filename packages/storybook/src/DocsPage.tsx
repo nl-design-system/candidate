@@ -8,6 +8,7 @@ export const DocsPage = () => (
     <Subtitle />
     <Description />
     <Controls />
+    <Controls />
     <Stories />
   </>
 );

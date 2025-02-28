@@ -157,7 +157,32 @@ jobs:
       - name: "Continuous Deployment: build"
         run: pnpm run --if-present build
 
+      - name: Check if public packages changed
+        id: check-public-changes
+        run: |
+          CHANGED_PACKAGES=$(pnpm exec changeset status --json | jq -r '[.changesets[].releases[].name] | unique | .[]')
+
+          PUBLIC_CHANGED=0
+          for PKG in $CHANGED_PACKAGES; do
+            IS_PRIVATE=$(jq -r ".packages[] | select(.name == \"$PKG\") | .private" ./package.json)
+
+            if [[ "$IS_PRIVATE" == "true" ]]; then
+              echo "Skipping private package: $PKG"
+            else
+              echo "Public package changed: $PKG"
+              PUBLIC_CHANGED=1
+            fi
+          done
+
+          if [[ "$PUBLIC_CHANGED" -eq 0 ]]; then
+            echo "No public package changed, skipping Changesets"
+            echo "should_publish=false" >> $GITHUB_ENV
+          else
+            echo "should_publish=true" >> $GITHUB_ENV
+          fi
+
       - name: "Continuous Deployment: publish to the NPM repository"
+        if: env.should_publish == 'true'
         uses: changesets/action@c8bada60c408975afd1a20b3db81d6eee6789308 # v1.4.9
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
