@@ -111,41 +111,6 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
-  check-changeset:
-    runs-on: ubuntu-latest
-    if: github.event.pull_request
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Check if public packages changed
-        id: check-public-changes
-        run: |
-          CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
-
-          PUBLIC_CHANGED=0
-          for FILE in $CHANGED_FILES; do
-            if [[ "$FILE" == packages/public-package-1/* || "$FILE" == packages/public-package-2/* ]]; then
-              echo "Public package changed: $FILE"
-              PUBLIC_CHANGED=1
-              break
-            fi
-          done
-
-          if [[ "$PUBLIC_CHANGED" -eq 0 ]]; then
-            echo "skip_changeset=true" >> $GITHUB_ENV
-          fi
-
-  changeset-bot:
-    needs: check-changeset
-    runs-on: ubuntu-latest
-    if: env.skip_changeset != 'true'
-    steps:
-      - name: Run Changeset Action
-        uses: changesets/action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   publish-website:
     runs-on: ubuntu-latest
     needs: build
