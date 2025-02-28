@@ -7,6 +7,8 @@ permissions:
 
 jobs:
   check-changeset:
+    name: Check changeset
+
     runs-on: ubuntu-latest
 
     steps:
@@ -34,7 +36,8 @@ jobs:
   changeset-bot:
     needs: check-changeset
     runs-on: ubuntu-latest
-    if: env.skip_changeset != 'true' # ✅ Skip if no public package changed
+    if: env.skip_changeset != 'true'
+    name: Summon changeset bot
     steps:
       - name: Run Changeset Action
         uses: changesets/action@v1
