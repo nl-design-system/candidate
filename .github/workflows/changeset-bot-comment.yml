@@ -8,8 +8,10 @@ permissions:
 jobs:
   check-changeset:
     name: Check changeset
-
     runs-on: ubuntu-latest
+
+    outputs:
+      skip_changeset: ${{ steps.check-public-changes.outputs.skip_changeset }}
 
     steps:
       - name: Checkout repository
@@ -31,12 +33,15 @@ jobs:
 
           if [[ "$PUBLIC_CHANGED" -eq 0 ]]; then
             echo "skip_changeset=true" >> $GITHUB_ENV
+            echo "::set-output name=skip_changeset::true"
+          else
+            echo "::set-output name=skip_changeset::false"
           fi
 
   changeset-bot:
     needs: check-changeset
     runs-on: ubuntu-latest
-    if: env.skip_changeset != 'true'
+    if: needs.check-changeset.outputs.skip_changeset != 'true'
     name: Summon changeset bot
     steps:
       - name: Run Changeset Action
