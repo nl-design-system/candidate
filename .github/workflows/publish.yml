@@ -6,7 +6,7 @@ on:
 
 permissions:
   contents: read # since GH_TOKEN is provided, we only need 'read'
-  pull_request: write # Needed to create and update pull requests
+  pull_requests: write # Needed to create and update pull requests
 
 jobs:
   publish:
