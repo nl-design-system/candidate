@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/paragraph-react
 
+## 2.1.0
+
+### Minor Changes
+
+- de9ba46: Improve debugging by adding `displayName`
+
 ## 2.0.0
 
 ### Major Changes
