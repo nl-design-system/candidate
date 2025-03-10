@@ -13,3 +13,5 @@ export const Mark = forwardRef<HTMLElement, MarkProps>(function Mark(props, forw
     </mark>
   );
 });
+
+Mark.displayName = 'Mark';

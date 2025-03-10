@@ -8,10 +8,15 @@ afterEach(() => {
   cleanup();
 });
 
+const displayName = 'CodeBlock';
 const testCode = "import { CodeBlock } from '@nl-design-system-candidate/code-block-react';";
 const extraClassName = 'extra-classname';
 
 describe('Code Block', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(CodeBlock.displayName).toBe(displayName);
+  });
+
   it('renders an HTML pre element', () => {
     const { container } = render(<CodeBlock>{testCode}</CodeBlock>);
     const codeBlock = container.querySelector('pre:only-child');

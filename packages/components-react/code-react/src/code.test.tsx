@@ -8,10 +8,15 @@ afterEach(() => {
   cleanup();
 });
 
+const displayName = 'Code';
 const text = 'import';
 const extraClassName = 'extra-classname';
 
 describe('Code', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(Code.displayName).toBe(displayName);
+  });
+
   it('renders an HTML code element', () => {
     const { container } = render(<Code>{text}</Code>);
     const code = container.querySelector('code:only-child');

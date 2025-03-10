@@ -9,10 +9,15 @@ afterEach(() => {
   cleanup();
 });
 
+const displayName = 'Heading';
 const extraClassName = 'extra-classname';
 const testId = 'rich-text';
 
 headingLevels.forEach((level) => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(Heading.displayName).toBe(displayName);
+  });
+
   describe(`At heading level ${level}`, () => {
     it('renders an element with role "heading"', () => {
       render(<Heading level={level} />);

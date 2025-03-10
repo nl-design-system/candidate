@@ -8,11 +8,16 @@ afterEach(() => {
   cleanup();
 });
 
+const displayName = 'SkipLink';
 const text = 'Skip to main content';
 const extraClassName = 'extra-classname';
 const testId = 'rich-text';
 
 describe('Skip link', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(SkipLink.displayName).toBe(displayName);
+  });
+
   it('renders an HTML "a" element', () => {
     const { container } = render(<SkipLink href="#main-content">{text}</SkipLink>);
     const skipLink = container.querySelector('a:only-child');

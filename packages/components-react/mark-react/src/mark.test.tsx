@@ -8,11 +8,16 @@ afterEach(() => {
   cleanup();
 });
 
+const displayName = 'Mark';
 const text = 'gemarkeerd';
 const extraClassName = 'extra-classname';
 const testId = 'rich-text';
 
 describe('Mark', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(Mark.displayName).toBe(displayName);
+  });
+
   it('renders an element with role "mark"', () => {
     render(<Mark>{text}</Mark>);
     const mark = screen.getByRole('mark');

@@ -21,3 +21,5 @@ export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(functi
     </p>
   );
 });
+
+Paragraph.displayName = 'Paragraph';

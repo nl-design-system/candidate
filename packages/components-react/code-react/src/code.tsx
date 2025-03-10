@@ -13,3 +13,5 @@ export const Code = forwardRef<HTMLElement, CodeProps>(function Code(props, forw
     </code>
   );
 });
+
+Code.displayName = 'Code';

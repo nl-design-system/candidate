@@ -8,11 +8,16 @@ afterEach(() => {
   cleanup();
 });
 
+const displayName = 'Heading1';
 const extraClassName = 'extra-classname';
 const testId = 'rich-text';
 const level = 1;
 
 describe('Heading 1', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(Heading1.displayName).toBe(displayName);
+  });
+
   it('renders an element with role "heading"', () => {
     render(<Heading1 />);
     const heading = screen.getByRole('heading');
