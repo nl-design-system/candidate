@@ -8,11 +8,16 @@ afterEach(() => {
   cleanup();
 });
 
+const displayName = 'NumberBadge';
 const value = 42;
 const extraClassName = 'extra-classname';
 const testId = 'rich-text';
 
 describe('Number Badge', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(NumberBadge.displayName).toBe(displayName);
+  });
+
   describe('as an HTML data element', () => {
     it('renders an HTML data element when a "value" prop is passed', () => {
       const { container } = render(<NumberBadge value={value}>{value}</NumberBadge>);

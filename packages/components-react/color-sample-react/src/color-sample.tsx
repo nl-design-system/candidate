@@ -27,3 +27,5 @@ export const ColorSample = forwardRef<SVGSVGElement, ColorSampleProps>(function 
     </svg>
   );
 });
+
+ColorSample.displayName = 'ColorSample';

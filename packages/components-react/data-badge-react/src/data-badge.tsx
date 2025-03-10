@@ -48,3 +48,5 @@ export const DataBadge = forwardRef<HTMLTimeElement | HTMLDataElement | HTMLSpan
     );
   },
 );
+
+DataBadge.displayName = 'DataBadge';

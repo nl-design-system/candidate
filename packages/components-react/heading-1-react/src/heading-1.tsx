@@ -13,3 +13,5 @@ export const Heading1 = forwardRef<HTMLHeadingElement, Heading1Props>(function H
     </h1>
   );
 });
+
+Heading1.displayName = 'Heading1';

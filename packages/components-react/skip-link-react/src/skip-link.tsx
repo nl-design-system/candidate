@@ -15,3 +15,5 @@ export const SkipLink = forwardRef<HTMLAnchorElement, SkipLinkProps>(function Sk
     </a>
   );
 });
+
+SkipLink.displayName = 'SkipLink';

@@ -8,12 +8,17 @@ afterEach(() => {
   cleanup();
 });
 
+const displayName = 'Link';
 const href = 'https://example.com';
 const text = 'Bezoek een voorbeeld site';
 const extraClassName = 'extra-classname';
 const testId = 'rich-text';
 
 describe('Link', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(Link.displayName).toBe(displayName);
+  });
+
   it('renders an element with role "link"', () => {
     render(<Link href={href}>{text}</Link>);
     const link = screen.getByRole('link');

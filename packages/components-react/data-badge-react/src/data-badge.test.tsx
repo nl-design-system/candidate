@@ -8,6 +8,7 @@ afterEach(() => {
   cleanup();
 });
 
+const displayName = 'DataBadge';
 const dateTime = '19700101T00:00:00Z';
 const dateTimeText = '1 januari 1970 om middernacht';
 const value = 1024;
@@ -15,6 +16,10 @@ const extraClassName = 'extra-classname';
 const testId = 'rich-text';
 
 describe('Data Badge', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(DataBadge.displayName).toBe(displayName);
+  });
+
   describe('as an HTML span element', () => {
     it('renders an HTML span element when neither "value" nor "dateTime" is passed', () => {
       const { container } = render(<DataBadge>{value}</DataBadge>);

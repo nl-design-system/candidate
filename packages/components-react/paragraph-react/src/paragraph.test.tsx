@@ -4,6 +4,7 @@ import { createRef } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { Paragraph } from './paragraph';
 
+const displayName = 'Paragraph';
 const text = 'Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen.';
 const extraClassName = 'extra-classname';
 const testId = 'rich-text';
@@ -13,6 +14,10 @@ afterEach(() => {
 });
 
 describe('Paragraph', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(Paragraph.displayName).toBe(displayName);
+  });
+
   describe('default paragraph', () => {
     it('renders an element with role "paragraph"', () => {
       render(<Paragraph>{text}</Paragraph>);

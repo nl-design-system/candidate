@@ -55,3 +55,5 @@ export const NumberBadge = forwardRef<HTMLDataElement | HTMLSpanElement, NumberB
     );
   },
 );
+
+NumberBadge.displayName = 'NumberBadge';

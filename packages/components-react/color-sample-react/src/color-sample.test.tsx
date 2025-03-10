@@ -8,12 +8,17 @@ afterEach(() => {
   cleanup();
 });
 
+const displayName = 'ColorSample';
 const value = '#ff1493';
 const extraClassName = 'extra-classname';
 const label = 'label';
 const ariaLabelledBy = 'other-element';
 
 describe('Color sample', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(ColorSample.displayName).toBe(displayName);
+  });
+
   it('renders an svg element', () => {
     const { container } = render(<ColorSample value={value} />);
     const colorSample = container.querySelector('svg:only-child');
