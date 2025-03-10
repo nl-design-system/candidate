@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/number-badge-react
 
+## 1.2.0
+
+### Minor Changes
+
+- de9ba46: Improve debugging by adding `displayName`
+
 ## 1.1.0
 
 ### Minor Changes
