@@ -46,4 +46,4 @@ jobs:
           commit: "docs(release): design system packages"
           setupGitUser: false
           title: "docs(release): design system packages"
-          publish: "pnpm run publish:changeset"
+          publish: "pnpm run changeset:publish"

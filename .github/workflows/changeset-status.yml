@@ -1,0 +1,66 @@
+name: Changeset status
+
+on: pull_request
+
+jobs:
+  changeset-status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@21cfef2b496dd8ef5b904c159339626a10ad380e # 1.11.6
+        with:
+          app-id: ${{ vars.NL_DESIGN_SYSTEM_BOT_APP_ID }}
+          private-key: ${{ secrets.NL_DESIGN_SYSTEM_BOT_PRIVATE_KEY }}
+
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm package manager
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Changset status
+        id: changeset-status
+        run: |
+          if pnpm run changeset:status; then
+            echo "status=0" | tee -a $GITHUB_OUTPUT
+          else
+            echo "status=1" | tee -a $GITHUB_OUTPUT
+          fi
+
+      - name: Find existing comment
+        id: find-existing-comment
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          COMMENT=$(gh api repos/:owner/:repo/issues/${{ github.event.pull_request.number }}/comments --jq ".[] | select(.user.login == \"${{ steps.app-token.outputs.app-slug }}[bot]\") | .id")
+          echo "comment=${COMMENT}" | tee -a $GITHUB_OUTPUT
+
+      - name: Remove existing comment
+        if: ${{ steps.find-existing-comment.outputs.comment != '' && steps.changeset-status.outputs.status == 0 }}
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          gh api --method DELETE repos/:owner/:repo/issues/comments/${{ steps.find-existing-comment.outputs.comment }}
+          exit 0
+
+      - name: Create new comment
+        if: ${{ steps.find-existing-comment.outputs.comment == '' && steps.changeset-status.outputs.status == 1 }}
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --body ":warning: Deze pull request mist een changeset terwijl er wel een nodig is :warning:"
+          exit 1
+
+      - name: Update existing comment
+        if: ${{ steps.find-existing-comment.outputs.comment != '' && steps.changeset-status.outputs.status == 1 }}
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --edit-last --body ":warning: Deze pull request mist nog steeds een changeset terwijl er wel een nodig is. :warning:"
+          exit 1
