@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-react
 
+## 1.2.1
+
+### Patch Changes
+
+- 2bfe909: Add provenance
+
 ## 1.2.0
 
 ### Minor Changes

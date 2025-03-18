@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/heading-4-react
 
+## 0.1.1
+
+### Patch Changes
+
+- 2bfe909: Add provenance
+
 ## 0.1.0
 
 ### Minor Changes
