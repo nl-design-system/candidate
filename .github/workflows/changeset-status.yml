@@ -1,13 +1,11 @@
 name: Changeset status
 
-on:
-  pull_request:
-    branches_ignore:
-      - changeset-release/*
+on: pull_request
 
 jobs:
   changeset-status:
     runs-on: ubuntu-latest
+    if: ${{ ! startsWith(github.head_ref, 'changeset-release/') }}
     steps:
       - name: Create GitHub App Token
         id: app-token
