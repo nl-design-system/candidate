@@ -18,7 +18,8 @@
     "directory": "packages/components-css/paragraph-css"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "build": "sass ./src/:./dist/",
