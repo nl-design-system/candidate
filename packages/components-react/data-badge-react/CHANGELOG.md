@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/data-badge-react
 
+## 1.1.1
+
+### Patch Changes
+
+- 2bfe909: Add provenance
+
 ## 1.1.0
 
 ### Minor Changes

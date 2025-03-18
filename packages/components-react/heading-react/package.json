@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/heading-react",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Koptekst die in de koppenstructuur ingesteld kan worden op het juiste niveau.",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/heading-react#readme",
