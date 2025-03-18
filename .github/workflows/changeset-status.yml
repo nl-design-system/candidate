@@ -1,6 +1,9 @@
 name: Changeset status
 
-on: pull_request
+on:
+  pull_request:
+    branches_ignore:
+      - changeset-release/*
 
 jobs:
   changeset-status:
