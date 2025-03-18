@@ -18,7 +18,8 @@
     "directory": "packages/components-css/data-badge-css"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "build": "sass ./src/:./dist/",

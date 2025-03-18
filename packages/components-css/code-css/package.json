@@ -18,7 +18,8 @@
     "directory": "packages/components-css/code-css"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "build": "sass ./src/:./dist/",
