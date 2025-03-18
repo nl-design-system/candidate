@@ -26,7 +26,8 @@
   },
   "private": true,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs",
