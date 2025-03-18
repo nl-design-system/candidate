@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/paragraph-react
 
+## 2.1.1
+
+### Patch Changes
+
+- be656bc: Add provenance
+
 ## 2.1.0
 
 ### Minor Changes
