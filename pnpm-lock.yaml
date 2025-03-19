@@ -123,18 +123,6 @@ importers:
 
   packages/components-css/data-badge-css: {}
 
-  packages/components-css/heading-1-css: {}
-
-  packages/components-css/heading-2-css: {}
-
-  packages/components-css/heading-3-css: {}
-
-  packages/components-css/heading-4-css: {}
-
-  packages/components-css/heading-5-css: {}
-
-  packages/components-css/heading-6-css: {}
-
   packages/components-css/heading-css: {}
 
   packages/components-css/link-css: {}
@@ -216,120 +204,6 @@ importers:
       '@nl-design-system-candidate/data-badge-css':
         specifier: workspace:*
         version: link:../../components-css/data-badge-css
-      '@types/react':
-        specifier: 18.3.18
-        version: 18.3.18
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-
-  packages/components-react/heading-1-react:
-    dependencies:
-      clsx:
-        specifier: 2.1.1
-        version: 2.1.1
-    devDependencies:
-      '@babel/runtime':
-        specifier: 7.26.7
-        version: 7.26.7
-      '@nl-design-system-candidate/heading-1-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-1-css
-      '@types/react':
-        specifier: 18.3.18
-        version: 18.3.18
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-
-  packages/components-react/heading-2-react:
-    dependencies:
-      clsx:
-        specifier: 2.1.1
-        version: 2.1.1
-    devDependencies:
-      '@babel/runtime':
-        specifier: 7.26.7
-        version: 7.26.7
-      '@nl-design-system-candidate/heading-2-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-2-css
-      '@types/react':
-        specifier: 18.3.18
-        version: 18.3.18
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-
-  packages/components-react/heading-3-react:
-    dependencies:
-      clsx:
-        specifier: 2.1.1
-        version: 2.1.1
-    devDependencies:
-      '@babel/runtime':
-        specifier: 7.26.7
-        version: 7.26.7
-      '@nl-design-system-candidate/heading-3-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-3-css
-      '@types/react':
-        specifier: 18.3.18
-        version: 18.3.18
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-
-  packages/components-react/heading-4-react:
-    dependencies:
-      clsx:
-        specifier: 2.1.1
-        version: 2.1.1
-    devDependencies:
-      '@babel/runtime':
-        specifier: 7.26.7
-        version: 7.26.7
-      '@nl-design-system-candidate/heading-4-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-4-css
-      '@types/react':
-        specifier: 18.3.18
-        version: 18.3.18
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-
-  packages/components-react/heading-5-react:
-    dependencies:
-      clsx:
-        specifier: 2.1.1
-        version: 2.1.1
-    devDependencies:
-      '@babel/runtime':
-        specifier: 7.26.7
-        version: 7.26.7
-      '@nl-design-system-candidate/heading-5-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-5-css
-      '@types/react':
-        specifier: 18.3.18
-        version: 18.3.18
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-
-  packages/components-react/heading-6-react:
-    dependencies:
-      clsx:
-        specifier: 2.1.1
-        version: 2.1.1
-    devDependencies:
-      '@babel/runtime':
-        specifier: 7.26.7
-        version: 7.26.7
-      '@nl-design-system-candidate/heading-6-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-6-css
       '@types/react':
         specifier: 18.3.18
         version: 18.3.18
@@ -458,18 +332,6 @@ importers:
   packages/docs/color-sample-docs: {}
 
   packages/docs/data-badge-docs: {}
-
-  packages/docs/heading-1-docs: {}
-
-  packages/docs/heading-2-docs: {}
-
-  packages/docs/heading-3-docs: {}
-
-  packages/docs/heading-4-docs: {}
-
-  packages/docs/heading-5-docs: {}
-
-  packages/docs/heading-6-docs: {}
 
   packages/docs/heading-docs: {}
 
