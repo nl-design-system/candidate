@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-css
 
+## 2.0.1
+
+### Patch Changes
+
+- 54aa4f1: Add provenance
+
 ## 2.0.0
 
 ### Major Changes
