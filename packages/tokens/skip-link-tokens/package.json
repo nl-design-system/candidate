@@ -15,5 +15,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "generate-tokens": "../../../scripts/generate-tokens.sh skip-link"
   }
 }
