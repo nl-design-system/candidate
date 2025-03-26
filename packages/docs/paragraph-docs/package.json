@@ -19,6 +19,7 @@
     "directory": "packages/docs/paragraph-docs"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }

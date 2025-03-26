@@ -19,6 +19,7 @@
     "directory": "packages/docs/data-badge-docs"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }

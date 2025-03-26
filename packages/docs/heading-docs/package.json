@@ -19,6 +19,7 @@
     "directory": "packages/docs/heading-docs"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }
