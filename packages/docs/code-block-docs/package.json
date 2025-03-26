@@ -19,6 +19,7 @@
     "directory": "packages/docs/code-block-docs"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }

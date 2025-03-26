@@ -19,6 +19,7 @@
     "directory": "packages/docs/color-sample-docs"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }

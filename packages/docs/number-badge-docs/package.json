@@ -18,6 +18,7 @@
     "directory": "packages/docs/number-badge-docs"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }
