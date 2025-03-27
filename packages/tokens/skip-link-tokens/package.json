@@ -14,7 +14,8 @@
     "directory": "packages/tokens/skip-link-tokens"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "generate-tokens": "../../../scripts/generate-tokens.sh skip-link"
