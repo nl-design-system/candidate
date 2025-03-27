@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/skip-link-tokens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Design tokens voor het Skip Link component",
   "license": "EUPL-1.2",
   "main": "./tokens.json",

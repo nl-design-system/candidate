@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/heading-tokens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Design tokens voor de Heading component",
   "license": "EUPL-1.2",
   "main": "./tokens.json",
