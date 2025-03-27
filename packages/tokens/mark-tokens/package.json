@@ -12,7 +12,8 @@
     "directory": "packages/tokens/mark-tokens"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "generate-tokens": "../../../scripts/generate-tokens.sh mark"
