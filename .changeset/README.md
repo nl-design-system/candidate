@@ -1,8 +1,36 @@
 <!-- @license CC0-1.0 -->
 
-# Changeset sjabloon
+# Changesets
 
-Kopieer en plak het onderstaande sjabloon. Je kunt hiervoor de kopieer knop linksboven in het template gebruiken.
+Lees meer over [Versionering: Hoe beheer je pakketversies?](http://nldesignsystem.nl/handboek/developer/changesets) en [SemVer: Major, Minor of Patch?](http://nldesignsystem.nl/handboek/developer/changes).
+
+## Changesets genereren via een script
+
+In `package.json` staat een script om changesets toe te voegen:
+
+```json
+"scripts": {
+  "changeset": "changeset add"
+}
+```
+
+Een nieuwe changeset maak je met:
+
+```sh
+pnpm run changeset
+```
+
+Dit opent een interactieve prompt waarin je de wijzigingen kunt specificeren.
+
+Een lege changeset maak je met:
+
+```sh
+pnpm run changeset --empty
+```
+
+## Handmatig een changeset toevoegen
+
+Maak een nieuw Markdown-bestand in de `.changeset`-map en plak het volgende sjabloon:
 
 ```markdown
 ---
@@ -12,16 +40,12 @@ Kopieer en plak het onderstaande sjabloon. Je kunt hiervoor de kopieer knop link
 Beschrijving
 ```
 
-Vul tussen de twee sets `---` in voor welke packages je allemaal veranderingen hebt doorgevoerd. Zet elk package tussen
-dubbele aanhalingstekens op een nieuwe regel.
+- Voeg alle relevante packages toe tussen de eerste set `---`, elk op een nieuwe regel, tussen dubbele aanhalingstekens.
+- Beschrijf na de tweede set `---` welke wijzigingen zijn doorgevoerd.
 
-Gebruik:
+Voor een **lege changeset** gebruik je alleen:
 
-- `"@nl-design-system-candidate/<package-name>": major` voor breaking changes
-- `"@nl-design-system-candidate/<package-name>": minor` voor nieuwe features
-- `"@nl-design-system-candidate/<package-name>": patch` voor bug fixes
-
-Beschrijf na de tweede set `---` welke veranderingen je hebt doorgevoerd.
-
-Geef bij breaking changes aan **wat** er veranderd is, **waarom** de verandering nodig was en **hoe** gebruikers van het
-package hun code moeten aanpassen.
+```markdown
+---
+---
+```
