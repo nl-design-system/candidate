@@ -115,6 +115,8 @@ importers:
         specifier: 3.0.5
         version: 3.0.5(@types/debug@4.1.12)(@types/node@22.12.0)(jsdom@26.0.0)(sass@1.83.4)(yaml@2.7.0)
 
+  packages/common-css/focus-css: {}
+
   packages/components-css/code-block-css: {}
 
   packages/components-css/code-css: {}

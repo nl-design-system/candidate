@@ -1,5 +1,6 @@
 packages:
   - packages/*
+  - packages/common-css/*
   - packages/components-react/*
   - packages/components-css/*
   - packages/docs/*
