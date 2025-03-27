@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/code-tokens",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Design tokens voor het Code component",
   "license": "EUPL-1.2",
   "main": "./tokens.json",

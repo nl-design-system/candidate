@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/paragraph-tokens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Design tokens voor het Paragraph component",
   "license": "EUPL-1.2",
   "main": "./tokens.json",

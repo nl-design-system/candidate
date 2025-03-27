@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- d9a7c2c: Add provenance
+
 ## 2.0.0
 
 ### Major Changes
