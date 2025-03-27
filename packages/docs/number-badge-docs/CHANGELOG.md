@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/number-badge-docs
 
+## 1.0.3
+
+### Patch Changes
+
+- aa77dda: Add missing repository.url
+
 ## 1.0.2
 
 ### Patch Changes
