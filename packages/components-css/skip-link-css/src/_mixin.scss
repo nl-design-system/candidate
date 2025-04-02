@@ -11,8 +11,10 @@
   max-inline-size: calc(100% - 2 * var(--_nl-skip-link-inset, 0));
   min-block-size: var(--nl-skip-link-min-block-size, 44px);
   min-inline-size: var(--nl-skip-link-min-inline-size, 44px);
-  padding-block: var(--nl-skip-link-padding-block);
-  padding-inline: var(--nl-skip-link-padding-inline);
+  padding-block-end: var(--nl-skip-link-padding-block-end, var(--nl-skip-link-padding-block));
+  padding-block-start: var(--nl-skip-link-padding-block-start, var(--nl-skip-link-padding-block));
+  padding-inline-end: var(--nl-skip-link-padding-inline-end, var(--nl-skip-link-padding-inline));
+  padding-inline-start: var(--nl-skip-link-padding-inline-start, var(--nl-skip-link-padding-inline));
   text-decoration-thickness: max(var(--nl-skip-link-text-decoration-thickness, 0px), initial);
   text-underline-offset: var(--nl-skip-link-text-underline-offset, initial);
 }
@@ -26,7 +28,7 @@
   /**
    * WCAG 2.2 / 2.4.12: "No part of the focus indicator is hidden by author-created content".
    * To go the extra mile, ensure the focus indicator is inside the viewport.
-   * 
+   *
    * Assume 2px is the browser default focus ring size.
    *
    * TODO: calc(
