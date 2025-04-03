@@ -72,6 +72,7 @@
     "prepare": "husky",
     "prettier": "prettier --write .",
     "changeset": "changeset add",
+    "changeset:empty": "changeset add --empty",
     "changeset:publish": "changeset publish",
     "changeset:status": "changeset status --since origin/main",
     "start": "http-server packages/storybook/dist/",
