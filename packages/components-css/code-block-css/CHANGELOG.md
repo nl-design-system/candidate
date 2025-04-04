@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-block-css
 
+## 1.1.2
+
+### Patch Changes
+
+- 8659eb4: Update Sass build script to output compressed CSS
+
 ## 1.1.1
 
 ### Patch Changes
