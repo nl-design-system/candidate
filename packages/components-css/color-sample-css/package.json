@@ -22,7 +22,7 @@
     "provenance": true
   },
   "scripts": {
-    "build": "sass ./src/:./dist/",
+    "build": "sass --style=compressed ./src/:./dist/",
     "clean": "rimraf ./dist/"
   }
 }
