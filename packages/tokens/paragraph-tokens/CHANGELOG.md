@@ -1,5 +1,16 @@
 # @nl-design-system-candidate/paragraph-tokens
 
+## 1.1.0
+
+### Minor Changes
+
+- 03dbfcc: The following tokens were added in this release:
+
+  - `nl.paragraph.margin-block-start`
+  - `nl.paragraph.margin-block-end`
+  - `nl.paragraph.lead.margin-block-start`
+  - `nl.paragraph.lead.margin-block-end`
+
 ## 1.0.1
 
 ### Patch Changes
