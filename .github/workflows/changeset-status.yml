@@ -5,7 +5,11 @@ on: pull_request
 jobs:
   changeset-status:
     runs-on: ubuntu-latest
-    if: ${{ ! startsWith(github.head_ref, 'changeset-release/') }}
+    # Do _NOT_ run this job if:
+    #
+    # 1. the branch was created by the Changeset Action itself
+    # 2. the branch was created by Dependabot because it cannot (and should not) access the `private-key` secret
+    if: ${{ !startsWith(github.head_ref, 'changeset-release/') && github.actor != 'dependabot[bot]' }}
     steps:
       - name: Create GitHub App Token
         id: app-token
