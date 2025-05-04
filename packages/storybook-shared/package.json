@@ -3,11 +3,11 @@
   "license": "EUPL-1.2",
   "private": true,
   "devDependencies": {
-    "@nl-design-system/tsconfig": "1.0.1",
+    "@nl-design-system/tsconfig": "1.0.3",
     "@nl-design-system-candidate/paragraph-react": "workspace:*",
-    "@storybook/blocks": "8.5.3",
-    "@storybook/react": "8.5.3",
-    "@types/react": "18.3.18",
+    "@storybook/blocks": "8.6.12",
+    "@storybook/react": "8.6.12",
+    "@types/react": "18.3.20",
     "react": "18.3.1"
   },
   "repository": {
