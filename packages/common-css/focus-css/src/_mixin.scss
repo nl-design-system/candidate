@@ -1,0 +1,15 @@
+@mixin nl-focus-backdrop {
+  background-color: var(--nl-focus-backdrop-background-color);
+}
+
+@mixin nl-focus-ring {
+  /* - The browser default focus ring should apply when these CSS custom properties are not set.
+   * - Make the `box-shadow` value available, so components that have their own `box-shadow`
+   *   can combine it with the focus ring box shadow.
+   */
+  box-shadow: 0 0 0 var(--nl-focus-ring-outline-width, 0) var(--nl-focus-ring-inverse-outline-color, transparent);
+  outline-color: var(--nl-focus-ring-outline-color, revert);
+  outline-offset: var(--nl-focus-ring-outline-offset, revert);
+  outline-style: var(--nl-focus-ring-outline-style, revert);
+  outline-width: var(--nl-focus-ring-outline-width, revert);
+}
