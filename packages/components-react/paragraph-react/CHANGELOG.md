@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/paragraph-react
 
+## 2.1.2
+
+### Patch Changes
+
+- 22b8819: This was a version bump only for the @babel/runtime devDependency, there were no code changes.
+
 ## 2.1.1
 
 ### Patch Changes

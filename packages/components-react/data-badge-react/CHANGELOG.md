@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/data-badge-react
 
+## 1.1.2
+
+### Patch Changes
+
+- 22b8819: This was a version bump only for the @babel/runtime devDependency, there were no code changes.
+
 ## 1.1.1
 
 ### Patch Changes

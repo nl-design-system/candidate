@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/skip-link-react",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Verborgen mogelijkheid om snel naar een ander deel van de pagina te navigeren zonder gebruik te maken van een muis of touchscreen.",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/skip-link-react#readme",
