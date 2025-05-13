@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-block-react
 
+## 1.3.2
+
+### Patch Changes
+
+- 22b8819: This was a version bump only for the @babel/runtime devDependency, there were no code changes.
+
 ## 1.3.1
 
 ### Patch Changes
