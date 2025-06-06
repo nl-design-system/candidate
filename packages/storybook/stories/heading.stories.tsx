@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import packageJSON from '../../components-react/heading-react/package.json';
 import { Heading } from '../../components-react/heading-react/src/css';
 import { Paragraph } from '../../components-react/paragraph-react/src/css';

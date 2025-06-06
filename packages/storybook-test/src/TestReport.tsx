@@ -1,4 +1,4 @@
-import { useOf } from '@storybook/blocks';
+import { useOf } from '@storybook/addon-docs/blocks';
 import uniq from 'lodash-es/uniq';
 import without from 'lodash-es/without';
 import { TestResult } from './TestResult';

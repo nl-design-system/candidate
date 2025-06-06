@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import packageJSON from '../../components-react/skip-link-react/package.json';
 import { SkipLink } from '../../components-react/skip-link-react/src/css';
 

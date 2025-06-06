@@ -3,10 +3,8 @@ import type { StorybookConfig } from '@storybook/react-vite';
 const config: StorybookConfig = {
   addons: [
     '@storybook/addon-a11y',
-    '@storybook/addon-controls',
     '@storybook/addon-docs',
-    '@storybook/addon-toolbars',
-    '@storybook/addon-viewport',
+    'storybook/viewport',
     '@whitespace/storybook-addon-html',
     '@etchteam/storybook-addon-status',
   ],
@@ -15,18 +13,17 @@ const config: StorybookConfig = {
     disableWhatsNewNotifications: true,
   },
   docs: {
-    autodocs: 'tag',
     defaultName: 'Documentatie',
   },
   features: {
     // Make @storybook/addon-viewport use Storybook's globals
-    viewportStoryGlobals: true,
+    // viewportStoryGlobals: true,
   },
   framework: {
     name: '@storybook/react-vite',
     options: {},
   },
-  stories: ['../stories/**/*stories.@(ts|tsx)', '../docs/**/*.mdx'],
+  stories: ['../stories/**/*stories.@(ts|tsx)'],
 };
 
 export default config;
