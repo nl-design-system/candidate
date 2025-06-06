@@ -1,4 +1,9 @@
 autoInstallPeers: false
+engineStrict: true
+onlyBuiltDependencies:
+  - esbuild
+saveExact: true
+savePrefix: ""
 packages:
   - packages/*
   - packages/components-react/*
