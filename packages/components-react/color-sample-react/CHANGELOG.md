@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/color-sample-react
 
+## 1.1.3
+
+### Patch Changes
+
+- f0f7969: This was a version bump only for the @babel/runtime and @types/react devDependencies, there were no code changes.
+
 ## 1.1.2
 
 ### Patch Changes
