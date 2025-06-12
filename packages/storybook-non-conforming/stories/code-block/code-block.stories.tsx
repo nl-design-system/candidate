@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import packageJSON from '../../../components-react/code-block-react/package.json';
 import { CodeBlock } from '../../../components-react/code-block-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';

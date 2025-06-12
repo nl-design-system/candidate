@@ -4,7 +4,6 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
-    '@storybook/addon-viewport',
     '@whitespace/storybook-addon-html',
     '@etchteam/storybook-addon-status',
   ],
@@ -13,7 +12,6 @@ const config: StorybookConfig = {
     disableWhatsNewNotifications: true,
   },
   docs: {
-    autodocs: 'tag', // allow stories to opt out of docs if necessary
     defaultName: 'Documentatie',
   },
   framework: {
