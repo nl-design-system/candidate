@@ -34,7 +34,7 @@
 
   /* `75ch` lijkt dus de ideale default voor maximale regellengte. */
   max-inline-size: var(--example-body-text-max-inline-size, 75ch);
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .example-body-text :lang(nl) {
