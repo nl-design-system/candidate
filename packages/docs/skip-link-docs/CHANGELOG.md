@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/skip-link-docs
 
+## 1.0.3
+
+### Patch Changes
+
+- ace9a45: Remove "springlink" alias from skip link.
+
 ## 1.0.2
 
 ### Patch Changes
