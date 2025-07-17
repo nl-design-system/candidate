@@ -2,4 +2,4 @@
 
 # Aliassen
 
-Ook bekend als: Skip to content en Springlink.
+Ook bekend als: Skip to content link.
