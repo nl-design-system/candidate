@@ -35,7 +35,7 @@ export const Default: Story = {
 };
 
 export const MarkInParagraph: Story = {
-  name: 'Mark in een Parargraph',
+  name: 'Mark in een Paragraph',
   render() {
     return (
       <Paragraph>
