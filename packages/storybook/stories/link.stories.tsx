@@ -45,7 +45,7 @@ export const Default: Story = {
 };
 
 export const LinkInParagraph: Story = {
-  name: 'Link in een Parargraph',
+  name: 'Link in een Paragraph',
   args: {
     href: 'https://example.com',
   },
