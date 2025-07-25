@@ -9,10 +9,9 @@ body:
       value: |
         Allereerst bedankt voor je bijdrage!
 
-        Voor documenatie updates mogen pull requests naar de `main` branch gemaakt worden.
+        Wil je iets aanpassen in de documentatie? Je kunt hiervoor een pull request maken naar de `main` branch. Dit doe je vanuit een fork van de repository. Zie [CONTRIBUTING.md](./CONTRIBUTING.md) voor de juiste werkwijze.
 
         Als je geen pull request maakt kun je in dit issue aangeven wat er niet correct is of wat je mist in de documentatie.
-
   - type: textarea
     attributes:
       label: Beschrijf wat er niet correct is of ontbreekt in de documentatie
