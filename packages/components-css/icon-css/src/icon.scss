@@ -1,0 +1,13 @@
+@use "mixin";
+
+.nl-icon {
+  @include mixin.nl-icon;
+}
+
+.nl-icon svg {
+  @include mixin.nl-icon__svg;
+}
+
+.nl-icon:dir(rtl) {
+  @include mixin.nl-icon--bidi-mirrored;
+}

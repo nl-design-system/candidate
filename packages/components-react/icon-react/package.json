@@ -1,0 +1,50 @@
+{
+  "name": "@nl-design-system-candidate/icon-react",
+  "version": "0.0.0",
+  "description": "Graphical symbol that provides visual information about an action, subject or status",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/icon-react#readme",
+  "type": "module",
+  "main": "./dist/icon.js",
+  "files": [
+    "./dist/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/icon.d.ts",
+      "import": "./dist/icon.js"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.js"
+    }
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-react/icon-react"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "rollup --config ./rollup.config.mjs",
+    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/ ./coverage/",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.27.6",
+    "@nl-design-system-candidate/icon-css": "workspace:*",
+    "@types/react": "18.3.23",
+    "react": "18.3.1"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7",
+    "react": "^18"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@nl-design-system-candidate/icon-css",
+  "version": "0.0.0",
+  "description": "Styles for Icon component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-css/icon-css#readme",
+  "files": [
+    "./dist/",
+    "./src/"
+  ],
+  "exports": {
+    "./*.css": "./dist/*.css",
+    "./*.scss": "./src/*.scss"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-css/icon-css"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "sass --style=compressed ./src/:./dist/",
+    "clean": "rimraf ./dist/"
+  }
+}
