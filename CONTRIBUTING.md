@@ -26,6 +26,7 @@ Omdat je **geen rechten hebt om direct naar deze repository te pushen**, volg je
 4. Maak vanuit je fork een **pull request** naar de `main` branch van deze repository.
 
 **Tips**:
+
 - Voeg een duidelijke titel en beschrijving toe aan je PR.
 - Kleine, overzichtelijke PR's zijn makkelijker te beoordelen en sneller te mergen.
 
