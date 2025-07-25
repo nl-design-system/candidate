@@ -10,6 +10,7 @@ body:
 
         Vul het onderstaande formulier in om een GitHub issue aan te maken.
 
+        Wil je je issue ondersteunen met codewijzigingen? Dit doe je vanuit een fork van de repository. Zie [CONTRIBUTING.md](https://github.com/nl-design-system/candidate/blob/main/CONTRIBUTING.md) voor de juiste werkwijze.
   - type: dropdown
     id: component
     attributes:
