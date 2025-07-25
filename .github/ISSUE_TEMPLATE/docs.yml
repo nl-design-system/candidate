@@ -9,7 +9,7 @@ body:
       value: |
         Allereerst bedankt voor je bijdrage!
 
-        Wil je iets aanpassen in de documentatie? Je kunt hiervoor een pull request maken naar de `main` branch. Dit doe je vanuit een fork van de repository. Zie [CONTRIBUTING.md](https://github.com/nl-design-system/candidate/blob/main/CONTRIBUTING.md) voor de juiste werkwijze.
+        Wil je iets aanpassen in de documentatie? Je kunt hiervoor een pull request maken naar de `main` branch. Dit doe je vanuit een fork van de repository. Zie [CONTRIBUTING.md](./CONTRIBUTING.md) voor de juiste werkwijze.
 
         Als je geen pull request maakt kun je in dit issue aangeven wat er niet correct is of wat je mist in de documentatie.
   - type: textarea
