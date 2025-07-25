@@ -1,0 +1,21 @@
+@mixin nl-icon {
+  block-size: var(--nl-icon-block-size, 1em);
+  color: var(--nl-icon-color, currentcolor);
+  display: inline-block;
+  font-size: var(--nl-icon-font-size, 1em);
+  inline-size: var(--nl-icon-inline-size, 1em);
+  inset-block-start: var(--nl-icon-inset-block-start, 0);
+  pointer-events: none;
+  position: relative;
+}
+
+@mixin nl-icon__svg {
+  /* stylelint-disable-next-line property-disallowed-list */
+  height: 100%;
+  /* stylelint-disable-next-line property-disallowed-list */
+  width: 100%;
+}
+
+@mixin nl-icon--bidi-mirrored {
+  transform: scaleX(-1);
+}

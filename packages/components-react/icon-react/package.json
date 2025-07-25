@@ -1,18 +1,18 @@
 {
-  "name": "@nl-design-system-candidate/paragraph-react",
-  "version": "2.1.4",
-  "description": "Displays a paragraph of text",
+  "name": "@nl-design-system-candidate/icon-react",
+  "version": "0.0.0",
+  "description": "Graphical symbol that provides visual information about an action, subject or status",
   "license": "EUPL-1.2",
-  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/paragraph-react#readme",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/icon-react#readme",
   "type": "module",
-  "main": "./dist/paragraph.js",
+  "main": "./dist/icon.js",
   "files": [
     "./dist/"
   ],
   "exports": {
     ".": {
-      "types": "./dist/paragraph.d.ts",
-      "import": "./dist/paragraph.js"
+      "types": "./dist/icon.d.ts",
+      "import": "./dist/icon.js"
     },
     "./css": {
       "types": "./dist/css.d.ts",
@@ -22,9 +22,8 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/candidate.git",
-    "directory": "packages/components-react/paragraph-react"
+    "directory": "packages/components-react/icon-react"
   },
-  "private": true,
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -38,16 +37,13 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@babel/runtime": "7.28.2",
-    "@nl-design-system-candidate/paragraph-css": "workspace:*",
+    "@babel/runtime": "7.27.6",
+    "@nl-design-system-candidate/icon-css": "workspace:*",
     "@types/react": "18.3.23",
     "react": "18.3.1"
   },
   "peerDependencies": {
     "@babel/runtime": "^7",
     "react": "^18"
-  },
-  "dependencies": {
-    "clsx": "2.1.1"
   }
 }
