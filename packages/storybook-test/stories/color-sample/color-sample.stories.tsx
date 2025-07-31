@@ -22,8 +22,8 @@ const meta = {
     },
     externalLinks: [
       {
-        name: 'Open in Figma',
-        url: 'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=13781-17931',
+        name: 'Open op NL Design System',
+        url: 'https://nldesignsystem.nl/color-sample',
       },
       {
         name: 'Open op GitHub',

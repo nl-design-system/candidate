@@ -83,8 +83,8 @@ const meta = {
     },
     externalLinks: [
       {
-        name: 'Open in Figma',
-        url: 'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=13778-3553',
+        name: 'Open op NL Design System',
+        url: 'https://nldesignsystem.nl/code-block',
       },
       {
         name: 'Open op GitHub',
