@@ -61,26 +61,63 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const AriaHidden: Story = {};
+export const AriaHidden: Story = {
+  name: 'Decoratief icoon met aria-hidden',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Wanneer een icon decoratief is, is het niet nodig dat een bezoeker die gebruik maakt van hulpsoftware weet dat er een icon aanwezig is. Daarom is het nodig dat de icon aria-hidden ondersteunt.',
+      },
+    },
+  },
+};
 
 export const RoleImg: Story = {
+  name: 'Icoon met afbeelding rol',
   args: {
     role: 'img',
     'aria-label': 'Icoon',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Wanneer een icon niet verborgen is voor hulpsoftware, moet de rol goed gecommuniceerd worden in de accessibility tree. Voor een icon is dit role="img".',
+      },
+    },
   },
 };
 
 export const AriaLabel: Story = {
+  name: 'Icoon met aria-label',
   args: {
     role: 'img',
     'aria-label': 'Icoon',
   },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Om ervoor te zorgen dat de icon een alternatieve tekst kan hebben, is het nodig dat het een `aria-label` attribuut kan bevatten.',
+      },
+    },
+  },
 };
 
 export const AriaLabelledby: Story = {
+  name: 'Icoon met aria-labelledby',
   args: {
     role: 'img',
     'aria-labelledby': 'paragraph',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Om ervoor te zorgen dat de icon een alternatieve tekst kan hebben, is het nodig dat het een `aria-labelledby` attribuut kan bevatten.',
+      },
+    },
   },
   render(props) {
     return (
