@@ -16,6 +16,11 @@ concurrency:
 jobs:
   visual-regression-test:
     runs-on: ubuntu-latest
+    # Do _NOT_ run this job if:
+    #
+    # 1. the pull request is a draft pull request
+    # 2. the branch was created by Dependabot
+    if: ${{ github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && github.actor != 'dependabot[bot]') }}
 
     steps:
       - name: Checkout
@@ -41,11 +46,6 @@ jobs:
 
       - name: Chromatic
         uses: chromaui/action@58d9ffb36c90c97a02d061544ecc849cc4a242a9 # v13.1.3
-        # Do _NOT_ run this job if:
-        #
-        # 1. the pull request is a draft pull request
-        # 2. the branch was created by Dependabot
-        if: ${{ github.event.name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false && github.actor != 'dependabot[bot]') }}
         with:
           autoAcceptChanges: main
           onlyChanged: true
