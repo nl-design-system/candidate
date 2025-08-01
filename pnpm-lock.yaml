@@ -35,7 +35,7 @@ importers:
         version: 2.1.0(eslint@9.30.1)(typescript@5.8.3)
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.5
-        version: 1.0.5(postcss@8.5.6)(rollup@4.44.2)(typescript@5.8.3)
+        version: 1.0.5(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.44.2)(tslib@2.6.3)(typescript@5.8.3)
       '@nl-design-system/tsconfig':
         specifier: 1.0.3
         version: 1.0.3(typescript@5.8.3)
@@ -47,7 +47,7 @@ importers:
         version: 6.6.3
       '@testing-library/react':
         specifier: 16.3.0
-        version: 16.3.0(@testing-library/dom@10.4.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@18.3.7(@types/react@18.3.23))(@types/react@18.3.23)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@types/node':
         specifier: 22.16.3
         version: 22.16.3
@@ -357,8 +357,8 @@ importers:
         specifier: workspace:*
         version: link:../storybook-shared
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 4.0.1
-        version: 4.0.1
+        specifier: 5.0.0
+        version: 5.0.0
       '@storybook/addon-a11y':
         specifier: 8.6.14
         version: 8.6.14(storybook@8.6.14(prettier@3.6.2))
@@ -438,8 +438,8 @@ importers:
         specifier: 0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.14(prettier@3.6.2))
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 4.0.1
-        version: 4.0.1
+        specifier: 5.0.0
+        version: 5.0.0
       '@storybook/addon-a11y':
         specifier: 8.6.14
         version: 8.6.14(storybook@8.6.14(prettier@3.6.2))
@@ -549,8 +549,8 @@ importers:
         specifier: 0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.14(prettier@3.6.2))
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 4.0.1
-        version: 4.0.1
+        specifier: 5.0.0
+        version: 5.0.0
       '@storybook/addon-a11y':
         specifier: 8.6.14
         version: 8.6.14(storybook@8.6.14(prettier@3.6.2))
@@ -1762,8 +1762,8 @@ packages:
   '@nl-design-system-unstable/tokens-lib@0.3.0':
     resolution: {integrity: sha512-eZ4lSNXsKja6szIX3LxD+xB8OmPiQudqDeQ06aUgcR10cGJjXbQS0XRkEr8K1MR39y+8I65kS+49s3Q+VCA8DA==}
 
-  '@nl-design-system-unstable/voorbeeld-design-tokens@4.0.1':
-    resolution: {integrity: sha512-jRKdiUPC2hdhQtUyidlALaPwrGjy+oTHLIq9Trh8HNhjOIoJYIPUOVk3EfGYluYUdWqUvDS0IjfiKkuYDEwhQQ==}
+  '@nl-design-system-unstable/voorbeeld-design-tokens@5.0.0':
+    resolution: {integrity: sha512-zNMjHNPf4Lx0Fqj/Kf6N+z0PwCyvWJLsHZ0jCWr6xVyBff/yaXAq8yActJFKnlk8dNG09bWzfcD0Ihbj7bICsg==}
 
   '@nl-design-system/eslint-config@2.1.0':
     resolution: {integrity: sha512-UZeV1mz5ivqjQ7T67aGyYrLSrlWrvyBm2c6vgM6oJyGy/p1aMbjHNpjGT8VbRdnJB0OXvVN4RSRTBH9BfVUfjA==}
@@ -2406,6 +2406,7 @@ packages:
 
   '@utrecht/components@6.1.0':
     resolution: {integrity: sha512-4EXubBfxuRgO7jNiI5/E4Tk2BZGiWS3JwuYCDZf7QPMQ0fMtrHDh9SEm0UErJd+CxVVG7Bcy/fQvYXh1ormCNA==}
+    deprecated: 'The @utrecht/components package has been deprecated. To migrate: the SCSS files are now only available in the npm package for the specific component. For example: @utrecht/button-css/src/_mixin.scss. The entire component library is now available in @utrecht/component-library-css/dist/index.css.'
 
   '@vitest/coverage-v8@3.2.4':
     resolution: {integrity: sha512-EyF9SXU6kS5Ku/U82E259WSnvg6c8KTjppUncuNdm5QHpe17mwREHnjDzozC8x9MZ0xfBUFSaLkRv4TMA75ALQ==}
@@ -7073,7 +7074,7 @@ snapshots:
       - react-dom
       - storybook
 
-  '@nl-design-system-unstable/voorbeeld-design-tokens@4.0.1': {}
+  '@nl-design-system-unstable/voorbeeld-design-tokens@5.0.0': {}
 
   '@nl-design-system/eslint-config@2.1.0(eslint@9.30.1)(typescript@5.8.3)':
     dependencies:
@@ -7089,12 +7090,12 @@ snapshots:
       - supports-color
       - typescript
 
-  '@nl-design-system/rollup-config-react-component@1.0.5(postcss@8.5.6)(rollup@4.44.2)(typescript@5.8.3)':
+  '@nl-design-system/rollup-config-react-component@1.0.5(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.44.2)(tslib@2.6.3)(typescript@5.8.3)':
     dependencies:
       '@babel/core': 7.26.10
-      '@rollup/plugin-babel': 6.0.4(@babel/core@7.26.10)(rollup@4.44.2)
+      '@rollup/plugin-babel': 6.0.4(@babel/core@7.26.10)(@types/babel__core@7.20.5)(rollup@4.44.2)
       '@rollup/plugin-node-resolve': 16.0.1(rollup@4.44.2)
-      '@rollup/plugin-typescript': 12.1.2(rollup@4.44.2)(typescript@5.8.3)
+      '@rollup/plugin-typescript': 12.1.2(rollup@4.44.2)(tslib@2.6.3)(typescript@5.8.3)
       rollup: 4.44.2
       rollup-plugin-node-externals: 8.0.0(rollup@4.44.2)
       rollup-plugin-peer-deps-external: 2.2.4(rollup@4.44.2)
@@ -7183,12 +7184,13 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@rollup/plugin-babel@6.0.4(@babel/core@7.26.10)(rollup@4.44.2)':
+  '@rollup/plugin-babel@6.0.4(@babel/core@7.26.10)(@types/babel__core@7.20.5)(rollup@4.44.2)':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/helper-module-imports': 7.25.9
       '@rollup/pluginutils': 5.1.2(rollup@4.44.2)
     optionalDependencies:
+      '@types/babel__core': 7.20.5
       rollup: 4.44.2
     transitivePeerDependencies:
       - supports-color
@@ -7203,13 +7205,14 @@ snapshots:
     optionalDependencies:
       rollup: 4.44.2
 
-  '@rollup/plugin-typescript@12.1.2(rollup@4.44.2)(typescript@5.8.3)':
+  '@rollup/plugin-typescript@12.1.2(rollup@4.44.2)(tslib@2.6.3)(typescript@5.8.3)':
     dependencies:
       '@rollup/pluginutils': 5.1.2(rollup@4.44.2)
       resolve: 1.22.8
       typescript: 5.8.3
     optionalDependencies:
       rollup: 4.44.2
+      tslib: 2.6.3
 
   '@rollup/pluginutils@5.1.2(rollup@4.44.2)':
     dependencies:
@@ -7536,12 +7539,15 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
 
-  '@testing-library/react@16.3.0(@testing-library/dom@10.4.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@testing-library/react@16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@18.3.7(@types/react@18.3.23))(@types/react@18.3.23)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@testing-library/dom': 10.4.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+    optionalDependencies:
+      '@types/react': 18.3.23
+      '@types/react-dom': 18.3.7(@types/react@18.3.23)
 
   '@testing-library/user-event@14.5.2(@testing-library/dom@10.4.0)':
     dependencies:
