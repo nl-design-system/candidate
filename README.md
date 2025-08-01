@@ -17,6 +17,6 @@ Voorbereiding:
 
 Er zijn twee Storybook applicaties in dit project. Voor een volledige verzamling van test-scenario's gebruiken we "Storybook Test".
 
-Start Storybook met `pnpm run storybook-test`
+Start Storybook met `pnpm run storybook-test`.
 
 Je kunt de code voor stories vinden in de map [`packages/storybook-test/stories/`](packages/storybook-test/stories), daar kun je uitbreidingen doen.
