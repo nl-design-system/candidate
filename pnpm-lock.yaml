@@ -35,7 +35,7 @@ importers:
         version: 2.1.0(eslint@9.30.1)(typescript@5.8.3)
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.5
-        version: 1.0.5(postcss@8.5.6)(rollup@4.44.2)(typescript@5.8.3)
+        version: 1.0.5(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.44.2)(tslib@2.6.3)(typescript@5.8.3)
       '@nl-design-system/tsconfig':
         specifier: 1.0.3
         version: 1.0.3(typescript@5.8.3)
@@ -47,7 +47,7 @@ importers:
         version: 6.6.3
       '@testing-library/react':
         specifier: 16.3.0
-        version: 16.3.0(@testing-library/dom@10.4.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@18.3.7(@types/react@18.3.23))(@types/react@18.3.23)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@types/node':
         specifier: 22.16.3
         version: 22.16.3
@@ -121,6 +121,8 @@ importers:
   packages/components-css/data-badge-css: {}
 
   packages/components-css/heading-css: {}
+
+  packages/components-css/icon-css: {}
 
   packages/components-css/link-css: {}
 
@@ -220,6 +222,21 @@ importers:
       '@nl-design-system-candidate/heading-css':
         specifier: workspace:*
         version: link:../../components-css/heading-css
+      '@types/react':
+        specifier: 18.3.23
+        version: 18.3.23
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+
+  packages/components-react/icon-react:
+    devDependencies:
+      '@babel/runtime':
+        specifier: 7.27.6
+        version: 7.27.6
+      '@nl-design-system-candidate/icon-css':
+        specifier: workspace:*
+        version: link:../../components-css/icon-css
       '@types/react':
         specifier: 18.3.23
         version: 18.3.23
@@ -7089,12 +7106,12 @@ snapshots:
       - supports-color
       - typescript
 
-  '@nl-design-system/rollup-config-react-component@1.0.5(postcss@8.5.6)(rollup@4.44.2)(typescript@5.8.3)':
+  '@nl-design-system/rollup-config-react-component@1.0.5(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.44.2)(tslib@2.6.3)(typescript@5.8.3)':
     dependencies:
       '@babel/core': 7.26.10
-      '@rollup/plugin-babel': 6.0.4(@babel/core@7.26.10)(rollup@4.44.2)
+      '@rollup/plugin-babel': 6.0.4(@babel/core@7.26.10)(@types/babel__core@7.20.5)(rollup@4.44.2)
       '@rollup/plugin-node-resolve': 16.0.1(rollup@4.44.2)
-      '@rollup/plugin-typescript': 12.1.2(rollup@4.44.2)(typescript@5.8.3)
+      '@rollup/plugin-typescript': 12.1.2(rollup@4.44.2)(tslib@2.6.3)(typescript@5.8.3)
       rollup: 4.44.2
       rollup-plugin-node-externals: 8.0.0(rollup@4.44.2)
       rollup-plugin-peer-deps-external: 2.2.4(rollup@4.44.2)
@@ -7183,12 +7200,13 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@rollup/plugin-babel@6.0.4(@babel/core@7.26.10)(rollup@4.44.2)':
+  '@rollup/plugin-babel@6.0.4(@babel/core@7.26.10)(@types/babel__core@7.20.5)(rollup@4.44.2)':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/helper-module-imports': 7.25.9
       '@rollup/pluginutils': 5.1.2(rollup@4.44.2)
     optionalDependencies:
+      '@types/babel__core': 7.20.5
       rollup: 4.44.2
     transitivePeerDependencies:
       - supports-color
@@ -7203,13 +7221,14 @@ snapshots:
     optionalDependencies:
       rollup: 4.44.2
 
-  '@rollup/plugin-typescript@12.1.2(rollup@4.44.2)(typescript@5.8.3)':
+  '@rollup/plugin-typescript@12.1.2(rollup@4.44.2)(tslib@2.6.3)(typescript@5.8.3)':
     dependencies:
       '@rollup/pluginutils': 5.1.2(rollup@4.44.2)
       resolve: 1.22.8
       typescript: 5.8.3
     optionalDependencies:
       rollup: 4.44.2
+      tslib: 2.6.3
 
   '@rollup/pluginutils@5.1.2(rollup@4.44.2)':
     dependencies:
@@ -7536,12 +7555,15 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
 
-  '@testing-library/react@16.3.0(@testing-library/dom@10.4.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@testing-library/react@16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@18.3.7(@types/react@18.3.23))(@types/react@18.3.23)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@testing-library/dom': 10.4.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+    optionalDependencies:
+      '@types/react': 18.3.23
+      '@types/react-dom': 18.3.7(@types/react@18.3.23)
 
   '@testing-library/user-event@14.5.2(@testing-library/dom@10.4.0)':
     dependencies:
