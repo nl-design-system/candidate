@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/link-react
 
+## 1.1.4
+
+### Patch Changes
+
+- e7e6678: This was a version bump only for the @babel/runtime devDependency, there were no code changes.
+
 ## 1.1.3
 
 ### Patch Changes
