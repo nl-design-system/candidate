@@ -38,7 +38,7 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@babel/runtime": "7.27.6",
+    "@babel/runtime": "7.28.2",
     "@nl-design-system-candidate/icon-css": "workspace:*",
     "@types/react": "18.3.23",
     "react": "18.3.1"
