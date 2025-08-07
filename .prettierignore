@@ -16,6 +16,7 @@ CHANGELOG.md
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+pnpm-workspace.yaml
 
 
 # Ignore generated files from Stencil
