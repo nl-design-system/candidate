@@ -123,6 +123,13 @@ describe('Icon', () => {
     expect(icon).toHaveClass('nl-icon', extraClassName);
   });
 
+  it('accepts a prop bidiMirrored that results in an extra class name nl-icon--bidi-mirrored', () => {
+    const { container } = render(<Icon bidiMirrored />);
+    const icon = container.querySelector('span:only-child');
+
+    expect(icon).toHaveClass('nl-icon', 'nl-icon--bidi-mirrored');
+  });
+
   it('renders a visible element', () => {
     render(
       <Icon role="img" aria-label={label}>
