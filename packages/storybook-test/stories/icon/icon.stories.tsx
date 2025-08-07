@@ -67,7 +67,7 @@ export const AriaHidden: Story = {
     docs: {
       description: {
         story:
-          'Wanneer een icon decoratief is, is het niet nodig dat een bezoeker die gebruik maakt van hulpsoftware weet dat er een icon aanwezig is. Daarom is het nodig dat de icon aria-hidden ondersteunt.',
+          'Een decoratief icoon, dat door het `aria-hidden="true"` attribuut niet voorkomt in de accessibility tree.',
       },
     },
   },
@@ -82,8 +82,7 @@ export const RoleImg: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'Wanneer een icon niet verborgen is voor hulpsoftware, moet de rol goed gecommuniceerd worden in de accessibility tree. Voor een icon is dit role="img".',
+        story: 'Een icoon dat door de toevoeging `role="img"` als afbeelding zichtbaar is in de accessibility tree.',
       },
     },
   },
@@ -99,7 +98,7 @@ export const AriaLabel: Story = {
     docs: {
       description: {
         story:
-          'Om ervoor te zorgen dat de icon een alternatieve tekst kan hebben, is het nodig dat het een `aria-label` attribuut kan bevatten.',
+          'Een icoon dat door middel van het `aria-label` attribuut een toegankelijke naam heeft die zichtbaar is in de accessibility tree.',
       },
     },
   },
@@ -115,7 +114,7 @@ export const AriaLabelledby: Story = {
     docs: {
       description: {
         story:
-          'Om ervoor te zorgen dat de icon een alternatieve tekst kan hebben, is het nodig dat het een `aria-labelledby` attribuut kan bevatten.',
+          'Een icoon dat door middel van het `aria-labelledby` attribuut, dat verwijst naar een ander element, een toegankelijke naam heeft die zichtbaar is in de accessibility tree.',
       },
     },
   },
