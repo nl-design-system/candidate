@@ -1,5 +1,12 @@
 # @nl-design-system-candidate/mark-react
 
+## 1.1.5
+
+### Patch Changes
+
+- 82bf177: Remove the clsx dependency and replace it with a oneliner equivalent to concatenate classNames.
+- 112d7a1: Add missing devDependencies so the project can be built on its own.
+
 ## 1.1.4
 
 ### Patch Changes
