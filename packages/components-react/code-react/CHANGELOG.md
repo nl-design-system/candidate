@@ -1,5 +1,13 @@
 # @nl-design-system-candidate/code-react
 
+## 1.2.5
+
+### Patch Changes
+
+- 33d16f6: Add missing devDependencies so the project can be built on its own.
+
+  Remove the clsx dependency and replace it with a oneliner equivalent to concatenate classNames.
+
 ## 1.2.4
 
 ### Patch Changes
