@@ -1,5 +1,13 @@
 # @nl-design-system-candidate/color-sample-react
 
+## 1.1.5
+
+### Patch Changes
+
+- 8bfeafb: Add missing devDependencies so the project can be built on its own.
+
+  Remove the clsx dependency and replace it with a oneliner equivalent to concatenate classNames.
+
 ## 1.1.4
 
 ### Patch Changes
