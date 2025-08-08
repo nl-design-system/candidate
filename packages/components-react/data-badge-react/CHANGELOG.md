@@ -1,5 +1,16 @@
 # @nl-design-system-candidate/data-badge-react
 
+## 1.1.5
+
+### Patch Changes
+
+- 0097f83: Add missing devDependencies so the package can be built on its own.
+
+  Replace clsx with a oneliner equivalent.
+
+  Internally simplify DataBadgeProps and fix an error where the value attribute for `<data>` came from
+  `DataHTMLAttributes<HTMLTimeElement>['value']` instead of `DataHTMLAttributes<HTMLDataElement>['value']`.
+
 ## 1.1.4
 
 ### Patch Changes
