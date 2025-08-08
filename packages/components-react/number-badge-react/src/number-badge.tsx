@@ -1,20 +1,22 @@
 import type { DataHTMLAttributes, ForwardedRef, HTMLAttributes, ReactNode } from 'react';
 import { forwardRef } from 'react';
 
-interface NumberBadgePropsForData extends DataHTMLAttributes<HTMLDataElement> {
-  value: number | string;
-  label?: ReactNode;
-}
+type NumberBadgeProps =
+  // <data> variant
+  | (Omit<DataHTMLAttributes<HTMLDataElement>, 'value'> & {
+      value: string | number;
+      label?: ReactNode;
+    })
+  // <span> variant
+  | (HTMLAttributes<HTMLSpanElement> & {
+      label?: ReactNode;
+    });
 
-interface NumberBadgePropsForSpan extends HTMLAttributes<HTMLSpanElement> {
-  label?: ReactNode;
+function isDataNumberBadgeProps(props: NumberBadgeProps): props is Extract<NumberBadgeProps, { value: unknown }> {
+  return 'value' in props;
 }
-
-const isNumberBadgePropsForData = (props: NumberBadgeProps): props is NumberBadgePropsForData => 'value' in props;
 
 const cn = (...classes: Array<string | undefined | null>): string => classes.filter(Boolean).join(' ');
-
-export type NumberBadgeProps = NumberBadgePropsForData | NumberBadgePropsForSpan;
 
 export const NumberBadge = forwardRef<HTMLDataElement | HTMLSpanElement, NumberBadgeProps>(
   function NumberBadge(props, ref) {
@@ -40,7 +42,7 @@ export const NumberBadge = forwardRef<HTMLDataElement | HTMLSpanElement, NumberB
       </>
     );
 
-    if (isNumberBadgePropsForData(restProps)) {
+    if (isDataNumberBadgeProps(restProps)) {
       const { value, ...dataRestProps } = restProps;
       return (
         <data {...dataRestProps} value={value} className={className} ref={ref as ForwardedRef<HTMLDataElement>}>
