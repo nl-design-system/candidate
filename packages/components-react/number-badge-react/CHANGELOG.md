@@ -1,5 +1,13 @@
 # @nl-design-system-candidate/number-badge-react
 
+## 1.2.5
+
+### Patch Changes
+
+- 7086236: Internally simplify NumberBadgeProps by getting rid of the intermediary NumberBadgePropsForData.
+- 963380e: Add missing devDependencies so the project can be built on its own.
+- 8c5b9ca: Remove the clsx dependency and replace it with a oneliner equivalent to concatenate classNames.
+
 ## 1.2.4
 
 ### Patch Changes
