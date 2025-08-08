@@ -1,5 +1,4 @@
 import type { DataHTMLAttributes, ForwardedRef, HTMLAttributes, TimeHTMLAttributes } from 'react';
-import { clsx } from 'clsx';
 import { forwardRef } from 'react';
 
 interface DataBadgePropsForTime extends TimeHTMLAttributes<HTMLTimeElement> {
@@ -16,12 +15,14 @@ interface DataBadgePropsForData extends DataHTMLAttributes<HTMLDataElement> {
 
 const isDataBadgePropsForData = (props: DataBadgeProps): props is DataBadgePropsForData => 'value' in props;
 
+const cn = (...classes: Array<string | undefined | null>): string => classes.filter(Boolean).join(' ');
+
 export type DataBadgeProps = DataBadgePropsForTime | DataBadgePropsForData | HTMLAttributes<HTMLSpanElement>;
 
 export const DataBadge = forwardRef<HTMLTimeElement | HTMLDataElement | HTMLSpanElement, DataBadgeProps>(
   function DataBadge(props, ref) {
     const { children, ...restProps } = props;
-    const className = clsx('nl-data-badge', props.className);
+    const className = cn('nl-data-badge', props.className);
 
     if (isDataBadgePropsForTime(restProps)) {
       const { dateTime, ...timeRestProps } = restProps;
