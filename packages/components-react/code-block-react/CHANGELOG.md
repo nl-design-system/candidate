@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-block-react
 
+## 1.3.5
+
+### Patch Changes
+
+- 0db8a2d: Add missing devDependencies so the project can be built on its own.
+
 ## 1.3.4
 
 ### Patch Changes

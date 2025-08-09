@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/number-badge-css
 
+## 1.1.3
+
+### Patch Changes
+
+- 32a5a21: Add missing devDependencies so the project can be built on its own.
+
 ## 1.1.2
 
 ### Patch Changes
@@ -17,7 +23,6 @@
 ### Minor Changes
 
 - 759acf8: Add class names and mixins:
-
   - `nl-number-badge__hidden-label`: for the hidden label
   - `nl-number-badge__visible-label`: for the visible label
 
