@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-css
 
+## 2.0.3
+
+### Patch Changes
+
+- 32a5a21: Add missing devDependencies so the project can be built on its own.
+
 ## 2.0.2
 
 ### Patch Changes

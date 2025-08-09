@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-block-css
 
+## 1.1.3
+
+### Patch Changes
+
+- 32a5a21: Add missing devDependencies so the project can be built on its own.
+
 ## 1.1.2
 
 ### Patch Changes
@@ -17,7 +23,6 @@
 ### Minor Changes
 
 - 5557084: Add new class names and mixins:
-
   - `nl-code-block--nowrap`: fit content, even for very long lines.
   - `nl-code-block--overflow`: provide scrollbars to see very long lines.
 

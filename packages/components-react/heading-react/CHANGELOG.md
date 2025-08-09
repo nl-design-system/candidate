@@ -1,5 +1,12 @@
 # @nl-design-system-candidate/heading-react
 
+## 1.1.5
+
+### Patch Changes
+
+- 04b0108: Add missing devDependencies so the project can be built on its own.
+- 5f6d2f7: Remove the clsx dependency and replace it with a oneliner equivalent to concatenate classNames.
+
 ## 1.1.4
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/paragraph-react
 
+## 2.1.5
+
+### Patch Changes
+
+- 0db8a2d: Add missing devDependencies so the project can be built on its own.
+
 ## 2.1.4
 
 ### Patch Changes

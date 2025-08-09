@@ -1,11 +1,16 @@
 # @nl-design-system-candidate/heading-css
 
+## 1.1.1
+
+### Patch Changes
+
+- 32a5a21: Add missing devDependencies so the project can be built on its own.
+
 ## 1.1.0
 
 ### Minor Changes
 
 - 8843d5c: Margins can now be set on Headings of all levels using the following tokens:
-
   - `nl-heading-level-1-margin-block-start`
   - `nl-heading-level-1-margin-block-end`
   - `nl-heading-level-2-margin-block-start`

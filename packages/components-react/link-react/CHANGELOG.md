@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/link-react
 
+## 1.1.5
+
+### Patch Changes
+
+- 0db8a2d: Add missing devDependencies so the project can be built on its own.
+
 ## 1.1.4
 
 ### Patch Changes
