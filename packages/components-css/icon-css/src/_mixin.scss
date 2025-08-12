@@ -1,21 +1,52 @@
 @mixin nl-icon {
-  block-size: var(--nl-icon-block-size, 1em);
+  // Default to 1lh × 1lh
+  --_nl-icon-block-size: 1lh;
+  --_nl-icon-inline-size: 1lh;
+
+  align-items: center;
+
+  // background-color: color-mix(in srgb, tomato 25%, transparent);
+  block-size: var(--nl-icon-block-size, var(--_nl-icon-block-size));
   color: var(--nl-icon-color, currentcolor);
-  display: inline-block;
+  display: inline-flex;
   font-size: var(--nl-icon-font-size, 1em);
-  inline-size: var(--nl-icon-inline-size, 1em);
+  inline-size: var(--nl-icon-inline-size, var(--_nl-icon-inline-size));
   inset-block-start: var(--nl-icon-inset-block-start, 0);
+  justify-content: center;
+  min-block-size: var(--nl-icon-block-size, var(--_nl-icon-block-size));
+  min-inline-size: var(--nl-icon-inline-size, var(--_nl-icon-inline-size));
   pointer-events: none;
   position: relative;
+  vertical-align: middle;
 }
 
-@mixin nl-icon__svg {
-  /* stylelint-disable-next-line property-disallowed-list */
-  height: 100%;
-  /* stylelint-disable-next-line property-disallowed-list */
-  width: 100%;
+@mixin nl-icon--forced-colors {
+  color: currentColor;
+}
+
+// The icon takes on the size of the current font-size
+@mixin nl-icon--size-em {
+  --nl-icon-block-size: 1em;
+  --nl-icon-inline-size: 1em;
+}
+
+// The icon takes on the size of the x-height of the current font-family
+@mixin nl-icon--size-ex {
+  --nl-icon-block-size: 1ex;
+  --nl-icon-inline-size: 1ex;
+}
+
+// The icon takes on the size of the current line-height
+@mixin nl-icon--size-lh {
+  --nl-icon-block-size: 1lh;
+  --nl-icon-inline-size: 1lh;
 }
 
 @mixin nl-icon--bidi-mirrored {
   transform: scaleX(-1);
+}
+
+@mixin nl-icon__svg {
+  block-size: 100%;
+  inline-size: 100%;
 }

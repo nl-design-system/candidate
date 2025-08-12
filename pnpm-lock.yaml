@@ -877,6 +877,15 @@ importers:
       '@fontsource/fira-sans':
         specifier: 5.2.6
         version: 5.2.6
+      '@nl-design-system-candidate/heading-react':
+        specifier: workspace:*
+        version: link:../components-react/heading-react
+      '@nl-design-system-candidate/link-react':
+        specifier: workspace:*
+        version: link:../components-react/link-react
+      '@nl-design-system-candidate/paragraph-react':
+        specifier: workspace:*
+        version: link:../components-react/paragraph-react
       '@nl-design-system-candidate/storybook-shared':
         specifier: workspace:*
         version: link:../storybook-shared

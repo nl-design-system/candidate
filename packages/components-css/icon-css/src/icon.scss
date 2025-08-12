@@ -4,10 +4,28 @@
   @include mixin.nl-icon;
 }
 
-.nl-icon svg {
-  @include mixin.nl-icon__svg;
+@media screen and (forced-colors: active) {
+  .nl-icon {
+    @include mixin.nl-icon--forced-colors;
+  }
 }
 
-.nl-icon:dir(rtl) {
+.nl-icon--size-em {
+  @include mixin.nl-icon--size-em;
+}
+
+.nl-icon--size-ex {
+  @include mixin.nl-icon--size-ex;
+}
+
+.nl-icon--size-lh {
+  @include mixin.nl-icon--size-lh;
+}
+
+.nl-icon--bidi-mirrored:dir(rtl) {
   @include mixin.nl-icon--bidi-mirrored;
+}
+
+.nl-icon svg {
+  @include mixin.nl-icon__svg;
 }
