@@ -392,7 +392,7 @@ export const HeadingLevel6: Story = {
       <Heading level={3}>Boek 1, Personen- en familierecht</Heading>
       <Heading level={4}>Titel 5. Het huwelijk</Heading>
       <Heading level={5}>Afdeling 1. Vereisten tot het aangaan van een huwelijk</Heading>
-      <Heading level={6}>{Story()}</Heading>
+      <Story />
       <Paragraph>
         Zij die met elkander een huwelijk willen aangaan, mogen niet tegelijkertijd een geregistreerd partnerschap zijn
         aangegaan.
