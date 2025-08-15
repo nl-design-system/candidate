@@ -877,6 +877,15 @@ importers:
       '@fontsource/fira-sans':
         specifier: 5.2.6
         version: 5.2.6
+      '@nl-design-system-candidate/heading-react':
+        specifier: workspace:*
+        version: link:../components-react/heading-react
+      '@nl-design-system-candidate/link-react':
+        specifier: 1.1.5
+        version: 1.1.5(@babel/runtime@7.28.2)(react@18.3.1)
+      '@nl-design-system-candidate/paragraph-react':
+        specifier: workspace:*
+        version: link:../components-react/paragraph-react
       '@nl-design-system-candidate/storybook-shared':
         specifier: workspace:*
         version: link:../storybook-shared
@@ -2017,6 +2026,12 @@ packages:
     peerDependencies:
       '@types/react': '>=16'
       react: '>=16'
+
+  '@nl-design-system-candidate/link-react@1.1.5':
+    resolution: {integrity: sha512-3tV2p0ZMqtHQNg6NKqg5yM85CZmqpQ/L0UJ4r5jbiPIb1zVDGpo277s+lfdJtV0ZQykVCaLZRDIYT37auoNaog==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
 
   '@nl-design-system-unstable/design-tokens-table-react@1.0.0':
     resolution: {integrity: sha512-WBc4wkfGvR42Iw0GwcdXLAv5Y21fUM8rPJ1eAID6ymM1rx8VrN3ZnmTqtsQtKdkCCvHGvl2Zl4WJngG+bmJIlQ==}
@@ -7160,6 +7175,12 @@ snapshots:
     dependencies:
       '@types/mdx': 2.0.5
       '@types/react': 18.3.23
+      react: 18.3.1
+
+  '@nl-design-system-candidate/link-react@1.1.5(@babel/runtime@7.28.2)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      clsx: 2.1.1
       react: 18.3.1
 
   '@nl-design-system-unstable/design-tokens-table-react@1.0.0(@babel/runtime@7.28.2)(react@18.3.1)':
