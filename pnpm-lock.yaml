@@ -670,6 +670,8 @@ importers:
 
   packages/docs/heading-docs: {}
 
+  packages/docs/icon-docs: {}
+
   packages/docs/link-docs: {}
 
   packages/docs/mark-docs: {}
