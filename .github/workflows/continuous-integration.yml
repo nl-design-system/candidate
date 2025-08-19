@@ -1,4 +1,6 @@
 name: Continuous Integration
+# Upon success triggers:
+# - .github/workflows/codecov.yml
 
 on:
   pull_request:
@@ -112,9 +114,4 @@ jobs:
         run: pnpm run build
 
       - name: Test
-        run: pnpm run test:coverage
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@18283e04ce6e62d37312384ff67231eb8fd56d24 # v5.4.3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+        run: pnpm run test
