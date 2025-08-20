@@ -42,6 +42,8 @@ jobs:
           fetch-depth: 0
 
       - name: Start check
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           gh api --method POST repos/:owner/:repo/check-runs \
             --header "Accept: application/vnd.github+json" \
