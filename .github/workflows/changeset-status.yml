@@ -1,7 +1,21 @@
 name: Changeset status
 
 on:
-  pull_request:
+  workflow_run:
+    workflows:
+      # Triggered by the Continuous Integration workflow
+      - Continuous Integration
+    types:
+      # Start running parallel to the Continuous Integration workflow
+      - in_progress
+
+permissions:
+  # Read the contents of the repo
+  contents: read
+  # Write the result back to the pull request that triggered this workflow
+  checks: write
+  # Be able to comment on the pull request
+  pull-requests: write
 
 jobs:
   changeset-status:
@@ -10,7 +24,7 @@ jobs:
     #
     # 1. the branch was created by the Changeset Action itself
     # 2. the branch was created by Dependabot because it cannot (and should not) access the `private-key` secret
-    if: ${{ !startsWith(github.head_ref, 'changeset-release/') && github.actor != 'dependabot[bot]' }}
+    if: ${{ !startsWith(github.event.workflow_run.head_branch, 'changeset-release/') && github.actor != 'dependabot[bot]' }}
     steps:
       - name: Create GitHub App Token
         id: app-token
@@ -22,9 +36,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
+          ref: ${{ github.event.workflow_run.head_sha }}
           # Fetch all history for all branches so that `changeset:status` in package.json#scripts can determine if
           # a changeset is needed or not.
           fetch-depth: 0
+
+      - name: Start check
+        run: |
+          gh api --method POST repos/:owner/:repo/check-runs \
+            --header "Accept: application/vnd.github+json" \
+            --field head_sha=${{ github.event.workflow_run.head_sha }} \
+            --field name="${{ github.workflow }}" \
 
       - name: Install pnpm package manager
         uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
@@ -55,6 +77,11 @@ jobs:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           gh api --method DELETE repos/:owner/:repo/issues/comments/${{ steps.find-existing-comment.outputs.comment }}
+          gh api --method POST repos/:owner/:repo/check-runs \
+            --header "Accept: application/vnd.github+json" \
+            --field head_sha=${{ github.event.workflow_run.head_sha }} \
+            --field name="${{ github.workflow }}" \
+            --field conclusion="success"
           exit 0
 
       - name: Create new comment
@@ -62,7 +89,13 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          gh pr comment ${{ github.event.pull_request.number }} --body ":warning: Deze pull request mist een changeset terwijl er wel een nodig is :warning:"
+          gh pr comment ${{ github.event.workflow_run.pull_requests[0].number }} \
+            --body ":warning: Deze pull request mist een changeset terwijl er wel een nodig is :warning:"
+          gh api --method POST repos/:owner/:repo/check-runs \
+            --header "Accept: application/vnd.github+json" \
+            --field head_sha=${{ github.event.workflow_run.head_sha }} \
+            --field name="${{ github.workflow }}" \
+            --field conclusion="failure"
           exit 1
 
       - name: Update existing comment
@@ -70,5 +103,12 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          gh pr comment ${{ github.event.pull_request.number }} --edit-last --body ":warning: Deze pull request mist nog steeds een changeset terwijl er wel een nodig is. :warning:"
+          gh pr comment ${{ github.event.workflow_run.pull_requests[0].number }} \
+            --edit-last \
+            --body ":warning: Deze pull request mist nog steeds een changeset terwijl er wel een nodig is. :warning:"
+          gh api --method POST repos/:owner/:repo/check-runs \
+            --header "Accept: application/vnd.github+json" \
+            --field head_sha=${{ github.event.workflow_run.head_sha }} \
+            --field name="${{ github.workflow }}" \
+            --field conclusion="failure"
           exit 1
