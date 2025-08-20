@@ -20,7 +20,7 @@ Er zijn twee manieren om bij te dragen:
 
 Omdat je **geen rechten hebt om direct naar deze repository te pushen**, volg je deze stappen:
 
-1. **Fork** deze repository naar je eigen GitHub account.
+1. [**Fork**](/nl-design-system/candidate/fork) deze repository naar je eigen GitHub account.
 2. Maak een nieuwe branch voor je wijzigingen en commit je wijzigingen in je eigen fork.
 3. Push je branch naar je eigen fork op GitHub.
 4. Maak vanuit je fork een **pull request** naar de `main` branch van deze repository.
