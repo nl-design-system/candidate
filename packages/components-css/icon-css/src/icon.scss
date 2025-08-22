@@ -10,16 +10,20 @@
   }
 }
 
-.nl-icon--size-em {
-  @include mixin.nl-icon--size-em;
+.nl-icon--cap {
+  @include mixin.nl-icon--cap;
 }
 
-.nl-icon--size-ex {
-  @include mixin.nl-icon--size-ex;
+.nl-icon--em {
+  @include mixin.nl-icon--em;
 }
 
-.nl-icon--size-lh {
-  @include mixin.nl-icon--size-lh;
+.nl-icon--ex {
+  @include mixin.nl-icon--ex;
+}
+
+.nl-icon--lh {
+  @include mixin.nl-icon--lh;
 }
 
 .nl-icon--bidi-mirrored:dir(rtl) {
