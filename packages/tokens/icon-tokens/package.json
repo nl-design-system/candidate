@@ -1,0 +1,25 @@
+{
+  "name": "@nl-design-system-candidate/icon-tokens",
+  "version": "0.0.0",
+  "description": "Design tokens voor het Icon component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/icon-tokens#readme",
+  "main": "./tokens.json",
+  "export": "./tokens.json",
+  "files": [
+    "./tokens.json"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/tokens/icon-tokens"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "generate-tokens": "../../../scripts/generate-tokens.sh icon"
+  }
+}
