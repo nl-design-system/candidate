@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/skip-link-tokens
 
+## 1.0.2
+
+### Patch Changes
+
+- 3444020: Add missing "homepage" field to package.json
+
 ## 1.0.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-tokens
 
+## 2.0.2
+
+### Patch Changes
+
+- 3444020: Add missing "homepage" field to package.json
+
 ## 2.0.1
 
 ### Patch Changes

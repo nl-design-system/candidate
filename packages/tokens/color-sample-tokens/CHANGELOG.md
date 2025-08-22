@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/color-sample-tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- 3444020: Add missing "homepage" field to package.json
+
 ## 2.0.0
 
 ### Major Changes
