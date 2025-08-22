@@ -237,6 +237,22 @@ export const SVGAsIcon: Story = {
         story: 'Een SVG met alleen de `.nl-icon` class name in te stellen.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS],
+      fail: [WCAG22_111_NON_TEXT_CONTENT],
+    },
   },
   render() {
     return <IconCalendarEvent className="nl-icon" />;
