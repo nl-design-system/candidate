@@ -268,6 +268,21 @@ export const EmojiIcon: Story = {
         story: 'Een emoji kan gebruikt worden als Icon.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
 };
 
@@ -279,6 +294,21 @@ export const SVGIconWithAriaHidden: Story = {
         story:
           'Een decoratief icoon, dat door het `aria-hidden="true"` attribuut niet voorkomt in de accessibility tree.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
 };
@@ -294,6 +324,21 @@ export const SVGIconWithRoleImg: Story = {
       description: {
         story: 'Een icoon dat door de toevoeging `role="img"` als afbeelding zichtbaar is in de accessibility tree.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
 };
@@ -311,6 +356,21 @@ export const SVGIconWithAriaLabel: Story = {
           'Een icoon dat door middel van het `aria-label` attribuut een toegankelijke naam heeft die zichtbaar is in de accessibility tree.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
 };
 
@@ -326,6 +386,21 @@ export const SVGIconWithAriaLabelledby: Story = {
         story:
           'Een icoon dat door middel van het `aria-labelledby` attribuut, dat verwijst naar een ander element, een toegankelijke naam heeft die zichtbaar is in de accessibility tree.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
@@ -348,6 +423,21 @@ export const SVGIconDefaultSize: Story = {
         story: 'Een SVG Icon is standaard ingesteld op 1× de `line-height` (`1lh`) als `inline-size` en `block-size`.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -366,6 +456,21 @@ export const SVGIconDefaultSizeInCustomLineHeight: Story = {
         story:
           'Een Icon is standaard ingesteld op 1× de `line-height` (`1lh`) als de `inline-size` en `block-size` ook als de huidige `line-height` een afwijkende waarde heeft.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
@@ -390,6 +495,21 @@ export const SVGIconSizeLh: Story = {
           'Een SVG Icon kan expliciet worden ingesteld op 1× de `line-height` (`1lh`) als `inline-size` en `block-size`.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -409,6 +529,21 @@ export const SVGIconSizeLhInCustomLineHeight: Story = {
         story:
           'Een SVG Icon kan expliciet worden ingesteld op 1× de `line-height` (`1lh`) als `inline-size` en `block-size` ook als de huidige `line-height` een afwijkende waarde heeft.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
@@ -430,6 +565,21 @@ export const SVGIconSizeEm: Story = {
           'Een Icon kan expliciet worden ingesteld op 1× de `font-size` (`1em`) als `inline-size` en `block-size`.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -449,6 +599,21 @@ export const SVGIconSizeEmInParagraphWithCustomFontSize: Story = {
         story:
           'Een Icon kan worden ingesteld op 1× de `font-size` (`1em`) als de `inline-size` en `block-size` ook als de huidige `font-size` een afwijkende waarde heeft.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
@@ -473,6 +638,21 @@ export const SVGIconSizeEx: Story = {
           'Een Icon kan expliciet worden ingesteld om 1× de x-hoogte (`1ex`) als zowel `inline-size` als `block-size` te krijgen.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -492,6 +672,21 @@ export const SVGIconSizeExInParagraphWithCustomFontSize: Story = {
         story:
           'Een Icon kan worden ingesteld op 1× de `font-size` (`1ex`) als de `inline-size` en `block-size` ook als de huidige `font-size` een afwijkende waarde heeft.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
@@ -544,6 +739,21 @@ export const SVGIconUsingBidiMirroredInLTRParagraph: Story = {
           'Met de `bidiMirrored` prop kan een Icon worden ingesteld om mee te spiegelen met de richting van de taal zoals die is aangegeven met het `dir` attribuut in een left-to-right taal zoals Nederlands.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -561,6 +771,21 @@ export const SVGIconWithInheritedColor: Story = {
       description: {
         story: 'Als de kleur niet expliciet is ingesteld zal het SVG Icon de kleur overnemen van een parent element.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
@@ -586,6 +811,21 @@ export const SVGIconWithExplicitColor: Story = {
           'Als de kleur expliciet is ingesteld met de `--nl-icon-color` design token neemt het SVG Icon niet langer de kleur over van een parent element.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -598,7 +838,28 @@ export const SVGIconWithExplicitColor: Story = {
 
 export const SVGIconInHeadingLevel1: Story = {
   name: 'SVG Icon in Heading level 1',
-  parameters: { docs: { description: { story: 'Een SVG Icon kan worden weergegeven in een Heading met level 1' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een SVG Icon kan worden weergegeven in een Heading met level 1',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={1}>
@@ -610,7 +871,28 @@ export const SVGIconInHeadingLevel1: Story = {
 
 export const SVGIconInHeadingLevel2: Story = {
   name: 'SVG Icon in Heading level 2',
-  parameters: { docs: { description: { story: 'Een SVG Icon kan worden weergegeven in een Heading met level 2' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een SVG Icon kan worden weergegeven in een Heading met level 2',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={2}>
@@ -622,7 +904,28 @@ export const SVGIconInHeadingLevel2: Story = {
 
 export const SVGIconInHeadingLevel3: Story = {
   name: 'SVG Icon in Heading level 3',
-  parameters: { docs: { description: { story: 'Een SVG Icon kan worden weergegeven in een Heading met level 3' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een SVG Icon kan worden weergegeven in een Heading met level 3',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={3}>
@@ -634,7 +937,28 @@ export const SVGIconInHeadingLevel3: Story = {
 
 export const SVGIconInHeadingLevel4: Story = {
   name: 'SVG Icon in Heading level 4',
-  parameters: { docs: { description: { story: 'Een SVG Icon kan worden weergegeven in een Heading met level 4' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een SVG Icon kan worden weergegeven in een Heading met level 4',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={4}>
@@ -646,7 +970,28 @@ export const SVGIconInHeadingLevel4: Story = {
 
 export const SVGIconInHeadingLevel5: Story = {
   name: 'SVG Icon in Heading level 5',
-  parameters: { docs: { description: { story: 'Een SVG Icon kan worden weergegeven in een Heading met level 5' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een SVG Icon kan worden weergegeven in een Heading met level 5',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={5}>
@@ -658,7 +1003,28 @@ export const SVGIconInHeadingLevel5: Story = {
 
 export const SVGIconInHeadingLevel6: Story = {
   name: 'SVG Icon in Heading level 6',
-  parameters: { docs: { description: { story: 'Een SVG Icon kan worden weergegeven in een Heading met level 6' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een SVG Icon kan worden weergegeven in een Heading met level 6',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={6}>
@@ -678,6 +1044,21 @@ export const SVGIconInNarrowHeadingLevel1: Story = {
           'Een SVG Icon kan worden weergegeven in een Heading met level 1 in een smalle container waarin de Heading wordt afgebroken. Het SVG Icon staat dan inline met de rest van de Heading.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -691,7 +1072,28 @@ export const SVGIconInNarrowHeadingLevel1: Story = {
 export const EmojiIconInHeadingLevel1: Story = {
   name: 'Emoji Icon in Heading level 1',
   args: { children: '📅' },
-  parameters: { docs: { description: { story: 'Een emoji Icon kan worden weergegeven in een Heading met level 1' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een emoji Icon kan worden weergegeven in een Heading met level 1',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={1}>
@@ -704,7 +1106,28 @@ export const EmojiIconInHeadingLevel1: Story = {
 export const EmojiIconInHeadingLevel2: Story = {
   name: 'Emoji Icon in Heading level 2',
   args: { children: '📅' },
-  parameters: { docs: { description: { story: 'Een emoji Icon kan worden weergegeven in een Heading met level 2' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een emoji Icon kan worden weergegeven in een Heading met level 2',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={2}>
@@ -717,7 +1140,28 @@ export const EmojiIconInHeadingLevel2: Story = {
 export const EmojiIconInHeadingLevel3: Story = {
   name: 'Emoji Icon in Heading level 3',
   args: { children: '📅' },
-  parameters: { docs: { description: { story: 'Een emoji Icon kan worden weergegeven in een Heading met level 3' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een emoji Icon kan worden weergegeven in een Heading met level 3',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={3}>
@@ -730,7 +1174,28 @@ export const EmojiIconInHeadingLevel3: Story = {
 export const EmojiIconInHeadingLevel4: Story = {
   name: 'Emoji Icon in Heading level 4',
   args: { children: '📅' },
-  parameters: { docs: { description: { story: 'Een emoji Icon kan worden weergegeven in een Heading met level 4' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een emoji Icon kan worden weergegeven in een Heading met level 4',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={4}>
@@ -743,7 +1208,28 @@ export const EmojiIconInHeadingLevel4: Story = {
 export const EmojiIconInHeadingLevel5: Story = {
   name: 'Emoji Icon in Heading level 5',
   args: { children: '📅' },
-  parameters: { docs: { description: { story: 'Een emoji Icon kan worden weergegeven in een Heading met level 5' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een emoji Icon kan worden weergegeven in een Heading met level 5',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={5}>
@@ -756,7 +1242,28 @@ export const EmojiIconInHeadingLevel5: Story = {
 export const EmojiIconInHeadingLevel6: Story = {
   name: 'Emoji Icon in Heading level 6',
   args: { children: '📅' },
-  parameters: { docs: { description: { story: 'Een emoji Icon kan worden weergegeven in een Heading met level 6' } } },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een emoji Icon kan worden weergegeven in een Heading met level 6',
+      },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+  },
   render(props) {
     return (
       <Heading level={6}>
@@ -777,6 +1284,21 @@ export const EmojiIconInNarrowHeadingLevel1: Story = {
           'Een SVG Icon kan worden weergegeven in een Heading met level 1 in een smalle container waarin de Heading wordt afgebroken. Het SVG Icon staat dan inline met de rest van de Heading.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -796,6 +1318,21 @@ export const SVGIconInLinkInParagraph: Story = {
         story:
           'Een SVG Icon kan worden weergegeven in een Link in een Paragraaf. Het SVG Icon krijgt hierbij de kleur van de Link.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
@@ -824,6 +1361,21 @@ export const SVGIconSizeEmInLinkInParagraph: Story = {
           'Een SVG Icon kan met size em worden weergegeven in een Link in een Paragraaf. Het SVG Icon krijgt hierbij de kleur van de Link.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -851,6 +1403,21 @@ export const SVGIconSizeExInLinkInParagraph: Story = {
           'Een SVG Icon kan met size ex worden weergegeven in een Link in een Paragraaf. Het SVG Icon krijgt hierbij de kleur van de Link.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -874,6 +1441,21 @@ export const SVGIconInButtonInParagraph: Story = {
           'Een SVG Icon kan worden weergegeven in een `<button>` in een Paragraaf. Het SVG Icon krijgt hierbij de kleur van de `<button>`',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -895,6 +1477,21 @@ export const SVGIconInDisabledButtonInParagraph: Story = {
           'Een SVG Icon kan worden weergegeven in een disabled `<button>` in een Paragraaf. Het SVG Icon krijgt hierbij de kleur van de disabled `<button>`',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -915,6 +1512,21 @@ export const SVGIconInParagraphWithLetterAndWordSpacing: Story = {
         story: 'Een SVG Icon kan worden weergegeven in een Paragraph met grote letter en word spacing.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -934,6 +1546,21 @@ export const SVGIconInAFlexboxRow: Story = {
         story:
           'Een SVG Icon kan worden weergegeven in een net iets te smalle flex container. Het SVG Icon wordt hierbij niet in elkaar gedrukt.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
@@ -967,6 +1594,21 @@ export const SVGIconInAFlexboxColumn: Story = {
           'Een SVG Icon kan worden weergegeven in een net iets te smalle flex container. Het SVG Icon wordt neemt hierbij niet de volledige breedte van de container aan.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -993,6 +1635,21 @@ export const CustomSizeIcon: Story = {
         story:
           'Een SVG Icon kan met de design tokens `--nl-icon-block-size` en `--nl-icon-inline-size` worden ingesteld op een volledig custom size.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
 };
@@ -1044,6 +1701,21 @@ export const SVGIconAndParagraphInFlexbox: Story = {
           'Een SVG Icon kan met flexbox in het midden worden uitgelijnd als het staat naast een Paragraph in een flex container.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -1062,6 +1734,21 @@ export const SVGIconAndParagraphInNarrowFlexbox: Story = {
         story:
           'Een SVG Icon kan met flexbox bovenin worden uitgelijnd als het staat naast een Paragraph in een smalle flex container.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
@@ -1089,6 +1776,21 @@ export const SVGIconCustomSizeAndParagraphInFlexbox: Story = {
           'Een SVG Icon kan met de design tokens `--nl-icon-block-size` en `--nl-icon-inline-size` worden ingesteld op een volledig custom size. Het kan dan gecentreerd worden weergegeven in een flex container.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -1115,6 +1817,21 @@ export const SVGIconsInList: Story = {
         story:
           'Voorbeeld van meerdere SVG Icons onder elkaar. Het laatste SVG Icon heeft een afwijkende `--nl-icon-inline-size` en lijnt daardoor niet uit met de andere SVG Icons.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
@@ -1169,6 +1886,21 @@ export const SVGIconInAComposition: Story = {
         story:
           'Een SVG Icon kan ingesteld worden op een grootte en met een kleur in een compositie waarbij gebruik gemaakt worden design tokens van een ander component in de compositie zoals hier een Heading level 3.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
   render(props) {
