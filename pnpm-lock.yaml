@@ -977,6 +977,8 @@ importers:
 
   packages/tokens/heading-tokens: {}
 
+  packages/tokens/icon-tokens: {}
+
   packages/tokens/link-tokens: {}
 
   packages/tokens/mark-tokens: {}
