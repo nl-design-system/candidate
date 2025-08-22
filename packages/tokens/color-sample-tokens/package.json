@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Design tokens voor het Color Sample component",
   "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/color-sample-tokens#readme",
   "main": "./tokens.json",
   "exports": "./tokens.json",
   "files": [

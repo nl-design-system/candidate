@@ -3,6 +3,7 @@
   "version": "2.0.1",
   "description": "Design tokens voor het Code component",
   "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/code-tokens#readme",
   "main": "./tokens.json",
   "exports": "./tokens.json",
   "files": [
