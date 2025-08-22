@@ -850,6 +850,44 @@ export const CustomSizeIcon: Story = {
   },
 };
 
+export const CustomSizeIconWide: Story = {
+  name: 'SVG Icon met custom size breed',
+  args: {
+    style: {
+      '--nl-icon-block-size': '2.5rem',
+      '--nl-icon-inline-size': '5rem',
+      border: '1px dashed',
+    } as CSSProperties,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een SVG Icon kan met de design tokens `--nl-icon-block-size` en `--nl-icon-inline-size` worden ingesteld op een volledig custom size, ook als dit breder dan hoog is. Een vierkante SVG wordt dan gecentreerd weergegeven.',
+      },
+    },
+  },
+};
+
+export const CustomSizeIconTall: Story = {
+  name: 'SVG Icon met custom size hoog',
+  args: {
+    style: {
+      '--nl-icon-block-size': '5rem',
+      '--nl-icon-inline-size': '2.55rem',
+      border: '1px dashed',
+    } as CSSProperties,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een SVG Icon kan met de design tokens `--nl-icon-block-size` en `--nl-icon-inline-size` worden ingesteld op een volledig custom size, ook als dit hoger dan breed is. Een vierkante SVG wordt dan gecentreerd weergegeven.',
+      },
+    },
+  },
+};
+
 export const SVGIconAndParagraphInFlexbox: Story = {
   name: 'SVG Icon met Paragraph in flex container',
   parameters: {
