@@ -715,6 +715,21 @@ export const SVGIconUsingBidiMirroredInRTLParagraph: Story = {
           'Met de `bidiMirrored` prop kan een Icon worden ingesteld om mee te spiegelen met de richting van de taal zoals die is aangegeven met het `dir` attribuut in een right-to-left taal zoals Arabisch.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
   render(props) {
     return (
@@ -1670,6 +1685,21 @@ export const CustomSizeIconWide: Story = {
           'Een SVG Icon kan met de design tokens `--nl-icon-block-size` en `--nl-icon-inline-size` worden ingesteld op een volledig custom size, ook als dit breder dan hoog is. Een vierkante SVG wordt dan gecentreerd weergegeven.',
       },
     },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
   },
 };
 
@@ -1688,6 +1718,21 @@ export const CustomSizeIconTall: Story = {
         story:
           'Een SVG Icon kan met de design tokens `--nl-icon-block-size` en `--nl-icon-inline-size` worden ingesteld op een volledig custom size, ook als dit hoger dan breed is. Een vierkante SVG wordt dan gecentreerd weergegeven.',
       },
+    },
+    testResult: {
+      date: '2025-08-22',
+      notTested: [
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
   },
 };
@@ -1726,6 +1771,7 @@ export const SVGIconAndParagraphInFlexbox: Story = {
     );
   },
 };
+
 export const SVGIconAndParagraphInNarrowFlexbox: Story = {
   decorators: [withBoxDecorator('10rem')],
   parameters: {
@@ -1760,6 +1806,7 @@ export const SVGIconAndParagraphInNarrowFlexbox: Story = {
     );
   },
 };
+
 export const SVGIconCustomSizeAndParagraphInFlexbox: Story = {
   name: 'SVG Icon met custom size in Paragraaf in flex container',
   args: {
