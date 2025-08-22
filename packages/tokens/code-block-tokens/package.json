@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/code-block-tokens",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Design tokens voor het Code Block component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/code-block-tokens#readme",

@@ -1,5 +1,15 @@
 # @nl-design-system-candidate/mark-tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- 3444020: Add missing "homepage" field to package.json
+- 3444020: Add a missing "files" field in package.json.
+
+  Because tokens.json was not ignored explicitly in .npmignore or .gitignore, it was always included in the package, so
+  technically this is a patch change.
+
 ## 2.0.0
 
 ### Major Changes

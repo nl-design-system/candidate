@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/link-tokens",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Design tokens voor het Link component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/link-tokens#readme",
