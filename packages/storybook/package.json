@@ -23,7 +23,7 @@
     "@fontsource/fira-sans": "5.2.6",
     "@fontsource/source-serif-pro": "5.2.5",
     "@nl-design-system-candidate/storybook-shared": "workspace:*",
-    "@nl-design-system-unstable/voorbeeld-design-tokens": "5.0.0",
+    "@nl-design-system-unstable/voorbeeld-design-tokens": "5.0.1",
     "@storybook/addon-a11y": "8.6.14",
     "@storybook/addon-actions": "8.6.14",
     "@storybook/addon-docs": "8.6.14",
@@ -39,7 +39,7 @@
     "prettier": "3.6.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-syntax-highlighter": "15.6.1",
+    "react-syntax-highlighter": "15.6.3",
     "storybook": "8.6.14",
     "vite": "6.3.5",
     "vitest": "3.2.4"
