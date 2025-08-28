@@ -228,7 +228,7 @@ export const SVGIcon: Story = {
   },
 };
 
-export const SVGIconMetFill: Story = {
+export const SVGIconWithFill: Story = {
   name: 'Een SVG Icon met Fill',
   args: {
     style: {
