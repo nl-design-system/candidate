@@ -164,6 +164,20 @@ describe('Icon', () => {
     expect(icon).toHaveTextContent(unicodeCharacter);
   });
 
+  it('uses design tokens to set dimensions', () => {
+    const style = {
+      '--nl-icon-block-size': '2rem',
+      '--nl-icon-inline-size': '4rem',
+    } as React.CSSProperties;
+    const { container } = render(
+      <Icon style={style}>
+        <SvgIcon />
+      </Icon>,
+    );
+    const icon = container.querySelector('span:only-child');
+    expect(icon).toHaveStyle({ '--nl-icon-block-size': '2rem', '--nl-icon-inline-size': '4rem' });
+  });
+
   it('forwards React refs to the HTMLSpanElement', () => {
     const ref = createRef<HTMLSpanElement>();
     render(
