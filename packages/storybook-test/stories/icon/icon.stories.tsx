@@ -228,6 +228,47 @@ export const SVGIcon: Story = {
   },
 };
 
+export const SVGIconWithFill: Story = {
+  name: 'Een SVG Icon met Fill',
+  args: {
+    style: {
+      '--nl-icon-color': 'tomato',
+    } as CSSProperties,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een SVG die fill gebruikt voor kleur kan gebruikt worden als Icon.',
+      },
+    },
+    testResult: {},
+  },
+  render(props) {
+    return (
+      <Icon {...props}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="tabler-icon tabler-icon-chevron-right"
+        >
+          <path
+            d="M8.67 5.061c-.222.081-.42.248-.542.455-.092.156-.108.229-.107.484 0 .212.022.341.074.44.04.077 1.291 1.36 2.779 2.85L13.579 12l-2.705 2.71c-1.488 1.49-2.739 2.773-2.779 2.85-.052.099-.074.228-.074.44-.001.258.015.327.112.492.13.222.369.409.603.473.202.054.53.024.709-.066.185-.092 6.292-6.192 6.428-6.419.091-.152.107-.226.107-.48s-.016-.328-.107-.48c-.061-.103-1.442-1.512-3.22-3.285-2.836-2.828-3.131-3.11-3.31-3.17a1.015 1.015 0 0 0-.673-.004"
+            fillRule="evenodd"
+            fill="currentColor"
+            stroke="none"
+          />
+        </svg>
+      </Icon>
+    );
+  },
+};
+
 export const SVGAsIcon: Story = {
   name: 'SVG als Icon',
   args: { children: null },
