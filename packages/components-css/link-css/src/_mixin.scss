@@ -1,3 +1,70 @@
 @mixin nl-link {
-  // stylelint-disable: block-no-empty
+  --_nl-link-forced-colors-color: LinkText;
+
+  color: var(--_nl-link-state-color, var(--nl-link-color, var(--_nl-link-forced-colors-color)));
+  text-decoration-color: var(
+    --_nl-link-state-text-decoration-color,
+    var(--nl-link-text-decoration-color, currentcolor)
+  );
+  text-decoration-line: var(--_nl-link-state-text-decoration-line, var(--nl-link-text-decoration-line, underline));
+
+  /* Ensure text is readable even with letters below the baseline and ensure a difference between default or hover and focus state. */
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: max(
+    var(--_nl-link-state-text-decoration-thickness, var(--nl-link-text-decoration-thickness)),
+    1px
+  );
+  text-underline-offset: var(--nl-link-text-underline-offset);
+}
+
+@mixin nl-link--hover {
+  --_nl-link-forced-colors-color: LinkText;
+  --_nl-link-state-color: var(--nl-link-hover-color);
+  --_nl-link-state-text-decoration-line: var(--nl-link-hover-text-decoration-line);
+  --_nl-link-state-text-decoration-thickness: var(--nl-link-hover-text-decoration-thickness);
+
+  /* Ensure underline is extra visible between default and hover state. */
+  text-decoration-skip-ink: none;
+}
+
+@mixin nl-link--active {
+  --_nl-link-forced-colors-color: ActiveText;
+  --_nl-link-state-color: var(--nl-link-active-color);
+}
+
+@mixin nl-link--disabled {
+  --_nl-link-forced-colors-color: GrayText;
+  --_nl-link-state-color: var(--nl-link-disabled-color);
+
+  cursor: var(--nl-link-disabled-cursor, not-allowed);
+
+  /* Ensure visible difference between links and placeholder links */
+  text-decoration-line: none;
+}
+
+@mixin nl-link--current {
+  cursor: var(--nl-link-current-cursor, normal);
+}
+
+/**
+ * Simulate forced-colors mode.
+ */
+@mixin nl-link--forced-colors {
+  --nl-link-color: LinkText;
+  --nl-link-hover-color: LinkText;
+  --nl-link-active-color: ActiveText;
+  --nl-link-disabled-color: GrayText;
+}
+
+/**
+ * Link around inline-block, inline-flex and inline-grid elements like image or badge.
+ * Changing the `display: inline` to `inline-block` for the link ensures the focus outline is rendered around the entire box in all browsers.
+ */
+@mixin nl-link--inline-box {
+  color: unset;
+  display: inline-block;
+  text-decoration-line: unset;
+  text-decoration-skip-ink: unset;
+  text-decoration-thickness: unset;
+  text-underline-offset: unset;
 }

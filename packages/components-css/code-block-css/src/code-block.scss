@@ -4,6 +4,14 @@
   @include mixin.nl-code-block;
 }
 
+.nl-code-block--nowrap {
+  @include mixin.nl-code-block--nowrap;
+}
+
+.nl-code-block--overflow {
+  @include mixin.nl-code-block--overflow;
+}
+
 .nl-code-block__code {
   @include mixin.nl-code-block__code;
 }

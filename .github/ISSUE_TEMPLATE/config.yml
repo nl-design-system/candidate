@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 🏠 NL Design System
+    url: https://nldesignsystem.nl
+    about: De homepage van NL Design System
+  - name: ✨ Candidate componenten
+    url: https://nldesignsystem.nl/componenten/?filter=community&filter=helpWanted&filter=todo
+    about: Componenten met de 'Candidate' status

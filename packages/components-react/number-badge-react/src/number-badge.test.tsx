@@ -1,14 +1,23 @@
-import { describe, expect, it } from '@jest/globals';
-import '@testing-library/jest-dom/jest-globals';
-import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { NumberBadge } from './number-badge';
 
+afterEach(() => {
+  cleanup();
+});
+
+const displayName = 'NumberBadge';
 const value = 42;
 const extraClassName = 'extra-classname';
 const testId = 'rich-text';
 
 describe('Number Badge', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(NumberBadge.displayName).toBe(displayName);
+  });
+
   describe('as an HTML data element', () => {
     it('renders an HTML data element when a "value" prop is passed', () => {
       const { container } = render(<NumberBadge value={value}>{value}</NumberBadge>);
@@ -29,6 +38,20 @@ describe('Number Badge', () => {
       const numberBadge = screen.getByText(value);
 
       expect(numberBadge).toBeInTheDocument();
+    });
+
+    it(`renders an element with Number for the value attribute "1e6"`, () => {
+      render(<NumberBadge value={1e6}>1000000</NumberBadge>);
+      const numberBadge = screen.getByText('1000000');
+
+      expect(numberBadge).toHaveAttribute('value', '1000000');
+    });
+
+    it(`renders an element with String for the value attribute "-Infinity"`, () => {
+      render(<NumberBadge value="-Infinity">-Infinity</NumberBadge>);
+      const numberBadge = screen.getByText('-Infinity');
+
+      expect(numberBadge).toHaveAttribute('value', '-Infinity');
     });
 
     it('renders an HTML data element with class name "nl-number-badge"', () => {
@@ -59,6 +82,19 @@ describe('Number Badge', () => {
       const richText = screen.getByTestId(testId);
 
       expect(numberBadge).toContainElement(richText);
+    });
+
+    it('renders an accessible label', () => {
+      render(
+        <a href="https://example.com">
+          <NumberBadge value={value} label="42 unread messages">
+            {value}
+          </NumberBadge>
+        </a>,
+      );
+      const numberBadge = screen.getByRole('link', { name: '42 unread messages' });
+
+      expect(numberBadge).toBeInTheDocument();
     });
 
     it('forwards React refs to the HTMLDataElement', () => {
@@ -113,6 +149,17 @@ describe('Number Badge', () => {
       const richText = screen.getByTestId(testId);
 
       expect(numberBadge).toContainElement(richText);
+    });
+
+    it('renders an accessible label', () => {
+      render(
+        <a href="https://example.com">
+          <NumberBadge label="42 unread messages">{value}</NumberBadge>
+        </a>,
+      );
+      const numberBadge = screen.getByRole('link', { name: '42 unread messages' });
+
+      expect(numberBadge).toBeInTheDocument();
     });
 
     it('forwards React refs to the HTMLSpanElement', () => {

@@ -3,3 +3,15 @@
 .nl-skip-link {
   @include mixin.nl-skip-link;
 }
+
+.nl-skip-link--visible-on-focus {
+  @include mixin.nl-skip-link--hidden;
+}
+
+.nl-skip-link--visible-on-focus:focus {
+  @include mixin.nl-skip-link--visible;
+}
+
+.nl-skip-link--visible {
+  @include mixin.nl-skip-link--visible;
+}

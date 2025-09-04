@@ -11,8 +11,8 @@ const meta = {
   parameters: {
     externalLinks: [
       {
-        name: 'Open in Figma',
-        url: 'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=13787-19085',
+        name: 'Open op NL Design System',
+        url: 'https://nldesignsystem.nl/mark',
       },
       {
         name: 'Open op GitHub',
@@ -35,7 +35,7 @@ export const Default: Story = {
 };
 
 export const MarkInParagraph: Story = {
-  name: 'Mark in een Parargraph',
+  name: 'Mark in een Paragraph',
   render() {
     return (
       <Paragraph>

@@ -1,0 +1,80 @@
+name: Changeset status
+
+on:
+  workflow_run:
+    workflows:
+      # Triggered by the Continuous Integration workflow
+      - Continuous Integration
+    types:
+      # Start running parallel to the Continuous Integration workflow
+      - requested
+
+jobs:
+  changeset-status:
+    runs-on: ubuntu-latest
+    # Do _NOT_ run this job if:
+    #
+    # 1. the branch was created by the Changeset Action itself
+    # 2. the branch was created by Dependabot because it cannot (and should not) access the `private-key` secret
+    if: ${{ !startsWith(github.event.workflow_run.head_branch, 'changeset-release/') && github.actor != 'dependabot[bot]' }}
+    steps:
+      - name: Create GitHub App Token
+        id: app_token
+        uses: actions/create-github-app-token@df432ceedc7162793a195dd1713ff69aefc7379e # 2.0.6
+        with:
+          app-id: ${{ vars.NL_DESIGN_SYSTEM_BOT_APP_ID }}
+          private-key: ${{ secrets.NL_DESIGN_SYSTEM_BOT_PRIVATE_KEY }}
+          # Read the contents of the repo
+          permission-contents: read
+          # Write the result back to the pull request that triggered this workflow
+          permission-checks: write
+
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          # Fetch all history for all branches so that `changeset:status` in package.json#scripts can determine if
+          # a changeset is needed or not.
+          fetch-depth: 0
+
+      - name: Start status check
+        id: start_status_check
+        env:
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
+        run: |
+          check_run_id=$(
+            gh api repos/:owner/:repo/check-runs \
+              --method POST \
+              --header "Accept: application/vnd.github+json" \
+              --field head_sha=${{ github.event.workflow_run.head_sha }} \
+              --field name="${{ github.job }}" \
+              --field status="in_progress" \
+              --field started_at="$(date --utc +%Y-%m-%dT%H:%M:%SZ)" \
+              --jq '.id'
+          )
+          echo "check_run_id=${check_run_id}" | tee -a "${GITHUB_OUTPUT}"
+
+      - name: Install pnpm package manager
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Changeset status
+        id: changeset_status
+        run: pnpm run changeset:status
+        continue-on-error: true
+
+      - name: Complete status check
+        env:
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
+          CHECK_RUN_ID: ${{ steps.start_status_check.outputs.check_run_id }}
+        run: |
+          gh api repos/:owner/:repo/check-runs/${CHECK_RUN_ID} \
+            --method PATCH \
+            --header "Accept: application/vnd.github+json" \
+            --field head_sha=${{ github.event.workflow_run.head_sha }} \
+            --field name="${{ github.job }}" \
+            --field status="completed" \
+            --field completed_at="$(date --utc +%Y-%m-%dT%H:%M:%SZ)" \
+            --field conclusion="${{ steps.changeset_status.outcome }}"

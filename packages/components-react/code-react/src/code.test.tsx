@@ -1,13 +1,22 @@
-import { describe, expect, it } from '@jest/globals';
-import '@testing-library/jest-dom/jest-globals';
-import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render } from '@testing-library/react';
 import { createRef } from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Code } from './code';
 
+afterEach(() => {
+  cleanup();
+});
+
+const displayName = 'Code';
 const text = 'import';
 const extraClassName = 'extra-classname';
 
 describe('Code', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(Code.displayName).toBe(displayName);
+  });
+
   it('renders an HTML code element', () => {
     const { container } = render(<Code>{text}</Code>);
     const code = container.querySelector('code:only-child');

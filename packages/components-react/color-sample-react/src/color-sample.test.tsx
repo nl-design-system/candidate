@@ -1,76 +1,104 @@
-import { describe, expect, it } from '@jest/globals';
-import '@testing-library/jest-dom/jest-globals';
-import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { ColorSample } from './color-sample';
 
-const value = 'deeppink';
+afterEach(() => {
+  cleanup();
+});
+
+const displayName = 'ColorSample';
+const value = '#ff1493';
 const extraClassName = 'extra-classname';
-const text = 'Voorbeeld van de CSS kleur deeppink';
+const label = 'label';
+const ariaLabelledBy = 'other-element';
 
 describe('Color sample', () => {
-  it('renders an HTML data element', () => {
+  it(`has displayName "${displayName}"`, () => {
+    expect(ColorSample.displayName).toBe(displayName);
+  });
+
+  it('renders an svg element', () => {
     const { container } = render(<ColorSample value={value} />);
-    const colorSample = container.querySelector('data:only-child');
+    const colorSample = container.querySelector('svg:only-child');
+
+    expect(colorSample).toBeInTheDocument();
+  });
+
+  it('renders an element with role "img"', () => {
+    render(<ColorSample value={value} />);
+    const colorSample = screen.getByRole('img');
 
     expect(colorSample).toBeInTheDocument();
   });
 
   it('renders an element with class name "nl-color-sample"', () => {
-    const { container } = render(<ColorSample value={value} />);
-    const colorSample = container.querySelector('data:only-child');
+    render(<ColorSample value={value} />);
+    const colorSample = screen.getByRole('img');
 
     expect(colorSample).toHaveClass('nl-color-sample');
   });
 
-  it(`renders an element with text content "${text}"`, () => {
-    render(<ColorSample value={value}>{text}</ColorSample>);
-    const colorSample = screen.getByText(text);
-
-    expect(colorSample).toHaveTextContent(text);
-  });
-
   it(`renders an element with an extra class name "${extraClassName}"`, () => {
-    const { container } = render(<ColorSample value={value} className={extraClassName} />);
-    const colorSample = container.querySelector('data:only-child');
+    render(<ColorSample value={value} className={extraClassName} />);
+    const colorSample = screen.getByRole('img');
 
     expect(colorSample).toHaveClass('nl-color-sample', extraClassName);
   });
 
-  it(`renders an element with a "value" attribute with value "${value}"`, () => {
-    const { container } = render(<ColorSample value={value} />);
-    const colorSample = container.querySelector('data:only-child');
+  it(`renders an svg element that contains a title element with text "${label}"`, () => {
+    render(<ColorSample value={value} label={label} />);
+    const colorSample = screen.getByRole('img');
+    const titleElem = colorSample.querySelector('title');
 
-    expect(colorSample).toHaveAttribute('value', value);
+    expect(titleElem).toBeInTheDocument();
+    expect(titleElem).toHaveTextContent(label);
   });
 
-  it(`renders an element with a "style" attribute with value "{ color: ${value} }"`, () => {
-    const { container } = render(<ColorSample value={value} />);
-    const colorSample = container.querySelector('data:only-child');
+  it('renders an svg element with an "aria-labelledby" attribute that references an external element', () => {
+    render(<ColorSample value={value} label={label} aria-labelledby={ariaLabelledBy} />);
+    const colorSample = screen.getByRole('img');
+
+    expect(colorSample).toHaveAttribute('aria-labelledby', ariaLabelledBy);
+  });
+
+  it(`renders an element with a "style" attribute with value "color: ${value}"`, () => {
+    render(<ColorSample value={value} />);
+    const colorSample = screen.getByRole('img');
 
     expect(colorSample).toHaveStyle({ color: value });
   });
 
   it('renders a visible data element', () => {
-    const { container } = render(<ColorSample value={value} />);
-    const colorSample = container.querySelector('data:only-child');
+    render(<ColorSample value={value} />);
+    const colorSample = screen.getByRole('img');
 
     expect(colorSample).toBeVisible();
   });
 
-  it(`supports hiding the HTML data element visually and from the accessibility tree using the global HTML attribute "hidden"`, () => {
-    const { container } = render(<ColorSample value={value} hidden />);
-    const colorSample = container.querySelector('data:only-child');
+  it(`supports hiding the HTML data element visually and from the accessibility tree using the global HTML attribute "hidden"`, ({
+    expect,
+  }) => {
+    expect.assertions(2);
+    render(<ColorSample value={value} hidden />);
+    const colorSample = screen.getByRole('img', { hidden: true });
+
+    try {
+      screen.getByRole('img');
+    } catch (e) {
+      expect(e).toBeDefined();
+    }
 
     expect(colorSample).not.toBeVisible();
   });
 
   it('forwards React refs to the HTMLDataElement', () => {
-    const ref = createRef<HTMLDataElement>();
-    const { container } = render(<ColorSample value={value} ref={ref} />);
-    const colorSample = container.querySelector('data:only-child');
+    const ref = createRef<SVGSVGElement>();
+    render(<ColorSample value={value} ref={ref} />);
+    const colorSample = screen.getByRole('img');
 
     expect(ref.current).toBe(colorSample);
-    expect(ref.current).toBeInstanceOf(HTMLDataElement);
+    expect(ref.current).toBeInstanceOf(SVGSVGElement);
   });
 });

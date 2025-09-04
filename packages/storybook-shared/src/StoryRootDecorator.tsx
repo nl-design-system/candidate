@@ -2,7 +2,7 @@ import type { Decorator } from '@storybook/react';
 import { useEffect, type CSSProperties } from 'react';
 
 export const StoryRootDecorator: Decorator = (Story, context) => {
-  const { dir, lang, storyRootClassname, title, zoom } = context.globals;
+  const { storyRootClassname, dir, lang, title, writingMode, zoom } = context.globals;
   const style: CSSProperties = zoom ? { zoom } : {};
 
   // In Storybook there are different view modes. When looking at all stories,
@@ -15,18 +15,20 @@ export const StoryRootDecorator: Decorator = (Story, context) => {
   //
   // - Page title: https://nldesignsystem.nl/wcag/2.4.2
   // - Language of the page: https://nldesignsystem.nl/wcag/3.1.1
-  const viewMode = typeof location !== 'undefined' ? new URLSearchParams(location.search).get('viewMode') : '';
+  const { viewMode } = context;
 
   useEffect(() => {
-    if (viewMode === 'story' && typeof document !== 'undefined') {
+    if (viewMode === 'story') {
       document.title = title || context.name;
       document.documentElement.lang = lang;
       document.documentElement.dir = dir || '';
+      document.documentElement.style.writingMode = writingMode || '';
     } else if (viewMode === 'docs') {
       // Restore the title, dir and lang to sensible defaults
       document.title = context.title;
       document.documentElement.lang = 'nl';
       document.documentElement.dir = 'ltr';
+      document.documentElement.style.writingMode = 'initial';
     }
   }, [context.name]);
 

@@ -4,3 +4,14 @@ packages:
   - packages/components-css/*
   - packages/docs/*
   - packages/tokens/*
+
+autoInstallPeers: false
+
+engineStrict: true
+
+onlyBuiltDependencies:
+  - esbuild
+
+saveExact: true
+
+savePrefix: ''

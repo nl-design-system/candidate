@@ -5,8 +5,6 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-    reviewers:
-      - "nl-design-system/kernteam-dependabot"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -17,11 +15,29 @@ updates:
         update-types:
           - "patch"
           - "minor"
+    # Keep ignores in line with their respective npm-check-updates configs:
+    # - "version-update:semver-patch" -> .ncurc.patch.cjs
+    # - "version-update:semver-minor" -> .ncurc.minor.cjs
+    # - "version-update:semver-major" -> .ncurc.major.cjs
     ignore:
       - dependency-name: "@types/node"
         update-types:
           - "version-update:semver-major"
+      # the following 5 ignored dependencies should be removed when we update to Storybook 9
+      - dependency-name: "@storybook/*"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "storybook"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "@etchteam/storybook-addon-status"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "@whitespace/storybook-addon-html"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "vite"
+        update-types:
+          - "version-update:semver-major"
     versioning-strategy: "increase-if-necessary"
     open-pull-requests-limit: 20
-    reviewers:
-      - "nl-design-system/kernteam-dependabot"

@@ -1,8 +1,9 @@
 {
   "name": "@nl-design-system-candidate/link-tokens",
-  "version": "0.0.0",
+  "version": "3.0.1",
   "description": "Design tokens voor het Link component",
   "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/link-tokens#readme",
   "main": "./tokens.json",
   "exports": "./tokens.json",
   "files": [
@@ -13,8 +14,11 @@
     "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/tokens/link-tokens"
   },
-  "private": true,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "generate-tokens": "../../../scripts/generate-tokens.sh link"
   }
 }

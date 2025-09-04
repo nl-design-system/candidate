@@ -1,13 +1,17 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { Meta, StoryObj } from '@storybook/react';
-import '../../../components-css/number-badge-css/dist/test.css';
+import { Heading } from '../../../components-react/heading-react/src/css';
 import packageJSON from '../../../components-react/number-badge-react/package.json';
 import { NumberBadge } from '../../../components-react/number-badge-react/src/css';
+import { Paragraph } from '../../../components-react/paragraph-react/src/css';
 import componentMarkdown from '../../../docs/number-badge-docs/docs/component.md?raw';
 import tokens from '../../../tokens/number-badge-tokens/tokens.json';
+import '../../../components-css/number-badge-css/dist/test.css';
 
 const meta = {
   argTypes: {
     children: { table: { category: 'API' } },
+    label: { table: { category: 'API' } },
     value: {
       control: 'number',
       table: { category: 'API' },
@@ -22,8 +26,8 @@ const meta = {
     },
     externalLinks: [
       {
-        name: 'Open in Figma',
-        url: 'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=1233-4271',
+        name: 'Open op NL Design System',
+        url: 'https://nldesignsystem.nl/number-badge',
       },
       {
         name: 'Open op GitHub',
@@ -45,6 +49,11 @@ export const Default: Story = {
     children: 1000,
     value: 1000,
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'en',
+    title: 'HowManyEmailsUntilInboxZero.com',
+  },
   parameters: {
     docs: {
       description: {
@@ -59,6 +68,9 @@ export const OneMillion: Story = {
   args: {
     children: 1_000_000,
     value: 1_000_000,
+  },
+  globals: {
+    ...Default.globals,
   },
   parameters: {
     docs: {
@@ -77,6 +89,11 @@ export const FormattedNL_NL: Story = {
     lang: 'nl',
     value: 1000,
   },
+  globals: {
+    dir: 'ltr',
+    lang: 'en',
+    title: 'HoeveelMailsTotInboxZero.nl',
+  },
   parameters: {
     docs: {
       description: {
@@ -94,6 +111,9 @@ export const FormattedEN_GB: Story = {
     lang: 'en',
     value: 1000,
   },
+  globals: {
+    ...Default.globals,
+  },
   parameters: {
     docs: {
       description: {
@@ -108,6 +128,7 @@ export const FlexboxContainerRow: Story = {
   name: 'Number Badge in een flexbox',
   args: {
     children: '42',
+    label: '42 ongelezen berichten',
     value: 42,
   },
   decorators: [
@@ -125,16 +146,19 @@ export const FlexboxContainerRow: Story = {
             flexGrow: '1',
           }}
         >
-          Label
+          Inbox
         </span>
         <Story />
       </div>
     ),
   ],
+  globals: {
+    ...Default.globals,
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Een Number Badge in een flexbox zou normale afmetingen moeten hebben',
+        story: 'Een Number Badge in een CSS flexbox, met links de tekst "Inbox" en rechts het getal "42".',
       },
     },
   },
@@ -144,6 +168,7 @@ export const FlexboxContainerColumn: Story = {
   name: 'Number Badge in een flexbox',
   args: {
     children: '42',
+    label: '42 ongelezen berichten',
     value: 42,
   },
   decorators: [
@@ -160,16 +185,19 @@ export const FlexboxContainerColumn: Story = {
             flexGrow: '1',
           }}
         >
-          Label
+          Inbox
         </span>
         <Story />
       </div>
     ),
   ],
+  globals: {
+    ...Default.globals,
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Een Number Badge in een flexbox zou normale afmetingen moeten hebben',
+        story: 'Een Number Badge in een CSS flexbox, met boven de tekst "Inbox" en onder het getal "42".',
       },
     },
   },
@@ -184,15 +212,24 @@ export const NoWrap: Story = {
   },
   decorators: [
     (Story) => (
-      <div style={{ maxInlineSize: '1' }}>
+      <div style={{ maxInlineSize: '1px' }}>
         <Story />
       </div>
     ),
   ],
+  globals: {
+    dir: 'ltr',
+    lang: 'de',
+    title: 'WieVieleEmailBisPosteingangLeerIst.de',
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Een Number Badge moet nooit wrappen over twee regels',
+        story: `Een Number Badge met getal miljoen, op Duitse wijze geformatteerd met spaties als scheidingsteken bij duizendtallen.
+
+Het container element heeft een breedte van 1px, dus als line wrap niet tegengehouden wordt dan zou het getal over 3 regels verdeeld worden.
+
+Een Number Badge moet nooit wrappen over twee regels. De inhoud mag nooit zo lang zijn dat de tekst zoveel ruimte inneemt bij 400% zoom dat het nodig is om horizontaal scrollen.`,
       },
     },
   },
@@ -204,10 +241,15 @@ export const DivWrap: Story = {
     children: '42',
     value: 42,
   },
+  globals: {
+    ...Default.globals,
+  },
   parameters: {
     docs: {
       description: {
-        story: 'Het is niet ideaal, maar de Number Badge moet er goed uitzien ongeacht het HTML-element.',
+        story: `Een Number Badge met het getal 42.
+
+Een \`div\` element is niet de ideale HTML-opmaak, maar de Number Badge moet er goed uitzien ongeacht het HTML-element.`,
       },
     },
   },
@@ -225,10 +267,15 @@ export const Center: Story = {
     },
     value: 42,
   },
+  globals: {
+    ...Default.globals,
+  },
   parameters: {
     docs: {
       description: {
-        story: 'De tekst van de number badge moet horizintaal en verticaal gecentreerd zijn.',
+        story: `Een Number Badge met het getal 42, die in een 5 keer zo grote cirkel staat met een 3 keer zo groot lettertype.
+
+De tekst van de number badge moet horizintaal en verticaal gecentreerd zijn.`,
       },
     },
   },
@@ -237,29 +284,43 @@ export const Center: Story = {
 export const FontRelative: Story = {
   name: 'Number Badge in tekst met grote letters',
   args: {
-    children: '42',
-    style: {
-      '--nl-number-badge-font-size': '0.6em',
-      '--nl-number-badge-padding-block': '0.2em',
-      '--nl-number-badge-padding-inline': '0.2em',
-    },
-    value: 42,
+    children: '1',
   },
   decorators: [
     (Story) => (
-      <>
-        <h1>
-          Fouten in kleurcontrast <Story />
-        </h1>
-        <h2>
-          Fouten in kleurcontrast <Story />
-        </h2>
-        <h3>
-          Fouten in kleurcontrast <Story />
-        </h3>
-      </>
+      <div
+        style={{
+          '--nl-number-badge-font-size': '0.6em',
+          '--nl-number-badge-padding-block': '0.25em',
+          '--nl-number-badge-padding-inline': '0.25em',
+        }}
+      >
+        <Heading level={1}>Kopniveau {Story()}</Heading>
+        <Paragraph>Er zijn 6 kopniveau's in HTML, die kun je op deze pagina zien.</Paragraph>
+        <Heading level={2}>
+          Kopniveau <NumberBadge>2</NumberBadge>
+        </Heading>
+        <Heading level={3}>
+          Kopniveau <NumberBadge>3</NumberBadge>
+        </Heading>
+        <Heading level={4}>
+          Kopniveau <NumberBadge>4</NumberBadge>
+        </Heading>
+        <Heading level={5}>
+          Kopniveau <NumberBadge>5</NumberBadge>
+        </Heading>
+        <Heading level={6}>
+          Kopniveau <NumberBadge>6</NumberBadge>
+        </Heading>
+        <Paragraph>Niveau 6 is het laatste kopniveau in HTML.</Paragraph>
+      </div>
     ),
   ],
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: "Alle kopniveau's van HTML",
+  },
   parameters: {
     docs: {
       description: {
@@ -274,6 +335,7 @@ export const FontSizeMinimum: Story = {
   name: 'Number Badge moet niet te klein worden',
   args: {
     children: '42',
+    label: '42 ongelezen berichten',
     style: {
       '--nl-number-badge-font-size': '0.6em',
       '--nl-number-badge-padding-block': '0.2em',
@@ -283,18 +345,20 @@ export const FontSizeMinimum: Story = {
   },
   decorators: [
     (Story) => (
-      <>
-        <p>
-          Fouten in kleurcontrast <Story />
-        </p>
-      </>
+      <small>
+        Inbox <Story />
+      </small>
     ),
   ],
+  globals: {
+    ...Default.globals,
+  },
   parameters: {
     docs: {
       description: {
-        story:
-          'De tekst van Number Badge moet niet per ongeluk kleiner worden dan 16px. Dat is met name een risico wanneer een relatieve font-size wordt gebruikt.',
+        story: `Een Number Badge met het getal 42, naast een tekst met een font-size kleiner dan 16px. De Number Badge nog steeds een font-size van 16px.
+
+De tekst van Number Badge moet niet per ongeluk kleiner worden dan 16px. Dat is met name een risico wanneer een relatieve font-size wordt gebruikt.`,
       },
     },
   },
@@ -304,6 +368,7 @@ export const NumberBadgeLink: Story = {
   name: 'Number Badge moet niet onderstreept zijn',
   args: {
     children: '42',
+    label: '42 ongelezen berichten',
     value: 42,
   },
   decorators: [
@@ -313,10 +378,15 @@ export const NumberBadgeLink: Story = {
       </a>
     ),
   ],
+  globals: {
+    ...Default.globals,
+  },
   parameters: {
     docs: {
       description: {
-        story: 'De tekst van Number Badge moet niet onderstreept worden, bijvoorbeeld wanneer die in een link staat.',
+        story: `Een Number Badge met het getal 42, in een link naar Inbox. De linktekst is onderstreept, maar de het getal in de Number Badge niet.
+
+De tekst van Number Badge moet niet onderstreept worden, bijvoorbeeld wanneer die in een link staat.`,
       },
     },
   },
@@ -327,17 +397,22 @@ export const NumberBadgeBorder: Story = {
   args: {
     children: '42',
     style: {
+      '--nl-number-badge-border-width': '0.25em',
       '--nl-number-badge-background-color': 'whitesmoke',
       '--nl-number-badge-border-color': 'dimgray',
-      '--nl-number-badge-border-width': '0.25em',
       '--nl-number-badge-color': 'black',
     },
     value: 42,
   },
+  globals: {
+    ...Default.globals,
+  },
   parameters: {
     docs: {
       description: {
-        story: 'De tekst van Number Badge moet een border kunnen hebben.',
+        story: `Een Number Badget met het getal 42, in een cirkel met een dikke rand.
+
+De Number Badge moet een border kunnen hebben, die je kan instellen met een design token.`,
       },
     },
   },
@@ -348,6 +423,7 @@ export const NumberBadgeForcedColorsLink: Story = {
   args: {
     children: '42',
     className: 'nl-number-badge--forced-colors',
+    label: '42 ongelezen berichten',
     value: 42,
   },
   decorators: [
@@ -357,11 +433,15 @@ export const NumberBadgeForcedColorsLink: Story = {
       </a>
     ),
   ],
+  globals: {
+    ...Default.globals,
+  },
   parameters: {
     docs: {
       description: {
-        story:
-          'In forced colors mode moet de tekst en border de `LinkText` kleur hebben. Lees op MDN meer over [system-color](https://developer.mozilla.org/en-US/docs/Web/CSS/system-color).',
+        story: `Een Number Badge met het getal 42 in een Link naar Inbox. De Number Badge heeft een dikke rand, en de rand en de tekst hebbe dezelfde kleur als de link.
+
+In forced colors mode moet de tekst en border de \`LinkText\` kleur hebben. Lees op MDN meer over [system-color](https://developer.mozilla.org/en-US/docs/Web/CSS/system-color).`,
       },
     },
   },
@@ -370,27 +450,37 @@ export const NumberBadgeForcedColorsLink: Story = {
 export const NumberBadgeFontStyle: Story = {
   name: 'Number Badge moet niet de font-style overnemen van de parent',
   args: {
-    children: '1',
+    children: '0',
     style: {
       '--nl-number-badge-font-size': '0.6em',
       '--nl-number-badge-padding-block': '0.2em',
       '--nl-number-badge-padding-inline': '0.2em',
     },
-    value: 1,
+    value: 0,
   },
   decorators: [
     (Story) => (
-      <h2>
-        <i>
-          Breaking news: er is een story over italic tekst <Story />
-        </i>
-      </h2>
+      <>
+        <Heading level={1}>
+          <i>
+            Groot nieuws: de inbox heeft <Story /> ongelezen berichten
+          </i>
+        </Heading>
+        <Paragraph>Het heeft even geduurd, maar "Inbox Zero" is bereikt!</Paragraph>
+      </>
     ),
   ],
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Groot nieuws: de inbox heeft 0 ongelezen berichten',
+  },
   parameters: {
     docs: {
       description: {
-        story: 'De Number Badge moet geen italic tekst hebben, zelfs als de context wel italic tekst heeft.',
+        story: `Een Number Badge met het getal 0, als onderdeel van een Heading met de tekst "Groot nieuws: de inbox heeft 0 ongelezen berichten".
+
+De Number Badge moet geen italic tekst hebben, zelfs als de context wel italic tekst heeft.`,
       },
     },
   },
