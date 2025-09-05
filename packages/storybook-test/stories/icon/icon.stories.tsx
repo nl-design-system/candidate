@@ -70,6 +70,11 @@ const meta = {
     children: <IconCalendarEvent />,
   },
   argTypes: {
+    appearance: {
+      control: { labels: { undefined: '(undefined)' }, type: 'select' },
+      options: [undefined, 'cap', 'em', 'ex', 'lh'],
+      table: { category: 'API' },
+    },
     'aria-label': { table: { category: 'API' }, type: 'string' },
     'aria-labelledby': { table: { category: 'API' }, type: 'string' },
     bidiMirrored: { table: { category: 'API' }, type: 'boolean' },
@@ -79,11 +84,6 @@ const meta = {
     role: {
       control: { labels: { undefined: '(undefined)' }, type: 'select' },
       options: [undefined, 'img'],
-      table: { category: 'API' },
-    },
-    size: {
-      control: { labels: { undefined: '(undefined)' }, type: 'select' },
-      options: [undefined, 'em', 'ex'],
       table: { category: 'API' },
     },
   },
@@ -165,6 +165,42 @@ const meta = {
   },
   title: 'Componenten/Icon',
 } satisfies Meta<typeof Icon>;
+
+const Circle = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24">
+    <circle cx="12" cy="12" r="12" fill="currentcolor" />
+  </svg>
+);
+
+const CircleInset = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24">
+    <circle cx="12" cy="12" r="10" fill="currentcolor" />
+  </svg>
+);
+
+const Square = () => (
+  <svg xmlns="http://www.w3.org" viewBox="0 0 24 24" height="24" width="24">
+    <rect x="0" y="0" height="24" width="24" fill="currentcolor" />
+  </svg>
+);
+
+const SquareInset = () => (
+  <svg xmlns="http://www.w3.org" viewBox="0 0 24 24" height="24" width="24">
+    <rect x="2" y="2" height="20" width="20" fill="currentcolor" />
+  </svg>
+);
+
+const Diamond = () => (
+  <svg xmlns="http://www.w3.org" viewBox="0 0 24 24" height="24" width="24">
+    <path d="M12 0L24 12L12 24L0 12L12 0Z" fill="currentcolor" />;
+  </svg>
+);
+
+const DiamondInset = () => (
+  <svg xmlns="http://www.w3.org" viewBox="0 0 24 24" height="24" width="24">
+    <path d="M12 2L22 12L12 22L2 12L12 2Z" fill="currentcolor" />;
+  </svg>
+);
 
 const withFlexDecorator = (flexDirection: CSSProperties['flexDirection'] = 'row'): Decorator =>
   function FlexDecorator(Story) {
@@ -526,9 +562,9 @@ export const SVGIconDefaultSizeInCustomLineHeight: Story = {
   },
 };
 
-export const SVGIconSizeLh: Story = {
-  name: 'SVG Icon size lh',
-  args: { size: 'lh' },
+export const SVGIconAppearanceLh: Story = {
+  name: 'SVG Icon appearance lh',
+  args: { appearance: 'lh' },
   parameters: {
     docs: {
       description: {
@@ -561,9 +597,9 @@ export const SVGIconSizeLh: Story = {
   },
 };
 
-export const SVGIconSizeLhInCustomLineHeight: Story = {
-  name: 'SVG Icon size lh met custom line-height',
-  args: { size: 'lh' },
+export const SVGIconAppearanceLhInCustomLineHeight: Story = {
+  name: 'SVG Icon appearance lh met custom line-height',
+  args: { appearance: 'lh' },
   parameters: {
     docs: {
       description: {
@@ -596,9 +632,9 @@ export const SVGIconSizeLhInCustomLineHeight: Story = {
   },
 };
 
-export const SVGIconSizeEm: Story = {
-  name: 'SVG Icon size em',
-  args: { size: 'em' },
+export const SVGIconAppearanceEm: Story = {
+  name: 'SVG Icon appearance em',
+  args: { appearance: 'em' },
   parameters: {
     docs: {
       description: {
@@ -631,9 +667,9 @@ export const SVGIconSizeEm: Story = {
   },
 };
 
-export const SVGIconSizeEmInParagraphWithCustomFontSize: Story = {
-  name: 'SVG Icon size em in custom font-size',
-  args: { size: 'em' },
+export const SVGIconAppearanceEmInParagraphWithCustomFontSize: Story = {
+  name: 'SVG Icon appearance em in custom font-size',
+  args: { appearance: 'em' },
   parameters: {
     docs: {
       description: {
@@ -669,9 +705,52 @@ export const SVGIconSizeEmInParagraphWithCustomFontSize: Story = {
   },
 };
 
-export const SVGIconSizeEx: Story = {
-  name: 'SVG Icon size ex',
-  args: { size: 'ex' },
+export const SVGIconAppearanceCap: Story = {
+  name: 'SVG Icon appearance cap',
+  args: { appearance: 'cap' },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een Icon kan expliciet worden ingesteld om 1× de cap-hoogte (`1cap`) als zowel `inline-size` als `block-size` te krijgen.',
+      },
+    },
+  },
+  render(props) {
+    return (
+      <Paragraph>
+        <Icon {...props} /> een afspraak maken
+      </Paragraph>
+    );
+  },
+};
+
+export const SVGIconAppearanceCapInParagraphWithCustomFontSize: Story = {
+  name: 'SVG Icon appearance cap',
+  args: { appearance: 'cap' },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een Icon kan expliciet worden ingesteld om 1× de cap-hoogte (`1cap`) als zowel `inline-size` als `block-size` te krijgen.',
+      },
+    },
+  },
+  render(props) {
+    const style = {
+      '--nl-paragraph-font-size': '3rem',
+    } as CSSProperties;
+    return (
+      <Paragraph style={style}>
+        <Icon {...props} /> een afspraak maken
+      </Paragraph>
+    );
+  },
+};
+
+export const SVGIconAppearanceEx: Story = {
+  name: 'SVG Icon appearance ex',
+  args: { appearance: 'ex' },
   parameters: {
     docs: {
       description: {
@@ -706,7 +785,7 @@ export const SVGIconSizeEx: Story = {
 
 export const SVGIconSizeExInParagraphWithCustomFontSize: Story = {
   name: 'SVG Icon size ex met custom font-size',
-  args: { size: 'ex' },
+  args: { appearance: 'ex' },
   parameters: {
     docs: {
       description: {
@@ -1404,11 +1483,11 @@ export const SVGIconInLinkInParagraph: Story = {
   },
 };
 
-export const SVGIconSizeEmInLinkInParagraph: Story = {
-  name: 'SVG Icon size em in een Link in een Paragraph',
+export const SVGIconAppearanceEmInLinkInParagraph: Story = {
+  name: 'SVG Icon appearance em in een Link in een Paragraph',
   args: {
     children: <IconExternalLink />,
-    size: 'em',
+    appearance: 'em',
   },
   parameters: {
     docs: {
@@ -1446,11 +1525,38 @@ export const SVGIconSizeEmInLinkInParagraph: Story = {
   },
 };
 
-export const SVGIconSizeExInLinkInParagraph: Story = {
-  name: 'SVG Icon size ex in een Link in een Paragraph',
+export const SVGIconAppearanceCapInLinkInParagraph: Story = {
+  name: 'SVG Icon appearance cap in een Link in een Paragraph',
   args: {
     children: <IconExternalLink />,
-    size: 'ex',
+    appearance: 'cap',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een SVG Icon kan met size em worden weergegeven in een Link in een Paragraaf. Het SVG Icon krijgt hierbij de kleur van de Link.',
+      },
+    },
+  },
+  render(props) {
+    return (
+      <Paragraph>
+        Bezoek{' '}
+        <Link href="https://gebruikersonderzoeken.nl">
+          gebruikersonderzoeken.nl <Icon {...props} />
+        </Link>
+        .
+      </Paragraph>
+    );
+  },
+};
+
+export const SVGIconAppearanceExInLinkInParagraph: Story = {
+  name: 'SVG Icon appearance ex in een Link in een Paragraph',
+  args: {
+    children: <IconExternalLink />,
+    appearance: 'ex',
   },
   parameters: {
     docs: {
@@ -1893,7 +1999,7 @@ export const SVGIconCustomSizeAndParagraphInFlexbox: Story = {
 export const SVGIconsInList: Story = {
   name: 'SVG Icons met verschillende groottes onder elkaar',
   args: {
-    size: 'em',
+    appearance: 'em',
     style: {
       '--nl-icon-color': 'white',
       backgroundColor: 'black',
@@ -2010,6 +2116,156 @@ export const SVGIconInAComposition: Story = {
         <Icon {...props} />
         <Heading level={3}>Een afspraak maken met de Gemeente Voorbeeld</Heading>
       </div>
+    );
+  },
+};
+
+export const SVGIconCircle: Story = {
+  args: { children: <Circle /> },
+  render(props) {
+    return (
+      <>
+        <Paragraph>
+          <Icon {...props} /> inline zonder extra props
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="ex" /> inline met appearance ex
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="cap" /> inline met appearance cap
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="em" /> inline met appearance em
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="lh" /> inline met appearance lh
+        </Paragraph>
+      </>
+    );
+  },
+};
+
+export const SVGIconCircleInset: Story = {
+  args: { children: <CircleInset /> },
+  render(props) {
+    return (
+      <>
+        <Paragraph>
+          <Icon {...props} /> inline zonder extra props
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="ex" /> inline met appearance ex
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="cap" /> inline met appearance cap
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="em" /> inline met appearance em
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="lh" /> inline met appearance lh
+        </Paragraph>
+      </>
+    );
+  },
+};
+
+export const SVGIconSquare: Story = {
+  args: { children: <Square /> },
+  render(props) {
+    return (
+      <>
+        <Paragraph>
+          <Icon {...props} /> inline zonder extra props
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="ex" /> inline met appearance ex
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="cap" /> inline met appearance cap
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="em" /> inline met appearance em
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="lh" /> inline met appearance lh
+        </Paragraph>
+      </>
+    );
+  },
+};
+
+export const SVGIconSquareInset: Story = {
+  args: { children: <SquareInset /> },
+  render(props) {
+    return (
+      <>
+        <Paragraph>
+          <Icon {...props} /> inline zonder extra props
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="ex" /> inline met appearance ex
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="cap" /> inline met appearance cap
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="em" /> inline met appearance em
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="lh" /> inline met appearance lh
+        </Paragraph>
+      </>
+    );
+  },
+};
+
+export const SVGIconDiamond: Story = {
+  args: { children: <Diamond /> },
+  render(props) {
+    return (
+      <>
+        <Paragraph>
+          <Icon {...props} /> inline zonder extra props
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="ex" /> inline met appearance ex
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="cap" /> inline met appearance cap
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="em" /> inline met appearance em
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="lh" /> inline met appearance lh
+        </Paragraph>
+      </>
+    );
+  },
+};
+
+export const SVGIconDiamondInset: Story = {
+  args: { children: <DiamondInset /> },
+  render(props) {
+    return (
+      <>
+        <Paragraph>
+          <Icon {...props} /> inline zonder extra props
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="ex" /> inline met appearance ex
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="cap" /> inline met appearance cap
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="em" /> inline met appearance em
+        </Paragraph>
+        <Paragraph>
+          <Icon {...props} appearance="lh" /> inline met appearance lh
+        </Paragraph>
+      </>
     );
   },
 };

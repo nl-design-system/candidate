@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 import type { HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
 
-export type IconSize = 'em' | 'ex' | 'lh';
+export type IconAppearance = 'cap' | 'em' | 'ex' | 'lh';
 
 export type IconProps = (
   | (Omit<HTMLAttributes<HTMLSpanElement>, 'role' | 'aria-hidden' | 'aria-label' | 'aria-labelledby' | 'dir'> & {
@@ -24,12 +24,12 @@ export type IconProps = (
       role: 'img';
     })
 ) & {
+  appearance?: IconAppearance;
   /**
    * If `true` flips the icon horizontally in right-to-left layouts.
    * This is useful for directional icons like arrows or chevrons.
    */
   bidiMirrored?: boolean;
-  size?: IconSize;
 };
 
 function hasRoleImg(props: IconProps): props is Extract<IconProps, { role: 'img' }> {
@@ -37,7 +37,7 @@ function hasRoleImg(props: IconProps): props is Extract<IconProps, { role: 'img'
 }
 
 export const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(props, forwardedRef) {
-  const { bidiMirrored = false, children, className, size, ...restProps } = props;
+  const { bidiMirrored = false, children, className, appearance, ...restProps } = props;
   const ariaHidden = hasRoleImg(props) ? undefined : (true as const);
 
   return (
@@ -47,9 +47,10 @@ export const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(props, 
         'nl-icon',
         {
           ['nl-icon--bidi-mirrored']: bidiMirrored,
-          ['nl-icon--size-em']: size === 'em',
-          ['nl-icon--size-ex']: size === 'ex',
-          ['nl-icon--size-lh']: size === 'lh',
+          ['nl-icon--cap']: appearance === 'cap',
+          ['nl-icon--em']: appearance === 'em',
+          ['nl-icon--ex']: appearance === 'ex',
+          ['nl-icon--lh']: appearance === 'lh',
         },
         className,
       )}
