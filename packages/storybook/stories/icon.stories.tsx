@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import packageJSON from '../../components-react/icon-react/package.json';
-import { Icon } from '../../components-react/icon-react/src/css';
+import { Icon } from '../../components-react/icon-react';
+import '../../components-css/icon-css/src/icon.scss';
 
 const meta = {
   args: {
@@ -24,16 +25,16 @@ const meta = {
     ),
   },
   argTypes: {
+    appearance: {
+      control: { labels: { undefined: '(undefined)' }, type: 'select' },
+      options: [undefined, 'cap', 'em', 'ex', 'lh'],
+      table: { category: 'API' },
+    },
     'aria-label': { table: { category: 'API' }, type: 'string' },
     'aria-labelledby': { table: { category: 'API' }, type: 'string' },
     // Hide children as it's a React component which cannot be displayed nicely in the Storybook UI
     children: { table: { disable: true } },
     className: { table: { category: 'API' }, type: 'string' },
-    dir: {
-      control: { labels: { undefined: '(undefined)' }, type: 'select' },
-      options: [undefined, 'rtl', 'ltr', 'auto'],
-      table: { category: 'API' },
-    },
     role: {
       control: { labels: { undefined: '(undefined)' }, type: 'select' },
       options: [undefined, 'img'],
