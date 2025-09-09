@@ -12,47 +12,54 @@ on:
 jobs:
   changeset-status:
     runs-on: ubuntu-latest
-    # Do _NOT_ run this job if:
-    #
-    # 1. the branch was created by the Changeset Action itself
-    # 2. the branch was created by Dependabot because it cannot (and should not) access the `private-key` secret
-    if: ${{ !startsWith(github.event.workflow_run.head_branch, 'changeset-release/') && github.actor != 'dependabot[bot]' }}
+    env:
+      # Used to start and complete the check run and to check out the correct ref using actions/checkout
+      HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+      # Used as the name of the check run
+      NAME: ${{ github.job }}
     steps:
       - name: Create GitHub App Token
-        id: app_token
+        id: app-token
         uses: actions/create-github-app-token@df432ceedc7162793a195dd1713ff69aefc7379e # 2.0.6
         with:
           app-id: ${{ vars.NL_DESIGN_SYSTEM_BOT_APP_ID }}
           private-key: ${{ secrets.NL_DESIGN_SYSTEM_BOT_PRIVATE_KEY }}
           # Read the contents of the repo
           permission-contents: read
-          # Write the result back to the pull request that triggered this workflow
+          # Write the result back using the Checks API
           permission-checks: write
 
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
-          ref: ${{ github.event.workflow_run.head_sha }}
+          # Check out the same ref that Continuous Integration ran for
+          ref: ${{ env.HEAD_SHA }}
           # Fetch all history for all branches so that `changeset:status` in package.json#scripts can determine if
           # a changeset is needed or not.
           fetch-depth: 0
 
-      - name: Start status check
-        id: start_status_check
-        env:
-          GH_TOKEN: ${{ steps.app_token.outputs.token }}
+      - name: Start check run
         run: |
-          check_run_id=$(
-            gh api repos/:owner/:repo/check-runs \
+          # Create timestamp
+          STARTED_AT=$(date --utc +%Y-%m-%dT%H:%M:%SZ)
+
+          # Start a new check run
+          CHECK_RUN_ID=$(
+            gh api "repos/${GITHUB_REPOSITORY}/check-runs" \
               --method POST \
               --header "Accept: application/vnd.github+json" \
-              --field head_sha=${{ github.event.workflow_run.head_sha }} \
-              --field name="${{ github.job }}" \
-              --field status="in_progress" \
-              --field started_at="$(date --utc +%Y-%m-%dT%H:%M:%SZ)" \
-              --jq '.id'
+              --header "X-GitHub-Api-Version: 2022-11-28" \
+              --field "head_sha=${HEAD_SHA}" \
+              --field "name=${NAME}" \
+              --field "status=in_progress" \
+              --field "started_at=${STARTED_AT}" \
+              --jq ".id"
           )
-          echo "check_run_id=${check_run_id}" | tee -a "${GITHUB_OUTPUT}"
+
+          # Persist the check run id in the environment
+          echo "CHECK_RUN_ID=${CHECK_RUN_ID}" >> "${GITHUB_ENV}"
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
 
       - name: Install pnpm package manager
         uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
@@ -60,21 +67,31 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Changeset status
-        id: changeset_status
+      - name: Check if a changeset is needed
+        id: changeset
+        # ONLY run this step if:
+        #
+        # 1. the branch was not created by the Changeset Action itself
+        # 2. the branch was not created by Dependabot
+        if: ${{ !startsWith(github.event.workflow_run.head_branch, 'changeset-release/') && github.actor != 'dependabot[bot]' }}
         run: pnpm run changeset:status
-        continue-on-error: true
 
-      - name: Complete status check
-        env:
-          GH_TOKEN: ${{ steps.app_token.outputs.token }}
-          CHECK_RUN_ID: ${{ steps.start_status_check.outputs.check_run_id }}
+      - name: Complete check run
+        # Always run this step, even if the previous step was a failure
+        if: ${{ always() }}
         run: |
-          gh api repos/:owner/:repo/check-runs/${CHECK_RUN_ID} \
+          # Create timestamp
+          COMPLETED_AT=$(date --utc +%Y-%m-%dT%H:%M:%SZ)
+
+          # Complete the existing check run
+          gh api "repos/${GITHUB_REPOSITORY}/check-runs/${CHECK_RUN_ID}" \
             --method PATCH \
             --header "Accept: application/vnd.github+json" \
-            --field head_sha=${{ github.event.workflow_run.head_sha }} \
-            --field name="${{ github.job }}" \
-            --field status="completed" \
-            --field completed_at="$(date --utc +%Y-%m-%dT%H:%M:%SZ)" \
-            --field conclusion="${{ steps.changeset_status.outcome }}"
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            --field "head_sha=${HEAD_SHA}" \
+            --field "status=completed" \
+            --field "completed_at=${COMPLETED_AT}" \
+            --field "conclusion=${CONCLUSION}"
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          CONCLUSION: ${{ steps.changeset.outcome }}
