@@ -12,19 +12,17 @@ on:
 permissions:
   # Read the contents of the repo
   contents: read
-  # Write the result back to the pull request that triggered this workflow
-  checks: write
 
 jobs:
   coverage:
     runs-on: ubuntu-latest
+    # Only run if the Continuous Integration workflow was successful
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
-          # Checkout the head_sha of the pull request that triggered this workflow
+          # Check out the same ref that Continuous Integration ran for
           ref: ${{ github.event.workflow_run.head_sha }}
 
       - name: Install pnpm package manager
@@ -39,12 +37,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm run build
-
-      - name: Test
-        run: pnpm run test:coverage
-
-      - uses: codecov/codecov-action@18283e04ce6e62d37312384ff67231eb8fd56d24 # v5.4.3
+      - name: Download coverage-report artifact
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
         with:
+          name: coverage-report
+          github-token: ${{ github.token }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Upload coverage to codecov.io
+        id: codecov-action
+        uses: codecov/codecov-action@18283e04ce6e62d37312384ff67231eb8fd56d24 # v5.4.3
+        with:
+          fail_ci_if_error: true
+          override_pr: ${{ github.event.workflow_run.pull_requests[0].number }}
           token: ${{ secrets.CODECOV_TOKEN }}
