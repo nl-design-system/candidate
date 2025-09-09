@@ -1,5 +1,6 @@
 name: Continuous Integration
-# Upon success triggers:
+# Triggers the following workflows:
+# - .github/workflows/changeset-status.yml
 # - .github/workflows/codecov.yml
 
 on:
@@ -11,7 +12,6 @@ concurrency:
 
 permissions:
   contents: read
-  pull-requests: read
 
 jobs:
   block-autosquash-commits:
@@ -114,4 +114,11 @@ jobs:
         run: pnpm run build
 
       - name: Test
-        run: pnpm run test
+        run: pnpm run test:coverage
+
+      - name: Upload coverage-report artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: coverage-report
+          path: packages/*/coverage/
+          retention-days: 1
