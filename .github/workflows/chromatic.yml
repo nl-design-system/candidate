@@ -1,0 +1,72 @@
+name: chromatic
+
+on:
+  workflow_run:
+    workflows:
+      # Triggered by the Continuous Integration workflow
+      - Continuous Integration
+    types:
+      # Only when the Continuous Integration workflow completes
+      - completed
+  push:
+    # Also triggered by pushes to the main branch
+    branches:
+      - main
+
+permissions:
+  # Read the contents of the repo
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Only cancel when it's a push event
+  cancel-in-progress: ${{ github.event_name == 'push' }}
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+    env:
+      # Determine the correct ref to use
+      HEAD_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          # Use the correct ref to check out
+          ref: ${{ env.HEAD_SHA }}
+          # Make sure that history is available to Chromatic
+          fetch-depth: 0
+
+      - name: Install pnpm package manager
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+
+      - name: Set up Node.js version and cache
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download visual-regression-testing artifact
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+        with:
+          name: visual-regression-testing
+          github-token: ${{ github.token }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Chromatic
+        uses: chromaui/action@d0795df816d05c4a89c80295303970fddd247cce # v13.1.4
+        with:
+          autoAcceptChanges: main
+          dryRun: true
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storyBookBaseDir: packages/storybook-test/
+          storybookBuildDir: packages/storybook-test/dist/
+          storybookConfigDir: packages/storybook-test/config/
+          exitOnceUploaded: true
+          # Enable TurboSnap
+          onlyChanged: true
+        env:
+          CHROMATIC_SHA: ${{ env.HEAD_SHA }}

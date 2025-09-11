@@ -2,9 +2,12 @@ name: Continuous Integration
 # Triggers the following workflows:
 # - .github/workflows/changeset-status.yml
 # - .github/workflows/codecov.yml
+# - .github/workflows/chromatic.yml
 
 on:
   pull_request:
+    branches:
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -89,6 +92,13 @@ jobs:
 
       - name: Build
         run: pnpm run build
+
+      - name: Upload visual-regression-testing artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: visual-regression-testing
+          path: packages/storybook-test/dist/
+          retention-days: 1
 
   test:
     runs-on: ubuntu-latest
