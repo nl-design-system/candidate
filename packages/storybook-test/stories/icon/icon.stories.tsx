@@ -1,7 +1,7 @@
 import { Heading } from '@nl-design-system-candidate/heading-react/css';
 import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
-import type { Decorator, Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import { IconCalendarEvent, IconChevronRight, IconExternalLink, IconSquareChevronRight } from '@tabler/icons-react';
 import type { CSSProperties } from 'react';
 import '../../../components-css/icon-css/src/icon.scss'; // Let Vite compile the SCSS

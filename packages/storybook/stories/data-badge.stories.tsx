@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import packageJSON from '../../components-react/data-badge-react/package.json';
 import { DataBadge } from '../../components-react/data-badge-react/src/css';
 
