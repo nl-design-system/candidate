@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ReactNode } from 'react';
 import packageJSON from '../../../components-react/paragraph-react/package.json';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
