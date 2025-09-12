@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import packageJSON from '../../../components-react/mark-react/package.json';
 import { Mark } from '../../../components-react/mark-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';
