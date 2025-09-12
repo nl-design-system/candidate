@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import packageJSON from '../../../components-react/code-react/package.json';
 import { Code } from '../../../components-react/code-react/src/css';
 import { Paragraph } from '../../../components-react/paragraph-react/src/css';

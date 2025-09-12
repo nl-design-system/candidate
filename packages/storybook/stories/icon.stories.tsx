@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import packageJSON from '../../components-react/icon-react/package.json';
 import { Icon } from '../../components-react/icon-react/src/css';
 

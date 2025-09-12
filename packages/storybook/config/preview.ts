@@ -1,7 +1,7 @@
-import type { Preview } from '@storybook/react';
+import { StoryRootDecorator } from '@nl-design-system-candidate/storybook-shared/src/StoryRootDecorator';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
-import { StoryRootDecorator } from '@nl-design-system-candidate/storybook-shared/src/StoryRootDecorator';
+import type { Preview } from '@storybook/react-vite';
 import { DocsPage } from '../src/DocsPage';
 
 const preview: Preview = {
@@ -14,6 +14,7 @@ const preview: Preview = {
     docs: {
       // page template for automatic docs
       page: DocsPage,
+      codePanel: true,
     },
     // @whitespace/storybook-addon-html
     html: {

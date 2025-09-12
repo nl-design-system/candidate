@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import packageJSON from '../../components-react/number-badge-react/package.json';
 import { NumberBadge } from '../../components-react/number-badge-react/src/css';
 
