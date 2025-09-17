@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/skip-link-css/src/skip-link.scss';
 import packageJSON from '../../components-react/skip-link-react/package.json';
-import { SkipLink } from '../../components-react/skip-link-react/src/css';
+import { SkipLink } from '../../components-react/skip-link-react/src/skip-link';
 
 const meta = {
   argTypes: {

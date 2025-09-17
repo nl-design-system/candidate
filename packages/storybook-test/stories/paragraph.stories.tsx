@@ -1,14 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
-import packageJSON from '../../../components-react/paragraph-react/package.json';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import componentMarkdown from '../../../docs/paragraph-docs/docs/component.md?raw';
-import tokens from '../../../tokens/paragraph-tokens/tokens.json';
-import {
-  LargeLetterSpacingDecorator,
-  LargeLineHeightDecorator,
-  LargeWordSpacingDecorator,
-} from '../../src/TextDecorator';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/paragraph-css/src/paragraph.scss';
+import packageJSON from '../../components-react/paragraph-react/package.json';
+import { Paragraph } from '../../components-react/paragraph-react/src/paragraph';
+import componentMarkdown from '../../docs/paragraph-docs/docs/component.md?raw';
+import tokens from '../../tokens/paragraph-tokens/tokens.json';
+import { LargeLetterSpacingDecorator, LargeLineHeightDecorator, LargeWordSpacingDecorator } from '../src/TextDecorator';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -65,7 +62,7 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../../src/WcagTests';
+} from '../src/WcagTests';
 
 const meta = {
   argTypes: {

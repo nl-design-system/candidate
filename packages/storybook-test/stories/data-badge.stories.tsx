@@ -1,11 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Heading } from '@nl-design-system-candidate/heading-react/css';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
-import packageJSON from '../../../components-react/data-badge-react/package.json';
-import { DataBadge } from '../../../components-react/data-badge-react/src/css';
-import { Heading } from '../../../components-react/heading-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import componentMarkdown from '../../../docs/data-badge-docs/docs/component.md?raw';
-import tokens from '../../../tokens/data-badge-tokens/tokens.json';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/data-badge-css/src/data-badge.scss';
+import packageJSON from '../../components-react/data-badge-react/package.json';
+import { DataBadge } from '../../components-react/data-badge-react/src/data-badge';
+import componentMarkdown from '../../docs/data-badge-docs/docs/component.md?raw';
+import tokens from '../../tokens/data-badge-tokens/tokens.json';
 
 const meta = {
   argTypes: {

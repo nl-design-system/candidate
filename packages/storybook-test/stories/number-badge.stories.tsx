@@ -1,12 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Heading } from '@nl-design-system-candidate/heading-react/css';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Heading } from '../../../components-react/heading-react/src/css';
-import packageJSON from '../../../components-react/number-badge-react/package.json';
-import { NumberBadge } from '../../../components-react/number-badge-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import componentMarkdown from '../../../docs/number-badge-docs/docs/component.md?raw';
-import tokens from '../../../tokens/number-badge-tokens/tokens.json';
-import '../../../components-css/number-badge-css/dist/test.css';
+import type { CSSProperties } from 'react';
+import '../../components-css/number-badge-css/src/number-badge.scss';
+import '../../components-css/number-badge-css/src/test.scss';
+import packageJSON from '../../components-react/number-badge-react/package.json';
+import { NumberBadge } from '../../components-react/number-badge-react/src/number-badge';
+import componentMarkdown from '../../docs/number-badge-docs/docs/component.md?raw';
+import tokens from '../../tokens/number-badge-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -264,7 +266,7 @@ export const Center: Story = {
       '--nl-number-badge-font-size': '3rem',
       '--nl-number-badge-min-block-size': '10rem',
       '--nl-number-badge-min-inline-size': '10rem',
-    },
+    } as CSSProperties,
     value: 42,
   },
   globals: {
@@ -289,11 +291,13 @@ export const FontRelative: Story = {
   decorators: [
     (Story) => (
       <div
-        style={{
-          '--nl-number-badge-font-size': '0.6em',
-          '--nl-number-badge-padding-block': '0.25em',
-          '--nl-number-badge-padding-inline': '0.25em',
-        }}
+        style={
+          {
+            '--nl-number-badge-font-size': '0.6em',
+            '--nl-number-badge-padding-block': '0.25em',
+            '--nl-number-badge-padding-inline': '0.25em',
+          } as CSSProperties
+        }
       >
         <Heading level={1}>Kopniveau {Story()}</Heading>
         <Paragraph>Er zijn 6 kopniveau's in HTML, die kun je op deze pagina zien.</Paragraph>
@@ -340,7 +344,7 @@ export const FontSizeMinimum: Story = {
       '--nl-number-badge-font-size': '0.6em',
       '--nl-number-badge-padding-block': '0.2em',
       '--nl-number-badge-padding-inline': '0.2em',
-    },
+    } as CSSProperties,
     value: 42,
   },
   decorators: [
@@ -401,7 +405,7 @@ export const NumberBadgeBorder: Story = {
       '--nl-number-badge-background-color': 'whitesmoke',
       '--nl-number-badge-border-color': 'dimgray',
       '--nl-number-badge-color': 'black',
-    },
+    } as CSSProperties,
     value: 42,
   },
   globals: {
@@ -455,7 +459,7 @@ export const NumberBadgeFontStyle: Story = {
       '--nl-number-badge-font-size': '0.6em',
       '--nl-number-badge-padding-block': '0.2em',
       '--nl-number-badge-padding-inline': '0.2em',
-    },
+    } as CSSProperties,
     value: 0,
   },
   decorators: [

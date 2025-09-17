@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/icon-css/src/icon.scss';
 import packageJSON from '../../components-react/icon-react/package.json';
-import { Icon } from '../../components-react/icon-react/src/css';
+import { Icon } from '../../components-react/icon-react/src/icon';
 
 const meta = {
   args: {

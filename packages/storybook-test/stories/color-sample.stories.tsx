@@ -1,11 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useId } from 'react';
-import packageJSON from '../../../components-react/color-sample-react/package.json';
-import { ColorSample } from '../../../components-react/color-sample-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import componentMarkdown from '../../../docs/color-sample-docs/docs/component.md?raw';
-import tokens from '../../../tokens/color-sample-tokens/tokens.json';
+import '../../components-css/color-sample-css/src/color-sample.scss';
+import packageJSON from '../../components-react/color-sample-react/package.json';
+import { ColorSample } from '../../components-react/color-sample-react/src/color-sample';
+import componentMarkdown from '../../docs/color-sample-docs/docs/component.md?raw';
+import tokens from '../../tokens/color-sample-tokens/tokens.json';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -62,7 +63,7 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../../src/WcagTests';
+} from '../src/WcagTests';
 
 const meta = {
   argTypes: {

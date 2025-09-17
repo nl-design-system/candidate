@@ -1,8 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import { ParagraphDecorator } from '@nl-design-system-candidate/storybook-shared/src/ParagraphDecorator';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/link-css/src/link.scss';
 import packageJSON from '../../components-react/link-react/package.json';
-import { Link } from '../../components-react/link-react/src/css';
+import { Link } from '../../components-react/link-react/src/link';
 import { Paragraph } from '../../components-react/paragraph-react/src/css';
 
 const meta = {

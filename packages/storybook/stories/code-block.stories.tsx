@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/code-block-css/src/code-block.scss';
 import packageJSON from '../../components-react/code-block-react/package.json';
-import { CodeBlock } from '../../components-react/code-block-react/src/css';
+import { CodeBlock } from '../../components-react/code-block-react/src/code-block';
 
 const meta = {
   argTypes: {

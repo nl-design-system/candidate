@@ -1,11 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Heading } from '@nl-design-system-candidate/heading-react/css';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
-import { Heading } from '../../../components-react/heading-react/src/css';
-import packageJSON from '../../../components-react/mark-react/package.json';
-import { Mark } from '../../../components-react/mark-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import componentMarkdown from '../../../docs/mark-docs/docs/component.md?raw';
-import tokens from '../../../tokens/mark-tokens/tokens.json';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/mark-css/src/mark.scss';
+import packageJSON from '../../components-react/mark-react/package.json';
+import { Mark } from '../../components-react/mark-react/src/mark';
+import componentMarkdown from '../../docs/mark-docs/docs/component.md?raw';
+import tokens from '../../tokens/mark-tokens/tokens.json';
 
 const meta = {
   argTypes: {

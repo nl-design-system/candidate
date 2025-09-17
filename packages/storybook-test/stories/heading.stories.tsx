@@ -1,10 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
-import packageJSON from '../../../components-react/heading-react/package.json';
-import { Heading } from '../../../components-react/heading-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import componentMarkdown from '../../../docs/heading-docs/docs/component.md?raw';
-import tokens from '../../../tokens/heading-tokens/tokens.json';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { CSSProperties } from 'react';
+import '../../components-css/heading-css/src/heading.scss';
+import packageJSON from '../../components-react/heading-react/package.json';
+import { Heading } from '../../components-react/heading-react/src/heading';
+import componentMarkdown from '../../docs/heading-docs/docs/component.md?raw';
+import tokens from '../../tokens/heading-tokens/tokens.json';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -62,7 +64,7 @@ import {
   WCAG22_411_PARSING,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../../src/WcagTests';
+} from '../src/WcagTests';
 
 const meta = {
   argTypes: {
@@ -598,21 +600,23 @@ export const HeadingLevelColors: Story = {
   },
   render: () => (
     <div
-      style={{
-        '--nl-heading-level-1-color': 'midnightblue',
-        '--nl-heading-level-1-font-family': 'serif',
-        '--nl-heading-level-2-color': 'maroon',
-        '--nl-heading-level-2-font-family': 'sans-serif',
-        '--nl-heading-level-3-color': 'green',
-        '--nl-heading-level-3-font-family': 'serif',
-        '--nl-heading-level-4-color': 'royalblue',
-        '--nl-heading-level-4-font-family': 'sans-serif',
-        '--nl-heading-level-5-color': 'rebeccapurple',
-        '--nl-heading-level-5-font-family': 'serif',
-        '--nl-heading-level-6-color': 'black',
-        '--nl-heading-level-6-font-family': 'sans-serif',
-        backgroundColor: 'white',
-      }}
+      style={
+        {
+          '--nl-heading-level-1-color': 'midnightblue',
+          '--nl-heading-level-1-font-family': 'serif',
+          '--nl-heading-level-2-color': 'maroon',
+          '--nl-heading-level-2-font-family': 'sans-serif',
+          '--nl-heading-level-3-color': 'green',
+          '--nl-heading-level-3-font-family': 'serif',
+          '--nl-heading-level-4-color': 'royalblue',
+          '--nl-heading-level-4-font-family': 'sans-serif',
+          '--nl-heading-level-5-color': 'rebeccapurple',
+          '--nl-heading-level-5-font-family': 'serif',
+          '--nl-heading-level-6-color': 'black',
+          '--nl-heading-level-6-font-family': 'sans-serif',
+          backgroundColor: 'white',
+        } as CSSProperties
+      }
     >
       <Heading level={1}>Civiel recht in Nederland</Heading>
       <Heading level={2}>Burgerlijk Wetboek</Heading>
@@ -654,20 +658,22 @@ export const HeadingLevelSize: Story = {
   },
   render: () => (
     <div
-      style={{
-        '--nl-heading-level-1-font-size': '4em',
-        '--nl-heading-level-1-line-height': '1.3',
-        '--nl-heading-level-2-font-size': '3em',
-        '--nl-heading-level-2-line-height': '1.4',
-        '--nl-heading-level-3-font-size': '2em',
-        '--nl-heading-level-3-line-height': '1.5',
-        '--nl-heading-level-4-font-size': '1.6em',
-        '--nl-heading-level-4-line-height': '1.6',
-        '--nl-heading-level-5-font-size': '1.4em',
-        '--nl-heading-level-5-line-height': '1.7',
-        '--nl-heading-level-6-font-size': '1.2em',
-        '--nl-heading-level-6-line-height': '1.8',
-      }}
+      style={
+        {
+          '--nl-heading-level-1-font-size': '4em',
+          '--nl-heading-level-1-line-height': '1.3',
+          '--nl-heading-level-2-font-size': '3em',
+          '--nl-heading-level-2-line-height': '1.4',
+          '--nl-heading-level-3-font-size': '2em',
+          '--nl-heading-level-3-line-height': '1.5',
+          '--nl-heading-level-4-font-size': '1.6em',
+          '--nl-heading-level-4-line-height': '1.6',
+          '--nl-heading-level-5-font-size': '1.4em',
+          '--nl-heading-level-5-line-height': '1.7',
+          '--nl-heading-level-6-font-size': '1.2em',
+          '--nl-heading-level-6-line-height': '1.8',
+        } as CSSProperties
+      }
     >
       <Heading level={1}>Civiel recht in Nederland</Heading>
       <Heading level={2}>Burgerlijk Wetboek</Heading>

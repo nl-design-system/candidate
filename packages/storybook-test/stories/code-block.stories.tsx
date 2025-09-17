@@ -1,10 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
-import packageJSON from '../../../components-react/code-block-react/package.json';
-import { CodeBlock } from '../../../components-react/code-block-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import componentMarkdown from '../../../docs/code-block-docs/docs/component.md?raw';
-import tokens from '../../../tokens/code-block-tokens/tokens.json';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { CSSProperties } from 'react';
+import '../../components-css/code-block-css/src/code-block.scss';
+import packageJSON from '../../components-react/code-block-react/package.json';
+import { CodeBlock } from '../../components-react/code-block-react/src/code-block';
+import componentMarkdown from '../../docs/code-block-docs/docs/component.md?raw';
+import tokens from '../../tokens/code-block-tokens/tokens.json';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -61,7 +63,7 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../../src/WcagTests';
+} from '../src/WcagTests';
 
 const meta = {
   argTypes: {
@@ -362,7 +364,7 @@ export const FallbackFont: Story = {
     children: `De Code Block moet visueel onderscheidbaar zijn.`,
     style: {
       '--nl-code-block-font-family': '""',
-    },
+    } as CSSProperties,
   },
   globals: {
     storyRootClassname: '',

@@ -1,13 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Heading } from '@nl-design-system-candidate/heading-react/css';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import { ParagraphDecorator } from '@nl-design-system-candidate/storybook-shared/src/ParagraphDecorator';
-import { Heading } from '../../../components-react/heading-react/src/css';
-import packageJSON from '../../../components-react/link-react/package.json';
-import { Link } from '../../../components-react/link-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import componentMarkdown from '../../../docs/link-docs/docs/component.md?raw';
-import tokens from '../../../tokens/link-tokens/tokens.json';
-import '../../../components-css/link-css/src/test.scss';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/link-css/src/link.scss';
+import '../../components-css/link-css/src/test.scss';
+import packageJSON from '../../components-react/link-react/package.json';
+import { Link } from '../../components-react/link-react/src/link';
+import componentMarkdown from '../../docs/link-docs/docs/component.md?raw';
+import tokens from '../../tokens/link-tokens/tokens.json';
 
 const ExampleImage = () => (
   <svg

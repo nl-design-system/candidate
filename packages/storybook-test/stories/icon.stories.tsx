@@ -4,9 +4,9 @@ import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import { IconCalendarEvent, IconChevronRight, IconExternalLink, IconSquareChevronRight } from '@tabler/icons-react';
 import type { CSSProperties } from 'react';
-import '../../../components-css/icon-css/src/icon.scss'; // Let Vite compile the SCSS
-import packageJSON from '../../../components-react/icon-react/package.json';
-import { Icon } from '../../../components-react/icon-react/src/icon'; // Icon without CSS
+import '../../components-css/icon-css/src/icon.scss';
+import packageJSON from '../../components-react/icon-react/package.json';
+import { Icon } from '../../components-react/icon-react/src/icon';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -63,7 +63,7 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../../src/WcagTests';
+} from '../src/WcagTests';
 
 const meta = {
   args: {

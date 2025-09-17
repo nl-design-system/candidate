@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
-import packageJSON from '../../../components-react/code-react/package.json';
-import { Code } from '../../../components-react/code-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import componentMarkdown from '../../../docs/code-docs/docs/component.md?raw';
-import tokens from '../../../tokens/code-tokens/tokens.json';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/code-css/src/code.scss';
+import packageJSON from '../../components-react/code-react/package.json';
+import { Code } from '../../components-react/code-react/src/code';
+import componentMarkdown from '../../docs/code-docs/docs/component.md?raw';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -61,7 +61,8 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../../src/WcagTests';
+} from '../src/WcagTests';
+import tokens from '../../tokens/code-tokens/tokens.json';
 
 const meta = {
   argTypes: {

@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ReactNode } from 'react';
-import packageJSON from '../../../components-react/paragraph-react/package.json';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
+import { CSSProperties, ReactNode } from 'react';
+import '../../components-css/paragraph-css/src/paragraph.scss';
+import packageJSON from '../../components-react/paragraph-react/package.json';
+import { Paragraph } from '../../components-react/paragraph-react/src/paragraph';
 
 const meta = {
   argTypes: {
@@ -242,6 +243,7 @@ export const ParagraphIncorrectDir: Story = {
 export const ParagraphAlignCenter: Story = {
   name: 'Fout: tekst gecentreerd',
   args: {
+    // @ts-expect-error "align" is deprecated in HTML5 but works in many browsers, used here only to point out that it should not be used
     align: 'center',
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
   },
@@ -250,6 +252,7 @@ export const ParagraphAlignCenter: Story = {
 export const ParagraphAlignRight: Story = {
   name: 'Fout: tekst rechts uitgelijnd',
   args: {
+    // @ts-expect-error "align" is deprecated in HTML5 but works in many browsers, used here only to point out that it should not be used
     align: 'right',
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
   },
@@ -257,6 +260,7 @@ export const ParagraphAlignRight: Story = {
 export const ParagraphAlignJustify: Story = {
   name: 'Fout: uitgevulde tekst',
   args: {
+    // @ts-expect-error "align" is deprecated in HTML5 but works in many browsers, used here only to point out that it should not be used
     align: 'justify',
     children:
       'In de laatste dagen, toen ik uit Italië naar Engeland terugkeerde, besloot ik, liever dan al den tijd, dien ik te paard moest zitten, met smakelooze en onwetenschappelijke praatjes te slijten, zoo nu en dan of bij mij zelf over een onderwerp uit onze gemeenschappelijke letteroefeningen na te denken of mij te vermeien in de herinnering aan de even geleerde als dierbare vrienden, die ik hier had achtergelaten. Onder dezen kwam uw beeld, mijn beste Morus, mij zeker het allereerst voor den geest en de herinnering aan U, ofschoon wij ver van elkander waren, was mij even aangenaam, als uw omgang was, toen ik U nog van aangezicht tot aangezicht placht te zien, het aangenaamste—ik mag sterven, als het niet waar is—van al wat mij ooit in mijn leven te beurt is gevallen. Daarom vatte ik, omdat ik meende in allen gevalle iets te moeten doen en die tijd mij weinig geschikt voorkwam om een ernstig onderwerp te overdenken, het plan op een boertige lofrede op Moria (de Zotheid) te houden. “Welke Pallas heeft U op die gedachte gebracht?” zult ge zeggen. Vooreerst deed uw geslachtsnaam Morus mij dit plan opvatten, die even dicht bij het woord Moria komt, als gij ver van de zaak af zijt of liever, volgens aller eenstemmig getuigenis, daarmede volstrekt niets gemeen hebt. Verder vermoedde ik, dat deze speling van ons vernuft bovenal uw goedkeuring zou wegdragen, omdat gij in dergelijke jokkernijen, waarbij, zoo ik goed zie, nergens geleerdheid en geest kan gemist worden, bijzonder veel smaak vindt en in het dagelijksche leven als een Democritus pleegt op te treden. Ofschoon gij door uw buitengewone scherpzinnigheid gewoonlijk hemelsbreed in gevoelen van het gemeene volk verschilt, zijt gij toch door de ongeloofelijke zachtheid en meegaandheid van uw karakter niet alleen in staat om met allerlei menschen in alle omstandigheden des levens om te gaan, maar vindt gij er ook een genot in. Deze kleine verhandeling zult gij daarom gaarne aannemen als een aandenken van uw vriend en gij zult ook haar verdediging gaarne aanvaarden, want zij is u toegewijd en daarom voortaan Uw eigendom, niet het mijne.',
@@ -269,7 +273,7 @@ export const ParagraphSmall: Story = {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
     style: {
       '--nl-paragraph-font-size': '12px',
-    },
+    } as CSSProperties,
   },
 };
 
@@ -279,7 +283,7 @@ export const ParagraphFixedSize: Story = {
     children: 'Op brute wĳze ving de schooljuf de quasi-kalme lynx.',
     style: {
       '--nl-paragraph-font-size': '16px',
-    },
+    } as CSSProperties,
   },
   decorators: [
     (Story) => (
@@ -310,7 +314,7 @@ export const ParagraphLineHeight: Story = {
       'Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld. Discriminatie wegens godsdienst, levensovertuiging, politieke gezindheid, ras, geslacht, handicap, seksuele gerichtheid of op welke grond dan ook, is niet toegestaan.',
     style: {
       '--nl-paragraph-line-height': '24px',
-    },
+    } as CSSProperties,
   },
   decorators: [
     (Story) => (
@@ -407,7 +411,7 @@ export const ParagraphContrast: Story = {
     style: {
       '--nl-paragraph-color': 'silver',
       '--nl-paragraph-font-size': '16px',
-    },
+    } as CSSProperties,
   },
   decorators: [
     (Story) => (

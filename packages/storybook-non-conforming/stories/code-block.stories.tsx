@@ -1,7 +1,9 @@
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import packageJSON from '../../../components-react/code-block-react/package.json';
-import { CodeBlock } from '../../../components-react/code-block-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
+import type { CSSProperties } from 'react';
+import '../../components-css/code-block-css/src/code-block.scss';
+import packageJSON from '../../components-react/code-block-react/package.json';
+import { CodeBlock } from '../../components-react/code-block-react/src/code-block';
 
 const meta = {
   argTypes: {
@@ -39,7 +41,7 @@ export const GeenVisueelOnderscheid: Story = {
       '--nl-code-block-line-height': 'var(--nl-paragraph-line-height)',
       '--nl-code-block-padding-block': '0',
       '--nl-code-block-padding-inline': '0',
-    },
+    } as CSSProperties,
   },
   decorators: [
     (Story) => (
