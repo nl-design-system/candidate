@@ -1,13 +1,13 @@
+import { Heading } from '@nl-design-system-candidate/heading-react/css';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import type { PropsWithChildren, ReactNode } from 'react';
-import { Heading } from '../../../components-react/heading-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import packageJSON from '../../../components-react/skip-link-react/package.json';
-import { SkipLink } from '../../../components-react/skip-link-react/src/css';
-import tokens from '../../../tokens/skip-link-tokens/tokens.json';
-// import the following file last because it is needed for Chromatic test
-import '../../../components-css/skip-link-css/src/test.scss';
+import '../../components-css/skip-link-css/src/skip-link.scss';
+import '../../components-css/skip-link-css/src/test.scss';
+import packageJSON from '../../components-react/skip-link-react/package.json';
+import { SkipLink } from '../../components-react/skip-link-react/src/skip-link';
+import tokens from '../../tokens/skip-link-tokens/tokens.json';
 
 interface ExamplePageProps {
   organisation: ReactNode;

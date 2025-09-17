@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/data-badge-css/src/data-badge.scss';
 import packageJSON from '../../components-react/data-badge-react/package.json';
-import { DataBadge } from '../../components-react/data-badge-react/src/css';
+import { DataBadge } from '../../components-react/data-badge-react/src/data-badge';
 
 const meta = {
   argTypes: {

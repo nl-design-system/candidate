@@ -21,6 +21,7 @@
   "devDependencies": {
     "@fontsource/fira-sans": "5.2.6",
     "@fontsource/source-serif-pro": "5.2.5",
+    "@nl-design-system-candidate/paragraph-react": "workspace:*",
     "@nl-design-system-candidate/storybook-shared": "workspace:*",
     "@nl-design-system-unstable/voorbeeld-design-tokens": "5.0.0",
     "@storybook/addon-a11y": "9.1.5",

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/number-badge-css/src/number-badge.scss';
 import packageJSON from '../../components-react/number-badge-react/package.json';
-import { NumberBadge } from '../../components-react/number-badge-react/src/css';
+import { NumberBadge } from '../../components-react/number-badge-react/src/number-badge';
 
 const meta = {
   argTypes: {

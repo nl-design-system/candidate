@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/mark-css/src/mark.scss';
 import packageJSON from '../../components-react/mark-react/package.json';
-import { Mark } from '../../components-react/mark-react/src/css';
+import { Mark } from '../../components-react/mark-react/src/mark';
 import { Paragraph } from '../../components-react/paragraph-react/src/css';
 
 const meta = {

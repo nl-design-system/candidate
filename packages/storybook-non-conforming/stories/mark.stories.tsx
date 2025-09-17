@@ -1,8 +1,10 @@
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import packageJSON from '../../../components-react/mark-react/package.json';
-import { Mark } from '../../../components-react/mark-react/src/css';
-import { Paragraph } from '../../../components-react/paragraph-react/src/css';
-import componentMarkdown from '../../../docs/mark-docs/docs/component.md?raw';
+import type { CSSProperties } from 'react';
+import componentMarkdown from '../../docs/mark-docs/docs/component.md?raw';
+import '../../components-css/mark-css/src/mark.scss';
+import packageJSON from '../../components-react/mark-react/package.json';
+import { Mark } from '../../components-react/mark-react/src/mark';
 
 const meta = {
   argTypes: {
@@ -74,12 +76,14 @@ In dit voorbeeld is het contrast tussen de achtergrondkleur \`white\` en de voor
   render({ children }) {
     return (
       <div
-        style={{
-          '--nl-mark-background-color': 'yellow',
-          '--nl-mark-color': 'black',
-          backgroundColor: 'white',
-          color: 'black',
-        }}
+        style={
+          {
+            '--nl-mark-background-color': 'yellow',
+            '--nl-mark-color': 'black',
+            backgroundColor: 'white',
+            color: 'black',
+          } as CSSProperties
+        }
       >
         <Paragraph>
           In deze koptekst staat een stukje <Mark>{children}</Mark>.

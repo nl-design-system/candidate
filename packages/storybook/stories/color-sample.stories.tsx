@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/color-sample-css/src/color-sample.scss';
 import packageJSON from '../../components-react/color-sample-react/package.json';
-import { ColorSample } from '../../components-react/color-sample-react/src/css';
+import { ColorSample } from '../../components-react/color-sample-react/src/color-sample';
 
 const meta = {
   argTypes: {

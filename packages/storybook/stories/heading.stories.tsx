@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/heading-css/src/heading.scss';
 import packageJSON from '../../components-react/heading-react/package.json';
-import { Heading } from '../../components-react/heading-react/src/css';
-import { Paragraph } from '../../components-react/paragraph-react/src/css';
+import { Heading } from '../../components-react/heading-react/src/heading';
 
 const meta = {
   argTypes: {
