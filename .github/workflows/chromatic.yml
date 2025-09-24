@@ -61,7 +61,6 @@ jobs:
         uses: chromaui/action@d0795df816d05c4a89c80295303970fddd247cce # v13.1.4
         with:
           autoAcceptChanges: main
-          dryRun: true
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storyBookBaseDir: packages/storybook-test/
           storybookBuildDir: packages/storybook-test/dist/
