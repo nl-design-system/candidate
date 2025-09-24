@@ -67,7 +67,5 @@ jobs:
           storybookBuildDir: packages/storybook-test/dist/
           storybookConfigDir: packages/storybook-test/config/
           exitOnceUploaded: true
-          # Enable TurboSnap
-          onlyChanged: true
         env:
           CHROMATIC_SHA: ${{ env.HEAD_SHA }}
