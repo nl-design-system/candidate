@@ -8,10 +8,6 @@ on:
     types:
       # Only when the Continuous Integration workflow completes
       - completed
-  push:
-    # Also triggered by pushes to the main branch
-    branches:
-      - main
 
 permissions:
   # Read the contents of the repo
@@ -19,21 +15,17 @@ permissions:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  # Only cancel when it's a push event
-  cancel-in-progress: ${{ github.event_name == 'push' }}
+  cancel-in-progress: true
 
 jobs:
   chromatic:
     runs-on: ubuntu-latest
-    env:
-      # Determine the correct ref to use
-      HEAD_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
     steps:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           # Use the correct ref to check out
-          ref: ${{ env.HEAD_SHA }}
+          ref: ${{ github.event.workflow_run.head_sha }}
           # Make sure that history is available to Chromatic
           fetch-depth: 0
 
@@ -54,7 +46,7 @@ jobs:
         with:
           name: visual-regression-testing
           github-token: ${{ github.token }}
-          run-id: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.id || github.run_id }}
+          run-id: ${{ github.event.workflow_run.id }}
           path: packages/storybook-test/dist/
 
       - name: Chromatic
@@ -66,5 +58,3 @@ jobs:
           storybookBuildDir: packages/storybook-test/dist/
           storybookConfigDir: packages/storybook-test/config/
           exitOnceUploaded: true
-        env:
-          CHROMATIC_SHA: ${{ env.HEAD_SHA }}
