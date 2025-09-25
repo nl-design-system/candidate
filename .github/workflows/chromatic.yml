@@ -1,4 +1,4 @@
-name: chromatic
+name: Chromatic for pull requests
 
 on:
   workflow_run:
@@ -19,6 +19,8 @@ concurrency:
 
 jobs:
   chromatic:
+    # Only run if the Continuous Integration workflow was successful
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -45,6 +47,7 @@ jobs:
         uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
         with:
           name: visual-regression-testing
+          # Needed to download an artifact created in a different workflow
           github-token: ${{ github.token }}
           run-id: ${{ github.event.workflow_run.id }}
           path: packages/storybook-test/dist/
