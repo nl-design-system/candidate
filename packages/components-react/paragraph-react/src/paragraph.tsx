@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 
 export type ParagraphPurpose = 'lead';
 
-interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
+export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
   purpose?: ParagraphPurpose;
 }
 
