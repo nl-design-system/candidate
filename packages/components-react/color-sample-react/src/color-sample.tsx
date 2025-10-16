@@ -1,7 +1,7 @@
 import type { CSSProperties, HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
 
-interface ColorSampleProps extends HTMLAttributes<SVGSVGElement> {
+export interface ColorSampleProps extends HTMLAttributes<SVGSVGElement> {
   label?: string;
   value: CSSProperties['color'];
 }
