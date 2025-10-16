@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/number-badge-react
 
+## 1.3.0
+
+### Minor Changes
+
+- 7d83629: Export `NumberBadgeProps` interface for TypeScript.
+
 ## 1.2.5
 
 ### Patch Changes
