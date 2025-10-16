@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/paragraph-react
 
+## 2.2.0
+
+### Minor Changes
+
+- 372bf04: Export `ParagraphProps` interface for TypeScript.
+
 ## 2.1.5
 
 ### Patch Changes

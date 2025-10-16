@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/color-sample-react
 
+## 1.2.0
+
+### Minor Changes
+
+- 5cf0a6c: Export `ColorSampleProps` interface for TypeScript.
+
 ## 1.1.5
 
 ### Patch Changes
