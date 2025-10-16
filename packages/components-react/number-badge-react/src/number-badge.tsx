@@ -1,7 +1,7 @@
 import type { DataHTMLAttributes, ForwardedRef, HTMLAttributes, ReactNode } from 'react';
 import { forwardRef } from 'react';
 
-type NumberBadgeProps =
+export type NumberBadgeProps =
   // <data> variant
   | (Omit<DataHTMLAttributes<HTMLDataElement>, 'value'> & {
       value: string | number;
