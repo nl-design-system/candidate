@@ -1,0 +1,7 @@
+@use "../mixin";
+
+@mixin button {
+  button {
+    @include mixin.nl-button;
+  }
+}
