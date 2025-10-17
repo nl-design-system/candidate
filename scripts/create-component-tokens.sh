@@ -17,7 +17,7 @@ package_json="${component_dir}/package.json"
 mkdir -p "${component_dir}/docs"
 
 # create new empty files but leave existing files alone
->>"${component_dir}/README.md"
+touch "${component_dir}/README.md"
 
 # copy LICENSE file
 cp ./scripts/LICENSE.EUPL-1.2.template.md "${component_dir}/LICENSE.md"
@@ -41,21 +41,21 @@ if [ ! -f "./tokens.json" ]; then
 fi
 
 # fill package.json
-pnpm pkg set name="@nl-design-system-candidate/${component}-tokens"
-pnpm pkg set version="${version}"
-pnpm pkg set license="EUPL-1.2"
-pnpm pkg set homepage="https://github.com/nl-design-system/candidate/tree/main/packages/tokens/${component}-tokens#readme"
-pnpm pkg set main="./tokens.json"
-pnpm pkg set export="./tokens.json"
+pnpm pkg set "name=@nl-design-system-candidate/${component}-tokens"
+pnpm pkg set "version=${version}"
+pnpm pkg set "license=EUPL-1.2"
+pnpm pkg set "homepage=https://github.com/nl-design-system/candidate/tree/main/packages/tokens/${component}-tokens#readme"
+pnpm pkg set "main=./tokens.json"
+pnpm pkg set "export=./tokens.json"
 # use files[0] instead of files[] to make this idempotent
-pnpm pkg set files[0]="./tokens.json"
-pnpm pkg set repository.type="git+ssh"
-pnpm pkg set repository.url="git@github.com:nl-design-system/candidate.git"
-pnpm pkg set repository.directory="packages/tokens/${component}-tokens"
-# only make new components private
+pnpm pkg set "files[0]=./tokens.json"
+pnpm pkg set "repository.type=git+ssh"
+pnpm pkg set "repository.url=git@github.com:nl-design-system/candidate.git"
+pnpm pkg set "repository.directory=packages/tokens/${component}-tokens"
+# # only make new components private
 if [ "${version}" = "0.0.0" ]; then
-  pnpm pkg set private=true --json
+  pnpm pkg set 'private=true' --json
 fi
-pnpm pkg set publishConfig.access="public"
-pnpm pkg set publishConfig.provenance=true --json
-pnpm pkg set scripts["generate-tokens"]="../../../scripts/generate-tokens.sh ${component}"
+pnpm pkg set "publishConfig.access=public"
+pnpm pkg set 'publishConfig.provenance=true' --json
+pnpm pkg set "scripts[generate-tokens]=../../../scripts/generate-tokens.sh \"${component}\""

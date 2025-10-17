@@ -17,9 +17,9 @@ package_json="${component_dir}/package.json"
 mkdir -p "${component_dir}/docs"
 
 # create new empty files but leave existing files alone
->>"${component_dir}/README.md"
->>"${component_dir}/docs/aliases.md"
->>"${component_dir}/docs/component.md"
+touch "${component_dir}/README.md"
+touch "${component_dir}/docs/aliases.md"
+touch "${component_dir}/docs/component.md"
 
 # create package.json if it doesn't exist
 if [ ! -f "${package_json}" ]; then
@@ -35,18 +35,18 @@ fi
 cd "${component_dir}"
 
 # fill package.json
-pnpm pkg set name="@nl-design-system-candidate/${component}-docs"
-pnpm pkg set version="${version}"
-pnpm pkg set license="CC0-1.0"
-pnpm pkg set homepage="https://github.com/nl-design-system/candidate/tree/main/packages/docs/${component}-docs#readme"
+pnpm pkg set "name=@nl-design-system-candidate/${component}-docs"
+pnpm pkg set "version=${version}"
+pnpm pkg set "license=CC0-1.0"
+pnpm pkg set "homepage=https://github.com/nl-design-system/candidate/tree/main/packages/docs/${component}-docs#readme"
 # use files[0] instead of files[] to make this idempotent
-pnpm pkg set files[0]="./docs/"
-pnpm pkg set repository.type="git+ssh"
-pnpm pkg set repository.url="git@github.com:nl-design-system/candidate.git"
-pnpm pkg set repository.directory="packages/docs/${component}-docs"
+pnpm pkg set "files[0]=./docs/"
+pnpm pkg set "repository.type=git+ssh"
+pnpm pkg set "repository.url=git@github.com:nl-design-system/candidate.git"
+pnpm pkg set "repository.directory=packages/docs/${component}-docs"
 # only make new components private
 if [ "${version}" = "0.0.0" ]; then
-  pnpm pkg set private=true --json
+  pnpm pkg set "private=true" --json
 fi
-pnpm pkg set publishConfig.access="public"
-pnpm pkg set publishConfig.provenance=true --json
+pnpm pkg set "publishConfig.access=public"
+pnpm pkg set "publishConfig.provenance=true" --json
