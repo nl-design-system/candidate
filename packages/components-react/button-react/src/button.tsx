@@ -8,10 +8,12 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(props, forwardedRef) {
-  const { children, className, type = 'button', ...restProps } = props;
+  const { children, className, iconEnd, iconStart, type = 'button', ...restProps } = props;
   return (
     <button type={type} className={clsx('nl-button', className)} ref={forwardedRef} {...restProps}>
+      {iconStart}
       {children}
+      {iconEnd}
     </button>
   );
 });
