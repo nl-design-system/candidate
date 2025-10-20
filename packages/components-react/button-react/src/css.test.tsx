@@ -7,7 +7,7 @@ afterEach(() => {
   cleanup();
 });
 
-const testCode = "import { Button } from '@nl-design-system-candidate/button-react/css';";
+const testCode = 'Klik mij!';
 
 describe('Button (css import)', () => {
   it('injects a <style> block into the document', () => {
