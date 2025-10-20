@@ -3,3 +3,11 @@
 .nl-button {
   @include mixin.nl-button;
 }
+
+.nl-button[aria-pressed="true"] {
+  @include mixin.nl-button--pressed;
+}
+
+.nl-button:disabled {
+  @include mixin.nl-button--disabled;
+}

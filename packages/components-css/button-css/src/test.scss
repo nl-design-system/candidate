@@ -1,0 +1,21 @@
+@use "./mixin";
+
+/*
+ * Used for stories in Storybook
+ */
+
+.nl-button--active {
+  @include mixin.nl-button--active;
+}
+
+.nl-button--focus-visible {
+  @include mixin.nl-button--focus-visible;
+}
+
+.nl-button--hover {
+  @include mixin.nl-button--hover;
+}
+
+.nl-button--zoom-200 {
+  font-size: 2rem;
+}

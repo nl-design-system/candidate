@@ -1,3 +1,23 @@
 @mixin nl-button {
   appearance: none;
 }
+
+@mixin nl-button--active {
+  background-color: red;
+}
+
+@mixin nl-button--focus-visible {
+  background-color: green;
+}
+
+@mixin nl-button--hover {
+  background-color: blue;
+}
+
+@mixin nl-button--pressed {
+  background-color: magenta;
+}
+
+@mixin nl-button--disabled {
+  background-color: cyan;
+}
