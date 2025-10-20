@@ -9,9 +9,11 @@ afterEach(() => {
 });
 
 const displayName = 'Button';
+const accessibleName = 'menu openen';
 const text = 'Klik mij';
 const extraClassName = 'extra-classname';
-const testId = 'rich-text';
+const testAccessibleLabelId = 'button-label';
+const testRichTextId = 'rich-text';
 
 describe('Button', () => {
   it(`has displayName "${displayName}"`, () => {
@@ -30,6 +32,46 @@ describe('Button', () => {
     const button = container.querySelector('button:only-child');
 
     expect(button).toBeInTheDocument();
+  });
+
+  it('can be labeled via "aria-label"', () => {
+    render(<Button aria-label={accessibleName}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAccessibleName(accessibleName);
+  });
+
+  it('can be labeled via "aria-labelledby"', () => {
+    render(
+      <>
+        <span id={testAccessibleLabelId}>{accessibleName}</span>
+        <Button aria-labelledby={testAccessibleLabelId}>{text}</Button>
+      </>,
+    );
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAccessibleName(accessibleName);
+  });
+
+  it('can be marked as having a popup via "aria-haspopup"', () => {
+    render(<Button aria-haspopup="dialog">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('aria-haspopup', 'dialog');
+  });
+
+  it('can be marked as expanded via "aria-expanded"', () => {
+    render(<Button aria-expanded="true">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('aria-expanded', 'true');
+  });
+
+  it('can be marked as togglebutton via "aria-pressed"', () => {
+    render(<Button aria-pressed="true">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('aria-pressed', 'true');
   });
 
   it('renders an element with class name "nl-button"', () => {
@@ -56,11 +98,11 @@ describe('Button', () => {
   it('renders rich text content', () => {
     render(
       <Button>
-        <strong data-testid={testId}>{text}</strong>
+        <strong data-testid={testRichTextId}>{text}</strong>
       </Button>,
     );
     const button = screen.getByRole('button');
-    const richText = screen.getByTestId(testId);
+    const richText = screen.getByTestId(testRichTextId);
 
     expect(button).toContainElement(richText);
   });
