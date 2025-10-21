@@ -86,7 +86,7 @@ describe('Button', () => {
     expect(button).toHaveFocus();
   });
 
-  it('can be triggerd with the Spacebar key', async () => {
+  it('can be triggered with the spacebar key', async () => {
     const user = userEvent.setup();
     const clickHandler = vi.fn(() => {});
     render(<Button onClick={clickHandler}>{text}</Button>);
@@ -98,7 +98,7 @@ describe('Button', () => {
     expect(clickHandler).toHaveBeenCalled();
   });
 
-  it('can be triggerd with the mouse', async () => {
+  it('can be triggered with the left mouse click', async () => {
     const user = userEvent.setup();
     const clickHandler = vi.fn(() => {});
     render(<Button onClick={clickHandler}>{text}</Button>);
@@ -109,7 +109,7 @@ describe('Button', () => {
     expect(clickHandler).toHaveBeenCalled();
   });
 
-  it('can be triggerd with the Enter key', async () => {
+  it('can be triggered with the enter key', async () => {
     const user = userEvent.setup();
     const clickHandler = vi.fn(() => {});
     render(<Button onClick={clickHandler}>{text}</Button>);
@@ -156,7 +156,7 @@ describe('Button', () => {
     expect(button).toHaveAttribute('value', 'my-value');
   });
 
-  it('can be connected to a form element that does not contain in', () => {
+  it('can be connected to a form element it is not contained in', () => {
     const submitHandler = vi.fn((event) => event.preventDefault());
     render(
       <>
@@ -171,7 +171,7 @@ describe('Button', () => {
     expect(submitHandler).toHaveBeenCalled();
   });
 
-  it('can change it type via the type attribute', () => {
+  it('can change type via the type attribute', () => {
     render(<Button type="submit">{text}</Button>);
     const button = screen.getByRole('button');
 
