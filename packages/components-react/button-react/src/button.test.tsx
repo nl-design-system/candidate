@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { render, screen, cleanup } from '@testing-library/react';
-import { afterEach, describe, expect, it } from 'vitest';
+import userEvent from '@testing-library/user-event';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { Button } from './button';
 import { createRef } from 'react';
 
@@ -18,6 +19,20 @@ const testRichTextId = 'rich-text';
 describe('Button', () => {
   it(`has displayName "${displayName}"`, () => {
     expect(Button.displayName).toBe(displayName);
+  });
+
+  it('has a default type of "button"', () => {
+    render(<Button>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('type', 'button');
+  });
+
+  it('has an accessible name', () => {
+    render(<Button>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAccessibleName(text);
   });
 
   it('renders an element with role "button"', () => {
@@ -60,6 +75,52 @@ describe('Button', () => {
     expect(button).toHaveAttribute('aria-haspopup', 'dialog');
   });
 
+  it('can be focussed with the tab key', async () => {
+    const user = userEvent.setup();
+    render(<Button>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(document.body).toHaveFocus();
+    await user.tab();
+
+    expect(button).toHaveFocus();
+  });
+
+  it('can be triggerd with the Spacebar key', async () => {
+    const user = userEvent.setup();
+    const clickHandler = vi.fn(() => {});
+    render(<Button onClick={clickHandler}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    button.focus();
+    await user.keyboard('[Space]');
+
+    expect(clickHandler).toHaveBeenCalled();
+  });
+
+  it('can be triggerd with the mouse', async () => {
+    const user = userEvent.setup();
+    const clickHandler = vi.fn(() => {});
+    render(<Button onClick={clickHandler}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    await user.pointer([{ keys: '[MouseLeft]', target: button }]);
+
+    expect(clickHandler).toHaveBeenCalled();
+  });
+
+  it('can be triggerd with the Enter key', async () => {
+    const user = userEvent.setup();
+    const clickHandler = vi.fn(() => {});
+    render(<Button onClick={clickHandler}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    button.focus();
+    await user.keyboard('[Enter]');
+
+    expect(clickHandler).toHaveBeenCalled();
+  });
+
   it('can be marked as expanded via "aria-expanded"', () => {
     render(<Button aria-expanded="true">{text}</Button>);
     const button = screen.getByRole('button');
@@ -72,6 +133,64 @@ describe('Button', () => {
     const button = screen.getByRole('button');
 
     expect(button).toHaveAttribute('aria-pressed', 'true');
+  });
+
+  it('can be disabled', () => {
+    render(<Button disabled>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('disabled');
+  });
+
+  it('can be given a name attribute', () => {
+    render(<Button name="value">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('name', 'value');
+  });
+
+  it('can be given a value attribute', () => {
+    render(<Button value="my-value">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('value', 'my-value');
+  });
+
+  it('can be connected to a form element that does not contain in', () => {
+    const submitHandler = vi.fn((event) => event.preventDefault());
+    render(
+      <>
+        <form id="form-id" onSubmit={submitHandler}></form>
+        <Button type="submit" form="form-id">
+          {text}
+        </Button>
+      </>,
+    );
+    const button = screen.getByRole('button');
+    button.click();
+    expect(submitHandler).toHaveBeenCalled();
+  });
+
+  it('can change it type via the type attribute', () => {
+    render(<Button type="submit">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('type', 'submit');
+  });
+
+  it('can cancel a click by moving the pointer away', async () => {
+    const user = userEvent.setup();
+    const clickHandler = vi.fn(() => {});
+    render(<Button onClick={clickHandler}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    await user.pointer([
+      { keys: '[TouchA>]', target: button },
+      { pointerName: 'TouchA', target: document.body },
+      { keys: '[/TouchA]' },
+    ]);
+
+    expect(clickHandler).not.toHaveBeenCalled();
   });
 
   it('renders an element with class name "nl-button"', () => {
