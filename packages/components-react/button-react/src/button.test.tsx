@@ -233,4 +233,86 @@ describe('Button', () => {
 
     expect(button).toBeInstanceOf(HTMLButtonElement);
   });
+
+  it('emits an onClick event', async () => {
+    const user = userEvent.setup();
+    const clickHandler = vi.fn(() => {});
+    render(<Button onClick={clickHandler}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    await user.click(button);
+
+    expect(clickHandler).toHaveBeenCalled();
+  });
+
+  it('emits an onMouseDown event', async () => {
+    const user = userEvent.setup();
+    const handler = vi.fn(() => {});
+    render(<Button onMouseDown={handler}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    await user.pointer([{ keys: '[MouseLeft>]', target: button }]);
+
+    expect(handler).toHaveBeenCalled();
+  });
+
+  it('emits an onMouseUp event', async () => {
+    const user = userEvent.setup();
+    const handler = vi.fn(() => {});
+    render(<Button onMouseUp={handler}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    await user.pointer([{ keys: '[MouseLeft]', target: button }]);
+
+    expect(handler).toHaveBeenCalled();
+  });
+
+  it('emits an onKeyDown event', async () => {
+    const user = userEvent.setup();
+    const handler = vi.fn(() => {});
+    render(<Button onKeyDown={handler}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    button.focus();
+    await user.keyboard('{a>}');
+
+    expect(handler).toHaveBeenCalled();
+  });
+
+  it('emits an onKeyUp event', async () => {
+    const user = userEvent.setup();
+    const handler = vi.fn(() => {});
+    render(<Button onKeyUp={handler}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    button.focus();
+    await user.keyboard('{a}');
+
+    expect(handler).toHaveBeenCalled();
+  });
+
+  it('emits an onFocus event', async () => {
+    const user = userEvent.setup();
+    const handler = vi.fn(() => {});
+    render(<Button onFocus={handler}>{text}</Button>);
+
+    expect(document.body).toHaveFocus();
+    await user.tab();
+
+    expect(handler).toHaveBeenCalled();
+  });
+
+  it('emits an onBlur event', async () => {
+    const user = userEvent.setup();
+    const handler = vi.fn(() => {});
+    render(<Button onBlur={handler}>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(document.body).toHaveFocus();
+    await user.tab();
+    expect(button).toHaveFocus();
+    await user.tab();
+
+    expect(handler).toHaveBeenCalled();
+  });
 });
