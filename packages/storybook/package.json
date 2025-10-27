@@ -28,6 +28,7 @@
     "@storybook/addon-docs": "9.1.5",
     "@storybook/react": "9.1.5",
     "@storybook/react-vite": "9.1.5",
+    "@tabler/icons-react": "3.34.1",
     "@types/react": "18.3.23",
     "@types/react-dom": "18.3.7",
     "@whitespace/storybook-addon-html": "8.0.2",
