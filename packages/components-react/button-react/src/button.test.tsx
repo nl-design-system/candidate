@@ -139,7 +139,14 @@ describe('Button', () => {
     render(<Button disabled>{text}</Button>);
     const button = screen.getByRole('button');
 
-    expect(button).toHaveAttribute('disabled');
+    expect(button).toHaveAttribute('aria-disabled', 'true');
+  });
+
+  it('can be disabled with htmlDisabled', () => {
+    render(<Button htmlDisabled>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toBeDisabled();
   });
 
   it('can be given a name attribute', () => {
