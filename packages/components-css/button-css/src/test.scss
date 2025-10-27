@@ -37,6 +37,14 @@
   @include mixin.nl-button--primary-positive-hover;
 }
 
+.nl-button--primary.nl-button--negative.nl-button--active {
+  @include mixin.nl-button--primary-negative-active;
+}
+
+.nl-button--primary.nl-button--negative.nl-button--hover {
+  @include mixin.nl-button--primary-negative-hover;
+}
+
 /* secondary */
 .nl-button--secondary.nl-button--active {
   @include mixin.nl-button--secondary-active;
@@ -54,6 +62,14 @@
   @include mixin.nl-button--secondary-positive-hover;
 }
 
+.nl-button--secondary.nl-button--negative.nl-button--active {
+  @include mixin.nl-button--secondary-negative-active;
+}
+
+.nl-button--secondary.nl-button--negative.nl-button--hover {
+  @include mixin.nl-button--secondary-negative-hover;
+}
+
 /* subtle */
 .nl-button--subtle.nl-button--active {
   @include mixin.nl-button--subtle-active;
@@ -69,4 +85,12 @@
 
 .nl-button--subtle.nl-button--positive.nl-button--hover {
   @include mixin.nl-button--subtle-positive-hover;
+}
+
+.nl-button--subtle.nl-button--negative.nl-button--active {
+  @include mixin.nl-button--subtle-negative-active;
+}
+
+.nl-button--subtle.nl-button--negative.nl-button--hover {
+  @include mixin.nl-button--subtle-negative-hover;
 }
