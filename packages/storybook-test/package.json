@@ -15,7 +15,7 @@
     "directory": "packages/storybook-tests"
   },
   "devDependencies": {
-    "@etchteam/storybook-addon-status": "7.0.1",
+    "@etchteam/storybook-addon-status": "8.0.0",
     "@fontsource/fira-code": "5.2.7",
     "@fontsource/fira-sans": "5.2.7",
     "@nl-design-system-candidate/heading-react": "workspace:*",
@@ -26,7 +26,6 @@
     "@nl-design-system-unstable/tokens-lib": "0.3.0",
     "@nl-design-system-unstable/voorbeeld-design-tokens": "6.2.0",
     "@storybook/addon-docs": "9.1.16",
-    "@storybook/react": "9.1.16",
     "@storybook/react-vite": "9.1.16",
     "@tabler/icons-react": "3.35.0",
     "@types/lodash": "4.17.20",
