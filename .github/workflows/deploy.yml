@@ -35,7 +35,7 @@ jobs:
           cache: pnpm
 
       - name: Audit dependencies
-        run: pnpm audit --audit-level high
+        run: pnpm audit --audit-level low
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
