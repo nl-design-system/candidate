@@ -1,0 +1,52 @@
+---
+'@nl-design-system-candidate/button-css': patch
+'@nl-design-system-candidate/code-block-css': patch
+'@nl-design-system-candidate/code-css': patch
+'@nl-design-system-candidate/color-sample-css': patch
+'@nl-design-system-candidate/data-badge-css': patch
+'@nl-design-system-candidate/heading-css': patch
+'@nl-design-system-candidate/icon-css': patch
+'@nl-design-system-candidate/link-css': patch
+'@nl-design-system-candidate/mark-css': patch
+'@nl-design-system-candidate/number-badge-css': patch
+'@nl-design-system-candidate/paragraph-css': patch
+'@nl-design-system-candidate/skip-link-css': patch
+'@nl-design-system-candidate/button-react': patch
+'@nl-design-system-candidate/code-block-react': patch
+'@nl-design-system-candidate/code-react': patch
+'@nl-design-system-candidate/color-sample-react': patch
+'@nl-design-system-candidate/data-badge-react': patch
+'@nl-design-system-candidate/heading-react': patch
+'@nl-design-system-candidate/icon-react': patch
+'@nl-design-system-candidate/link-react': patch
+'@nl-design-system-candidate/mark-react': patch
+'@nl-design-system-candidate/number-badge-react': patch
+'@nl-design-system-candidate/paragraph-react': patch
+'@nl-design-system-candidate/skip-link-react': patch
+'@nl-design-system-candidate/button-docs': patch
+'@nl-design-system-candidate/code-block-docs': patch
+'@nl-design-system-candidate/code-docs': patch
+'@nl-design-system-candidate/color-sample-docs': patch
+'@nl-design-system-candidate/data-badge-docs': patch
+'@nl-design-system-candidate/heading-docs': patch
+'@nl-design-system-candidate/icon-docs': patch
+'@nl-design-system-candidate/link-docs': patch
+'@nl-design-system-candidate/mark-docs': patch
+'@nl-design-system-candidate/number-badge-docs': patch
+'@nl-design-system-candidate/paragraph-docs': patch
+'@nl-design-system-candidate/skip-link-docs': patch
+'@nl-design-system-candidate/code-block-tokens': patch
+'@nl-design-system-candidate/code-tokens': patch
+'@nl-design-system-candidate/color-sample-tokens': patch
+'@nl-design-system-candidate/data-badge-tokens': patch
+'@nl-design-system-candidate/heading-tokens': patch
+'@nl-design-system-candidate/icon-tokens': patch
+'@nl-design-system-candidate/link-tokens': patch
+'@nl-design-system-candidate/mark-tokens': patch
+'@nl-design-system-candidate/number-badge-tokens': patch
+'@nl-design-system-candidate/paragraph-tokens': patch
+'@nl-design-system-candidate/skip-link-tokens': patch
+'@nl-design-system-candidate/test-tokens': patch
+---
+
+Release with trusted npm publishing process.
