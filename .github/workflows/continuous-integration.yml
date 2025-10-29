@@ -54,6 +54,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          # Fetch all history for all branches so that `changeset:status` in package.json#scripts can determine if
+          # a changeset is needed or not.
+          fetch-depth: 0
 
       - name: Install pnpm package manager
         uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
@@ -69,6 +73,15 @@ jobs:
 
       - name: Lint
         run: pnpm run lint
+
+      - name: Check if a changeset is needed
+        id: changeset
+        # ONLY run this step if:
+        #
+        # 1. the branch was not created by the Changeset Action itself
+        # 2. the branch was not created by Dependabot
+        if: ${{ !startsWith(github.event.workflow_run.head_branch, 'changeset-release/') && github.actor != 'dependabot[bot]' }}
+        run: pnpm run changeset:status
 
       - name: ShellCheck
         uses: ludeeus/action-shellcheck@00cae500b08a931fb5698e11e79bfbd38e612a38 # v2.2.0
