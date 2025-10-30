@@ -1,7 +1,6 @@
 @mixin nl-heading {
-  break-inside: avoid-column;
-  page-break-after: avoid;
-  page-break-inside: avoid;
+  break-after: avoid;
+  break-inside: avoid;
 }
 
 @mixin nl-heading--level-1 {
