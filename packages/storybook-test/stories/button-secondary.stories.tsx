@@ -3,11 +3,18 @@ import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
 import packageJSON from '../../components-react/button-react/package.json';
 import { Button } from '../../components-react/button-react/src/button';
-// import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
+import allTokens from '../../tokens/button-tokens/tokens.json';
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { primary, secondary, subtle, default: defaultTokens, ...tokens } = allTokens.nl.button;
 
 const meta = {
   argTypes: {
     children: { table: { category: 'API' }, type: 'string' },
+  },
+  args: {
+    label: 'Klik mij!',
+    purpose: 'secondary',
   },
   globals: {
     dir: 'ltr',
@@ -16,11 +23,6 @@ const meta = {
   },
   component: Button,
   parameters: {
-    // docs: {
-    //   description: {
-    //     component: componentMarkdown,
-    //   },
-    // },
     externalLinks: [
       {
         name: 'Open op NL Design System',
@@ -31,6 +33,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    tokens: { nl: { button: { ...tokens, secondary } } },
   },
   title: 'Componenten/Button/Secondary',
 } satisfies Meta<typeof Button>;
@@ -41,10 +44,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   name: 'Button',
-  args: {
-    children: 'Klik mij!',
-    className: 'nl-button--secondary',
-  },
   parameters: {
     docs: {
       description: {
@@ -57,8 +56,7 @@ export const Default: Story = {
 
 export const Active: Story = {
   args: {
-    children: 'Klik mij!',
-    className: 'nl-button--secondary nl-button--active',
+    className: 'nl-button--active',
   },
   parameters: {
     docs: {
@@ -72,9 +70,7 @@ export const Active: Story = {
 
 export const Disabled: Story = {
   args: {
-    children: 'Klik mij!',
     disabled: true,
-    className: 'nl-button--secondary',
   },
   parameters: {
     docs: {
@@ -88,8 +84,7 @@ export const Disabled: Story = {
 
 export const Hover: Story = {
   args: {
-    children: 'Klik mij!',
-    className: 'nl-button--secondary nl-button--hover',
+    className: 'nl-button--hover',
   },
   parameters: {
     docs: {
@@ -103,9 +98,7 @@ export const Hover: Story = {
 
 export const Pressed: Story = {
   args: {
-    children: 'Klik mij!',
-    'aria-pressed': 'true',
-    className: 'nl-button--secondary',
+    pressed: true,
   },
   parameters: {
     docs: {
@@ -120,8 +113,7 @@ export const Pressed: Story = {
 export const Focused: Story = {
   name: 'Focused',
   args: {
-    children: 'Klik mij!',
-    className: 'nl-button--secondary nl-button--focus-visible',
+    className: 'nl-button--focus-visible',
   },
   parameters: {
     docs: {
@@ -136,8 +128,7 @@ export const Focused: Story = {
 export const Positive: Story = {
   name: 'Positive',
   args: {
-    children: 'Klik mij!',
-    className: 'nl-button--secondary nl-button--positive',
+    hint: 'positive',
   },
   parameters: {
     docs: {
@@ -151,8 +142,8 @@ export const Positive: Story = {
 
 export const PositiveActive: Story = {
   args: {
-    children: 'Klik mij!',
-    className: 'nl-button--secondary nl-button--positive nl-button--active',
+    hint: 'positive',
+    className: 'nl-button--active',
   },
   parameters: {
     docs: {
@@ -166,9 +157,8 @@ export const PositiveActive: Story = {
 
 export const PositiveDisabled: Story = {
   args: {
-    children: 'Klik mij!',
+    hint: 'positive',
     disabled: true,
-    className: 'nl-button--secondary nl-button--positive',
   },
   parameters: {
     docs: {
@@ -182,8 +172,8 @@ export const PositiveDisabled: Story = {
 
 export const PositiveHover: Story = {
   args: {
-    children: 'Klik mij!',
-    className: 'nl-button--secondary nl-button--positive nl-button--hover',
+    hint: 'positive',
+    className: 'nl-button--hover',
   },
   parameters: {
     docs: {
@@ -197,9 +187,8 @@ export const PositiveHover: Story = {
 
 export const PositivePressed: Story = {
   args: {
-    children: 'Klik mij!',
-    'aria-pressed': 'true',
-    className: 'nl-button--secondary nl-button--positive',
+    hint: 'positive',
+    pressed: true,
   },
   parameters: {
     docs: {
@@ -213,9 +202,8 @@ export const PositivePressed: Story = {
 
 export const PositiveFocused: Story = {
   args: {
-    children: 'Klik mij!',
-    'aria-pressed': 'true',
-    className: 'nl-button--secondary nl-button--positive nl-button--focus-visible',
+    hint: 'positive',
+    className: 'nl-button--focus-visible',
   },
   parameters: {
     docs: {
@@ -230,8 +218,7 @@ export const PositiveFocused: Story = {
 export const Negative: Story = {
   name: 'Negative',
   args: {
-    children: 'Klik mij!',
-    className: 'nl-button--secondary nl-button--negative',
+    hint: 'negative',
   },
   parameters: {
     docs: {
@@ -245,8 +232,8 @@ export const Negative: Story = {
 
 export const NegativeActive: Story = {
   args: {
-    children: 'Klik mij!',
-    className: 'nl-button--secondary nl-button--negative nl-button--active',
+    hint: 'negative',
+    className: 'nl-button--active',
   },
   parameters: {
     docs: {
@@ -260,9 +247,8 @@ export const NegativeActive: Story = {
 
 export const NegativeDisabled: Story = {
   args: {
-    children: 'Klik mij!',
+    hint: 'negative',
     disabled: true,
-    className: 'nl-button--secondary nl-button--negative',
   },
   parameters: {
     docs: {
@@ -276,8 +262,8 @@ export const NegativeDisabled: Story = {
 
 export const NegativeHover: Story = {
   args: {
-    children: 'Klik mij!',
-    className: 'nl-button--secondary nl-button--negative nl-button--hover',
+    hint: 'negative',
+    className: 'nl-button--hover',
   },
   parameters: {
     docs: {
@@ -291,9 +277,8 @@ export const NegativeHover: Story = {
 
 export const NegativePressed: Story = {
   args: {
-    children: 'Klik mij!',
-    'aria-pressed': 'true',
-    className: 'nl-button--secondary nl-button--negative',
+    hint: 'negative',
+    pressed: true,
   },
   parameters: {
     docs: {
@@ -307,9 +292,8 @@ export const NegativePressed: Story = {
 
 export const NegativeFocused: Story = {
   args: {
-    children: 'Klik mij!',
-    'aria-pressed': 'true',
-    className: 'nl-button--secondary nl-button--negative nl-button--focus-visible',
+    hint: 'negative',
+    className: 'nl-button--focus-visible',
   },
   parameters: {
     docs: {
