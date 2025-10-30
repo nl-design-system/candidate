@@ -3,7 +3,19 @@ import { clsx } from 'clsx';
 import { forwardRef } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  /**
+   * The label of the button
+   */
+  label?: ReactNode;
+
+  /**
+   * An optional icon after the label
+   */
   iconEnd?: ReactNode;
+
+  /**
+   * An optional icon before the label
+   */
   iconStart?: ReactNode;
 
   /**
@@ -14,13 +26,17 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
   /**
    * An optional hint of the type of action the button results in.
+   * This property only works when the `purpose` has been set to a value.
    * - `positive` indicates a positive or confirming result of the action
    * - `negative` indicates a negative of destructive result of the action
    */
   hint?: 'positive' | 'negative';
 
   /**
-   * The label of the button.
+   * Children of the button. Use this if you'll want full controll over the
+   * contents of the button. When an `iconStart` or `iconEnd` is provided, the
+   * children are wrapped in a `<span>` element to prevent the weird gaps in
+   * formatted content.
    */
   children?: ReactNode;
 
@@ -68,11 +84,22 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
     htmlDisabled,
     pressed,
     type = 'button',
+    label,
     ...restProps
   } = props;
 
+  const hasIcon = Boolean(iconStart || iconEnd);
+
+  // Is there markup inside `children`
+  const childrenIsFormatted = Array.isArray(children) && children.some((part) => typeof part !== 'string');
+
+  // If there is markup in `children` _and_ there is an icon, `children`
+  // should be wrapped, otherwise there will be a gap around the markup
+  const wrapChildren = childrenIsFormatted && hasIcon;
+
   return (
     <button
+      ref={forwardedRef}
       type={type}
       className={clsx('nl-button', className, {
         'nl-button--primary': purpose === 'primary',
@@ -81,15 +108,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
         'nl-button--positive': Boolean(purpose) && hint === 'positive',
         'nl-button--negative': Boolean(purpose) && hint === 'negative',
       })}
-      ref={forwardedRef}
       aria-pressed={pressed ? 'true' : undefined}
-      {...restProps}
       aria-disabled={disabled ? 'true' : undefined}
       disabled={htmlDisabled}
+      {...restProps}
     >
-      {iconStart}
-      {children}
-      {iconEnd}
+      {iconStart && <span className="nl-button__icon-start">{iconStart}</span>}
+      {label && <span className="nl-button__label">{label}</span>}
+      {wrapChildren ? <span>{children}</span> : children}
+      {iconEnd && <span className="nl-button__icon-end">{iconEnd}</span>}
     </button>
   );
 });
