@@ -46,7 +46,6 @@
 '@nl-design-system-candidate/number-badge-tokens': patch
 '@nl-design-system-candidate/paragraph-tokens': patch
 '@nl-design-system-candidate/skip-link-tokens': patch
-'@nl-design-system-candidate/test-tokens': patch
 ---
 
 Release with trusted npm publishing process.
