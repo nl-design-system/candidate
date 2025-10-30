@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { fn } from 'storybook/test';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
 import packageJSON from '../../components-react/button-react/package.json';
@@ -7,7 +6,7 @@ import { Icon } from '../../components-react/icon-react/src/icon';
 import { IconAccessible } from '@tabler/icons-react';
 import { Button } from '../../components-react/button-react/src/button';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
-// import tokens from '../../tokens/button-tokens/tokens.json';
+import tokens from '../../tokens/button-tokens/tokens.json';
 
 const meta = {
   argTypes: {
@@ -35,7 +34,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
-    // tokens,
+    tokens,
   },
   title: 'Componenten/Button',
 } satisfies Meta<typeof Button>;
@@ -43,118 +42,6 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  name: 'Button',
-  args: {
-    children: 'Klik mij!',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een enkele Button.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const Active: Story = {
-  name: 'Button (active)',
-  args: {
-    children: 'Klik mij!',
-    className: 'nl-button--active',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een focused Button.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const FocusVisible: Story = {
-  name: 'Button (focus visible)',
-  args: {
-    children: 'Klik mij!',
-    className: 'nl-button--focus-visible',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een focused Button.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const Hover: Story = {
-  name: 'Button (hover)',
-  args: {
-    children: 'Klik mij!',
-    className: 'nl-button--hover',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een hovered Button.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const Disabled: Story = {
-  name: 'Button (disabled)',
-  args: {
-    children: 'Klik mij!',
-    disabled: true,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een disabled Button.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const TogglePressed: Story = {
-  name: 'Button (toggle pressed)',
-  args: {
-    children: 'Klik mij!',
-    'aria-pressed': 'true',
-    className: 'nl-button--pressed',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een pressed toggle Button.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const ToggleUnpressed: Story = {
-  name: 'Button (toggle unpressed)',
-  args: {
-    children: 'Klik mij!',
-    'aria-pressed': 'false',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een unpressed toggle Button.',
-      },
-    },
-    status: { type: [] },
-  },
-};
 
 export const ButtonIconStart: Story = {
   name: 'Button met icon Links',
@@ -256,6 +143,50 @@ Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
   status: { type: [] },
 };
 
+export const ButtonReset: Story = {
+  name: 'Reset Button',
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Button die formuliervelden leegt`,
+      },
+    },
+  },
+  render: () => (
+    <form>
+      <input type="text" placeholder="Vul iets in en druk dan op de reset knop" />
+      <br />
+      <Button type="reset">Reset</Button>
+    </form>
+  ),
+};
+
+export const ButtonSubmit: Story = {
+  name: 'Verzend Button',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Button die een formulier verstuurt`,
+      },
+    },
+  },
+  render: () => (
+    <form
+      action="/"
+      onSubmit={(event) => {
+        event.preventDefault();
+        // @ts-expect-error: Use alert to give user feedback
+        alert('Verzonden'); // eslint-disable-line
+      }}
+    >
+      <input type="text" placeholder="Vul iets in en druk dan op de verzend knop" />
+      <br />
+      <Button type="submit">Verzenden</Button>
+    </form>
+  ),
+};
+
 export const ButtonMenuClosed: Story = {
   name: 'Button Menu Closed',
   args: {
@@ -321,31 +252,5 @@ export const ButtonDialogOpened: Story = {
       },
     },
     status: { type: [] },
-  },
-};
-
-export const ButtonActions: Story = {
-  name: 'Button actions',
-  args: {
-    children: 'Klik mij!',
-    onClick: fn(),
-    onFocus: fn(),
-    onBlur: fn(),
-    onKeyDown: fn(),
-    onKeyUp: fn(),
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: `De Button emits verschillende event, zoals:
-
-* onClick
-* onKeyDown
-* onKeyUp
-* onFocus
-* onBlur
-        `,
-      },
-    },
   },
 };

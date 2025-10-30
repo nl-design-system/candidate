@@ -129,7 +129,7 @@ describe('Button', () => {
   });
 
   it('can be marked as togglebutton via "aria-pressed"', () => {
-    render(<Button aria-pressed="true">{text}</Button>);
+    render(<Button pressed>{text}</Button>);
     const button = screen.getByRole('button');
 
     expect(button).toHaveAttribute('aria-pressed', 'true');
@@ -139,7 +139,14 @@ describe('Button', () => {
     render(<Button disabled>{text}</Button>);
     const button = screen.getByRole('button');
 
-    expect(button).toHaveAttribute('disabled');
+    expect(button).toHaveAttribute('aria-disabled', 'true');
+  });
+
+  it('can be disabled with htmlDisabled', () => {
+    render(<Button htmlDisabled>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toBeDisabled();
   });
 
   it('can be given a name attribute', () => {
@@ -314,5 +321,55 @@ describe('Button', () => {
     await user.tab();
 
     expect(handler).toHaveBeenCalled();
+  });
+
+  it('accepts an purpose="primary" prop', () => {
+    render(<Button purpose="primary">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveClass('nl-button--primary');
+  });
+
+  it('accepts an purpose="secondary" prop', () => {
+    render(<Button purpose="secondary">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveClass('nl-button--secondary');
+  });
+
+  it('accepts an purpose="subtle" prop', () => {
+    render(<Button purpose="subtle">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveClass('nl-button--subtle');
+  });
+
+  it('accepts an hint="postive" prop', () => {
+    render(
+      <Button purpose="primary" hint="positive">
+        {text}
+      </Button>,
+    );
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveClass('nl-button--positive');
+  });
+
+  it('accepts an hint="negative" prop', () => {
+    render(
+      <Button purpose="primary" hint="negative">
+        {text}
+      </Button>,
+    );
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveClass('nl-button--negative');
+  });
+
+  it('does not accept a hint prop when purpose is not set', () => {
+    render(<Button hint="negative">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).not.toHaveClass('nl-button--negative');
   });
 });
