@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/heading-docs
 
+## 1.0.3
+
+### Patch Changes
+
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.0.2
 
 ### Patch Changes
