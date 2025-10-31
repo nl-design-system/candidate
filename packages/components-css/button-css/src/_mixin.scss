@@ -1,17 +1,34 @@
 @mixin nl-button {
-  /* icon-size */
-
   border-radius: var(--nl-button-border-radius);
   border-style: solid;
+  box-sizing: border-box;
   column-gap: var(--nl-button-column-gap);
+  cursor: pointer;
   font-family: var(--nl-button-font-family);
   min-block-size: var(--nl-button-min-block-size);
   min-inline-size: var(--nl-button-min-inline-size);
   outline-offset: var(--nl-button-outline-offset);
+  overflow-wrap: break-word;
   padding-block-end: var(--nl-button-padding-block-end);
   padding-block-start: var(--nl-button-padding-block-start);
   padding-inline-end: var(--nl-button-padding-inline-end);
   padding-inline-start: var(--nl-button-padding-inline-start);
+  text-align: start;
+  text-box-trim: trim-both;
+
+  &:has(> :where(.nl-button__icon-start, .nl-button__icon-end, .nl-button__label)) {
+    --nl-icon-block-size: var(--nl-button-icon-size);
+    --nl-icon-inline-size: var(--nl-button-icon-size);
+
+    align-items: flex-start;
+    column-gap: var(--nl-button-column-gap);
+    display: inline-flex;
+    justify-content: center;
+  }
+}
+
+@mixin nl-button--disabled {
+  cursor: not-allowed;
 }
 
 @mixin nl-button--focus-visible {
