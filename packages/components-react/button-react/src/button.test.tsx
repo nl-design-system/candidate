@@ -372,4 +372,33 @@ describe('Button', () => {
 
     expect(button).not.toHaveClass('nl-button--negative');
   });
+
+  it('renders label prop in a wrapper span', () => {
+    render(<Button label={text} />);
+    const span = screen.getByText(text);
+
+    expect(span).toHaveClass('nl-button__label');
+  });
+
+  it('renders formatted children in a wrapper when an iconStart is present', () => {
+    render(
+      <Button iconStart="❤️">
+        klik <u>mij</u> nu!
+      </Button>,
+    );
+    const span = document.querySelector('button > span:not(.nl-button__icon-start)');
+
+    expect(span).toBeVisible();
+  });
+
+  it('renders formatted children in a wrapper when an iconEnd is present', () => {
+    render(
+      <Button iconEnd="❤️">
+        klik <u>mij</u> nu!
+      </Button>,
+    );
+    const span = document.querySelector('button > span:not(.nl-button__icon-start)');
+
+    expect(span).toBeVisible();
+  });
 });
