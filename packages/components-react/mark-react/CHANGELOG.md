@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/mark-react
 
+## 1.1.6
+
+### Patch Changes
+
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.1.5
 
 ### Patch Changes
