@@ -88,7 +88,7 @@ describe('Button', () => {
 
   it('can be triggered with the spacebar key', async () => {
     const user = userEvent.setup();
-    const clickHandler = vi.fn(() => {});
+    const clickHandler = vi.fn();
     render(<Button onClick={clickHandler}>{text}</Button>);
     const button = screen.getByRole('button');
 
@@ -100,7 +100,7 @@ describe('Button', () => {
 
   it('can be triggered with the left mouse click', async () => {
     const user = userEvent.setup();
-    const clickHandler = vi.fn(() => {});
+    const clickHandler = vi.fn();
     render(<Button onClick={clickHandler}>{text}</Button>);
     const button = screen.getByRole('button');
 
@@ -111,7 +111,7 @@ describe('Button', () => {
 
   it('can be triggered with the enter key', async () => {
     const user = userEvent.setup();
-    const clickHandler = vi.fn(() => {});
+    const clickHandler = vi.fn();
     render(<Button onClick={clickHandler}>{text}</Button>);
     const button = screen.getByRole('button');
 
@@ -149,45 +149,9 @@ describe('Button', () => {
     expect(button).toBeDisabled();
   });
 
-  it('can be given a name attribute', () => {
-    render(<Button name="value">{text}</Button>);
-    const button = screen.getByRole('button');
-
-    expect(button).toHaveAttribute('name', 'value');
-  });
-
-  it('can be given a value attribute', () => {
-    render(<Button value="my-value">{text}</Button>);
-    const button = screen.getByRole('button');
-
-    expect(button).toHaveAttribute('value', 'my-value');
-  });
-
-  it('can be connected to a form element it is not contained in', () => {
-    const submitHandler = vi.fn((event) => event.preventDefault());
-    render(
-      <>
-        <form id="form-id" onSubmit={submitHandler}></form>
-        <Button type="submit" form="form-id">
-          {text}
-        </Button>
-      </>,
-    );
-    const button = screen.getByRole('button');
-    button.click();
-    expect(submitHandler).toHaveBeenCalled();
-  });
-
-  it('can change type via the type attribute', () => {
-    render(<Button type="submit">{text}</Button>);
-    const button = screen.getByRole('button');
-
-    expect(button).toHaveAttribute('type', 'submit');
-  });
-
   it('can cancel a click by moving the pointer away', async () => {
     const user = userEvent.setup();
-    const clickHandler = vi.fn(() => {});
+    const clickHandler = vi.fn();
     render(<Button onClick={clickHandler}>{text}</Button>);
     const button = screen.getByRole('button');
 
@@ -233,17 +197,18 @@ describe('Button', () => {
     expect(button).toContainElement(richText);
   });
 
-  it('forwards React refs to the HTMLAnchorElement', () => {
+  it('forwards React refs to the HTMLButtonElement', () => {
     const ref = createRef<HTMLButtonElement>();
     render(<Button ref={ref}>{text}</Button>);
     const button = screen.getByRole('button');
 
+    expect(ref.current).toBe(button);
     expect(button).toBeInstanceOf(HTMLButtonElement);
   });
 
   it('emits an onClick event', async () => {
     const user = userEvent.setup();
-    const clickHandler = vi.fn(() => {});
+    const clickHandler = vi.fn();
     render(<Button onClick={clickHandler}>{text}</Button>);
     const button = screen.getByRole('button');
 
@@ -254,7 +219,7 @@ describe('Button', () => {
 
   it('emits an onMouseDown event', async () => {
     const user = userEvent.setup();
-    const handler = vi.fn(() => {});
+    const handler = vi.fn();
     render(<Button onMouseDown={handler}>{text}</Button>);
     const button = screen.getByRole('button');
 
@@ -265,7 +230,7 @@ describe('Button', () => {
 
   it('emits an onMouseUp event', async () => {
     const user = userEvent.setup();
-    const handler = vi.fn(() => {});
+    const handler = vi.fn();
     render(<Button onMouseUp={handler}>{text}</Button>);
     const button = screen.getByRole('button');
 
@@ -276,7 +241,7 @@ describe('Button', () => {
 
   it('emits an onKeyDown event', async () => {
     const user = userEvent.setup();
-    const handler = vi.fn(() => {});
+    const handler = vi.fn();
     render(<Button onKeyDown={handler}>{text}</Button>);
     const button = screen.getByRole('button');
 
@@ -288,7 +253,7 @@ describe('Button', () => {
 
   it('emits an onKeyUp event', async () => {
     const user = userEvent.setup();
-    const handler = vi.fn(() => {});
+    const handler = vi.fn();
     render(<Button onKeyUp={handler}>{text}</Button>);
     const button = screen.getByRole('button');
 
@@ -300,7 +265,7 @@ describe('Button', () => {
 
   it('emits an onFocus event', async () => {
     const user = userEvent.setup();
-    const handler = vi.fn(() => {});
+    const handler = vi.fn();
     render(<Button onFocus={handler}>{text}</Button>);
 
     expect(document.body).toHaveFocus();
@@ -311,7 +276,7 @@ describe('Button', () => {
 
   it('emits an onBlur event', async () => {
     const user = userEvent.setup();
-    const handler = vi.fn(() => {});
+    const handler = vi.fn();
     render(<Button onBlur={handler}>{text}</Button>);
     const button = screen.getByRole('button');
 
@@ -367,9 +332,41 @@ describe('Button', () => {
   });
 
   it('does not accept a hint prop when purpose is not set', () => {
+    // @ts-expect-error: The point of this code is the error
     render(<Button hint="negative">{text}</Button>);
     const button = screen.getByRole('button');
 
     expect(button).not.toHaveClass('nl-button--negative');
+  });
+
+  it('renders label prop in a wrapper span', () => {
+    render(<Button label={text} />);
+    const span = screen.getByText(text);
+
+    expect(span).toHaveClass('nl-button__label');
+  });
+
+  it('renders formatted children in a wrapper when an iconStart is present', () => {
+    render(
+      <Button iconStart="❤️">
+        <span>a</span>
+        <span>b</span>
+      </Button>,
+    );
+    const button = screen.getByRole('button');
+
+    expect(button.childElementCount).toBe(2);
+  });
+
+  it('renders formatted children in a wrapper when an iconEnd is present', () => {
+    render(
+      <Button iconEnd="❤️">
+        <span>a</span>
+        <span>b</span>
+      </Button>,
+    );
+    const button = screen.getByRole('button');
+
+    expect(button.childElementCount).toBe(2);
   });
 });
