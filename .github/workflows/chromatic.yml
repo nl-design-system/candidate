@@ -55,7 +55,7 @@ jobs:
           path: packages/storybook-test/dist/
 
       - name: Chromatic
-        uses: chromaui/action@20c7e42e1b2f6becd5d188df9acb02f3e2f51519 # v13.2.0
+        uses: chromaui/action@ac86f2ff0a458ffbce7b40698abd44c0fa34d4b6 # v13.3.3
         with:
           autoAcceptChanges: main
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
