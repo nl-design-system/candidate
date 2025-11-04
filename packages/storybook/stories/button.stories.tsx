@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useArgs } from 'storybook/preview-api';
+import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
 import packageJSON from '../../components-react/button-react/package.json';
@@ -9,6 +10,10 @@ import { IconAccessible } from '@tabler/icons-react';
 
 const meta = {
   argTypes: {
+    label: {
+      control: 'text',
+      table: { category: 'Props' },
+    },
     purpose: {
       control: 'select',
       options: [undefined, 'primary', 'secondary', 'subtle'],
@@ -20,7 +25,6 @@ const meta = {
     },
     hint: {
       control: 'select',
-      if: { arg: 'purpose', truthy: true },
       options: [undefined, 'positive', 'negative'],
       table: {
         category: 'Props',
@@ -53,13 +57,14 @@ const meta = {
         },
       },
     },
-    children: { control: 'text', table: { category: 'API' } },
+    children: { control: false, table: { category: 'API' } },
   },
   args: {
     purpose: undefined,
     hint: undefined,
     disabled: false,
     pressed: false,
+    children: undefined as never,
   },
   component: Button,
   parameters: {
@@ -84,7 +89,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   name: 'Button',
   args: {
-    children: 'Klik mij!',
+    label: 'Klik mij!',
   },
   parameters: {
     docs: {
@@ -98,7 +103,7 @@ export const Default: Story = {
 export const Primary: Story = {
   name: 'Primary Button',
   args: {
-    children: 'Primary Button',
+    label: 'Primary Button',
     purpose: 'primary',
   },
   parameters: {
@@ -114,19 +119,11 @@ Optioneel kan er een hint mee gegeven worden.
       },
     },
   },
-  render: ({ children, ...props }) => (
+  render: ({ label, ...props }) => (
     <div style={{ display: 'flex', gap: '1rem' }}>
-      <Button {...props} purpose="primary">
-        {children}
-      </Button>
-
-      <Button {...props} purpose="primary" hint="positive">
-        {children} (positive)
-      </Button>
-
-      <Button {...props} purpose="primary" hint="negative">
-        {children} (negative)
-      </Button>
+      <Button {...props} label={label} purpose="primary" />
+      <Button {...props} label={`${label} (positive)`} purpose="primary" hint="positive" />
+      <Button {...props} label={`${label} (negative)`} purpose="primary" hint="negative" />
     </div>
   ),
 };
@@ -134,7 +131,7 @@ Optioneel kan er een hint mee gegeven worden.
 export const Secondary: Story = {
   name: 'Secondary Button',
   args: {
-    children: 'Secondary Button',
+    label: 'Secondary Button',
     purpose: 'secondary',
   },
   parameters: {
@@ -149,19 +146,11 @@ Optioneel kan er een hint mee gegeven worden.
       },
     },
   },
-  render: ({ children, ...props }) => (
+  render: ({ label, ...props }) => (
     <div style={{ display: 'flex', gap: '1rem' }}>
-      <Button {...props} purpose="secondary">
-        {children}
-      </Button>
-
-      <Button {...props} purpose="secondary" hint="positive">
-        {children} (positive)
-      </Button>
-
-      <Button {...props} purpose="secondary" hint="negative">
-        {children} (negative)
-      </Button>
+      <Button {...props} label={label} purpose="secondary" />
+      <Button {...props} label={`${label} (positive)`} purpose="secondary" hint="positive" />
+      <Button {...props} label={`${label} (negative)`} purpose="secondary" hint="negative" />
     </div>
   ),
 };
@@ -169,7 +158,7 @@ Optioneel kan er een hint mee gegeven worden.
 export const Subtle: Story = {
   name: 'Subtle Button',
   args: {
-    children: 'Subtle Button',
+    label: 'Subtle Button',
     purpose: 'subtle',
   },
   parameters: {
@@ -184,21 +173,32 @@ Optioneel kan er een hint mee gegeven worden.
       },
     },
   },
-  render: ({ children, ...props }) => (
+  render: ({ label, ...props }) => (
     <div style={{ display: 'flex', gap: '1rem' }}>
-      <Button {...props} purpose="subtle">
-        {children}
-      </Button>
-
-      <Button {...props} purpose="subtle" hint="positive">
-        {children} (positive)
-      </Button>
-
-      <Button {...props} purpose="subtle" hint="negative">
-        {children} (negative)
-      </Button>
+      <Button {...props} label={label} purpose="subtle" />
+      <Button {...props} label={`${label} (positive)`} purpose="subtle" hint="positive" />
+      <Button {...props} label={`${label} (negative)`} purpose="subtle" hint="negative" />
     </div>
   ),
+};
+
+export const Disabled: Story = {
+  name: 'Disabled Button',
+  args: {
+    label: 'Klik mij!',
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button die (tijdelijk) niet bruikbaar is. Hoewel dit patroon vaak gebruikt wordt, kan het verwarrend zijn voor gebruikers.
+
+Om de button focusbaar te houden voor screenreaders, wordt er \`aria-disabled="true"\` op de button geplaatst om aan te geven dat deze disabled is.
+Dat betekend dat de \`onClick\` handlers blijven werken, en dat de developer verantwoordelijk is om een melding te geven waarom de button disabled is.
+`,
+      },
+    },
+  },
 };
 
 export const IconStart: Story = {
@@ -216,7 +216,7 @@ export const IconStart: Story = {
         <IconAccessible />
       </Icon>
     ),
-    children: 'Klik mij!',
+    label: 'Klik mij!',
   },
   parameters: {
     docs: {
@@ -242,7 +242,7 @@ export const IconEnd: Story = {
         <IconAccessible />
       </Icon>
     ),
-    children: 'Klik mij!',
+    label: 'Klik mij!',
   },
   parameters: {
     docs: {
@@ -253,19 +253,61 @@ export const IconEnd: Story = {
   },
 };
 
+export const FormattedLabel: Story = {
+  name: 'Geformatteerd label',
+  argTypes: {
+    label: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+  args: {
+    label: (
+      <>
+        Dit is een <em>button</em> met een <u>geformatteerd</u> label
+      </>
+    ),
+  },
+};
+
+export const FormattedLabelWithIcon: Story = {
+  name: 'Geformatteerd label en een Icon',
+  argTypes: {
+    label: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+  args: {
+    label: (
+      <>
+        {' '}
+        Met icon en <u>geformatteerd</u> label
+      </>
+    ),
+    iconStart: (
+      <Icon>
+        <IconAccessible />
+      </Icon>
+    ),
+  },
+};
+
 export const ToggleButton: Story = {
   name: 'Toggle Button',
   args: {
-    children: 'Toggle',
+    label: 'Toggle',
   },
   parameters: {
     docs: {
       description: {
-        story: `Een toggle button blijft ingedrukt na dat de gebruiker er op klikt`,
+        story: `Een button met een icon achter het label`,
       },
     },
   },
-  render: ({ children, ...props }) => {
+  render: ({ label, ...props }) => {
     const [{ pressed, disabled }, updateArgs] = useArgs();
 
     function onClick() {
@@ -275,9 +317,42 @@ export const ToggleButton: Story = {
     }
 
     return (
-      <Button {...props} pressed={pressed} onClick={onClick}>
-        {children} ({pressed ? 'pressed' : 'unpressed'})
-      </Button>
+      <Button
+        {...props}
+        label={`${label} (${pressed ? 'pressed' : 'unpressed'})`}
+        pressed={pressed}
+        onClick={onClick}
+      ></Button>
     );
   },
+};
+
+export const FullWidth: Story = {
+  name: 'Volle breedte',
+  args: {
+    label: 'Ik ben een button met een hele lange tekst',
+    iconStart: (
+      <Icon>
+        <IconAccessible />
+      </Icon>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `De parent van een button kan de breedte van de button bepalen.`,
+      },
+    },
+  },
+  render: (props) => (
+    <>
+      <div style={{ display: 'flex', resize: 'both', overflow: 'auto' }}>
+        <Button style={{ flex: 1 }} {...props} />
+      </div>
+      <br />
+      <div style={{ display: 'flex', resize: 'both', overflow: 'auto', width: '300px' }}>
+        <Button style={{ flex: 1 }} {...props} />
+      </div>
+    </>
+  ),
 };

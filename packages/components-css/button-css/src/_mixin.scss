@@ -1,23 +1,55 @@
 @mixin nl-button {
-  /* icon-size */
+  --nl-icon-block-size: var(--nl-button-icon-size);
+  --nl-icon-inline-size: var(--nl-button-icon-size);
 
+  align-items: center;
   border-radius: var(--nl-button-border-radius);
   border-style: solid;
+  box-sizing: border-box;
   column-gap: var(--nl-button-column-gap);
+  cursor: pointer;
+  display: inline-flex;
   font-family: var(--nl-button-font-family);
+  justify-content: center;
   min-block-size: var(--nl-button-min-block-size);
   min-inline-size: var(--nl-button-min-inline-size);
   outline-offset: var(--nl-button-outline-offset);
+  overflow-wrap: break-word;
   padding-block-end: var(--nl-button-padding-block-end);
   padding-block-start: var(--nl-button-padding-block-start);
   padding-inline-end: var(--nl-button-padding-inline-end);
   padding-inline-start: var(--nl-button-padding-inline-start);
+  text-align: start;
+  text-box-trim: trim-both;
+
+  /*
+   * Button has formatted content but no icon or label elements. The display
+   * property should be inline, otherwise the column-gap is wrongly applied
+   */
+  &:has(> :where(:first-child)):not(:has(> :where(.nl-button__icon, .nl-button__label))) {
+    display: inline;
+  }
+}
+
+@mixin nl-button--disabled {
+  cursor: not-allowed;
 }
 
 @mixin nl-button--focus-visible {
   background-color: var(--nl-button-focus-background-color);
   border-color: var(--nl-button-focus-border-color);
   color: var(--nl-button-focus-color);
+}
+
+@mixin nl-button__icon {
+  align-self: flex-start;
+  block-size: var(--nl-icon-block-size);
+  inline-size: var(--nl-icon-inline-size);
+}
+
+@mixin nl-button__label {
+  overflow-wrap: break-word;
+  text-box-trim: trim-both;
 }
 
 /* DEFAULT */

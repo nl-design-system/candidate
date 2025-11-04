@@ -4,11 +4,17 @@ import '../../components-css/button-css/src/test.scss';
 import packageJSON from '../../components-react/button-react/package.json';
 import { Button } from '../../components-react/button-react/src/button';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
-// import tokens from '../../tokens/button-tokens/tokens.json';
+import allTokens from '../../tokens/button-tokens/tokens.json';
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { primary, secondary, subtle, default: defaultTokens, ...tokens } = allTokens.nl.button;
 
 const meta = {
   argTypes: {
     children: { table: { category: 'API' }, type: 'string' },
+  },
+  args: {
+    label: 'Klik mij!',
   },
   globals: {
     dir: 'ltr',
@@ -32,7 +38,7 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
-    // tokens,
+    tokens: { nl: { button: { ...tokens, default: defaultTokens } } },
   },
   title: 'Componenten/Button/Default',
 } satisfies Meta<typeof Button>;
@@ -43,9 +49,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   name: 'Button',
-  args: {
-    children: 'Klik mij!',
-  },
   parameters: {
     docs: {
       description: {
@@ -58,7 +61,6 @@ export const Default: Story = {
 
 export const Active: Story = {
   args: {
-    children: 'Klik mij!',
     className: 'nl-button--active',
   },
   parameters: {
@@ -73,7 +75,6 @@ export const Active: Story = {
 
 export const Disabled: Story = {
   args: {
-    children: 'Klik mij!',
     disabled: true,
   },
   parameters: {
@@ -88,7 +89,6 @@ export const Disabled: Story = {
 
 export const Hover: Story = {
   args: {
-    children: 'Klik mij!',
     className: 'nl-button--hover',
   },
   parameters: {
@@ -103,8 +103,7 @@ export const Hover: Story = {
 
 export const Pressed: Story = {
   args: {
-    children: 'Klik mij!',
-    'aria-pressed': 'true',
+    pressed: true,
   },
   parameters: {
     docs: {
@@ -119,7 +118,6 @@ export const Pressed: Story = {
 export const Focused: Story = {
   name: 'Focused',
   args: {
-    children: 'Klik mij!',
     className: 'nl-button--focus-visible',
   },
   parameters: {

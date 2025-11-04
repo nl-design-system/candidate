@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
 import packageJSON from '../../components-react/button-react/package.json';
@@ -11,6 +12,9 @@ import tokens from '../../tokens/button-tokens/tokens.json';
 const meta = {
   argTypes: {
     children: { table: { category: 'API' }, type: 'string' },
+  },
+  args: {
+    label: 'Klik mij nu!',
   },
   globals: {
     dir: 'ltr',
@@ -44,9 +48,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const ButtonIconStart: Story = {
-  name: 'Button met icon Links',
+  name: 'Button met iconStart',
   args: {
-    children: 'Klik mij!',
     iconStart: (
       <Icon>
         <IconAccessible />
@@ -63,9 +66,8 @@ export const ButtonIconStart: Story = {
 };
 
 export const ButtonIconEnd: Story = {
-  name: 'Button met icon rechts',
+  name: 'Button met iconEnd',
   args: {
-    children: 'Klik mij!',
     iconEnd: (
       <Icon>
         <IconAccessible />
@@ -83,7 +85,9 @@ export const ButtonIconEnd: Story = {
 
 export const ButtonLargeText: Story = {
   name: 'Button 200% zoom',
-  args: { children: 'Klik mij!', className: 'nl-button--zoom-200' },
+  args: {
+    className: 'nl-button--zoom-200',
+  },
   parameters: {
     docs: {
       description: {
@@ -96,7 +100,7 @@ export const ButtonLargeText: Story = {
 export const ButtonDifferentLanguage: Story = {
   name: 'Button in een andere taal',
   args: {
-    children: 'Confirm',
+    label: 'Confirm',
     lang: 'en',
   },
   parameters: {
@@ -112,7 +116,7 @@ export const ButtonDifferentLanguage: Story = {
 export const ButtonVeryLongName = {
   name: 'Button met een erg lange titel',
   args: {
-    children: 'Klik nu hier en win de prijs die je anders nooit zou winnen',
+    label: 'Klik nu hier en win de prijs die je anders nooit zou winnen',
   },
   parameters: {
     docs: {
@@ -127,7 +131,7 @@ export const ButtonVeryLongName = {
 export const ButtonRTL = {
   name: 'Button in Arabisch',
   args: {
-    children: 'مثال على المجال',
+    label: 'مثال على المجال',
     dir: 'rtl',
     lang: 'ar',
   },
@@ -137,6 +141,25 @@ export const ButtonRTL = {
         story: `Een enkele button in het Arabisch.
 
 Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
+      },
+    },
+  },
+  status: { type: [] },
+};
+
+export const ButtonVerticalRL = {
+  name: 'Button in Japans',
+  args: {
+    label: 'これはテストテキスト。日本語は楽しいです。',
+    style: { writingMode: 'vertical-rl' },
+    lang: 'ja',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een enkele button in het Japans.
+
+Het moet mogelijk zijn het \`lang\` attribute en de \`writing-mode: 'vertical-rl';\` css rule in te stellen.`,
       },
     },
   },
@@ -187,10 +210,41 @@ export const ButtonSubmit: Story = {
   ),
 };
 
+export const NoLabel: Story = {
+  name: 'Button zonder label',
+  args: {
+    label: undefined,
+    'aria-label': 'Button zonder label',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een button zonder label',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const SmallLabel: Story = {
+  name: 'Button met klein label',
+  args: {
+    label: 'a',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een button zonder label',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
 export const ButtonMenuClosed: Story = {
   name: 'Button Menu Closed',
   args: {
-    children: 'Menu',
+    label: 'Menu',
     'aria-expanded': 'false',
     'aria-haspopup': 'menu',
   },
@@ -207,7 +261,7 @@ export const ButtonMenuClosed: Story = {
 export const ButtonMenuOpened: Story = {
   name: 'Button Menu Opend',
   args: {
-    children: 'Menu',
+    label: 'Menu',
     'aria-expanded': 'true',
     'aria-haspopup': 'menu',
   },
@@ -224,7 +278,7 @@ export const ButtonMenuOpened: Story = {
 export const ButtonDialogClosed: Story = {
   name: 'Button Dialog Closed',
   args: {
-    children: 'Afsluiten',
+    label: 'Afsluiten',
     'aria-expanded': 'false',
     'aria-haspopup': 'dialog',
   },
@@ -241,7 +295,7 @@ export const ButtonDialogClosed: Story = {
 export const ButtonDialogOpened: Story = {
   name: 'Button Dialog Opened',
   args: {
-    children: 'Afsluiten',
+    label: 'Afsluiten',
     'aria-expanded': 'true',
     'aria-haspopup': 'dialog',
   },
@@ -253,4 +307,170 @@ export const ButtonDialogOpened: Story = {
     },
     status: { type: [] },
   },
+};
+
+export const WithChildren: Story = {
+  name: 'Children ipv label',
+  args: {
+    label: undefined,
+    style: { '--nl-button-column-gap': '3em' },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een knop die children gebruikt ipv de label prop',
+      },
+    },
+    status: { type: [] },
+  },
+  render: ({ ...props }) => <Button {...props}>Klik mij!</Button>,
+};
+
+export const WithChildrenIcon: Story = {
+  name: 'Children ipv label met een icon',
+  args: {
+    label: undefined,
+    style: { '--nl-button-column-gap': '3em' },
+    iconEnd: (
+      <Icon>
+        <IconAccessible />
+      </Icon>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een knop die children gebruikt ipv de label prop inclusief icon',
+      },
+    },
+    status: { type: [] },
+  },
+  render: ({ ...props }) => <Button {...props}>Klik mij!</Button>,
+};
+
+export const WithFormattedChildren: Story = {
+  name: 'Children formatted ipv label',
+  args: {
+    label: undefined,
+    style: { '--nl-button-column-gap': '3em' },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'De content is geformat met extra markup',
+      },
+    },
+    status: { type: [] },
+  },
+  render: ({ ...props }) => (
+    <Button {...props}>
+      Klik <u>mij</u> nu!
+    </Button>
+  ),
+};
+
+export const WithFormattedChildrenAndIcon: Story = {
+  name: 'Children formatted ipv label met een icon',
+  args: {
+    label: undefined,
+    style: { '--nl-button-column-gap': '3em' },
+    iconEnd: (
+      <Icon>
+        <IconAccessible />
+      </Icon>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Geformatteerde content als children mee gegeven. Merk op dat, in de gerenderde html, de children gewrapped zijn in een `<span>` nu er ook een Icon aanwezig is.',
+      },
+    },
+    status: { type: [] },
+  },
+
+  render: ({ ...props }) => (
+    <Button {...props}>
+      Klik <u>mij</u> nu!
+    </Button>
+  ),
+};
+
+export const FullWidth: Story = {
+  name: 'Volle breedte',
+  args: {
+    label: 'Ik ben een button met een hele lange tekst',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `De parent van een button kan de breedte van de button bepalen.`,
+      },
+    },
+  },
+  render: ({ label, ...props }) => (
+    <>
+      <div style={{ display: 'flex', resize: 'both', overflow: 'auto' }}>
+        <Button style={{ flex: 1 }} {...props} label={label} />
+      </div>
+      <br />
+      <div style={{ display: 'flex', resize: 'both', overflow: 'auto' }}>
+        <Button style={{ flex: 1 }} {...props}>
+          {label}
+        </Button>
+      </div>
+      <br />
+      <div style={{ display: 'flex', resize: 'both', overflow: 'auto', width: '300px' }}>
+        <Button style={{ flex: 1 }} {...props} label={label} />
+      </div>
+      <br />
+      <div style={{ display: 'flex', resize: 'both', overflow: 'auto', width: '300px' }}>
+        <Button style={{ flex: 1 }} {...props}>
+          {label}
+        </Button>
+      </div>
+    </>
+  ),
+};
+export const FullWidthWithIcon: Story = {
+  name: 'Volle breedte met icon',
+  args: {
+    label: 'Ik ben een button met een hele lange tekst',
+    iconStart: (
+      <Icon>
+        <IconAccessible />
+      </Icon>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `De parent van een button kan de breedte van de button bepalen.`,
+      },
+    },
+  },
+  render: ({ label, ...props }) => (
+    <>
+      <div style={{ display: 'flex', resize: 'both', overflow: 'auto' }}>
+        <Button style={{ flex: 1 }} {...props} label={label} />
+      </div>
+      <br />
+      <div style={{ display: 'flex', resize: 'both', overflow: 'auto' }}>
+        <Button style={{ flex: 1 }} {...props}>
+          {label}
+        </Button>
+      </div>
+      <br />
+      <div style={{ display: 'flex', resize: 'both', overflow: 'auto', width: '300px' }}>
+        <Button style={{ flex: 1 }} {...props} label={label} />
+      </div>
+      <br />
+      <div style={{ display: 'flex', resize: 'both', overflow: 'auto', width: '300px' }}>
+        <Button style={{ flex: 1 }} {...props}>
+          {label}
+        </Button>
+      </div>
+    </>
+  ),
 };
