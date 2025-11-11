@@ -59,7 +59,7 @@ jobs:
         with:
           autoAcceptChanges: main
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storyBookBaseDir: packages/storybook-test/
+          storybookBaseDir: packages/storybook-test/
           storybookBuildDir: packages/storybook-test/dist/
           storybookConfigDir: packages/storybook-test/config/
           exitOnceUploaded: true
