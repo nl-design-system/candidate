@@ -909,6 +909,15 @@ importers:
       '@fontsource/fira-sans':
         specifier: 5.2.6
         version: 5.2.6
+      '@fontsource/noto-sans':
+        specifier: 5.2.10
+        version: 5.2.10
+      '@fontsource/noto-sans-mono':
+        specifier: 5.2.10
+        version: 5.2.10
+      '@fontsource/noto-serif':
+        specifier: 5.2.6
+        version: 5.2.6
       '@nl-design-system-candidate/heading-react':
         specifier: workspace:*
         version: link:../components-react/heading-react
@@ -928,8 +937,8 @@ importers:
         specifier: 0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@9.1.5(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.5(@types/node@22.17.0)(sass@1.89.2)(yaml@2.8.0)))
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 6.2.0
-        version: 6.2.0
+        specifier: 6.2.1
+        version: 6.2.1
       '@storybook/addon-docs':
         specifier: 9.1.5
         version: 9.1.5(@types/react@18.3.23)(storybook@9.1.5(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.5(@types/node@22.17.0)(sass@1.89.2)(yaml@2.8.0)))
@@ -1932,6 +1941,15 @@ packages:
   '@fontsource/fira-sans@5.2.6':
     resolution: {integrity: sha512-WsqXZCzlbifRoOLppDr6pwMRrZ4U+e+mv+oRZLrZOvkTv/q63B1CIUW+lfaaJuP15YBhOV1OCxS+n1pP8d3IhQ==}
 
+  '@fontsource/noto-sans-mono@5.2.10':
+    resolution: {integrity: sha512-YG3ev3Bc24UGd1x0THgtU3LG1j+sKahhDgo0vTpEfB0wkXD1+tGSq1fJD+QqnYLXjPhMRNe0ZKWoUi1MPH7Qdg==}
+
+  '@fontsource/noto-sans@5.2.10':
+    resolution: {integrity: sha512-J58RVfS/C0Z2VBF+PoU260Tx8cdRGYuS+e3yQe4hYaIYDl0sEVn5CzlLo5zVRvQD0HaIUTV8AZMfqR7rtdEpqQ==}
+
+  '@fontsource/noto-serif@5.2.6':
+    resolution: {integrity: sha512-mEGeD/duOwgEJooUsXpdCz3WdBJBfm7LEP2XQz/OSBXxj/GVwisULiOH2B7oL2tLBT6EGKTzZfmJAo6ZzOG0+w==}
+
   '@fontsource/source-serif-pro@5.2.5':
     resolution: {integrity: sha512-MTsjMrl2+81dar37wV1taDYzU+o9ArcuBVBkXRNb6JuNCBmrKOIAAmI1wC3cE+Q0eAlgXlfNrvZ7swP3l2M8tQ==}
 
@@ -2057,6 +2075,9 @@ packages:
 
   '@nl-design-system-unstable/voorbeeld-design-tokens@6.2.0':
     resolution: {integrity: sha512-qAWMqpD7UNgL2H5or48rycoVax55dgK4nHTqT8gnpxqJa6qZBJ+k++EpTh3mSR66xL6rb8Wx5SOZR8xJ8V29fg==}
+
+  '@nl-design-system-unstable/voorbeeld-design-tokens@6.2.1':
+    resolution: {integrity: sha512-jGBiKwqubaZ+DrFmGGncN2Oznl1YROd+qtMCc91OsZtOEIY+psKnob8IDPmkpqvtwDfuSoB+WcWCZvu+wWzjEA==}
 
   '@nl-design-system/eslint-config@2.1.1':
     resolution: {integrity: sha512-CU1IOIZk6gV9048rU/1wfV2OaQKhdRFCktpC7jNj4NpnNQstOHKUojmB08xajxPTzwwerQS303dGSrC1XW6r/w==}
@@ -6865,6 +6886,12 @@ snapshots:
 
   '@fontsource/fira-sans@5.2.6': {}
 
+  '@fontsource/noto-sans-mono@5.2.10': {}
+
+  '@fontsource/noto-sans@5.2.10': {}
+
+  '@fontsource/noto-serif@5.2.6': {}
+
   '@fontsource/source-serif-pro@5.2.5': {}
 
   '@gemeente-denhaag/button@0.2.3-alpha.401(react@18.3.1)':
@@ -7008,6 +7035,8 @@ snapshots:
       - storybook
 
   '@nl-design-system-unstable/voorbeeld-design-tokens@6.2.0': {}
+
+  '@nl-design-system-unstable/voorbeeld-design-tokens@6.2.1': {}
 
   '@nl-design-system/eslint-config@2.1.1(eslint@9.32.0)(typescript@5.9.2)':
     dependencies:
