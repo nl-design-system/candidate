@@ -1,6 +1,5 @@
 name: Continuous Integration
 # Triggers the following workflows:
-# - .github/workflows/changeset-status.yml
 # - .github/workflows/codecov.yml
 # - .github/workflows/chromatic.yml
 
