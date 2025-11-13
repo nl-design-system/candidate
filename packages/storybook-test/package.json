@@ -4,7 +4,7 @@
   "license": "EUPL-1.2",
   "type": "module",
   "scripts": {
-    "build": "storybook build --config-dir ./config/ --output-dir ./dist/",
+    "build": "storybook build --config-dir ./config/ --output-dir ./dist/ --stats-json",
     "clean": "rimraf ./dist/",
     "storybook": "storybook dev --config-dir ./config/ --port 6007"
   },
