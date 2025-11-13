@@ -63,3 +63,4 @@ jobs:
           storybookBuildDir: packages/storybook-test/dist/
           storybookConfigDir: packages/storybook-test/config/
           exitOnceUploaded: true
+          onlyChanged: true
