@@ -388,7 +388,7 @@ export const NumberBadgeLink: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Number Badge met het getal 42, in een link naar Inbox. De linktekst is onderstreept, maar de het getal in de Number Badge niet.
+        story: `Een Number Badge met het getal 42, in een link naar Inbox. De linktekst is onderstreept, maar het getal in de Number Badge niet.
 
 De tekst van Number Badge moet niet onderstreept worden, bijvoorbeeld wanneer die in een link staat.`,
       },
