@@ -2,4 +2,5 @@
 
 # Text Input documentatie
 
+- [anatomie](./docs/anatomy/anatomy.md)
 - [aliassen](./docs/aliases.md)
