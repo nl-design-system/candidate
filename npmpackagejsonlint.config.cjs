@@ -10,7 +10,7 @@ module.exports = {
   },
   overrides: [
     {
-      patterns: ['packages/docs/**/package.json'],
+      patterns: ['packages/docs/**/package.json', 'scripts/templates/docs/package.json'],
       rules: {
         'valid-values-license': ['error', ['CC0-1.0']],
       },

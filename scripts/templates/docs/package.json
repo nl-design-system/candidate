@@ -1,0 +1,24 @@
+{
+  "name": "@nl-design-system-candidate/new-component-docs",
+  "version": "0.0.0",
+  "description": "Documentatie voor de New Component component",
+  "license": "CC0-1.0",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/new-component-docs#readme",
+  "scripts": {},
+  "keywords": [
+    "nl-design-system"
+  ],
+  "files": [
+    "./docs/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/docs/new-component-docs"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
