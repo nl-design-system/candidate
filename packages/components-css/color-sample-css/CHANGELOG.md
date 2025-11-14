@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/color-sample-css
 
+## 1.0.4
+
+### Patch Changes
+
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.0.3
 
 ### Patch Changes
