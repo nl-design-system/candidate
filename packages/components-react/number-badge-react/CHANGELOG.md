@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/number-badge-react
 
+## 1.3.1
+
+### Patch Changes
+
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.3.0
 
 ### Minor Changes
