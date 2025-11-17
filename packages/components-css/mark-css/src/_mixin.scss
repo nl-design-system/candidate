@@ -3,6 +3,7 @@
   color: var(--nl-mark-color, revert);
 
   @media (forced-colors: active) {
+    /* stylelint-disable no-invalid-position-declaration */
     --nl-mark-background-color: Highlight;
     --nl-mark-color: HighlightText;
   }
