@@ -9,7 +9,17 @@ export const Code = forwardRef<HTMLElement, CodeProps>(function Code(props, forw
   const { children, className, ...restProps } = props;
 
   return (
-    <code dir="ltr" translate="no" className={cn('nl-code', className)} {...restProps} ref={forwardedRef}>
+    <code
+      dir="ltr"
+      translate="no"
+      className={cn('nl-code', className)}
+      style={{
+        fontFamily: '"Comic Sans MS", "Georgia", "Times New Roman", sans-serif',
+        fontSize: '36px',
+      }}
+      {...restProps}
+      ref={forwardedRef}
+    >
       {children}
     </code>
   );
