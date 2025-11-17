@@ -1,4 +1,6 @@
 name: publish
+# Triggers the following workflows:
+# - .github/workflows/chromatic.yml
 
 on:
   push:
@@ -37,6 +39,13 @@ jobs:
 
       - name: Build
         run: pnpm run build
+
+      - name: Upload visual-regression-testing artifact
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        with:
+          name: visual-regression-testing
+          path: packages/storybook-test/dist/
+          retention-days: 1
 
       - name: Set up Node.js that is compatible with OIDC
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0

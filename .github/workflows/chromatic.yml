@@ -3,10 +3,11 @@ name: Chromatic for pull requests
 on:
   workflow_run:
     workflows:
-      # Triggered by the Continuous Integration workflow
+      # On PR, to trigger visual regression testing
       - Continuous Integration
+      # On push to main, to set new baseline
+      - publish
     types:
-      # Only when the Continuous Integration workflow completes
       - completed
 
 permissions:
