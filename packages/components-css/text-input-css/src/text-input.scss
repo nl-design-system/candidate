@@ -1,0 +1,5 @@
+@use "mixin";
+
+.nl-text-input {
+  @include mixin.nl-text-input;
+}
