@@ -1,8 +1,15 @@
 {
   "name": "@nl-design-system-candidate/text-input-docs",
   "version": "0.0.0",
+  "description": "Documentatie voor de Text Input component",
   "license": "CC0-1.0",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/text-input-docs#readme",
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "text-input",
+    "text-input-component"
+  ],
   "files": [
     "./docs/"
   ],
