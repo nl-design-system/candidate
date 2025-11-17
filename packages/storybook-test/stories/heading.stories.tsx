@@ -688,3 +688,29 @@ export const HeadingLevelSize: Story = {
     </div>
   ),
 };
+
+export const HeadingInColumn: Story = {
+  name: 'Heading in een kolom',
+  args: {
+    children: '',
+    level: 1,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een kolom hoort niet te worden gebroken gelijk na een heading.',
+      },
+    },
+  },
+  render: () => (
+    <div style={{ columns: 2, width: '24em' }}>
+      <Heading level={3}>Civiel recht in Nederland</Heading>
+      <Paragraph>Afdeling 1. Vereisten tot het aangaan van een huwelijk</Paragraph>
+      <Heading level={4}>Burgerlijk Wetboek</Heading>
+      <Paragraph>
+        Zij die met elkander een huwelijk willen aangaan, mogen niet tegelijkertijd een geregistreerd partnerschap zijn
+        aangegaan.
+      </Paragraph>
+    </div>
+  ),
+};
