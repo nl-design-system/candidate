@@ -1,4 +1,5 @@
 ---
+'@nl-design-system-candidate/data-badge-docs': patch
 '@nl-design-system-candidate/code-docs': patch
 ---
 

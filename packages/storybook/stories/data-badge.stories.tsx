@@ -1,15 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta } from '@storybook/react-vite';
 import '../../components-css/data-badge-css/src/data-badge.scss';
 import packageJSON from '../../components-react/data-badge-react/package.json';
 import { DataBadge } from '../../components-react/data-badge-react/src/data-badge';
+import metaDataBadge from '@nl-design-system-candidate/data-badge-docs/stories/data-badge.react.meta';
+import * as Stories from '@nl-design-system-candidate/data-badge-docs/stories/data-badge.stories';
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-    dateTime: { if: { arg: 'value', exists: false }, table: { category: 'API' } },
-    value: { if: { arg: 'dateTime', exists: false }, table: { category: 'API' } },
-  },
-  component: DataBadge,
+  ...metaDataBadge,
   parameters: {
     externalLinks: [
       {
@@ -27,27 +24,6 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  name: 'Data Badge',
-  args: {
-    children: '42',
-  },
-};
-
-export const DataBadgeWithValue: Story = {
-  name: 'Data Badge met "value"',
-  args: {
-    children: '42',
-    value: '42',
-  },
-};
-
-export const DataBadgeWithDateTime: Story = {
-  name: 'Data Badge met "dateTime"',
-  args: {
-    children: 'Donderdag 1 januari 1970 om 01:00:00',
-    dateTime: '1970-01-01T00:00:00+01:00',
-  },
-};
+export const Default = Stories.Default;
+export const DataBadgeWithValue = Stories.DataBadgeWithValue;
+export const DataBadgeWithDateTime = Stories.DataBadgeWithDateTime;
