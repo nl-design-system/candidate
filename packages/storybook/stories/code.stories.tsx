@@ -1,13 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta } from '@storybook/react-vite';
 import '../../components-css/code-css/src/code.scss';
 import packageJSON from '../../components-react/code-react/package.json';
 import { Code } from '../../components-react/code-react/src/code';
+import * as Stories from '@nl-design-system-candidate/code-docs/stories/code.stories';
+import codeMeta from '@nl-design-system-candidate/code-docs/stories/code.react.meta';
 
 const meta = {
-  argTypes: {
-    children: { control: 'text', table: { category: 'API' } },
-  },
-  component: Code,
+  ...codeMeta,
   parameters: {
     externalLinks: [
       {
@@ -25,11 +24,4 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  name: 'Code',
-  args: {
-    children: `import { Code } from '@nl-design-system-candidate/code-react';`,
-  },
-};
+export const Default = Stories.Default;
