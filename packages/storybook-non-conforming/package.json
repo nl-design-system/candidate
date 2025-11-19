@@ -15,7 +15,6 @@
     "directory": "packages/storybook-tests"
   },
   "devDependencies": {
-    "@etchteam/storybook-addon-status": "7.0.1",
     "@fontsource/fira-code": "5.2.6",
     "@fontsource/fira-sans": "5.2.6",
     "@nl-design-system-candidate/paragraph-react": "workspace:*",

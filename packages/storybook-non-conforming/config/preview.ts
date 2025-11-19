@@ -4,7 +4,6 @@ import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
 import type { Preview } from '@storybook/react-vite';
 import { DocsPage } from '../src/DocsPage';
-import { statuses } from './statuses';
 import { viewports } from './viewports';
 
 const preview: Preview = {
@@ -44,7 +43,6 @@ const preview: Preview = {
     html: {
       root: '[data-story-root]',
     },
-    status: { statuses },
     viewport: {
       options: viewports,
     },

@@ -23,14 +23,11 @@ updates:
       - dependency-name: "@types/node"
         update-types:
           - "version-update:semver-major"
-      # the following 5 ignored dependencies should be removed when we update to Storybook 9
+      # the following 4 ignored dependencies should be removed when we update to Storybook 9
       - dependency-name: "@storybook/*"
         update-types:
           - "version-update:semver-major"
       - dependency-name: "storybook"
-        update-types:
-          - "version-update:semver-major"
-      - dependency-name: "@etchteam/storybook-addon-status"
         update-types:
           - "version-update:semver-major"
       - dependency-name: "@whitespace/storybook-addon-html"
