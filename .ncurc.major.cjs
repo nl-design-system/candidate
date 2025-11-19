@@ -14,9 +14,9 @@ module.exports = {
     '@types/react-dom',
     '@storybook/*',
     'storybook',
-    '@etchteam/storybook-addon-status', // v5 is the last version that's compatible with Storybook 8
+    '@etchteam/storybook-addon-status', // v8 is the last version that's compatible with Storybook 9
     '@whitespace/storybook-addon-html', // we are waiting for this version bump to upgrade to Storybook 9
-    'vite', // keep vite at v6 to stay in line with @storybook/react-vite
+    'vite', // keep vite at v7 to stay in line with @storybook/react-vite
   ],
   target: 'latest',
 };
