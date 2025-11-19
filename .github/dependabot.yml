@@ -23,7 +23,7 @@ updates:
       - dependency-name: "@types/node"
         update-types:
           - "version-update:semver-major"
-      # the following 5 ignored dependencies should be removed when we update to Storybook 9
+      # the following 5 ignored dependencies should be removed when we update to Storybook 10
       - dependency-name: "@storybook/*"
         update-types:
           - "version-update:semver-major"
