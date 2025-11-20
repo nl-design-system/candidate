@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/paragraph-docs
 
+## 1.0.5
+
+### Patch Changes
+
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.0.4
 
 ### Patch Changes

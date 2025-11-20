@@ -1,5 +1,12 @@
 # @nl-design-system-candidate/data-badge-docs
 
+## 1.0.3
+
+### Patch Changes
+
+- c5b384f: Stories toegevoegd als exports zodat deze kunnen worden hergebruikt
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.0.2
 
 ### Patch Changes

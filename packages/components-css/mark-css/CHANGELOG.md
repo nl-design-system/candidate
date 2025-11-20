@@ -1,5 +1,12 @@
 # @nl-design-system-candidate/mark-css
 
+## 1.0.4
+
+### Patch Changes
+
+- c943784: Remove deprecated styles
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.0.3
 
 ### Patch Changes
