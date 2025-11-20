@@ -1,5 +1,12 @@
 # @nl-design-system-candidate/heading-css
 
+## 1.1.2
+
+### Patch Changes
+
+- c943784: Remove deprecated styles
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.1.1
 
 ### Patch Changes

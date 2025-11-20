@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/data-badge-tokens
 
+## 2.0.2
+
+### Patch Changes
+
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 2.0.1
 
 ### Patch Changes
