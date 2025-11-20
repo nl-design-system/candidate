@@ -1,11 +1,9 @@
 @mixin nl-icon {
-  // Default to 1lh × 1lh
-  --_nl-icon-block-size: 1lh;
-  --_nl-icon-inline-size: 1lh;
+  // Default to 1em × 1em
+  --_nl-icon-block-size: 1em;
+  --_nl-icon-inline-size: 1em;
 
   align-items: center;
-
-  // background-color: color-mix(in srgb, tomato 25%, transparent);
   block-size: var(--nl-icon-block-size, var(--_nl-icon-block-size));
   color: var(--nl-icon-color, currentcolor);
   display: inline-flex;
@@ -24,22 +22,32 @@
   color: currentColor;
 }
 
+// The icon takes on the size of capital letters of the current font-family
+@mixin nl-icon--cap {
+  --nl-icon-block-size: 1cap;
+  --nl-icon-inline-size: 1cap;
+  --nl-icon-inset-block-start: calc(-0.5 * (1cap - 1ex));
+}
+
 // The icon takes on the size of the current font-size
-@mixin nl-icon--size-em {
+@mixin nl-icon--em {
   --nl-icon-block-size: 1em;
   --nl-icon-inline-size: 1em;
+  --nl-icon-inset-block-start: calc(-0.5 * (1cap - 1ex));
 }
 
 // The icon takes on the size of the x-height of the current font-family
-@mixin nl-icon--size-ex {
+@mixin nl-icon--ex {
   --nl-icon-block-size: 1ex;
   --nl-icon-inline-size: 1ex;
+  --nl-icon-inset-block-start: calc(-0.5 * (1cap - 1ex));
 }
 
 // The icon takes on the size of the current line-height
-@mixin nl-icon--size-lh {
+@mixin nl-icon--lh {
   --nl-icon-block-size: 1lh;
   --nl-icon-inline-size: 1lh;
+  --nl-icon-inset-block-start: calc(-0.5 * (1cap - 1ex));
 }
 
 @mixin nl-icon--bidi-mirrored {
