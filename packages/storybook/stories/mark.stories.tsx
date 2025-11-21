@@ -1,14 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import '../../components-css/mark-css/src/mark.scss';
+import type { Meta } from '@storybook/react-vite';
+import '../../components-css/paragraph-css/src/paragraph.scss';
 import packageJSON from '../../components-react/mark-react/package.json';
-import { Mark } from '../../components-react/mark-react/src/mark';
-import { Paragraph } from '../../components-react/paragraph-react/src/css';
+import { Mark as MarkComponent } from '../../components-react/mark-react/src/mark';
+import markMeta from '@nl-design-system-candidate/mark-docs/stories/mark.react.meta';
+import * as Stories from '@nl-design-system-candidate/mark-docs/stories/mark.stories';
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-  },
-  component: Mark,
+  ...markMeta,
+  component: MarkComponent,
   parameters: {
     externalLinks: [
       {
@@ -22,26 +21,9 @@ const meta = {
     ],
   },
   title: 'Mark',
-} satisfies Meta<typeof Mark>;
+} satisfies Meta<typeof MarkComponent>;
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  name: 'Mark',
-  args: {
-    children: 'Gemarkeerde tekst',
-  },
-};
-
-export const MarkInParagraph: Story = {
-  name: 'Mark in een Paragraph',
-  render() {
-    return (
-      <Paragraph>
-        In deze paragraaf staat een stukje <Mark>gemarkeerde tekst</Mark>.
-      </Paragraph>
-    );
-  },
-};
+export const Mark = Stories.Mark;
+export const MarkInEenParagraph = Stories.MarkInEenParagraph;
