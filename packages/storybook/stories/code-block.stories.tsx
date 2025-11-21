@@ -1,13 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import '../../components-css/code-block-css/src/code-block.scss';
+import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-react/code-block-react/package.json';
 import { CodeBlock } from '../../components-react/code-block-react/src/code-block';
+import * as Stories from '@nl-design-system-candidate/code-block-docs/stories/code-block.stories';
+import codeBlockMeta from '@nl-design-system-candidate/code-block-docs/stories/code-block.react.meta';
 
 const meta = {
-  argTypes: {
-    children: { control: 'text', table: { category: 'API' } },
-  },
-  component: CodeBlock,
+  ...codeBlockMeta,
   parameters: {
     externalLinks: [
       {
@@ -25,11 +23,4 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  name: 'Code Block',
-  args: {
-    children: `import { CodeBlock } from '@nl-design-system-candidate/code-block-react';`,
-  },
-};
+export const Default = Stories.Default;
