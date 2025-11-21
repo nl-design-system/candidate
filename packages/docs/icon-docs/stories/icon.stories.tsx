@@ -3,7 +3,7 @@ import type { IconProps } from '@nl-design-system-candidate/icon-react';
 
 type Story = StoryObj<IconProps>;
 
-const Icon = () => (
+const Svg = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -22,8 +22,8 @@ const Icon = () => (
   </svg>
 );
 
-export const Default: Story = {
+export const Icon: Story = {
   args: {
-    children: <Icon />,
+    children: <Svg />,
   },
 };

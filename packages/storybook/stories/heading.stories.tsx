@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-react/heading-react/package.json';
-import { Heading } from '../../components-react/heading-react/src/heading';
+import { Heading as HeadingComponent } from '@nl-design-system-candidate/heading-react';
 import headingMeta from '@nl-design-system-candidate/heading-docs/stories/heading.react.meta';
 import * as Stories from '@nl-design-system-candidate/heading-docs/stories/heading.stories';
 
@@ -19,7 +19,7 @@ const meta = {
     ],
   },
   title: 'Heading',
-} satisfies Meta<typeof Heading>;
+} satisfies Meta<typeof HeadingComponent>;
 
 export default meta;
 

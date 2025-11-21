@@ -10,7 +10,7 @@ const meta = {
     },
     children: { table: { category: 'API' } },
     level: {
-      type: { required: true },
+      type: { name: 'other', value: 'select', required: true },
       control: { type: 'select' },
       options: [1, 2, 3, 4, 5, 6],
       table: { category: 'API', type: { summary: 'unknown[number]' } },

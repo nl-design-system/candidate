@@ -1,9 +1,9 @@
 import type { Meta } from '@storybook/react-vite';
-import '../../components-css/paragraph-css/src/paragraph.scss';
 import packageJSON from '../../components-react/mark-react/package.json';
 import { Mark as MarkComponent } from '../../components-react/mark-react/src/mark';
 import markMeta from '@nl-design-system-candidate/mark-docs/stories/mark.react.meta';
 import * as Stories from '@nl-design-system-candidate/mark-docs/stories/mark.stories';
+import '../../components-css/paragraph-css/src/paragraph.scss';
 
 const meta = {
   ...markMeta,

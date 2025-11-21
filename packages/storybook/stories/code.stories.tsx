@@ -1,9 +1,8 @@
 import type { Meta } from '@storybook/react-vite';
-import '../../components-css/code-css/src/code.scss';
 import packageJSON from '../../components-react/code-react/package.json';
-import { Code } from '../../components-react/code-react/src/code';
-import * as Stories from '@nl-design-system-candidate/code-docs/stories/code.stories';
+import { Code as CodeComponent } from '@nl-design-system-candidate/code-react';
 import codeMeta from '@nl-design-system-candidate/code-docs/stories/code.react.meta';
+import * as Stories from '@nl-design-system-candidate/code-docs/stories/code.stories';
 
 const meta = {
   ...codeMeta,
@@ -20,8 +19,8 @@ const meta = {
     ],
   },
   title: 'Code',
-} satisfies Meta<typeof Code>;
+} satisfies Meta<typeof CodeComponent>;
 
 export default meta;
 
-export const Default = Stories.Default;
+export const Code = Stories.Code;
