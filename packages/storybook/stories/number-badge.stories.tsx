@@ -1,15 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta } from '@storybook/react-vite';
 import '../../components-css/number-badge-css/src/number-badge.scss';
 import packageJSON from '../../components-react/number-badge-react/package.json';
 import { NumberBadge } from '../../components-react/number-badge-react/src/number-badge';
+import numberBadgeMeta from '@nl-design-system-candidate/number-badge-docs/stories/number-badge.react.meta';
+import * as Stories from '@nl-design-system-candidate/number-badge-docs/stories/number-badge.stories';
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-    label: { table: { category: 'API' }, type: 'string' },
-    value: { table: { category: 'API' }, type: 'number' },
-  },
-  component: NumberBadge,
+  ...numberBadgeMeta,
   parameters: {
     externalLinks: [
       {
@@ -27,28 +24,6 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const NumberBadgeChildren: Story = {
-  name: 'Number Badge',
-  args: {
-    children: '42',
-  },
-};
-
-export const NumberBadgeWithValue: Story = {
-  name: 'Number Badge met "value"',
-  args: {
-    children: '42',
-    value: 42,
-  },
-};
-
-export const NumberBadgeWithLabel: Story = {
-  name: 'Number Badge met "label"',
-  args: {
-    children: '42',
-    label: '42 ongelezen berichten',
-    value: 42,
-  },
-};
+export const Default = Stories.Default;
+export const NumberBadgeWithValue = Stories.NumberBadgeWithValue;
+export const NumberBadgeWithLabel = Stories.NumberBadgeWithLabel;
