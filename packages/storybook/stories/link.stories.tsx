@@ -1,22 +1,15 @@
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import { ParagraphDecorator } from '@nl-design-system-candidate/storybook-shared/src/ParagraphDecorator';
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta } from '@storybook/react-vite';
 import '../../components-css/link-css/src/link.scss';
+import '../../components-css/paragraph-css/src/paragraph.scss';
 import packageJSON from '../../components-react/link-react/package.json';
 import { Link } from '../../components-react/link-react/src/link';
-import { Paragraph } from '../../components-react/paragraph-react/src/css';
+import linkMeta from '@nl-design-system-candidate/link-docs/stories/link.react.meta';
+import * as Stories from '@nl-design-system-candidate/link-docs/stories/link.stories';
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-    href: { table: { category: 'API' } },
-    target: {
-      control: { labels: { undefined: '(undefined)' }, type: 'select' },
-      options: [undefined, '_blank', '_parent', '_self', '_top'],
-      table: { category: 'API' },
-    },
-  },
-  component: Link,
+  ...linkMeta,
   decorators: [ParagraphDecorator, ExampleBodyTextDecorator],
   parameters: {
     externalLinks: [
@@ -35,26 +28,5 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  name: 'Link',
-  args: {
-    children: 'voorbeeldsite',
-    href: 'https://example.com',
-  },
-};
-
-export const LinkInParagraph: Story = {
-  name: 'Link in een Paragraph',
-  args: {
-    href: 'https://example.com',
-  },
-  render(args) {
-    return (
-      <Paragraph>
-        In deze paragraaf staat een <Link {...args}>link naar een voorbeeldsite</Link>.
-      </Paragraph>
-    );
-  },
-};
+export const Default = Stories.Default;
+export const LinkInParagraph = Stories.LinkInParagraph;
