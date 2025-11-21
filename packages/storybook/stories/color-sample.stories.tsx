@@ -1,13 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta } from '@storybook/react-vite';
 import '../../components-css/color-sample-css/src/color-sample.scss';
 import packageJSON from '../../components-react/color-sample-react/package.json';
 import { ColorSample } from '../../components-react/color-sample-react/src/color-sample';
+import * as Stories from '@nl-design-system-candidate/color-sample-docs/stories/color-sample.stories';
+import colorSampleMeta from '@nl-design-system-candidate/color-sample-docs/stories/color-sample.react.meta';
 
 const meta = {
-  argTypes: {
-    value: { control: 'color', table: { category: 'API' } },
-  },
-  component: ColorSample,
+  ...colorSampleMeta,
   parameters: {
     externalLinks: [
       {
@@ -25,11 +24,4 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  name: 'Color Sample',
-  args: {
-    value: 'deeppink',
-  },
-};
+export const Default = Stories.Default;
