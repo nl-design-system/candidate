@@ -28,6 +28,8 @@
     "@nl-design-system-candidate/data-badge-docs": "workspace:*",
     "@nl-design-system-candidate/icon-docs": "workspace:*",
     "@nl-design-system-candidate/mark-docs": "workspace:*",
+    "@nl-design-system-candidate/link-docs": "workspace:*",
+    "@nl-design-system-candidate/link-react": "workspace:*",
     "@nl-design-system-candidate/paragraph-react": "workspace:*",
     "@nl-design-system-candidate/skip-link-docs": "workspace:*",
     "@nl-design-system-candidate/storybook-shared": "workspace:*",
