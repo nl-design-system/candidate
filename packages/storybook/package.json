@@ -28,6 +28,7 @@
     "@nl-design-system-candidate/icon-docs": "workspace:*",
     "@nl-design-system-candidate/mark-docs": "workspace:*",
     "@nl-design-system-candidate/paragraph-react": "workspace:*",
+    "@nl-design-system-candidate/skip-link-docs": "workspace:*",
     "@nl-design-system-candidate/storybook-shared": "workspace:*",
     "@nl-design-system-unstable/voorbeeld-design-tokens": "6.2.0",
     "@storybook/addon-a11y": "9.1.5",
