@@ -808,7 +808,11 @@ importers:
 
   packages/docs/paragraph-docs: {}
 
-  packages/docs/skip-link-docs: {}
+  packages/docs/skip-link-docs:
+    devDependencies:
+      '@nl-design-system-candidate/skip-link-react':
+        specifier: workspace:*
+        version: link:../../components-react/skip-link-react
 
   packages/docs/text-input-docs: {}
 
@@ -829,6 +833,9 @@ importers:
       '@nl-design-system-candidate/paragraph-react':
         specifier: workspace:*
         version: link:../components-react/paragraph-react
+      '@nl-design-system-candidate/skip-link-docs':
+        specifier: workspace:*
+        version: link:../docs/skip-link-docs
       '@nl-design-system-candidate/storybook-shared':
         specifier: workspace:*
         version: link:../storybook-shared
