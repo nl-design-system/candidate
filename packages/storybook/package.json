@@ -24,6 +24,7 @@
     "@nl-design-system-candidate/code-docs": "workspace:*",
     "@nl-design-system-candidate/data-badge-docs": "workspace:*",
     "@nl-design-system-candidate/paragraph-react": "workspace:*",
+    "@nl-design-system-candidate/skip-link-docs": "workspace:*",
     "@nl-design-system-candidate/storybook-shared": "workspace:*",
     "@nl-design-system-unstable/voorbeeld-design-tokens": "6.2.0",
     "@storybook/addon-a11y": "9.1.5",
