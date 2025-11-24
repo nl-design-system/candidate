@@ -1,5 +1,5 @@
 import type { StoryObj } from '@storybook/react-vite';
-import type { NewComponentProps } from '@nl-design-system-candidate/code-react';
+import type { NewComponentProps } from '@nl-design-system-candidate/new-component-react';
 
 type Story = StoryObj<NewComponentProps>;
 
