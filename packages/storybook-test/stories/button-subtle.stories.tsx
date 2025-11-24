@@ -5,7 +5,6 @@ import packageJSON from '../../components-react/button-react/package.json';
 import { Button } from '../../components-react/button-react/src/button';
 import allTokens from '../../tokens/button-tokens/tokens.json';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { primary, secondary, subtle, default: defaultTokens, ...tokens } = allTokens.nl.button;
 
 const meta = {
