@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react-vite';
-import { NewComponent } from '@nl-design-system-candidate/new-component-react';
+import { NewComponent } from '@nl-design-system-candidate/new-component-react/css';
 
 const meta = {
   argTypes: {
