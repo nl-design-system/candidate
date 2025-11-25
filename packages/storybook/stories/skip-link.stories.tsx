@@ -1,19 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import '../../components-css/skip-link-css/src/skip-link.scss';
+import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-react/skip-link-react/package.json';
-import { SkipLink } from '../../components-react/skip-link-react/src/skip-link';
+import { SkipLink as SkipLinkComponent } from '../../components-react/skip-link-react/src/skip-link';
+import skipLinkMeta from '@nl-design-system-candidate/skip-link-docs/stories/skip-link.react.meta';
+import * as Stories from '@nl-design-system-candidate/skip-link-docs/stories/skip-link.stories';
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-    href: { table: { category: 'API' } },
-    target: {
-      control: { labels: { undefined: '(undefined)' }, type: 'select' },
-      options: [undefined, '_blank', '_parent', '_self', '_top'],
-      table: { category: 'API' },
-    },
-  },
-  component: SkipLink,
+  ...skipLinkMeta,
   parameters: {
     externalLinks: [
       {
@@ -27,16 +19,8 @@ const meta = {
     ],
   },
   title: 'Skip Link',
-} satisfies Meta<typeof SkipLink>;
+} satisfies Meta<typeof SkipLinkComponent>;
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  name: 'Skip Link',
-  args: {
-    children: 'Naar de inhoud',
-    href: '#inhoud',
-  },
-};
+export const SkipLink = Stories.SkipLink;
