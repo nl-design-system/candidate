@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-react
 
+## 1.2.6
+
+### Patch Changes
+
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.2.5
 
 ### Patch Changes

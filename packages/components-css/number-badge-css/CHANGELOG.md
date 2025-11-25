@@ -1,5 +1,12 @@
 # @nl-design-system-candidate/number-badge-css
 
+## 1.1.4
+
+### Patch Changes
+
+- c943784: Remove deprecated styles
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.1.3
 
 ### Patch Changes
