@@ -3,7 +3,7 @@ import type { NewComponentProps } from '@nl-design-system-candidate/new-componen
 
 type Story = StoryObj<NewComponentProps>;
 
-export const Default: Story = {
+export const NewComponent: Story = {
   name: 'New Component',
   args: {
     children: `New Component`,
