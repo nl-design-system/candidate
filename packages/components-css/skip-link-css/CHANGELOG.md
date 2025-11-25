@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/skip-link-css
 
+## 1.0.4
+
+### Patch Changes
+
+- 2cf5367: Release with trusted npm publishing process.
+
 ## 1.0.3
 
 ### Patch Changes
