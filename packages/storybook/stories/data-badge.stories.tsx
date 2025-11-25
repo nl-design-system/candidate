@@ -1,7 +1,6 @@
 import type { Meta } from '@storybook/react-vite';
-import '../../components-css/data-badge-css/src/data-badge.scss';
 import packageJSON from '../../components-react/data-badge-react/package.json';
-import { DataBadge } from '../../components-react/data-badge-react/src/data-badge';
+import { DataBadge as DataBadgeComponent } from '@nl-design-system-candidate/data-badge-react';
 import metaDataBadge from '@nl-design-system-candidate/data-badge-docs/stories/data-badge.react.meta';
 import * as Stories from '@nl-design-system-candidate/data-badge-docs/stories/data-badge.stories';
 
@@ -20,10 +19,10 @@ const meta = {
     ],
   },
   title: 'Data Badge',
-} satisfies Meta<typeof DataBadge>;
+} satisfies Meta<typeof DataBadgeComponent>;
 
 export default meta;
 
-export const Default = Stories.Default;
-export const DataBadgeWithValue = Stories.DataBadgeWithValue;
-export const DataBadgeWithDateTime = Stories.DataBadgeWithDateTime;
+export const DataBadge = Stories.DataBadge;
+export const DataBadgeMetValue = Stories.DataBadgeMetValue;
+export const DataBadgeMetDateTime = Stories.DataBadgeMetDateTime;

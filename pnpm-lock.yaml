@@ -782,7 +782,14 @@ importers:
         specifier: 18.3.23
         version: 18.3.23
 
-  packages/docs/code-block-docs: {}
+  packages/docs/code-block-docs:
+    devDependencies:
+      '@nl-design-system-candidate/code-block-react':
+        specifier: workspace:*
+        version: link:../../components-react/code-block-react
+      '@storybook/react-vite':
+        specifier: 9.1.5
+        version: 9.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.46.2)(storybook@9.1.5(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.5(@types/node@22.17.0)(sass@1.89.2)(yaml@2.8.0)))(typescript@5.9.2)(vite@7.1.5(@types/node@22.17.0)(sass@1.89.2)(yaml@2.8.0))
 
   packages/docs/code-docs:
     devDependencies:
@@ -919,36 +926,57 @@ importers:
       '@nl-design-system-candidate/button-react':
         specifier: workspace:*
         version: link:../components-react/button-react
+      '@nl-design-system-candidate/code-block-docs':
+        specifier: workspace:*
+        version: link:../docs/code-block-docs
+      '@nl-design-system-candidate/code-block-react':
+        specifier: workspace:*
+        version: link:../components-react/code-block-react
       '@nl-design-system-candidate/code-docs':
         specifier: workspace:*
         version: link:../docs/code-docs
+      '@nl-design-system-candidate/code-react':
+        specifier: workspace:*
+        version: link:../components-react/code-react
       '@nl-design-system-candidate/color-sample-docs':
         specifier: workspace:*
         version: link:../docs/color-sample-docs
+      '@nl-design-system-candidate/color-sample-react':
+        specifier: workspace:*
+        version: link:../components-react/color-sample-react
       '@nl-design-system-candidate/data-badge-docs':
         specifier: workspace:*
         version: link:../docs/data-badge-docs
+      '@nl-design-system-candidate/data-badge-react':
+        specifier: workspace:*
+        version: link:../components-react/data-badge-react
+      '@nl-design-system-candidate/heading-docs':
+        specifier: workspace:*
+        version: link:../docs/heading-docs
+      '@nl-design-system-candidate/heading-react':
+        specifier: workspace:*
+        version: link:../components-react/heading-react
       '@nl-design-system-candidate/icon-docs':
         specifier: workspace:*
         version: link:../docs/icon-docs
-      '@nl-design-system-candidate/mark-docs':
+      '@nl-design-system-candidate/icon-react':
         specifier: workspace:*
-        version: link:../docs/mark-docs
+        version: link:../components-react/icon-react
       '@nl-design-system-candidate/link-docs':
         specifier: workspace:*
         version: link:../docs/link-docs
       '@nl-design-system-candidate/link-react':
         specifier: workspace:*
         version: link:../components-react/link-react
-      '@nl-design-system-candidate/paragraph-docs':
+      '@nl-design-system-candidate/mark-docs':
         specifier: workspace:*
-        version: link:../docs/paragraph-docs
+        version: link:../docs/mark-docs
       '@nl-design-system-candidate/number-badge-docs':
         specifier: workspace:*
         version: link:../docs/number-badge-docs
-      '@nl-design-system-candidate/heading-docs':
+      '@nl-design-system-candidate/paragraph-docs':
         specifier: workspace:*
-        version: link:../docs/heading-docs
+        version: link:../docs/paragraph-docs
       '@nl-design-system-candidate/paragraph-react':
         specifier: workspace:*
         version: link:../components-react/paragraph-react

@@ -5,7 +5,7 @@ const meta = {
   argTypes: {
     value: {
       control: 'color',
-      type: { required: true },
+      type: { name: 'other', value: 'color', required: true },
       table: { category: 'API', type: { summary: "CSSProperties['color']" } },
     },
     label: { control: 'text', table: { type: { summary: 'string' } } },

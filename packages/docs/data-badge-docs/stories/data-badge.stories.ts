@@ -3,14 +3,14 @@ import type { DataBadgeProps } from '@nl-design-system-candidate/data-badge-reac
 
 type Story = StoryObj<DataBadgeProps>;
 
-export const Default: Story = {
+export const DataBadge: Story = {
   name: 'Data Badge',
   args: {
     children: '42',
   },
 };
 
-export const DataBadgeWithValue: Story = {
+export const DataBadgeMetValue: Story = {
   name: 'Data Badge met "value"',
   args: {
     children: '42',
@@ -18,7 +18,7 @@ export const DataBadgeWithValue: Story = {
   },
 };
 
-export const DataBadgeWithDateTime: Story = {
+export const DataBadgeMetDateTime: Story = {
   name: 'Data Badge met "dateTime"',
   args: {
     children: 'Donderdag 1 januari 1970 om 01:00:00',
