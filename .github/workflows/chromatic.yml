@@ -40,7 +40,7 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Audit dependencies
+      - name: Check for known security issues with npm packages
         run: |
           echo "Auditing dependencies. For more information, see: https://nldesignsystem.nl/pnpm-audit"
           pnpm audit --audit-level critical
