@@ -33,9 +33,9 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Audit dependencies
+      - name: Check for known security issues with npm packages
         run: |
-          echo "Auditing npm dependencies. For more information, see: https://nldesignsystem.nl/pnpm-audit"
+          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
           pnpm audit --audit-level critical
 
       - name: Install dependencies
