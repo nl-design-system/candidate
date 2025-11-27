@@ -1,5 +1,6 @@
 import type { Meta } from '@storybook/react-vite';
 import { Link } from '@nl-design-system-candidate/link-react/css';
+import descriptionMarkdown from '../docs/description.md?raw';
 
 const meta = {
   argTypes: {
@@ -32,6 +33,13 @@ const meta = {
       control: 'boolean',
       table: {
         type: { summary: 'boolean' },
+      },
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: descriptionMarkdown,
       },
     },
   },
