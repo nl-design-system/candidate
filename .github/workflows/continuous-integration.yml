@@ -87,7 +87,7 @@ jobs:
         #
         # 1. the branch was not created by the Changeset Action itself
         # 2. the branch was not created by Dependabot
-        if: ${{ !startsWith(github.event.workflow_run.head_branch, 'changeset-release/') && github.actor != 'dependabot[bot]' }}
+        if: ${{ !startsWith(github.ref_name, 'changeset-release/') && github.actor != 'dependabot[bot]' }}
         run: pnpm run changeset:status
 
       - name: ShellCheck
