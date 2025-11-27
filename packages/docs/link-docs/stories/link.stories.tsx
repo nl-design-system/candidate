@@ -10,6 +10,13 @@ export const Link: Story = {
     children: 'voorbeeldsite',
     href: 'https://example.com',
   },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een standaard link',
+      },
+    },
+  },
 };
 
 export const LinkInEenParagraph: Story = {
@@ -17,6 +24,13 @@ export const LinkInEenParagraph: Story = {
   args: {
     children: 'link in paragraaf',
     href: 'https://example.com',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een link in een paragraaf',
+      },
+    },
   },
   render(props, { component }) {
     const Link = component as ComponentType<LinkProps>;
