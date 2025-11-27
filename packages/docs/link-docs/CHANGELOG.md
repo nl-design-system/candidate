@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/link-docs
 
+## 1.1.1
+
+### Patch Changes
+
+- 6659c9e: Documentatie van de props toegevoegd
+
 ## 1.1.0
 
 ### Minor Changes
