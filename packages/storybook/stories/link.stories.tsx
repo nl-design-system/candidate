@@ -1,3 +1,4 @@
+import { merge } from 'lodash-es';
 import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-react/link-react/package.json';
 import { Link as LinkComponent } from '@nl-design-system-candidate/link-react';
@@ -8,20 +9,21 @@ import { ParagraphDecorator } from '@nl-design-system-candidate/storybook-shared
 import '../../components-css/paragraph-css/src/paragraph.scss';
 
 const meta = {
-  ...linkMeta,
-  decorators: [ParagraphDecorator, ExampleBodyTextDecorator],
-  parameters: {
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/link',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
+  ...merge({}, linkMeta, {
+    decorators: [ParagraphDecorator, ExampleBodyTextDecorator],
+    parameters: {
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/link',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
+      ],
+    },
+  }),
   title: 'Link',
 } satisfies Meta<typeof LinkComponent>;
 
