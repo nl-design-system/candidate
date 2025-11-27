@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/link-react
 
+## 1.1.7
+
+### Patch Changes
+
+- 6659c9e: Documentatie van de props toegevoegd
+
 ## 1.1.6
 
 ### Patch Changes
