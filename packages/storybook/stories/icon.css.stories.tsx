@@ -1,0 +1,29 @@
+import type { Meta } from '@storybook/react-vite';
+import packageJSON from '../../components-react/icon-react/package.json';
+import { Icon as IconComponent } from '@nl-design-system-candidate/icon-react';
+import iconMeta from '@nl-design-system-candidate/icon-docs/stories/icon.css.meta';
+import * as Stories from '@nl-design-system-candidate/icon-docs/stories/icon.stories';
+import { mergeCssMeta } from '../src/mergeCssMeta';
+
+const meta = {
+  ...mergeCssMeta(iconMeta, {
+    parameters: {
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/icon',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
+      ],
+    },
+  }),
+  title: 'CSS Componenten/Icon',
+  id: 'css-icon',
+} satisfies Meta<typeof IconComponent>;
+
+export default meta;
+
+export const Icon = Stories.Icon;

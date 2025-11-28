@@ -18,7 +18,8 @@ const meta = {
       },
     ],
   },
-  title: 'Color Sample',
+  title: 'React Componenten/Color Sample',
+  id: 'color-sample',
 } satisfies Meta<typeof ColorSampleComponent>;
 
 export default meta;

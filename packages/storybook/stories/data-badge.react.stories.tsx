@@ -18,7 +18,8 @@ const meta = {
       },
     ],
   },
-  title: 'Data Badge',
+  title: 'React Componenten/Data Badge',
+  id: 'data-badge',
 } satisfies Meta<typeof DataBadgeComponent>;
 
 export default meta;
