@@ -14,3 +14,4 @@
 ---
 
 - De `react.meta.ts` en `stories.ts` file zijn hernoemt naar een `.tsx` file.
+- Er is een `css.meta.ts` file bijgekomen specifiek voor de css stories.
