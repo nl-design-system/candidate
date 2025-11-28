@@ -213,7 +213,7 @@ export const GeformatteerdLabel: Story = {
   },
 };
 
-export const FormattedLabelWithIcon: Story = {
+export const GeformatteerdLabelEnEenIcon: Story = {
   name: 'Geformatteerd label en een Icon',
   argTypes: {
     label: {
