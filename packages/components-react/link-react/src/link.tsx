@@ -32,6 +32,12 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
    * @see {@link https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled aria-disabled on MDN}
    */
   disabled?: boolean;
+
+  /** @deprecated Use `current` to set the `aria-current` attribute */
+  'aria-current'?: never;
+
+  /** @deprecated Use `disabled` to set the `aria-disabled` attribute */
+  'aria-disabled'?: never;
 }
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(props, forwardedRef) {
