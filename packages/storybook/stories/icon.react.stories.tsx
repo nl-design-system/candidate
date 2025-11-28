@@ -18,7 +18,8 @@ const meta = {
       },
     ],
   },
-  title: 'Icon',
+  title: 'React Componenten/Icon',
+  id: 'icon',
 } satisfies Meta<typeof IconComponent>;
 
 export default meta;

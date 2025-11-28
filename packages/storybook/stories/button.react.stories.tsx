@@ -20,7 +20,8 @@ const meta = {
       },
     ],
   },
-  title: 'Button',
+  title: 'React Componenten/Button',
+  id: 'button',
 } satisfies Meta<ButtonProps>;
 
 export default meta;
@@ -33,7 +34,7 @@ export const DisabledButton = Stories.DisabledButton;
 export const IconVoorHetLabel = Stories.IconVoorHetLabel;
 export const IconAchterHetLabel = Stories.IconAchterHetLabel;
 export const GeformatteerdLabel = Stories.GeformatteerdLabel;
-export const GeformatteerdLabelEnEenIcon = Stories.GeformatteerdLabel;
+export const GeformatteerdLabelEnEenIcon = Stories.GeformatteerdLabelEnEenIcon;
 export const ToggleButton = {
   ...Stories.ToggleButton,
   render: ({ label, children: _children, ...props }: ButtonProps) => {

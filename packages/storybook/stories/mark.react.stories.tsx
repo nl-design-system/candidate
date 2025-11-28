@@ -20,7 +20,8 @@ const meta = {
       },
     ],
   },
-  title: 'Mark',
+  title: 'React Componenten/Mark',
+  id: 'mark',
 } satisfies Meta<typeof MarkComponent>;
 
 export default meta;

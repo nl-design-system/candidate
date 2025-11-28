@@ -18,7 +18,8 @@ const meta = {
       },
     ],
   },
-  title: 'Number Badge',
+  title: 'React Componenten/Number Badge',
+  id: 'number-badge',
 } satisfies Meta<typeof NumberBadgeComponent>;
 
 export default meta;

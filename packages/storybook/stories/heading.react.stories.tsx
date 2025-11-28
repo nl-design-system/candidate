@@ -18,7 +18,8 @@ const meta = {
       },
     ],
   },
-  title: 'Heading',
+  title: 'React Componenten/Heading',
+  id: 'heading',
 } satisfies Meta<typeof HeadingComponent>;
 
 export default meta;
