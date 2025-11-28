@@ -24,6 +24,6 @@
   },
   "devDependencies": {
     "@nl-design-system-candidate/data-badge-react": "workspace:*",
-    "@storybook/react-vite": "9.1.5"
+    "@storybook/react-vite": "9.1.16"
   }
 }
