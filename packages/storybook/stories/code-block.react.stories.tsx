@@ -18,7 +18,8 @@ const meta = {
       },
     ],
   },
-  title: 'Code Block',
+  title: 'React Componenten/Code Block',
+  id: 'code-block',
 } satisfies Meta<typeof CodeBlockComponent>;
 
 export default meta;

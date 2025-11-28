@@ -18,7 +18,8 @@ const meta = {
       },
     ],
   },
-  title: 'Skip Link',
+  title: 'React Componenten/Skip Link',
+  id: 'skip-link',
 } satisfies Meta<typeof SkipLinkComponent>;
 
 export default meta;

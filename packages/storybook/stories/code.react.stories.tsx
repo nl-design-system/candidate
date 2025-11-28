@@ -18,7 +18,8 @@ const meta = {
       },
     ],
   },
-  title: 'Code',
+  title: 'React Componenten/Code',
+  id: 'code',
 } satisfies Meta<typeof CodeComponent>;
 
 export default meta;

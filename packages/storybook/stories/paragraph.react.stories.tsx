@@ -24,7 +24,8 @@ const meta = {
       },
     ],
   },
-  title: 'Paragraph',
+  title: 'React Componenten/Paragraph',
+  id: 'paragraph',
 } satisfies Meta<typeof ParagraphComponent>;
 
 export default meta;

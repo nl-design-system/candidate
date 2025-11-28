@@ -24,7 +24,8 @@ const meta = {
       ],
     },
   }),
-  title: 'Link',
+  title: 'React Componenten/Link',
+  id: 'link',
 } satisfies Meta<typeof LinkComponent>;
 
 export default meta;
