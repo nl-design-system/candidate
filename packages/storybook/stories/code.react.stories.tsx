@@ -3,22 +3,15 @@ import packageJSON from '../../components-react/code-react/package.json';
 import { Code as CodeComponent } from '@nl-design-system-candidate/code-react';
 import codeMeta from '@nl-design-system-candidate/code-docs/stories/code.react.meta';
 import * as Stories from '@nl-design-system-candidate/code-docs/stories/code.stories';
+import { getExternalLinks } from '../src/helpers/external-links';
+
+const externalLinks = getExternalLinks('https://nldesignsystem.nl/code', packageJSON.homepage);
 
 const meta = {
   ...codeMeta,
-  parameters: {
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/code',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
-  title: 'Code',
+  ...externalLinks,
+  title: 'React Componenten/Code',
+  id: 'code',
 } satisfies Meta<typeof CodeComponent>;
 
 export default meta;

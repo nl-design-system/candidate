@@ -4,23 +4,16 @@ import { Mark as MarkComponent } from '../../components-react/mark-react/src/mar
 import markMeta from '@nl-design-system-candidate/mark-docs/stories/mark.react.meta';
 import * as Stories from '@nl-design-system-candidate/mark-docs/stories/mark.stories';
 import '../../components-css/paragraph-css/src/paragraph.scss';
+import { getExternalLinks } from '../src/helpers/external-links';
+
+const externalLinks = getExternalLinks('https://nldesignsystem.nl/mark', packageJSON.homepage);
 
 const meta = {
   ...markMeta,
+  ...externalLinks,
   component: MarkComponent,
-  parameters: {
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/mark',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
-  title: 'Mark',
+  title: 'React Componenten/Mark',
+  id: 'mark',
 } satisfies Meta<typeof MarkComponent>;
 
 export default meta;

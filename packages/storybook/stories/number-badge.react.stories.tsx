@@ -3,22 +3,15 @@ import packageJSON from '../../components-react/number-badge-react/package.json'
 import { NumberBadge as NumberBadgeComponent } from '../../components-react/number-badge-react/src/number-badge';
 import numberBadgeMeta from '@nl-design-system-candidate/number-badge-docs/stories/number-badge.react.meta';
 import * as Stories from '@nl-design-system-candidate/number-badge-docs/stories/number-badge.stories';
+import { getExternalLinks } from '../src/helpers/external-links';
+
+const externalLinks = getExternalLinks('https://nldesignsystem.nl/number-badge', packageJSON.homepage);
 
 const meta = {
   ...numberBadgeMeta,
-  parameters: {
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/number-badge',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
-  title: 'Number Badge',
+  ...externalLinks,
+  title: 'React Componenten/Number Badge',
+  id: 'number-badge',
 } satisfies Meta<typeof NumberBadgeComponent>;
 
 export default meta;

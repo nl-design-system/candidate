@@ -44,6 +44,7 @@
     "@nl-design-system-candidate/skip-link-docs": "workspace:*",
     "@nl-design-system-candidate/storybook-shared": "workspace:*",
     "@nl-design-system-unstable/voorbeeld-design-tokens": "6.2.0",
+    "@rijkshuisstijl-community/storybook-tooling": "1.1.1",
     "@storybook/addon-a11y": "9.1.5",
     "@storybook/addon-docs": "9.1.5",
     "@storybook/react": "9.1.5",

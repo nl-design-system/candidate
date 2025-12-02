@@ -5,22 +5,15 @@ import buttonMeta from '@nl-design-system-candidate/button-docs/stories/button.r
 import * as Stories from '@nl-design-system-candidate/button-docs/stories/button.stories';
 import '../../components-css/button-css/src/test.scss';
 import { useArgs } from 'storybook/preview-api';
+import { getExternalLinks } from '../src/helpers/external-links';
+
+const externalLinks = getExternalLinks('https://nldesignsystem.nl/button', packageJSON.homepage);
 
 const meta = {
   ...buttonMeta,
-  parameters: {
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/button',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
-  title: 'Button',
+  ...externalLinks,
+  title: 'React Componenten/Button',
+  id: 'button',
 } satisfies Meta<ButtonProps>;
 
 export default meta;
@@ -33,7 +26,7 @@ export const DisabledButton = Stories.DisabledButton;
 export const IconVoorHetLabel = Stories.IconVoorHetLabel;
 export const IconAchterHetLabel = Stories.IconAchterHetLabel;
 export const GeformatteerdLabel = Stories.GeformatteerdLabel;
-export const GeformatteerdLabelEnEenIcon = Stories.GeformatteerdLabel;
+export const GeformatteerdLabelEnEenIcon = Stories.GeformatteerdLabelEnEenIcon;
 export const ToggleButton = {
   ...Stories.ToggleButton,
   render: ({ label, children: _children, ...props }: ButtonProps) => {
