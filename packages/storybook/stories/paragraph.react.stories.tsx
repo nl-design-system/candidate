@@ -4,25 +4,17 @@ import { Paragraph as ParagraphComponent } from '@nl-design-system-candidate/par
 import paragraphMeta from '@nl-design-system-candidate/paragraph-docs/stories/paragraph.react.meta';
 import * as Stories from '@nl-design-system-candidate/paragraph-docs/stories/paragraph.stories';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
+import { getExternalLinks } from '../src/helpers/external-links';
+
+const externalLinks = getExternalLinks('https://nldesignsystem.nl/paragraph', packageJSON.homepage);
 
 const meta = {
   ...paragraphMeta,
+  ...externalLinks,
   decorators: [ExampleBodyTextDecorator],
   globals: {
     dir: 'ltr',
     lang: 'nl',
-  },
-  parameters: {
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/paragraph',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
   },
   title: 'React Componenten/Paragraph',
   id: 'paragraph',

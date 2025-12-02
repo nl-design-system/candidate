@@ -5,21 +5,13 @@ import buttonMeta from '@nl-design-system-candidate/button-docs/stories/button.r
 import * as Stories from '@nl-design-system-candidate/button-docs/stories/button.stories';
 import '../../components-css/button-css/src/test.scss';
 import { useArgs } from 'storybook/preview-api';
+import { getExternalLinks } from '../src/helpers/external-links';
+
+const externalLinks = getExternalLinks('https://nldesignsystem.nl/button', packageJSON.homepage);
 
 const meta = {
   ...buttonMeta,
-  parameters: {
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/button',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
+  ...externalLinks,
   title: 'React Componenten/Button',
   id: 'button',
 } satisfies Meta<ButtonProps>;

@@ -7,22 +7,13 @@ import * as Stories from '@nl-design-system-candidate/link-docs/stories/link.sto
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import { ParagraphDecorator } from '@nl-design-system-candidate/storybook-shared/src/ParagraphDecorator';
 import '../../components-css/paragraph-css/src/paragraph.scss';
+import { getExternalLinks } from '../src/helpers/external-links';
+
+const externalLinks = getExternalLinks('https://nldesignsystem.nl/link', packageJSON.homepage);
 
 const meta = {
-  ...merge({}, linkMeta, {
+  ...merge(linkMeta, externalLinks, {
     decorators: [ParagraphDecorator, ExampleBodyTextDecorator],
-    parameters: {
-      externalLinks: [
-        {
-          name: 'Open op NL Design System',
-          url: 'https://nldesignsystem.nl/link',
-        },
-        {
-          name: 'Open op GitHub',
-          url: packageJSON.homepage,
-        },
-      ],
-    },
   }),
   title: 'React Componenten/Link',
   id: 'link',
