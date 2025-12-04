@@ -8,11 +8,21 @@ import { ParagraphDecorator } from '@nl-design-system-candidate/storybook-shared
 import '../../components-css/paragraph-css/src/paragraph.scss';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta';
 import { getExternalLinks } from '../src/helpers/external-links';
+import description from '@nl-design-system-candidate/link-docs/docs/description.md?raw';
 
 const externalLinks = getExternalLinks('https://nldesignsystem.nl/link', packageJSON.homepage);
 
 const meta = {
-  ...mergeCssMeta(linkMeta, externalLinks, { decorators: [ParagraphDecorator, ExampleBodyTextDecorator] }),
+  ...mergeCssMeta(linkMeta, externalLinks, {
+    decorators: [ParagraphDecorator, ExampleBodyTextDecorator],
+    parameters: {
+      docs: {
+        description: {
+          component: description,
+        },
+      },
+    },
+  }),
   title: 'CSS Componenten/Link',
   id: 'css-link',
 } satisfies Meta<typeof LinkComponent>;
