@@ -1,6 +1,5 @@
 import type { Meta } from '@storybook/react-vite';
 import { Link } from '@nl-design-system-candidate/link-react/css';
-import descriptionMarkdown from '../docs/description.md?raw';
 
 const API = 'API';
 const PASS_THROUGH = 'Pass through';
@@ -62,13 +61,6 @@ const meta = {
       contole: false,
       description: 'Alle niet gebruikte props worden als attributen op het gerenderde `<a>` element geplaatst.',
       table: { category: OTHER, type: { summary: undefined } },
-    },
-  },
-  parameters: {
-    docs: {
-      description: {
-        component: descriptionMarkdown,
-      },
     },
   },
   component: Link,
