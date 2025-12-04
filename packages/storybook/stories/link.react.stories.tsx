@@ -8,12 +8,20 @@ import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-
 import { ParagraphDecorator } from '@nl-design-system-candidate/storybook-shared/src/ParagraphDecorator';
 import '../../components-css/paragraph-css/src/paragraph.scss';
 import { getExternalLinks } from '../src/helpers/external-links';
+import description from '@nl-design-system-candidate/link-docs/docs/description.md?raw';
 
 const externalLinks = getExternalLinks('https://nldesignsystem.nl/link', packageJSON.homepage);
 
 const meta = {
   ...merge(linkMeta, externalLinks, {
     decorators: [ParagraphDecorator, ExampleBodyTextDecorator],
+    parameters: {
+      docs: {
+        description: {
+          component: description,
+        },
+      },
+    },
   }),
   title: 'React Componenten/Link',
   id: 'link',
