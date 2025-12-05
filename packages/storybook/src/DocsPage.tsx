@@ -1,5 +1,5 @@
 import { DocsHeader } from '@nl-design-system-candidate/storybook-shared/src/DocsHeader';
-import { Controls, Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';
+import { Controls, Description, Stories, Subtitle, Title, Primary } from '@storybook/addon-docs/blocks';
 
 export const DocsPage = () => (
   <>
@@ -8,6 +8,7 @@ export const DocsPage = () => (
     <Subtitle />
     <Description />
     <Controls />
-    <Stories />
+    <Primary />
+    <Stories includePrimary={false} />
   </>
 );
