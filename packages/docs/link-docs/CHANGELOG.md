@@ -1,5 +1,13 @@
 # @nl-design-system-candidate/link-docs
 
+## 1.2.0
+
+### Minor Changes
+
+- 219e943: - De `react.meta.ts` en `stories.ts` file zijn hernoemt naar een `.tsx` file.
+  - Er is een `css.meta.ts` file bijgekomen specifiek voor de css stories.
+- 76fecc3: De description is verwijderd uit de react.meta.tsx file. De markdown file is nogsteeds beschikbaar en dus zelf toe te voegen aan een stories file
+
 ## 1.1.1
 
 ### Patch Changes
