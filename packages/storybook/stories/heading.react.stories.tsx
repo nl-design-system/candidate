@@ -27,4 +27,11 @@ const meta = {
 
 export default meta;
 
+export const Heading = Stories.Heading;
+export const HeadingLevel1 = Stories.HeadingLevel1;
+export const HeadingLevel2 = Stories.HeadingLevel2;
+export const HeadingLevel3 = Stories.HeadingLevel3;
+export const HeadingLevel4 = Stories.HeadingLevel4;
+export const HeadingLevel5 = Stories.HeadingLevel5;
+export const HeadingLevel6 = Stories.HeadingLevel6;
 export const Heading1MetMeerdereRegelsTekst = Stories.Heading1MetMeerdereRegelsTekst;
