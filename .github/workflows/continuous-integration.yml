@@ -86,8 +86,8 @@ jobs:
         # ONLY run this step if:
         #
         # 1. the branch was not created by the Changeset Action itself
-        # 2. the branch was not created by Dependabot
-        if: ${{ !startsWith(github.ref_name, 'changeset-release/') && github.actor != 'dependabot[bot]' }}
+        # 2. the branch was not created by NL Design System Bot
+        if: ${{ !startsWith(github.ref_name, 'changeset-release/') && github.actor != 'nl-design-system-ci' }}
         run: pnpm run changeset:status
 
       - name: ShellCheck
