@@ -1,9 +1,11 @@
+import { merge } from 'lodash-es';
 import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-react/heading-react/package.json';
 import { Heading as HeadingComponent } from '@nl-design-system-candidate/heading-react';
 import headingMeta from '@nl-design-system-candidate/heading-docs/stories/heading.react.meta';
 import * as Stories from '@nl-design-system-candidate/heading-docs/stories/heading.stories';
 import { getExternalLinks } from '../src/helpers/external-links';
+import description from '@nl-design-system-candidate/heading-docs/docs/description.md?raw';
 
 const externalLinks = getExternalLinks(
   'https://nldesignsystem.nl/heading',
@@ -12,8 +14,13 @@ const externalLinks = getExternalLinks(
 );
 
 const meta = {
-  ...headingMeta,
-  ...externalLinks,
+  ...merge(headingMeta, externalLinks, {
+    parameters: {
+      docs: {
+        subtitle: description,
+      },
+    },
+  }),
   title: 'React Componenten/Heading',
   id: 'heading',
 } satisfies Meta<typeof HeadingComponent>;

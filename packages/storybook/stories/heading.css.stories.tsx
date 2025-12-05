@@ -5,6 +5,7 @@ import headingMeta from '@nl-design-system-candidate/heading-docs/stories/headin
 import * as Stories from '@nl-design-system-candidate/heading-docs/stories/heading.stories';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta';
 import { getExternalLinks } from '../src/helpers/external-links';
+import description from '@nl-design-system-candidate/heading-docs/docs/description.md?raw';
 
 const externalLinks = getExternalLinks(
   'https://nldesignsystem.nl/heading',
@@ -13,7 +14,13 @@ const externalLinks = getExternalLinks(
 );
 
 const meta = {
-  ...mergeCssMeta(headingMeta, externalLinks),
+  ...mergeCssMeta(headingMeta, externalLinks, {
+    parameters: {
+      docs: {
+        subtitle: description,
+      },
+    },
+  }),
   title: 'CSS Componenten/Heading',
   id: 'css-heading',
 } satisfies Meta<typeof HeadingComponent>;
