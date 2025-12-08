@@ -17,9 +17,7 @@ const meta = {
     decorators: [ParagraphDecorator, ExampleBodyTextDecorator],
     parameters: {
       docs: {
-        description: {
-          component: description,
-        },
+        subtitle: description,
       },
     },
   }),
