@@ -5,7 +5,11 @@ import headingMeta from '@nl-design-system-candidate/heading-docs/stories/headin
 import * as Stories from '@nl-design-system-candidate/heading-docs/stories/heading.stories';
 import { getExternalLinks } from '../src/helpers/external-links';
 
-const externalLinks = getExternalLinks('https://nldesignsystem.nl/heading', packageJSON.homepage);
+const externalLinks = getExternalLinks(
+  'https://nldesignsystem.nl/heading',
+  packageJSON.homepage,
+  'https://www.npmjs.com/package/@nl-design-system-candidate/heading-react',
+);
 
 const meta = {
   ...headingMeta,
