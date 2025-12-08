@@ -6,7 +6,11 @@ import * as Stories from '@nl-design-system-candidate/heading-docs/stories/headi
 import { mergeCssMeta } from '../src/helpers/merge-css-meta';
 import { getExternalLinks } from '../src/helpers/external-links';
 
-const externalLinks = getExternalLinks('https://nldesignsystem.nl/heading', packageJSON.homepage);
+const externalLinks = getExternalLinks(
+  'https://nldesignsystem.nl/heading',
+  packageJSON.homepage,
+  'https://www.npmjs.com/package/@nl-design-system-candidate/heading-css',
+);
 
 const meta = {
   ...mergeCssMeta(headingMeta, externalLinks),
