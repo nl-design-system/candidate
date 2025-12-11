@@ -511,3 +511,34 @@ export const FullWidthWithIcon: Story = {
     </>
   ),
 };
+
+export const NotEnoughSpace: Story = {
+  name: 'Content loopt uit tekst',
+  args: {
+    label: 'Ik ben een button met een heel erg lange tekst en ik pas niet in de ruimte, owja, css is awesome',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De tekst van de button is te lang voor de ruimte die beschikbaar is. Daarom loopt de tekst uit de button. Om toch genoeg contrast te hebben, moet de achtergrond van de button achter de button door blijven lopen',
+      },
+    },
+  },
+  render: (props) => (
+    <div style={{ display: 'flex', height: '100svh', alignItems: 'center' }}>
+      <div>
+        <Button {...props} style={{ maxWidth: '100px', maxHeight: '100px' }} />
+        <button className="nl-button" style={{ maxWidth: '100px', maxHeight: '100px' }}>
+          {props.label}
+        </button>
+      </div>
+      <div style={{ maxWidth: '100px', maxHeight: '100px' }}>
+        <Button {...props} />
+      </div>
+      <div style={{ maxWidth: '100px', maxHeight: '100px' }}>
+        <button className="nl-button">{props.label}</button>
+      </div>
+    </div>
+  ),
+};
