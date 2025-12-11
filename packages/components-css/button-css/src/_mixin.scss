@@ -1,6 +1,7 @@
 @mixin nl-button {
   --nl-icon-block-size: var(--nl-button-icon-size);
   --nl-icon-inline-size: var(--nl-button-icon-size);
+  --nl-icon-color: currentColor;
 
   align-items: center;
   border-radius: var(--nl-button-border-radius);
