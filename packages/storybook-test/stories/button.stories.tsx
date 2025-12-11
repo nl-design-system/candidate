@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
+import '@utrecht/icon-css/dist/index.css';
 import packageJSON from '../../components-react/button-react/package.json';
 import { Icon } from '../../components-react/icon-react/src/icon';
 import { IconAccessible } from '@tabler/icons-react';
@@ -78,6 +79,42 @@ export const ButtonIconEnd: Story = {
     docs: {
       description: {
         story: `Een button met een icon aan de rechterkant en tekst`,
+      },
+    },
+  },
+};
+
+export const ButtonUtrechtIconStart: Story = {
+  name: 'Button met Utrecht iconStart',
+  args: {
+    iconStart: (
+      <span className="utrecht-icon">
+        <IconAccessible />
+      </span>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button met een utrecht-icon aan de linkerkant en tekst`,
+      },
+    },
+  },
+};
+
+export const ButtonUtrechtIconEnd: Story = {
+  name: 'Button met Utrecht iconEnd',
+  args: {
+    iconEnd: (
+      <span className="utrecht-icon">
+        <IconAccessible />
+      </span>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button met een utrecht-icon aan de rechterkant en tekst`,
       },
     },
   },
