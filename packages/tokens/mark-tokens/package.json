@@ -4,11 +4,11 @@
   "description": "Design tokens voor de Mark component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/mark-tokens#readme",
+  "main": "./tokens.json",
+  "exports": "./tokens.json",
   "files": [
     "./tokens.json"
   ],
-  "main": "./tokens.json",
-  "exports": "./tokens.json",
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/candidate.git",

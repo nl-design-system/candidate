@@ -4,6 +4,12 @@
   "description": "Documentatie voor de Icon component",
   "license": "CC0-1.0",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/icon-docs#readme",
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "icon",
+    "icon-component"
+  ],
   "files": [
     "./docs/",
     "./stories/"
