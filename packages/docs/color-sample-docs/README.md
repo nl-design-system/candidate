@@ -3,3 +3,4 @@
 # Color Sample documentatie
 
 - [anatomie](./docs/anatomy/anatomy.md)
+- [aliassen](./docs/aliases.md)
