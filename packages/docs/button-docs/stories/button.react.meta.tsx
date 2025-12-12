@@ -2,6 +2,13 @@ import type { Meta } from '@storybook/react-vite';
 import { Button } from '@nl-design-system-candidate/button-react/css';
 
 const meta = {
+  parameters: {
+    docs: {
+      description: {
+        component: 'Als de `purpose` prop is gezet, kan er optioneel een `hint` mee gegeven worden',
+      },
+    },
+  },
   argTypes: {
     label: {
       control: 'text',

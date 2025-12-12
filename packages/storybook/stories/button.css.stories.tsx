@@ -1,16 +1,24 @@
 import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-css/button-css/package.json';
-import { type ButtonProps } from '@nl-design-system-candidate/button-react';
+import { Button as ButtonComponent, type ButtonProps } from '@nl-design-system-candidate/button-react';
 import buttonMeta from '@nl-design-system-candidate/button-docs/stories/button.css.meta';
 import * as Stories from '@nl-design-system-candidate/button-docs/stories/button.stories';
 import '../../components-css/button-css/src/test.scss';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta';
 import { getExternalLinks } from '../src/helpers/external-links';
+import description from '@nl-design-system-candidate/button-docs/docs/description.md?raw';
 
 const externalLinks = getExternalLinks('https://nldesignsystem.nl/button', packageJSON.homepage);
 
 const meta = {
-  ...mergeCssMeta(buttonMeta, externalLinks),
+  ...mergeCssMeta(buttonMeta, externalLinks, {
+    parameters: {
+      docs: {
+        subtitle: description,
+      },
+    },
+  }),
+  component: ({ label, children, ...props }) => <ButtonComponent {...props}>{label || children}</ButtonComponent>,
   title: 'CSS Componenten/Button',
   id: 'css-button',
 } satisfies Meta<ButtonProps>;
