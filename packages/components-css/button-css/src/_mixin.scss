@@ -34,10 +34,42 @@
   &:has(> :where(:first-child)):not(:has(> :where(.nl-button__icon, .nl-button__label))) {
     display: inline;
   }
+
+  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
+    &[role="button"] {
+      /*
+     * `<button>` has these styles by default, but other elements styles as button do not:
+     *
+     * - `<div role="button">` needs this.
+     * - `<a role="button">` needs this.
+     */
+      background-color: ButtonFace;
+      border-color: buttonborder;
+      color: ButtonText;
+    }
+  }
 }
 
 @mixin nl-button--disabled {
   cursor: not-allowed;
+
+  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
+    background-color: ButtonFace;
+    border-color: GrayText;
+    color: GrayText;
+
+    &[role="button"] {
+      /*
+     * `<button>` has these styles by default, but other elements styles as button do not:
+     *
+     * - `<div role="button">` needs this.
+     * - `<a role="button">` needs this.
+     */
+      background-color: ButtonFace;
+      border-color: GrayText;
+      color: GrayText;
+    }
+  }
 }
 
 @mixin nl-button--focus-visible {
@@ -79,6 +111,7 @@
   background-color: var(--nl-button-default-disabled-background-color);
   border-color: var(--nl-button-default-disabled-border-color);
   color: var(--nl-button-default-disabled-color);
+  @include nl-button--disabled;
 }
 
 @mixin nl-button--default-hover {
@@ -114,6 +147,7 @@
   background-color: var(--nl-button-primary-disabled-background-color);
   border-color: var(--nl-button-primary-disabled-border-color);
   color: var(--nl-button-primary-disabled-color);
+  @include nl-button--disabled;
 }
 
 @mixin nl-button--primary-hover {
@@ -145,6 +179,7 @@
   background-color: var(--nl-button-primary-disabled-background-color);
   border-color: var(--nl-button-primary-disabled-border-color);
   color: var(--nl-button-primary-disabled-color);
+  @include nl-button--disabled;
 }
 
 @mixin nl-button--primary-positive-hover {
@@ -176,6 +211,7 @@
   background-color: var(--nl-button-primary-disabled-background-color);
   border-color: var(--nl-button-primary-disabled-border-color);
   color: var(--nl-button-primary-disabled-color);
+  @include nl-button--disabled;
 }
 
 @mixin nl-button--primary-negative-hover {
@@ -211,6 +247,7 @@
   background-color: var(--nl-button-secondary-disabled-background-color);
   border-color: var(--nl-button-secondary-disabled-border-color);
   color: var(--nl-button-secondary-disabled-color);
+  @include nl-button--disabled;
 }
 
 @mixin nl-button--secondary-hover {
@@ -242,6 +279,7 @@
   background-color: var(--nl-button-secondary-disabled-background-color);
   border-color: var(--nl-button-secondary-disabled-border-color);
   color: var(--nl-button-secondary-disabled-color);
+  @include nl-button--disabled;
 }
 
 @mixin nl-button--secondary-positive-hover {
@@ -273,6 +311,7 @@
   background-color: var(--nl-button-secondary-disabled-background-color);
   border-color: var(--nl-button-secondary-disabled-border-color);
   color: var(--nl-button-secondary-disabled-color);
+  @include nl-button--disabled;
 }
 
 @mixin nl-button--secondary-negative-hover {
@@ -308,6 +347,7 @@
   background-color: var(--nl-button-subtle-disabled-background-color);
   border-color: var(--nl-button-subtle-disabled-border-color);
   color: var(--nl-button-subtle-disabled-color);
+  @include nl-button--disabled;
 }
 
 @mixin nl-button--subtle-hover {
@@ -339,6 +379,7 @@
   background-color: var(--nl-button-subtle-disabled-background-color);
   border-color: var(--nl-button-subtle-disabled-border-color);
   color: var(--nl-button-subtle-disabled-color);
+  @include nl-button--disabled;
 }
 
 @mixin nl-button--subtle-positive-hover {
@@ -370,6 +411,7 @@
   background-color: var(--nl-button-subtle-disabled-background-color);
   border-color: var(--nl-button-subtle-disabled-border-color);
   color: var(--nl-button-subtle-disabled-color);
+  @include nl-button--disabled;
 }
 
 @mixin nl-button--subtle-negative-hover {

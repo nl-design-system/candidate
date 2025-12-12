@@ -3,6 +3,7 @@ import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
 import '@utrecht/icon-css/dist/index.css';
+import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 import packageJSON from '../../components-react/button-react/package.json';
 import { Icon } from '../../components-react/icon-react/src/icon';
 import { IconAccessible } from '@tabler/icons-react';
@@ -11,9 +12,7 @@ import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import tokens from '../../tokens/button-tokens/tokens.json';
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-  },
+  argTypes: reactMeta.argTypes,
   args: {
     label: 'Klik mij nu!',
   },
@@ -540,5 +539,47 @@ export const NotEnoughSpace: Story = {
         <button className="nl-button">{props.label}</button>
       </div>
     </div>
+  ),
+};
+
+export const LinkAsButton: Story = {
+  name: 'Link als button',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan moet dat element er als een button uitzien in High Contrast Mode',
+      },
+    },
+  },
+  render: (props) => (
+    <>
+      <Button {...props} />
+      <a href="#" role="button" className="nl-button" aria-disabled={props.disabled}>
+        {props.label}
+      </a>
+    </>
+  ),
+};
+export const LinkAsButtonDisabled: Story = {
+  name: 'Link als button disabled',
+  args: {
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan moet dat element er als een button uitzien in High Contrast Mode',
+      },
+    },
+  },
+  render: (props) => (
+    <>
+      <Button {...props} />
+      <a href="#" role="button" className="nl-button" aria-disabled={props.disabled}>
+        {props.label}
+      </a>
+    </>
   ),
 };

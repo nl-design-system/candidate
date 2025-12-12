@@ -26,7 +26,6 @@
 }
 
 .nl-button:where([aria-disabled="true"]) {
-  @include mixin.nl-button--disabled;
   @include mixin.nl-button--default-disabled;
 }
 
