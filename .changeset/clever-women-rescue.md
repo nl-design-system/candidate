@@ -26,4 +26,4 @@
 '@nl-design-system-candidate/mark-docs': patch
 ---
 
-Upgrade react en react-dom naar 19.2.1
+Upgrade react en react-dom naar 19.2.3
