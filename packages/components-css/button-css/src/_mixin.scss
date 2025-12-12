@@ -4,6 +4,7 @@
   --nl-icon-color: currentColor;
 
   align-items: center;
+  block-size: fit-content;
   border-radius: var(--nl-button-border-radius);
   border-style: solid;
   box-sizing: border-box;
@@ -11,9 +12,10 @@
   cursor: pointer;
   display: inline-flex;
   font-family: var(--nl-button-font-family);
+  inline-size: fit-content;
   justify-content: center;
-  min-block-size: var(--nl-button-min-block-size, 44px);
-  min-inline-size: var(--nl-button-min-inline-size, 44px);
+  min-block-size: var(--nl-button-min-block-size, max(44px, fit-content));
+  min-inline-size: var(--nl-button-min-inline-size, max(44px, fit-content));
   outline-offset: var(--nl-button-outline-offset);
   overflow-wrap: break-word;
   padding-block-end: var(--nl-button-padding-block-end);
@@ -51,6 +53,7 @@
 }
 
 @mixin nl-button__label {
+  background-color: inherit;
   overflow-wrap: break-word;
   text-box-trim: trim-both;
 }
