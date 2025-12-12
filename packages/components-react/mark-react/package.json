@@ -52,6 +52,6 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7",
-    "react": "^18"
+    "react": "^18 || ^19"
   }
 }
