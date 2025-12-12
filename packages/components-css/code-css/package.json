@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/code-css",
   "version": "2.0.4",
-  "description": "CSS voor het Code component",
+  "description": "CSS voor de Code component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-css/code-css#readme",
   "files": [

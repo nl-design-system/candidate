@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/icon-react",
   "version": "0.0.1",
-  "description": "Graphical symbol that provides visual information about an action, subject or status",
+  "description": "React implementatie voor de Icon component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/icon-react#readme",
   "type": "module",
