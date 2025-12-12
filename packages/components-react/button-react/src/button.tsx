@@ -2,10 +2,10 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { clsx } from 'clsx';
 import { forwardRef, Children, isValidElement } from 'react';
 
-type Purpose = 'primary' | 'secondary' | 'subtle';
-type Hint = 'positive' | 'negative';
+export type ButtonPurpose = 'primary' | 'secondary' | 'subtle';
+export type ButtonHint = 'positive' | 'negative';
 
-type ButtonLabelProps =
+export type ButtonLabelProps =
   | {
       label?: ReactNode;
       children?: never;
@@ -15,7 +15,7 @@ type ButtonLabelProps =
       label?: never;
     };
 
-type ButtonDisabledProps =
+export type ButtonDisabledProps =
   | {
       disabled?: boolean;
       htmlDisabled?: never;
@@ -25,14 +25,14 @@ type ButtonDisabledProps =
       disabled?: never;
     };
 
-type ButtonPurposeHintProps =
+export type ButtonPurposeHintProps =
   | {
-      purpose?: Purpose;
+      purpose?: ButtonPurpose;
       hint?: never;
     }
   | {
-      hint?: Hint;
-      purpose: Purpose;
+      hint?: ButtonHint;
+      purpose: ButtonPurpose;
     };
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
