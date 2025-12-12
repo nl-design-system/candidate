@@ -1,5 +1,4 @@
-import type { HTMLAttributes } from 'react';
-import { forwardRef, createElement, type JSX } from 'react';
+import { forwardRef, createElement, type HTMLAttributes, type JSX } from 'react';
 
 export const headingLevels = [1, 2, 3, 4, 5, 6] as const;
 
