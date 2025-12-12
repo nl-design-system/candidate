@@ -2,7 +2,7 @@ import type { ReactNode, HTMLAttributes } from 'react';
 import { clsx } from 'clsx';
 import { forwardRef } from 'react';
 
-export interface TextInputProps extends HTMLAttributes<HTMLElement> {
+export interface TextInputProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode; // Needed in template file, feel free to remove
 }
 
