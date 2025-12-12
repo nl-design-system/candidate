@@ -45,7 +45,7 @@
     "@nl-design-system-candidate/text-input-css": "workspace:*",
     "@nl-design-system/rollup-config-react-component": "1.0.6",
     "@types/react": "19.2.7",
-    "react": "19.2.1",
+    "react": "19.2.3",
     "rimraf": "6.0.1",
     "rollup": "4.46.2",
     "typescript": "5.9.2",
