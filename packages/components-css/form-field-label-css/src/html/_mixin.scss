@@ -1,0 +1,8 @@
+@use "../mixin";
+
+/* @TODO: Change this to the appropriate element */
+@mixin div {
+  div {
+    @include mixin.nl-form-field-label;
+  }
+}
