@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/new-component-react",
   "version": "0.0.0",
-  "description": "{{DESCRIPTION}}",
+  "description": "React implementatie voor de New Component component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/new-component-react#readme",
   "type": "module",

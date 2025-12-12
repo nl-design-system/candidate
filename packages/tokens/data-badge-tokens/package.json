@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/data-badge-tokens",
   "version": "2.0.2",
-  "description": "Design tokens voor het Data Badge component",
+  "description": "Design tokens voor de Data Badge component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/data-badge-tokens#readme",
   "main": "./tokens.json",

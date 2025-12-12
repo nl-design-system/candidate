@@ -11,7 +11,8 @@
     "data-badge-component"
   ],
   "files": [
-    "./docs/"
+    "./docs/",
+    "./stories/"
   ],
   "repository": {
     "type": "git+ssh",

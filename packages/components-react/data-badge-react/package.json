@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/data-badge-react",
   "version": "1.1.6",
-  "description": "Label met extra informatie, zoals een categorie of een eigenschap.",
+  "description": "React implementatie voor de Data Badge component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/data-badge-react#readme",
   "type": "module",

@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/icon-css",
   "version": "0.0.1",
-  "description": "Styles for Icon component",
+  "description": "CSS voor de Icon component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-css/icon-css#readme",
   "files": [
