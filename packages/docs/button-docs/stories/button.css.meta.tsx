@@ -95,7 +95,7 @@ const meta = {
     },
     children: {
       name: 'content',
-      description: 'De inhoud van de button.',
+      description: 'De content van de button.',
       control: 'text',
       table: {
         category: CHILDREN,
