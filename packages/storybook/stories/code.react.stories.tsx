@@ -5,7 +5,11 @@ import codeMeta from '@nl-design-system-candidate/code-docs/stories/code.react.m
 import * as Stories from '@nl-design-system-candidate/code-docs/stories/code.stories';
 import { getExternalLinks } from '../src/helpers/external-links';
 
-const externalLinks = getExternalLinks('https://nldesignsystem.nl/code', packageJSON.homepage);
+const externalLinks = getExternalLinks(
+  'https://nldesignsystem.nl/button',
+  packageJSON.homepage,
+  'https://www.npmjs.com/package/@nl-design-system-candidate/button-react',
+);
 
 const meta = {
   ...codeMeta,
