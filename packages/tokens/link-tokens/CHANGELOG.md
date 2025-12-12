@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/link-tokens
 
+## 3.0.3
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "Design tokens voor de {Component Name} component".
+
 ## 3.0.2
 
 ### Patch Changes

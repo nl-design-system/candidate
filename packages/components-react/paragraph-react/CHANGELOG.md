@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/paragraph-react
 
+## 2.2.2
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "React implementatie voor de {Component Name} component".
+
 ## 2.2.1
 
 ### Patch Changes

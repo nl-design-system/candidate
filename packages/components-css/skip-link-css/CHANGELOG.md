@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/skip-link-css
 
+## 1.0.5
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "CSS voor de {Component Name} component".
+
 ## 1.0.4
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/number-badge-css
 
+## 1.1.5
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "CSS voor de {Component Name} component".
+
 ## 1.1.4
 
 ### Patch Changes

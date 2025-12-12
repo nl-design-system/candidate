@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-react
 
+## 1.2.7
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "React implementatie voor de {Component Name} component".
+
 ## 1.2.6
 
 ### Patch Changes

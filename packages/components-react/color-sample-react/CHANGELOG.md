@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/color-sample-react
 
+## 1.2.2
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "React implementatie voor de {Component Name} component".
+
 ## 1.2.1
 
 ### Patch Changes
