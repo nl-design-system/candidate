@@ -251,7 +251,7 @@ export const ButtonUtrechtIconStart: Story = {
   name: 'Button met Utrecht iconStart',
   args: {
     iconStart: (
-      <span className="utrecht-icon">
+      <span className="utrecht-icon" aria-hidden="true">
         <IconAccessible />
       </span>
     ),
@@ -269,7 +269,7 @@ export const ButtonUtrechtIconEnd: Story = {
   name: 'Button met Utrecht iconEnd',
   args: {
     iconEnd: (
-      <span className="utrecht-icon">
+      <span className="utrecht-icon" aria-hidden="true">
         <IconAccessible />
       </span>
     ),
