@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-css
 
+## 2.0.5
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "CSS voor de {Component Name} component".
+
 ## 2.0.4
 
 ### Patch Changes

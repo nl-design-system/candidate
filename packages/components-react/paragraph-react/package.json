@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/paragraph-react",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "React implementatie voor de Paragraph component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/paragraph-react#readme",

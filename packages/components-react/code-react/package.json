@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/code-react",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "React implementatie voor de Code component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/code-react#readme",

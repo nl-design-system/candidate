@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/paragraph-tokens
 
+## 1.1.3
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "Design tokens voor de {Component Name} component".
+
 ## 1.1.2
 
 ### Patch Changes

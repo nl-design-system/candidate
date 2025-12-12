@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/skip-link-react
 
+## 1.1.7
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "React implementatie voor de {Component Name} component".
+
 ## 1.1.6
 
 ### Patch Changes

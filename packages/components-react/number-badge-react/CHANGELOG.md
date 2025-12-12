@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/number-badge-react
 
+## 1.3.2
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "React implementatie voor de {Component Name} component".
+
 ## 1.3.1
 
 ### Patch Changes
