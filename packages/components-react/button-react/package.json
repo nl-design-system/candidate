@@ -1,9 +1,10 @@
 {
   "name": "@nl-design-system-candidate/button-react",
   "version": "0.0.1",
-  "description": "TODO: Fill description",
+  "description": "React implementatie voor de Button component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/button-react#readme",
+  "type": "module",
   "main": "./dist/button.js",
   "files": [
     "./dist/"
