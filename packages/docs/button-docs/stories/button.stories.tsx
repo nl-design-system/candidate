@@ -204,6 +204,13 @@ export const GeformatteerdLabel: Story = {
       },
     },
   },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Het label van de button bevat HTML elementen',
+      },
+    },
+  },
   args: {
     label: (
       <>
@@ -219,6 +226,14 @@ export const GeformatteerdLabelEnEenIcon: Story = {
     label: {
       table: {
         disable: true,
+      },
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Het label van de button bevat HTML elementen én een icon. De inhoud van de button wordt geplaatst in een element om gaten tussen de HTML elementen te voorkomen',
       },
     },
   },
@@ -254,9 +269,17 @@ export const VolleBreedte: Story = {
     iconStart: <Icon />,
   },
   parameters: {
+    parameters: {
+      docs: {
+        description: {
+          story: 'Het label van de button bevat HTML elementen',
+        },
+      },
+    },
+
     docs: {
       description: {
-        story: `De parent van een button kan de breedte van de button bepalen.`,
+        story: `De parent van een button kan de breedte van de button bepalen. De button schaalt mee met de beschikbare ruimte.`,
       },
     },
   },
