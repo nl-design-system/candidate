@@ -116,3 +116,29 @@ export const EmptyCode: Story = {
     </Paragraph>
   ),
 };
+
+export const BodyTextRightToLeft: Story = {
+  name: 'Code in Body Text in Arabische taal',
+  args: {
+    children: `parseFloat()`,
+  },
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'rtl',
+    lang: 'ar',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een fragment Code in een Paragraph met Arabische tekst, die visueel onderscheidbaar is door een monospace lettertype.
+
+De ronde haakjes in de code na "parseFloat" worden aan foutief links van "parseFloat" getoond, doordat de code foutief wordt weergegeven als tekst die van rechts naar links wordt geschreven.`,
+      },
+    },
+  },
+  render: ({ children }) => (
+    <Paragraph>
+      تقوم الدالة <Code dir="">{children}</Code> بتحليل وسيطة سلسلة وإرجاع رقم فاصل عشري.
+    </Paragraph>
+  ),
+};
