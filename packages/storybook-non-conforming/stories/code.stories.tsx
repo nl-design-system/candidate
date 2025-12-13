@@ -66,3 +66,79 @@ Dit voorbeeld voldoet niet aan NL Design System acceptatiecriteria, omdat voor c
     </Paragraph>
   ),
 };
+
+export const CodeWithNewlines: Story = {
+  name: 'Fout: Code in Paragraph in plaats van Code Block',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Paragraph die volledig bestaat uit Code. In tegenstelling tot newline characters die in een Paragraph worden genegeerd, worden new line characters in Code wel weergegeven.
+
+Dit voorbeeld voldoet niet aan NL Design System acceptatiecriteria, omdat voor code met meerdere regels Code Block gebruikt moet worden in plaats van Code.`,
+      },
+    },
+    status: { type: [] },
+    testReport: {
+      date: '2025-12-13',
+      fail: ['https://nldesignsystem.nl/code/#acceptatiecriteria'],
+    },
+  },
+  render: () => (
+    <Paragraph>
+      <Code>{'catch (error) {\n  // Een parse-fout kan in deze situatie genegeerd worden\n}'}</Code>
+    </Paragraph>
+  ),
+};
+
+export const EmptyCode: Story = {
+  name: 'Fout: Code die leeg is, in een Paragraph',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Paragraph die een leeg Code component bevat. Een Code element moet inhoud bevatten. Een Code element kan achtergebleven zijn door tekst te bewerken in een rich text editor.`,
+      },
+    },
+    status: { type: [] },
+  },
+  render: () => (
+    <Paragraph>
+      Tussen de volgende haakjes is een leeg Code component: (<Code>{''}</Code>).
+    </Paragraph>
+  ),
+};
+
+export const BodyTextRightToLeft: Story = {
+  name: 'Code in Body Text in Arabische taal',
+  args: {
+    children: `parseFloat()`,
+  },
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'rtl',
+    lang: 'ar',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een fragment Code in een Paragraph met Arabische tekst, die visueel onderscheidbaar is door een monospace lettertype.
+
+De ronde haakjes in de code na "parseFloat" worden aan foutief links van "parseFloat" getoond, doordat de code foutief wordt weergegeven als tekst die van rechts naar links wordt geschreven.`,
+      },
+    },
+  },
+  render: ({ children }) => (
+    <Paragraph>
+      تقوم الدالة <Code dir="">{children}</Code> بتحليل وسيطة سلسلة وإرجاع رقم فاصل عشري.
+    </Paragraph>
+  ),
+};
