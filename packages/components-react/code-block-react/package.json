@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/code-block-react",
   "version": "1.3.6",
-  "description": "Blok met 1 of meerdere regels computercode.",
+  "description": "React implementatie voor de Code Block component.",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/code-block-react#readme",
   "type": "module",
