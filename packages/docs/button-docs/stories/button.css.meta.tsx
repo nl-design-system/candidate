@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react-vite';
 import { Button } from '@nl-design-system-candidate/button-react/css';
 
 const CLASSES = 'classes';
-const ATTRIBUTES = 'arrtibutes';
+const ATTRIBUTES = 'attributes';
 const CHILDREN = 'children';
 
 const meta = {

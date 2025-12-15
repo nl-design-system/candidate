@@ -39,9 +39,9 @@ const meta = {
     },
     disabled: {
       control: 'boolean',
-      description: `Geeft aan dat de button is disabled. Een disabled button is zichtbaar, maar er kan niet mee geïnteracteerd worden. Het kan dus verwarrend zijn voor een gebruiker
+      description: `Geeft aan dat de button disabled is. Een disabled button is zichtbaar, maar kan niet gebruikt worden. Het kan dus verwarrend zijn voor een gebruiker.
 
-  \`aria-disabled="true"\` wordt hiervoor gebruikt. Op die manier kan de gebruikter de button nog steeds met een toetsenbord berijken en er achter komen dat de button disabled is.
+  \`aria-disabled="true"\` wordt hiervoor gebruikt. Op die manier kan de gebruikter de button nog steeds met een toetsenbord bereiken en erachter komen dat de button disabled is.
 
   De developer is echter wel verantwoordelijk voor het afhandelen van click events die nog steeds zullen werken!`,
       table: {
@@ -51,7 +51,7 @@ const meta = {
     },
     htmlDisabled: {
       control: false,
-      description: `Als het absoluut noodzakelijk is om de html \`disabled\` attribute te gebruiken, dan kan dat met \`htmlDisabled\`. Bedenk dat dit voor toegankelijkheid problemen zorgt omdat de button helemaal niet meer met het toetsenbord te berijken is, en dus ook onzichtbaar is voor hulpsoftware`,
+      description: `Als het absoluut noodzakelijk is om de html \`disabled\` attribute te gebruiken, dan kan dat met \`htmlDisabled\`. Bedenk dat dit voor toegankelijkheid problemen zorgt omdat de button helemaal niet meer met het toetsenbord te bereiken is en dus ook onzichtbaar is voor hulpsoftware`,
       table: {
         category: 'Props',
         type: { summary: 'boolean' },
@@ -59,7 +59,8 @@ const meta = {
     },
     pressed: {
       control: 'boolean',
-      description: 'Geeft aan dat de button is ingedrukt, ook als de gebruiker niet met de button interacteerd',
+      description:
+        'Geeft aan dat de button is ingedrukt, ook als de gebruiker op dit moment niet met de button interacteert',
       table: {
         category: 'Props',
         type: { summary: 'boolean' },

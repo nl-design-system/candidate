@@ -289,7 +289,7 @@ export const ButtonMenuClosed: Story = {
     docs: {
       description: {
         story:
-          'Het attibute `aria-expanded="false"` geeft aan dat het menu gesloten is. Het attribute `aria-haspopup="menu"` geeft aan dat er een menu geopend of gesloten kan worden',
+          'Het attribute `aria-expanded="false"` geeft aan dat het menu gesloten is. Het attribute `aria-haspopup="menu"` geeft aan dat er een menu geopend of gesloten kan worden',
       },
     },
     status: { type: [] },
@@ -307,7 +307,7 @@ export const ButtonMenuExpanded: Story = {
     docs: {
       description: {
         story:
-          'Het attibute `aria-expanded="true"` geeft aan dat het menu geopend is. Het attribute `aria-haspopup="menu"` geeft aan dat er een menu geopend of gesloten kan worden',
+          'Het attribute `aria-expanded="true"` geeft aan dat het menu geopend is. Het attribute `aria-haspopup="menu"` geeft aan dat er een menu geopend of gesloten kan worden',
       },
     },
     status: { type: [] },
@@ -325,7 +325,7 @@ export const ButtonDialogClosed: Story = {
     docs: {
       description: {
         story:
-          'Het attibute `aria-expanded="true"` geeft aan dat de dialog gesloten is. Het attribute `aria-haspopup="dialog"` geeft aan dat er een dialog geopend of gesloten kan worden',
+          'Het attribute `aria-expanded="true"` geeft aan dat de dialog gesloten is. Het attribute `aria-haspopup="dialog"` geeft aan dat er een dialog geopend of gesloten kan worden',
       },
     },
     status: { type: [] },
@@ -343,7 +343,7 @@ export const ButtonDialogExpanded: Story = {
     docs: {
       description: {
         story:
-          'Het attibute `aria-expanded="true"` geeft aan dat de dialog geopend is. Het attribute `aria-haspopup="dialog"` geeft aan dat er een dialog geopend of gesloten kan worden',
+          'Het attribute `aria-expanded="true"` geeft aan dat de dialog geopend is. Het attribute `aria-haspopup="dialog"` geeft aan dat er een dialog geopend of gesloten kan worden',
       },
     },
     status: { type: [] },
