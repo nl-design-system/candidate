@@ -11,7 +11,8 @@
     "text-input-component"
   ],
   "files": [
-    "./docs/"
+    "./docs/",
+    "./stories/"
   ],
   "repository": {
     "type": "git+ssh",
@@ -22,5 +23,11 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
+  },
+  "devDependencies": {
+    "@nl-design-system-candidate/text-input-react": "workspace:*",
+    "@storybook/react-vite": "9.1.5",
+    "@types/react": "19.2.7",
+    "react": "19.2.3"
   }
 }
