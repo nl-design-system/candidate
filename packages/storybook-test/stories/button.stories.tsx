@@ -542,3 +542,19 @@ export const NotEnoughSpace: Story = {
     </div>
   ),
 };
+
+export const CancelClick: Story = {
+  name: 'Cancel een klik door te slepen',
+  parameters: {
+    docs: {
+      description: {
+        story: `Een klik kan gecanceld worden door op de button de klikken, de klik ingedrukt te houden en van de button af te slepen en dan los te laten. `,
+      },
+    },
+  },
+  render(props) {
+    // eslint-disable-next-line no-alert
+    const onClick = () => alert('geklikt');
+    return <Button {...props} onClick={onClick} />;
+  },
+};
