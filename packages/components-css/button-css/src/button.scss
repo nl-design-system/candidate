@@ -17,6 +17,18 @@
   @include mixin.nl-button--default-pressed;
 }
 
+.nl-button:where([aria-pressed="true"]:hover) {
+  @include mixin.nl-button--default-pressed-hover;
+}
+
+.nl-button:where([aria-pressed="true"]:active) {
+  @include mixin.nl-button--default-pressed-active;
+}
+
+.nl-button:where([aria-pressed="true"][aria-disabled="true"]) {
+  @include mixin.nl-button--default-pressed-disabled;
+}
+
 .nl-button:where(:hover) {
   @include mixin.nl-button--default-hover;
 }
@@ -37,6 +49,18 @@
 
 .nl-button:where(.nl-button--primary[aria-pressed="true"]) {
   @include mixin.nl-button--primary-pressed;
+}
+
+.nl-button:where(.nl-button--primary[aria-pressed="true"]:hover) {
+  @include mixin.nl-button--primary-pressed-hover;
+}
+
+.nl-button:where(.nl-button--primary[aria-pressed="true"]:active) {
+  @include mixin.nl-button--primary-pressed-active;
+}
+
+.nl-button:where(.nl-button--primary[aria-pressed="true"][aria-disabled="true"]) {
+  @include mixin.nl-button--primary-pressed-disabled;
 }
 
 .nl-button:where(.nl-button--primary:hover) {
@@ -60,6 +84,18 @@
   @include mixin.nl-button--primary-positive-pressed;
 }
 
+.nl-button:where(.nl-button--primary.nl-button--positive[aria-pressed="true"]:hover) {
+  @include mixin.nl-button--primary-positive-pressed-hover;
+}
+
+.nl-button:where(.nl-button--primary.nl-button--positive[aria-pressed="true"]:active) {
+  @include mixin.nl-button--primary-positive-pressed-active;
+}
+
+.nl-button:where(.nl-button--primary.nl-button--positive[aria-pressed="true"][aria-disabled="true"]) {
+  @include mixin.nl-button--primary-positive-pressed-disabled;
+}
+
 .nl-button:where(.nl-button--primary.nl-button--positive:hover) {
   @include mixin.nl-button--primary-positive-hover;
 }
@@ -79,6 +115,18 @@
 
 .nl-button:where(.nl-button--primary.nl-button--negative[aria-pressed="true"]) {
   @include mixin.nl-button--primary-negative-pressed;
+}
+
+.nl-button:where(.nl-button--primary.nl-button--negative[aria-pressed="true"]:hover) {
+  @include mixin.nl-button--primary-negative-pressed-hover;
+}
+
+.nl-button:where(.nl-button--primary.nl-button--negative[aria-pressed="true"]:active) {
+  @include mixin.nl-button--primary-negative-pressed-active;
+}
+
+.nl-button:where(.nl-button--primary.nl-button--negative[aria-pressed="true"][aria-disabled="true"]) {
+  @include mixin.nl-button--primary-negative-pressed-disabled;
 }
 
 .nl-button:where(.nl-button--primary.nl-button--negative:hover) {
@@ -102,6 +150,18 @@
   @include mixin.nl-button--secondary-pressed;
 }
 
+.nl-button:where(.nl-button--secondary[aria-pressed="true"]:hover) {
+  @include mixin.nl-button--secondary-pressed-hover;
+}
+
+.nl-button:where(.nl-button--secondary[aria-pressed="true"]:active) {
+  @include mixin.nl-button--secondary-pressed-active;
+}
+
+.nl-button:where(.nl-button--secondary[aria-pressed="true"][aria-disabled="true"]) {
+  @include mixin.nl-button--secondary-pressed-disabled;
+}
+
 .nl-button:where(.nl-button--secondary:hover) {
   @include mixin.nl-button--secondary-hover;
 }
@@ -121,6 +181,18 @@
 
 .nl-button:where(.nl-button--secondary.nl-button--positive[aria-pressed="true"]) {
   @include mixin.nl-button--secondary-positive-pressed;
+}
+
+.nl-button:where(.nl-button--secondary.nl-button--positive[aria-pressed="true"]:hover) {
+  @include mixin.nl-button--secondary-positive-pressed-hover;
+}
+
+.nl-button:where(.nl-button--secondary.nl-button--positive[aria-pressed="true"]:active) {
+  @include mixin.nl-button--secondary-positive-pressed-active;
+}
+
+.nl-button:where(.nl-button--secondary.nl-button--positive[aria-pressed="true"][aria-disabled="true"]) {
+  @include mixin.nl-button--secondary-positive-pressed-disabled;
 }
 
 .nl-button:where(.nl-button--secondary.nl-button--positive:hover) {
@@ -144,6 +216,18 @@
   @include mixin.nl-button--secondary-negative-pressed;
 }
 
+.nl-button:where(.nl-button--secondary.nl-button--negative[aria-pressed="true"]:hover) {
+  @include mixin.nl-button--secondary-negative-pressed-hover;
+}
+
+.nl-button:where(.nl-button--secondary.nl-button--negative[aria-pressed="true"]:active) {
+  @include mixin.nl-button--secondary-negative-pressed-active;
+}
+
+.nl-button:where(.nl-button--secondary.nl-button--negative[aria-pressed="true"][aria-disabled="true"]) {
+  @include mixin.nl-button--secondary-negative-pressed-disabled;
+}
+
 .nl-button:where(.nl-button--secondary.nl-button--negative:hover) {
   @include mixin.nl-button--secondary-negative-hover;
 }
@@ -163,6 +247,18 @@
 
 .nl-button:where(.nl-button--subtle[aria-pressed="true"]) {
   @include mixin.nl-button--subtle-pressed;
+}
+
+.nl-button:where(.nl-button--subtle[aria-pressed="true"]:hover) {
+  @include mixin.nl-button--subtle-pressed-hover;
+}
+
+.nl-button:where(.nl-button--subtle[aria-pressed="true"]:active) {
+  @include mixin.nl-button--subtle-pressed-active;
+}
+
+.nl-button:where(.nl-button--subtle[aria-pressed="true"][aria-disabled="true"]) {
+  @include mixin.nl-button--subtle-pressed-disabled;
 }
 
 .nl-button:where(.nl-button--subtle:hover) {
@@ -186,6 +282,18 @@
   @include mixin.nl-button--subtle-positive-pressed;
 }
 
+.nl-button:where(.nl-button--subtle.nl-button--positive[aria-pressed="true"]:hover) {
+  @include mixin.nl-button--subtle-positive-pressed-hover;
+}
+
+.nl-button:where(.nl-button--subtle.nl-button--positive[aria-pressed="true"]:active) {
+  @include mixin.nl-button--subtle-positive-pressed-active;
+}
+
+.nl-button:where(.nl-button--subtle.nl-button--positive[aria-pressed="true"][aria-disabled="true"]) {
+  @include mixin.nl-button--subtle-positive-pressed-disabled;
+}
+
 .nl-button:where(.nl-button--subtle.nl-button--positive:hover) {
   @include mixin.nl-button--subtle-positive-hover;
 }
@@ -205,6 +313,18 @@
 
 .nl-button:where(.nl-button--subtle.nl-button--negative[aria-pressed="true"]) {
   @include mixin.nl-button--subtle-negative-pressed;
+}
+
+.nl-button:where(.nl-button--subtle.nl-button--negative[aria-pressed="true"]:hover) {
+  @include mixin.nl-button--subtle-negative-pressed-hover;
+}
+
+.nl-button:where(.nl-button--subtle.nl-button--negative[aria-pressed="true"]:active) {
+  @include mixin.nl-button--subtle-negative-pressed-active;
+}
+
+.nl-button:where(.nl-button--subtle.nl-button--negative[aria-pressed="true"][aria-disabled="true"]) {
+  @include mixin.nl-button--subtle-negative-pressed-disabled;
 }
 
 .nl-button:where(.nl-button--subtle.nl-button--negative:hover) {

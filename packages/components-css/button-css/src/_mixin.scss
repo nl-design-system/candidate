@@ -93,6 +93,24 @@
   color: var(--nl-button-default-pressed-color);
 }
 
+@mixin nl-button--default-pressed-active {
+  background-color: var(--nl-button-default-pressed-active-background-color);
+  border-color: var(--nl-button-default-pressed-active-border-color);
+  color: var(--nl-button-default-pressed-active-color);
+}
+
+@mixin nl-button--default-pressed-disabled {
+  background-color: var(--nl-button-default-pressed-disabled-background-color);
+  border-color: var(--nl-button-default-pressed-disabled-border-color);
+  color: var(--nl-button-default-pressed-disabled-color);
+}
+
+@mixin nl-button--default-pressed-hover {
+  background-color: var(--nl-button-default-pressed-hover-background-color);
+  border-color: var(--nl-button-default-pressed-hover-border-color);
+  color: var(--nl-button-default-pressed-hover-color);
+}
+
 /* PRIMARY */
 @mixin nl-button--primary {
   background-color: var(--nl-button-primary-background-color);
@@ -128,6 +146,24 @@
   color: var(--nl-button-primary-pressed-color);
 }
 
+@mixin nl-button--primary-pressed-active {
+  background-color: var(--nl-button-primary-pressed-active-background-color);
+  border-color: var(--nl-button-primary-pressed-active-border-color);
+  color: var(--nl-button-primary-pressed-active-color);
+}
+
+@mixin nl-button--primary-pressed-disabled {
+  background-color: var(--nl-button-primary-pressed-disabled-background-color);
+  border-color: var(--nl-button-primary-pressed-disabled-border-color);
+  color: var(--nl-button-primary-pressed-disabled-color);
+}
+
+@mixin nl-button--primary-pressed-hover {
+  background-color: var(--nl-button-primary-pressed-hover-background-color);
+  border-color: var(--nl-button-primary-pressed-hover-border-color);
+  color: var(--nl-button-primary-pressed-hover-color);
+}
+
 /* PRIMARY POSITIVE */
 @mixin nl-button--primary-positive {
   background-color: var(--nl-button-primary-positive-background-color);
@@ -159,6 +195,24 @@
   color: var(--nl-button-primary-positive-pressed-color);
 }
 
+@mixin nl-button--primary-positive-pressed-active {
+  background-color: var(--nl-button-primary-positive-pressed-active-background-color);
+  border-color: var(--nl-button-primary-positive-pressed-active-border-color);
+  color: var(--nl-button-primary-positive-pressed-active-color);
+}
+
+@mixin nl-button--primary-positive-pressed-disabled {
+  background-color: var(--nl-button-primary-pressed-disabled-background-color);
+  border-color: var(--nl-button-primary-pressed-disabled-border-color);
+  color: var(--nl-button-primary-pressed-disabled-color);
+}
+
+@mixin nl-button--primary-positive-pressed-hover {
+  background-color: var(--nl-button-primary-positive-pressed-hover-background-color);
+  border-color: var(--nl-button-primary-positive-pressed-hover-border-color);
+  color: var(--nl-button-primary-positive-pressed-hover-color);
+}
+
 /* PRIMARY NEGATIVE */
 @mixin nl-button--primary-negative {
   background-color: var(--nl-button-primary-negative-background-color);
@@ -188,6 +242,24 @@
   background-color: var(--nl-button-primary-negative-pressed-background-color);
   border-color: var(--nl-button-primary-negative-pressed-border-color);
   color: var(--nl-button-primary-negative-pressed-color);
+}
+
+@mixin nl-button--primary-negative-pressed-active {
+  background-color: var(--nl-button-primary-negative-pressed-active-background-color);
+  border-color: var(--nl-button-primary-negative-pressed-active-border-color);
+  color: var(--nl-button-primary-negative-pressed-active-color);
+}
+
+@mixin nl-button--primary-negative-pressed-disabled {
+  background-color: var(--nl-button-primary-pressed-disabled-background-color);
+  border-color: var(--nl-button-primary-pressed-disabled-border-color);
+  color: var(--nl-button-primary-pressed-disabled-color);
+}
+
+@mixin nl-button--primary-negative-pressed-hover {
+  background-color: var(--nl-button-primary-negative-pressed-hover-background-color);
+  border-color: var(--nl-button-primary-negative-pressed-hover-border-color);
+  color: var(--nl-button-primary-negative-pressed-hover-color);
 }
 
 /* SECONDARY */
@@ -225,6 +297,24 @@
   color: var(--nl-button-secondary-pressed-color);
 }
 
+@mixin nl-button--secondary-pressed-active {
+  background-color: var(--nl-button-secondary-pressed-active-background-color);
+  border-color: var(--nl-button-secondary-pressed-active-border-color);
+  color: var(--nl-button-secondary-pressed-active-color);
+}
+
+@mixin nl-button--secondary-pressed-disabled {
+  background-color: var(--nl-button-secondary-pressed-disabled-background-color);
+  border-color: var(--nl-button-secondary-pressed-disabled-border-color);
+  color: var(--nl-button-secondary-pressed-disabled-color);
+}
+
+@mixin nl-button--secondary-pressed-hover {
+  background-color: var(--nl-button-secondary-pressed-hover-background-color);
+  border-color: var(--nl-button-secondary-pressed-hover-border-color);
+  color: var(--nl-button-secondary-pressed-hover-color);
+}
+
 /* SECONDARY POSITIVE */
 @mixin nl-button--secondary-positive {
   background-color: var(--nl-button-secondary-positive-background-color);
@@ -256,6 +346,24 @@
   color: var(--nl-button-secondary-positive-pressed-color);
 }
 
+@mixin nl-button--secondary-positive-pressed-active {
+  background-color: var(--nl-button-secondary-positive-pressed-active-background-color);
+  border-color: var(--nl-button-secondary-positive-pressed-active-border-color);
+  color: var(--nl-button-secondary-positive-pressed-active-color);
+}
+
+@mixin nl-button--secondary-positive-pressed-disabled {
+  background-color: var(--nl-button-secondary-pressed-disabled-background-color);
+  border-color: var(--nl-button-secondary-pressed-disabled-border-color);
+  color: var(--nl-button-secondary-pressed-disabled-color);
+}
+
+@mixin nl-button--secondary-positive-pressed-hover {
+  background-color: var(--nl-button-secondary-positive-pressed-hover-background-color);
+  border-color: var(--nl-button-secondary-positive-pressed-hover-border-color);
+  color: var(--nl-button-secondary-positive-pressed-hover-color);
+}
+
 /* SECONDARY NEGATIVE */
 @mixin nl-button--secondary-negative {
   background-color: var(--nl-button-secondary-negative-background-color);
@@ -285,6 +393,24 @@
   background-color: var(--nl-button-secondary-negative-pressed-background-color);
   border-color: var(--nl-button-secondary-negative-pressed-border-color);
   color: var(--nl-button-secondary-negative-pressed-color);
+}
+
+@mixin nl-button--secondary-negative-pressed-active {
+  background-color: var(--nl-button-secondary-negative-pressed-active-background-color);
+  border-color: var(--nl-button-secondary-negative-pressed-active-border-color);
+  color: var(--nl-button-secondary-negative-pressed-active-color);
+}
+
+@mixin nl-button--secondary-negative-pressed-disabled {
+  background-color: var(--nl-button-secondary-pressed-disabled-background-color);
+  border-color: var(--nl-button-secondary-pressed-disabled-border-color);
+  color: var(--nl-button-secondary-pressed-disabled-color);
+}
+
+@mixin nl-button--secondary-negative-pressed-hover {
+  background-color: var(--nl-button-secondary-negative-pressed-hover-background-color);
+  border-color: var(--nl-button-secondary-negative-pressed-hover-border-color);
+  color: var(--nl-button-secondary-negative-pressed-hover-color);
 }
 
 /* SUBTLE */
@@ -322,6 +448,24 @@
   color: var(--nl-button-subtle-pressed-color);
 }
 
+@mixin nl-button--subtle-pressed-active {
+  background-color: var(--nl-button-subtle-pressed-active-background-color);
+  border-color: var(--nl-button-subtle-pressed-active-border-color);
+  color: var(--nl-button-subtle-pressed-active-color);
+}
+
+@mixin nl-button--subtle-pressed-disabled {
+  background-color: var(--nl-button-subtle-pressed-disabled-background-color);
+  border-color: var(--nl-button-subtle-pressed-disabled-border-color);
+  color: var(--nl-button-subtle-pressed-disabled-color);
+}
+
+@mixin nl-button--subtle-pressed-hover {
+  background-color: var(--nl-button-subtle-pressed-hover-background-color);
+  border-color: var(--nl-button-subtle-pressed-hover-border-color);
+  color: var(--nl-button-subtle-pressed-hover-color);
+}
+
 /* SUBTLE POSITIVE */
 @mixin nl-button--subtle-positive {
   background-color: var(--nl-button-subtle-positive-background-color);
@@ -353,6 +497,24 @@
   color: var(--nl-button-subtle-positive-pressed-color);
 }
 
+@mixin nl-button--subtle-positive-pressed-active {
+  background-color: var(--nl-button-subtle-positive-pressed-active-background-color);
+  border-color: var(--nl-button-subtle-positive-pressed-active-border-color);
+  color: var(--nl-button-subtle-positive-pressed-active-color);
+}
+
+@mixin nl-button--subtle-positive-pressed-disabled {
+  background-color: var(--nl-button-subtle-pressed-disabled-background-color);
+  border-color: var(--nl-button-subtle-pressed-disabled-border-color);
+  color: var(--nl-button-subtle-pressed-disabled-color);
+}
+
+@mixin nl-button--subtle-positive-pressed-hover {
+  background-color: var(--nl-button-subtle-positive-pressed-hover-background-color);
+  border-color: var(--nl-button-subtle-positive-pressed-hover-border-color);
+  color: var(--nl-button-subtle-positive-pressed-hover-color);
+}
+
 /* SUBTLE NEGATIVE */
 @mixin nl-button--subtle-negative {
   background-color: var(--nl-button-subtle-negative-background-color);
@@ -382,4 +544,22 @@
   background-color: var(--nl-button-subtle-negative-pressed-background-color);
   border-color: var(--nl-button-subtle-negative-pressed-border-color);
   color: var(--nl-button-subtle-negative-pressed-color);
+}
+
+@mixin nl-button--subtle-negative-pressed-active {
+  background-color: var(--nl-button-subtle-negative-pressed-active-background-color);
+  border-color: var(--nl-button-subtle-negative-pressed-active-border-color);
+  color: var(--nl-button-subtle-negative-pressed-active-color);
+}
+
+@mixin nl-button--subtle-negative-pressed-disabled {
+  background-color: var(--nl-button-subtle-pressed-disabled-background-color);
+  border-color: var(--nl-button-subtle-pressed-disabled-border-color);
+  color: var(--nl-button-subtle-pressed-disabled-color);
+}
+
+@mixin nl-button--subtle-negative-pressed-hover {
+  background-color: var(--nl-button-subtle-negative-pressed-hover-background-color);
+  border-color: var(--nl-button-subtle-negative-pressed-hover-border-color);
+  color: var(--nl-button-subtle-negative-pressed-hover-color);
 }
