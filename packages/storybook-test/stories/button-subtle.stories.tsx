@@ -109,6 +109,51 @@ export const Pressed: Story = {
   },
 };
 
+export const PressedActive: Story = {
+  args: {
+    pressed: true,
+    className: 'nl-button--active',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een subtle Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PressedHover: Story = {
+  args: {
+    pressed: true,
+    className: 'nl-button--hover',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een subtle Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PressedDisabled: Story = {
+  args: {
+    pressed: true,
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een subtle Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
 export const Focused: Story = {
   name: 'Focused',
   args: {
@@ -193,6 +238,53 @@ export const PositivePressed: Story = {
     docs: {
       description: {
         story: 'Een subtle positive Button die ingedrukt is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+export const PositivePressedActive: Story = {
+  args: {
+    pressed: true,
+    hint: 'positive',
+    className: 'nl-button--active',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een subtle positive Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PositivePressedHover: Story = {
+  args: {
+    pressed: true,
+    hint: 'positive',
+    className: 'nl-button--hover',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een subtle positive Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PositivePressedDisabled: Story = {
+  args: {
+    pressed: true,
+    hint: 'positive',
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een subtle positive Button die ingedrukt die al pressed is.',
       },
     },
     status: { type: [] },
@@ -284,6 +376,54 @@ export const NegativePressed: Story = {
     docs: {
       description: {
         story: 'Een subtle negative Button die ingedrukt is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const NegativePressedActive: Story = {
+  args: {
+    pressed: true,
+    hint: 'negative',
+    className: 'nl-button--active',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een subtle negative Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const NegativePressedHover: Story = {
+  args: {
+    pressed: true,
+    hint: 'negative',
+    className: 'nl-button--hover',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een subtle negative Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const NegativePressedDisabled: Story = {
+  args: {
+    pressed: true,
+    hint: 'negative',
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een subtle negative Button die ingedrukt die al pressed is.',
       },
     },
     status: { type: [] },

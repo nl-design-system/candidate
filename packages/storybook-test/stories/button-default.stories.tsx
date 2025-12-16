@@ -114,6 +114,51 @@ export const Pressed: Story = {
   },
 };
 
+export const PressedActive: Story = {
+  args: {
+    pressed: true,
+    className: 'nl-button--active',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een standaaard Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PressedHover: Story = {
+  args: {
+    pressed: true,
+    className: 'nl-button--hover',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een standaaard Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PressedDisabled: Story = {
+  args: {
+    pressed: true,
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een standaaard Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
 export const Focused: Story = {
   name: 'Focused',
   args: {
