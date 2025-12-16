@@ -1,4 +1,5 @@
 import type { Meta } from '@storybook/react-vite';
+import { merge } from 'lodash-es';
 import packageJSON from '../../components-react/button-react/package.json';
 import { Button as ButtonComponent, type ButtonProps } from '@nl-design-system-candidate/button-react';
 import buttonMeta from '@nl-design-system-candidate/button-docs/stories/button.react.meta';
@@ -6,12 +7,18 @@ import * as Stories from '@nl-design-system-candidate/button-docs/stories/button
 import '../../components-css/button-css/src/test.scss';
 import { useArgs } from 'storybook/preview-api';
 import { getExternalLinks } from '../src/helpers/external-links';
+import description from '@nl-design-system-candidate/button-docs/docs/description.md?raw';
 
 const externalLinks = getExternalLinks('https://nldesignsystem.nl/button', packageJSON.homepage);
 
 const meta = {
-  ...buttonMeta,
-  ...externalLinks,
+  ...merge(buttonMeta, externalLinks, {
+    parameters: {
+      docs: {
+        subtitle: description,
+      },
+    },
+  }),
   title: 'React Componenten/Button',
   id: 'button',
 } satisfies Meta<ButtonProps>;
