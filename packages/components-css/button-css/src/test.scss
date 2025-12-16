@@ -1,4 +1,5 @@
 @use "./mixin";
+@use "./html/mixin" as mixinHTML;
 
 /*
  * Used for stories in Storybook
@@ -93,4 +94,9 @@
 
 .nl-button--subtle.nl-button--negative.nl-button--hover {
   @include mixin.nl-button--subtle-negative-hover;
+}
+
+/* html */
+.nl-button--html {
+  @include mixinHTML.nl-button--html;
 }

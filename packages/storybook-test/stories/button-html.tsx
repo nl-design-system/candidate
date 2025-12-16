@@ -1,9 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
-import { clsx } from 'clsx';
 import { forwardRef, Children, isValidElement } from 'react';
-
-export type ButtonPurpose = 'primary' | 'secondary' | 'subtle';
-export type ButtonHint = 'positive' | 'negative';
 
 export type ButtonLabelProps =
   | {
@@ -25,39 +21,14 @@ export type ButtonDisabledProps =
       disabled?: never;
     };
 
-export type ButtonPurposeHintProps =
-  | {
-      purpose?: ButtonPurpose;
-      hint?: never;
-    }
-  | {
-      hint?: ButtonHint;
-      purpose: ButtonPurpose;
-    };
-
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   ButtonLabelProps &
-  ButtonDisabledProps &
-  ButtonPurposeHintProps & {
+  ButtonDisabledProps & {
     /** The label of the button */
     label?: unknown;
 
     /** The label of the button */
     children?: unknown;
-
-    /**
-     * An optional purpose of the button. Choose the purpose wisely.
-     * To much `primary` buttons could confuse the user.
-     */
-    purpose?: unknown;
-
-    /**
-     * An optional hint of the type of action the button results in.
-     * This property only works when the `purpose` has been set to a value.
-     * - `positive` indicates a positive or confirming result of the action
-     * - `negative` indicates a negative of destructive result of the action
-     */
-    hint?: unknown;
 
     /**
      * An optional icon after the label
@@ -99,7 +70,6 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
 
 /**
  * A button. Can be used to let the user perform various actions.
- * When the `purpose` prop is set, an optional `hint` prop can be used as well
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(props, forwardedRef) {
   const {
@@ -107,8 +77,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
     className,
     iconEnd,
     iconStart,
-    purpose,
-    hint,
     disabled,
     htmlDisabled,
     pressed,
@@ -130,23 +98,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
     <button
       ref={forwardedRef}
       type={type}
-      className={clsx('nl-button', className, {
-        'nl-button--primary': purpose === 'primary',
-        'nl-button--secondary': purpose === 'secondary',
-        'nl-button--subtle': purpose === 'subtle',
-        'nl-button--positive': Boolean(purpose) && hint === 'positive',
-        'nl-button--negative': Boolean(purpose) && hint === 'negative',
-        'nl-button--submit': type === 'submit',
-      })}
       aria-pressed={pressed ? 'true' : undefined}
       aria-disabled={disabled ? 'true' : undefined}
       disabled={htmlDisabled}
       {...restProps}
     >
-      {iconStart && <span className="nl-button__icon">{iconStart}</span>}
-      {label && <span className="nl-button__label">{label}</span>}
+      {iconStart && <span>{iconStart}</span>}
+      {label && <span>{label}</span>}
       {shouldWrapChildren ? <span>{children}</span> : children}
-      {iconEnd && <span className="nl-button__icon">{iconEnd}</span>}
+      {iconEnd && <span>{iconEnd}</span>}
     </button>
   );
 });

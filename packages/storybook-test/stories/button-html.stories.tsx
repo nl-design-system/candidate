@@ -1,0 +1,141 @@
+import type { ComponentType } from 'react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import '../../components-css/icon-css/src/icon.scss';
+import '../../components-css/button-css/src/button.scss';
+import '../../components-css/button-css/src/test.scss';
+import packageJSON from '../../components-react/button-react/package.json';
+import { Button as ButtonComponent, type ButtonProps } from './button-html';
+import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
+import allTokens from '../../tokens/button-tokens/tokens.json';
+import * as buttonStories from './button.stories';
+import * as defaultButtonStories from './button-default.stories';
+
+const { primary, secondary, subtle, default: defaultTokens, ...tokens } = allTokens.nl.button;
+
+const meta = {
+  argTypes: {
+    children: { table: { category: 'API' }, type: 'string' },
+  },
+  args: {
+    label: 'Klik mij!',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'Button van de dag',
+  },
+  component: ButtonComponent,
+  decorators: [
+    (StoryComponent) => (
+      <div className="nl-button--html">
+        <StoryComponent />
+      </div>
+    ),
+  ],
+  parameters: {
+    docs: {
+      description: {
+        component: componentMarkdown,
+      },
+    },
+    externalLinks: [
+      {
+        name: 'Open op NL Design System',
+        url: 'https://nldesignsystem.nl/button',
+      },
+      {
+        name: 'Open op GitHub',
+        url: packageJSON.homepage,
+      },
+    ],
+    tokens: { nl: { button: { ...tokens } } },
+  },
+  title: 'Componenten/Button/HTML',
+} satisfies Meta<typeof ButtonComponent>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default = defaultButtonStories.Default;
+export const Disabled = defaultButtonStories.Disabled;
+export const Pressed = defaultButtonStories.Pressed;
+export const ButtonIconStart = buttonStories.ButtonIconStart;
+export const ButtonIconEnd = buttonStories.ButtonIconEnd;
+export const ButtonDifferentLanguage = buttonStories.ButtonDifferentLanguage;
+export const ButtonVeryLongName = buttonStories.ButtonVeryLongName;
+export const ButtonRTL = buttonStories.ButtonRTL;
+export const ButtonVerticalRL = buttonStories.ButtonVerticalRL;
+export const ButtonReset = buttonStories.ButtonReset;
+export const ButtonSubmit = buttonStories.ButtonSubmit;
+export const ButtonSubmitDisabled = buttonStories.ButtonSubmitDisabled;
+export const NoLabel = buttonStories.NoLabel;
+export const ButtonMenuClosed = buttonStories.ButtonMenuClosed;
+export const ButtonMenuOpened = buttonStories.ButtonMenuOpened;
+export const ButtonDialogClosed = buttonStories.ButtonDialogClosed;
+export const ButtonDialogOpened = buttonStories.ButtonDialogOpened;
+export const FullWidth = buttonStories.FullWidth;
+export const FullWidthWithIcon = buttonStories.FullWidthWithIcon;
+export const NotEnoughSpace = buttonStories.NotEnoughSpace;
+
+export const ButtonHidden: Story = {
+  name: 'Hidden Button',
+  args: {
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Button die is verstopt.`,
+      },
+    },
+  },
+  render: (props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return (
+      <>
+        Dit component is verstopt.
+        <Button {...props} />
+      </>
+    );
+  },
+};
+
+export const InputButton: Story = {
+  name: 'Input Button',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Input gestyled als een Button.`,
+      },
+    },
+  },
+  render: () => <input type="button" value="Klik mij" />,
+};
+
+export const InputReset: Story = {
+  name: 'Reset Button',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Input gestyled als een Button die formuliervelden leegt`,
+      },
+    },
+  },
+  render: () => <input type="reset" value="Reset mij" />,
+};
+
+export const InputSubmit: Story = {
+  name: 'Verzend Button',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Input gestyled als een Button die een formulier verstuurt`,
+      },
+    },
+  },
+  render: () => <input type="submit" value="Verzend mij" />,
+};

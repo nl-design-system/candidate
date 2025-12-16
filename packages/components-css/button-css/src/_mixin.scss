@@ -36,6 +36,10 @@
   }
 }
 
+@mixin nl-button--submit {
+  cursor: var(--nl-button-submit-cursor, revert); // TODO: new token or hardcoded?
+}
+
 @mixin nl-button--disabled {
   cursor: not-allowed;
 }
