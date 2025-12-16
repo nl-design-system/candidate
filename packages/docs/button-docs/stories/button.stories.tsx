@@ -276,3 +276,53 @@ export const VolleBreedte: Story = {
     );
   },
 };
+
+export const HTMLButton: Story = {
+  name: 'HTML Button',
+  args: {
+    label: 'Klik mij!',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een `<button>` element gestyled als een Button',
+      },
+    },
+  },
+  decorators: [
+    (StoryComponent) => (
+      <div className="nl-button--html">
+        <StoryComponent />
+      </div>
+    ),
+  ],
+  render: (args: ButtonProps) => {
+    const { label, ...rest } = args;
+    return <button {...rest}>{label}</button>;
+  },
+};
+
+export const HTMLInputButton: Story = {
+  name: 'HTML Input Button',
+  args: {
+    label: 'Klik mij!',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een `<input>` element gestyled als een Button',
+      },
+    },
+  },
+  decorators: [
+    (StoryComponent) => (
+      <div className="nl-button--html">
+        <StoryComponent />
+      </div>
+    ),
+  ],
+  render: (args: ButtonProps) => {
+    const { label, ...rest } = args;
+    return <input type="button" {...rest} value={label} />;
+  },
+};
