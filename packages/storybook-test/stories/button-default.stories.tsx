@@ -1,3 +1,4 @@
+import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
@@ -5,40 +6,43 @@ import packageJSON from '../../components-react/button-react/package.json';
 import { Button } from '../../components-react/button-react/src/button';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import allTokens from '../../tokens/button-tokens/tokens.json';
+import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 
-const { primary, secondary, subtle, default: defaultTokens, ...tokens } = allTokens.nl.button;
+const { standaaard, secondary, subtle, default: defaultTokens, ...tokens } = allTokens.nl.button;
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-  },
-  args: {
-    label: 'Klik mij!',
-  },
-  globals: {
-    dir: 'ltr',
-    lang: 'nl',
-    title: 'Button van de dag',
-  },
-  component: Button,
-  parameters: {
-    docs: {
-      description: {
-        component: componentMarkdown,
+  ...merge({
+    ...reactMeta,
+    ...{
+      args: {
+        label: 'Klik mij!',
+      },
+      globals: {
+        dir: 'ltr',
+        lang: 'nl',
+        title: 'Button van de dag',
+      },
+      component: Button,
+      parameters: {
+        docs: {
+          description: {
+            component: componentMarkdown,
+          },
+        },
+        externalLinks: [
+          {
+            name: 'Open op NL Design System',
+            url: 'https://nldesignsystem.nl/button',
+          },
+          {
+            name: 'Open op GitHub',
+            url: packageJSON.homepage,
+          },
+        ],
+        tokens: { nl: { button: { ...tokens, default: defaultTokens } } },
       },
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/button',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-    tokens: { nl: { button: { ...tokens, default: defaultTokens } } },
-  },
+  }),
   title: 'Componenten/Button/Default',
 } satisfies Meta<typeof Button>;
 
