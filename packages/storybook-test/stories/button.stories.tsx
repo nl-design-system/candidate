@@ -1,3 +1,4 @@
+import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
@@ -7,40 +8,50 @@ import packageJSON from '../../components-react/button-react/package.json';
 import { Icon } from '../../components-react/icon-react/src/icon';
 import { IconAccessible } from '@tabler/icons-react';
 import { Button } from '../../components-react/button-react/src/button';
+import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import tokens from '../../tokens/button-tokens/tokens.json';
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-  },
-  args: {
-    label: 'Klik mij nu!',
-  },
-  globals: {
-    dir: 'ltr',
-    lang: 'nl',
-    title: 'Button van de dag',
-  },
-  component: Button,
-  parameters: {
-    docs: {
-      description: {
-        component: componentMarkdown,
+  ...merge({
+    ...reactMeta,
+    ...{
+      args: {
+        label: 'Klik mij nu!',
+      },
+      globals: {
+        dir: 'ltr',
+        lang: 'nl',
+        title: 'Button van de dag',
+      },
+      component: Button,
+      decorators: [
+        (Story) => (
+          <div className="test">
+            <Story />
+          </div>
+        ),
+      ],
+      parameters: {
+        docs: {
+          description: {
+            component: componentMarkdown,
+          },
+        },
+        externalLinks: [
+          {
+            name: 'Open op NL Design System',
+            url: 'https://nldesignsystem.nl/button',
+          },
+          {
+            name: 'Open op GitHub',
+            url: packageJSON.homepage,
+          },
+        ],
+        tokens,
       },
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/button',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-    tokens,
-  },
+  }),
   title: 'Componenten/Button',
 } satisfies Meta<typeof Button>;
 
