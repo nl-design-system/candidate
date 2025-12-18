@@ -11,19 +11,8 @@ export type ButtonLabelProps =
       label?: never;
     };
 
-export type ButtonDisabledProps =
-  | {
-      disabled?: boolean;
-      htmlDisabled?: never;
-    }
-  | {
-      htmlDisabled?: boolean;
-      disabled?: never;
-    };
-
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-  ButtonLabelProps &
-  ButtonDisabledProps & {
+  ButtonLabelProps & {
     /** The label of the button */
     label?: unknown;
 
@@ -47,14 +36,6 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
     pressed?: boolean;
 
     /**
-     * If you absolutely have to use the html disabled attribute, you can do so
-     * with the `htmlDisabled` prop. Keep in mind that this brings additional
-     * accessibility issues with it, as users are not able to focus the disabled
-     * button. Making them completely invisible to screenreader users.
-     */
-    htmlDisabled?: unknown;
-
-    /**
      * Indicates that the button is disabled.
      * A disabled button is visible to the user, but not interactable. As such it
      * could be confusing to users.
@@ -65,25 +46,14 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
      *
      * However, the developer is responsible for managing onClick handlers!
      */
-    disabled?: unknown;
+    disabled?: boolean;
   };
 
 /**
  * A button. Can be used to let the user perform various actions.
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(props, forwardedRef) {
-  const {
-    children,
-    className,
-    iconEnd,
-    iconStart,
-    disabled,
-    htmlDisabled,
-    pressed,
-    type = 'button',
-    label,
-    ...restProps
-  } = props;
+  const { children, className, iconEnd, iconStart, disabled, pressed, type = 'button', label, ...restProps } = props;
 
   const hasIcon = Boolean(iconStart || iconEnd);
 
@@ -99,8 +69,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       ref={forwardedRef}
       type={type}
       aria-pressed={pressed ? 'true' : undefined}
-      aria-disabled={disabled ? 'true' : undefined}
-      disabled={htmlDisabled}
+      disabled={disabled}
       {...restProps}
     >
       {iconStart && <span>{iconStart}</span>}

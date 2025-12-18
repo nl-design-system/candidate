@@ -288,7 +288,6 @@ export const ButtonSubmitDisabled: Story = {
       >
         <input type="text" placeholder="Vul iets in en druk dan op de verzend knop" />
         <br />
-        TODO: Deze submit nog steeds!
         <Button type="submit" disabled>
           Verzenden
         </Button>
