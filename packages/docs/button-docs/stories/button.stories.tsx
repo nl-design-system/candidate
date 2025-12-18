@@ -329,6 +329,7 @@ export const HTMLInputButton: Story = {
   name: 'HTML Input Button',
   args: {
     label: 'Klik mij!',
+    children: undefined,
   },
   parameters: {
     docs: {
