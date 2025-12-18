@@ -1,10 +1,12 @@
 import type { ComponentType } from 'react';
+import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
 import packageJSON from '../../components-react/button-react/package.json';
 import { Button as ButtonComponent, type ButtonProps } from './button-html';
+import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import allTokens from '../../tokens/button-tokens/tokens.json';
 import * as buttonStories from './button.stories';
@@ -13,43 +15,45 @@ import * as defaultButtonStories from './button-default.stories';
 const { primary, secondary, subtle, default: defaultTokens, ...tokens } = allTokens.nl.button;
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-  },
-  args: {
-    label: 'Klik mij!',
-  },
-  globals: {
-    dir: 'ltr',
-    lang: 'nl',
-    title: 'Button van de dag',
-  },
-  component: ButtonComponent,
-  decorators: [
-    (StoryComponent) => (
-      <div className="nl-button--html">
-        <StoryComponent />
-      </div>
-    ),
-  ],
-  parameters: {
-    docs: {
-      description: {
-        component: componentMarkdown,
+  ...merge({
+    ...reactMeta,
+    ...{
+      args: {
+        label: 'Klik mij nu!',
+      },
+      globals: {
+        dir: 'ltr',
+        lang: 'nl',
+        title: 'Button van de dag',
+      },
+      component: ButtonComponent,
+      decorators: [
+        (Story) => (
+          <div className="nl-button--html">
+            <Story />
+          </div>
+        ),
+      ],
+      parameters: {
+        docs: {
+          description: {
+            component: componentMarkdown,
+          },
+        },
+        externalLinks: [
+          {
+            name: 'Open op NL Design System',
+            url: 'https://nldesignsystem.nl/button',
+          },
+          {
+            name: 'Open op GitHub',
+            url: packageJSON.homepage,
+          },
+        ],
+        tokens: { nl: { button: { ...tokens } } },
       },
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/button',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-    tokens: { nl: { button: { ...tokens } } },
-  },
+  }),
   title: 'Componenten/Button/HTML',
 } satisfies Meta<typeof ButtonComponent>;
 
