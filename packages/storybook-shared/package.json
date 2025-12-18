@@ -7,8 +7,8 @@
     "@nl-design-system/tsconfig": "1.0.4",
     "@storybook/addon-docs": "9.1.5",
     "@storybook/react-vite": "9.1.5",
-    "@types/react": "18.3.23",
-    "react": "18.3.1"
+    "@types/react": "19.2.7",
+    "react": "19.2.3"
   },
   "repository": {
     "type": "git+ssh",

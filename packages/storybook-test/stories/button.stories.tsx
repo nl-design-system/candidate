@@ -1,4 +1,5 @@
 import type { ComponentType } from 'react';
+import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
@@ -8,40 +9,50 @@ import packageJSON from '../../components-react/button-react/package.json';
 import { Icon } from '../../components-react/icon-react/src/icon';
 import { IconAccessible } from '@tabler/icons-react';
 import { Button as ButtonComponent, type ButtonProps } from '../../components-react/button-react/src/button';
+import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import tokens from '../../tokens/button-tokens/tokens.json';
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-  },
-  args: {
-    label: 'Klik mij nu!',
-  },
-  globals: {
-    dir: 'ltr',
-    lang: 'nl',
-    title: 'Button van de dag',
-  },
-  component: ButtonComponent,
-  parameters: {
-    docs: {
-      description: {
-        component: componentMarkdown,
+  ...merge({
+    ...reactMeta,
+    ...{
+      args: {
+        label: 'Klik mij nu!',
+      },
+      globals: {
+        dir: 'ltr',
+        lang: 'nl',
+        title: 'Button van de dag',
+      },
+      component: ButtonComponent,
+      decorators: [
+        (Story) => (
+          <div className="test">
+            <Story />
+          </div>
+        ),
+      ],
+      parameters: {
+        docs: {
+          description: {
+            component: componentMarkdown,
+          },
+        },
+        externalLinks: [
+          {
+            name: 'Open op NL Design System',
+            url: 'https://nldesignsystem.nl/button',
+          },
+          {
+            name: 'Open op GitHub',
+            url: packageJSON.homepage,
+          },
+        ],
+        tokens,
       },
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/button',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-    tokens,
-  },
+  }),
   title: 'Componenten/Button',
 } satisfies Meta<typeof ButtonComponent>;
 
@@ -61,7 +72,7 @@ export const ButtonIconStart: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een button met een icon aan de linkerkant en tekst`,
+        story: `Een button met een icon aan de linkerkant van de content`,
       },
     },
   },
@@ -79,7 +90,7 @@ export const ButtonIconEnd: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een button met een icon aan de rechterkant en tekst`,
+        story: `Een button met een icon aan de rechterkant van de content`,
       },
     },
   },
@@ -97,7 +108,7 @@ export const ButtonUtrechtIconStart: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een button met een utrecht-icon aan de linkerkant en tekst`,
+        story: `Een button met een utrecht-icon aan de linkerkant van de content`,
       },
     },
   },
@@ -115,7 +126,7 @@ export const ButtonUtrechtIconEnd: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een button met een utrecht-icon aan de rechterkant en tekst`,
+        story: `Een button met een utrecht-icon aan de rechterkant van de content`,
       },
     },
   },
@@ -129,7 +140,7 @@ export const ButtonLargeText: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Button waarvan de tekst 200% vergroot is.`,
+        story: `Een Button waarvan de content 200% vergroot is. De content loopt niet uit de button`,
       },
     },
   },
@@ -159,7 +170,7 @@ export const ButtonVeryLongName = {
   parameters: {
     docs: {
       description: {
-        story: 'Een knop met een erg lange titel',
+        story: 'Een knop met erg lange content, de button groeit mee met de content',
       },
     },
     status: { type: [] },
@@ -176,7 +187,7 @@ export const ButtonRTL = {
   parameters: {
     docs: {
       description: {
-        story: `Een enkele button in het Arabisch.
+        story: `Een button in het Arabisch.
 
 Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
       },
@@ -195,7 +206,7 @@ export const ButtonVerticalRL = {
   parameters: {
     docs: {
       description: {
-        story: `Een enkele button in het Japans.
+        story: `Een button in het Japans.
 
 Het moet mogelijk zijn het \`lang\` attribute en de \`writing-mode: 'vertical-rl';\` css rule in te stellen.`,
       },
@@ -209,7 +220,7 @@ export const ButtonReset: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Button die formuliervelden leegt`,
+        story: `Een Button die formuliervelden leegt. Vul iets in het tekst veld. Na een klik op de button is het veld weer leeg`,
       },
     },
   },
@@ -231,7 +242,7 @@ export const ButtonSubmit: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Button die een formulier verstuurt`,
+        story: `Een Button die een formulier verstuurt. Vul iets in en klik op de button. Er verschijnt een melding`,
       },
     },
   },
@@ -290,12 +301,12 @@ export const NoLabel: Story = {
   name: 'Button zonder label',
   args: {
     label: undefined,
-    'aria-label': 'Button zonder label',
+    'aria-label': 'Button zonder content',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een button zonder label',
+        story: 'Door het "aria-label" attribute blijft de button voor hulptechnologie te beschrijven',
       },
     },
     status: { type: [] },
@@ -303,14 +314,14 @@ export const NoLabel: Story = {
 };
 
 export const SmallLabel: Story = {
-  name: 'Button met klein label',
+  name: 'Button met weinig content',
   args: {
     label: 'a',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een button zonder label',
+        story: 'De styling van de button blijft bij weinig content netjes',
       },
     },
     status: { type: [] },
@@ -327,15 +338,16 @@ export const ButtonMenuClosed: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een menu knop (gesloten)',
+        story:
+          'Het attribute `aria-expanded="false"` geeft aan dat het menu gesloten is. Het attribute `aria-haspopup="menu"` geeft aan dat er een menu geopend of gesloten kan worden',
       },
     },
     status: { type: [] },
   },
 };
 
-export const ButtonMenuOpened: Story = {
-  name: 'Button Menu Opend',
+export const ButtonMenuExpanded: Story = {
+  name: 'Button Menu Expanded',
   args: {
     label: 'Menu',
     'aria-expanded': 'true',
@@ -344,7 +356,8 @@ export const ButtonMenuOpened: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een menu knop (geopend)',
+        story:
+          'Het attribute `aria-expanded="true"` geeft aan dat het menu geopend is. Het attribute `aria-haspopup="menu"` geeft aan dat er een menu geopend of gesloten kan worden',
       },
     },
     status: { type: [] },
@@ -361,15 +374,16 @@ export const ButtonDialogClosed: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een knop die een dialoog opend',
+        story:
+          'Het attribute `aria-expanded="true"` geeft aan dat de dialog gesloten is. Het attribute `aria-haspopup="dialog"` geeft aan dat er een dialog geopend of gesloten kan worden',
       },
     },
     status: { type: [] },
   },
 };
 
-export const ButtonDialogOpened: Story = {
-  name: 'Button Dialog Opened',
+export const ButtonDialogExpanded: Story = {
+  name: 'Button Dialog Expanded',
   args: {
     label: 'Afsluiten',
     'aria-expanded': 'true',
@@ -378,7 +392,8 @@ export const ButtonDialogOpened: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een knop die een dialoog sluit',
+        story:
+          'Het attribute `aria-expanded="true"` geeft aan dat de dialog geopend is. Het attribute `aria-haspopup="dialog"` geeft aan dat er een dialog geopend of gesloten kan worden',
       },
     },
     status: { type: [] },
@@ -386,7 +401,7 @@ export const ButtonDialogOpened: Story = {
 };
 
 export const WithChildren: Story = {
-  name: 'Children ipv label',
+  name: 'Children in plaats van label',
   args: {
     label: undefined,
     style: { '--nl-button-column-gap': '3em' },
@@ -394,7 +409,7 @@ export const WithChildren: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een knop die children gebruikt ipv de label prop',
+        story: 'Een knop die de content via children plaatst in plaats van de `label` property.',
       },
     },
     status: { type: [] },
@@ -406,7 +421,7 @@ export const WithChildren: Story = {
 };
 
 export const WithChildrenIcon: Story = {
-  name: 'Children ipv label met een icon',
+  name: 'Children in plaats van label met een icon',
   args: {
     label: undefined,
     style: { '--nl-button-column-gap': '3em' },
@@ -419,7 +434,8 @@ export const WithChildrenIcon: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een knop die children gebruikt ipv de label prop inclusief icon',
+        story:
+          'Een knop die children gebruikt in plaats van de label prop inclusief icon. De ruimte tussen het icon en de content is instelbaar via een CSS property',
       },
     },
     status: { type: [] },
@@ -431,7 +447,7 @@ export const WithChildrenIcon: Story = {
 };
 
 export const WithFormattedChildren: Story = {
-  name: 'Children formatted ipv label',
+  name: 'Children formatted in plaats van label',
   args: {
     label: undefined,
     style: { '--nl-button-column-gap': '3em' },
@@ -439,7 +455,8 @@ export const WithFormattedChildren: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'De content is geformat met extra markup',
+        story:
+          'De content is via children geplaatst en bevat HTML markup. Merk op dat de ruimte tussen het icon en de content is ingesteld, maar omdat het icon ontbreekt geen invloed heeft op de HTML elementen in de content',
       },
     },
     status: { type: [] },
@@ -455,7 +472,7 @@ export const WithFormattedChildren: Story = {
 };
 
 export const WithFormattedChildrenAndIcon: Story = {
-  name: 'Children formatted ipv label met een icon',
+  name: 'Children formatted in plaats van label met een icon',
   args: {
     label: undefined,
     style: { '--nl-button-column-gap': '3em' },
@@ -469,7 +486,7 @@ export const WithFormattedChildrenAndIcon: Story = {
     docs: {
       description: {
         story:
-          'Geformatteerde content als children mee gegeven. Merk op dat, in de gerenderde html, de children gewrapped zijn in een `<span>` nu er ook een Icon aanwezig is.',
+          'De content is via children geplaatst en bevat HTML markup. Merk op dat, in de gerenderde html, de children gewrapped zijn in een `<span>` nu er ook een Icon aanwezig is. Daardoor is de ingestelde ruimte tussen de icon niet toegepast op de HTML elementen in de content',
       },
     },
     status: { type: [] },
@@ -536,7 +553,7 @@ export const FullWidthWithIcon: Story = {
   parameters: {
     docs: {
       description: {
-        story: `De parent van een button kan de breedte van de button bepalen.`,
+        story: `De parent van een button kan de breedte van de button bepalen. Het icon blijft juist uitgelijnd`,
       },
     },
   },
@@ -597,5 +614,22 @@ export const NotEnoughSpace: Story = {
         </div>
       </div>
     );
+  },
+};
+
+export const CancelClick: Story = {
+  name: 'Cancel een klik door te slepen',
+  parameters: {
+    docs: {
+      description: {
+        story: `Een klik kan gecanceld worden door op de button de klikken, de klik ingedrukt te houden en van de button af te slepen en dan los te laten. `,
+      },
+    },
+  },
+  render: (props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    // eslint-disable-next-line no-alert
+    const onClick = () => alert('geklikt');
+    return <Button {...props} onClick={onClick} />;
   },
 };

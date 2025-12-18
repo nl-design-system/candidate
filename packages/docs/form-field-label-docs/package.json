@@ -1,10 +1,18 @@
 {
   "name": "@nl-design-system-candidate/form-field-label-docs",
   "version": "0.0.1",
+  "description": "Documentatie voor de Form Field Label component",
   "license": "CC0-1.0",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/form-field-label-docs#readme",
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "form-field-label",
+    "form-field-label-component"
+  ],
   "files": [
-    "./docs/"
+    "./docs/",
+    "./stories/"
   ],
   "repository": {
     "type": "git+ssh",
@@ -15,5 +23,11 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
+  },
+  "devDependencies": {
+    "@nl-design-system-candidate/form-field-label-react": "workspace:*",
+    "@storybook/react-vite": "9.1.5",
+    "@types/react": "19.2.7",
+    "react": "19.2.3"
   }
 }

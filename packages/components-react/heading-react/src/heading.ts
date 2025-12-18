@@ -1,5 +1,4 @@
-import type { HTMLAttributes } from 'react';
-import { forwardRef, createElement } from 'react';
+import { forwardRef, createElement, type HTMLAttributes, type JSX } from 'react';
 
 export const headingLevels = [1, 2, 3, 4, 5, 6] as const;
 
@@ -16,7 +15,7 @@ const cn = (...classes: Array<string | undefined | null>): string => classes.fil
 
 export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(function Heading(props, forwardedRef) {
   const { level, appearance = `level-${level}`, children, className, ...restProps } = props;
-  const type = `h${level}` as keyof JSX.IntrinsicElements;
+  const type = `h${level}` as Extract<keyof JSX.IntrinsicElements, `h${HeadingLevel}`>;
 
   return createElement(
     type,

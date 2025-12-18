@@ -1,39 +1,43 @@
+import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
 import packageJSON from '../../components-react/button-react/package.json';
 import { Button } from '../../components-react/button-react/src/button';
 import allTokens from '../../tokens/button-tokens/tokens.json';
+import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 
 const { primary, secondary, subtle, default: defaultTokens, ...tokens } = allTokens.nl.button;
 
 const meta = {
-  argTypes: {
-    children: { table: { category: 'API' }, type: 'string' },
-  },
-  args: {
-    label: 'Klik mij!',
-    purpose: 'primary',
-  },
-  globals: {
-    dir: 'ltr',
-    lang: 'nl',
-    title: 'Button Primary',
-  },
-  component: Button,
-  parameters: {
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/button',
+  ...merge({
+    ...reactMeta,
+    ...{
+      args: {
+        label: 'Klik mij!',
+        purpose: 'primary',
       },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
+      globals: {
+        dir: 'ltr',
+        lang: 'nl',
+        title: 'Button Primary',
       },
-    ],
-    tokens: { nl: { button: { ...tokens, primary } } },
-  },
+      component: Button,
+      parameters: {
+        externalLinks: [
+          {
+            name: 'Open op NL Design System',
+            url: 'https://nldesignsystem.nl/button',
+          },
+          {
+            name: 'Open op GitHub',
+            url: packageJSON.homepage,
+          },
+        ],
+        tokens: { nl: { button: { ...tokens, primary } } },
+      },
+    },
+  }),
   title: 'Componenten/Button/Primary',
 } satisfies Meta<typeof Button>;
 
@@ -103,6 +107,51 @@ export const Pressed: Story = {
     docs: {
       description: {
         story: 'Een primary Button die ingedrukt is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PressedActive: Story = {
+  args: {
+    pressed: true,
+    className: 'nl-button--active',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een primary Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PressedHover: Story = {
+  args: {
+    pressed: true,
+    className: 'nl-button--hover',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een primary Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PressedDisabled: Story = {
+  args: {
+    pressed: true,
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een primary Button die ingedrukt die al pressed is.',
       },
     },
     status: { type: [] },
@@ -200,6 +249,54 @@ export const PositivePressed: Story = {
   },
 };
 
+export const PositivePressedActive: Story = {
+  args: {
+    pressed: true,
+    hint: 'positive',
+    className: 'nl-button--active',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een primary positive Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PositivePressedHover: Story = {
+  args: {
+    pressed: true,
+    hint: 'positive',
+    className: 'nl-button--hover',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een primary positive Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const PositivePressedDisabled: Story = {
+  args: {
+    pressed: true,
+    hint: 'positive',
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een primary positive Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
 export const PositiveFocused: Story = {
   args: {
     purpose: 'primary',
@@ -290,6 +387,55 @@ export const NegativePressed: Story = {
     status: { type: [] },
   },
 };
+
+export const NegativePressedActive: Story = {
+  args: {
+    pressed: true,
+    hint: 'negative',
+    className: 'nl-button--active',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een primary negative Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const NegativePressedHover: Story = {
+  args: {
+    pressed: true,
+    hint: 'negative',
+    className: 'nl-button--hover',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een primary negative Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const NegativePressedDisabled: Story = {
+  args: {
+    pressed: true,
+    hint: 'negative',
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een primary negative Button die ingedrukt die al pressed is.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
 export const NegativeFocused: Story = {
   args: {
     purpose: 'primary',

@@ -31,7 +31,8 @@ minimumReleaseAgeExclude:
   - '@nl-rvo/*'
   - '@rijkshuisstijl-community/*'
   - '@utrecht/*'
-  - 'glob' # 'glob@11.1.0 || glob@12.0.0' fixes a security vulnerability; can be removed after 19-11-2025
+  - 'react@19.2.3' # can be removed after 2025-12-13; fixes CVE-2025-55184
+  - 'react-dom@19.2.3' # can be removed after 2025-12-13; fixes CVE-2025-55184
 
 # Configure pnpm to save exact version numbers (not including ^ or ~) in package.json. Lock dependencies to specific
 # versions to ensure reproducible installs and prevent automatic upgrades to newer minor or patch releases.

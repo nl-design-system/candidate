@@ -1,6 +1,7 @@
 {
   "name": "@nl-design-system-candidate/icon-docs",
   "version": "0.1.0",
+  "description": "Documentatie voor de Icon component",
   "license": "CC0-1.0",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/icon-docs#readme",
   "files": [
@@ -20,7 +21,7 @@
   "devDependencies": {
     "@nl-design-system-candidate/icon-react": "workspace:*",
     "@storybook/react-vite": "9.1.5",
-    "@types/react": "18.3.23",
-    "react": "18.3.1"
+    "@types/react": "19.2.7",
+    "react": "19.2.3"
   }
 }

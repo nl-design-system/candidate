@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/text-input-react",
   "version": "0.0.0",
-  "description": "Biedt de mogelijkheid om één regel aan tekens in te vullen.",
+  "description": "React implementatie voor de Text Input component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/text-input-react#readme",
   "type": "module",
@@ -44,8 +44,8 @@
     "@babel/runtime": "7.28.2",
     "@nl-design-system-candidate/text-input-css": "workspace:*",
     "@nl-design-system/rollup-config-react-component": "1.0.6",
-    "@types/react": "18.3.23",
-    "react": "18.3.1",
+    "@types/react": "19.2.7",
+    "react": "19.2.3",
     "rimraf": "6.0.1",
     "rollup": "4.46.2",
     "typescript": "5.9.2",
@@ -53,7 +53,7 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7",
-    "react": "^18"
+    "react": "^18 || ^19"
   },
   "dependencies": {
     "clsx": "2.1.1"

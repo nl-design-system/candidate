@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/skip-link-react",
   "version": "1.1.6",
-  "description": "Verborgen mogelijkheid om snel naar een ander deel van de pagina te navigeren zonder gebruik te maken van een muis of touchscreen.",
+  "description": "React implementatie voor de Skip Link component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/skip-link-react#readme",
   "type": "module",
@@ -43,8 +43,8 @@
     "@babel/runtime": "7.28.2",
     "@nl-design-system-candidate/skip-link-css": "workspace:*",
     "@nl-design-system/rollup-config-react-component": "1.0.6",
-    "@types/react": "18.3.23",
-    "react": "18.3.1",
+    "@types/react": "19.2.7",
+    "react": "19.2.3",
     "rimraf": "6.0.1",
     "rollup": "4.46.2",
     "typescript": "5.9.2",
@@ -52,7 +52,7 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7",
-    "react": "^18"
+    "react": "^18 || ^19"
   },
   "dependencies": {
     "clsx": "2.1.1"

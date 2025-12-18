@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/heading-react",
   "version": "1.1.6",
-  "description": "Koptekst die in de koppenstructuur ingesteld kan worden op het juiste niveau.",
+  "description": "React implementatie voor de Heading component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/heading-react#readme",
   "type": "module",
@@ -43,8 +43,8 @@
     "@babel/runtime": "7.28.2",
     "@nl-design-system-candidate/heading-css": "workspace:*",
     "@nl-design-system/rollup-config-react-component": "1.0.6",
-    "@types/react": "18.3.23",
-    "react": "18.3.1",
+    "@types/react": "19.2.7",
+    "react": "19.2.3",
     "rimraf": "6.0.1",
     "rollup": "4.46.2",
     "typescript": "5.9.2",
@@ -52,6 +52,6 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7",
-    "react": "^18"
+    "react": "^18 || ^19"
   }
 }
