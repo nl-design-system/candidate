@@ -136,7 +136,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
         'nl-button--subtle': purpose === 'subtle',
         'nl-button--positive': Boolean(purpose) && hint === 'positive',
         'nl-button--negative': Boolean(purpose) && hint === 'negative',
-        'nl-button--submit': type === 'submit',
       })}
       aria-pressed={pressed ? 'true' : undefined}
       aria-disabled={disabled ? 'true' : undefined}

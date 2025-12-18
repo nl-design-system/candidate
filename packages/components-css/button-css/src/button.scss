@@ -5,10 +5,6 @@
   @include mixin.nl-button;
 }
 
-.nl-button--submit {
-  @include mixin.nl-button--submit;
-}
-
 .nl-button__icon {
   @include mixin.nl-button__icon;
 }

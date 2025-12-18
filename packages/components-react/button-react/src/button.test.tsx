@@ -32,7 +32,7 @@ describe('Button', () => {
     render(<Button type="submit">{text}</Button>);
     const button = screen.getByRole('button');
 
-    expect(button).toHaveClass('nl-button--submit');
+    expect(button).toHaveAttribute('type', 'submit');
   });
 
   it('has an accessible name', () => {

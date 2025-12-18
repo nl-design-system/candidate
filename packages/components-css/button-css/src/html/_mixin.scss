@@ -28,16 +28,6 @@
     @include mixin.nl-button--default-disabled;
   }
 
-  button[type="submit" i],
-  button[aria-disabled="true"][type="submit" i],
-  button:disabled[type="submit" i],
-  input[type="submit" i],
-  input[aria-disabled="true"][type="submit" i],
-  input:disabled[type="submit" i] {
-    // Submit cursor has precedence over the disabled cursor.
-    @include mixin.nl-button--submit;
-  }
-
   input[type="button" i]:where([aria-pressed="true"]),
   input[type="reset" i]:where([aria-pressed="true"]),
   input[type="submit" i]:where([aria-pressed="true"]),
