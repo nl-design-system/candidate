@@ -20,32 +20,32 @@
   input[type="reset" i]:where([disabled]),
   input[type="submit" i]:where([disabled]),
   button:where([disabled]),
-  input[type="button" i]:where([aria-disabled="true"]),
-  input[type="reset" i]:where([aria-disabled="true"]),
-  input[type="submit" i]:where([aria-disabled="true"]),
-  button:where([aria-disabled="true"]) {
+  input[type="button" i]:where([aria-disabled="true" i]),
+  input[type="reset" i]:where([aria-disabled="true" i]),
+  input[type="submit" i]:where([aria-disabled="true" i]),
+  button:where([aria-disabled="true" i]) {
     @include mixin.nl-button--disabled;
     @include mixin.nl-button--default-disabled;
   }
 
-  input[type="button" i]:where([aria-pressed="true"]),
-  input[type="reset" i]:where([aria-pressed="true"]),
-  input[type="submit" i]:where([aria-pressed="true"]),
-  button:where([aria-pressed="true"]) {
+  input[type="button" i]:where([aria-pressed="true" i]),
+  input[type="reset" i]:where([aria-pressed="true" i]),
+  input[type="submit" i]:where([aria-pressed="true" i]),
+  button:where([aria-pressed="true" i]) {
     @include mixin.nl-button--default-pressed;
   }
 
-  input[type="button" i]:where(:hover:not([aria-disabled="true"], :disabled)),
-  input[type="reset" i]:where(:hover:not([aria-disabled="true"], :disabled)),
-  input[type="submit" i]:where(:hover:not([aria-disabled="true"], :disabled)),
-  button:where(:hover:not([aria-disabled="true"], :disabled)) {
+  input[type="button" i]:where(:hover:not([aria-disabled="true" i], :disabled)),
+  input[type="reset" i]:where(:hover:not([aria-disabled="true" i], :disabled)),
+  input[type="submit" i]:where(:hover:not([aria-disabled="true" i], :disabled)),
+  button:where(:hover:not([aria-disabled="true" i], :disabled)) {
     @include mixin.nl-button--default-hover;
   }
 
-  input[type="button" i]:where(:active:not([aria-disabled="true"], :disabled)),
-  input[type="reset" i]:where(:active:not([aria-disabled="true"], :disabled)),
-  input[type="submit" i]:where(:active:not([aria-disabled="true"], :disabled)),
-  button:where(:active:not([aria-disabled="true"], :disabled)) {
+  input[type="button" i]:where(:active:not([aria-disabled="true" i], :disabled)),
+  input[type="reset" i]:where(:active:not([aria-disabled="true" i], :disabled)),
+  input[type="submit" i]:where(:active:not([aria-disabled="true" i], :disabled)),
+  button:where(:active:not([aria-disabled="true" i], :disabled)) {
     @include mixin.nl-button--default-active;
   }
 
