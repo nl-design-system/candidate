@@ -16,10 +16,10 @@
     display: none;
   }
 
-  input[type="button" i]:where([disabled]),
-  input[type="reset" i]:where([disabled]),
-  input[type="submit" i]:where([disabled]),
-  button:where([disabled]),
+  input[type="button" i]:where(:disabled),
+  input[type="reset" i]:where(:disabled),
+  input[type="submit" i]:where(:disabled),
+  button:where(:disabled),
   input[type="button" i]:where([aria-disabled="true" i]),
   input[type="reset" i]:where([aria-disabled="true" i]),
   input[type="submit" i]:where([aria-disabled="true" i]),
