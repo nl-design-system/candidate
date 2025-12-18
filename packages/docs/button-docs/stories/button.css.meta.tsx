@@ -72,6 +72,24 @@ const meta = {
         type: { summary: undefined },
       },
     },
+    stylePressed: {
+      name: 'nl-button--pressed',
+      description: 'Geeft de button een ingedrukte styling',
+      control: 'boolean',
+      table: {
+        category: CLASSES,
+        type: { summary: undefined },
+      },
+    },
+    styleDisabled: {
+      name: 'nl-button--disabled',
+      description: 'Geeft de button een disabled styling',
+      control: 'boolean',
+      table: {
+        category: CLASSES,
+        type: { summary: undefined },
+      },
+    },
     pressed: {
       name: 'aria-pressed',
       description: 'Markeert de button als ingedrukt.',
@@ -128,18 +146,34 @@ const meta = {
     disabled: false,
     children: 'Klik mij!',
   },
-  component: ({ label, children, ...props }) => {
-    let purpose;
-    purpose = props.purposeSubtle ? 'subtle' : purpose;
-    purpose = props.purposeSecondary ? 'secondary' : purpose;
-    purpose = props.purposePrimary ? 'primary' : purpose;
+  component: ({
+    label,
+    children,
+    className,
+    purposeSubtle,
+    purposeSecondary,
+    purposePrimary,
+    hintNegative,
+    hintPositive,
+    styleDisabled,
+    stylePressed,
+    ...props
+  }) => {
+    let purpose = props.purpose;
+    purpose = purposeSubtle ? 'subtle' : purpose;
+    purpose = purposeSecondary ? 'secondary' : purpose;
+    purpose = purposePrimary ? 'primary' : purpose;
 
-    let hint;
-    hint = props.hintNegative ? 'negative' : hint;
-    hint = props.hintPositive ? 'positive' : hint;
+    let hint = props.hint;
+    hint = hintNegative ? 'negative' : hint;
+    hint = hintPositive ? 'positive' : hint;
+
+    let classes = className || '';
+    classes = styleDisabled ? `${classes} nl-button--disabled`.trim() : classes;
+    classes = stylePressed ? `${classes} nl-button--pressed`.trim() : classes;
 
     return (
-      <Button {...props} purpose={purpose} hint={hint}>
+      <Button {...props} className={classes} purpose={purpose} hint={hint}>
         {label || children}
       </Button>
     );
