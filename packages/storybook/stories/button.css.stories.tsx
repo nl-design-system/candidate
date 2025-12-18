@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-css/button-css/package.json';
-import { Button as ButtonComponent, type ButtonProps } from '@nl-design-system-candidate/button-react';
+import { type ButtonProps } from '@nl-design-system-candidate/button-react';
 import buttonMeta from '@nl-design-system-candidate/button-docs/stories/button.css.meta';
 import * as Stories from '@nl-design-system-candidate/button-docs/stories/button.stories';
 import '../../components-css/button-css/src/test.scss';
@@ -22,7 +22,6 @@ const meta = {
       },
     },
   }),
-  component: ({ label, children, ...props }) => <ButtonComponent {...props}>{label || children}</ButtonComponent>,
   title: 'CSS Componenten/Button',
   id: 'css-button',
 } satisfies Meta<ButtonProps>;
