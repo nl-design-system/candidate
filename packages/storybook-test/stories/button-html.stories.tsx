@@ -133,3 +133,46 @@ export const InputSubmit: Story = {
   },
   render: () => <input type="submit" value="Verzend mij" />,
 };
+
+export const InputFile: Story = {
+  name: 'File Upload Button',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een File Input gemaakt met \`<input type="file">\` waarvan de "Browse" button is gestyled als een Button.
+
+Bij interactie is er een aangepast visueel ontwerp bij hover, active en focus.`,
+      },
+    },
+  },
+  render: () => <input type="file" />,
+};
+
+export const InputFileDisabled: Story = {
+  name: 'File Upload Button Disabled',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een File Input waarvan de "Browse" button is gestyled als een Button, waarvan het visueel ontwerp "disabled" uitstraalt vanwege het \`disabled\` attribuut.
+
+Bij interactie is er geen zichtbaar effect bij hover, active en focus.`,
+      },
+    },
+  },
+  render: () => <input type="file" disabled />,
+};
+
+export const InputFileAriaDisabled: Story = {
+  name: 'File Upload Button Disabled',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een File Input waarvan de "Browse" button is gestyled als een Button, waarvan het visueel ontwerp "disabled" uitstraalt vanwege \`aria-disabled="true"\`.`,
+      },
+    },
+  },
+  render: () => <input type="file" aria-disabled="true" />,
+};
