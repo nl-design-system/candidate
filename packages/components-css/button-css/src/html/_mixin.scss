@@ -28,9 +28,9 @@
     @include mixin.nl-button--default-disabled;
   }
 
+  /* type="submit", type="reset" and ::file-selector-button
+   * don't have practical applications for aria-pressed="true" */
   input[type="button" i]:where([aria-pressed="true" i]),
-  input[type="reset" i]:where([aria-pressed="true" i]),
-  input[type="submit" i]:where([aria-pressed="true" i]),
   button:where([aria-pressed="true" i]) {
     @include mixin.nl-button--default-pressed;
   }
