@@ -5,8 +5,8 @@
   input[type="reset" i],
   input[type="submit" i],
   button {
-    @include mixin.nl-button--default;
     @include mixin.nl-button;
+    @include mixin.nl-button--default;
   }
 
   input[type="button" i][hidden],
