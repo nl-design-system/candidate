@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Acceptatiecriteria voor het maken van de Button component
 
 ## Semantiek
@@ -16,7 +18,7 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 #### Standaard en algemene HTML-attributen
 
-- Het `type`-attribuut van de button is instelbaar. De default hiervoor is button.
+- Het `type`-attribuut van `button` is instelbaar. De default hiervoor is `type="button"`.
 - De component kan een toegankelijke naam krijgen via inhoud, `aria-label`, of `aria-labelledby`.
 - De component ondersteunt alle global attributes, zoals `lang` en `dir`.
 - Het is mogelijk de button een name te geven en hiermee met een `<form>` te associëren.
@@ -69,11 +71,11 @@ De button ondersteunt event handler attributen, waaronder:
 - `onfocus`
 - `onblur`
 
-Het moet mogelijk zijn dat een bezoeker met een enkele aanwijzer (zoals een muis of touch) het voltooien van de actie kan annuleren door buiten het element te bewegen en de aanwijzer dan pas weer los te laten/op te tillen. Gebruik hiervoor het click-event. Dit is een apparaatonafhankelijke methode. Zo activeert de actie niet als de bezoeker de aanwijzer indrukt, maar pas als de bezoeker de aanwijzer weer loslaat.
+Het moet mogelijk zijn dat een bezoeker met een enkele aanwijzer (zoals een muis of touch) het voltooien van de actie kan annuleren door buiten het element te bewegen en de aanwijzer dan pas weer los te laten/op te tillen. Gebruik hiervoor het `click`-event. Dit is een apparaatonafhankelijke methode. Zo activeert de actie niet als de bezoeker de aanwijzer indrukt, maar pas als de bezoeker de aanwijzer weer loslaat.
 
 - De component kan worden geactiveerd met een linker muisklik.
 - Het toetsenbordgedrag van de component moet exact overeenkomen met dat van een native `<button>`.
   - De component kan worden geactiveerd met de `Enter`-toets op `keydown`.
-  - De component kan worden geactiveerd met de `spatiebalk` op `keyup`.
-  - De `spatiebalk` activatie is cancelable door `Tab` te doen en focus te verplaatsen vooraf aan keyup.
-- De component ondersteunt `pointer-gedrag` waarbij een klik geannuleerd wordt wanneer de gebruiker de aanwijzer indrukt, buiten de component beweegt en pas dan loslaat.
+  - De component kan worden geactiveerd met de `Space` op `keyup`.
+  - De `Space` activatie is cancelable door `Tab` te doen en focus te verplaatsen vooraf aan keyup.
+- De component ondersteunt pointer-gedrag waarbij een klik geannuleerd wordt wanneer de gebruiker de aanwijzer indrukt, buiten de component beweegt en pas dan loslaat.
