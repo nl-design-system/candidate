@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
-import { forwardRef, Children, isValidElement } from 'react';
+import { forwardRef } from 'react';
 
 export type ButtonLabelProps =
   | {
@@ -55,15 +55,6 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(props, forwardedRef) {
   const { children, className, iconEnd, iconStart, disabled, pressed, type = 'button', label, ...restProps } = props;
 
-  const hasIcon = Boolean(iconStart || iconEnd);
-
-  // Is there markup inside `children`
-  const isChildrenFormatted = Children.toArray(children).some(isValidElement);
-
-  // If there is markup in `children` _and_ there is an icon, `children`
-  // should be wrapped, otherwise there will be a gap around the markup
-  const shouldWrapChildren = isChildrenFormatted && hasIcon;
-
   return (
     <button
       ref={forwardedRef}
@@ -73,8 +64,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       {...restProps}
     >
       {iconStart && <span>{iconStart}</span>}
-      {label && <span>{label}</span>}
-      {shouldWrapChildren ? <span>{children}</span> : children}
+      {label}
+      {children}
       {iconEnd && <span>{iconEnd}</span>}
     </button>
   );
