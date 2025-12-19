@@ -4,6 +4,7 @@
   input[type="button" i],
   input[type="reset" i],
   input[type="submit" i],
+  input[type="file" i]::file-selector-button,
   button {
     @include mixin.nl-button;
     @include mixin.nl-button--default;
@@ -19,10 +20,12 @@
   input[type="button" i]:where(:disabled),
   input[type="reset" i]:where(:disabled),
   input[type="submit" i]:where(:disabled),
+  input[type="file" i]:where(:disabled)::file-selector-button,
   button:where(:disabled),
   input[type="button" i]:where([aria-disabled="true" i]),
   input[type="reset" i]:where([aria-disabled="true" i]),
   input[type="submit" i]:where([aria-disabled="true" i]),
+  input[type="file" i]:where([aria-disabled="true" i])::file-selector-button,
   button:where([aria-disabled="true" i]) {
     @include mixin.nl-button--disabled;
     @include mixin.nl-button--default-disabled;
@@ -38,6 +41,7 @@
   input[type="button" i]:where(:hover:not([aria-disabled="true" i], :disabled)),
   input[type="reset" i]:where(:hover:not([aria-disabled="true" i], :disabled)),
   input[type="submit" i]:where(:hover:not([aria-disabled="true" i], :disabled)),
+  input[type="file" i]:where(:hover:not([aria-disabled="true" i], :disabled))::file-selector-button,
   button:where(:hover:not([aria-disabled="true" i], :disabled)) {
     @include mixin.nl-button--default-hover;
   }
@@ -45,6 +49,7 @@
   input[type="button" i]:where(:active:not([aria-disabled="true" i], :disabled)),
   input[type="reset" i]:where(:active:not([aria-disabled="true" i], :disabled)),
   input[type="submit" i]:where(:active:not([aria-disabled="true" i], :disabled)),
+  input[type="file" i]:where(:active:not([aria-disabled="true" i], :disabled))::file-selector-button,
   button:where(:active:not([aria-disabled="true" i], :disabled)) {
     @include mixin.nl-button--default-active;
   }
@@ -53,6 +58,7 @@
   input[type="button" i]:focus-visible,
   input[type="reset" i]:focus-visible,
   input[type="submit" i]:focus-visible,
+  input[type="file" i]::file-selector-button:focus-visible,
   button:focus-visible {
     @include mixin.nl-button--focus-visible;
   }
