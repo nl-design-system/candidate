@@ -132,7 +132,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       type={type}
       className={clsx('nl-button', className, {
         'nl-button--pressed': pressed,
-        'nl-button--disabled': disabled,
+        'nl-button--disabled': disabled || htmlDisabled,
         'nl-button--primary': purpose === 'primary',
         'nl-button--secondary': purpose === 'secondary',
         'nl-button--subtle': purpose === 'subtle',
