@@ -63,10 +63,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       disabled={disabled}
       {...restProps}
     >
-      {iconStart && <span>{iconStart}</span>}
+      {iconStart}
       {label}
       {children}
-      {iconEnd && <span>{iconEnd}</span>}
+      {iconEnd}
     </button>
   );
 });
