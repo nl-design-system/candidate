@@ -1,12 +1,26 @@
+/* eslint-disable no-alert */
+/* eslint-disable react/no-unescaped-entities */
 import type { ComponentType } from 'react';
-import '../../components-css/button-css/src/button.scss';
-import '../../components-css/icon-css/src/icon.scss';
-import '../../components-css/button-css/src/test.scss';
-import '@utrecht/icon-css/dist/index.css';
-import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
-import { IconAccessible } from '@tabler/icons-react';
+import clsx from 'clsx';
 import { merge } from 'lodash-es';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import packageJSON from '../../components-react/button-react/package.json';
+import {
+  IconAccessible,
+  IconArrowLeft,
+  IconArrowRight,
+  IconBold,
+  IconBrandFacebook,
+  IconCheck,
+  IconLanguage,
+  IconLink,
+  IconMultiplier2x,
+  IconPdf,
+  IconPlus,
+  IconQuestionMark,
+  IconShoppingCart,
+  IconTrash,
+} from '@tabler/icons-react';
 import { Button as ButtonComponent, type ButtonProps } from '../../components-react/button-react/src/button';
 import { Icon } from '../../components-react/icon-react/src/icon';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
@@ -69,12 +83,18 @@ import {
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
 } from '../src/WcagTests';
+import '../../components-css/icon-css/src/icon.scss';
+import '../../components-css/button-css/src/button.scss';
+import '../../components-css/icon-css/src/icon.scss';
+import '../../components-css/button-css/src/test.scss';
+import '@utrecht/icon-css/dist/index.css';
 
 const ButtonDecorator: Decorator = (Story) => (
   <div className="test">
     <Story />
   </div>
 );
+import { useArgs } from 'storybook/preview-api';
 
 const meta = {
   ...merge({
@@ -90,6 +110,7 @@ const meta = {
         lang: 'nl',
         title: 'Button van de dag',
       },
+      component: ButtonComponent,
       parameters: {
         docs: {
           description: {
@@ -171,19 +192,72 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const ButtonIconStart: Story = {
-  name: 'Button met iconStart',
+export const ButtonChildrenLineBreak: Story = {
+  name: 'Button met een line break',
   args: {
-    iconStart: (
-      <Icon>
-        <IconAccessible />
-      </Icon>
+    label: undefined,
+    children: (
+      <>
+        {'Vorige pagina:'}
+        <br />
+        {'Hoofdstuk 2'}
+      </>
     ),
   },
   parameters: {
     docs: {
       description: {
-        story: `Een button met een icon aan de linkerkant van de content`,
+        story: `De volgende situatie is een button waarin het label een line break bevat, met het \`<br>\` HTML-element.
+
+In dit voorbeeld de tekst met de line break direct in de \`<button>\` geplaatst.
+
+Als de button niet goed geïmplementeerd is, kunnen er twee dingen mis gaan:
+
+1. De button wordt opgedeeld in twee delen, als \`display: inline\` wordt gebruikt in combinatie met een ander element dan \`<button>\`.
+2. De line break wordt niet weergegeven. Op de plek van het \`<br>\` element is een wit ruimte ter grootte van de \`column-gap\`.
+
+Test dat de button als één geheel getoond wordt, waarbij "Vorige pagina:" en "Hoofdstuk 2" op eigen regels staan.`,
+      },
+    },
+  },
+};
+
+export const ButtonLabelLineBreak: Story = {
+  name: 'Button met een line break',
+  args: {
+    label: (
+      <>
+        {'Vorige pagina:'}
+        <br />
+        {'Hoofdstuk 2'}
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `De volgende situatie is een button waarin het label een line break bevat, met het \`<br>\` HTML-element.
+
+In dit voorbeeld de tekst met de line break in de \`<span class="nl-button__label>\` geplaatst.`,
+      },
+    },
+  },
+};
+
+export const ButtonIconStart: Story = {
+  name: 'Button met decoratief icoon aan het begin',
+  args: {
+    iconStart: (
+      <Icon>
+        <IconArrowLeft />
+      </Icon>
+    ),
+    label: 'Vorige',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button met een decoratief icon voor de tekst van het label. In _left-to-right_ teksten zoals dit voorbeeld, staat de icon links van de tekst.`,
       },
     },
     testResult: {
@@ -216,18 +290,184 @@ export const ButtonIconStart: Story = {
 };
 
 export const ButtonIconEnd: Story = {
-  name: 'Button met iconEnd',
+  name: 'Button met decoratief icoon aan het eind',
   args: {
     iconEnd: (
       <Icon>
-        <IconAccessible />
+        <IconArrowRight />
       </Icon>
+    ),
+    label: 'Volgende',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button met een decoraratief icon na de tekst van het label. In _left-to-right_ teksten zoals dit voorbeeld, staat de icon rechts van de tekst.`,
+      },
+    },
+  },
+};
+
+export const ButtonInformativeIconStart: Story = {
+  name: 'Button met informatief icon aan begin',
+  args: {
+    iconStart: (
+      <Icon role="img" aria-label="Facebook">
+        <IconBrandFacebook />
+      </Icon>
+    ),
+    label: 'Volg ons',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button met een informatief icon voor de tekst van het label. Het icoon heeft als label "Facebook", en de toegankelijke naam van de Button is daarom "Facebook Volg ons". De combinatie is voldoende duidelijk. Als "Facebook" niet onderdeel was geweest van de toegankelijke naam, dan was het label van de button onvoldoende duidelijk.`,
+      },
+    },
+  },
+};
+
+export const ButtonInformativeIconEnd: Story = {
+  name: 'Button met informatief icon aan het eind',
+  args: {
+    iconEnd: (
+      <Icon role="img" aria-label="Dubbele snelheid">
+        <IconMultiplier2x />
+      </Icon>
+    ),
+    label: 'Afspelen',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button met een informatief icon voor de tekst van het label. Het icoon heeft als label "Dubbele snelheid", en de toegankelijke naam van de Button is daarom "Afspelen Dubbele snelheid". De combinatie is voldoende duidelijk. Als "Dubbele snelheid" niet onderdeel was geweest van de toegankelijke naam, dan was het label van de button onvoldoende duidelijk.`,
+      },
+    },
+  },
+};
+
+export const ButtonIconStartEmoji: Story = {
+  name: 'Button met decoratief emoji aan het begin',
+  args: {
+    iconStart: <span aria-hidden="true">👍</span>,
+    label: 'Like',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `...`,
+      },
+    },
+  },
+};
+
+export const ButtonIconEndEmoji: Story = {
+  name: 'Button met decoratief emoji aan het begin',
+  args: {
+    lang: 'en',
+    dir: 'ltr',
+    iconEnd: <span aria-hidden="true">🚀</span>,
+    label: 'Ship it!',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `...`,
+      },
+    },
+  },
+};
+
+export const ButtonInformativeIconStartAndEnd: Story = {
+  name: 'Button met informatief iconen aan begin en eind',
+  args: {
+    iconStart: (
+      <Icon role="img" aria-label="Toevoegen">
+        <IconPlus />
+      </Icon>
+    ),
+    iconEnd: (
+      <Icon role="img" aria-label="Winkelmandje">
+        <IconShoppingCart />
+      </Icon>
+    ),
+    label: undefined,
+    'aria-presssed': 'false',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `...`,
+      },
+    },
+  },
+  render: function Render(args) {
+    const [updatedArgs, updateArgs] = useArgs();
+
+    const pressed = args['aria-pressed'] === 'true';
+
+    const onClick = () => {
+      updateArgs({
+        iconStart: pressed ? (
+          <Icon role="img" aria-label="Toevoegen">
+            <IconPlus />
+          </Icon>
+        ) : (
+          <Icon role="img" aria-label="Toegevoegd">
+            <IconCheck />
+          </Icon>
+        ),
+        'aria-pressed': pressed ? 'false' : 'true',
+      });
+    };
+
+    return <ButtonComponent {...args} {...updatedArgs} onClick={onClick} />;
+  },
+};
+
+export const ButtonMultilineIconStart: Story = {
+  name: 'Button met iconStart en meerdere regels tekst',
+  args: {
+    iconStart: (
+      <Icon>
+        <IconTrash />
+      </Icon>
+    ),
+    label: (
+      <>
+        {'Verwijder: '}
+        <bdi translate="no">
+          Overzicht uitvoerbaarheid – Inzicht in effecten van beleid op de uitvoering en de beleidsruimte voor de
+          komende jaren.pdf
+        </bdi>
+        {' (PDF, 403 KB)'}
+      </>
     ),
   },
   parameters: {
     docs: {
       description: {
-        story: `Een button met een icon aan de rechterkant van de content`,
+        story: `...`,
+      },
+    },
+  },
+};
+
+export const ButtonMultilineIconEnd: Story = {
+  name: 'Button met iconEnd en meerdere regels tekst',
+  args: {
+    iconEnd: (
+      <Icon>
+        <IconPdf />
+      </Icon>
+    ),
+    label:
+      'Open: Overzicht uitvoerbaarheid – Inzicht in effecten van beleid op de uitvoering en de beleidsruimte voor de komende jaren (PDF, 403 KB)',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `...`,
       },
     },
     testResult: {
@@ -267,6 +507,7 @@ export const ButtonUtrechtIconStart: Story = {
         <IconAccessible />
       </span>
     ),
+    label: 'Toegankelijkheid',
   },
   parameters: {
     docs: {
@@ -311,6 +552,7 @@ export const ButtonUtrechtIconEnd: Story = {
         <IconAccessible />
       </span>
     ),
+    label: 'Toegankelijkheid',
   },
   parameters: {
     docs: {
@@ -351,6 +593,7 @@ export const ButtonLargeText: Story = {
   name: 'Button 200% zoom',
   args: {
     className: 'nl-button--zoom-200',
+    label: 'Verzenden',
   },
   parameters: {
     docs: {
@@ -390,13 +633,13 @@ export const ButtonLargeText: Story = {
 export const ButtonDifferentLanguage: Story = {
   name: 'Button in een andere taal',
   args: {
-    label: 'Confirm',
+    label: 'Switch to English',
     lang: 'en',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Een knop in een andere taal',
+        story: 'Een knop in een andere taal. De Engelse tekst vertaalt naar: "Wisselen naar Engels".',
       },
     },
     status: { type: [] },
@@ -474,13 +717,51 @@ export const ButtonRTL = {
   name: 'Button in Arabisch',
   args: {
     dir: 'rtl',
-    label: 'مثال على المجال',
+    label: 'التبديل إلى اللغة العربية',
     lang: 'ar',
   },
   parameters: {
     docs: {
       description: {
-        story: `Een button in het Arabisch.
+        story: `Een button in het Arabisch. De Arabische tekst vertaalt naar: "Wisselen naar Arabisch".
+
+Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
+      },
+    },
+  },
+  status: { type: [] },
+};
+
+export const ButtonRTLIconStart = {
+  name: 'Button in Arabisch met icon start',
+  args: {
+    label: 'الصفحة السابقة',
+    dir: 'rtl',
+    lang: 'ar',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button in het Arabisch. De Arabische tekst vertaalt naar: "Vorige pagina".
+
+Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
+      },
+    },
+  },
+  status: { type: [] },
+};
+
+export const ButtonRTLIconEnd = {
+  name: 'Button in Arabisch met icon end',
+  args: {
+    label: 'الصفحة التالية',
+    dir: 'rtl',
+    lang: 'ar',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button in het Arabisch. De Arabische tekst vertaalt naar: "Volgende pagina".
 
 Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
       },
@@ -560,6 +841,30 @@ Het moet mogelijk zijn het \`lang\` attribute en de \`writing-mode: 'vertical-rl
   },
 };
 
+export const ButtonIconVerticalWritingMode = {
+  name: 'Button met icon in vertical writing mode',
+  args: {
+    label: 'これはテストテキスト。日本語は楽しいです。',
+    style: { writingMode: 'vertical-rl' },
+    lang: 'ja',
+    iconStart: (
+      <Icon>
+        <IconLanguage />
+      </Icon>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button met een Japans label, waarvan met CSS is ingesteld dat de schrijfrichting van boven naar beneden gaat. Het is een hoge smalle button, waar de karakters boven elkaar staan. Het icon aan het begin staat boven het Japanse label.
+
+Het moet mogelijk zijn het \`lang\` attribute en de \`writing-mode: 'vertical-rl';\` CSS property in te stellen.`,
+      },
+    },
+  },
+  status: { type: [] },
+};
+
 export const ButtonReset: Story = {
   name: 'Reset Button',
   parameters: {
@@ -599,9 +904,16 @@ export const ButtonReset: Story = {
     const Button = component as ComponentType<ButtonProps>;
     return (
       <form>
-        <input type="text" />
-        <br />
-        <Button type="reset">Reset</Button>
+        <p>
+          <label htmlFor="button-reset-input">Invoer</label>
+        </p>
+        <p id="button-reset-desc">Vul iets in en druk dan op de "Reset" knop.</p>
+        <p>
+          <input type="text" id="button-reset-input" aria-describedby="button-reset-desc" />
+        </p>
+        <p>
+          <Button type="reset">Reset</Button>
+        </p>
       </form>
     );
   },
@@ -651,12 +963,19 @@ export const ButtonSubmit: Story = {
         onSubmit={(event) => {
           event.preventDefault();
           // @ts-expect-error: Use alert to give user feedback
-          alert('Verzonden'); // eslint-disable-line
+          alert('Verzonden');
         }}
       >
-        <input type="text" placeholder="Vul iets in en druk dan op de verzend knop" />
-        <br />
-        <Button type="submit">Verzenden</Button>
+        <p>
+          <label htmlFor="button-submit-input">Invoer</label>
+        </p>
+        <p id="button-submit-desc">Vul iets in en druk dan op de "Verzend" knop.</p>
+        <p>
+          <input type="text" id="button-submit-input" aria-describedby="button-submit-desc" />
+        </p>
+        <p>
+          <Button type="submit">Verzenden</Button>
+        </p>
       </form>
     );
   },
@@ -668,7 +987,13 @@ export const ButtonSubmitDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Button die een formulier niet verstuurt omdat deze disabled is. Vul iets in en klik op de button. Er verschijnt geen melding`,
+        story: `Een Button die disabled is, waarvan het visueel ontwerp ook disabled is.
+
+Deze button is gemaakt met de \`htmlDisabled\` property, waarmee ook het \`disabled\` attribuut wordt ingesteld in plaats van het \`aria-disabled="true"\`.
+
+Als je op de button klikt, dan gebeurt er niets en wordt het formulier niet verstuurd.
+
+De Button is focusbaar, omdat dit in HTML niet mogelijk is met \`<button disabled>\`.`,
       },
     },
   },
@@ -680,24 +1005,85 @@ export const ButtonSubmitDisabled: Story = {
         onSubmit={(event) => {
           event.preventDefault();
           // @ts-expect-error: Use alert to give user feedback
-          alert('Verzonden'); // eslint-disable-line
+          alert('Verzonden');
         }}
       >
-        <input type="text" placeholder="Vul iets in en druk dan op de verzend knop" />
-        <br />
-        <Button type="submit" disabled>
-          Verzenden
-        </Button>
+        <p>
+          <label htmlFor="button-disabled-submit-input">Invoer</label>
+        </p>
+        <p id="button-disabled-submit-desc">Vul iets in en druk dan op de "Verzend" knop.</p>
+        <p>
+          <input type="text" id="button-disabled-submit-input" aria-describedby="button-disabled-submit-desc" />
+        </p>
+        <p>
+          <Button type="submit" htmlDisabled>
+            Verzenden
+          </Button>
+        </p>
       </form>
     );
   },
 };
 
 export const NoLabel: Story = {
-  name: 'Button zonder label',
+  name: 'Button zonder zichtbaar label',
   args: {
-    'aria-label': 'Button zonder content',
     label: undefined,
+    iconStart: (
+      <span className="utrecht-icon">
+        <IconLink />
+      </span>
+    ),
+    'aria-label': 'Link invoegen',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Door het "aria-label" attribute blijft de button voor hulptechnologie te beschrijven',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const NoLabelNotPressed: Story = {
+  name: 'Toggle Button met icon in plaats van zichtbaar label',
+  args: {
+    iconStart: (
+      <span className="utrecht-icon">
+        <IconBold />
+      </span>
+    ),
+    label: undefined,
+    pressed: false,
+    'aria-label': 'Vet opmaken',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Door het "aria-label" attribute blijft de button voor hulptechnologie te beschrijven',
+      },
+    },
+    status: { type: [] },
+  },
+};
+export const NoLabelPressed: Story = {
+  name: 'Pressed Toggle Button met icon in plaats van zichtbaar label',
+  args: {
+    iconStart: (
+      <span
+        className="utrecht-icon"
+        style={{
+          '--utrecht-icon-color': 'var(--nl-icon-color)',
+          '--utrecht-icon-size': 'var(--nl-icon-inline-size)',
+        }}
+      >
+        <IconBold />
+      </span>
+    ),
+    label: undefined,
+    pressed: true,
+    'aria-label': 'Vet opmaken',
   },
   parameters: {
     docs: {
@@ -1198,21 +1584,21 @@ export const FullWidth: Story = {
     const Button = component as ComponentType<ButtonProps>;
     return (
       <>
-        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
+        <div style={{ display: 'flex', resize: 'both' }}>
           <Button style={{ flex: 1 }} {...props} label={label} />
         </div>
         <br />
-        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
+        <div style={{ display: 'flex', resize: 'both' }}>
           <Button style={{ flex: 1 }} {...props}>
             {label}
           </Button>
         </div>
         <br />
-        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
+        <div style={{ display: 'flex', resize: 'both', inlineSize: '300px' }}>
           <Button style={{ flex: 1 }} {...props} label={label} />
         </div>
         <br />
-        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
+        <div style={{ display: 'flex', resize: 'both', inlineSize: '300px' }}>
           <Button style={{ flex: 1 }} {...props}>
             {label}
           </Button>
@@ -1268,21 +1654,21 @@ export const FullWidthWithIcon: Story = {
     const Button = component as ComponentType<ButtonProps>;
     return (
       <>
-        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
+        <div style={{ display: 'flex', resize: 'both' }}>
           <Button style={{ flex: 1 }} {...props} label={label} />
         </div>
         <br />
-        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
+        <div style={{ display: 'flex', resize: 'both' }}>
           <Button style={{ flex: 1 }} {...props}>
             {label}
           </Button>
         </div>
         <br />
-        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
+        <div style={{ display: 'flex', resize: 'both', width: '300px' }}>
           <Button style={{ flex: 1 }} {...props} label={label} />
         </div>
         <br />
-        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
+        <div style={{ display: 'flex', resize: 'both', width: '300px' }}>
           <Button style={{ flex: 1 }} {...props}>
             {label}
           </Button>
@@ -1331,21 +1717,19 @@ export const NotEnoughSpace: Story = {
       ],
     },
   },
-  render: (props, { component }) => {
+  render: (props: ButtonProps, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
     return (
       <div style={{ alignItems: 'center', display: 'flex', height: '100svh' }}>
         <div>
-          <Button {...props} style={{ maxHeight: '100px', maxWidth: '100px' }} />
-          <button className="nl-button" style={{ maxHeight: '100px', maxWidth: '100px' }}>
-            {props.label}
-          </button>
+          <Button {...props} style={{ maxInlineSize: '100px', maxBlockSize: '100px' }} />
+          <Button style={{ maxInlineSize: '100px', maxBlockSize: '100px' }}>{props.label}</Button>
         </div>
-        <div style={{ maxHeight: '100px', maxWidth: '100px' }}>
+        <div style={{ maxInlineSize: '100px', maxBlockSize: '100px' }}>
           <Button {...props} />
         </div>
-        <div style={{ maxHeight: '100px', maxWidth: '100px' }}>
-          <button className="nl-button">{props.label}</button>
+        <div style={{ maxInlineSize: '100px', maxBlockSize: '100px' }}>
+          <Button className="nl-button">{props.label}</Button>
         </div>
       </div>
     );
@@ -1363,8 +1747,469 @@ export const CancelClick: Story = {
   },
   render: (props, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
-    // eslint-disable-next-line no-alert
+
     const onClick = () => alert('geklikt');
     return <Button {...props} onClick={onClick} />;
+  },
+};
+
+export const ButtonHidden: Story = {
+  name: 'Button die verborgen is met "hidden" attribuut',
+  parameters: {
+    docs: {
+      description: {
+        story: `Hier is geen Button zichtbaar, terwijl de button wel in de code van de pagina staat. De button is verborgen het globale HTML-attribuut \`hidden\`.
+
+De werking van dit attribuut kan verstoord worden wanneer in \`display: inline-flex\` in de CSS van de component de \`display: none\` uit de user agent stylesheet overschrijft.`,
+      },
+    },
+  },
+  args: {
+    hidden: true,
+  },
+};
+
+export const ButtonValue: Story = {
+  name: 'Button met name en value',
+  parameters: {
+    docs: {
+      description: {
+        story: `Deze situatie heeft twee submit buttons, waarmee de waarde van de aangeklikte button bepaalt met welke user ingelogd wordt.
+
+De buttons staan in een \`<form>\` dat verstuurd wordt naar \`example.com\`. Door het \`name="username\`" attribuut wordt de waarde van de button met het formulier geassocieerd bij submit.
+
+Controleer of \`name\` en \`value\` werken door het formulier te versturen. Kijk dan of in de adresbalk de gekozen username staat. Bijvoorbeeld:
+
+- \`https://example.com/?username=admin%40example.com\` voor de button met \`name="username" value="admin@example.com"\`.
+- \`https://example.com/?username=john%40example.com\` voor de button met \`name="username" value="jane@example.com"\`.`,
+      },
+    },
+  },
+  render: () => {
+    return (
+      <form method="get" action="https://example.com/" target="_new">
+        <div>
+          <ButtonComponent type="submit" purpose="secondary" name="username" value="admin@example.com">
+            Verder gaan als admin@example.com
+          </ButtonComponent>
+        </div>
+        <div>
+          <ButtonComponent type="submit" purpose="secondary" name="username" value="jane@example.com">
+            Verder gaan als jane@example.com
+          </ButtonComponent>
+        </div>
+      </form>
+    );
+  },
+  args: {
+    hidden: true,
+  },
+};
+
+export const ButtonForm: Story = {
+  name: 'Button met gekoppeld form',
+  parameters: {
+    docs: {
+      description: {
+        story: `Deze situatie heeft twee submit buttons, waarmee de aangeklikte button bepaalt met welke user ingelogd wordt, door de verborgen inhoud van één van de twee gekoppelde formulieren.
+
+Controleer of \`form\`, \`formaction\`, \`formmethod\` en \`formtarget\` werken door het formulier te versturen. Kijk dan een nieuwe browservenster opent, waar in de adresbalk de gekozen username staat. Bijvoorbeeld:
+
+- \`https://example.com/?username=admin%40example.com\` voor de button met \`form="form-1"\`.
+- \`https://example.com/?username=john%40example.com\` voor de button met \`form="form-2"\`.`,
+      },
+    },
+  },
+  render: () => {
+    return (
+      <>
+        <form id="form-1" method="post">
+          <input type="hidden" name="username" value="admin@example.com" />
+        </form>
+        <form id="form-2" method="post">
+          <input type="hidden" name="username" value="jane@example.com" />
+        </form>
+        <div>
+          <ButtonComponent
+            type="submit"
+            purpose="secondary"
+            form="form-1"
+            formMethod="get"
+            formAction="https://example.com/"
+            formTarget="_new"
+          >
+            Verder gaan als admin@example.com
+          </ButtonComponent>
+        </div>
+        <div>
+          <ButtonComponent
+            type="submit"
+            purpose="secondary"
+            form="form-2"
+            formMethod="get"
+            formAction="https://example.com/"
+            formTarget="_new"
+          >
+            Verder gaan als jane@example.com
+          </ButtonComponent>
+        </div>
+      </>
+    );
+  },
+  args: {
+    hidden: true,
+  },
+};
+
+export const ButtonPopover: Story = {
+  name: 'Button met popover',
+  parameters: {
+    docs: {
+      description: {
+        story: `De volgende situatie is er een Toggle Button die een popover met extra informatie kan tonen, en verbergen.
+
+De button is gemaakt met de HTML-attributen \`popovertarget\` en \`popovertargetaction\`.
+
+Test de werking door op de button te klikken. Als het goed is opent de popover. Klik nog een keer op de button. Als het goed is sluit de popover.`,
+      },
+    },
+  },
+  render: () => {
+    return (
+      <>
+        <ButtonComponent popoverTarget="popovertarget-panel" popoverTargetAction="toggle">
+          Spoilers...
+        </ButtonComponent>
+        <div
+          id="popovertarget-panel"
+          popover="manual"
+          style={{
+            margin: '0',
+            inset: 'auto',
+            positionArea: 'end',
+          }}
+        >
+          <p>Je kunt deze popover sluiten met dezelfde button!</p>
+        </div>
+      </>
+    );
+  },
+  args: {
+    hidden: true,
+  },
+};
+
+export const ButtonPopoverDialog: Story = {
+  name: 'Button met popover dialog',
+  parameters: {
+    docs: {
+      description: {
+        story: ``,
+      },
+    },
+  },
+  render: () => {
+    return (
+      <>
+        <ButtonComponent popoverTarget="popovertarget-dialog" popoverTargetAction="show">
+          Extra informatie
+        </ButtonComponent>
+        <dialog id="popovertarget-dialog" popover="manual">
+          <form>
+            Extra informatie
+            <input type="text" />
+            <ButtonComponent formMethod="dialog">Extra informatie</ButtonComponent>
+          </form>
+        </dialog>
+      </>
+    );
+  },
+  args: {
+    hidden: true,
+  },
+};
+
+export const ButtonFormNovalidate: Story = {
+  name: 'Button met formnovalidate attribuut',
+  parameters: {
+    docs: {
+      description: {
+        story: `De volgende situatie heeft twee submit buttons. Met de tweede button is het mogelijk het formulier zelf te verzenden wanneer het formulier niet volledig is ingevuld.
+
+Door het attribute \`formnovalidate\` op de \`<button>\` wordt de HTML-formuliervalidatie overgeslagen.
+
+Test deze functionaliteit door het formulier met de eerste button te verzenden. Als het goed is krijg je een melding dat het URL niet valide is. Gebruik dan de tweede button om het formulier te verzenden. Als het goed is, dan opent een nieuw browservenster met het adres: \`https://example.com/?url=https%3A%2F%2F\`.`,
+      },
+    },
+  },
+  args: {
+    formNovalidate: '',
+    label: 'Opslaan en later verdergaan',
+    children: undefined,
+  },
+  render: ({ ...args }) => {
+    return (
+      <form action="https://example.com/" target="_new">
+        <div>
+          <label htmlFor="invalid-url">Website:</label>
+        </div>
+        <div>
+          <input id="invalid-url" type="url" name="url" value="https://" autoComplete="url" />
+        </div>
+        <div>
+          <ButtonComponent type="submit">Volgende</ButtonComponent>
+        </div>
+        <div>
+          <ButtonComponent type="submit" {...args} />
+        </div>
+      </form>
+    );
+  },
+};
+
+const DivButton = ({
+  label,
+  iconStart,
+  iconEnd,
+  children,
+  pressed,
+  purpose,
+  disabled,
+  hint,
+  className,
+  ...args
+}: ButtonProps) => {
+  return (
+    <div
+      role="button"
+      tabIndex={0}
+      className={clsx('nl-button', className, {
+        'nl-button--pressed': pressed,
+        'nl-button--disabled': disabled,
+        'nl-button--primary': purpose === 'primary',
+        'nl-button--secondary': purpose === 'secondary',
+        'nl-button--subtle': purpose === 'subtle',
+        'nl-button--positive': Boolean(purpose) && hint === 'positive',
+        'nl-button--negative': Boolean(purpose) && hint === 'negative',
+      })}
+      {...args}
+    >
+      {iconStart && <span className="nl-button__icon">{iconStart}</span>}
+      {label && <span className="nl-button__label">{label}</span>}
+      {children}
+      {iconEnd && <span className="nl-button__icon">{iconEnd}</span>}
+    </div>
+  );
+};
+
+export const ButtonDiv: Story = {
+  name: 'De Button kan gemaakt worden met een div element',
+  args: {
+    label: 'Ik ben een button met een hele lange tekst',
+    iconStart: (
+      <Icon>
+        <IconAccessible />
+      </Icon>
+    ),
+    onClick: () => {
+      alert('geklikt');
+    },
+    onKeyPress: (evt: KeyboardEvent) => {
+      console.log(evt);
+      if (evt.target && evt.key === 'Enter') {
+        evt.target.click();
+      }
+    },
+    onKeyUp: (evt: KeyboardEvent) => {
+      console.log(evt);
+      if (evt.target && evt.key === ' ') {
+        evt.target.click();
+      }
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Het volgende voorbeeld is een Button die gemaakt is met een \`div\` element, in plaats van met een \`button\` element.
+
+Deze tests tonen aan dat de CSS implementatie van de button niet afhankeljk is van het \`button\` HTML element. Het visueel ontwerp van de Button kan hiermee ook toegepast worden in situaties waarin bestaande code met een \`div\` element niet aangepast kan worden, bijvoorbeeld wanneer alleen class names ingesteld kunnen worden.
+
+Een \`div\` is standaard niet bedienbaar met het toetsenbord. Om te beginnen moet de \`div\` focus kunnen krijgen, daarvoor is \`tabindex="0"\` toegevoegd. Om hetzelfde gedrag te hebben als een \`button\` element, moet de \`click\` event veroorzaakt worden bij de \`keypress\` event van de <kbd>Enter</kbd>-toets, en bij de de \`keyup\` event van de <kbd>Space</kbd>-toets.`,
+      },
+    },
+  },
+  render: DivButton,
+};
+
+export const DecorativeButtonContentEditable: Story = {
+  name: 'De Button label kan bewerkt met contentEditable',
+  args: {
+    role: undefined,
+    label: <span contentEditable="true">De tekst van deze button kan aangepast worden.</span>,
+    tabIndex: undefined,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Het volgende voorbeeld is een element dat er uit ziet Button, waarvan de tekst bewerkt kan worden, zoals in een UI editor.
+
+De Button is niet interactief, de button is decoratief.
+
+De Button moet door hulpsoftware niet herkend worden als button, omdat deze Button alleen decoratief is. De button heeft niet de toegankelijke rol van "button", doordat geen \`role="button"\` is gebruikt.
+
+De Button zelf moet niet focusbaar zijn, omdat dit element niet interactief is, en de logische tabvolgorde is dat alleen relevante elementen in de tabvolgorde voorkomen.`,
+      },
+    },
+  },
+  render: DivButton,
+};
+
+export const DecorativeButtonDisabled: Story = {
+  name: 'Decoratieve Disabled Button',
+  args: {
+    disabled: true,
+    role: undefined,
+    label: <span contentEditable="true">De tekst van deze button kan aangepast worden.</span>,
+    tabIndex: undefined,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Het volgende voorbeeld is een element dat er uit ziet Disabled Button.
+
+De Button is niet interactief, de button is decoratief.`,
+      },
+    },
+  },
+  render: DivButton,
+};
+
+export const DecorativeButtonPressed: Story = {
+  name: 'Decoratieve Pressed Button',
+  args: {
+    pressed: true,
+    role: undefined,
+    label: <span contentEditable="true">De tekst van deze button kan aangepast worden.</span>,
+    tabIndex: undefined,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Het volgende voorbeeld is een element dat er uit ziet Pressed Button.
+
+De Button is niet interactief, de button is decoratief.`,
+      },
+    },
+  },
+  render: DivButton,
+};
+
+const EditIconButton = ({ children, ...args }: ButtonProps) => {
+  return (
+    <ButtonComponent
+      purpose="subtle"
+      aria-label="Icon Start bewerken"
+      style={{
+        '--utrecht-icon-size': 'var(--nl-icon-inline-size)',
+        '--nl-button-min-block-size': '20px',
+        '--nl-button-min-inline-size': '20px',
+        '--nl-button-padding-inline-start': '0',
+        '--nl-button-padding-inline-end': '0',
+        '--nl-button-padding-block-start': '0',
+        '--nl-button-padding-line-height': '1',
+        '--nl-icon-inline-size': '20px',
+        '--nl-icon-block-size': '20px',
+        '--nl-button-padding-block-end': '0',
+      }}
+      {...args}
+    >
+      {children}
+    </ButtonComponent>
+  );
+};
+
+export const ButtonIconEditable: Story = {
+  name: 'Decoratieve Button waarvan de icons kunnen bewerkt worden via Buttons',
+  args: {
+    role: undefined,
+    label: <span contentEditable="true">De icons en de tekst van deze button kan aangepast worden.</span>,
+    tabIndex: undefined,
+    iconStart: <IconQuestionMark />,
+    iconEnd: <IconQuestionMark />,
+  },
+  render: function Render({ iconStart, iconEnd, ...args }: ButtonProps) {
+    const [updatedArgs, updateArgs] = useArgs();
+    console.log('xxx');
+    const random = <T,>(arr: T[]): T => {
+      const min = 0,
+        max = arr.length - 1,
+        range = max - min,
+        n = min + Math.round(Math.random() * range);
+
+      return arr[n];
+    };
+
+    const iconOptions = [
+      IconAccessible,
+      IconArrowLeft,
+      IconArrowRight,
+      IconBold,
+      IconBrandFacebook,
+      IconCheck,
+      IconLanguage,
+      IconLink,
+      IconMultiplier2x,
+      IconPdf,
+      IconPlus,
+      IconQuestionMark,
+      IconShoppingCart,
+      IconTrash,
+    ];
+
+    const randomIconStart = () => {
+      console.log('random start');
+      const RandomIcon = random(iconOptions);
+      updateArgs({
+        iconStart: <RandomIcon />,
+      });
+    };
+
+    const randomIconEnd = () => {
+      console.log('random end');
+      const RandomIcon = random(iconOptions);
+      updateArgs({
+        iconEnd: <RandomIcon />,
+      });
+    };
+
+    return (
+      <DivButton
+        {...args}
+        {...updatedArgs}
+        iconStart={
+          <EditIconButton aria-label="Icon Start bewerken" onClick={randomIconStart}>
+            {iconStart}
+          </EditIconButton>
+        }
+        iconEnd={
+          <EditIconButton aria-label="Icon End bewerken" onClick={randomIconEnd}>
+            {iconEnd}
+          </EditIconButton>
+        }
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Deze situatie is een decoratieve Button waarvan de icon bewerkt kan worden, zoals in een UI editor.
+
+De icon is in dit voorbeeld vervangen door een Button die de icon kan instellen op een random icon. Dit is een versimpeld voorbeeld omdat het makkelijker is om te maken en onderhouden. Een realistisch voorbeeld zou zijn dat de button een popup opent, waar je een ander Icon kan zoeken en kiezen.
+
+De Button moet door hulpsoftware niet herkend worden als button, omdat deze Button alleen decoratief is. Daarnaast moet een \`button\` rol niet genest zijn in een andere \`button\`. De button heeft niet de toegankelijke rol van "button", doordat geen \`role="button"\` is gebruikt.
+
+De Button zelf moet niet focusbaar zijn, omdat dit element niet interactief is, en de logische tabvolgorde is dat alleen relevante elementen in de tabvolgorde voorkomen.`,
+      },
+    },
   },
 };
