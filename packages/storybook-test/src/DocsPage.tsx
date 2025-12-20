@@ -1,5 +1,6 @@
 import { DocsHeader } from '@nl-design-system-candidate/storybook-shared/src/DocsHeader';
 import { Description, Stories } from '@storybook/addon-docs/blocks';
+import { AcceptanceCriteria } from './AcceptanceCriteria';
 import { DesignTokens } from './DesignTokens';
 import { TestReport } from './TestReport';
 
@@ -9,6 +10,7 @@ export const DocsPage = () => (
     <Description />
     <Stories />
     <DesignTokens />
+    <AcceptanceCriteria />
     <TestReport />
   </>
 );
