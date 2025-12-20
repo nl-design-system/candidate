@@ -5,6 +5,10 @@
   @include mixin.nl-button;
 }
 
+.nl-button[hidden] {
+  display: none;
+}
+
 .nl-button__icon {
   @include mixin.nl-button__icon;
 }
