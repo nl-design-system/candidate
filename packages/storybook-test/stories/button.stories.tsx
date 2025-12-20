@@ -23,6 +23,7 @@ import {
 } from '@tabler/icons-react';
 import { Button as ButtonComponent, type ButtonProps } from '../../components-react/button-react/src/button';
 import { Icon } from '../../components-react/icon-react/src/icon';
+import acceptanceCriteria from '../../docs/button-docs/docs/acceptance-criteria.md?raw';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 import tokens from '../../tokens/button-tokens/tokens.json';
@@ -110,6 +111,7 @@ const meta = {
         title: 'Button van de dag',
       },
       parameters: {
+        acceptanceCriteria,
         docs: {
           description: {
             component: componentMarkdown,
