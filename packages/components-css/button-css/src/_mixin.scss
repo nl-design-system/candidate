@@ -47,9 +47,7 @@
 }
 
 @mixin nl-button__icon {
-  align-self: flex-start;
-  block-size: var(--nl-icon-block-size);
-  inline-size: var(--nl-icon-inline-size);
+  /* stylelint-ignore-next-line empty-block */
 }
 
 @mixin nl-button__label {
