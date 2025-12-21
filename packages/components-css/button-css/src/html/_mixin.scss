@@ -17,6 +17,10 @@
     display: none;
   }
 
+  input[type="file" i] {
+    @include mixin.nl-button--file;
+  }
+
   input[type="button" i]:where(:disabled),
   input[type="reset" i]:where(:disabled),
   input[type="submit" i]:where(:disabled),
