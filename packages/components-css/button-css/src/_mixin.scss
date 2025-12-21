@@ -40,6 +40,24 @@
   cursor: not-allowed;
 }
 
+@mixin nl-button--file {
+  /*
+   * This is styling specifically for the text next to the file selector button in <input type="file">.
+   * Ensure color contrast of the text next to the file selector button is sufficient.
+   * Match the look and feel of surrounding text by using the same font.
+   * Do this by matching the surrounding text.
+   * Ensure the `line-height`, `letter-spacing` and `word-spacing` settings from the user stylesheet are used too.
+   * https://nldesignsystem.nl/wcag/1.4.12/
+   */
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  word-spacing: inherit;
+}
+
 @mixin nl-button--focus-visible {
   background-color: var(--nl-button-focus-background-color);
   border-color: var(--nl-button-focus-border-color);
