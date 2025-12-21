@@ -29,10 +29,10 @@
 
   /*
    * Button has formatted content but no icon or label elements. The display
-   * property should be inline, otherwise the column-gap is wrongly applied
+   * property should be inline-block, otherwise the column-gap is wrongly applied
    */
   &:has(> :where(:first-child)):not(:has(> :where(.nl-button__icon, .nl-button__label))) {
-    display: inline;
+    display: inline-block;
   }
 }
 
