@@ -377,7 +377,7 @@ describe('Button', () => {
     expect(button.childElementCount).toBe(2);
   });
 
-  it('render accessible label when passed to iconStart', () => {
+  it('prepends iconStart aria-label to the button accessible name', () => {
     render(
       <Button
         iconStart={
@@ -393,7 +393,7 @@ describe('Button', () => {
     expect(button).toHaveAccessibleName('Facebook Volg ons');
   });
 
-  it('render accessible label when passed to iconEnd', () => {
+  it('appends iconEnd aria-label to the button accessible name', () => {
     render(
       <Button
         iconEnd={
@@ -409,7 +409,7 @@ describe('Button', () => {
     expect(button).toHaveAccessibleName('Afspelen Dubbele snelheid');
   });
 
-  it('render accessible label when passed to iconStart and iconEnd', () => {
+  it('concatenates iconStart and iconEnd aria-labels in order', () => {
     render(
       <Button
         iconStart={
