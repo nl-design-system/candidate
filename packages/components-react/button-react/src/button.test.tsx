@@ -442,8 +442,8 @@ describe('Button', () => {
       render(
         <Button
           iconOnly
-          iconStart={<span role="presentation">❤️</span>}
-          iconEnd={<span role="presentation">🫶</span>}
+          iconStart={<span aria-hidden="true">❤️</span>}
+          iconEnd={<span aria-hidden="true">🫶</span>}
           label={<span data-testid="label">Like</span>}
         />,
       );

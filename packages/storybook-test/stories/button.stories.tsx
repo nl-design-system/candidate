@@ -85,7 +85,6 @@ import {
 } from '../src/WcagTests';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
-import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/test.scss';
 import '@utrecht/icon-css/dist/index.css';
 
@@ -110,7 +109,6 @@ const meta = {
         lang: 'nl',
         title: 'Button van de dag',
       },
-      component: ButtonComponent,
       parameters: {
         docs: {
           description: {
@@ -1916,7 +1914,7 @@ export const ButtonPopoverDialog: Story = {
         </ButtonComponent>
         <dialog id="popovertarget-dialog" popover="manual">
           <form>
-            Extra informatie
+            <p>Extra informatie in een dialog...</p>
             <input type="text" />
             <ButtonComponent formMethod="dialog">Extra informatie</ButtonComponent>
           </form>

@@ -49,29 +49,6 @@ const meta = {
     ],
   },
   title: 'Componenten/Button',
-  // render: function Render(args) {
-  //   const [updatedArgs, updateArgs] = useArgs();
-
-  //   const onFocus = () => {
-  //     console.log('Open');
-  //     action('open');
-  //     updateArgs({
-  //       children: 'Open',
-  //       'aria-expanded': true,
-  //     });
-  //   };
-
-  //   const onBlur = () => {
-  //     console.log('Close');
-  //     action('close');
-  //     updateArgs({
-  //       children: 'Close',
-  //       'aria-expanded': false,
-  //     });
-  //   };
-  //   console.log(updatedArgs);
-  //   return <Button {...args} {...updatedArgs} onFocus={onFocus} onBlur={onBlur} />;
-  // },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -462,11 +439,7 @@ export const ButtonSmallTargetsize: Story = {
       });
     };
 
-    return (
-      <>
-        <Button {...args} {...updatedArgs} onClick={onClick} />
-      </>
-    );
+    return <Button {...args} {...updatedArgs} onClick={onClick} />;
   },
 
   parameters: {
