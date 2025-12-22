@@ -135,8 +135,26 @@ describe('Button', () => {
     expect(button).toHaveAttribute('aria-expanded', 'true');
   });
 
-  it('can be marked as togglebutton via "aria-pressed"', () => {
+  it('can be marked as pressed button without "aria-pressed"', () => {
     render(<Button pressed>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).not.toHaveAttribute('aria-pressed');
+  });
+
+  it('can be marked as toggle button via "aria-pressed"', () => {
+    render(<Button toggle>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('aria-pressed', 'false');
+  });
+
+  it('can be marked as pressed toggle button via "aria-pressed"', () => {
+    render(
+      <Button pressed toggle>
+        {text}
+      </Button>,
+    );
     const button = screen.getByRole('button');
 
     expect(button).toHaveAttribute('aria-pressed', 'true');
