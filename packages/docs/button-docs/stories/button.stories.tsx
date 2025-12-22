@@ -313,13 +313,6 @@ export const HTMLButton: Story = {
       },
     },
   },
-  decorators: [
-    (StoryComponent) => (
-      <div className="nl-button--html">
-        <StoryComponent />
-      </div>
-    ),
-  ],
   render: (args: ButtonProps) => {
     const { label, ...rest } = args;
     return <button {...rest}>{label}</button>;
@@ -339,13 +332,6 @@ export const HTMLInputButton: Story = {
       },
     },
   },
-  decorators: [
-    (StoryComponent) => (
-      <div className="nl-button--html">
-        <StoryComponent />
-      </div>
-    ),
-  ],
   render: (args: ButtonProps) => {
     const { label, ...rest } = args;
     return <input type="button" {...rest} value={label} />;

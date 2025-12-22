@@ -177,6 +177,6 @@
 }
 
 /* html */
-.nl-button--html {
-  @include mixinHTML.nl-button--html;
+.nl-html--button {
+  @include mixinHTML.nl-html--button;
 }

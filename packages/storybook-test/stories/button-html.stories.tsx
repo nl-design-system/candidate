@@ -28,7 +28,7 @@ const meta = {
       component: ButtonComponent,
       decorators: [
         (Story) => (
-          <div className="nl-button--html">
+          <div className="nl-html--button">
             <Story />
           </div>
         ),
