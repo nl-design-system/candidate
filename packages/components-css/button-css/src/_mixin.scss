@@ -64,14 +64,34 @@
   color: var(--nl-button-focus-color);
 }
 
-@mixin nl-button__icon {
-  /* stylelint-ignore-next-line empty-block */
+@mixin nl-button--icon-only {
+  padding-block-end: var(--nl-button-icon-only-padding-block-end, 0);
+  padding-block-start: var(--nl-button-icon-only-padding-block-start, 0);
+  padding-inline-end: var(--nl-button-icon-only-padding-inline-end, 0);
+  padding-inline-start: var(--nl-button-icon-only-padding-inline-start, 0);
 }
 
 @mixin nl-button__label {
   background-color: inherit;
   overflow-wrap: break-word;
   text-box-trim: trim-both;
+}
+
+@mixin nl-button__label--sr-only {
+  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
+  block-size: 1px !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  inline-size: 1px !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: -1px !important;
+  overflow: hidden !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
 }
 
 /* DEFAULT */
