@@ -31,7 +31,7 @@
    * Button has formatted content but no icon or label elements. The display
    * property should be inline-block, otherwise the column-gap is wrongly applied
    */
-  &:has(> :where(:first-child)):not(:has(> :where(.nl-button__icon, .nl-button__label))) {
+  &:has(> :where(:first-child)):not(:has(> :where(.nl-button__icon-end, .nl-button__icon-start, .nl-button__label))) {
     display: inline-block;
   }
 }
@@ -69,6 +69,14 @@
   padding-block-start: var(--nl-button-icon-only-padding-block-start, 0);
   padding-inline-end: var(--nl-button-icon-only-padding-inline-end, 0);
   padding-inline-start: var(--nl-button-icon-only-padding-inline-start, 0);
+}
+
+@mixin nl-button__icon-start {
+  /* stylelint-ignore-next-line empty-block */
+}
+
+@mixin nl-button__icon-end {
+  /* stylelint-ignore-next-line empty-block */
 }
 
 @mixin nl-button__label {

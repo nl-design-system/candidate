@@ -162,10 +162,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       disabled={htmlDisabled}
       {...restProps}
     >
-      {iconStart && <span className="nl-button__icon">{iconStart}</span>}
+      {iconStart && <span className="nl-button__icon-start">{iconStart}</span>}
       {label && <span className="nl-button__label">{label}</span>}
       {shouldWrapChildren ? <span className={iconOnly ? 'nl-button__label' : ''}>{children}</span> : children}
-      {iconEnd && <span className="nl-button__icon">{iconEnd}</span>}
+      {iconEnd && <span className="nl-button__icon-end">{iconEnd}</span>}
     </button>
   );
 });
