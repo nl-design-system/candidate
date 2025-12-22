@@ -57,6 +57,7 @@
   "scripts": {
     "build": "pnpm --recursive run build",
     "clean": "pnpm --recursive run clean",
+    "dev": "pnpm run --parallel --recursive storybook",
     "lint": "pnpm run --sequential '/^lint:.+$/'",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint:js": "eslint",
