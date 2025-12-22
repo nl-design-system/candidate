@@ -1994,10 +1994,10 @@ const DivButton = ({
       })}
       {...args}
     >
-      {iconStart && <span className="nl-button__icon">{iconStart}</span>}
+      {iconStart && <span className="nl-button__icon-start">{iconStart}</span>}
       {label && <span className="nl-button__label">{label}</span>}
       {children}
-      {iconEnd && <span className="nl-button__icon">{iconEnd}</span>}
+      {iconEnd && <span className="nl-button__icon-end">{iconEnd}</span>}
     </div>
   );
 };

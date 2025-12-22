@@ -140,9 +140,18 @@ const meta = {
         type: { summary: undefined },
       },
     },
-    icon: {
-      name: '.nl-button__icon',
-      description: 'Een child element met daarin een icoon.',
+    iconStart: {
+      name: '.nl-button__icon-start',
+      description: 'Een child element met daarin een icoon voor aan het begin.',
+      control: false,
+      table: {
+        category: CHILDREN,
+        type: { summary: undefined },
+      },
+    },
+    iconEnd: {
+      name: '.nl-button__icon-end',
+      description: 'Een child element met daarin een icoon voor aan het eind.',
       control: false,
       table: {
         category: CHILDREN,

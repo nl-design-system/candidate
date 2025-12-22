@@ -38,7 +38,8 @@ import '@nl-design-system-candidate/button-css/dist/button.css';
 | `.nl-button--subtle`     | Maakt van de button [een subtle button](https://nl-design-system.github.io/candidate/?path=/docs/button--documentatie#subtle-button-1)       |
 | `.nl-button--positive`   | Indicatie van een positief of bevestigend resultaat                                                                                          |
 | `.nl-button--negative`   | Indicatie van een negatief resultaat                                                                                                         |
-| `.nl-button__icon`       | Een child element (`<span>`) met een icoon                                                                                                   |
+| `.nl-button__icon-start` | Een child element (`<span>`) met een voor aan het begin icoon                                                                                |
+| `.nl-button__icon-end`   | Een child element (`<span>`) met een voor aan het eind icoon                                                                                 |
 
 ## Beschikbare attributen
 
@@ -66,12 +67,13 @@ tonen wanneer de button ingedrukt wordt.
 ## Een icoon voor of achter het label
 
 Er kan een icoon voor of achter het label geplaatst worden door een `<span>`
-element met de class `nl-button__icon` voor of achter het label te plaatsen.
+element met de class `nl-button__icon-start` voor of `nl-button__icon-end`
+achter het label te plaatsen.
 
 ```html
 <!-- Een icon voor het label -->
 <button class="nl-button">
-  <span class="nl-button__icon">❤️</span>
+  <span class="nl-button__icon-start">❤️</span>
   Vind ik leuk!
 </button>
 ```
@@ -80,7 +82,7 @@ element met de class `nl-button__icon` voor of achter het label te plaatsen.
 <!-- Een icon achter het label -->
 <button class="nl-button">
   Vind ik leuk!
-  <span class="nl-button__icon">❤️</span>
+  <span class="nl-button__icon-end">❤️</span>
 </button>
 ```
 
@@ -91,7 +93,7 @@ element. Gebeurd dit niet, dan komt er extra ruimte rond de elementen in het lab
 
 ```html
 <button class="nl-button">
-  <span class="nl-button__icon">❤️</span>
+  <span class="nl-button__icon-start">❤️</span>
   <span>Vind <em>ik</em> leuk!</span>
 </button>
 ```

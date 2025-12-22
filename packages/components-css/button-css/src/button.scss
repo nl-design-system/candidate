@@ -16,6 +16,13 @@
 .nl-button--icon-only .nl-button__label {
   @include mixin.nl-button__label--sr-only;
 }
+
+.nl-button__icon-start {
+  @include mixin.nl-button__icon-start;
+}
+
+.nl-button__icon-end {
+  @include mixin.nl-button__icon-end;
 }
 
 .nl-button__label {
