@@ -152,6 +152,29 @@ De styling komt van de \`.nl-button--disabled\` class.
     },
   },
 };
+
+export const AlleenEenIcon: Story = {
+  name: 'Alleen een icon',
+  argTypes: {
+    iconStart: {
+      table: {
+        disable: false,
+      },
+    },
+  },
+  args: {
+    iconOnly: true,
+    iconStart: <Icon />,
+    label: 'Klik mij!',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button met alleen een icon. Het label is niet zichtbaar, maar wel aanwezig voor toegankelijkheid.`,
+      },
+    },
+  },
+};
 export const IconVoorHetLabel: Story = {
   name: 'Icon voor het label',
   argTypes: {

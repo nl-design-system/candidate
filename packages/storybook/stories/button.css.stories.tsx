@@ -33,6 +33,7 @@ export const PrimaryButton = Stories.PrimaryButton;
 export const SecondaryButton = Stories.SecondaryButton;
 export const SubtleButton = Stories.SubtleButton;
 export const DisabledButton = Stories.DisabledButton;
+export const AlleenEenIcon = Stories.AlleenEenIcon;
 export const IconVoorHetLabel = Stories.IconVoorHetLabel;
 export const IconAchterHetLabel = Stories.IconAchterHetLabel;
 export const GeformatteerdLabel = Stories.GeformatteerdLabel;
