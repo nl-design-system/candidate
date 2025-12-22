@@ -662,6 +662,37 @@ export const ButtonSubmit: Story = {
   },
 };
 
+export const ButtonSubmitDisabled: Story = {
+  name: 'Verzend Button Disabled',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Button die een formulier niet verstuurt omdat deze disabled is. Vul iets in en klik op de button. Er verschijnt geen melding`,
+      },
+    },
+  },
+  render: (_props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return (
+      <form
+        action="/"
+        onSubmit={(event) => {
+          event.preventDefault();
+          // @ts-expect-error: Use alert to give user feedback
+          alert('Verzonden'); // eslint-disable-line
+        }}
+      >
+        <input type="text" placeholder="Vul iets in en druk dan op de verzend knop" />
+        <br />
+        <Button type="submit" disabled>
+          Verzenden
+        </Button>
+      </form>
+    );
+  },
+};
+
 export const NoLabel: Story = {
   name: 'Button zonder label',
   args: {
