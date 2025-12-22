@@ -24,6 +24,7 @@
   padding-inline-start: var(--nl-button-padding-inline-start);
   text-align: start;
   text-box-trim: trim-both;
+  text-decoration: none;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -33,6 +34,7 @@
    * Button has formatted content but no icon or label elements. The display
    * property should be inline-block, otherwise the column-gap is wrongly applied
    */
+  &:not(:has(*)),
   &:has(> :where(:first-child)):not(:has(> :where(.nl-button__icon-end, .nl-button__icon-start, .nl-button__label))) {
     display: inline-block;
   }

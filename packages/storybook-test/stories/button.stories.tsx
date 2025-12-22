@@ -2213,3 +2213,46 @@ De Button zelf moet niet focusbaar zijn, omdat dit element niet interactief is, 
     },
   },
 };
+
+export const LinkAsButton: Story = {
+  name: 'Link als button',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan moet dat element er als een button uitzien in High Contrast Mode',
+      },
+    },
+  },
+  render: (props: ButtonProps) => (
+    <>
+      <ButtonComponent {...props} />
+      <a href="#" role="button" className="nl-button" aria-disabled={props.disabled}>
+        {props.label}
+      </a>
+    </>
+  ),
+};
+
+export const LinkAsButtonDisabled: Story = {
+  name: 'Link als button disabled',
+  args: {
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan moet dat element er als een button uitzien in High Contrast Mode',
+      },
+    },
+  },
+  render: (props: ButtonProps) => (
+    <>
+      <ButtonComponent {...props} />
+      <a href="#" role="button" className="nl-button nl-button--disabled" aria-disabled={props.disabled}>
+        {props.label}
+      </a>
+    </>
+  ),
+};
