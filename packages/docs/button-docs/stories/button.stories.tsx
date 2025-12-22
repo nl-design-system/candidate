@@ -253,6 +253,7 @@ export const ToggleButton: Story = {
   args: {
     label: 'Ingedrukt',
     pressed: true,
+    toggle: true,
   },
   parameters: {
     docs: {

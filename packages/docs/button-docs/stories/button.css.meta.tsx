@@ -120,6 +120,17 @@ const meta = {
         type: { summary: undefined },
       },
     },
+    toggle: {
+      name: 'aria-pressed',
+      description:
+        'Voor hulpsoftware wordt de button aangekondigd als Toggle Button, ook wanneer de button nog niet ingedrukt is.',
+      control: 'select',
+      table: {
+        options: [undefined, 'true', 'false'],
+        category: ATTRIBUTES,
+        type: { summary: undefined },
+      },
+    },
     children: {
       name: 'content',
       description: 'De content van de button.',

@@ -84,6 +84,15 @@ const meta = {
       description: 'Een icon achter de content van de button',
       table: { category: 'Props', type: { summary: 'ReactNode' } },
     },
+    toggle: {
+      control: 'boolean',
+      description:
+        'Voor hulpsoftware wordt de button aangekondigd als Toggle Button, ook wanneer de button nog niet ingedrukt is.',
+      table: {
+        category: 'Props',
+        type: { summary: 'boolean' },
+      },
+    },
     // @ts-expect-error: The restProps are indeed not part of the accepted props, but included here for documentation purpose
     restProps: {
       name: '{...restProps}',

@@ -100,6 +100,13 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
      * However, the developer is responsible for managing onClick handlers!
      */
     disabled?: unknown;
+
+    /**
+     * Indicates to assistive technologies the button is a toggle button, that is either pressed or not pressed.
+     * For toggle buttons use `<Button toggle>` for not pressed, and `<Button toggle pressed>` for pressed.
+     * Do not use `toggle` for buttons that only look pressed, but aren't toggle buttons.
+     */
+    toggle?: boolean;
   };
 
 /**
@@ -120,6 +127,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
     pressed,
     type = 'button',
     label,
+    toggle,
     ...restProps
   } = props;
 
@@ -149,7 +157,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
         'nl-button--negative': Boolean(purpose) && hint === 'negative',
         'nl-button--icon-only': iconOnly,
       })}
-      aria-pressed={toggle ? (pressed ? 'true' : 'false') : undefined}
+      aria-pressed={toggle ? String(Boolean(pressed)) : undefined}
       aria-disabled={disabled ? 'true' : undefined}
       disabled={htmlDisabled}
       {...restProps}
