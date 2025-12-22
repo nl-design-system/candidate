@@ -31,6 +31,11 @@ export function TestReport() {
       href: 'https://nldesignsystem.nl/baseline/2025-07/',
       text: 'NL Design System Baseline: juli 2025',
     },
+    {
+      date: '2025-11-21',
+      href: 'https://nldesignsystem.nl/baseline/2025-11/',
+      text: 'NL Design System Baseline: november 2025',
+    },
   ];
 
   if (!testResult) {

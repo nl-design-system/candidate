@@ -1,17 +1,80 @@
 import type { ComponentType } from 'react';
-import { merge } from 'lodash-es';
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
+import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/test.scss';
 import '@utrecht/icon-css/dist/index.css';
-import packageJSON from '../../components-react/button-react/package.json';
-import { Icon } from '../../components-react/icon-react/src/icon';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import { IconAccessible } from '@tabler/icons-react';
+import { merge } from 'lodash-es';
+import packageJSON from '../../components-react/button-react/package.json';
 import { Button as ButtonComponent, type ButtonProps } from '../../components-react/button-react/src/button';
-import reactMeta from '../../docs/button-docs/stories/button.react.meta';
+import { Icon } from '../../components-react/icon-react/src/icon';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
+import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 import tokens from '../../tokens/button-tokens/tokens.json';
+import {
+  WCAG22_111_NON_TEXT_CONTENT,
+  WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
+  WCAG22_122_CAPTIONS_PRERECORDED,
+  WCAG22_123_AUDIO_DESCRIPTION_OR_MEDIA_ALTERNATIVE_PRERECORDED,
+  WCAG22_124_CAPTIONS_LIVE,
+  WCAG22_125_AUDIO_DESCRIPTION_PRERECORDED,
+  WCAG22_131_INFO_AND_RELATIONSHIPS,
+  WCAG22_132_MEANINGFUL_SEQUENCE,
+  WCAG22_133_SENSORY_CHARACTERISTICS,
+  WCAG22_134_ORIENTATION,
+  WCAG22_135_IDENTIFY_INPUT_PURPOSE,
+  WCAG22_1410_REFLOW,
+  WCAG22_1411_NON_TEXT_CONTRAST,
+  WCAG22_1412_TEXT_SPACING,
+  WCAG22_1413_CONTENT_ON_HOVER_OR_FOCUS,
+  WCAG22_141_USE_OF_COLOR,
+  WCAG22_142_AUDIO_CONTROL,
+  WCAG22_143_CONTRAST_MINIMUM,
+  WCAG22_144_RESIZE_TEXT,
+  WCAG22_145_IMAGES_OF_TEXT,
+  WCAG22_211_KEYBOARD,
+  WCAG22_212_NO_KEYBOARD_TRAP,
+  WCAG22_214_CHARACTER_KEY_SHORTCUTS,
+  WCAG22_221_TIMING_ADJUSTABLE,
+  WCAG22_222_PAUSE_STOP_HIDE,
+  WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+  WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+  WCAG22_241_BYPASS_BLOCKS,
+  WCAG22_242_PAGE_TITLED,
+  WCAG22_243_FOCUS_ORDER,
+  WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+  WCAG22_245_MULTIPLE_WAYS,
+  WCAG22_246_HEADINGS_AND_LABELS,
+  WCAG22_247_FOCUS_VISIBLE,
+  WCAG22_251_POINTER_GESTURES,
+  WCAG22_252_POINTER_CANCELLATION,
+  WCAG22_253_LABEL_IN_NAME,
+  WCAG22_254_MOTION_ACTUATION,
+  WCAG22_257_DRAGGING_MOVEMENTS,
+  WCAG22_258_TARGET_SIZE_MINIMUM,
+  WCAG22_311_LANGUAGE_OF_PAGE,
+  WCAG22_312_LANGUAGE_OF_PARTS,
+  WCAG22_321_ON_FOCUS,
+  WCAG22_322_ON_INPUT,
+  WCAG22_323_CONSISTENT_NAVIGATION,
+  WCAG22_324_CONSISTENT_IDENTIFICATION,
+  WCAG22_326_CONSISTENT_HELP,
+  WCAG22_331_ERROR_IDENTIFICATION,
+  WCAG22_332_LABELS_OR_INSTRUCTIONS,
+  WCAG22_333_ERROR_SUGGESTION,
+  WCAG22_334_ERROR_PREVENTION_LEGAL_FINANCIAL_DATA,
+  WCAG22_337_REDUNDANT_ENTRY,
+  WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
+  WCAG22_412_NAME_ROLE_VALUE,
+  WCAG22_413_STATUS_MESSAGES,
+} from '../src/WcagTests';
+
+const ButtonDecorator: Decorator = (Story) => (
+  <div className="test">
+    <Story />
+  </div>
+);
 
 const meta = {
   ...merge({
@@ -20,19 +83,13 @@ const meta = {
       args: {
         label: 'Klik mij nu!',
       },
+      component: ButtonComponent,
+      decorators: [ButtonDecorator],
       globals: {
         dir: 'ltr',
         lang: 'nl',
         title: 'Button van de dag',
       },
-      component: ButtonComponent,
-      decorators: [
-        (Story) => (
-          <div className="test">
-            <Story />
-          </div>
-        ),
-      ],
       parameters: {
         docs: {
           description: {
@@ -49,6 +106,60 @@ const meta = {
             url: packageJSON.homepage,
           },
         ],
+        testResult: {
+          notApplicable: [
+            WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
+            WCAG22_122_CAPTIONS_PRERECORDED,
+            WCAG22_123_AUDIO_DESCRIPTION_OR_MEDIA_ALTERNATIVE_PRERECORDED,
+            WCAG22_124_CAPTIONS_LIVE,
+            WCAG22_125_AUDIO_DESCRIPTION_PRERECORDED,
+            WCAG22_132_MEANINGFUL_SEQUENCE,
+            WCAG22_133_SENSORY_CHARACTERISTICS,
+            WCAG22_134_ORIENTATION,
+            WCAG22_135_IDENTIFY_INPUT_PURPOSE,
+            WCAG22_1410_REFLOW,
+            WCAG22_1413_CONTENT_ON_HOVER_OR_FOCUS,
+            WCAG22_141_USE_OF_COLOR,
+            WCAG22_142_AUDIO_CONTROL,
+            WCAG22_214_CHARACTER_KEY_SHORTCUTS,
+            WCAG22_221_TIMING_ADJUSTABLE,
+            WCAG22_222_PAUSE_STOP_HIDE,
+            WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+            WCAG22_241_BYPASS_BLOCKS,
+            WCAG22_242_PAGE_TITLED,
+            WCAG22_243_FOCUS_ORDER,
+            WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+            WCAG22_245_MULTIPLE_WAYS,
+            WCAG22_251_POINTER_GESTURES,
+            WCAG22_254_MOTION_ACTUATION,
+            WCAG22_257_DRAGGING_MOVEMENTS,
+            WCAG22_311_LANGUAGE_OF_PAGE,
+            WCAG22_322_ON_INPUT,
+            WCAG22_323_CONSISTENT_NAVIGATION,
+            WCAG22_326_CONSISTENT_HELP,
+            WCAG22_331_ERROR_IDENTIFICATION,
+            WCAG22_332_LABELS_OR_INSTRUCTIONS,
+            WCAG22_333_ERROR_SUGGESTION,
+            WCAG22_334_ERROR_PREVENTION_LEGAL_FINANCIAL_DATA,
+            WCAG22_337_REDUNDANT_ENTRY,
+            WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
+            WCAG22_413_STATUS_MESSAGES,
+          ],
+          notTested: [
+            WCAG22_111_NON_TEXT_CONTENT,
+            WCAG22_1411_NON_TEXT_CONTRAST,
+            WCAG22_143_CONTRAST_MINIMUM,
+            WCAG22_145_IMAGES_OF_TEXT,
+            WCAG22_212_NO_KEYBOARD_TRAP,
+            WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+            WCAG22_246_HEADINGS_AND_LABELS,
+            WCAG22_253_LABEL_IN_NAME,
+            WCAG22_258_TARGET_SIZE_MINIMUM,
+            WCAG22_312_LANGUAGE_OF_PARTS,
+            WCAG22_321_ON_FOCUS,
+            WCAG22_324_CONSISTENT_IDENTIFICATION,
+          ],
+        },
         tokens,
       },
     },
@@ -75,6 +186,32 @@ export const ButtonIconStart: Story = {
         story: `Een button met een icon aan de linkerkant van de content`,
       },
     },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -92,6 +229,32 @@ export const ButtonIconEnd: Story = {
       description: {
         story: `Een button met een icon aan de rechterkant van de content`,
       },
+    },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
 };
@@ -111,6 +274,32 @@ export const ButtonUtrechtIconStart: Story = {
         story: `Een button met een utrecht-icon aan de linkerkant van de content`,
       },
     },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -129,6 +318,32 @@ export const ButtonUtrechtIconEnd: Story = {
         story: `Een button met een utrecht-icon aan de rechterkant van de content`,
       },
     },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -142,6 +357,32 @@ export const ButtonLargeText: Story = {
       description: {
         story: `Een Button waarvan de content 200% vergroot is. De content loopt niet uit de button`,
       },
+    },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
 };
@@ -159,6 +400,32 @@ export const ButtonDifferentLanguage: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -174,14 +441,40 @@ export const ButtonVeryLongName = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
 export const ButtonRTL = {
   name: 'Button in Arabisch',
   args: {
-    label: 'مثال على المجال',
     dir: 'rtl',
+    label: 'مثال على المجال',
     lang: 'ar',
   },
   parameters: {
@@ -192,6 +485,32 @@ export const ButtonRTL = {
 Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
       },
     },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   status: { type: [] },
 };
@@ -200,8 +519,8 @@ export const ButtonVerticalRL = {
   name: 'Button in Japans',
   args: {
     label: 'これはテストテキスト。日本語は楽しいです。',
-    style: { writingMode: 'vertical-rl' },
     lang: 'ja',
+    style: { writingMode: 'vertical-rl' },
   },
   parameters: {
     docs: {
@@ -213,6 +532,32 @@ Het moet mogelijk zijn het \`lang\` attribute en de \`writing-mode: 'vertical-rl
     },
   },
   status: { type: [] },
+  testResult: {
+    date: '2025-12-12',
+    notTested: [
+      WCAG22_111_NON_TEXT_CONTENT,
+      WCAG22_1411_NON_TEXT_CONTRAST,
+      WCAG22_143_CONTRAST_MINIMUM,
+      WCAG22_145_IMAGES_OF_TEXT,
+      WCAG22_212_NO_KEYBOARD_TRAP,
+      WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+      WCAG22_246_HEADINGS_AND_LABELS,
+      WCAG22_252_POINTER_CANCELLATION,
+      WCAG22_253_LABEL_IN_NAME,
+      WCAG22_258_TARGET_SIZE_MINIMUM,
+      WCAG22_321_ON_FOCUS,
+      WCAG22_324_CONSISTENT_IDENTIFICATION,
+    ],
+    pass: [
+      WCAG22_131_INFO_AND_RELATIONSHIPS,
+      WCAG22_1412_TEXT_SPACING,
+      WCAG22_144_RESIZE_TEXT,
+      WCAG22_211_KEYBOARD,
+      WCAG22_247_FOCUS_VISIBLE,
+      WCAG22_312_LANGUAGE_OF_PARTS,
+      WCAG22_412_NAME_ROLE_VALUE,
+    ],
+  },
 };
 
 export const ButtonReset: Story = {
@@ -223,12 +568,38 @@ export const ButtonReset: Story = {
         story: `Een Button die formuliervelden leegt. Vul iets in het tekst veld. Na een klik op de button is het veld weer leeg`,
       },
     },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: (_props, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
     return (
       <form>
-        <input type="text" placeholder="Vul iets in en druk dan op de reset knop" />
+        <input type="text" />
         <br />
         <Button type="reset">Reset</Button>
       </form>
@@ -244,6 +615,32 @@ export const ButtonSubmit: Story = {
       description: {
         story: `Een Button die een formulier verstuurt. Vul iets in en klik op de button. Er verschijnt een melding`,
       },
+    },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
   render: (_props, { component }) => {
@@ -265,42 +662,11 @@ export const ButtonSubmit: Story = {
   },
 };
 
-export const ButtonSubmitDisabled: Story = {
-  name: 'Verzend Button Disabled',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Een Button die een formulier verstuurt`,
-      },
-    },
-  },
-  render: (_props, { component }) => {
-    const Button = component as ComponentType<ButtonProps>;
-    return (
-      <form
-        action="/"
-        onSubmit={(event) => {
-          event.preventDefault();
-          // @ts-expect-error: Use alert to give user feedback
-          alert('Verzonden'); // eslint-disable-line
-        }}
-      >
-        <input type="text" placeholder="Vul iets in en druk dan op de verzend knop" />
-        <br />
-        <Button type="submit" disabled>
-          Verzenden
-        </Button>
-      </form>
-    );
-  },
-};
-
 export const NoLabel: Story = {
   name: 'Button zonder label',
   args: {
-    label: undefined,
     'aria-label': 'Button zonder content',
+    label: undefined,
   },
   parameters: {
     docs: {
@@ -309,6 +675,32 @@ export const NoLabel: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -324,15 +716,41 @@ export const SmallLabel: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
 export const ButtonMenuClosed: Story = {
   name: 'Button Menu Closed',
   args: {
-    label: 'Menu',
     'aria-expanded': 'false',
     'aria-haspopup': 'menu',
+    label: 'Menu',
   },
   parameters: {
     docs: {
@@ -342,15 +760,41 @@ export const ButtonMenuClosed: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
 export const ButtonMenuExpanded: Story = {
   name: 'Button Menu Expanded',
   args: {
-    label: 'Menu',
     'aria-expanded': 'true',
     'aria-haspopup': 'menu',
+    label: 'Menu',
   },
   parameters: {
     docs: {
@@ -360,15 +804,41 @@ export const ButtonMenuExpanded: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
 export const ButtonDialogClosed: Story = {
   name: 'Button Dialog Closed',
   args: {
-    label: 'Afsluiten',
     'aria-expanded': 'false',
     'aria-haspopup': 'dialog',
+    label: 'Afsluiten',
   },
   parameters: {
     docs: {
@@ -378,15 +848,41 @@ export const ButtonDialogClosed: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
 export const ButtonDialogExpanded: Story = {
   name: 'Button Dialog Expanded',
   args: {
-    label: 'Afsluiten',
     'aria-expanded': 'true',
     'aria-haspopup': 'dialog',
+    label: 'Afsluiten',
   },
   parameters: {
     docs: {
@@ -396,6 +892,32 @@ export const ButtonDialogExpanded: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -412,6 +934,32 @@ export const WithChildren: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: (props, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
@@ -422,22 +970,47 @@ export const WithChildren: Story = {
 export const WithChildrenIcon: Story = {
   name: 'Children in plaats van label met een icon',
   args: {
-    label: undefined,
-    style: { '--nl-button-column-gap': '3em' },
     iconEnd: (
       <Icon>
         <IconAccessible />
       </Icon>
     ),
+    label: undefined,
+    style: { '--nl-button-column-gap': '3em' },
   },
   parameters: {
     docs: {
       description: {
-        story:
-          'Een knop die children gebruikt in plaats van de label prop inclusief icon. De ruimte tussen het icon en de content is instelbaar via een CSS property',
+        story: 'Een knop die children gebruikt ipv de label prop inclusief icon',
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: (props, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
@@ -459,6 +1032,32 @@ export const WithFormattedChildren: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: (props, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
@@ -473,22 +1072,48 @@ export const WithFormattedChildren: Story = {
 export const WithFormattedChildrenAndIcon: Story = {
   name: 'Children formatted in plaats van label met een icon',
   args: {
-    label: undefined,
-    style: { '--nl-button-column-gap': '3em' },
     iconEnd: (
       <Icon>
         <IconAccessible />
       </Icon>
     ),
+    label: undefined,
+    style: { '--nl-button-column-gap': '3em' },
   },
   parameters: {
     docs: {
       description: {
         story:
-          'De content is via children geplaatst en bevat HTML markup. Merk op dat, in de gerenderde html, de children gewrapped zijn in een `<span>` nu er ook een Icon aanwezig is. Daardoor is de ingestelde ruimte tussen de icon niet toegepast op de HTML elementen in de content',
+          'Een knop die children gebruikt in plaats van de label prop inclusief icon. De ruimte tussen het icon en de content is instelbaar via een CSS property',
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: (props, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
@@ -511,26 +1136,52 @@ export const FullWidth: Story = {
         story: `De parent van een button kan de breedte van de button bepalen.`,
       },
     },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: ({ label, ...props }, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
     return (
       <>
-        <div style={{ display: 'flex', resize: 'both', overflow: 'auto' }}>
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
           <Button style={{ flex: 1 }} {...props} label={label} />
         </div>
         <br />
-        <div style={{ display: 'flex', resize: 'both', overflow: 'auto' }}>
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
           <Button style={{ flex: 1 }} {...props}>
             {label}
           </Button>
         </div>
         <br />
-        <div style={{ display: 'flex', resize: 'both', overflow: 'auto', width: '300px' }}>
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
           <Button style={{ flex: 1 }} {...props} label={label} />
         </div>
         <br />
-        <div style={{ display: 'flex', resize: 'both', overflow: 'auto', width: '300px' }}>
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
           <Button style={{ flex: 1 }} {...props}>
             {label}
           </Button>
@@ -542,12 +1193,12 @@ export const FullWidth: Story = {
 export const FullWidthWithIcon: Story = {
   name: 'Volle breedte met icon',
   args: {
-    label: 'Ik ben een button met een hele lange tekst',
     iconStart: (
       <Icon>
         <IconAccessible />
       </Icon>
     ),
+    label: 'Ik ben een button met een hele lange tekst',
   },
   parameters: {
     docs: {
@@ -555,26 +1206,52 @@ export const FullWidthWithIcon: Story = {
         story: `De parent van een button kan de breedte van de button bepalen. Het icon blijft juist uitgelijnd`,
       },
     },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: ({ label, ...props }, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
     return (
       <>
-        <div style={{ display: 'flex', resize: 'both', overflow: 'auto' }}>
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
           <Button style={{ flex: 1 }} {...props} label={label} />
         </div>
         <br />
-        <div style={{ display: 'flex', resize: 'both', overflow: 'auto' }}>
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
           <Button style={{ flex: 1 }} {...props}>
             {label}
           </Button>
         </div>
         <br />
-        <div style={{ display: 'flex', resize: 'both', overflow: 'auto', width: '300px' }}>
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
           <Button style={{ flex: 1 }} {...props} label={label} />
         </div>
         <br />
-        <div style={{ display: 'flex', resize: 'both', overflow: 'auto', width: '300px' }}>
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
           <Button style={{ flex: 1 }} {...props}>
             {label}
           </Button>
@@ -596,20 +1273,48 @@ export const NotEnoughSpace: Story = {
           'De tekst van de button is te lang voor de ruimte die beschikbaar is. Daarom loopt de tekst uit de button. Om toch genoeg contrast te hebben, moet de achtergrond van de button achter de button door blijven lopen',
       },
     },
+    testResult: {
+      date: '2025-12-12',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: (props, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
     return (
-      <div style={{ display: 'flex', height: '100svh', alignItems: 'center' }}>
+      <div style={{ alignItems: 'center', display: 'flex', height: '100svh' }}>
         <div>
-          <Button {...props} style={{ maxWidth: '100px', maxHeight: '100px' }} />
-          <Button style={{ maxWidth: '100px', maxHeight: '100px' }}>{props.label}</Button>
+          <Button {...props} style={{ maxHeight: '100px', maxWidth: '100px' }} />
+          <button className="nl-button" style={{ maxHeight: '100px', maxWidth: '100px' }}>
+            {props.label}
+          </button>
         </div>
-        <div style={{ maxWidth: '100px', maxHeight: '100px' }}>
+        <div style={{ maxHeight: '100px', maxWidth: '100px' }}>
           <Button {...props} />
         </div>
-        <div style={{ maxWidth: '100px', maxHeight: '100px' }}>
-          <Button className="nl-button">{props.label}</Button>
+        <div style={{ maxHeight: '100px', maxWidth: '100px' }}>
+          <button className="nl-button">{props.label}</button>
         </div>
       </div>
     );
