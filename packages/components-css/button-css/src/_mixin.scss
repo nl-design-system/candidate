@@ -34,6 +34,7 @@
    * Button has formatted content but no icon or label elements. The display
    * property should be inline-block, otherwise the column-gap is wrongly applied
    */
+  &:not(:has(*)),
   &:has(> :where(:first-child)):not(:has(> :where(.nl-button__icon-end, .nl-button__icon-start, .nl-button__label))) {
     display: inline-block;
   }
