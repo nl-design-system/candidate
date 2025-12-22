@@ -1,7 +1,59 @@
 @use "../mixin";
 
-@mixin button {
+@mixin nl-html--button {
+  input[type="button" i],
+  input[type="reset" i],
+  input[type="submit" i],
   button {
+    @include mixin.nl-button--default;
     @include mixin.nl-button;
+  }
+
+  input[type="button" i][hidden],
+  input[type="reset" i][hidden],
+  input[type="submit" i][hidden],
+  button[hidden] {
+    display: none;
+  }
+
+  input[type="button" i]:where(:disabled),
+  input[type="reset" i]:where(:disabled),
+  input[type="submit" i]:where(:disabled),
+  button:where(:disabled),
+  input[type="button" i]:where([aria-disabled="true" i]),
+  input[type="reset" i]:where([aria-disabled="true" i]),
+  input[type="submit" i]:where([aria-disabled="true" i]),
+  button:where([aria-disabled="true" i]) {
+    @include mixin.nl-button--disabled;
+    @include mixin.nl-button--default-disabled;
+  }
+
+  input[type="button" i]:where([aria-pressed="true" i]),
+  input[type="reset" i]:where([aria-pressed="true" i]),
+  input[type="submit" i]:where([aria-pressed="true" i]),
+  button:where([aria-pressed="true" i]) {
+    @include mixin.nl-button--default-pressed;
+  }
+
+  input[type="button" i]:where(:hover:not([aria-disabled="true" i], :disabled)),
+  input[type="reset" i]:where(:hover:not([aria-disabled="true" i], :disabled)),
+  input[type="submit" i]:where(:hover:not([aria-disabled="true" i], :disabled)),
+  button:where(:hover:not([aria-disabled="true" i], :disabled)) {
+    @include mixin.nl-button--default-hover;
+  }
+
+  input[type="button" i]:where(:active:not([aria-disabled="true" i], :disabled)),
+  input[type="reset" i]:where(:active:not([aria-disabled="true" i], :disabled)),
+  input[type="submit" i]:where(:active:not([aria-disabled="true" i], :disabled)),
+  button:where(:active:not([aria-disabled="true" i], :disabled)) {
+    @include mixin.nl-button--default-active;
+  }
+
+  /* override the `:focus` selector above */
+  input[type="button" i]:focus-visible,
+  input[type="reset" i]:focus-visible,
+  input[type="submit" i]:focus-visible,
+  button:focus-visible {
+    @include mixin.nl-button--focus-visible;
   }
 }

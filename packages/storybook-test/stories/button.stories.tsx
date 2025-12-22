@@ -1,3 +1,4 @@
+import type { ComponentType } from 'react';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/test.scss';
@@ -6,7 +7,7 @@ import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import { IconAccessible } from '@tabler/icons-react';
 import { merge } from 'lodash-es';
 import packageJSON from '../../components-react/button-react/package.json';
-import { Button } from '../../components-react/button-react/src/button';
+import { Button as ButtonComponent, type ButtonProps } from '../../components-react/button-react/src/button';
 import { Icon } from '../../components-react/icon-react/src/icon';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import reactMeta from '../../docs/button-docs/stories/button.react.meta';
@@ -82,7 +83,7 @@ const meta = {
       args: {
         label: 'Klik mij nu!',
       },
-      component: Button,
+      component: ButtonComponent,
       decorators: [ButtonDecorator],
       globals: {
         dir: 'ltr',
@@ -164,7 +165,7 @@ const meta = {
     },
   }),
   title: 'Componenten/Button',
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof ButtonComponent>;
 
 export default meta;
 
@@ -594,13 +595,16 @@ export const ButtonReset: Story = {
       ],
     },
   },
-  render: () => (
-    <form>
-      <input type="text" />
-      <br />
-      <Button type="reset">Reset</Button>
-    </form>
-  ),
+  render: (_props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return (
+      <form>
+        <input type="text" />
+        <br />
+        <Button type="reset">Reset</Button>
+      </form>
+    );
+  },
 };
 
 export const ButtonSubmit: Story = {
@@ -639,20 +643,54 @@ export const ButtonSubmit: Story = {
       ],
     },
   },
-  render: () => (
-    <form
-      action="/"
-      onSubmit={(event) => {
-        event.preventDefault();
-        // @ts-expect-error: Use alert to give user feedback
-        alert('Verzonden'); // eslint-disable-line
-      }}
-    >
-      <input type="text" placeholder="Vul iets in en druk dan op de verzend knop" />
-      <br />
-      <Button type="submit">Verzenden</Button>
-    </form>
-  ),
+  render: (_props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return (
+      <form
+        action="/"
+        onSubmit={(event) => {
+          event.preventDefault();
+          // @ts-expect-error: Use alert to give user feedback
+          alert('Verzonden'); // eslint-disable-line
+        }}
+      >
+        <input type="text" placeholder="Vul iets in en druk dan op de verzend knop" />
+        <br />
+        <Button type="submit">Verzenden</Button>
+      </form>
+    );
+  },
+};
+
+export const ButtonSubmitDisabled: Story = {
+  name: 'Verzend Button Disabled',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Button die een formulier niet verstuurt omdat deze disabled is. Vul iets in en klik op de button. Er verschijnt geen melding`,
+      },
+    },
+  },
+  render: (_props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return (
+      <form
+        action="/"
+        onSubmit={(event) => {
+          event.preventDefault();
+          // @ts-expect-error: Use alert to give user feedback
+          alert('Verzonden'); // eslint-disable-line
+        }}
+      >
+        <input type="text" placeholder="Vul iets in en druk dan op de verzend knop" />
+        <br />
+        <Button type="submit" disabled>
+          Verzenden
+        </Button>
+      </form>
+    );
+  },
 };
 
 export const NoLabel: Story = {
@@ -954,7 +992,10 @@ export const WithChildren: Story = {
       ],
     },
   },
-  render: ({ ...props }) => <Button {...props}>Klik mij!</Button>,
+  render: (props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return <Button {...props}>Klik mij!</Button>;
+  },
 };
 
 export const WithChildrenIcon: Story = {
@@ -1002,7 +1043,10 @@ export const WithChildrenIcon: Story = {
       ],
     },
   },
-  render: ({ ...props }) => <Button {...props}>Klik mij!</Button>,
+  render: (props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return <Button {...props}>Klik mij!</Button>;
+  },
 };
 
 export const WithFormattedChildren: Story = {
@@ -1046,11 +1090,14 @@ export const WithFormattedChildren: Story = {
       ],
     },
   },
-  render: ({ ...props }) => (
-    <Button {...props}>
-      Klik <u>mij</u> nu!
-    </Button>
-  ),
+  render: (props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return (
+      <Button {...props}>
+        Klik <u>mij</u> nu!
+      </Button>
+    );
+  },
 };
 
 export const WithFormattedChildrenAndIcon: Story = {
@@ -1099,12 +1146,14 @@ export const WithFormattedChildrenAndIcon: Story = {
       ],
     },
   },
-
-  render: ({ ...props }) => (
-    <Button {...props}>
-      Klik <u>mij</u> nu!
-    </Button>
-  ),
+  render: (props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return (
+      <Button {...props}>
+        Klik <u>mij</u> nu!
+      </Button>
+    );
+  },
 };
 
 export const FullWidth: Story = {
@@ -1145,29 +1194,32 @@ export const FullWidth: Story = {
       ],
     },
   },
-  render: ({ label, ...props }) => (
-    <>
-      <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
-        <Button style={{ flex: 1 }} {...props} label={label} />
-      </div>
-      <br />
-      <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
-        <Button style={{ flex: 1 }} {...props}>
-          {label}
-        </Button>
-      </div>
-      <br />
-      <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
-        <Button style={{ flex: 1 }} {...props} label={label} />
-      </div>
-      <br />
-      <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
-        <Button style={{ flex: 1 }} {...props}>
-          {label}
-        </Button>
-      </div>
-    </>
-  ),
+  render: ({ label, ...props }, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return (
+      <>
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
+          <Button style={{ flex: 1 }} {...props} label={label} />
+        </div>
+        <br />
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
+          <Button style={{ flex: 1 }} {...props}>
+            {label}
+          </Button>
+        </div>
+        <br />
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
+          <Button style={{ flex: 1 }} {...props} label={label} />
+        </div>
+        <br />
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
+          <Button style={{ flex: 1 }} {...props}>
+            {label}
+          </Button>
+        </div>
+      </>
+    );
+  },
 };
 export const FullWidthWithIcon: Story = {
   name: 'Volle breedte met icon',
@@ -1212,29 +1264,32 @@ export const FullWidthWithIcon: Story = {
       ],
     },
   },
-  render: ({ label, ...props }) => (
-    <>
-      <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
-        <Button style={{ flex: 1 }} {...props} label={label} />
-      </div>
-      <br />
-      <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
-        <Button style={{ flex: 1 }} {...props}>
-          {label}
-        </Button>
-      </div>
-      <br />
-      <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
-        <Button style={{ flex: 1 }} {...props} label={label} />
-      </div>
-      <br />
-      <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
-        <Button style={{ flex: 1 }} {...props}>
-          {label}
-        </Button>
-      </div>
-    </>
-  ),
+  render: ({ label, ...props }, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return (
+      <>
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
+          <Button style={{ flex: 1 }} {...props} label={label} />
+        </div>
+        <br />
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both' }}>
+          <Button style={{ flex: 1 }} {...props}>
+            {label}
+          </Button>
+        </div>
+        <br />
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
+          <Button style={{ flex: 1 }} {...props} label={label} />
+        </div>
+        <br />
+        <div style={{ display: 'flex', overflow: 'auto', resize: 'both', width: '300px' }}>
+          <Button style={{ flex: 1 }} {...props}>
+            {label}
+          </Button>
+        </div>
+      </>
+    );
+  },
 };
 
 export const NotEnoughSpace: Story = {
@@ -1276,22 +1331,25 @@ export const NotEnoughSpace: Story = {
       ],
     },
   },
-  render: (props) => (
-    <div style={{ alignItems: 'center', display: 'flex', height: '100svh' }}>
-      <div>
-        <Button {...props} style={{ maxHeight: '100px', maxWidth: '100px' }} />
-        <button className="nl-button" style={{ maxHeight: '100px', maxWidth: '100px' }}>
-          {props.label}
-        </button>
+  render: (props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
+    return (
+      <div style={{ alignItems: 'center', display: 'flex', height: '100svh' }}>
+        <div>
+          <Button {...props} style={{ maxHeight: '100px', maxWidth: '100px' }} />
+          <button className="nl-button" style={{ maxHeight: '100px', maxWidth: '100px' }}>
+            {props.label}
+          </button>
+        </div>
+        <div style={{ maxHeight: '100px', maxWidth: '100px' }}>
+          <Button {...props} />
+        </div>
+        <div style={{ maxHeight: '100px', maxWidth: '100px' }}>
+          <button className="nl-button">{props.label}</button>
+        </div>
       </div>
-      <div style={{ maxHeight: '100px', maxWidth: '100px' }}>
-        <Button {...props} />
-      </div>
-      <div style={{ maxHeight: '100px', maxWidth: '100px' }}>
-        <button className="nl-button">{props.label}</button>
-      </div>
-    </div>
-  ),
+    );
+  },
 };
 
 export const CancelClick: Story = {
@@ -1303,7 +1361,8 @@ export const CancelClick: Story = {
       },
     },
   },
-  render(props) {
+  render: (props, { component }) => {
+    const Button = component as ComponentType<ButtonProps>;
     // eslint-disable-next-line no-alert
     const onClick = () => alert('geklikt');
     return <Button {...props} onClick={onClick} />;

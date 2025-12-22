@@ -28,6 +28,13 @@ describe('Button', () => {
     expect(button).toHaveAttribute('type', 'button');
   });
 
+  it('accepts a type="submit" prop', () => {
+    render(<Button type="submit">{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('type', 'submit');
+  });
+
   it('has an accessible name', () => {
     render(<Button>{text}</Button>);
     const button = screen.getByRole('button');

@@ -1,7 +1,7 @@
 @use "../mixin";
 
 /* @TODO: Change this to the appropriate element */
-@mixin div {
+@mixin nl-html--div {
   div {
     @include mixin.nl-new-component;
   }

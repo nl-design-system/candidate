@@ -39,3 +39,5 @@ export const GeformatteerdLabel = Stories.GeformatteerdLabel;
 export const GeformatteerdLabelEnEenIcon = Stories.GeformatteerdLabelEnEenIcon;
 export const ToggleButton = Stories.ToggleButton;
 export const VolleBreedte = Stories.VolleBreedte;
+export const HTMLButton = Stories.HTMLButton;
+export const HTMLInputButton = Stories.HTMLInputButton;
