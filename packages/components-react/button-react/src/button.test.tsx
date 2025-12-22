@@ -376,4 +376,56 @@ describe('Button', () => {
 
     expect(button.childElementCount).toBe(2);
   });
+
+  it('render accessible label when passed to iconStart', () => {
+    render(
+      <Button
+        iconStart={
+          <span role="img" aria-label="Facebook">
+            📘
+          </span>
+        }
+        label="Volg ons"
+      />,
+    );
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAccessibleName('Facebook Volg ons');
+  });
+
+  it('render accessible label when passed to iconEnd', () => {
+    render(
+      <Button
+        iconEnd={
+          <span role="img" aria-label="Dubbele snelheid">
+            2x
+          </span>
+        }
+        label="Afspelen"
+      />,
+    );
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAccessibleName('Afspelen Dubbele snelheid');
+  });
+
+  it('render accessible label when passed to iconStart and iconEnd', () => {
+    render(
+      <Button
+        iconStart={
+          <span role="img" aria-label="Toevoegen">
+            ➕
+          </span>
+        }
+        iconEnd={
+          <span role="img" aria-label="Winkelmandje">
+            🛒
+          </span>
+        }
+      />,
+    );
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAccessibleName('Toevoegen Winkelmandje');
+  });
 });
