@@ -72,11 +72,11 @@
 }
 
 @mixin nl-button__icon-start {
-  /* stylelint-ignore-next-line empty-block */
+  line-height: 0;
 }
 
 @mixin nl-button__icon-end {
-  /* stylelint-ignore-next-line empty-block */
+  @include nl-button__icon-start;
 }
 
 @mixin nl-button__label {
