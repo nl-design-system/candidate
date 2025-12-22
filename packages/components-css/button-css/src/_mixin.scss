@@ -26,7 +26,9 @@
   text-box-trim: trim-both;
   -webkit-user-select: none;
   user-select: none;
+}
 
+@mixin nl-button--formatted-content {
   /*
    * Button has formatted content but no icon or label elements. The display
    * property should be inline-block, otherwise the column-gap is wrongly applied
