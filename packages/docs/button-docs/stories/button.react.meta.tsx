@@ -66,6 +66,14 @@ const meta = {
         type: { summary: 'boolean' },
       },
     },
+    iconOnly: {
+      control: 'boolean',
+      description: 'Laat alleen icons zien, verberg de tekst.',
+      table: {
+        category: 'Props',
+        type: { summary: 'boolean' },
+      },
+    },
     iconStart: {
       control: false,
       description: 'Een icon voor de content van de button',

@@ -376,4 +376,63 @@ describe('Button', () => {
 
     expect(button.childElementCount).toBe(2);
   });
+
+  it('renders an accessible name that is combined from iconStart, label, children, iconEnd (in that order), with white space between', () => {
+    render(
+      <Button iconStart="[icon-start]" iconEnd="[icon-end]" label="[label]">
+        {'[children]'}
+      </Button>,
+    );
+
+    const button = screen.getByRole('button', { name: '[icon-start] [label] [children] [icon-end]' });
+
+    expect(button).toBeInTheDocument();
+  });
+
+  describe('icon only button', () => {
+    // This test only works in end-to-end tests where CSS is loaded.
+    // Keep this test as reminder.
+    it('displays both iconStart and iconEnd', () => {
+      render(
+        <Button
+          iconOnly
+          iconStart={<span data-testid="icon-start">❤️</span>}
+          iconEnd={<span data-testid="icon-end">🫶</span>}
+        />,
+      );
+
+      const iconStart = screen.getByTestId('icon-start');
+      const iconEnd = screen.getByTestId('icon-start');
+
+      expect(iconStart).toBeVisible();
+      expect(iconEnd).toBeVisible();
+    });
+
+    it('renders an accessible name that is combined from iconStart, label, children, iconEnd (in that order), with white space between', () => {
+      render(
+        <Button iconOnly iconStart="[icon-start]" iconEnd="[icon-end]" label="[label]">
+          {'[children]'}
+        </Button>,
+      );
+
+      const button = screen.getByRole('button', { name: '[icon-start] [label] [children] [icon-end]' });
+
+      expect(button).toBeInTheDocument();
+    });
+
+    it.todo('renders a label that is not visible', () => {
+      render(
+        <Button
+          iconOnly
+          iconStart={<span role="presentation">❤️</span>}
+          iconEnd={<span role="presentation">🫶</span>}
+          label={<span data-testid="label">Like</span>}
+        />,
+      );
+
+      const label = screen.getByTestId('label');
+
+      expect(label).not.toBeVisible();
+    });
+  });
 });

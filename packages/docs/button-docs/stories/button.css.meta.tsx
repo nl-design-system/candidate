@@ -111,6 +111,15 @@ const meta = {
         defaultValue: { summary: 'undefined' },
       },
     },
+    iconOnly: {
+      name: 'nl-button--icon-only',
+      description: 'Laat alleen icons zien, verberg de tekst.',
+      control: 'boolean',
+      table: {
+        category: CLASSES,
+        type: { summary: undefined },
+      },
+    },
     children: {
       name: 'content',
       description: 'De content van de button.',

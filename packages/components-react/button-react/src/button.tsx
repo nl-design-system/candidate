@@ -60,6 +60,11 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
     hint?: unknown;
 
     /**
+     * Show only icons, and no label. The label remains accessible.
+     */
+    iconOnly?: boolean;
+
+    /**
      * An optional icon after the label
      */
     iconEnd?: ReactNode;
@@ -105,6 +110,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
   const {
     children,
     className,
+    iconOnly,
     iconEnd,
     iconStart,
     purpose,
@@ -122,9 +128,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
   // Is there markup inside `children`
   const isChildrenFormatted = Children.toArray(children).some(isValidElement);
 
-  // If there is markup in `children` _and_ there is an icon, `children`
+  // Should the children be wrapped in a span:
+  // 1. there is markup in `children` _and_ there is an icon: `children`
   // should be wrapped, otherwise there will be a gap around the markup
-  const shouldWrapChildren = isChildrenFormatted && hasIcon;
+  // 2. iconOnly === true: `children` should be wrapped and get the label class
+  // so that the label is hidden
+  const shouldWrapChildren = (isChildrenFormatted && hasIcon) || iconOnly;
 
   return (
     <button
@@ -138,15 +147,16 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
         'nl-button--subtle': purpose === 'subtle',
         'nl-button--positive': Boolean(purpose) && hint === 'positive',
         'nl-button--negative': Boolean(purpose) && hint === 'negative',
+        'nl-button--icon-only': iconOnly,
       })}
-      aria-pressed={pressed ? 'true' : undefined}
+      aria-pressed={toggle ? (pressed ? 'true' : 'false') : undefined}
       aria-disabled={disabled ? 'true' : undefined}
       disabled={htmlDisabled}
       {...restProps}
     >
       {iconStart && <span className="nl-button__icon">{iconStart}</span>}
       {label && <span className="nl-button__label">{label}</span>}
-      {shouldWrapChildren ? <span>{children}</span> : children}
+      {shouldWrapChildren ? <span className={iconOnly ? 'nl-button__label' : ''}>{children}</span> : children}
       {iconEnd && <span className="nl-button__icon">{iconEnd}</span>}
     </button>
   );

@@ -9,8 +9,13 @@
   display: none;
 }
 
-.nl-button__icon {
-  @include mixin.nl-button__icon;
+.nl-button--icon-only {
+  @include mixin.nl-button--icon-only;
+}
+
+.nl-button--icon-only .nl-button__label {
+  @include mixin.nl-button__label--sr-only;
+}
 }
 
 .nl-button__label {
