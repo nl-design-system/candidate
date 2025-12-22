@@ -315,8 +315,8 @@ export const HTMLButton: Story = {
     },
   },
   render: (args: ButtonProps) => {
-    const { label, ...rest } = args;
-    return <button {...rest}>{label}</button>;
+    const { label, children, ...rest } = args;
+    return <button {...rest}>{children || label}</button>;
   },
 };
 
