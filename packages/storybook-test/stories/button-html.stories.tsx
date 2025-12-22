@@ -1,11 +1,10 @@
-import type { ComponentType } from 'react';
 import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
 import packageJSON from '../../components-react/button-react/package.json';
-import { Button as ButtonComponent, type ButtonProps } from './button-html';
+import { Button as ButtonComponent } from './button-html';
 import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import allTokens from '../../tokens/button-tokens/tokens.json';
@@ -93,15 +92,6 @@ export const ButtonHidden: Story = {
         story: `Een Button die is verstopt.`,
       },
     },
-  },
-  render: (props, { component }) => {
-    const Button = component as ComponentType<ButtonProps>;
-    return (
-      <>
-        Dit component is verstopt.
-        <Button {...props} />
-      </>
-    );
   },
 };
 
