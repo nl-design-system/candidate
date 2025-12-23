@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/color-sample-react",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "React implementation of the NL Design System Color Sample component",
   "license": "EUPL-1.2",
   "homepage": "https://nldesignsystem.nl/color-sample",

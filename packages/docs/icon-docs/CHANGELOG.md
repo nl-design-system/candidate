@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/icon-docs
 
+## 0.1.1
+
+### Patch Changes
+
+- e3dc152: Upgrade react en react-dom naar 19.2.3
+
 ## 0.1.0
 
 ### Minor Changes

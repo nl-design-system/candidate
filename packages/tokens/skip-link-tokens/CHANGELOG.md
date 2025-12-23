@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/skip-link-tokens
 
+## 1.0.4
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "Design tokens voor de {Component Name} component".
+
 ## 1.0.3
 
 ### Patch Changes

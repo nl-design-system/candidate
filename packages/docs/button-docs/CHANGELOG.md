@@ -1,5 +1,16 @@
 # @nl-design-system-candidate/button-docs
 
+## 1.0.0
+
+### Major Changes
+
+- ac23a82: Initial release as NL Design System Candidate component.
+
+### Patch Changes
+
+- e3dc152: Upgrade react en react-dom naar 19.2.3
+- 043f06e: Css component documentatie toegevoegd
+
 ## 0.2.0
 
 ### Minor Changes

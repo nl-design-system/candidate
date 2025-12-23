@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/link-react",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "React implementation of the NL Design System Link component",
   "license": "EUPL-1.2",
   "homepage": "https://nldesignsystem.nl/link",

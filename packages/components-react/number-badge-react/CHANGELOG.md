@@ -1,5 +1,14 @@
 # @nl-design-system-candidate/number-badge-react
 
+## 1.3.2
+
+### Patch Changes
+
+- e3dc152: Upgrade react en react-dom naar 19.2.3
+- fbf129c: Update package.json#description to follow format "React implementatie voor de {Component Name} component".
+- 908d495: - Add description, examples and links to resources to each candidate react component README.md
+  - Improve description, add keywords, add bug url and change homepage url for each candidate react component package.json
+
 ## 1.3.1
 
 ### Patch Changes
