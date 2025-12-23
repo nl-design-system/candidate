@@ -1,24 +1,59 @@
 <!-- @license CC0-1.0 -->
 
-# Code
+# Code React
 
-Markeert code in lopende tekst
+Computer code that is part of running text.
 
-## Features
+## Installation
 
-- Semantisch HTML: [een `code` element](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element).
-- De tekstrichting van de code is links-naar-rechts ingesteld met het [HTML `dir` attribuut](https://html.spec.whatwg.org/multipage/dom.html#the-dir-attribute), ook in documenten waar de tekstrichting rechts-naar-links is.
-- De code is gemarkeerd als niet-vertaalbaar met het [HTML `translate` attribuut](https://html.spec.whatwg.org/multipage/dom.html#the-translate-attribute) voor vertaalsoftware.
-- Het visueel ontwerp is door een monospace lettertype goed te onderscheiden van gewone tekst.
-- White space characters worden weergegeven, zowel space als newline characters.
-- Woordafbreking werkt in Code, maar er worden geen woordafbrekingskarakters getoond die onduidelijkheid maken welke tekens onderdeel zijn van de originele code. Zelfs wanneer de omliggende tekst wel hyphenation gebruikt, gebruikt Code geen hypenation.
-- Het visueel ontwerp blijft onderscheidend wanneer:
-  - wanneer de CSS niet geladen kan worden;
-  - wanneer er geen design tokens zijn ingesteld;
-  - wanneer een webfont niet ingeladen kan worden.
+Using npm
 
-Algemene features:
+```shell
+npm install @nl-design-system-candidate/code-react
+```
 
-- Het is mogelijk eigen CSS toe te passen met class name selectors voor deze component.
-- Het is mogelijk eigen class names toe te voegen aan deze componenten, voor eigen CSS.
-- Je kunt de component verbergen met het `hidden` attribuut.
+Using pnpm
+
+```shell
+pnpm add @nl-design-system-candidate/code-react
+```
+
+Using yarn
+
+```shell
+yarn add @nl-design-system-candidate/code-react
+```
+
+## Usage
+
+If you want the React component with styles
+
+```jsx
+import { Code } from '@nl-design-system-candidate/code-react/css';
+
+<Code>{`import { IconCode } from '@tabler/icons-react';`}</Code>;
+```
+
+If you just want the React component and import the styles separately
+
+```jsx
+import { Code } from '@nl-design-system-candidate/code-react';
+
+<Code>{`import { IconCode } from '@tabler/icons-react';`}</Code>;
+```
+
+## Design Tokens
+
+All NL Design System components are white label. Use Code design tokens to ensure it matches your brand styles. See [nldesignsystem.nl/code/#design-tokens](https://nldesignsystem.nl/code/#design-tokens)
+for a full overview.
+
+These tokens are also documented in [@nl-design-system-candidate/code-tokens](https://www.npmjs.com/package/@nl-design-system-candidate/code-tokens).
+
+## Other implementations
+
+Want to use the Code with other frameworks or vanilla JavaScript? The React component is based on
+[@nl-design-system-candidate/code-css](https://www.npmjs.com/package/@nl-design-system-candidate/code-css).
+
+## Figma, Storybook and more
+
+Read more about the Code in Dutch and find links to other resources like Figma and Storybook on [https://nldesignsystem.nl/code](https://nldesignsystem.nl/code).
