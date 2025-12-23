@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/text-input-react",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React implementatie voor de Text Input component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/text-input-react#readme",

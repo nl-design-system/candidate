@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/icon-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React implementation of the NL Design System Icon component",
   "license": "EUPL-1.2",
   "homepage": "https://nldesignsystem.nl/icon",

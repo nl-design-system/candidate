@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/code-react",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "React implementation of the NL Design System Code component",
   "license": "EUPL-1.2",
   "homepage": "https://nldesignsystem.nl/code",

@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/skip-link-react",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "React implementation of the NL Design System Skip Link component",
   "license": "EUPL-1.2",
   "homepage": "https://nldesignsystem.nl/skip-link",

@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/heading-css
 
+## 1.1.3
+
+### Patch Changes
+
+- fbf129c: Update package.json#description to follow format "CSS voor de {Component Name} component".
+
 ## 1.1.2
 
 ### Patch Changes
