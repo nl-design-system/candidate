@@ -1,9 +1,13 @@
 {
   "name": "@nl-design-system-candidate/data-badge-react",
   "version": "1.1.6",
-  "description": "React implementatie voor de Data Badge component",
+  "description": "React implementation of the NL Design System Data Badge component",
   "license": "EUPL-1.2",
-  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/data-badge-react#readme",
+  "homepage": "https://nldesignsystem.nl/data-badge",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
   "type": "module",
   "main": "./dist/data-badge.js",
   "files": [
@@ -19,6 +23,10 @@
       "import": "./dist/css.js"
     }
   },
+  "keywords": [
+    "nl-design-system",
+    "react"
+  ],
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/candidate.git",
