@@ -40,6 +40,34 @@
   }
 }
 
+@mixin nl-button--forced-colors {
+  background-color: ButtonFace !important;
+  border-color: ButtonText !important;
+  color: ButtonText !important;
+}
+
+@mixin nl-button--forced-colors-hover {
+  border-color: Highlight !important;
+}
+
+@mixin nl-button--forced-colors-disabled {
+  background-color: ButtonFace !important;
+  border-color: GrayText !important;
+  color: GrayText !important;
+}
+
+@mixin nl-button--forced-colors-pressed {
+  background-color: ButtonText !important;
+  border-color: ButtonText !important;
+  color: ButtonFace !important;
+}
+
+@mixin nl-button--forced-colors-pressed-disabled {
+  background-color: GrayText !important;
+  border-color: GrayText !important;
+  color: ButtonFace !important;
+}
+
 @mixin nl-button--disabled {
   cursor: not-allowed;
 }
