@@ -1110,8 +1110,8 @@ importers:
         specifier: workspace:*
         version: link:../storybook-shared
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 7.2.0
-        version: 7.2.0
+        specifier: 7.4.0
+        version: 7.4.0
       '@rijkshuisstijl-community/storybook-tooling':
         specifier: 1.1.1
         version: 1.1.1
@@ -1188,8 +1188,8 @@ importers:
         specifier: 0.3.0
         version: 0.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.5(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.5(@types/node@22.17.0)(sass@1.89.2)(yaml@2.8.0)))
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 7.2.0
-        version: 7.2.0
+        specifier: 7.4.0
+        version: 7.4.0
       '@storybook/addon-a11y':
         specifier: 9.1.5
         version: 9.1.5(storybook@9.1.5(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.5(@types/node@22.17.0)(sass@1.89.2)(yaml@2.8.0)))
@@ -1302,8 +1302,8 @@ importers:
         specifier: 0.3.0
         version: 0.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.5(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.5(@types/node@22.17.0)(sass@1.89.2)(yaml@2.8.0)))
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 7.2.0
-        version: 7.2.0
+        specifier: 7.4.0
+        version: 7.4.0
       '@rijkshuisstijl-community/storybook-tooling':
         specifier: 1.1.1
         version: 1.1.1
@@ -2454,8 +2454,8 @@ packages:
   '@nl-design-system-unstable/tokens-lib@0.3.0':
     resolution: {integrity: sha512-eZ4lSNXsKja6szIX3LxD+xB8OmPiQudqDeQ06aUgcR10cGJjXbQS0XRkEr8K1MR39y+8I65kS+49s3Q+VCA8DA==}
 
-  '@nl-design-system-unstable/voorbeeld-design-tokens@7.2.0':
-    resolution: {integrity: sha512-A8iFMsIEB/PGw3dkWNZ6mRoK6u8nPpg952ZBRpJ2cVjLecTu5D15f6dV7NVxHdRvKL9btGrJJeui79kcrTLMHg==}
+  '@nl-design-system-unstable/voorbeeld-design-tokens@7.4.0':
+    resolution: {integrity: sha512-WiI8AbCM7pWiM50WRYoU9fqBx2sf0qvc8H51yi/vGyakfAnQwbkKlq1RdDLfM6UKki2BbqypY37j23GMs5Vb/w==}
 
   '@nl-design-system/eslint-config@2.2.0':
     resolution: {integrity: sha512-vZVbEkOQviJoiOdQT5zOi0GuSCaFrcz9/Awg/iXsmaNoXLkD5WOPVXR7RNlqeP4fPRmrHUvnVPsTDKLeIwbn2w==}
@@ -7475,7 +7475,7 @@ snapshots:
       - react-dom
       - storybook
 
-  '@nl-design-system-unstable/voorbeeld-design-tokens@7.2.0': {}
+  '@nl-design-system-unstable/voorbeeld-design-tokens@7.4.0': {}
 
   '@nl-design-system/eslint-config@2.2.0(eslint@9.32.0)(typescript@5.9.2)':
     dependencies:
