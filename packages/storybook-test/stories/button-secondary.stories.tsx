@@ -166,7 +166,7 @@ export const Default: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -206,7 +206,7 @@ export const Active: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -246,7 +246,7 @@ export const Disabled: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -286,7 +286,7 @@ export const Hover: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -326,7 +326,7 @@ export const Pressed: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -362,8 +362,34 @@ export const PressedActive: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary Button die ingedrukt die al pressed is.',
+        story: 'Een secondary Button die ingedrukt en actief is.',
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
     status: { type: [] },
   },
@@ -377,8 +403,34 @@ export const PressedHover: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary Button die ingedrukt die al pressed is.',
+        story: 'Een secondary Button die ingedrukt en gehovered is.',
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
     status: { type: [] },
   },
@@ -392,8 +444,34 @@ export const PressedDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary Button die ingedrukt die al pressed is.',
+        story: 'Een secondary Button die ingedrukt en disabled is.',
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
     status: { type: [] },
   },
@@ -412,7 +490,7 @@ export const Focused: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -453,7 +531,7 @@ export const Positive: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -494,7 +572,7 @@ export const PositiveActive: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -535,7 +613,7 @@ export const PositiveDisabled: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -576,7 +654,7 @@ export const PositiveHover: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -617,7 +695,7 @@ export const PositivePressed: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -654,8 +732,34 @@ export const PositivePressedActive: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary positive Button die ingedrukt die al pressed is.',
+        story: 'Een secondary positive Button die ingedrukt en actief is.',
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
     status: { type: [] },
   },
@@ -670,8 +774,34 @@ export const PositivePressedHover: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary positive Button die ingedrukt die al pressed is.',
+        story: 'Een secondary positive Button die ingedrukt en gehovered is.',
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
     status: { type: [] },
   },
@@ -686,8 +816,34 @@ export const PositivePressedDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary positive Button die ingedrukt die al pressed is.',
+        story: 'Een secondary positive Button die ingedrukt en disabled is.',
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
     status: { type: [] },
   },
@@ -706,7 +862,7 @@ export const PositiveFocused: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -747,7 +903,7 @@ export const Negative: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -788,7 +944,7 @@ export const NegativeActive: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -829,7 +985,7 @@ export const NegativeDisabled: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -870,7 +1026,7 @@ export const NegativeHover: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -911,7 +1067,7 @@ export const NegativePressed: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -948,8 +1104,34 @@ export const NegativePressedActive: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary negative Button die ingedrukt die al pressed is.',
+        story: 'Een secondary negative Button die ingedrukt en actief is.',
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
     status: { type: [] },
   },
@@ -964,8 +1146,34 @@ export const NegativePressedHover: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary negative Button die ingedrukt die al pressed is.',
+        story: 'Een secondary negative Button die ingedrukt en gehovered is.',
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
     status: { type: [] },
   },
@@ -980,8 +1188,34 @@ export const NegativePressedDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary negative Button die ingedrukt die al pressed is.',
+        story: 'Een secondary negative Button die ingedrukt en disabled is.',
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
     status: { type: [] },
   },
@@ -1000,7 +1234,7 @@ export const NegativeFocused: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
