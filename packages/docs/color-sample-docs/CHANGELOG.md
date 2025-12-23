@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/color-sample-docs
 
+## 1.2.2
+
+### Patch Changes
+
+- 517b1df: Reference "./docs/aliases.md" in README.
+
 ## 1.2.1
 
 ### Patch Changes

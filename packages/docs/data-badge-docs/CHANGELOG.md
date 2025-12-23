@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/data-badge-docs
 
+## 1.2.0
+
+### Minor Changes
+
+- 517b1df: Include "./stories/" in package.json#files.
+
 ## 1.1.1
 
 ### Patch Changes
