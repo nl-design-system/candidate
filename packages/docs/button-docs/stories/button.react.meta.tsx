@@ -26,7 +26,7 @@ const meta = {
     },
     hint: {
       control: 'select',
-      decription: `Een optionele hint van het resultaat van de button. Deze property werkt alleen als de \`purpose\` prop ook is gezet.
+      description: `Een optionele hint van het resultaat van de button. Deze property werkt alleen als de \`purpose\` prop ook is gezet.
 
 - \`positive\` hint op de bevestiging van iets
 - \`positive\` hint op de verwijdering van iets
@@ -34,7 +34,7 @@ const meta = {
       options: [undefined, 'positive', 'negative'],
       table: {
         category: 'Props',
-        type: { summary: `'positive' | 'nagative'` },
+        type: { summary: `'positive' | 'negative'` },
       },
     },
     disabled: {
