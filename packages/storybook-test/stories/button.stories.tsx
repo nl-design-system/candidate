@@ -221,6 +221,32 @@ Als de button niet goed geïmplementeerd is, kunnen er twee dingen mis gaan:
 Test dat de button als één geheel getoond wordt, waarbij "Vorige pagina:" en "Hoofdstuk 2" op eigen regels staan.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -243,6 +269,32 @@ export const ButtonLabelLineBreak: Story = {
 In dit voorbeeld de tekst met de line break in de \`<span class="nl-button__label>\` geplaatst.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -263,7 +315,7 @@ export const ButtonIconStart: Story = {
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_1411_NON_TEXT_CONTRAST,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -304,8 +356,34 @@ export const ButtonIconEnd: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een button met een decoraratief icon na de tekst van het label. In _left-to-right_ teksten zoals dit voorbeeld, staat de icon rechts van de tekst.`,
+        story: `Een button met een decoratief icon na de tekst van het label. In _left-to-right_ teksten zoals dit voorbeeld, staat de icon rechts van de tekst.`,
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
 };
@@ -326,6 +404,32 @@ export const ButtonInformativeIconStart: Story = {
         story: `Een button met een informatief icon voor de tekst van het label. Het icoon heeft als label "Facebook", en de toegankelijke naam van de Button is daarom "Facebook Volg ons". De combinatie is voldoende duidelijk. Als "Facebook" niet onderdeel was geweest van de toegankelijke naam, dan was het label van de button onvoldoende duidelijk.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -345,6 +449,32 @@ export const ButtonInformativeIconEnd: Story = {
         story: `Een button met een informatief icon voor de tekst van het label. Het icoon heeft als label "Dubbele snelheid", en de toegankelijke naam van de Button is daarom "Afspelen Dubbele snelheid". De combinatie is voldoende duidelijk. Als "Dubbele snelheid" niet onderdeel was geweest van de toegankelijke naam, dan was het label van de button onvoldoende duidelijk.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -359,6 +489,32 @@ export const ButtonIconStartEmoji: Story = {
       description: {
         story: `...`,
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
 };
@@ -377,6 +533,32 @@ export const ButtonIconEndEmoji: Story = {
         story: `...`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -394,13 +576,39 @@ export const ButtonInformativeIconStartAndEnd: Story = {
       </Icon>
     ),
     label: undefined,
-    'aria-presssed': 'false',
+    'aria-pressed': 'false',
   },
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Button met twee informatieve iconen. Na het activeren van de knop krijgt de knop de state "pressed", en verandert de alternatieve tekst van het linkse icoon van "Toevoegen" naar "Toegevoegd". Het rechtse icoon blijft hetzelfde.`,
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
   render: function Render(args) {
@@ -452,6 +660,32 @@ export const ButtonMultilineIconStart: Story = {
         story: `...`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -473,7 +707,7 @@ export const ButtonMultilineIconEnd: Story = {
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_1411_NON_TEXT_CONTRAST,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -518,7 +752,7 @@ export const ButtonUtrechtIconStart: Story = {
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_1411_NON_TEXT_CONTRAST,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -563,7 +797,7 @@ export const ButtonUtrechtIconEnd: Story = {
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_1411_NON_TEXT_CONTRAST,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -604,7 +838,7 @@ export const ButtonLargeText: Story = {
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -646,7 +880,7 @@ export const ButtonDifferentLanguage: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -687,7 +921,7 @@ export const ButtonVeryLongName = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -734,6 +968,32 @@ export const ButtonRTL = {
 Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   status: { type: [] },
 };
@@ -746,15 +1006,45 @@ export const ButtonRTLIconStart = {
   },
   args: {
     label: 'الصفحة السابقة',
-    iconStart: <IconArrowRight />,
+    iconStart: (
+      <Icon>
+        <IconArrowRight />
+      </Icon>
+    ),
   },
   parameters: {
     docs: {
       description: {
-        story: `Een button in het Arabisch, als onderdeel van een pagian in het Arabisch. De Arabische tekst vertaalt naar: "Vorige pagina".
+        story: `Een button in het Arabisch, als onderdeel van een pagina in het Arabisch. De Arabische tekst vertaalt naar: "Vorige pagina".
 
 Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
   status: { type: [] },
@@ -768,21 +1058,26 @@ export const ButtonRTLIconEnd = {
   },
   args: {
     label: 'الصفحة التالية',
-    iconEnd: <IconArrowLeft />,
+    iconEnd: (
+      <Icon>
+        <IconArrowLeft />
+      </Icon>
+    ),
   },
   parameters: {
     docs: {
       description: {
-        story: `Een button in het Arabisch, als onderdeel van een pagian in het Arabisch. De Arabische tekst vertaalt naar: "Volgende pagina".
+        story: `Een button in het Arabisch, als onderdeel van een pagina in het Arabisch. De Arabische tekst vertaalt naar: "Volgende pagina".
 
 Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
         WCAG22_143_CONTRAST_MINIMUM,
         WCAG22_145_IMAGES_OF_TEXT,
         WCAG22_212_NO_KEYBOARD_TRAP,
@@ -795,8 +1090,8 @@ Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
         WCAG22_324_CONSISTENT_IDENTIFICATION,
       ],
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1412_TEXT_SPACING,
         WCAG22_144_RESIZE_TEXT,
         WCAG22_211_KEYBOARD,
         WCAG22_247_FOCUS_VISIBLE,
@@ -826,10 +1121,11 @@ Het moet mogelijk zijn het \`lang\` attribute en de \`writing-mode: 'vertical-rl
   },
   status: { type: [] },
   testResult: {
-    date: '2025-12-12',
+    date: '2025-12-23',
     notTested: [
       WCAG22_111_NON_TEXT_CONTENT,
       WCAG22_1411_NON_TEXT_CONTRAST,
+      WCAG22_1412_TEXT_SPACING,
       WCAG22_143_CONTRAST_MINIMUM,
       WCAG22_145_IMAGES_OF_TEXT,
       WCAG22_212_NO_KEYBOARD_TRAP,
@@ -843,7 +1139,6 @@ Het moet mogelijk zijn het \`lang\` attribute en de \`writing-mode: 'vertical-rl
     ],
     pass: [
       WCAG22_131_INFO_AND_RELATIONSHIPS,
-      WCAG22_1412_TEXT_SPACING,
       WCAG22_144_RESIZE_TEXT,
       WCAG22_211_KEYBOARD,
       WCAG22_247_FOCUS_VISIBLE,
@@ -873,6 +1168,32 @@ export const ButtonIconVerticalWritingMode = {
 Het moet mogelijk zijn het \`lang\` attribute en de \`writing-mode: 'vertical-rl';\` CSS property in te stellen.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   status: { type: [] },
 };
@@ -886,7 +1207,7 @@ export const ButtonReset: Story = {
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -941,7 +1262,7 @@ export const ButtonSubmit: Story = {
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -1005,8 +1326,34 @@ Deze button is gemaakt met de \`htmlDisabled\` property, waarmee ook het \`disab
 
 Als je op de button klikt, dan gebeurt er niets en wordt het formulier niet verstuurd.
 
-De Button is focusbaar, omdat dit in HTML niet mogelijk is met \`<button disabled>\`.`,
+De Button is niet focusbaar, omdat dit in HTML niet mogelijk is met \`<button disabled>\`.`,
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
   render: (_props, { component }) => {
@@ -1038,7 +1385,7 @@ De Button is focusbaar, omdat dit in HTML niet mogelijk is met \`<button disable
 };
 
 export const NoLabel: Story = {
-  name: 'Button zonder zichtbaar label',
+  name: 'Button zonder zichtbaar tekstueel label',
   args: {
     label: undefined,
     iconStart: (
@@ -1054,12 +1401,38 @@ export const NoLabel: Story = {
         story: 'Door het "aria-label" attribute blijft de button voor hulptechnologie te beschrijven',
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
     status: { type: [] },
   },
 };
 
 export const NoLabelNotPressed: Story = {
-  name: 'Toggle Button met icon in plaats van zichtbaar label',
+  name: 'Toggle Button met icon in plaats van zichtbaar tekstueel label',
   args: {
     iconStart: (
       <span className="utrecht-icon" aria-hidden="true">
@@ -1076,11 +1449,37 @@ export const NoLabelNotPressed: Story = {
         story: 'Door het "aria-label" attribute blijft de button voor hulptechnologie te beschrijven',
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
     status: { type: [] },
   },
 };
 export const NoLabelPressed: Story = {
-  name: 'Pressed Toggle Button met icon in plaats van zichtbaar label',
+  name: 'Pressed Toggle Button met icon in plaats van zichtbaar tekstueel label',
   args: {
     iconStart: (
       <span
@@ -1097,18 +1496,19 @@ export const NoLabelPressed: Story = {
     label: undefined,
     pressed: true,
     'aria-label': 'Vet opmaken',
+    'aria-pressed': 'true',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Door het "aria-label" attribute blijft de button voor hulptechnologie te beschrijven',
+        story:
+          'Ingedrukte toggle button. Door het "aria-label" attribute blijft de button voor hulptechnologie te beschrijven',
       },
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
-        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
         WCAG22_143_CONTRAST_MINIMUM,
         WCAG22_145_IMAGES_OF_TEXT,
@@ -1123,6 +1523,7 @@ export const NoLabelPressed: Story = {
         WCAG22_324_CONSISTENT_IDENTIFICATION,
       ],
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_1412_TEXT_SPACING,
         WCAG22_144_RESIZE_TEXT,
@@ -1147,7 +1548,7 @@ export const SmallLabel: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -1232,6 +1633,32 @@ export const ButtonRegionExpandable: Story = {
 Deze aanpak wordt vaak gebruikt voor Accordion componenten.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -1251,7 +1678,7 @@ export const ButtonMenuClosed: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -1295,7 +1722,7 @@ export const ButtonMenuExpanded: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -1339,7 +1766,7 @@ export const ButtonDialogClosed: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -1383,7 +1810,7 @@ export const ButtonDialogExpanded: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -1425,7 +1852,7 @@ export const WithChildren: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -1476,7 +1903,7 @@ export const WithChildrenIcon: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_1411_NON_TEXT_CONTRAST,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1523,7 +1950,7 @@ export const WithFormattedChildren: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -1579,7 +2006,7 @@ export const WithFormattedChildrenAndIcon: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_1411_NON_TEXT_CONTRAST,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1627,7 +2054,7 @@ export const FullWidth: Story = {
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -1697,7 +2124,7 @@ export const FullWidthWithIcon: Story = {
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_1411_NON_TEXT_CONTRAST,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1764,7 +2191,7 @@ export const NotEnoughSpace: Story = {
       },
     },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -1857,6 +2284,32 @@ Controleer of \`name\` en \`value\` werken door het formulier te versturen. Kijk
 - \`https://example.com/?username=john%40example.com\` voor de button met \`name="username" value="jane@example.com"\`.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: () => {
     return (
@@ -1891,6 +2344,32 @@ Controleer of \`form\`, \`formaction\`, \`formmethod\` en \`formtarget\` werken 
 - \`https://example.com/?username=admin%40example.com\` voor de button met \`form="form-1"\`.
 - \`https://example.com/?username=john%40example.com\` voor de button met \`form="form-2"\`.`,
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
   render: () => {
@@ -1946,11 +2425,37 @@ De button is gemaakt met de HTML-attributen \`popovertarget\` en \`popovertarget
 Test de werking door op de button te klikken. Als het goed is opent de popover. Klik nog een keer op de button. Als het goed is sluit de popover.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: () => {
     return (
       <>
-        <ButtonComponent popoverTarget="popovertarget-panel" popoverTargetAction="toggle">
+        <ButtonComponent popoverTarget="popovertarget-panel" popoverTargetAction="toggle" aria-haspopup="dialog">
           Spoilers...
         </ButtonComponent>
         <div
@@ -1980,11 +2485,37 @@ export const ButtonPopoverDialog: Story = {
         story: ``,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: () => {
     return (
       <>
-        <ButtonComponent popoverTarget="popovertarget-dialog" popoverTargetAction="show">
+        <ButtonComponent popoverTarget="popovertarget-dialog" popoverTargetAction="show" aria-haspopup="dialog">
           Extra informatie
         </ButtonComponent>
         <dialog id="popovertarget-dialog" popover="manual">
@@ -2013,6 +2544,32 @@ Door het attribute \`formnovalidate\` op de \`<button>\` wordt de HTML-formulier
 
 Test deze functionaliteit door het formulier met de eerste button te verzenden. Als het goed is krijg je een melding dat het URL niet valide is. Gebruik dan de tweede button om het formulier te verzenden. Als het goed is, dan opent een nieuw browservenster met het adres: \`https://example.com/?url=https%3A%2F%2F\`.`,
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
   args: {
@@ -2105,10 +2662,36 @@ export const ButtonDiv: Story = {
       description: {
         story: `Het volgende voorbeeld is een Button die gemaakt is met een \`div\` element, in plaats van met een \`button\` element.
 
-Deze tests tonen aan dat de CSS implementatie van de button niet afhankeljk is van het \`button\` HTML element. Het visueel ontwerp van de Button kan hiermee ook toegepast worden in situaties waarin bestaande code met een \`div\` element niet aangepast kan worden, bijvoorbeeld wanneer alleen class names ingesteld kunnen worden.
+Deze tests tonen aan dat de CSS implementatie van de button niet afhankelijk is van het \`button\` HTML element. Het visueel ontwerp van de Button kan hiermee ook toegepast worden in situaties waarin bestaande code met een \`div\` element niet aangepast kan worden, bijvoorbeeld wanneer alleen class names ingesteld kunnen worden.
 
 Een \`div\` is standaard niet bedienbaar met het toetsenbord. Om te beginnen moet de \`div\` focus kunnen krijgen, daarvoor is \`tabindex="0"\` toegevoegd. Om hetzelfde gedrag te hebben als een \`button\` element, moet de \`click\` event veroorzaakt worden bij de \`keypress\` event van de <kbd>Enter</kbd>-toets, en bij de de \`keyup\` event van de <kbd>Space</kbd>-toets.`,
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
   render: DivButton,
@@ -2133,8 +2716,34 @@ De Button moet door hulpsoftware niet herkend worden als button, omdat deze Butt
 De Button zelf moet niet focusbaar zijn, omdat dit element niet interactief is, en de logische tabvolgorde is dat alleen relevante elementen in de tabvolgorde voorkomen.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
-  render: DivButton,
+  render: (args: ButtonProps) => <DivButton aria-label="Button bewerken" role="group" {...args} />,
 };
 
 export const DecorativeButtonDisabled: Story = {
@@ -2153,8 +2762,34 @@ export const DecorativeButtonDisabled: Story = {
 De Button is niet interactief, de button is decoratief.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
-  render: DivButton,
+  render: (args: ButtonProps) => <DivButton aria-label="Button bewerken" role="group" {...args} />,
 };
 
 export const DecorativeButtonPressed: Story = {
@@ -2173,8 +2808,34 @@ export const DecorativeButtonPressed: Story = {
 De Button is niet interactief, de button is decoratief.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
-  render: DivButton,
+  render: (args: ButtonProps) => <DivButton aria-label="Button bewerken" role="group" {...args} />,
 };
 
 const EditIconButton = ({ ...args }: ButtonProps) => {
@@ -2307,6 +2968,32 @@ De Button moet door hulpsoftware niet herkend worden als button, omdat deze Butt
 De Button zelf moet niet focusbaar zijn, omdat dit element niet interactief is, en de logische tabvolgorde is dat alleen relevante elementen in de tabvolgorde voorkomen.`,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -2318,6 +3005,32 @@ export const LinkAsButton: Story = {
         story:
           'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan moet dat element er als een button uitzien in High Contrast Mode',
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
   render: (props: ButtonProps) => (
@@ -2342,6 +3055,32 @@ export const LinkAsButtonDisabled: Story = {
           'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan moet dat element er als een button uitzien in High Contrast Mode',
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: (props: ButtonProps) => (
     <>
@@ -2363,6 +3102,32 @@ export const ButtonLabelledBy: Story = {
       description: {
         story: `Deze situatie heeft een tabel, waarbij elke rij een "Bewerken" Button heeft. Op het \`<button>\` element is het \`aria-labelledby="row-1-button row-1-heading"\` toegevoegd, waardoor de toegankelijke naam is samengesteld. De toegankelijke naam begint met het zichtbare label, en bevat daarna de tekst van de Table Row Heading: "Bewerken admin@exmaple.com".`,
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
   render: (props: ButtonProps) => (
