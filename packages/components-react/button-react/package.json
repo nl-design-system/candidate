@@ -1,9 +1,13 @@
 {
   "name": "@nl-design-system-candidate/button-react",
   "version": "0.0.1",
-  "description": "React implementatie voor de Button component",
+  "description": "React implementation of the NL Design System Button component",
   "license": "EUPL-1.2",
-  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/button-react#readme",
+  "homepage": "https://nldesignsystem.nl/button",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
   "type": "module",
   "main": "./dist/button.js",
   "files": [
@@ -19,6 +23,10 @@
       "import": "./dist/css.js"
     }
   },
+  "keywords": [
+    "nl-design-system",
+    "react"
+  ],
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/candidate.git",

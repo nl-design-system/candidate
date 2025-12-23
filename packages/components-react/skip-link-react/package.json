@@ -1,9 +1,13 @@
 {
   "name": "@nl-design-system-candidate/skip-link-react",
   "version": "1.1.6",
-  "description": "React implementatie voor de Skip Link component",
+  "description": "React implementation of the NL Design System Skip Link component",
   "license": "EUPL-1.2",
-  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/skip-link-react#readme",
+  "homepage": "https://nldesignsystem.nl/skip-link",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
   "type": "module",
   "main": "./dist/skip-link.js",
   "files": [
@@ -24,6 +28,10 @@
     "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/components-react/skip-link-react"
   },
+  "keywords": [
+    "nl-design-system",
+    "react"
+  ],
   "publishConfig": {
     "access": "public",
     "provenance": true
