@@ -171,7 +171,7 @@ export const Default: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -211,7 +211,7 @@ export const Active: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -251,7 +251,7 @@ export const Disabled: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -291,7 +291,7 @@ export const Hover: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -331,7 +331,7 @@ export const Pressed: Story = {
     },
     status: { type: [] },
     testResult: {
-      date: '2025-12-12',
+      date: '2025-12-23',
       notTested: [
         WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_1411_NON_TEXT_CONTRAST,
@@ -367,10 +367,36 @@ export const PressedActive: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een standaaard Button die ingedrukt die al pressed is.',
+        story: 'Een standaard Button die ingedrukt die al pressed is.',
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -382,10 +408,36 @@ export const PressedHover: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een standaaard Button die ingedrukt die al pressed is.',
+        story: 'Een standaard Button die ingedrukt die al pressed is.',
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
@@ -397,10 +449,36 @@ export const PressedDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een standaaard Button die ingedrukt die al pressed is.',
+        story: 'Een standaard Button die ingedrukt die al pressed is.',
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
 };
 
