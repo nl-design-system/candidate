@@ -1,6 +1,6 @@
 /* eslint-disable no-alert */
 /* eslint-disable react/no-unescaped-entities */
-import type { ComponentType } from 'react';
+import type { ComponentType, HTMLAttributes } from 'react';
 import clsx from 'clsx';
 import { merge } from 'lodash-es';
 import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
@@ -12,6 +12,8 @@ import {
   IconBold,
   IconBrandFacebook,
   IconCheck,
+  IconChevronDown,
+  IconChevronUp,
   IconLanguage,
   IconLink,
   IconMultiplier2x,
@@ -715,6 +717,10 @@ export const ButtonVeryLongName = {
 
 export const ButtonRTL = {
   name: 'Button in Arabisch',
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
   args: {
     dir: 'rtl',
     label: 'التبديل إلى اللغة العربية',
@@ -723,7 +729,7 @@ export const ButtonRTL = {
   parameters: {
     docs: {
       description: {
-        story: `Een button in het Arabisch. De Arabische tekst vertaalt naar: "Wisselen naar Arabisch".
+        story: `Een button in het Arabisch, als onderdeel van een pagina in het Nederlands. De Arabische tekst vertaalt naar: "Wisselen naar Arabisch".
 
 Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
       },
@@ -734,15 +740,18 @@ Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
 
 export const ButtonRTLIconStart = {
   name: 'Button in Arabisch met icon start',
-  args: {
-    label: 'الصفحة السابقة',
+  globals: {
     dir: 'rtl',
     lang: 'ar',
+  },
+  args: {
+    label: 'الصفحة السابقة',
+    iconStart: <IconArrowRight />,
   },
   parameters: {
     docs: {
       description: {
-        story: `Een button in het Arabisch. De Arabische tekst vertaalt naar: "Vorige pagina".
+        story: `Een button in het Arabisch, als onderdeel van een pagian in het Arabisch. De Arabische tekst vertaalt naar: "Vorige pagina".
 
 Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
       },
@@ -753,15 +762,18 @@ Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
 
 export const ButtonRTLIconEnd = {
   name: 'Button in Arabisch met icon end',
-  args: {
-    label: 'الصفحة التالية',
+  globals: {
     dir: 'rtl',
     lang: 'ar',
+  },
+  args: {
+    label: 'الصفحة التالية',
+    iconEnd: <IconArrowLeft />,
   },
   parameters: {
     docs: {
       description: {
-        story: `Een button in het Arabisch. De Arabische tekst vertaalt naar: "Volgende pagina".
+        story: `Een button in het Arabisch, als onderdeel van een pagian in het Arabisch. De Arabische tekst vertaalt naar: "Volgende pagina".
 
 Het moet mogelijk zijn de \`lang\` en \`dir\` attribuut in te stellen.`,
       },
@@ -1030,7 +1042,7 @@ export const NoLabel: Story = {
   args: {
     label: undefined,
     iconStart: (
-      <span className="utrecht-icon">
+      <span className="utrecht-icon" aria-hidden="true">
         <IconLink />
       </span>
     ),
@@ -1050,7 +1062,7 @@ export const NoLabelNotPressed: Story = {
   name: 'Toggle Button met icon in plaats van zichtbaar label',
   args: {
     iconStart: (
-      <span className="utrecht-icon">
+      <span className="utrecht-icon" aria-hidden="true">
         <IconBold />
       </span>
     ),
@@ -1073,6 +1085,7 @@ export const NoLabelPressed: Story = {
     iconStart: (
       <span
         className="utrecht-icon"
+        aria-hidden="true"
         style={{
           '--utrecht-icon-color': 'var(--nl-icon-color)',
           '--utrecht-icon-size': 'var(--nl-icon-inline-size)',
@@ -1158,6 +1171,66 @@ export const SmallLabel: Story = {
         WCAG22_247_FOCUS_VISIBLE,
         WCAG22_412_NAME_ROLE_VALUE,
       ],
+    },
+  },
+};
+
+export const ButtonRegionExpandable: Story = {
+  name: 'Button Expandable Region',
+  args: {
+    'aria-expanded': 'false',
+    'aria-controls': 'button-region-expandable',
+    label: 'Koptekst in een accordion',
+    iconStart: (
+      <span className="nl-icon" aria-hidden="true">
+        <IconChevronDown />
+      </span>
+    ),
+  },
+  render: function Render({ ...args }: ButtonProps) {
+    const [_, updateArgs] = useArgs();
+
+    return (
+      <section>
+        <h2>
+          <ButtonComponent
+            style={{
+              '--nl-button-padding-inline-end': '0',
+              '--nl-button-padding-inline-start': '0',
+              '--nl-button-icon-size': '1em',
+              '--nl-button-font-family': 'var(--nl-heading-level-2-font-family)',
+              '--nl-button-subtle-font-size': 'var(--nl-heading-level-2-font-size)',
+              '--nl-button-subtle-font-weight': 'var(--nl-heading-level-2-font-weight)',
+              '--nl-button-subtle-line-height': 'var(--nl-heading-level-2-line-height)',
+              '--nl-button-min-inline-size': '100%',
+            }}
+            purpose="subtle"
+            onClick={() => {
+              updateArgs({
+                'aria-expanded': args['aria-expanded'] === 'true' ? 'false' : 'true',
+                iconStart: (
+                  <span className="nl-icon" aria-hidden="true">
+                    {args['aria-expanded'] === 'true' ? <IconChevronUp /> : <IconChevronDown />}
+                  </span>
+                ),
+              });
+            }}
+            {...args}
+          />
+        </h2>
+        <div id={args['aria-controls']} hidden={args['aria-expanded'] === 'false'}>
+          <p>Tekstinhoud van de region die geopend en gesloten kan worden.</p>
+        </div>
+      </section>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Het attribute \`aria-expanded="false"\` geeft aan dat de gekoppelde region gesloten is. De region kan geopend worden door op de button te klikken. Daarna is het attribuut aangepast naar \`aria-expanded="true"\`.
+
+Deze aanpak wordt vaak gebruikt voor Accordion componenten.`,
+      },
     },
   },
 };
@@ -2104,27 +2177,21 @@ De Button is niet interactief, de button is decoratief.`,
   render: DivButton,
 };
 
-const EditIconButton = ({ children, ...args }: ButtonProps) => {
+const EditIconButton = ({ ...args }: ButtonProps) => {
   return (
     <ButtonComponent
       purpose="subtle"
-      aria-label="Icon Start bewerken"
+      iconOnly
       style={{
         '--utrecht-icon-size': 'var(--nl-icon-inline-size)',
-        '--nl-button-min-block-size': '20px',
-        '--nl-button-min-inline-size': '20px',
-        '--nl-button-padding-inline-start': '0',
-        '--nl-button-padding-inline-end': '0',
-        '--nl-button-padding-block-start': '0',
-        '--nl-button-padding-line-height': '1',
-        '--nl-icon-inline-size': '20px',
-        '--nl-icon-block-size': '20px',
+        '--nl-button-min-block-size': '24px',
+        '--nl-button-min-inline-size': '24px',
+        '--nl-icon-inline-size': '24px',
+        '--nl-icon-block-size': '24px',
         '--nl-button-padding-block-end': '0',
       }}
       {...args}
-    >
-      {children}
-    </ButtonComponent>
+    />
   );
 };
 
@@ -2136,67 +2203,96 @@ export const ButtonIconEditable: Story = {
     tabIndex: undefined,
     iconStart: <IconQuestionMark />,
     iconEnd: <IconQuestionMark />,
+    style: {
+      '--nl-button-padding-inline-start': 0,
+      '--nl-button-padding-inline-end': 0,
+      '--nl-button-padding-block-start': 0,
+      '--nl-button-padding-block-end': 0,
+    },
   },
   render: function Render({ iconStart, iconEnd, ...args }: ButtonProps) {
     const [updatedArgs, updateArgs] = useArgs();
-    console.log('xxx');
-    const random = <T,>(arr: T[]): T => {
-      const min = 0,
-        max = arr.length - 1,
-        range = max - min,
-        n = min + Math.round(Math.random() * range);
-
-      return arr[n];
-    };
 
     const iconOptions = [
-      IconAccessible,
-      IconArrowLeft,
-      IconArrowRight,
-      IconBold,
-      IconBrandFacebook,
-      IconCheck,
-      IconLanguage,
-      IconLink,
-      IconMultiplier2x,
-      IconPdf,
-      IconPlus,
-      IconQuestionMark,
-      IconShoppingCart,
-      IconTrash,
+      { IconComponent: IconAccessible, label: 'accessible' },
+      { IconComponent: IconArrowLeft, label: 'arrow left' },
+      { IconComponent: IconArrowRight, label: 'arrow right' },
+      { IconComponent: IconBold, label: 'bold' },
+      { IconComponent: IconBrandFacebook, label: 'Facebook' },
+      { IconComponent: IconCheck, label: 'check' },
+      { IconComponent: IconLanguage, label: 'language' },
+      { IconComponent: IconLink, label: 'link' },
+      { IconComponent: IconMultiplier2x, label: '2x multiplier' },
+      { IconComponent: IconPdf, label: 'PDF' },
+      { IconComponent: IconPlus, label: 'plus' },
+      { IconComponent: IconQuestionMark, label: 'question mark' },
+      { IconComponent: IconShoppingCart, label: 'shopping cart' },
+      { IconComponent: IconTrash, label: 'trash' },
     ];
 
-    const randomIconStart = () => {
-      console.log('random start');
-      const RandomIcon = random(iconOptions);
-      updateArgs({
-        iconStart: <RandomIcon />,
-      });
-    };
-
-    const randomIconEnd = () => {
-      console.log('random end');
-      const RandomIcon = random(iconOptions);
-      updateArgs({
-        iconEnd: <RandomIcon />,
-      });
+    const ButtonPopover = ({
+      onIconChange,
+      ...args
+    }: HTMLAttributes<HTMLElement> & { id: string; onIconChange: (IconComponent: unknown) => void }) => {
+      return (
+        <dialog
+          popover=""
+          style={{
+            margin: '0',
+            inset: 'auto',
+            positionArea: 'end',
+          }}
+          {...args}
+        >
+          <p id={`${args.id}-dialog-label`}>Kies een icon:</p>
+          <menu lang="en" style={{ display: 'flex', flexWrap: 'wrap', listStyle: 'none', padding: 0 }}>
+            {iconOptions.map(({ IconComponent, label }, index) => {
+              return (
+                <li key={index}>
+                  <ButtonComponent
+                    purpose="subtle"
+                    iconOnly
+                    iconStart={<IconComponent />}
+                    label={label}
+                    aria-haspopup="dialog"
+                    formMethod="dialog"
+                    onClick={() => onIconChange(IconComponent)}
+                  />
+                </li>
+              );
+            })}
+          </menu>
+        </dialog>
+      );
     };
 
     return (
-      <DivButton
-        {...args}
-        {...updatedArgs}
-        iconStart={
-          <EditIconButton aria-label="Icon Start bewerken" onClick={randomIconStart}>
-            {iconStart}
-          </EditIconButton>
-        }
-        iconEnd={
-          <EditIconButton aria-label="Icon End bewerken" onClick={randomIconEnd}>
-            {iconEnd}
-          </EditIconButton>
-        }
-      />
+      <>
+        <DivButton
+          {...args}
+          {...updatedArgs}
+          iconStart={
+            <EditIconButton label="Icon Start bewerken" popoverTarget="icon-start-popover" iconStart={iconStart} />
+          }
+          iconEnd={<EditIconButton label="Icon End bewerken" popoverTarget="icon-end-popover" iconStart={iconEnd} />}
+        />
+        <ButtonPopover
+          id="icon-start-popover"
+          onIconChange={(IconComponent) => {
+            updateArgs({
+              iconStart: <IconComponent />,
+            });
+          }}
+        />
+        <ButtonPopover
+          id="icon-end-popover"
+          onIconChange={(IconComponent) => {
+            updateArgs({
+              iconEnd: <IconComponent />,
+            });
+          }}
+        />
+      </>
     );
   },
   parameters: {
@@ -2254,5 +2350,52 @@ export const LinkAsButtonDisabled: Story = {
         {props.label}
       </a>
     </>
+  ),
+};
+
+export const ButtonLabelledBy: Story = {
+  name: 'Button met extern label',
+  args: {
+    label: 'Bewerken',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Deze situatie heeft een tabel, waarbij elke rij een "Bewerken" Button heeft. Op het \`<button>\` element is het \`aria-labelledby="row-1-button row-1-heading"\` toegevoegd, waardoor de toegankelijke naam is samengesteld. De toegankelijke naam begint met het zichtbare label, en bevat daarna de tekst van de Table Row Heading: "Bewerken admin@exmaple.com".`,
+      },
+    },
+  },
+  render: (props: ButtonProps) => (
+    <table>
+      <thead>
+        <tr>
+          <th scope="column">E-mail</th>
+          <th scope="column">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          {
+            user: 'admin@example.com',
+          },
+          {
+            user: 'jane@example.com',
+          },
+        ].map(({ user }, index) => (
+          <tr key={index}>
+            <th scope="row" id={`row-${index}-heading`}>
+              {user}
+            </th>
+            <td>
+              <ButtonComponent
+                id={`row-${index}-button`}
+                aria-labelledby={`row-${index}-button row-${index}-heading`}
+                {...props}
+              />
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   ),
 };

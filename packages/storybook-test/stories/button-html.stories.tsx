@@ -89,7 +89,7 @@ export const ButtonHidden: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Button die is verstopt.`,
+        story: `Een \`<button>\` element, die niet zichtbaar is door het \`hidden\` attribuut.`,
       },
     },
   },
@@ -101,7 +101,7 @@ export const InputButton: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Input gestyled als een Button.`,
+        story: `Een \`<input type="button">\` element, die er uit ziet als Default Button`,
       },
     },
   },
@@ -114,7 +114,7 @@ export const InputReset: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Input gestyled als een Button die formuliervelden leegt`,
+        story: `Een \`<input type="reset">\` element, die er uit ziet als Default Button`,
       },
     },
   },
@@ -127,11 +127,37 @@ export const InputSubmit: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Input gestyled als een Button die een formulier verstuurt`,
+        story: `Een \`<input type="submit">\` element, die er uit ziet als Default Button`,
       },
     },
   },
   render: () => <input type="submit" value="Verzend mij" />,
+};
+
+export const InputSubmitDisabled: Story = {
+  name: 'Verzend Button Disabled',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een \`<input type="submit">\` element, die er uit ziet als Disabled Button door het \`disabled"\` attribuute.`,
+      },
+    },
+  },
+  render: () => <input type="submit" value="Verzend mij" disabled />,
+};
+
+export const InputSubmitAriaDisabled: Story = {
+  name: 'Verzend Button Disabled',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een \`<input type="submit">\` element, die er uit ziet als Disabled Button door het \`aria-disabled"true"\` attribuut.`,
+      },
+    },
+  },
+  render: () => <input type="submit" value="Verzend mij" aria-disabled="true" />,
 };
 
 export const InputFile: Story = {
