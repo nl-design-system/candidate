@@ -6,6 +6,38 @@
   @include mixin.nl-button--formatted-content;
 }
 
+/**
+ * Forcefully apply CSS system-color values using `!important`.
+ */
+@media screen and (forced-colors: active) {
+  .nl-button {
+    @include mixin.nl-button--forced-colors;
+  }
+
+  /*
+   * `<button disabled>` has these styles by default, but other elements styles as button do not:
+   *
+   * - `<button aria-disabled="true">`
+   * - `<div role="button">` needs this.
+   * - `<a role="button">` needs this.
+   */
+  .nl-button--disabled {
+    @include mixin.nl-button--forced-colors-disabled;
+  }
+
+  .nl-button--pressed {
+    @include mixin.nl-button--forced-colors-pressed;
+  }
+
+  .nl-button--pressed.nl-button--disabled {
+    @include mixin.nl-button--forced-colors-pressed-disabled;
+  }
+
+  .nl-button:not(.nl-button--disabled):hover {
+    @include mixin.nl-button--forced-colors-hover;
+  }
+}
+
 .nl-button[hidden] {
   display: none;
 }
