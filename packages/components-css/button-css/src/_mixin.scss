@@ -57,15 +57,19 @@
 }
 
 @mixin nl-button--forced-colors-pressed {
+  /* Use `forced-color-adjust: none` to fix rendering glitch in Google Chrome, where the text became black on a black background. */
   background-color: ButtonText !important;
   border-color: ButtonText !important;
   color: ButtonFace !important;
+  forced-color-adjust: none;
 }
 
 @mixin nl-button--forced-colors-pressed-disabled {
+  /* Use `forced-color-adjust: none` to fix rendering glitch in Google Chrome, where the text became black on a black background. */
   background-color: GrayText !important;
   border-color: GrayText !important;
   color: ButtonFace !important;
+  forced-color-adjust: none;
 }
 
 @mixin nl-button--disabled {
