@@ -1,5 +1,5 @@
 ---
-'@nl-design-system-candidate/color-sample-docs': minor
+'@nl-design-system-candidate/color-sample-docs': patch
 ---
 
 Reference "./docs/aliases.md" in README.
