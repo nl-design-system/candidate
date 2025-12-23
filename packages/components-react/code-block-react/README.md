@@ -1,34 +1,64 @@
 <!-- @license CC0-1.0 -->
 
-# Code Block
+# Code Block React
 
-Blok met 1 of meerdere regels computercode.
+Block of one or more lines of computer code.
 
-## Features
+## Installation
 
-- Semantisch HTML: een `pre` en een `code` element,
-  [zoals de HTML-specificatie voorschrijft bij het `pre` element](https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-element).
-- De tekstrichting van de code is links-naar-rechts ingesteld met het
-  [HTML `dir` attribuut](https://html.spec.whatwg.org/multipage/dom.html#the-dir-attribute), ook in documenten waar de
-  tekstrichting rechts-naar-links is.
-- De code is gemarkeerd als niet-vertaalbaar met het
-  [HTML `translate` attribuut](https://html.spec.whatwg.org/multipage/dom.html#the-translate-attribute) voor
-  automatische vertaalsoftware.
-- Met de `overflow` property kan het overflow gedrag worden bepaald:
-  - `overflow="wrap"`: de component wordt zonder `tabindex` attribuut gerenderd en tekst wrapt automatisch. Dit is de
-    default, ook als de prop niet expliciet gezet is.
-  - `overflow="nowrap"`: de component wordt zonder `tabindex` attribuut gerenderd, je moet dit zelf in combinatie met
-    scroll gedrag op een parent element doen.
-  - `overflow="overflow"`: de component wordt altijd mét een `tabindex="0"` attribuut gerenderd en heeft ingebouwd scroll
-    gedrag.
-- Het visueel ontwerp is door een monospace lettertype goed te onderscheiden van gewone tekst.
-- Het visueel ontwerp blijft onderscheidend wanneer:
-  - wanneer de CSS niet geladen kan worden;
-  - wanneer er geen design tokens zijn ingesteld;
-  - wanneer een webfont niet ingeladen kan worden.
+Using npm
 
-Algemene features:
+```shell
+npm install @nl-design-system-candidate/code-block-react
+```
 
-- Het is mogelijk eigen CSS toe te passen met class name selectors voor deze component.
-- Het is mogelijk eigen class names toe te voegen aan deze componenten, voor eigen CSS.
-- Je kunt de component verbergen met het `hidden` attribuut.
+Using pnpm
+
+```shell
+pnpm add @nl-design-system-candidate/code-block-react
+```
+
+Using yarn
+
+```shell
+yarn add @nl-design-system-candidate/code-block-react
+```
+
+## Usage
+
+If you want the React component with styles
+
+```jsx
+import { CodeBlock } from '@nl-design-system-candidate/code-block-react/css';
+
+<CodeBlock>{`
+import { IconCode } from '@tabler/icons-react';
+
+return MyCodeBlockSample = () =>  <IconCode stroke={2} />;`}</CodeBlock>;
+```
+
+If you just want the React component and import the styles separately
+
+```jsx
+import { CodeBlock } from '@nl-design-system-candidate/code-block-react';
+
+<CodeBlock>{`
+import { IconCode } from '@tabler/icons-react';
+
+return MyCodeBlockSample = () =>  <IconCode stroke={2} />;`}</CodeBlock>;
+```
+
+## Design Tokens
+
+All NL Design System components are white label. Use Code Block design tokens to ensure it matches your brand styles. See [nldesignsystem.nl/code-block/#design-tokens](https://nldesignsystem.nl/code-block/#design-tokens) for a full overview.
+
+These tokens are also documented in [@nl-design-system-candidate/code-block-tokens](https://www.npmjs.com/package/@nl-design-system-candidate/code-block-tokens).
+
+## Other implementations
+
+Want to use the Code Block with other frameworks or vanilla JavaScript? The React component is based on
+[@nl-design-system-candidate/code-block-css](https://www.npmjs.com/package/@nl-design-system-candidate/code-block-css).
+
+## Figma, Storybook and more
+
+Read more about the Code in Dutch and find links to other resources like Figma and Storybook on [https://nldesignsystem.nl/code-block](https://nldesignsystem.nl/code-block).

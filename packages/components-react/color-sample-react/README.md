@@ -1,21 +1,60 @@
 <!-- @license CC0-1.0 -->
 
-# Color Sample
+# Color Sample React
 
-Toont een voorbeeld van een kleur.
+Shows a sample of a color.
 
-## Features
+## Installation
 
-- Semantisch HTML: een `svg` element.
-- Met het `style` attribuut op het `svg` element wordt een CSS `color` gezet.
-- De kleur wordt via `currentcolor` overgenomen als de `fill` van het `path` element in de `svg`.
-- De Color Sample component is op zich een half fabrikaat. Voor correct gebruik moet met het `aria-labelledby` attribuut
-  verwezen worden naar een ander element met daarin een beschrijving.
-- Naast `aria-labelledby` kan ook de `label` prop gebruikt worden om een een label in de vorm van een SVG `title`
-  element in de Color Sample te laten renderen.
+Using npm
 
-Algemene features:
+```shell
+npm install @nl-design-system-candidate/color-sample-react
+```
 
-- Het is mogelijk eigen CSS toe te passen door de class selector `.nl-color-sample` te gebruiken voor deze component.
-- Het is mogelijk eigen class names toe te voegen aan deze component.
-- Het is mogelijk `aria-*` attributen toe te voegen op het `svg` element met de `img` role.
+Using pnpm
+
+```shell
+pnpm add @nl-design-system-candidate/color-sample-react
+```
+
+Using yarn
+
+```shell
+yarn add @nl-design-system-candidate/color-sample-react
+```
+
+## Usage
+
+If you want the React component with styles
+
+```jsx
+import { ColorSample } from '@nl-design-system-candidate/color-sample-react/css';
+
+<ColorSample value="#C214FF" />;
+```
+
+If you just want the React component and import the styles separately
+
+```jsx
+import { ColorSample } from '@nl-design-system-candidate/color-sample-react';
+
+<ColorSample value="#C214FF" />;
+```
+
+## Design Tokens
+
+All NL Design System components are white label. Use Color Sample design tokens to ensure it matches your brand styles. See [nldesignsystem.nl/color-sample/#design-tokens](https://nldesignsystem.nl/color-sample/#design-tokens) for a full overview.
+
+**Note**: Do not set the `color-sample.background-color` token in your theme as this token is used to set the background-color based on the value.
+
+These tokens are also documented in [@nl-design-system-candidate/color-sample-tokens](https://www.npmjs.com/package/@nl-design-system-candidate/color-sample-tokens).
+
+## Other implementations
+
+Want to use the Color Sample with other frameworks or vanilla JavaScript? The React component is based on
+[@nl-design-system-candidate/color-sample-css](https://www.npmjs.com/package/@nl-design-system-candidate/color-sample-css).
+
+## Figma, Storybook and more
+
+Read more about the Color Sample in Dutch and find links to other resources like Figma and Storybook on [https://nldesignsystem.nl/color-sample](https://nldesignsystem.nl/color-sample).
