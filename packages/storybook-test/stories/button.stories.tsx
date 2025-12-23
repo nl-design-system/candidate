@@ -2244,6 +2244,32 @@ export const CancelClick: Story = {
         story: `Een klik kan gecanceld worden door op de button de klikken, de klik ingedrukt te houden en van de button af te slepen en dan los te laten. `,
       },
     },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
+    },
   },
   render: (props, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
@@ -2262,6 +2288,32 @@ export const ButtonHidden: Story = {
 
 De werking van dit attribuut kan verstoord worden wanneer in \`display: inline-flex\` in de CSS van de component de \`display: none\` uit de user agent stylesheet overschrijft.`,
       },
+    },
+    testResult: {
+      date: '2025-12-23',
+      notTested: [
+        WCAG22_111_NON_TEXT_CONTENT,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_145_IMAGES_OF_TEXT,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+        WCAG22_246_HEADINGS_AND_LABELS,
+        WCAG22_252_POINTER_CANCELLATION,
+        WCAG22_253_LABEL_IN_NAME,
+        WCAG22_258_TARGET_SIZE_MINIMUM,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_321_ON_FOCUS,
+        WCAG22_324_CONSISTENT_IDENTIFICATION,
+      ],
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_211_KEYBOARD,
+        WCAG22_247_FOCUS_VISIBLE,
+        WCAG22_412_NAME_ROLE_VALUE,
+      ],
     },
   },
   args: {
@@ -2743,7 +2795,7 @@ De Button zelf moet niet focusbaar zijn, omdat dit element niet interactief is, 
       ],
     },
   },
-  render: (args: ButtonProps) => <DivButton aria-label="Button bewerken" role="group" {...args} />,
+  render: DivButton,
 };
 
 export const DecorativeButtonDisabled: Story = {
@@ -2789,7 +2841,7 @@ De Button is niet interactief, de button is decoratief.`,
       ],
     },
   },
-  render: (args: ButtonProps) => <DivButton aria-label="Button bewerken" role="group" {...args} />,
+  render: DivButton,
 };
 
 export const DecorativeButtonPressed: Story = {
@@ -2835,7 +2887,7 @@ De Button is niet interactief, de button is decoratief.`,
       ],
     },
   },
-  render: (args: ButtonProps) => <DivButton aria-label="Button bewerken" role="group" {...args} />,
+  render: DivButton,
 };
 
 const EditIconButton = ({ ...args }: ButtonProps) => {
