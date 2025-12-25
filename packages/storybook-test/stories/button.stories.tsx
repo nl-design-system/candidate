@@ -3054,8 +3054,53 @@ De Button zelf moet niet focusbaar zijn, omdat dit element niet interactief is, 
   },
 };
 
+const LinkButton = ({
+  label,
+  iconStart,
+  iconEnd,
+  children,
+  pressed,
+  purpose,
+  disabled,
+  hint,
+  className,
+  href,
+  iconOnly,
+  ...args
+}: ButtonProps) => {
+  return (
+    <a
+      role="button"
+      href={disabled ? href : undefined}
+      tabIndex={0}
+      className={clsx('nl-button', className, {
+        'nl-button--pressed': pressed,
+        'nl-button--disabled': disabled,
+        'nl-button--primary': purpose === 'primary',
+        'nl-button--secondary': purpose === 'secondary',
+        'nl-button--subtle': purpose === 'subtle',
+        'nl-button--positive': Boolean(purpose) && hint === 'positive',
+        'nl-button--negative': Boolean(purpose) && hint === 'negative',
+        'nl-button--icon-only': iconOnly,
+      })}
+      aria-disabled={disabled ? 'true' : undefined}
+      {...args}
+    >
+      {iconStart && <span className="nl-button__icon-start">{iconStart}</span>}
+      {label && <span className="nl-button__label">{label}</span>}
+      {children}
+      {iconEnd && <span className="nl-button__icon-end">{iconEnd}</span>}
+    </a>
+  );
+};
+
 export const LinkAsButton: Story = {
   name: 'Link als button',
+  args: {
+    children: 'Open een voorbeeldwebsite',
+    href: 'https://example.com/',
+    label: undefined,
+  },
   parameters: {
     docs: {
       description: {
@@ -3093,9 +3138,80 @@ export const LinkAsButton: Story = {
   render: (props: ButtonProps) => (
     <>
       <ButtonComponent {...props} />
-      <a href="#" role="button" className="nl-button" aria-disabled={props.disabled}>
-        {props.label}
-      </a>
+      <LinkButton {...props} />
+    </>
+  ),
+};
+
+export const LinkAsButtonLabel: Story = {
+  name: 'Link als button met label',
+  args: {
+    label: 'Open een voorbeeldwebsite',
+    href: 'https://example.com/',
+    children: undefined,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: '...',
+      },
+    },
+  },
+  render: (props: ButtonProps) => (
+    <>
+      <ButtonComponent {...props} />
+      <LinkButton {...props} />
+    </>
+  ),
+};
+
+export const LinkIconStart: Story = {
+  name: 'Link als button met icon',
+  args: {
+    iconStart: (
+      <Icon>
+        <IconArrowLeft />
+      </Icon>
+    ),
+    label: 'Vorige',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: '...',
+      },
+    },
+  },
+  render: (props: ButtonProps) => (
+    <>
+      <ButtonComponent {...props} />
+      <LinkButton {...props} />
+    </>
+  ),
+};
+
+export const LinkIconOnly: Story = {
+  name: 'Link als button met alleen een icon',
+  args: {
+    iconStart: (
+      <Icon>
+        <IconArrowLeft />
+      </Icon>
+    ),
+    iconOnly: true,
+    label: 'Vorige',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: '...',
+      },
+    },
+  },
+  render: (props: ButtonProps) => (
+    <>
+      <ButtonComponent {...props} />
+      <LinkButton {...props} />
     </>
   ),
 };
@@ -3103,6 +3219,9 @@ export const LinkAsButton: Story = {
 export const LinkAsButtonDisabled: Story = {
   name: 'Link als button disabled',
   args: {
+    label: 'Open een voorbeeldwebsite',
+    href: 'https://example.com/',
+    children: undefined,
     disabled: true,
   },
   parameters: {
@@ -3142,9 +3261,7 @@ export const LinkAsButtonDisabled: Story = {
   render: (props: ButtonProps) => (
     <>
       <ButtonComponent {...props} />
-      <a href="#" role="button" className="nl-button nl-button--disabled" aria-disabled={props.disabled}>
-        {props.label}
-      </a>
+      <LinkAsButton {...props} />
     </>
   ),
 };
