@@ -12,6 +12,7 @@
   cursor: pointer;
   display: inline-flex;
   font-family: var(--nl-button-font-family);
+  font-feature-settings: inherit;
   inline-size: fit-content;
   justify-content: center;
   min-block-size: var(--nl-button-min-block-size, max(44px, fit-content));
