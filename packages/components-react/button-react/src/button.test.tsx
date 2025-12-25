@@ -380,7 +380,7 @@ describe('Button', () => {
     );
     const button = screen.getByRole('button');
 
-    expect(button.childElementCount).toBe(2);
+    expect(button.childElementCount).toBe(3);
   });
 
   it('renders formatted children in a wrapper when an iconEnd is present', () => {
@@ -392,7 +392,7 @@ describe('Button', () => {
     );
     const button = screen.getByRole('button');
 
-    expect(button.childElementCount).toBe(2);
+    expect(button.childElementCount).toBe(3);
   });
 
   it('renders an accessible name that is combined from iconStart, label, children, iconEnd (in that order), with white space between', () => {

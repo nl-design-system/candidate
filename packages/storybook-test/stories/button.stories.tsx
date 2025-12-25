@@ -3216,3 +3216,32 @@ export const ButtonLabelledBy: Story = {
     </table>
   ),
 };
+
+export const ButtonKlein: Story = {
+  name: 'Button klein',
+  args: {
+    iconOnly: true,
+    iconStart: (
+      <Icon role="img" aria-label="Dubbele snelheid">
+        <IconMultiplier2x />
+      </Icon>
+    ),
+    label: 'Afspelen',
+    style: {
+      '--nl-button-min-block-size': 'var(--nl-button-icon-size)',
+      '--nl-button-min-inline-size': 'var(--nl-button-icon-size)',
+      '--nl-button-icon-size': '24px',
+      '--nl-button-icon-only-padding-inline-start': '0',
+      '--nl-button-icon-only-padding-inline-end': '0',
+      '--nl-button-icon-only-padding-block-end': '0',
+      '--nl-button-icon-only-padding-block-start': '0',
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `...`,
+      },
+    },
+  },
+};
