@@ -23,6 +23,7 @@
   padding-block-start: var(--nl-button-padding-block-start);
   padding-inline-end: var(--nl-button-padding-inline-end);
   padding-inline-start: var(--nl-button-padding-inline-start);
+  position: relative;
   text-align: start;
   text-box-trim: trim-both;
   text-decoration: none;
@@ -120,6 +121,24 @@
   background-color: inherit;
   overflow-wrap: break-word;
   text-box-trim: trim-both;
+}
+
+@mixin nl-button__pointer-target {
+  /**
+   * The absolute and non-negoatiable minimum target size must be 24 x 24px to meet WCAG SC 2.5.8 Target Size (Minimum).
+   * See: https://nldesignsystem.nl/wcag/2.5.8/
+   */
+  block-size: 24px;
+  display: block;
+  inline-size: 24px;
+  /* stylelint-disable-next-line property-disallowed-list */
+  left: 50%;
+  position: absolute;
+  /* stylelint-disable-next-line property-disallowed-list */
+  right: 0;
+  /* stylelint-disable-next-line property-disallowed-list */
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 @mixin nl-button__label--sr-only {

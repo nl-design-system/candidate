@@ -3257,3 +3257,34 @@ export const ButtonMetLigiatures: Story = {
     </>
   ),
 };
+
+export const ButtonKlein: Story = {
+  name: 'Button klein',
+  args: {
+    iconOnly: true,
+    iconStart: (
+      <Icon role="img" aria-label="Dubbele snelheid">
+        <IconMultiplier2x />
+      </Icon>
+    ),
+    label: 'Afspelen',
+    style: {
+      '--nl-button-border-radius': '9999px',
+      '--nl-button-min-block-size': '24px',
+      '--nl-button-min-inline-size': '24px',
+      '--nl-button-icon-size': '16px',
+      '--nl-button-icon-only-padding-inline-start': '0',
+      '--nl-button-icon-only-padding-inline-end': '0',
+      '--nl-button-icon-only-padding-block-end': '0',
+      '--nl-button-icon-only-padding-block-start': '0',
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De button is 24 pixels hoog en breed, maar doordat met `border-radius` de button rond is gemaakt is het zichtbare oppervlakte minder dan 24 x 24 = 576 pixels. Het aanwijzergebied is wel vierkant en 24 x 24 pixels groot, dus je kunt de button aanklikken net buiten zichtbare button naast het afgeronde hoekje.',
+      },
+    },
+  },
+};
