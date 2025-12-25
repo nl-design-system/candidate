@@ -63,6 +63,7 @@ import {
   WCAG22_413_STATUS_MESSAGES,
 } from '../src/WcagTests';
 import tokens from '../../tokens/code-tokens/tokens.json';
+import { Heading } from '../../components-react/heading-react/src/heading';
 
 const meta = {
   argTypes: {
@@ -315,5 +316,156 @@ export const WhiteSpaceCharacters: Story = {
       Gebruik het derde argument van deze functie om de hoeveelheid spaties voor inspringing te bepalen:{' '}
       <Code>{'JSON.stringify(json, null, "    ");'}</Code>
     </Paragraph>
+  ),
+};
+
+export const CodeInHeading1: Story = {
+  name: 'Code in Heading 1',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een Code component kan voorkomen in een Heading 1.',
+      },
+    },
+  },
+  render: () => (
+    <Heading level={1}>
+      <Code>margin-trim</Code> is geweldig!
+    </Heading>
+  ),
+};
+
+export const CodeInHeading2: Story = {
+  name: 'Code in Heading 2',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een Code component kan voorkomen in een Heading 2.',
+      },
+    },
+  },
+  render: () => (
+    <>
+      <Heading level={1}>Mijn eerste website</Heading>
+      <Heading level={2}>
+        <Code>margin-trim</Code> is geweldig!
+      </Heading>
+    </>
+  ),
+};
+
+export const CodeInHeading3: Story = {
+  name: 'Code in Heading 3',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een Code component kan voorkomen in een Heading 3.',
+      },
+    },
+  },
+  render: () => (
+    <>
+      <Heading level={1}>Mijn eerste website</Heading>
+      <Heading level={2}>Archief blog posts</Heading>
+      <Heading level={3}>
+        <Code>margin-trim</Code> is geweldig!
+      </Heading>
+    </>
+  ),
+};
+
+export const CodeInHeading4: Story = {
+  name: 'Code in Heading 4',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een Code component kan voorkomen in een Heading 4.',
+      },
+    },
+  },
+  render: () => (
+    <>
+      <Heading level={1}>Mijn eerste website</Heading>
+      <Heading level={2}>Archief blog posts</Heading>
+      <Heading level={3}>2025</Heading>
+      <Heading level={4}>
+        <Code>margin-trim</Code> is geweldig!
+      </Heading>
+    </>
+  ),
+};
+
+export const CodeInHeading5: Story = {
+  name: 'Code in Heading 5',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een Code component kan voorkomen in een Heading 5.',
+      },
+    },
+  },
+  render: () => (
+    <>
+      <Heading level={1}>Mijn eerste website</Heading>
+      <Heading level={2}>Archief blog posts</Heading>
+      <Heading level={3}>2025</Heading>
+      <Heading level={4}>januari 2025</Heading>
+      <Heading level={5}>
+        <Code>margin-trim</Code> is geweldig!
+      </Heading>
+    </>
+  ),
+};
+
+export const CodeInHeading6: Story = {
+  name: 'Code in Heading 6',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een Code component kan voorkomen in een Heading 6.',
+      },
+    },
+  },
+  render: () => (
+    <>
+      <Heading level={1}>Mijn eerste website</Heading>
+      <Heading level={2}>Archief blog posts</Heading>
+      <Heading level={3}>2025</Heading>
+      <Heading level={4}>januari 2025</Heading>
+      <Heading level={5}>24 januari 2025</Heading>
+      <Heading level={6}>
+        <Code>margin-trim</Code> is geweldig!
+      </Heading>
+    </>
   ),
 };

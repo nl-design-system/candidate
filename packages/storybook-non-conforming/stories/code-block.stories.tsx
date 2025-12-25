@@ -60,3 +60,21 @@ export const GeenVisueelOnderscheid: Story = {
     },
   },
 };
+
+export const CodeBlockLineHeightTooSmall: Story = {
+  name: 'Fout: Regelhoogte is te klein',
+  args: {
+    children: `import { CodeBlock } from '@nl-design-system-candidate/code-block-react';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react';`,
+    style: {
+      '--nl-code-block-line-height': '1',
+    } as CSSProperties,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'De regelhoogte moet minimaal 1.5 zijn. TODO: Aan welke richtlijn voldoet de component nu niet?',
+      },
+    },
+  },
+};
