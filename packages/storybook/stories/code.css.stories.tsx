@@ -7,7 +7,11 @@ import { mergeCssMeta } from '../src/helpers/merge-css-meta';
 import { getExternalLinks } from '../src/helpers/external-links';
 import description from '@nl-design-system-candidate/code-docs/docs/description.md?raw';
 
-const externalLinks = getExternalLinks('https://nldesignsystem.nl/code', packageJSON.homepage);
+const externalLinks = getExternalLinks(
+  'https://nldesignsystem.nl/button',
+  packageJSON.homepage,
+  'https://www.npmjs.com/package/@nl-design-system-candidate/code-css',
+);
 
 const meta = {
   ...mergeCssMeta(codeMeta, externalLinks, {

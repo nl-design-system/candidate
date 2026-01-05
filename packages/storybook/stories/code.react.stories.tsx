@@ -10,7 +10,7 @@ import description from '@nl-design-system-candidate/code-docs/docs/description.
 const externalLinks = getExternalLinks(
   'https://nldesignsystem.nl/button',
   packageJSON.homepage,
-  'https://www.npmjs.com/package/@nl-design-system-candidate/button-react',
+  'https://www.npmjs.com/package/@nl-design-system-candidate/code-react',
 );
 
 const meta = {
