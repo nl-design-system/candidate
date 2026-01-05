@@ -9,7 +9,11 @@ import { useArgs } from 'storybook/preview-api';
 import { getExternalLinks } from '../src/helpers/external-links';
 import description from '@nl-design-system-candidate/button-docs/docs/description.md?raw';
 
-const externalLinks = getExternalLinks('https://nldesignsystem.nl/button', packageJSON.homepage);
+const externalLinks = getExternalLinks(
+  'https://nldesignsystem.nl/button',
+  packageJSON.homepage,
+  'https://www.npmjs.com/package/@nl-design-system-candidate/code-react',
+);
 
 const meta = {
   ...merge(buttonMeta, externalLinks, {

@@ -3,7 +3,14 @@ import { Code } from '@nl-design-system-candidate/code-react';
 
 const meta = {
   argTypes: {
-    children: { control: 'text', table: { category: 'API' } },
+    children: {
+      control: 'text',
+      description: 'De te tonen computercode',
+      table: {
+        category: 'API',
+        type: { summary: 'ReactNode' },
+      },
+    },
   },
   component: Code,
 } satisfies Meta<typeof Code>;
