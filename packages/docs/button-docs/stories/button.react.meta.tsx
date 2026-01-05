@@ -98,7 +98,7 @@ const meta = {
       name: '{...restProps}',
       control: false,
       description:
-        'Alle props en attributes die hier niet bschreven zijn worden direct op het `<button>` element geplaatst. Dat betekend dat alle attributes van een html button als prop geplaatst kunnen worden',
+        'Alle props en attributes die hier niet bschreven zijn worden direct op het `<button>` element geplaatst. Dat betekent dat alle attributes van een html button als prop geplaatst kunnen worden',
       table: {
         category: 'Props',
         type: {
