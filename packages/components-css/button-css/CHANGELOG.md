@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/button-css
 
+## 1.0.1
+
+### Patch Changes
+
+- c20fa4f: Button inherit nu `font-variant-settings`
+
 ## 1.0.0
 
 ### Major Changes

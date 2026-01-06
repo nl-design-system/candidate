@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-docs
 
+## 1.1.2
+
+### Patch Changes
+
+- 86a5267: Documentatie van props en attributes toegevoegd aan de stories
+
 ## 1.1.1
 
 ### Patch Changes
