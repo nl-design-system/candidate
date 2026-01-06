@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/button-docs
 
+## 1.0.1
+
+### Patch Changes
+
+- d9e79d6: Typos in de stories zijn gefixed
+
 ## 1.0.0
 
 ### Major Changes
