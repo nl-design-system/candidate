@@ -33,7 +33,8 @@
     @include mixin.nl-button--forced-colors-pressed-disabled;
   }
 
-  .nl-button:not(.nl-button--disabled):hover {
+  .nl-button:not(.nl-button--disabled):hover,
+  .nl-button:not(.nl-button--disabled).nl-button--hover {
     @include mixin.nl-button--forced-colors-hover;
   }
 }
@@ -62,11 +63,13 @@
   @include mixin.nl-button__label;
 }
 
-.nl-button:hover {
+.nl-button:hover,
+.nl-button.nl-button--hover {
   @include mixin.nl-button--default-hover;
 }
 
-.nl-button:active {
+.nl-button:active,
+.nl-button.nl-button--active {
   @include mixin.nl-button--default-active;
 }
 
@@ -74,11 +77,13 @@
   @include mixin.nl-button--default-pressed;
 }
 
-.nl-button:where(.nl-button--pressed):hover {
+.nl-button:where(.nl-button--pressed):hover,
+.nl-button:where(.nl-button--pressed).nl-button--hover {
   @include mixin.nl-button--default-pressed-hover;
 }
 
-.nl-button:where(.nl-button--pressed):active {
+.nl-button:where(.nl-button--pressed):active,
+.nl-button:where(.nl-button--pressed).nl-button--active {
   @include mixin.nl-button--default-pressed-active;
 }
 
@@ -96,11 +101,13 @@
   @include mixin.nl-button--primary;
 }
 
-.nl-button:where(.nl-button--primary):hover {
+.nl-button:where(.nl-button--primary):hover,
+.nl-button.nl-button--primary.nl-button--hover {
   @include mixin.nl-button--primary-hover;
 }
 
-.nl-button:where(.nl-button--primary):active {
+.nl-button:where(.nl-button--primary):active,
+.nl-button.nl-button--primary.nl-button--active {
   @include mixin.nl-button--primary-active;
 }
 
@@ -108,11 +115,13 @@
   @include mixin.nl-button--primary-pressed;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--pressed):hover {
+.nl-button:where(.nl-button--primary.nl-button--pressed):hover,
+.nl-button.nl-button--primary.nl-button--pressed.nl-button--hover {
   @include mixin.nl-button--primary-pressed-hover;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--pressed):active {
+.nl-button:where(.nl-button--primary.nl-button--pressed):active,
+.nl-button.nl-button--primary.nl-button--pressed.nl-button--active {
   @include mixin.nl-button--primary-pressed-active;
 }
 
@@ -129,11 +138,13 @@
   @include mixin.nl-button--primary-positive;
 }
 
-.nl-button:where(.nl-button--primary).nl-button--positive:hover {
+.nl-button:where(.nl-button--primary).nl-button--positive:hover,
+.nl-button.nl-button--primary.nl-button--positive.nl-button--hover {
   @include mixin.nl-button--primary-positive-hover;
 }
 
-.nl-button:where(.nl-button--primary).nl-button--positive:active {
+.nl-button:where(.nl-button--primary).nl-button--positive:active,
+.nl-button.nl-button--primary.nl-button--positive.nl-button--active {
   @include mixin.nl-button--primary-positive-active;
 }
 
@@ -141,11 +152,13 @@
   @include mixin.nl-button--primary-positive-pressed;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--positive).nl-button--pressed:hover {
+.nl-button:where(.nl-button--primary.nl-button--positive).nl-button--pressed:hover,
+.nl-button.nl-button--primary.nl-button--positive.nl-button--pressed.nl-button--hover {
   @include mixin.nl-button--primary-positive-pressed-hover;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--positive).nl-button--pressed:active {
+.nl-button:where(.nl-button--primary.nl-button--positive).nl-button--pressed:active,
+.nl-button.nl-button--primary.nl-button--positive.nl-button--pressed.nl-button--active {
   @include mixin.nl-button--primary-positive-pressed-active;
 }
 
@@ -162,11 +175,13 @@
   @include mixin.nl-button--primary-negative;
 }
 
-.nl-button:where(.nl-button--primary).nl-button--negative:hover {
+.nl-button:where(.nl-button--primary).nl-button--negative:hover,
+.nl-button.nl-button--primary.nl-button--negative.nl-button--hover {
   @include mixin.nl-button--primary-negative-hover;
 }
 
-.nl-button:where(.nl-button--primary).nl-button--negative:active {
+.nl-button:where(.nl-button--primary).nl-button--negative:active,
+.nl-button.nl-button--primary.nl-button--negative.nl-button--active {
   @include mixin.nl-button--primary-negative-active;
 }
 
@@ -174,11 +189,13 @@
   @include mixin.nl-button--primary-negative-pressed;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--negative).nl-button--pressed:hover {
+.nl-button:where(.nl-button--primary.nl-button--negative).nl-button--pressed:hover,
+.nl-button.nl-button--primary.nl-button--negative.nl-button--pressed.nl-button--hover {
   @include mixin.nl-button--primary-negative-pressed-hover;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--negative).nl-button--pressed:active {
+.nl-button:where(.nl-button--primary.nl-button--negative).nl-button--pressed:active,
+.nl-button.nl-button--primary.nl-button--negative.nl-button--pressed.nl-button--active {
   @include mixin.nl-button--primary-negative-pressed-active;
 }
 
@@ -195,11 +212,13 @@
   @include mixin.nl-button--secondary;
 }
 
-.nl-button:where(.nl-button--secondary):hover {
+.nl-button:where(.nl-button--secondary):hover,
+.nl-button.nl-button--secondary.nl-button--hover {
   @include mixin.nl-button--secondary-hover;
 }
 
-.nl-button:where(.nl-button--secondary):active {
+.nl-button:where(.nl-button--secondary):active,
+.nl-button.nl-button--secondary.nl-button--active {
   @include mixin.nl-button--secondary-active;
 }
 
@@ -207,11 +226,13 @@
   @include mixin.nl-button--secondary-pressed;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--pressed):hover {
+.nl-button:where(.nl-button--secondary.nl-button--pressed):hover,
+.nl-button.nl-button--secondary.nl-button--pressed.nl-button--hover {
   @include mixin.nl-button--secondary-pressed-hover;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--pressed):active {
+.nl-button:where(.nl-button--secondary.nl-button--pressed):active,
+.nl-button.nl-button--secondary.nl-button--pressed.nl-button--active {
   @include mixin.nl-button--secondary-pressed-active;
 }
 
@@ -228,11 +249,13 @@
   @include mixin.nl-button--secondary-positive;
 }
 
-.nl-button:where(.nl-button--secondary).nl-button--positive:hover {
+.nl-button:where(.nl-button--secondary).nl-button--positive:hover,
+.nl-button.nl-button--secondary.nl-button--positive.nl-button--hover {
   @include mixin.nl-button--secondary-positive-hover;
 }
 
-.nl-button:where(.nl-button--secondary).nl-button--positive:active {
+.nl-button:where(.nl-button--secondary).nl-button--positive:active,
+.nl-button.nl-button--secondary.nl-button--positive.nl-button--active {
   @include mixin.nl-button--secondary-positive-active;
 }
 
@@ -240,11 +263,13 @@
   @include mixin.nl-button--secondary-positive-pressed;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--positive).nl-button--pressed:hover {
+.nl-button:where(.nl-button--secondary.nl-button--positive).nl-button--pressed:hover,
+.nl-button.nl-button--secondary.nl-button--positive.nl-button--pressed.nl-button--hover {
   @include mixin.nl-button--secondary-positive-pressed-hover;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--positive).nl-button--pressed:active {
+.nl-button:where(.nl-button--secondary.nl-button--positive).nl-button--pressed:active,
+.nl-button.nl-button--secondary.nl-button--positive.nl-button--pressed.nl-button--active {
   @include mixin.nl-button--secondary-positive-pressed-active;
 }
 
@@ -261,11 +286,13 @@
   @include mixin.nl-button--secondary-negative;
 }
 
-.nl-button:where(.nl-button--secondary).nl-button--negative:hover {
+.nl-button:where(.nl-button--secondary).nl-button--negative:hover,
+.nl-button.nl-button--secondary.nl-button--negative.nl-button--hover {
   @include mixin.nl-button--secondary-negative-hover;
 }
 
-.nl-button:where(.nl-button--secondary).nl-button--negative:active {
+.nl-button:where(.nl-button--secondary).nl-button--negative:active,
+.nl-button.nl-button--secondary.nl-button--negative.nl-button--active {
   @include mixin.nl-button--secondary-negative-active;
 }
 
@@ -273,11 +300,13 @@
   @include mixin.nl-button--secondary-negative-pressed;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--negative).nl-button--pressed:hover {
+.nl-button:where(.nl-button--secondary.nl-button--negative).nl-button--pressed:hover,
+.nl-button.nl-button--secondary.nl-button--negative.nl-button--pressed.nl-button--hover {
   @include mixin.nl-button--secondary-negative-pressed-hover;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--negative).nl-button--pressed:active {
+.nl-button:where(.nl-button--secondary.nl-button--negative).nl-button--pressed:active,
+.nl-button.nl-button--secondary.nl-button--negative.nl-button--pressed.nl-button--active {
   @include mixin.nl-button--secondary-negative-pressed-active;
 }
 
@@ -294,11 +323,13 @@
   @include mixin.nl-button--subtle;
 }
 
-.nl-button:where(.nl-button--subtle):hover {
+.nl-button:where(.nl-button--subtle):hover,
+.nl-button.nl-button--subtle.nl-button--hover {
   @include mixin.nl-button--subtle-hover;
 }
 
-.nl-button:where(.nl-button--subtle):active {
+.nl-button:where(.nl-button--subtle):active,
+.nl-button.nl-button--subtle.nl-button--active {
   @include mixin.nl-button--subtle-active;
 }
 
@@ -306,11 +337,13 @@
   @include mixin.nl-button--subtle-pressed;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--pressed):hover {
+.nl-button:where(.nl-button--subtle.nl-button--pressed):hover,
+.nl-button.nl-button--subtle.nl-button--pressed.nl-button--hover {
   @include mixin.nl-button--subtle-pressed-hover;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--pressed):active {
+.nl-button:where(.nl-button--subtle.nl-button--pressed):active,
+.nl-button.nl-button--subtle.nl-button--pressed.nl-button--active {
   @include mixin.nl-button--subtle-pressed-active;
 }
 
@@ -327,11 +360,13 @@
   @include mixin.nl-button--subtle-positive;
 }
 
-.nl-button:where(.nl-button--subtle).nl-button--positive:hover {
+.nl-button:where(.nl-button--subtle).nl-button--positive:hover,
+.nl-button.nl-button--subtle.nl-button--positive.nl-button--hover {
   @include mixin.nl-button--subtle-positive-hover;
 }
 
-.nl-button:where(.nl-button--subtle).nl-button--positive:active {
+.nl-button:where(.nl-button--subtle).nl-button--positive:active,
+.nl-button.nl-button--subtle.nl-button--positive.nl-button--active {
   @include mixin.nl-button--subtle-positive-active;
 }
 
@@ -339,11 +374,13 @@
   @include mixin.nl-button--subtle-positive-pressed;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--positive).nl-button--pressed:hover {
+.nl-button:where(.nl-button--subtle.nl-button--positive).nl-button--pressed:hover,
+.nl-button.nl-button--subtle.nl-button--positive.nl-button--pressed.nl-button--hover {
   @include mixin.nl-button--subtle-positive-pressed-hover;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--positive).nl-button--pressed:active {
+.nl-button:where(.nl-button--subtle.nl-button--positive).nl-button--pressed:active,
+.nl-button.nl-button--subtle.nl-button--positive.nl-button--pressed.nl-button--active {
   @include mixin.nl-button--subtle-positive-pressed-active;
 }
 
@@ -360,11 +397,13 @@
   @include mixin.nl-button--subtle-negative;
 }
 
-.nl-button:where(.nl-button--subtle).nl-button--negative:hover {
+.nl-button:where(.nl-button--subtle).nl-button--negative:hover,
+.nl-button.nl-button--subtle.nl-button--negative.nl-button--hover {
   @include mixin.nl-button--subtle-negative-hover;
 }
 
-.nl-button:where(.nl-button--subtle).nl-button--negative:active {
+.nl-button:where(.nl-button--subtle).nl-button--negative:active,
+.nl-button.nl-button--subtle.nl-button--negative.nl-button--active {
   @include mixin.nl-button--subtle-negative-active;
 }
 
@@ -372,11 +411,13 @@
   @include mixin.nl-button--subtle-negative-pressed;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--negative).nl-button--pressed:hover {
+.nl-button:where(.nl-button--subtle.nl-button--negative).nl-button--pressed:hover,
+.nl-button.nl-button--subtle.nl-button--negative.nl-button--pressed.nl-button--hover {
   @include mixin.nl-button--subtle-negative-pressed-hover;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--negative).nl-button--pressed:active {
+.nl-button:where(.nl-button--subtle.nl-button--negative).nl-button--pressed:active,
+.nl-button.nl-button--subtle.nl-button--negative.nl-button--pressed.nl-button--active {
   @include mixin.nl-button--subtle-negative-pressed-active;
 }
 
