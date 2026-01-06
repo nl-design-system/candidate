@@ -3261,7 +3261,7 @@ export const LinkAsButtonDisabled: Story = {
   render: (props: ButtonProps) => (
     <>
       <ButtonComponent {...props} />
-      <LinkAsButton {...props} />
+      <LinkButton {...props} />
     </>
   ),
 };
