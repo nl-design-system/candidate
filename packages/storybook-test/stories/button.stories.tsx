@@ -3216,3 +3216,39 @@ export const ButtonLabelledBy: Story = {
     </table>
   ),
 };
+
+export const ButtonMetLigiatures: Story = {
+  args: {
+    label: '==> !==',
+    style: { fontFamily: 'Fira Code' },
+  },
+
+  parameters: {
+    docs: {
+      description: {
+        story: `Het font (Fira Code) ondersteunt ligiaturen. In het eerste voorbeeld zijn die uitgeschakeld waardoor er steeds drie glyfs getoond worden, zowel in de tekst, als in de button. In het tweede button zijn deze vervangen met een pijl en een streep door een tripple equals teken`,
+      },
+    },
+  },
+
+  render: (props: ButtonProps) => (
+    <>
+      <p
+        style={{
+          display: 'flex',
+          gap: '1rem',
+          alignItems: 'center',
+          fontFamily: 'Fira Code',
+          fontFeatureSettings: '"liga" 0, "calt" 0',
+        }}
+      >
+        <span>{props.label}</span>
+        <ButtonComponent {...props} />
+      </p>
+      <p style={{ display: 'flex', gap: '1rem', alignItems: 'center', fontFamily: 'Fira Code' }}>
+        <span>{props.label}</span>
+        <ButtonComponent {...props} />
+      </p>
+    </>
+  ),
+};
