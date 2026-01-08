@@ -1156,7 +1156,12 @@ export const ButtonIconVerticalWritingMode = {
     lang: 'ja',
     iconStart: (
       <Icon>
-        <IconLanguage />
+        <IconArrowLeft />
+      </Icon>
+    ),
+    iconEnd: (
+      <Icon>
+        <IconArrowLeft />
       </Icon>
     ),
   },
