@@ -402,7 +402,7 @@ describe('Button', () => {
       </Button>,
     );
 
-    const button = screen.getByRole('button', { name: '[icon-start] [label] [children] [icon-end]' });
+    const button = screen.getByRole('button', { name: '[icon-start][label][children][icon-end]' });
 
     expect(button).toBeInTheDocument();
   });
@@ -433,7 +433,7 @@ describe('Button', () => {
         </Button>,
       );
 
-      const button = screen.getByRole('button', { name: '[icon-start] [label] [children] [icon-end]' });
+      const button = screen.getByRole('button', { name: '[icon-start][label][children][icon-end]' });
 
       expect(button).toBeInTheDocument();
     });
