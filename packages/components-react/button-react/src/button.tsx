@@ -2,8 +2,18 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { clsx } from 'clsx';
 import { forwardRef, Children, isValidElement } from 'react';
 
-export type ButtonPurpose = 'primary' | 'secondary' | 'subtle';
-export type ButtonHint = 'positive' | 'negative';
+const enumGuard =
+  <Type,>(values: readonly Type[]) =>
+  <Type,>(x: unknown): x is Type =>
+    values.includes(x as never);
+
+export const PURPOSES = ['primary', 'secondary', 'subtle'] as const;
+export type ButtonPurpose = (typeof PURPOSES)[number];
+export const isPurpose = enumGuard(PURPOSES);
+
+export const HINTS = ['positive', 'negative'];
+export type ButtonHint = (typeof HINTS)[number];
+export const isHint = enumGuard(HINTS);
 
 export type ButtonLabelProps =
   | {
@@ -153,8 +163,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
         'nl-button--primary': purpose === 'primary',
         'nl-button--secondary': purpose === 'secondary',
         'nl-button--subtle': purpose === 'subtle',
-        'nl-button--positive': Boolean(purpose) && hint === 'positive',
-        'nl-button--negative': Boolean(purpose) && hint === 'negative',
+        'nl-button--positive': isPurpose(purpose) && hint === 'positive',
+        'nl-button--negative': isPurpose(purpose) && hint === 'negative',
         'nl-button--icon-only': iconOnly,
       })}
       aria-pressed={toggle ? String(Boolean(pressed)) : undefined}
