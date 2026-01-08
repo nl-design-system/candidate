@@ -394,6 +394,6 @@
 }
 
 .nl-button:focus-visible,
-.nl-button.nl-button--focus-visible {
+.nl-button.nl-button--focus-visible-test {
   @include mixin.nl-button--focus-visible;
 }

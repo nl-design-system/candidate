@@ -201,7 +201,7 @@ export const Default: Story = {
 
 export const Active: Story = {
   args: {
-    className: 'nl-button--active',
+    className: 'nl-button--active-test',
   },
   parameters: {
     docs: {
@@ -281,7 +281,7 @@ export const Disabled: Story = {
 
 export const Hover: Story = {
   args: {
-    className: 'nl-button--hover',
+    className: 'nl-button--hover-test',
   },
   parameters: {
     docs: {
@@ -361,7 +361,7 @@ export const Pressed: Story = {
 
 export const PressedActive: Story = {
   args: {
-    className: 'nl-button--active',
+    className: 'nl-button--active-test',
     pressed: true,
   },
   parameters: {
@@ -402,7 +402,7 @@ export const PressedActive: Story = {
 
 export const PressedHover: Story = {
   args: {
-    className: 'nl-button--hover',
+    className: 'nl-button--hover-test',
     pressed: true,
   },
   parameters: {
@@ -485,7 +485,7 @@ export const PressedDisabled: Story = {
 export const Focused: Story = {
   name: 'Focused',
   args: {
-    className: 'nl-button--focus-visible',
+    className: 'nl-button--focus-visible-test',
   },
   parameters: {
     docs: {
