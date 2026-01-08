@@ -61,7 +61,9 @@
 .nl-button__label {
   @include mixin.nl-button__label;
 }
-.nl-button__pointer-target {
+
+.nl-button::after {
+  content: "";
   @include mixin.nl-button__pointer-target;
 }
 

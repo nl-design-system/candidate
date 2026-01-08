@@ -176,7 +176,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       {label && <span className="nl-button__label">{label}</span>}
       {shouldWrapChildren ? <span className={iconOnly ? 'nl-button__label' : ''}>{children}</span> : children}
       {iconEnd && <span className="nl-button__icon-end">{iconEnd}</span>}
-      <span className="nl-button__pointer-target"></span>
     </button>
   );
 });
