@@ -1,5 +1,6 @@
 import type { Meta } from '@storybook/react-vite';
 import { Button } from '@nl-design-system-candidate/button-react/css';
+import { PURPOSES, HINTS } from '@nl-design-system-candidate/button-react';
 
 const meta = {
   parameters: {
@@ -18,10 +19,10 @@ const meta = {
     purpose: {
       control: 'select',
       description: 'Een optioneel doel van de button. Te veel primary buttons kunnen verwarrend zijn',
-      options: [undefined, 'primary', 'secondary', 'subtle'],
+      options: [undefined, ...PURPOSES],
       table: {
         category: 'Props',
-        type: { summary: `'primary' | 'secondary' | 'subtle'` },
+        type: { summary: PURPOSES.map((items) => `'${items}'`).join(' | ') },
       },
     },
     hint: {
@@ -29,12 +30,12 @@ const meta = {
       description: `Een optionele hint van het resultaat van de button. Deze property werkt alleen als de \`purpose\` prop ook is gezet.
 
 - \`positive\` hint op de bevestiging van iets
-- \`positive\` hint op de verwijdering van iets
+- \`negative\` hint op de verwijdering van iets
 `,
-      options: [undefined, 'positive', 'negative'],
+      options: [undefined, ...HINTS],
       table: {
         category: 'Props',
-        type: { summary: `'positive' | 'negative'` },
+        type: { summary: HINTS.map((items) => `'${items}'`).join(' | ') },
       },
     },
     disabled: {
