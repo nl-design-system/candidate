@@ -29,6 +29,7 @@ import acceptanceCriteria from '../../docs/button-docs/docs/acceptance-criteria.
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 import tokens from '../../tokens/button-tokens/tokens.json';
+import { LinkButton } from './link-button';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -3052,46 +3053,6 @@ De Button zelf moet niet focusbaar zijn, omdat dit element niet interactief is, 
       ],
     },
   },
-};
-
-const LinkButton = ({
-  label,
-  iconStart,
-  iconEnd,
-  children,
-  pressed,
-  purpose,
-  disabled,
-  hint,
-  className,
-  href,
-  iconOnly,
-  ...args
-}: ButtonProps) => {
-  return (
-    <a
-      role="button"
-      href={disabled ? href : undefined}
-      tabIndex={0}
-      className={clsx('nl-button', className, {
-        'nl-button--pressed': pressed,
-        'nl-button--disabled': disabled,
-        'nl-button--primary': purpose === 'primary',
-        'nl-button--secondary': purpose === 'secondary',
-        'nl-button--subtle': purpose === 'subtle',
-        'nl-button--positive': Boolean(purpose) && hint === 'positive',
-        'nl-button--negative': Boolean(purpose) && hint === 'negative',
-        'nl-button--icon-only': iconOnly,
-      })}
-      aria-disabled={disabled ? 'true' : undefined}
-      {...args}
-    >
-      {iconStart && <span className="nl-button__icon-start">{iconStart}</span>}
-      {label && <span className="nl-button__label">{label}</span>}
-      {children}
-      {iconEnd && <span className="nl-button__icon-end">{iconEnd}</span>}
-    </a>
-  );
 };
 
 export const LinkAsButton: Story = {
