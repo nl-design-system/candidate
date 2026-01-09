@@ -5,7 +5,8 @@
  * Used for stories in Storybook
  */
 
-.nl-button--focus-visible-test {
+/* stylelint-disable-next-line selector-max-id */
+#storybook-root .nl-button--focus-visible-test {
   @include mixin.nl-button--focus-visible;
 }
 
