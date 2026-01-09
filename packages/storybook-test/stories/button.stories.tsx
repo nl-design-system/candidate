@@ -488,7 +488,7 @@ export const ButtonIconStartEmoji: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: 'De `iconStart` prop / slot accepteert niet alleen SVG elementen, maar ook Emoji',
       },
     },
     testResult: {
@@ -521,7 +521,7 @@ export const ButtonIconStartEmoji: Story = {
 };
 
 export const ButtonIconEndEmoji: Story = {
-  name: 'Button met decoratief emoji aan het begin',
+  name: 'Button met decoratief emoji aan het end',
   args: {
     lang: 'en',
     dir: 'ltr',
@@ -531,7 +531,7 @@ export const ButtonIconEndEmoji: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: 'De `iconEnd` prop / slot accepteert niet alleen SVG elementen, maar ook Emoji',
       },
     },
     testResult: {
@@ -658,7 +658,7 @@ export const ButtonMultilineIconStart: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: 'De lange tekst in de button wrapped, maar loopt niet over of onder het icon door',
       },
     },
     testResult: {
@@ -704,7 +704,7 @@ export const ButtonMultilineIconEnd: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: 'De lange tekst in de button wrapped, maar loopt niet over of onder het icon door',
       },
     },
     testResult: {
@@ -3114,7 +3114,8 @@ export const LinkAsButtonLabel: Story = {
   parameters: {
     docs: {
       description: {
-        story: '...',
+        story:
+          'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan komt de inhoud op de juiste plek',
       },
     },
   },
@@ -3139,7 +3140,8 @@ export const LinkIconStart: Story = {
   parameters: {
     docs: {
       description: {
-        story: '...',
+        story:
+          'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan kan er ook een icon voor de inhoud geplaatst worden',
       },
     },
   },
@@ -3165,7 +3167,8 @@ export const LinkIconOnly: Story = {
   parameters: {
     docs: {
       description: {
-        story: '...',
+        story:
+          'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan kan er ook enkel een icon gebruikt worden',
       },
     },
   },
