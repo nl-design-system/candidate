@@ -828,7 +828,7 @@ export const ButtonUtrechtIconEnd: Story = {
 export const ButtonLargeText: Story = {
   name: 'Button 200% zoom',
   args: {
-    className: 'nl-button--zoom-200',
+    className: 'nl-button--zoom-200-test',
     label: 'Verzenden',
   },
   parameters: {

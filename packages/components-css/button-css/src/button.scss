@@ -393,7 +393,6 @@
   @include mixin.nl-button--subtle-negative-disabled;
 }
 
-.nl-button:focus-visible,
-.nl-button.nl-button--focus-visible {
+.nl-button:focus-visible {
   @include mixin.nl-button--focus-visible;
 }
