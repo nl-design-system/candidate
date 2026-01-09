@@ -67,6 +67,15 @@ const meta = {
         type: { summary: 'boolean' },
       },
     },
+    busy: {
+      control: 'boolean',
+      description:
+        'Geeft aan dat de button niet beschikbaar is. Zorg ervoor dat het label de staat van de button weer geeft omdat er, naast een andere cursor, geen visuele verandering op treed.',
+      table: {
+        category: 'Props',
+        type: { summary: 'boolean' },
+      },
+    },
     iconOnly: {
       control: 'boolean',
       description: 'Laat alleen icons zien, verberg de tekst.',
