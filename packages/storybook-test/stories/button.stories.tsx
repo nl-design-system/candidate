@@ -29,6 +29,7 @@ import acceptanceCriteria from '../../docs/button-docs/docs/acceptance-criteria.
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 import tokens from '../../tokens/button-tokens/tokens.json';
+import { LinkButton } from './link-button';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -487,7 +488,7 @@ export const ButtonIconStartEmoji: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: 'De `iconStart` prop / slot accepteert niet alleen SVG elementen, maar ook Emoji',
       },
     },
     testResult: {
@@ -520,7 +521,7 @@ export const ButtonIconStartEmoji: Story = {
 };
 
 export const ButtonIconEndEmoji: Story = {
-  name: 'Button met decoratief emoji aan het begin',
+  name: 'Button met decoratief emoji aan het end',
   args: {
     lang: 'en',
     dir: 'ltr',
@@ -530,7 +531,7 @@ export const ButtonIconEndEmoji: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: 'De `iconEnd` prop / slot accepteert niet alleen SVG elementen, maar ook Emoji',
       },
     },
     testResult: {
@@ -657,7 +658,7 @@ export const ButtonMultilineIconStart: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: 'De lange tekst in de button wrapped, maar loopt niet over of onder het icon door',
       },
     },
     testResult: {
@@ -703,7 +704,7 @@ export const ButtonMultilineIconEnd: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: 'De lange tekst in de button wrapped, maar loopt niet over of onder het icon door',
       },
     },
     testResult: {
@@ -3056,6 +3057,11 @@ De Button zelf moet niet focusbaar zijn, omdat dit element niet interactief is, 
 
 export const LinkAsButton: Story = {
   name: 'Link als button',
+  args: {
+    children: 'Open een voorbeeldwebsite',
+    href: 'https://example.com/',
+    label: undefined,
+  },
   parameters: {
     docs: {
       description: {
@@ -3093,9 +3099,83 @@ export const LinkAsButton: Story = {
   render: (props: ButtonProps) => (
     <>
       <ButtonComponent {...props} />
-      <a href="#" role="button" className="nl-button" aria-disabled={props.disabled}>
-        {props.label}
-      </a>
+      <LinkButton {...props} />
+    </>
+  ),
+};
+
+export const LinkAsButtonLabel: Story = {
+  name: 'Link als button met label',
+  args: {
+    label: 'Open een voorbeeldwebsite',
+    href: 'https://example.com/',
+    children: undefined,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan komt de inhoud op de juiste plek',
+      },
+    },
+  },
+  render: (props: ButtonProps) => (
+    <>
+      <ButtonComponent {...props} />
+      <LinkButton {...props} />
+    </>
+  ),
+};
+
+export const LinkIconStart: Story = {
+  name: 'Link als button met icon',
+  args: {
+    iconStart: (
+      <Icon>
+        <IconArrowLeft />
+      </Icon>
+    ),
+    label: 'Vorige',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan kan er ook een icon voor de inhoud geplaatst worden',
+      },
+    },
+  },
+  render: (props: ButtonProps) => (
+    <>
+      <ButtonComponent {...props} />
+      <LinkButton {...props} />
+    </>
+  ),
+};
+
+export const LinkIconOnly: Story = {
+  name: 'Link als button met alleen een icon',
+  args: {
+    iconStart: (
+      <Icon>
+        <IconArrowLeft />
+      </Icon>
+    ),
+    iconOnly: true,
+    label: 'Vorige',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Wanneer een `<a>` element (een link) gebruikt wordt als button element, dan kan er ook enkel een icon gebruikt worden',
+      },
+    },
+  },
+  render: (props: ButtonProps) => (
+    <>
+      <ButtonComponent {...props} />
+      <LinkButton {...props} />
     </>
   ),
 };
@@ -3103,6 +3183,9 @@ export const LinkAsButton: Story = {
 export const LinkAsButtonDisabled: Story = {
   name: 'Link als button disabled',
   args: {
+    label: 'Open een voorbeeldwebsite',
+    href: 'https://example.com/',
+    children: undefined,
     disabled: true,
   },
   parameters: {
@@ -3142,9 +3225,7 @@ export const LinkAsButtonDisabled: Story = {
   render: (props: ButtonProps) => (
     <>
       <ButtonComponent {...props} />
-      <a href="#" role="button" className="nl-button nl-button--disabled" aria-disabled={props.disabled}>
-        {props.label}
-      </a>
+      <LinkButton {...props} />
     </>
   ),
 };
