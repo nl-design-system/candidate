@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/button-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React implementation of the NL Design System Button component",
   "license": "EUPL-1.2",
   "homepage": "https://nldesignsystem.nl/button",

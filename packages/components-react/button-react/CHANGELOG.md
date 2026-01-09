@@ -1,5 +1,13 @@
 # @nl-design-system-candidate/button-react
 
+## 1.1.0
+
+### Minor Changes
+
+- 55974ec: `busy` prop toegevoegd
+- a3fce88: - typeguagrds `isPurpose` en `isHint` geëxporteerd
+  - type values voor `Purpose` en `Hint` geëxporteerd
+
 ## 1.0.0
 
 ### Major Changes
