@@ -174,6 +174,15 @@ describe('Button', () => {
     expect(button).toBeDisabled();
   });
 
+  it('can be marked as busy', () => {
+    render(<Button busy>{text}</Button>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('aria-disabled', 'true');
+    expect(button).not.toHaveAttribute('aria-busy', 'true');
+    expect(button).toHaveClass('nl-button--busy');
+  });
+
   it('can cancel a click by moving the pointer away', async () => {
     const user = userEvent.setup();
     const clickHandler = vi.fn();
