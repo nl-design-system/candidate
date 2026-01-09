@@ -153,6 +153,21 @@ De styling komt van de \`.nl-button--disabled\` class.
   },
 };
 
+export const BusyButton: Story = {
+  name: 'Busy Button',
+  args: {
+    label: '⏳ Verzenden',
+    busy: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een button die busy is, is niet beschikbaar omdat er een actie wordt uitgevoerd. \`aria-disabled="true"\` wordt op het element gezet en de cursor veranderd in een \`wait\` cursor. Zorg er voor dat de label van de button weergeeft dat de button niet interactief is, omdat er (afgezien van de cursor) geen visuele indicatie is dat de state van de button veranderd is.`,
+      },
+    },
+  },
+};
+
 export const AlleenEenIcon: Story = {
   name: 'Alleen een icon',
   argTypes: {
