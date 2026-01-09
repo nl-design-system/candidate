@@ -91,6 +91,15 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
     pressed?: boolean;
 
     /**
+     * Indicates that the button is not available because an action is being
+     * performed. It changes the cursor to `wait` and sets `aria-disabled` to
+     * true.
+     * Make sure to update the label to indicate that the button is not
+     * actionable
+     */
+    busy?: boolean;
+
+    /**
      * If you absolutely have to use the html disabled attribute, you can do so
      * with the `htmlDisabled` prop. Keep in mind that this brings additional
      * accessibility issues with it, as users are not able to focus the disabled
@@ -135,6 +144,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
     disabled,
     htmlDisabled,
     pressed,
+    busy,
     type = 'button',
     label,
     toggle,
@@ -159,6 +169,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       type={type}
       className={clsx('nl-button', className, {
         'nl-button--pressed': pressed,
+        'nl-button--busy': busy,
         'nl-button--disabled': disabled || htmlDisabled,
         'nl-button--primary': purpose === 'primary',
         'nl-button--secondary': purpose === 'secondary',
@@ -168,7 +179,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
         'nl-button--icon-only': iconOnly,
       })}
       aria-pressed={toggle ? String(Boolean(pressed)) : undefined}
-      aria-disabled={disabled ? 'true' : undefined}
+      aria-disabled={disabled || busy ? 'true' : undefined}
       disabled={htmlDisabled}
       {...restProps}
     >

@@ -79,6 +79,10 @@
   cursor: not-allowed;
 }
 
+@mixin nl-button--busy {
+  cursor: wait;
+}
+
 @mixin nl-button--file {
   /*
    * This is styling specifically for the text next to the file selector button in <input type="file">.

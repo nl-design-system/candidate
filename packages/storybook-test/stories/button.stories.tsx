@@ -28,6 +28,7 @@ import { Icon } from '../../components-react/icon-react/src/icon';
 import acceptanceCriteria from '../../docs/button-docs/docs/acceptance-criteria.md?raw';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import reactMeta from '../../docs/button-docs/stories/button.react.meta';
+import * as ButtonStories from '../../docs/button-docs/stories/button.stories';
 import tokens from '../../tokens/button-tokens/tokens.json';
 import { LinkButton } from './link-button';
 import {
@@ -3369,3 +3370,5 @@ export const ButtonKlein: Story = {
     },
   },
 };
+
+export const ButtonBusy = ButtonStories.BusyButton;

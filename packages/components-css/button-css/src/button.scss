@@ -96,6 +96,10 @@
   @include mixin.nl-button--default-disabled;
 }
 
+.nl-button.nl-button--busy {
+  @include mixin.nl-button--busy;
+}
+
 /* PRIMARY */
 .nl-button:where(.nl-button--primary) {
   @include mixin.nl-button--primary;

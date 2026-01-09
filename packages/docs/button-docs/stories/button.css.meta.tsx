@@ -81,6 +81,16 @@ const meta = {
         type: { summary: undefined },
       },
     },
+    busy: {
+      name: 'nl-button--busy',
+      description:
+        'Geeft de button een `wait` cursor. Wanneer deze class gezet word, zet dan ook de `aria-disabled` attribute met value `"true"`. Daarnaast is het belangrijk om het label ook aan te passen omdat de class niet voor een visuele wijziging zorgt.',
+      control: 'boolean',
+      table: {
+        category: CLASSES,
+        type: { summary: undefined },
+      },
+    },
     styleDisabled: {
       name: 'nl-button--disabled',
       description: 'Geeft de button een disabled styling',
