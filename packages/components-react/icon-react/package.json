@@ -50,10 +50,10 @@
     "@nl-design-system/rollup-config-react-component": "1.0.7",
     "@types/react": "19.2.7",
     "react": "19.2.3",
-    "rimraf": "6.1.0",
-    "rollup": "4.53.2",
+    "rimraf": "6.1.2",
+    "rollup": "4.55.1",
     "typescript": "5.9.3",
-    "vitest": "4.0.10"
+    "vitest": "4.0.16"
   },
   "peerDependencies": {
     "@babel/runtime": "^7",
