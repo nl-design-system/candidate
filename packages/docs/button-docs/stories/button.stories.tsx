@@ -147,6 +147,8 @@ export const DisabledButton: Story = {
 Om de button focusbaar te houden voor screenreaders, wordt er \`aria-disabled="true"\` op de button geplaatst om aan te geven dat deze disabled is.
 Dat betekent dat de \`onClick\` handlers blijven werken, en dat de developer verantwoordelijk is om een melding te geven waarom de button disabled is.
 De styling komt van de \`.nl-button--disabled\` class.
+
+Merk op dat, wanneer de button disabled is, er geen \`hover\` states meer zichtbaar zijn.
 `,
       },
     },

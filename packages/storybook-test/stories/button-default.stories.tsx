@@ -246,7 +246,7 @@ export const Disabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een standaard Button die disabled is.',
+        story: 'Een standaard Button die disabled is. Merk op dat een disabled button geen `hover` styles heeft',
       },
     },
     status: { type: [] },
