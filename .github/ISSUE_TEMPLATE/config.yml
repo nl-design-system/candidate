@@ -1,8 +1,11 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
-  - name: 🏠 NL Design System
-    url: https://nldesignsystem.nl
-    about: De homepage van NL Design System
-  - name: ✨ Candidate componenten
-    url: https://nldesignsystem.nl/componenten/?filter=community&filter=helpWanted&filter=todo
-    about: Componenten met de 'Candidate' status
+  - name: 💬 Slack
+    url: https://nldesignsystem.nl/slack/
+    about: Stel je vragen in Slack, waar de community en het kernteam dagelijks antwoord geven.
+  - name: 🧑‍💻 Online bijeenkomsten
+    url: https://nldesignsystem.nl/community/events/overzicht/
+    about: Kom naar de wekelijkse developer open hour of tweewekelijkse design open hour om vragen te bespreken
+  - name: 📝 NL Design System kernteam
+    url: https://nldesignsystem.nl/project/kernteam/
+    about: Contact opnemen met het kernteam

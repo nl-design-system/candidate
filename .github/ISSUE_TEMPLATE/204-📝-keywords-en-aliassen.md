@@ -1,0 +1,95 @@
+---
+name: Kernteam - 📝 Keywords en aliassen bepaald
+
+about: Keywords en aliassen voor de component zijn bepaald zodat deze makkelijk kan worden gevonden
+title: '{component-name} - 📝 Keywords en aliassen bepaald
+'
+labels:
+  - 📝 Candidate Voorbereidingsfase
+---
+
+## 📝 Keywords en aliassen bepaald
+
+- [ ] Verzamel alternatieve namen voor de component
+- [ ] Voeg de meest gebruikte alternatieven toe aan de component pagina in de candidate repository
+- [ ] Voeg de aliassen toe aan de keywords op de component pagina in de documentatie repository
+- [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
+
+### Verzamel alternatieve namen voor de component
+
+Diverse design systems, Developers en Designers gebruiken verschillende woorden om hetzelfde component mee aan te duiden. Tijdens de Help Wanted fase is de naam van de component bepaald, maar door keywords en aliassen toe te voegen kan de component ook op de namen die we zelf niet gebruiken gevonden worden. Voor de componenten is er op Slack een uitgebreide lijst 'Component Keywords & Aliassen' waar we deze in eerste instantie in verzamelen.
+
+#### Hoe kun je dit bijvoorbeeld doen?
+
+- Maak een Canvas aan
+- Maak een nieuwe Mentimeter wordcloud aan voor de component.
+- Haal input op bij Designers en Developers uit de community door te vragen hoe zij de component ook wel noemen.
+- Voeg de uitkomsten aan de canvas toe aan de kolom met 'Keywords' en noteer achter elk woord hoevaak deze werd genoemd.
+- Selecteer de 0 tot 5 meest genoemde keywords en voeg deze toe aan de kolom met 'Aliassen'. Nummer de lijst op volgorde van meest naar minst vaak genoemd.
+- Zijn er duidelijk veelgebruikte alternatieven die ook als je een zoekmachine (google) gebruikt tot resultaten leiden? Ga dan verder met het toevoegen van de Aliassen.
+
+### Voeg de meest gebruikte alternatieven toe aan de component pagina in de candidate repository
+
+- Voeg een bestand genaamd aliases.md toe binnen de docs folder van de component. Deze folders vind je binnen de docs folder van de Candidate repository in GitHub. :new: Bestaat deze folder nog niet? Bekijk hoe je deze aanmaakt en wat er in moet komen te staan in .
+- Voeg de aliassen toe aan het bestand. Gebruik hiervoor de volgende opzet:
+
+```md
+<!-- @license CC0-1.0 -->
+
+# Aliassen
+
+Ook bekend als: {alias-1}, {alias-2} en {alias-3}.
+```
+
+Maak een PR aan gebruik hierbij de volgende opzet:
+
+- **Commit Message**: `docs: candidate aliases for {naam-component}`
+- **Branch**: `docs/candidate-aliases-for-{naam-component}`
+
+Geef een Developer uit het kernteam via Slack een seintje dat deze klaar staat.
+
+### Voeg de aliassen toe aan de keywords op de component pagina in de documentatie repository
+
+Dat kan in de metadata bovenin het bestand.
+
+Zoals we bijvoorbeeld voor button hebben gedaan in `docs/componenten/button/index.mdx`:
+
+```md
+keywords:
+
+- actie
+- action
+- action button
+- activate
+- aria-expanded
+- aria-haspopup
+- aria-pressed
+- bezig
+- busy
+- button
+- buttons
+- call to action
+- click
+- cta
+- disabled
+- icon button
+- indrukken
+- klikken
+- knop
+- knoppen
+- press
+- pressed
+- send
+- submit
+- toggle
+- toggle button
+- uitgeschakeld
+- versturen
+- verzenden
+```
+
+- **Commit Message**: `docs: candidate aliases as keywords for {naam-component}`
+- **Branch**: `docs/candidate-aliases-as-keywords-for-{naam-component}`
+
+🚩 Checkpoint
+📝 Zoekwoorden
