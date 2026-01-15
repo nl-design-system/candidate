@@ -241,7 +241,7 @@ export const Disabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary Button die disabled is.',
+        story: 'Een secondary Button die disabled is. Merk op dat een disabled button geen `hover` styles heeft',
       },
     },
     status: { type: [] },
@@ -444,7 +444,8 @@ export const PressedDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary Button die ingedrukt en disabled is.',
+        story:
+          'Een secondary Button die ingedrukt en disabled is. Merk op dat een disabled button geen `hover` styles heeft',
       },
     },
     testResult: {
@@ -608,7 +609,8 @@ export const PositiveDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary positive Button die disabled is.',
+        story:
+          'Een secondary positive Button die disabled is. Merk op dat een disabled button geen `hover` styles heeft',
       },
     },
     status: { type: [] },
@@ -816,7 +818,8 @@ export const PositivePressedDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary positive Button die ingedrukt en disabled is.',
+        story:
+          'Een secondary positive Button die ingedrukt en disabled is. Merk op dat een disabled button geen `hover` styles heeft',
       },
     },
     testResult: {
@@ -980,7 +983,8 @@ export const NegativeDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary negative Button die disabled is.',
+        story:
+          'Een secondary negative Button die disabled is. Merk op dat een disabled button geen `hover` styles heeft',
       },
     },
     status: { type: [] },
@@ -1188,7 +1192,8 @@ export const NegativePressedDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een secondary negative Button die ingedrukt en disabled is.',
+        story:
+          'Een secondary negative Button die ingedrukt en disabled is. Merk op dat een disabled button geen `hover` styles heeft',
       },
     },
     testResult: {
