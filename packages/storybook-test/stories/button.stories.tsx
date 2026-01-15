@@ -26,6 +26,8 @@ import {
 import {
   Button as ButtonComponent,
   ButtonHint,
+  PURPOSES,
+  HINTS,
   type ButtonProps,
 } from '../../components-react/button-react/src/button';
 import { Icon } from '../../components-react/icon-react/src/icon';
@@ -3392,8 +3394,8 @@ export const ButtonGrid: Story = {
       type: (undefined | 'button' | 'a' | 'div' | 'input[type=button]' | 'input[type=submit]' | 'input[type=reset]')[];
       variants: ButtonProps[];
     } = {
-      purpose: [undefined, 'primary', 'secondary', 'subtle'],
-      hint: [undefined, 'positive', 'negative'],
+      purpose: [undefined, ...PURPOSES],
+      hint: [undefined, ...HINTS],
       disabled: [false, true],
       pressed: [false, true],
       state: [undefined, 'hover', 'active', 'focus-visible'],
@@ -3452,32 +3454,34 @@ export const ButtonGrid: Story = {
                         <>
                           {axes.state.map((state) => (
                             <>
-                              {axes.type.map((type) => (
-                                <tr key={[purpose, hint, disabled, pressed, state, type].join('/')}>
-                                  <td>{purpose}</td>
-                                  <td>{hint}</td>
-                                  <td>{String(disabled)}</td>
-                                  <td>{String(pressed)}</td>
-                                  <td>{state}</td>
-                                  <td>{type}</td>
-                                  <td>
-                                    <div style={{ display: 'flex', alignItems: 'flex-start', columnGap: '4px' }}>
-                                      {axes.variants.map((variantArgs, index) => (
-                                        <ButtonComponent
-                                          key={index}
-                                          {...args}
-                                          {...variantArgs}
-                                          className={`nl-button--${state}`}
-                                          purpose={purpose}
-                                          hint={hint}
-                                          disabled={disabled}
-                                          pressed={pressed}
-                                        />
-                                      ))}
-                                    </div>
-                                  </td>
-                                </tr>
-                              ))}
+                              {axes.type.map((type) =>
+                                hint && !purpose ? null : (
+                                  <tr key={[purpose, hint, disabled, pressed, state, type].join('/')}>
+                                    <td>{purpose}</td>
+                                    <td>{hint}</td>
+                                    <td>{String(disabled)}</td>
+                                    <td>{String(pressed)}</td>
+                                    <td>{state}</td>
+                                    <td>{type}</td>
+                                    <td>
+                                      <div style={{ display: 'flex', alignItems: 'flex-start', columnGap: '4px' }}>
+                                        {axes.variants.map((variantArgs, index) => (
+                                          <ButtonComponent
+                                            key={index}
+                                            {...args}
+                                            {...variantArgs}
+                                            className={state ? `nl-button--${state}-test` : undefined}
+                                            purpose={purpose}
+                                            hint={hint}
+                                            disabled={disabled}
+                                            pressed={pressed}
+                                          />
+                                        ))}
+                                      </div>
+                                    </td>
+                                  </tr>
+                                ),
+                              )}
                             </>
                           ))}
                         </>
