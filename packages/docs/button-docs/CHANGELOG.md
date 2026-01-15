@@ -1,5 +1,12 @@
 # @nl-design-system-candidate/button-docs
 
+## 1.0.2
+
+### Patch Changes
+
+- 55974ec: Documentatie voor de `busy` prop / class is toegevoegd
+- a3fce88: React prop documentatie gebruikt type values als opties
+
 ## 1.0.1
 
 ### Patch Changes
