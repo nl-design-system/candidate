@@ -3497,3 +3497,121 @@ export const ButtonGrid: Story = {
     );
   },
 };
+
+export const ButtonGridForcedColors: Story = {
+  args: {
+    label: 'Example',
+  },
+  render: ({ ...args }) => {
+    const axes: {
+      purpose: ButtonPurpose[];
+      hint: (undefined | ButtonHint)[];
+      disabled: boolean[];
+      pressed: boolean[];
+      state: (undefined | 'hover' | 'active' | 'focus-visible')[];
+      type: (undefined | 'button' | 'a' | 'div' | 'input[type=button]' | 'input[type=submit]' | 'input[type=reset]')[];
+      variants: ButtonProps[];
+    } = {
+      purpose: [undefined, ...PURPOSES],
+      hint: [undefined, ...HINTS],
+      disabled: [false, true],
+      pressed: [false, true],
+      state: [undefined, 'hover', 'active', 'focus-visible'],
+      // type: ['button', 'a', 'div', 'input[type=button]', 'input[type=submit]', 'input[type=reset]'],
+      type: ['button'],
+      variants: [
+        {
+          label: 'Example',
+        },
+        {
+          label: 'Previous Page',
+          iconStart: <IconArrowLeft />,
+        },
+        {
+          label: 'Next Page',
+          iconEnd: <IconArrowRight />,
+        },
+        {
+          lang: 'ar',
+          dir: 'rtl',
+          label: 'الصفحة السابقة',
+          iconStart: <IconArrowRight />,
+        },
+        {
+          lang: 'ar',
+          dir: 'rtl',
+          label: 'الصفحة السابقة',
+        },
+        {
+          lang: 'zh-CN',
+          label: '下一页',
+        },
+      ],
+    };
+
+    return (
+      <table>
+        <thead>
+          <tr>
+            {Object.keys(axes).map((axis) => (
+              <th key={axis} scope="column">
+                {axis}
+              </th>
+            ))}
+            <th>example</th>
+          </tr>
+        </thead>
+        <tbody>
+          {axes.purpose.map((purpose) => (
+            <>
+              {axes.hint.map((hint) => (
+                <>
+                  {axes.disabled.map((disabled) => (
+                    <>
+                      {axes.pressed.map((pressed) => (
+                        <>
+                          {axes.state.map((state) => (
+                            <>
+                              {axes.type.map((type) =>
+                                hint && !purpose ? null : (
+                                  <tr key={[purpose, hint, disabled, pressed, state, type].join('/')}>
+                                    <td>{purpose}</td>
+                                    <td>{hint}</td>
+                                    <td>{String(disabled)}</td>
+                                    <td>{String(pressed)}</td>
+                                    <td>{state}</td>
+                                    <td>{type}</td>
+                                    <td>
+                                      <div style={{ display: 'flex', alignItems: 'flex-start', columnGap: '4px' }}>
+                                        {axes.variants.map((variantArgs, index) => (
+                                          <ButtonComponent
+                                            key={index}
+                                            {...args}
+                                            {...variantArgs}
+                                            className={`${state ? `nl-button--${state}-test` : ''} nl-button--forced-colors-test`.trim()}
+                                            purpose={purpose}
+                                            hint={hint}
+                                            disabled={disabled}
+                                            pressed={pressed}
+                                          />
+                                        ))}
+                                      </div>
+                                    </td>
+                                  </tr>
+                                ),
+                              )}
+                            </>
+                          ))}
+                        </>
+                      ))}
+                    </>
+                  ))}
+                </>
+              ))}
+            </>
+          ))}
+        </tbody>
+      </table>
+    );
+  },
+};
