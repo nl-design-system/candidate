@@ -22,11 +22,11 @@
   @include mixin.nl-button--default-hover;
 }
 
-.nl-button[aria-pressed="true" i].nl-button--hover-test {
+.nl-button.nl-button--pressed.nl-button--hover-test {
   @include mixin.nl-button--default-pressed-hover;
 }
 
-.nl-button[aria-pressed="true" i].nl-button--active-test {
+.nl-button.nl-button--pressed.nl-button--active-test {
   @include mixin.nl-button--default-pressed-active;
 }
 
@@ -39,11 +39,11 @@
   @include mixin.nl-button--primary-active;
 }
 
-.nl-button.nl-button--primary[aria-pressed="true" i].nl-button--hover-test {
+.nl-button.nl-button--primary.nl-button--pressed.nl-button--hover-test {
   @include mixin.nl-button--primary-pressed-hover;
 }
 
-.nl-button.nl-button--primary[aria-pressed="true" i].nl-button--active-test {
+.nl-button.nl-button--primary.nl-button--pressed.nl-button--active-test {
   @include mixin.nl-button--primary-pressed-active;
 }
 
@@ -55,11 +55,11 @@
   @include mixin.nl-button--primary-positive-active;
 }
 
-.nl-button.nl-button--primary.nl-button--positive[aria-pressed="true" i].nl-button--hover-test {
+.nl-button.nl-button--primary.nl-button--positive.nl-button--pressed.nl-button--hover-test {
   @include mixin.nl-button--primary-positive-pressed-hover;
 }
 
-.nl-button.nl-button--primary.nl-button--positive[aria-pressed="true" i].nl-button--active-test {
+.nl-button.nl-button--primary.nl-button--positive.nl-button--pressed.nl-button--active-test {
   @include mixin.nl-button--primary-positive-pressed-active;
 }
 
@@ -71,11 +71,11 @@
   @include mixin.nl-button--primary-negative-active;
 }
 
-.nl-button.nl-button--primary.nl-button--negative[aria-pressed="true" i].nl-button--hover-test {
+.nl-button.nl-button--primary.nl-button--negative.nl-button--pressed.nl-button--hover-test {
   @include mixin.nl-button--primary-negative-pressed-hover;
 }
 
-.nl-button.nl-button--primary.nl-button--negative[aria-pressed="true" i].nl-button--active-test {
+.nl-button.nl-button--primary.nl-button--negative.nl-button--pressed.nl-button--active-test {
   @include mixin.nl-button--primary-negative-pressed-active;
 }
 
@@ -88,11 +88,11 @@
   @include mixin.nl-button--secondary-active;
 }
 
-.nl-button.nl-button--secondary[aria-pressed="true" i].nl-button--hover-test {
+.nl-button.nl-button--secondary.nl-button--pressed.nl-button--hover-test {
   @include mixin.nl-button--secondary-pressed-hover;
 }
 
-.nl-button.nl-button--secondary[aria-pressed="true" i].nl-button--active-test {
+.nl-button.nl-button--secondary.nl-button--pressed.nl-button--active-test {
   @include mixin.nl-button--secondary-pressed-active;
 }
 
@@ -104,11 +104,11 @@
   @include mixin.nl-button--secondary-positive-active;
 }
 
-.nl-button.nl-button--secondary.nl-button--positive[aria-pressed="true" i].nl-button--hover-test {
+.nl-button.nl-button--secondary.nl-button--positive.nl-button--pressed.nl-button--hover-test {
   @include mixin.nl-button--secondary-positive-pressed-hover;
 }
 
-.nl-button.nl-button--secondary.nl-button--positive[aria-pressed="true" i].nl-button--active-test {
+.nl-button.nl-button--secondary.nl-button--positive.nl-button--pressed.nl-button--active-test {
   @include mixin.nl-button--secondary-positive-pressed-active;
 }
 
@@ -120,11 +120,11 @@
   @include mixin.nl-button--secondary-negative-active;
 }
 
-.nl-button.nl-button--secondary.nl-button--negative[aria-pressed="true" i].nl-button--hover-test {
+.nl-button.nl-button--secondary.nl-button--negative.nl-button--pressed.nl-button--hover-test {
   @include mixin.nl-button--secondary-negative-pressed-hover;
 }
 
-.nl-button.nl-button--secondary.nl-button--negative[aria-pressed="true" i].nl-button--active-test {
+.nl-button.nl-button--secondary.nl-button--negative.nl-button--pressed.nl-button--active-test {
   @include mixin.nl-button--secondary-negative-pressed-active;
 }
 
@@ -137,11 +137,11 @@
   @include mixin.nl-button--subtle-active;
 }
 
-.nl-button.nl-button--subtle[aria-pressed="true" i].nl-button--hover-test {
+.nl-button.nl-button--subtle.nl-button--pressed.nl-button--hover-test {
   @include mixin.nl-button--subtle-pressed-hover;
 }
 
-.nl-button.nl-button--subtle[aria-pressed="true" i].nl-button--active-test {
+.nl-button.nl-button--subtle.nl-button--pressed.nl-button--active-test {
   @include mixin.nl-button--subtle-pressed-active;
 }
 
@@ -153,11 +153,11 @@
   @include mixin.nl-button--subtle-positive-active;
 }
 
-.nl-button.nl-button--subtle.nl-button--positive[aria-pressed="true" i].nl-button--hover-test {
+.nl-button.nl-button--subtle.nl-button--positive.nl-button--pressed.nl-button--hover-test {
   @include mixin.nl-button--subtle-positive-pressed-hover;
 }
 
-.nl-button.nl-button--subtle.nl-button--positive[aria-pressed="true" i].nl-button--active-test {
+.nl-button.nl-button--subtle.nl-button--positive.nl-button--pressed.nl-button--active-test {
   @include mixin.nl-button--subtle-positive-pressed-active;
 }
 
@@ -169,11 +169,11 @@
   @include mixin.nl-button--subtle-negative-active;
 }
 
-.nl-button.nl-button--subtle.nl-button--negative[aria-pressed="true" i].nl-button--hover-test {
+.nl-button.nl-button--subtle.nl-button--negative.nl-button--pressed.nl-button--hover-test {
   @include mixin.nl-button--subtle-negative-pressed-hover;
 }
 
-.nl-button.nl-button--subtle.nl-button--negative[aria-pressed="true" i].nl-button--active-test {
+.nl-button.nl-button--subtle.nl-button--negative.nl-button--pressed.nl-button--active-test {
   @include mixin.nl-button--subtle-negative-pressed-active;
 }
 
