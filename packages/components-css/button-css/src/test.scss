@@ -177,6 +177,27 @@
   @include mixin.nl-button--subtle-negative-pressed-active;
 }
 
+/* Forced colors */
+.nl-button.nl-button--forced-colors-test {
+  @include mixin.nl-button--forced-colors;
+}
+
+.nl-button--disabled.nl-button--forced-colors-test {
+  @include mixin.nl-button--forced-colors-disabled;
+}
+
+.nl-button--pressed.nl-button--forced-colors-test {
+  @include mixin.nl-button--forced-colors-pressed;
+}
+
+.nl-button--pressed.nl-button--disabled.nl-button--forced-colors-test {
+  @include mixin.nl-button--forced-colors-pressed-disabled;
+}
+
+.nl-button:not(.nl-button--disabled).nl-button--hover-test.nl-button--forced-colors-test {
+  @include mixin.nl-button--forced-colors-hover;
+}
+
 /* html */
 .nl-html--button {
   @include mixinHTML.nl-html--button;
