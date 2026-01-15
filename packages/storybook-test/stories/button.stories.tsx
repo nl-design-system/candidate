@@ -3380,6 +3380,37 @@ export const ButtonKlein: Story = {
 
 export const ButtonBusy = ButtonStories.BusyButton;
 
+export const AlignmentTest: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: `Dit is de button met verschillende root elementen
+1. \`<button>\` met label
+2. \`<button>\` met children
+3. \`<a>\` met label
+4. \`<a>\` met children
+5. \`<input type="button">\`
+6. \`<div>\`
+`,
+      },
+    },
+  },
+  render: (props) => (
+    <div style={{ display: 'flex', alignItems: 'start' }}>
+      <ButtonComponent {...props} />
+      <ButtonComponent {...props} label={undefined}>
+        {props.label}
+      </ButtonComponent>
+      <LinkButton {...props} />
+      <LinkButton {...props} label={undefined}>
+        {props.label}
+      </LinkButton>
+      <input type="button" className="nl-button" value={props.label} />
+      <div className="nl-button">{props.label}</div>
+    </div>
+  ),
+};
+
 export const ButtonGrid: Story = {
   args: {
     label: 'Example',
