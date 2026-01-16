@@ -23,9 +23,8 @@ Beschrijf welke tests er gedaan moeten worden om de component te testen aan de a
 
 De Stories die we maken vormen een handige todo-lijst voor Developers die gebruikt kan worden voor het maken van de component. Deze Stories kunnen ook goed worden gereviewd om te zorgen dat de acceptatiecriteria juist vertaald zijn naar testbare functionaliteiten, voordat de component zelf wordt ontwikkeld. Ook kunnen we de stories gebruiken om Community implementaties te testen, zodat we weten welke onderdelen we uit implementaties kunnen gebruiken als basis voor de Candidate implementatie.
 
-:::tip
-Door gebruik te maken van de bestaande Community componenten in deze stories weten we welke functionaliteit meegenomen kan worden én kunnen we uitleggen waarom we de Candidate component op sommige vlakken anders implementeren dan de bestaande Community component.
-:::
+> [!TIP]
+> Door gebruik te maken van de bestaande Community componenten in deze stories weten we welke functionaliteit meegenomen kan worden én kunnen we uitleggen waarom we de Candidate component op sommige vlakken anders implementeren dan de bestaande Community component.
 
 - Maak stories voor de acceptatiecriteria die relevant zijn voor toegankelijkheid.
 - Maak stories voor de acceptatiecriteria die relevant zijn voor design.
