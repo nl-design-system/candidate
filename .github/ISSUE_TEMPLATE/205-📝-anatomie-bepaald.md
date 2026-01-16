@@ -35,17 +35,17 @@ Is er een anatomie nodig? Leg deze dan in de volgende stappen vast en maak een s
 
 Maak een schets van de anatomie op een manier die voor jou het best werkt. Dat kan zijn op papier met een foto, met [https://excalidraw.com](https://excalidraw.com) of bijvoorbeeld in Figma:
 
-:::info[Stappen voor Figma]
-
-- Open de Documentatie website afbeeldingen Figma file.
-- Dupliceer een reeds bestaande page.
-- Geef de page de naam van de component.
-- Geef het frame de naam anatomy.
-- Plaats de component vanuit de 'NL Design System - Bibliotheek' op het frame.
-- Gebruik de 'Annotation number' en 'Annotation line' om onderdelen een te wijzen en nummeren. Probeer 48 spacing aan te houden tussen 'Annotation number' en de gehele component.
-- Exporteer het frame als plaatje en voeg deze toe aan de betreffende Backlog issue van de component.
-
-:::
+> [!INFO]
+>
+> **Stappen voor Figma**
+>
+> - Open de Documentatie website afbeeldingen Figma file.
+> - Dupliceer een reeds bestaande page.
+> - Geef de page de naam van de component.
+> - Geef het frame de naam anatomy.
+> - Plaats de component vanuit de 'NL Design System - Bibliotheek' op het frame.
+> - Gebruik de 'Annotation number' en 'Annotation line' om onderdelen een te wijzen en nummeren. Probeer 48 spacing aan te houden tussen 'Annotation number' en de gehele component.
+> - Exporteer het frame als plaatje en voeg deze toe aan de betreffende Backlog issue van de component.
 
 ### Bepaal of de anatomie zo kan worden meegenomen in de Candidate implementatie
 

@@ -22,11 +22,13 @@ labels:
 - Verzamel alle design tokens die worden gebruikt, bekijk hiervoor implementaties en voorbeelden in de GitHub discussion. En kies de design token naam die klopt met de NL Design System naming convention.
 - Zet deze in een tabel en noteer welke design tokens door welke organisaties worden gebruikt.
 
-:::warning[Let op]
-Als een token géén value heeft, kun je hem als niet gebruikt beschouwen.
-
-Het is ook goed om via Inspect Element de CSS van de component te bekijken. Het kan voorkomen dat een component zijn stijling vanuit een andere tokenset ontvangt.
-:::
+> [!WARNING]
+>
+> **Let op**
+>
+> Als een token géén value heeft, kun je hem als niet gebruikt beschouwen.
+>
+> Het is ook goed om via Inspect Element de CSS van de component te bekijken. Het kan voorkomen dat een component zijn stijling vanuit een andere tokenset ontvangt.
 
 Bijvoorbeeld
 

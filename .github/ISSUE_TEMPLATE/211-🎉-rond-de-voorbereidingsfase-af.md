@@ -29,9 +29,8 @@ Dat kan door in het GitHub projectbord te kijken of de status van de 📝 select
 
 ### Stuur een berichtje in Slack
 
-:::tip[Let op]
-Is er geen berichtje gestuurd in de voorbereidingsfase terwijl de ontwikkelingen in de ontwikkelfase al wel ruimschoots gestart zijn? Dan sturen we geen berichtje om niet de indruk te wekken dat de Ontwikkelfase voor dit component op een of andere manier supersnel verloopt.
-:::
+> [!NOTE]
+> Is er geen berichtje gestuurd in de voorbereidingsfase terwijl de ontwikkelingen in de ontwikkelfase al wel ruimschoots gestart zijn? Dan sturen we geen berichtje om niet de indruk te wekken dat de Ontwikkelfase voor dit component op een of andere manier supersnel verloopt.
 
 Dat kan in het #nl-design-system kanaal met het volgende bericht
 
