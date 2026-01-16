@@ -1,4 +1,4 @@
 ---
-name: 🗒️ Blank issue
-about: Create a new issue from scratch
+name: 🗒️ Blanco issue
+about: Maak een issue zonder template aan.
 ---

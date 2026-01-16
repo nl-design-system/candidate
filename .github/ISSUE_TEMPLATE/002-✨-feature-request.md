@@ -1,9 +1,9 @@
 ---
-name: Community - 🐛 Rapporteer een bug
-about: Is de component voldoende gebruikt in verschillende huisstijlen?
-title: '{component-name} - {bug omschrijving}'
+name: Community - 🐛 Stel een feature voor
+about: Mis je een functionaliteit of wil je een verbetering voorstellen?
+title: '{component-name} - {feature request omschrijving}'
 labels:
-  - bug
+  - feature request
 ---
 
 ## Omschrijving
