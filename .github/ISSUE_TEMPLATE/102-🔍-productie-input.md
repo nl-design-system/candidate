@@ -4,6 +4,7 @@ about: Is de Community component implementatie goed bruikbaar in diverse project
 title: '{component-name} - 🔍 Productie input'
 labels:
   - 🔍 Candidate Selectiefase
+  - developer relations
 ---
 
 ## 🔍 Productie input

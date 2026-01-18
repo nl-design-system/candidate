@@ -4,6 +4,7 @@ about: Voor alle onderdelen uit de anatomie is besloten welke HTML hier goed bij
 title: '{component-name} - 📝 HTML bepaald'
 labels:
   - 📝 Candidate Voorbereidingsfase
+  - developer relations
 ---
 
 ## 📝 HTML bepaald

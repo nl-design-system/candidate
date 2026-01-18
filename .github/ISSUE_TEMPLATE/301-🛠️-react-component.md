@@ -4,6 +4,7 @@ about: React component is ontwikkeld, maakt gebruik van de CSS component en word
 title: '{component-name} - 🛠️ React component'
 labels:
   - 🛠️ Candidate Ontwikkelfase
+  - frontend
 ---
 
 ## 🛠️ React component

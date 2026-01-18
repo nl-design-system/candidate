@@ -4,6 +4,8 @@ about: We valideren of de alle testcases van de component goed werken
 title: '{component-name} - 🧪 Testcases getest'
 labels:
   - 🧪 Candidate Testfase
+  - developer relations
+  - frontend
 ---
 
 ## 🧪 Testcases getest

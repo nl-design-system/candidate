@@ -4,6 +4,7 @@ about: Er zijn voldoende testcases beschikbaar om een robuust component te maken
 title: '{component-name} - 📝 Testcases voor gebruik vastgelegd'
 labels:
   - 📝 Candidate Voorbereidingsfase
+  - frontend
 ---
 
 ## 📝 Testcases voor gebruik vastgelegd

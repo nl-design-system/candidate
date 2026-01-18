@@ -4,6 +4,8 @@ about: De component documentatie van de beschikbare varianten en APIs is te vind
 title: '{component-name} - 🛠️ Documentatie'
 labels:
   - 🛠️ Candidate Ontwikkelfase
+  - documentation
+  - frontend
 ---
 
 ## 🛠️ Documentatie

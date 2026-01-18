@@ -4,6 +4,8 @@ about: Is de selectie gelukt? Breng de community op de hoogte
 title: '{component-name} - 🎉 Rond de selectiefase af'
 labels:
   - 🔍 Candidate Selectiefase
+  - designer relations
+  - developer relations
 ---
 
 ## 🎉 Rond de selectiefase af

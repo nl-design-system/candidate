@@ -4,6 +4,7 @@ about: Teams kunnen makkelijk de Candidate component gebruiken in designs en pro
 title: '{component-name} - 🚀 Gepubliceerd in Figma'
 labels:
   - 🚀 Candidate Publicatiefase
+  - Figma
 ---
 
 ## 🚀 Gepubliceerd in Figma

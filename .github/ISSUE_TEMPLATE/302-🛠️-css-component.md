@@ -4,6 +4,7 @@ about: CSS component is ontwikkeld, wordt beschikbaar gemaakt in de React compon
 title: '{component-name} - 🛠️ CSS component'
 labels:
   - 🛠️ Candidate Ontwikkelfase
+  - frontend
 ---
 
 ## 🛠️ CSS component

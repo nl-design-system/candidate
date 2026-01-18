@@ -4,6 +4,7 @@ about: Teams kunnen makkelijk de Candidate component vinden in de themes reposit
 title: '{component-name} - 🚀 Gebruikt in de Themes repository'
 labels:
   - 🚀 Candidate Publicatiefase
+  - developer relations
 ---
 
 ## 🚀 Gebruikt in de Themes repository

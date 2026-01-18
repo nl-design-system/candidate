@@ -4,6 +4,7 @@ about: Is de selectie nog niet gelukt? Besluit of er een fast track nodig is.
 title: '{component-name} - 🔥 Fast Track'
 labels:
   - 🔍 Candidate Selectiefase
+  - design system lead
 ---
 
 ## 🔥 Fast Track
