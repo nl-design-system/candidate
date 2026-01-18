@@ -4,6 +4,9 @@ about: Er is besloten uit welke onderdelen de component bestaat en welke naam de
 title: '{component-name} - 📝 Anatomie bepaald'
 labels:
   - 📝 Candidate Voorbereidingsfase
+  - a11y specialist
+  - designer relations
+  - developer relations
 ---
 
 ## 📝 Anatomie bepaald

@@ -6,6 +6,8 @@ title: '{component-name} - 📝 Keywords en aliassen bepaald
 '
 labels:
   - 📝 Candidate Voorbereidingsfase
+  - designer relations
+  - developer relations
 ---
 
 ## 📝 Keywords en aliassen bepaald

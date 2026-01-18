@@ -4,6 +4,7 @@ about: We testen of de component voldoet aan de acceptatiecriteria voor toeganke
 title: '{component-name} - 🧪 Accessibility getest'
 labels:
   - 🧪 Candidate Testfase
+  - a11y specialist
 ---
 
 ## 🧪 Accessibility getest

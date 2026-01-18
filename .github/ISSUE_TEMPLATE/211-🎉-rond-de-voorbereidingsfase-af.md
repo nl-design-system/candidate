@@ -4,6 +4,8 @@ about: Is de voorbereiding gelukt? Breng de community op de hoogte
 title: '{component-name} - 🎉 Rond de voorbereidingsfase af'
 labels:
   - 📝 Candidate Voorbereidingsfase
+  - designer relations
+  - developer relations
 ---
 
 ## 🎉 Rond de voorbereidingsfase af

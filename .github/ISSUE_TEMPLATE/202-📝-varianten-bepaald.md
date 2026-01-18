@@ -4,6 +4,7 @@ about: Component is, waar nodig, versimpeld of opgesplitst. Zodat er één of me
 title: '{component-name} - 📝 Varianten bepaald'
 labels:
   - 📝 Candidate Voorbereidingsfase
+  - designer relations
 ---
 
 ## 📝 Varianten bepaald

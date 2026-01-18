@@ -4,6 +4,7 @@ about: Teams kunnen makkelijk de Candidate component installeren en testen in ee
 title: '{component-name} - 🚀 Gepubliceerd op npm'
 labels:
   - 🚀 Candidate Publicatiefase
+  - frontend
 ---
 
 ## 🚀 Gepubliceerd op npm

@@ -4,6 +4,7 @@ about: Is de component meegenomen in toegankelijkheidsrapporten?
 title: '{component-name} - 🔍 WCAG input'
 labels:
   - 🔍 Candidate Selectiefase
+  - a11y specialist
 ---
 
 ## 🔍 WCAG input

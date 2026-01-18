@@ -4,6 +4,9 @@ about: We valideren of de alle documentatie van de component goed bergrepen word
 title: '{component-name} - 🧪 Documentatie getest'
 labels:
   - 🧪 Candidate Testfase
+  - a11y specialist
+  - designer relations
+  - developer relations
 ---
 
 ## 🧪 Documentatie getest

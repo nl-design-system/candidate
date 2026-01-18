@@ -4,6 +4,7 @@ about: We hebben getest of bestaande thema’s voor Community implementaties mak
 title: '{component-name} - 🧪 Design tokens getest'
 labels:
   - 🧪 Candidate Testfase
+  - developer relations
 ---
 
 ## 🧪 Design tokens getest

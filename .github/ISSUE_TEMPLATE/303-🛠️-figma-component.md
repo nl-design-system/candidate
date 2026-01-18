@@ -4,6 +4,7 @@ about: Figma component is ontwikkeld, en logische common componenten zijn gebrui
 title: '{component-name} - 🛠️ Figma component'
 labels:
   - 🛠️ Candidate Ontwikkelfase
+  - Figma
 ---
 
 ## 🛠️ Figma component

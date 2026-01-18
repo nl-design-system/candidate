@@ -4,6 +4,9 @@ about: We valideren of de testcoverage van de component alle acceptatiecriteria 
 title: '{component-name} - 🧪 Testcoverage getest'
 labels:
   - 🧪 Candidate Testfase
+  - design system lead
+  - designer relations
+  - developer relations
 ---
 
 ## 🧪 Testcoverage getest

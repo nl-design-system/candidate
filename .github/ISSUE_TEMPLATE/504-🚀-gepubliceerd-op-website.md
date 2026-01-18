@@ -4,6 +4,7 @@ about: Teams kunnen makkelijk de Candidate component vinden op de website nldesi
 title: '{component-name} - 🚀 Gepubliceerd op de website'
 labels:
   - 🚀 Candidate Publicatiefase
+  - developer relations
 ---
 
 ## 🚀 Gepubliceerd op de website

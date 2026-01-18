@@ -4,6 +4,7 @@ about: Openstaande issues voor de Community implementaties verzameld
 title: '{component-name} - 📝 Issues bekend'
 labels:
   - 📝 Candidate Voorbereidingsfase
+  - developer relations
 ---
 
 ## 📝 Issues bekend

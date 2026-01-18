@@ -4,6 +4,7 @@ about: Er is gekeken welke toegankelijkheidsproblemen voor komen en met acceptat
 title: '{component-name} - 📝 Acceptatiecriteria voor accessibility'
 labels:
   - 📝 Candidate Voorbereidingsfase
+  - a11y specialist
 ---
 
 ## 📝 Acceptatiecriteria voor accessibility

@@ -4,6 +4,7 @@ about: Is de component voldoende gebruikt in verschillende huisstijlen?
 title: '{component-name} - 🔍 Huisstijl input'
 labels:
   - 🔍 Candidate Selectiefase
+  - designer relations
 ---
 
 ## 🔍 Huisstijl input
