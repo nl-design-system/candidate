@@ -23,7 +23,13 @@ import {
   IconShoppingCart,
   IconTrash,
 } from '@tabler/icons-react';
-import { Button as ButtonComponent, type ButtonProps } from '../../components-react/button-react/src/button';
+import {
+  Button as ButtonComponent,
+  ButtonHint,
+  PURPOSES,
+  HINTS,
+  type ButtonProps,
+} from '../../components-react/button-react/src/button';
 import { Icon } from '../../components-react/icon-react/src/icon';
 import acceptanceCriteria from '../../docs/button-docs/docs/acceptance-criteria.md?raw';
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
@@ -99,6 +105,7 @@ const ButtonDecorator: Decorator = (Story) => (
   </div>
 );
 import { useArgs } from 'storybook/preview-api';
+import { ButtonPurpose } from '@nl-design-system-candidate/button-react';
 
 const meta = {
   ...merge({
@@ -3372,3 +3379,270 @@ export const ButtonKlein: Story = {
 };
 
 export const ButtonBusy = ButtonStories.BusyButton;
+
+export const AlignmentTest: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: `Dit is de button met verschillende root elementen
+1. \`<button>\` met label
+2. \`<button>\` met children
+3. \`<a>\` met label
+4. \`<a>\` met children
+5. \`<input type="button">\`
+6. \`<div>\`
+`,
+      },
+    },
+  },
+  render: (props) => (
+    <div style={{ display: 'flex', alignItems: 'start' }}>
+      <ButtonComponent {...props} />
+      <ButtonComponent {...props} label={undefined}>
+        {props.label}
+      </ButtonComponent>
+      <LinkButton {...props} />
+      <LinkButton {...props} label={undefined}>
+        {props.label}
+      </LinkButton>
+      <input type="button" className="nl-button" value={props.label} />
+      <div className="nl-button">{props.label}</div>
+    </div>
+  ),
+};
+
+export const ButtonGrid: Story = {
+  args: {
+    label: 'Example',
+  },
+  render: ({ ...args }) => {
+    const axes: {
+      purpose: ButtonPurpose[];
+      hint: (undefined | ButtonHint)[];
+      disabled: boolean[];
+      pressed: boolean[];
+      state: (undefined | 'hover' | 'active' | 'focus-visible')[];
+      type: (undefined | 'button' | 'a' | 'div' | 'input[type=button]' | 'input[type=submit]' | 'input[type=reset]')[];
+      variants: ButtonProps[];
+    } = {
+      purpose: [undefined, ...PURPOSES],
+      hint: [undefined, ...HINTS],
+      disabled: [false, true],
+      pressed: [false, true],
+      state: [undefined, 'hover', 'active', 'focus-visible'],
+      // type: ['button', 'a', 'div', 'input[type=button]', 'input[type=submit]', 'input[type=reset]'],
+      type: ['button'],
+      variants: [
+        {
+          label: 'Example',
+        },
+        {
+          label: 'Previous Page',
+          iconStart: <IconArrowLeft />,
+        },
+        {
+          label: 'Next Page',
+          iconEnd: <IconArrowRight />,
+        },
+        {
+          lang: 'ar',
+          dir: 'rtl',
+          label: 'الصفحة السابقة',
+          iconStart: <IconArrowRight />,
+        },
+        {
+          lang: 'ar',
+          dir: 'rtl',
+          label: 'الصفحة السابقة',
+        },
+        {
+          lang: 'zh-CN',
+          label: '下一页',
+        },
+      ],
+    };
+
+    return (
+      <table>
+        <thead>
+          <tr>
+            {Object.keys(axes).map((axis) => (
+              <th key={axis} scope="column">
+                {axis}
+              </th>
+            ))}
+            <th>example</th>
+          </tr>
+        </thead>
+        <tbody>
+          {axes.purpose.map((purpose) => (
+            <>
+              {axes.hint.map((hint) => (
+                <>
+                  {axes.disabled.map((disabled) => (
+                    <>
+                      {axes.pressed.map((pressed) => (
+                        <>
+                          {axes.state.map((state) => (
+                            <>
+                              {axes.type.map((type) =>
+                                hint && !purpose ? null : (
+                                  <tr key={[purpose, hint, disabled, pressed, state, type].join('/')}>
+                                    <td>{purpose}</td>
+                                    <td>{hint}</td>
+                                    <td>{String(disabled)}</td>
+                                    <td>{String(pressed)}</td>
+                                    <td>{state}</td>
+                                    <td>{type}</td>
+                                    <td>
+                                      <div style={{ display: 'flex', alignItems: 'flex-start', columnGap: '4px' }}>
+                                        {axes.variants.map((variantArgs, index) => (
+                                          <ButtonComponent
+                                            key={index}
+                                            {...args}
+                                            {...variantArgs}
+                                            className={state ? `nl-button--${state}-test` : undefined}
+                                            purpose={purpose}
+                                            hint={hint}
+                                            disabled={disabled}
+                                            pressed={pressed}
+                                          />
+                                        ))}
+                                      </div>
+                                    </td>
+                                  </tr>
+                                ),
+                              )}
+                            </>
+                          ))}
+                        </>
+                      ))}
+                    </>
+                  ))}
+                </>
+              ))}
+            </>
+          ))}
+        </tbody>
+      </table>
+    );
+  },
+};
+
+export const ButtonGridForcedColors: Story = {
+  args: {
+    label: 'Example',
+  },
+  render: ({ ...args }) => {
+    const axes: {
+      purpose: ButtonPurpose[];
+      hint: (undefined | ButtonHint)[];
+      disabled: boolean[];
+      pressed: boolean[];
+      state: (undefined | 'hover' | 'active' | 'focus-visible')[];
+      type: (undefined | 'button' | 'a' | 'div' | 'input[type=button]' | 'input[type=submit]' | 'input[type=reset]')[];
+      variants: ButtonProps[];
+    } = {
+      purpose: [undefined, ...PURPOSES],
+      hint: [undefined, ...HINTS],
+      disabled: [false, true],
+      pressed: [false, true],
+      state: [undefined, 'hover', 'active', 'focus-visible'],
+      // type: ['button', 'a', 'div', 'input[type=button]', 'input[type=submit]', 'input[type=reset]'],
+      type: ['button'],
+      variants: [
+        {
+          label: 'Example',
+        },
+        {
+          label: 'Previous Page',
+          iconStart: <IconArrowLeft />,
+        },
+        {
+          label: 'Next Page',
+          iconEnd: <IconArrowRight />,
+        },
+        {
+          lang: 'ar',
+          dir: 'rtl',
+          label: 'الصفحة السابقة',
+          iconStart: <IconArrowRight />,
+        },
+        {
+          lang: 'ar',
+          dir: 'rtl',
+          label: 'الصفحة السابقة',
+        },
+        {
+          lang: 'zh-CN',
+          label: '下一页',
+        },
+      ],
+    };
+
+    return (
+      <table>
+        <thead>
+          <tr>
+            {Object.keys(axes).map((axis) => (
+              <th key={axis} scope="column">
+                {axis}
+              </th>
+            ))}
+            <th>example</th>
+          </tr>
+        </thead>
+        <tbody>
+          {axes.purpose.map((purpose) => (
+            <>
+              {axes.hint.map((hint) => (
+                <>
+                  {axes.disabled.map((disabled) => (
+                    <>
+                      {axes.pressed.map((pressed) => (
+                        <>
+                          {axes.state.map((state) => (
+                            <>
+                              {axes.type.map((type) =>
+                                hint && !purpose ? null : (
+                                  <tr key={[purpose, hint, disabled, pressed, state, type].join('/')}>
+                                    <td>{purpose}</td>
+                                    <td>{hint}</td>
+                                    <td>{String(disabled)}</td>
+                                    <td>{String(pressed)}</td>
+                                    <td>{state}</td>
+                                    <td>{type}</td>
+                                    <td>
+                                      <div style={{ display: 'flex', alignItems: 'flex-start', columnGap: '4px' }}>
+                                        {axes.variants.map((variantArgs, index) => (
+                                          <ButtonComponent
+                                            key={index}
+                                            {...args}
+                                            {...variantArgs}
+                                            className={`${state ? `nl-button--${state}-test` : ''} nl-button--forced-colors-test`.trim()}
+                                            purpose={purpose}
+                                            hint={hint}
+                                            disabled={disabled}
+                                            pressed={pressed}
+                                          />
+                                        ))}
+                                      </div>
+                                    </td>
+                                  </tr>
+                                ),
+                              )}
+                            </>
+                          ))}
+                        </>
+                      ))}
+                    </>
+                  ))}
+                </>
+              ))}
+            </>
+          ))}
+        </tbody>
+      </table>
+    );
+  },
+};
