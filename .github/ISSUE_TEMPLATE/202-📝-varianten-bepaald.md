@@ -14,7 +14,6 @@ Component is, waar nodig, versimpeld of opgesplitst. Zodat er één of meerdere 
 - [ ] Verzamel input uit de Community
 - [ ] Besluit welke varianten Candidate worden
 - [ ] Documenteer besluit in de GitHub Discussion
-- [ ] Maak de packages beschikbaar voor de nieuwe Candidate component
 - [ ] Documenteer besluit in de Candidate repository
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 
@@ -117,24 +116,6 @@ Voorbeeld hypothese voor RVO met 4 verschillende formaten voor font-size:
 - Overleg de naam en beschrijving met het kernteam
 - Bepaal samen met de Design System Lead welke varianten in de Candidate component moeten worden opgenomen
 - Notuleer de besproken beredeneringen op, deze heb je nodig in de volgende stap.
-
-### Maak de packages beschikbaar voor de nieuwe Candidate component
-
-Het is vanaf dit moment handig dat er een omgeving is waarin de component en al zijn aanhangsels kan worden ontwikkeld. Maak dus in [de Candidate repository](https://github.com/nl-design-system/candidate) de packages alvast aan voor
-
-- de css component
-- de react component
-- de component docs
-
-Maak daarnaast alvast de mapjes aan:
-
-- het mapje voor deze component in storybook-test
-- het mapje voor deze component in storybook-non-conforming
-- het mapje voor deze component in storybook
-
-#### Hoe doe je dit bijvoorbeeld
-
-Er is hiervoor een experimenteel script beschikbaar in de Candidate repository. `scripts/create-package.sh`. Deze kun je in je terminal draaien, waarbij je kunt aangeven om welke component het gaat etc. Op basis hiervan worden template bestanden en mapjes aangemaakt die je in de volgende stappen kunt vullen.
 
 ### Documenteer besluit
 
