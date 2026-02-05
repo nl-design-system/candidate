@@ -169,6 +169,14 @@ find "$(pwd)$DESTINATION_FOLDER" -type f -print0 \
     ;
 printf "%s✔︎$NC\n" "$GREEN"
 
+if [[ "$PACKAGE" == "storybook" ]]; then
+  printf "Install component packages as dependencies for storybook: "
+  pnpm --filter ./packages/storybook add --save-dev --workspace \
+    "@nl-design-system-candidate/${COMPONENT_KEBAB_CASE}-react" \
+    "@nl-design-system-candidate/${COMPONENT_KEBAB_CASE}-docs"
+  printf "%s✔︎$NC\n" "$GREEN"
+fi
+
 echo ""
 echo "Done! 🎉"
 echo ""
