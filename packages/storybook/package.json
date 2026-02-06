@@ -32,6 +32,8 @@
     "@nl-design-system-candidate/color-sample-react": "workspace:*",
     "@nl-design-system-candidate/data-badge-docs": "workspace:*",
     "@nl-design-system-candidate/data-badge-react": "workspace:*",
+    "@nl-design-system-candidate/form-field-label-docs": "workspace:*",
+    "@nl-design-system-candidate/form-field-label-react": "workspace:*",
     "@nl-design-system-candidate/heading-docs": "workspace:*",
     "@nl-design-system-candidate/heading-react": "workspace:*",
     "@nl-design-system-candidate/icon-docs": "workspace:*",

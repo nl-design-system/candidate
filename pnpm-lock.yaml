@@ -1073,6 +1073,12 @@ importers:
       '@nl-design-system-candidate/data-badge-react':
         specifier: workspace:*
         version: link:../components-react/data-badge-react
+      '@nl-design-system-candidate/form-field-label-docs':
+        specifier: workspace:*
+        version: link:../docs/form-field-label-docs
+      '@nl-design-system-candidate/form-field-label-react':
+        specifier: workspace:*
+        version: link:../components-react/form-field-label-react
       '@nl-design-system-candidate/heading-docs':
         specifier: workspace:*
         version: link:../docs/heading-docs
@@ -1368,6 +1374,8 @@ importers:
   packages/tokens/color-sample-tokens: {}
 
   packages/tokens/data-badge-tokens: {}
+
+  packages/tokens/form-field-label-tokens: {}
 
   packages/tokens/heading-tokens: {}
 
