@@ -12,11 +12,40 @@ labels:
 
 ## 📝 Keywords en aliassen bepaald
 
+- [ ] Maak de packages beschikbaar voor de nieuwe Candidate component
 - [ ] Verzamel alternatieve namen voor de component
 - [ ] Voeg de meest gebruikte alternatieven toe aan de component pagina in de candidate repository
 - [ ] Voeg de aliassen toe aan de keywords op de component pagina in de documentatie repository
-- [ ] Maak de packages beschikbaar voor de nieuwe Candidate component
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
+
+### Maak de packages beschikbaar voor de nieuwe Candidate component
+
+Het is vanaf dit moment handig dat er een omgeving is waarin de component en al zijn aanhangsels kan worden ontwikkeld. Maak dus in [de Candidate repository](https://github.com/nl-design-system/candidate) de packages alvast aan voor
+
+- de css component
+- de react component
+- de component docs
+- de tokens
+
+Maak daarnaast alvast de mapjes en bestanden aan voor deze component in:
+
+- storybook-test
+- storybook-non-conforming
+- storybook
+
+#### Hoe doe je dit bijvoorbeeld
+
+Er zijn hiervoor experimentele scripts beschikbaar in de Candidate repository: `scripts/create-package.sh` en `scripts/create-stories.sh`. Deze kun je in je terminal draaien, waarbij je kunt aangeven om welke component het gaat etc. Op basis hiervan worden template bestanden en mapjes aangemaakt die je in de volgende stappen kunt vullen.
+
+```sh
+scripts/create-package.sh css tosti-kaas "A toast component."
+scripts/create-package.sh react tosti-kaas "A toast component."
+scripts/create-package.sh docs tosti-kaas "A toast component."
+scripts/create-package.sh tokens tosti-kaas "A toast component."
+scripts/create-stories.sh storybook tosti-kaas
+scripts/create-stories.sh storybook-non-conforming tosti-kaas
+scripts/create-stories.sh storybook-test tosti-kaas
+```
 
 ### Verzamel alternatieve namen voor de component
 
@@ -33,8 +62,7 @@ Diverse design systems, Developers en Designers gebruiken verschillende woorden 
 
 ### Voeg de meest gebruikte alternatieven toe aan de component pagina in de candidate repository
 
-- Voeg een bestand genaamd aliases.md toe binnen de docs folder van de component. Deze folders vind je binnen de docs folder van de Candidate repository in GitHub. :new: Bestaat deze folder nog niet? Bekijk hoe je deze aanmaakt en wat er in moet komen te staan in .
-- Voeg de aliassen toe aan het bestand. Gebruik hiervoor de volgende opzet:
+- Voeg de aliassen toe aan het bestand aliases.md in de component docs package in de Candidate repository in GitHub. Gebruik hiervoor de volgende opzet:
 
 ```md
 <!-- @license CC0-1.0 -->
@@ -93,35 +121,6 @@ keywords:
 
 - **Commit Message**: `docs: candidate aliases as keywords for {naam-component}`
 - **Branch**: `docs/candidate-aliases-as-keywords-for-{naam-component}`
-
-### Maak de packages beschikbaar voor de nieuwe Candidate component
-
-Het is vanaf dit moment handig dat er een omgeving is waarin de component en al zijn aanhangsels kan worden ontwikkeld. Maak dus in [de Candidate repository](https://github.com/nl-design-system/candidate) de packages alvast aan voor
-
-- de css component
-- de react component
-- de component docs
-- de tokens
-
-Maak daarnaast alvast de mapjes en bestanden aan voor deze component in:
-
-- storybook-test
-- storybook-non-conforming
-- storybook
-
-#### Hoe doe je dit bijvoorbeeld
-
-Er zijn hiervoor experimentele scripts beschikbaar in de Candidate repository: `scripts/create-package.sh` en `scripts/create-stories.sh`. Deze kun je in je terminal draaien, waarbij je kunt aangeven om welke component het gaat etc. Op basis hiervan worden template bestanden en mapjes aangemaakt die je in de volgende stappen kunt vullen.
-
-```sh
-scripts/create-package.sh css tosti-kaas "A toast component."
-scripts/create-package.sh react tosti-kaas "A toast component."
-scripts/create-package.sh docs tosti-kaas "A toast component."
-scripts/create-package.sh tokens tosti-kaas "A toast component."
-scripts/create-stories.sh storybook tosti-kaas
-scripts/create-stories.sh storybook-non-conforming tosti-kaas
-scripts/create-stories.sh storybook-test tosti-kaas
-```
 
 🚩 Checkpoint
 📝 Zoekwoorden
