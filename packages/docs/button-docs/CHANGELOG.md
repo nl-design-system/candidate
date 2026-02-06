@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/button-docs
 
+## 1.0.3
+
+### Patch Changes
+
+- af422fb: Notitie toegevoegd over de ontbrekende hover styles bij een disabled button
+
 ## 1.0.2
 
 ### Patch Changes
