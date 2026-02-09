@@ -163,6 +163,15 @@ importers:
         specifier: 1.94.1
         version: 1.94.1
 
+  packages/components-css/form-field-description-css:
+    devDependencies:
+      rimraf:
+        specifier: 6.1.0
+        version: 6.1.0
+      sass:
+        specifier: 1.94.1
+        version: 1.94.1
+
   packages/components-css/form-field-label-css:
     devDependencies:
       rimraf:
@@ -425,6 +434,49 @@ importers:
       '@nl-design-system-candidate/data-badge-css':
         specifier: workspace:*
         version: link:../../components-css/data-badge-css
+      '@nl-design-system/rollup-config-react-component':
+        specifier: 1.0.7
+        version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
+      '@types/react':
+        specifier: 19.2.7
+        version: 19.2.7
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+      rimraf:
+        specifier: 6.1.0
+        version: 6.1.0
+      rollup:
+        specifier: 4.53.2
+        version: 4.53.2
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: 4.0.10
+        version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
+
+  packages/components-react/form-field-description-react:
+    dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+    devDependencies:
+      '@babel/preset-env':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5)
+      '@babel/preset-react':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5)
+      '@babel/preset-typescript':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5)
+      '@babel/runtime':
+        specifier: 7.28.4
+        version: 7.28.4
+      '@nl-design-system-candidate/form-field-description-css':
+        specifier: workspace:*
+        version: link:../../components-css/form-field-description-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -897,6 +949,21 @@ importers:
         specifier: 19.2.3
         version: 19.2.3
 
+  packages/docs/form-field-description-docs:
+    devDependencies:
+      '@nl-design-system-candidate/form-field-description-react':
+        specifier: workspace:*
+        version: link:../../components-react/form-field-description-react
+      '@storybook/react-vite':
+        specifier: 9.1.5
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.53.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.2(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1)))(typescript@5.9.3)(vite@7.2.2(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1))
+      '@types/react':
+        specifier: 19.2.7
+        version: 19.2.7
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+
   packages/docs/form-field-label-docs:
     devDependencies:
       '@nl-design-system-candidate/form-field-label-react':
@@ -1073,6 +1140,12 @@ importers:
       '@nl-design-system-candidate/data-badge-react':
         specifier: workspace:*
         version: link:../components-react/data-badge-react
+      '@nl-design-system-candidate/form-field-description-docs':
+        specifier: workspace:*
+        version: link:../docs/form-field-description-docs
+      '@nl-design-system-candidate/form-field-description-react':
+        specifier: workspace:*
+        version: link:../components-react/form-field-description-react
       '@nl-design-system-candidate/form-field-label-docs':
         specifier: workspace:*
         version: link:../docs/form-field-label-docs
@@ -1374,6 +1447,8 @@ importers:
   packages/tokens/color-sample-tokens: {}
 
   packages/tokens/data-badge-tokens: {}
+
+  packages/tokens/form-field-description-tokens: {}
 
   packages/tokens/form-field-label-tokens: {}
 
@@ -2443,19 +2518,11 @@ packages:
   '@jridgewell/gen-mapping@0.3.12':
     resolution: {integrity: sha512-OuLGC46TjB5BbN1dH8JULVVZY4WTdkF7tV9Ys6wLL1rubZnCMstOhNHueU5bLCrnRuDhKPDM4g6sw4Bel5Gzqg==}
 
-  '@jridgewell/gen-mapping@0.3.5':
-    resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
-    engines: {node: '>=6.0.0'}
-
   '@jridgewell/remapping@2.3.5':
     resolution: {integrity: sha512-LI9u/+laYG4Ds1TDKSJW2YPrIlcVYOwi2fUC6xB43lueCjgxV4lffOCZCtYFiH6TNOX+tQKXx97T4IKHbhyHEQ==}
 
   '@jridgewell/resolve-uri@3.1.0':
     resolution: {integrity: sha512-F2msla3tad+Mfht5cJq7LSXcdudKTWCVYUgw6pLFOOHSTtZlj6SWNYAp+AhuqLmWdBO2X5hPrLcu8cVP8fy28w==}
-    engines: {node: '>=6.0.0'}
-
-  '@jridgewell/set-array@1.2.1':
-    resolution: {integrity: sha512-R8gLRTZeyp03ymzP/6Lil/28tGeGEzhx1q2k703KGWRAI1VdvPIXdG70VJc2pAMw3NA6JKL5hhFu1sJX0Mnn/A==}
     engines: {node: '>=6.0.0'}
 
   '@jridgewell/sourcemap-codec@1.5.0':
@@ -6344,8 +6411,8 @@ snapshots:
 
   '@ampproject/remapping@2.3.0':
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.5
-      '@jridgewell/trace-mapping': 0.3.29
+      '@jridgewell/gen-mapping': 0.3.12
+      '@jridgewell/trace-mapping': 0.3.31
 
   '@asamuzakjp/css-color@4.0.5':
     dependencies:
@@ -7615,20 +7682,12 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
       '@jridgewell/trace-mapping': 0.3.29
 
-  '@jridgewell/gen-mapping@0.3.5':
-    dependencies:
-      '@jridgewell/set-array': 1.2.1
-      '@jridgewell/sourcemap-codec': 1.5.0
-      '@jridgewell/trace-mapping': 0.3.29
-
   '@jridgewell/remapping@2.3.5':
     dependencies:
       '@jridgewell/gen-mapping': 0.3.12
       '@jridgewell/trace-mapping': 0.3.29
 
   '@jridgewell/resolve-uri@3.1.0': {}
-
-  '@jridgewell/set-array@1.2.1': {}
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
 
