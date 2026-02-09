@@ -1,0 +1,33 @@
+{
+  "name": "@nl-design-system-candidate/form-field-description-docs",
+  "version": "0.0.0",
+  "description": "Documentatie voor de Form Field Description component",
+  "license": "CC0-1.0",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/form-field-description-docs#readme",
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "form-field-description",
+    "form-field-description-component"
+  ],
+  "files": [
+    "./docs/",
+    "./stories/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/docs/form-field-description-docs"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@nl-design-system-candidate/form-field-description-react": "workspace:*",
+    "@storybook/react-vite": "9.1.5",
+    "@types/react": "19.2.7",
+    "react": "19.2.3"
+  }
+}
