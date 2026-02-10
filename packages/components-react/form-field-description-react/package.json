@@ -46,18 +46,18 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.28.5",
+    "@babel/preset-env": "7.29.0",
     "@babel/preset-react": "7.28.5",
     "@babel/preset-typescript": "7.28.5",
-    "@babel/runtime": "7.28.4",
+    "@babel/runtime": "7.28.6",
     "@nl-design-system-candidate/form-field-description-css": "workspace:*",
     "@nl-design-system/rollup-config-react-component": "1.0.7",
-    "@types/react": "19.2.7",
-    "react": "19.2.3",
-    "rimraf": "6.1.0",
-    "rollup": "4.53.2",
+    "@types/react": "19.2.13",
+    "react": "19.2.4",
+    "rimraf": "6.1.2",
+    "rollup": "4.57.1",
     "typescript": "5.9.3",
-    "vitest": "4.0.10"
+    "vitest": "4.0.18"
   },
   "peerDependencies": {
     "@babel/runtime": "^7",
