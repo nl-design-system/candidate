@@ -1,0 +1,25 @@
+{
+  "name": "@nl-design-system-candidate/form-field-error-message-tokens",
+  "version": "0.0.0",
+  "description": "Design tokens voor de Form Field Error Message component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/form-field-error-message-tokens#readme",
+  "main": "./tokens.json",
+  "exports": "./tokens.json",
+  "files": [
+    "./tokens.json"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/tokens/form-field-error-message-tokens"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "generate-tokens": "../../../scripts/generate-tokens.sh form-field-error-message"
+  }
+}
