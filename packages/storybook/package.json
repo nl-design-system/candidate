@@ -34,6 +34,8 @@
     "@nl-design-system-candidate/data-badge-react": "workspace:*",
     "@nl-design-system-candidate/form-field-description-docs": "workspace:*",
     "@nl-design-system-candidate/form-field-description-react": "workspace:*",
+    "@nl-design-system-candidate/form-field-error-message-docs": "workspace:*",
+    "@nl-design-system-candidate/form-field-error-message-react": "workspace:*",
     "@nl-design-system-candidate/form-field-label-docs": "workspace:*",
     "@nl-design-system-candidate/form-field-label-react": "workspace:*",
     "@nl-design-system-candidate/heading-docs": "workspace:*",
