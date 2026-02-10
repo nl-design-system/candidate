@@ -154,7 +154,7 @@ De varianten voor de Candidate component zijn bepaald, dat hebben we gedaan op b
 - {variant-naam}
 - {variant-naam}
 
-### Deze varianten nemen we mee:
+### Deze varianten nemen we niet mee:
 
 {optioneel: welke varianten zijn zo smerig dat we ze niet hebben meegenomen? Beschrijf ook waarom}
 
