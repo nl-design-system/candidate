@@ -27,7 +27,7 @@ Maak een interface of type genaamd `{Component}Props` gebaseerd op de API zoals 
 
 Schrijf een render method voor de component op basis van de semantiek zoals bepaald in een eerder stap.
 
-Analyseer welke typescript attributen het component inherit. Denk bijvoorbeeld aan `HTMLAttributes<HTMLSpanElement>`
+Analyseer welke typescript attributen de component inherit. Denk bijvoorbeeld aan `HTMLAttributes<HTMLSpanElement>`
 
 Gebruik wanneer nodig ook typescript regels voor gecombineerde attributen. Denk bijvoorbeeld aan
 

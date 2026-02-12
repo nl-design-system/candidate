@@ -52,7 +52,7 @@ Maak een schets van de anatomie op een manier die voor jou het best werkt. Dat k
 
 ### Bepaal of de anatomie zo kan worden meegenomen in de Candidate implementatie
 
-Zorg voor een meeting waar tenminste een designer, een developer, een toegankelijkheidsspecialist en de Design System Lead uit het kernteam bij aanwezig zijn. Besluit op basis van het voorstel of deze onderdelen inderdaad in het component moeten zitten, of er onderdelen missen en of iedereen het met de naamgeving eens is.
+Zorg voor een meeting waar tenminste een designer, een developer, een toegankelijkheidsspecialist en de Design System Lead uit het kernteam bij aanwezig zijn. Besluit op basis van het voorstel of deze onderdelen inderdaad in de component moeten zitten, of er onderdelen missen en of iedereen het met de naamgeving eens is.
 
 Tip: Zorg dat iedereen genoeg informatie heeft om niet alleen hun eigen expertise te gebruiken, maar ook alle relevante input die uit de community is verzameld in de eerdere stappen voor Candidate.
 
