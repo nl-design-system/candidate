@@ -5,6 +5,104 @@ import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 
 type Story = StoryObj<HeadingProps>;
 
+export const Heading: Story = {
+  name: 'Heading',
+  args: {
+    children: 'Heading',
+    level: 1,
+  },
+};
+
+export const HeadingLevel1: Story = {
+  name: 'Heading level 1',
+  args: {
+    children: 'Heading level 1',
+    level: 1,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Hoofdkop van een pagina.`,
+      },
+    },
+  },
+};
+
+export const HeadingLevel2: Story = {
+  name: 'Heading level 2',
+  args: {
+    children: 'Heading level 2',
+    level: 2,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Koptekst die volgt na de hoofdkop en in de koppenstructuur op het tweede niveau staat.`,
+      },
+    },
+  },
+};
+
+export const HeadingLevel3: Story = {
+  name: 'Heading level 3',
+  args: {
+    children: 'Heading level 3',
+    level: 3,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Koptekst die in de koppenstructuur op het derde niveau staat.`,
+      },
+    },
+  },
+};
+
+export const HeadingLevel4: Story = {
+  name: 'Heading level 4',
+  args: {
+    children: 'Heading level 4',
+    level: 4,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Koptekst die in de koppenstructuur op het vierde niveau staat.`,
+      },
+    },
+  },
+};
+
+export const HeadingLevel5: Story = {
+  name: 'Heading level 5',
+  args: {
+    children: 'Heading level 5',
+    level: 5,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Hoofdkop van een pagina.Koptekst die in de koppenstructuur op het vijfde niveau staat.`,
+      },
+    },
+  },
+};
+
+export const HeadingLevel6: Story = {
+  name: 'Heading level 6',
+  args: {
+    children: 'Heading level 6',
+    level: 6,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Koptekst die in de koppenstructuur op het zesde niveau staat.`,
+      },
+    },
+  },
+};
+
 export const Heading1MetMeerdereRegelsTekst: Story = {
   name: 'Heading 1 met meerdere regels tekst',
   args: {
