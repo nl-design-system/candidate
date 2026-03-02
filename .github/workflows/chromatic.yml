@@ -67,3 +67,6 @@ jobs:
           storybookConfigDir: packages/storybook-test/config/
           exitOnceUploaded: true
           onlyChanged: true
+          externals: |
+            package.json
+            **/package.json
