@@ -1316,6 +1316,12 @@ importers:
       '@nl-design-system-candidate/number-badge-docs':
         specifier: workspace:*
         version: link:../docs/number-badge-docs
+      '@nl-design-system-candidate/ordered-list-docs':
+        specifier: workspace:*
+        version: link:../docs/ordered-list-docs
+      '@nl-design-system-candidate/ordered-list-react':
+        specifier: workspace:*
+        version: link:../components-react/ordered-list-react
       '@nl-design-system-candidate/paragraph-docs':
         specifier: workspace:*
         version: link:../docs/paragraph-docs
