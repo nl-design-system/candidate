@@ -1,26 +1,26 @@
 ---
 name: Kernteam - 📝 Keywords en aliassen bepaald
-
 about: Keywords en aliassen voor de component zijn bepaald zodat deze makkelijk kan worden gevonden
-title: '{component-name} - 📝 Keywords en aliassen bepaald
-'
+title: '{component-name} - 📝 Keywords en aliassen bepaald'
 labels:
   - 📝 Candidate Voorbereidingsfase
   - designer relations
   - developer relations
+type: Task
 ---
 
 ## 📝 Keywords en aliassen bepaald
 
 - [ ] Maak de packages beschikbaar voor de nieuwe Candidate component
 - [ ] Verzamel alternatieve namen voor de component
+- [ ] Stem af met Design System Lead
 - [ ] Voeg de meest gebruikte alternatieven toe aan de component pagina in de candidate repository
 - [ ] Voeg de aliassen toe aan de keywords op de component pagina in de documentatie repository
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 
 ### Maak de packages beschikbaar voor de nieuwe Candidate component
 
-Het is vanaf dit moment handig dat er een omgeving is waarin de component en al zijn aanhangsels kan worden ontwikkeld. Maak dus in [de Candidate repository](https://github.com/nl-design-system/candidate) de packages alvast aan voor
+Het is vanaf dit moment handig dat er een omgeving is waarin de component en al zijn aanhangsels kan worden ontwikkeld. Maak dus in [de Candidate repository](https://github.com/nl-design-system/candidate) de packages alvast aan voor:
 
 - de css component
 - de react component
@@ -35,17 +35,22 @@ Maak daarnaast alvast de mapjes en bestanden aan voor deze component in:
 
 #### Hoe doe je dit bijvoorbeeld
 
-Er zijn hiervoor experimentele scripts beschikbaar in de Candidate repository: `scripts/create-package.sh` en `scripts/create-stories.sh`. Deze kun je in je terminal draaien, waarbij je kunt aangeven om welke component het gaat etc. Op basis hiervan worden template bestanden en mapjes aangemaakt die je in de volgende stappen kunt vullen.
+Er zijn hiervoor scripts beschikbaar in de Candidate repository: `scripts/create-package.sh` en `scripts/create-stories.sh`. Deze kun je in je terminal draaien, waarbij je kunt aangeven om welke component het gaat etc. Op basis hiervan worden template bestanden en mapjes aangemaakt die je in de volgende stappen kunt vullen.
 
-```sh
-scripts/create-package.sh css tosti-kaas "A toast component."
-scripts/create-package.sh react tosti-kaas "A toast component."
-scripts/create-package.sh docs tosti-kaas "A toast component."
-scripts/create-package.sh tokens tosti-kaas "A toast component."
-scripts/create-stories.sh storybook tosti-kaas
-scripts/create-stories.sh storybook-non-conforming tosti-kaas
-scripts/create-stories.sh storybook-test tosti-kaas
+```shell
+scripts/create-package.sh css button "Biedt de mogelijkheid om een actie uit te voeren." "Provides the ability to perform an action."
+scripts/create-package.sh react button "Biedt de mogelijkheid om een actie uit te voeren." "Provides the ability to perform an action."
+scripts/create-package.sh docs button "Biedt de mogelijkheid om een actie uit te voeren." "Provides the ability to perform an action."
+scripts/create-package.sh tokens button "Biedt de mogelijkheid om een actie uit te voeren." "Provides the ability to perform an action."
+scripts/create-stories.sh storybook button
+scripts/create-stories.sh storybook-non-conforming button
+scripts/create-stories.sh storybook-test button
 ```
+
+Maak een PR aan gebruik hierbij de volgende opzet:
+
+- **Commit Message**: `docs: candidate packages and stories for {naam-component}`
+- **Branch**: `docs/candidate-packages-and-stories-for-{naam-component}`
 
 ### Verzamel alternatieve namen voor de component
 
@@ -53,16 +58,27 @@ Diverse design systems, Developers en Designers gebruiken verschillende woorden 
 
 #### Hoe kun je dit bijvoorbeeld doen?
 
-- Maak een Canvas aan
-- Maak een nieuwe Mentimeter wordcloud aan voor de component.
-- Haal input op bij Designers en Developers uit de community door te vragen hoe zij de component ook wel noemen.
-- Voeg de uitkomsten aan de canvas toe aan de kolom met 'Keywords' en noteer achter elk woord hoevaak deze werd genoemd.
+Verzamel input:
+
+- Verzamel de huidige keywords voor deze component. Deze vind je in het Slack Canvas "[Component Keywords & Aliassen](https://codefornl.slack.com/docs/T68FXPFQV/F07BH78SAFP)" of in de keywords van de detail pagina van deze component in de documentatie repository. Noteer de resultaten in een comment in de issue.
+- Haal input op bij Designers en Developers uit de community door te vragen hoe zij de component ook wel noemen. Bijvoorbeeld middels een Mentimeter WordCloud quiz tijdens een Open Hour. Noteer de resultaten in een comment in de issue.
+- Verzamel welke keywords en andere gebruikte woorden voorkomen in het vakgebied. Je vind relevante bronnen in het Slack Canvas "[Inspiratie- en referentiebronnen voor componenten](https://codefornl.slack.com/docs/T68FXPFQV/F0AEQ1Q0WBS)". Noteer de resultaten in een comment in de issue.
+
+Maak een voorstel:
+
+- Combineer de resultaten in en tel op hoevaak ze voorkomen.
 - Selecteer de 0 tot 5 meest genoemde keywords en voeg deze toe aan de kolom met 'Aliassen'. Nummer de lijst op volgorde van meest naar minst vaak genoemd.
-- Zijn er duidelijk veelgebruikte alternatieven die ook als je een zoekmachine (google) gebruikt tot resultaten leiden? Ga dan verder met het toevoegen van de Aliassen.
+- Zijn er duidelijk veelgebruikte keywords die ook als je een zoekmachine (Google) gebruikt tot resultaten leiden? Neem deze ook op in Aliassen.
+- Stem met Design System Lead af.
+
+Verwerk de uitkomsten:
+
+- Voeg de uitkomsten aan de canvas toe aan de kolom met 'Keywords' en noteer achter elk woord hoevaak deze werd genoemd.
+- Voeg de uitkomsten aan de canvas toe aan de kolom met 'Aliassen' genummerd van meest naar minst vaak genoemd.
 
 ### Voeg de meest gebruikte alternatieven toe aan de component pagina in de candidate repository
 
-- Voeg de aliassen toe aan het bestand aliases.md in de component docs package in de Candidate repository in GitHub. Gebruik hiervoor de volgende opzet:
+- Voeg de aliassen toe aan het bestand `aliases.md` in de component docs package in de Candidate repository in GitHub. Gebruik hiervoor de volgende opzet:
 
 ```md
 <!-- @license CC0-1.0 -->
@@ -76,8 +92,6 @@ Maak een PR aan gebruik hierbij de volgende opzet:
 
 - **Commit Message**: `docs: candidate aliases for {naam-component}`
 - **Branch**: `docs/candidate-aliases-for-{naam-component}`
-
-Geef een Developer uit het kernteam via Slack een seintje dat deze klaar staat.
 
 ### Voeg de aliassen toe aan de keywords op de component pagina in de documentatie repository
 
