@@ -7,6 +7,7 @@ labels:
   - a11y specialist
   - designer relations
   - developer relations
+type: Task
 ---
 
 ## 🧪 Documentatie getest

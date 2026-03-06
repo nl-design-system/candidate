@@ -6,6 +6,8 @@ labels:
   - 🛠️ Candidate Ontwikkelfase
   - documentation
   - frontend
+  - Figma
+type: Task
 ---
 
 ## 🛠️ Documentatie

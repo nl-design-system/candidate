@@ -6,6 +6,7 @@ labels:
   - 🚀 Candidate Publicatiefase
   - designer relations
   - developer relations
+type: Task
 ---
 
 ## 🎉 Rond de publicatiefase af

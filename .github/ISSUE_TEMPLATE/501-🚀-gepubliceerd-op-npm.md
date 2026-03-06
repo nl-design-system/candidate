@@ -5,6 +5,7 @@ title: '{component-name} - 🚀 Gepubliceerd op npm'
 labels:
   - 🚀 Candidate Publicatiefase
   - frontend
+type: Task
 ---
 
 ## 🚀 Gepubliceerd op npm

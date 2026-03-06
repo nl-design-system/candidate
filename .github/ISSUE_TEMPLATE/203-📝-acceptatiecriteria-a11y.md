@@ -5,6 +5,7 @@ title: '{component-name} - 📝 Acceptatiecriteria voor accessibility'
 labels:
   - 📝 Candidate Voorbereidingsfase
   - a11y specialist
+type: Task
 ---
 
 ## 📝 Acceptatiecriteria voor accessibility

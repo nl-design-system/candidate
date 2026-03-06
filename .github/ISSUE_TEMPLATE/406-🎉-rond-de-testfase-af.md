@@ -6,6 +6,7 @@ labels:
   - 🧪 Candidate Testfase
   - designer relations
   - developer relations
+type: Task
 ---
 
 ## 🎉 Rond de testfase af

@@ -4,8 +4,9 @@ about: Er is besloten welke design tokens worden meegenomen en wat de logische b
 title: '{component-name} - 📝 Design tokens bepaald'
 labels:
   - 📝 Candidate Voorbereidingsfase
-  - design system lead
   - designer relations
+  - frontend
+type: Task
 ---
 
 ## 📝 Design tokens bepaald

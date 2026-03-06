@@ -5,6 +5,7 @@ title: '{component-name} - 🛠️ Figma component'
 labels:
   - 🛠️ Candidate Ontwikkelfase
   - Figma
+type: Task
 ---
 
 ## 🛠️ Figma component

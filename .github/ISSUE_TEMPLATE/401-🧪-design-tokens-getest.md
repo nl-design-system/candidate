@@ -5,6 +5,8 @@ title: '{component-name} - 🧪 Design tokens getest'
 labels:
   - 🧪 Candidate Testfase
   - developer relations
+  - frontend
+type: Task
 ---
 
 ## 🧪 Design tokens getest
