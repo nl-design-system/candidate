@@ -1,9 +1,13 @@
 {
   "name": "@nl-design-system-candidate/new-component-css",
   "version": "0.0.0",
-  "description": "CSS voor de New Component component",
+  "description": "CSS implementation of the NL Design System New Component component",
   "license": "EUPL-1.2",
-  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-css/new-component-css#readme",
+  "homepage": "https://nldesignsystem.nl/new-component",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
   "files": [
     "./dist/",
     "./src/"
@@ -12,6 +16,12 @@
     "./*.css": "./dist/*.css",
     "./*.scss": "./src/*.scss"
   },
+  "keywords": [
+    "nl-design-system",
+    "css",
+    "new-component",
+    "new-component-component"
+  ],
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/candidate.git",
@@ -27,7 +37,7 @@
     "clean": "rimraf ./dist/"
   },
   "devDependencies": {
-    "rimraf": "6.0.1",
-    "sass": "1.89.2"
+    "rimraf": "6.1.0",
+    "sass": "1.94.1"
   }
 }

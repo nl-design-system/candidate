@@ -7,24 +7,17 @@ GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
 
 if [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
-  echo "usage: ./create-package.sh [PACKAGE-TYPE] [COMPONENT-NAME] [COMPONENT-DESCRIPTION] [COMPONENT-DESCRIPTION-EN]"
+  echo "usage: ./create-stories.sh [STORIES-TYPE] [COMPONENT-NAME]"
   echo ""
-  echo "PACKAGE TYPE:"
-  echo "  What type of package are you trying to create."
+  echo "STORIES TYPE:"
+  echo "  What type of stories are you trying to create."
   echo "  Available options:"
-  echo "    - css"
-  echo "    - react"
-  echo "    - docs"
-  echo "    - tokens"
+  echo "    - storybook"
+  echo "    - storybook-test"
+  echo "    - storybook-non-conforming"
   echo ""
   echo "COMPONENT NAME:"
   echo "  What is the name of your component. Provide it in kebab-case"
-  echo ""
-  echo "COMPONENT DESCRIPTION:"
-  echo "  The description of your component"
-  echo ""
-  echo "COMPONENT DESCRIPTION (EN):"
-  echo "  The English description of your component"
   exit 0
 fi
 
@@ -98,26 +91,24 @@ to_pascal_case() {
 }
 
 if [[ -z ${1+x} ]]; then
-  read -p "What kind of package are you creating (css/react/docs/tokens)? " -r
+  read -p "What kind of stories are you creating (storybook/storybook-test/storybook-non-conforming)? " -r
   PACKAGE=$REPLY
 else
   PACKAGE=$1
 fi
 
 case "$PACKAGE" in
-  css|react|docs|tokens)
+  storybook|storybook-test|storybook-non-conforming)
+    PACKAGE_PARENT_DIR="$PACKAGE"
     ;;
   *)
-    printf "%s Package \"$PACKAGE\" is not recognised$NC\n" "$RED"
+    printf "%s Story type \"$PACKAGE\" is not recognised$NC\n" "$RED"
     printf "    Available types:\n"
-    printf "    -%s css$NC\n" "$YELLOW"
-    printf "    -%s react$NC\n" "$YELLOW"
-    printf "    -%s docs$NC\n" "$YELLOW"
-    printf "    -%s tokens$NC\n" "$YELLOW"
+    printf "    -%s storybook$NC\n" "$YELLOW"
+    printf "    -%s storybook-test$NC\n" "$YELLOW"
+    printf "    -%s storybook-non-conforming$NC\n" "$YELLOW"
     exit 1
 esac
-
-PACKAGE_PARENT_DIR="$(echo "$PACKAGE" | sed -e 's/css/components-css/' | sed -e 's/react/components-react/')"
 
 if [[ -z ${2+x} ]]; then
   read -p "What is the name of the component (in kebab-case)? " -r
@@ -126,29 +117,15 @@ else
   COMPONENT=${2//"-$PACKAGE"//}
 fi
 
-if [[ -z ${3+x} ]]; then
-  read -p "What is the description of the component? " -r
-  DESCRIPTION=$REPLY
-else
-  DESCRIPTION=$3
-fi
-
-if [[ -z ${4+x} ]]; then
-  read -p "What is the English description of the component? " -r
-  DESCRIPTION_EN=$REPLY
-else
-  DESCRIPTION_EN=$4
-fi
 
 COMPONENT_KEBAB_CASE=$(to_kebab_case "$COMPONENT")
 COMPONENT_CAMEL_CASE=$(to_camel_case "$COMPONENT_KEBAB_CASE")
 COMPONENT_SNAKE_CASE=$(to_snake_case "$COMPONENT_KEBAB_CASE")
 COMPONENT_TITLE_CASE=$(to_title_case "$COMPONENT_KEBAB_CASE")
 COMPONENT_PASCAL_CASE=$(to_pascal_case "$COMPONENT_KEBAB_CASE")
-COMPONENT_PACKAGE="$COMPONENT_KEBAB_CASE-$PACKAGE"
 
 TEMPLATE_FOLDER="/scripts/templates/${PACKAGE_PARENT_DIR}"
-DESTINATION_FOLDER="/packages/$PACKAGE_PARENT_DIR/$COMPONENT_PACKAGE"
+DESTINATION_FOLDER="/packages/$PACKAGE_PARENT_DIR"
 
 # change to the repository root directory
 cd "$(git rev-parse --show-toplevel)"
@@ -157,8 +134,6 @@ echo ""
 printf "Creating new component: %s$COMPONENT_KEBAB_CASE$NC\n" "$YELLOW"
 printf "Template:    %s$TEMPLATE_FOLDER$NC\n" "$CYAN"
 printf "Destination: %s$DESTINATION_FOLDER$NC\n" "$CYAN"
-printf "Description: %s\n" "$DESCRIPTION"
-printf "Description (EN): %s\n" "$DESCRIPTION_EN"
 echo ""
 read -p "Are you sure (y/N)? " -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
@@ -170,14 +145,14 @@ echo ""
 printf "Copying template files: "
 # Create folders
 find "$(pwd)$TEMPLATE_FOLDER" -type d \
-  | sed -e "s/scripts\/templates\/$PACKAGE_PARENT_DIR/packages\/$PACKAGE_PARENT_DIR\/$COMPONENT_PACKAGE/" \
+  | sed -e "s/scripts\/templates\/$PACKAGE_PARENT_DIR/packages\/$PACKAGE_PARENT_DIR/" \
   | xargs -n1 mkdir -p;
 
 # Copy files to the destination folder and renaming them where needed
 set +e # Temporary disable set -e because cp can exit with an 1 exit code
 find "$(pwd)$TEMPLATE_FOLDER" -type f \
   | sed -e "p;s/new-component/$COMPONENT_KEBAB_CASE/" \
-        -e "s/scripts\/templates\/$PACKAGE_PARENT_DIR/packages\/$PACKAGE_PARENT_DIR\/$COMPONENT_PACKAGE/" \
+        -e "s/scripts\/templates\/$PACKAGE_PARENT_DIR/packages\/$PACKAGE_PARENT_DIR/" \
   | xargs -n2 cp;
 set -e
 printf "%s✔︎$NC\n" "$GREEN"
@@ -191,13 +166,16 @@ find "$(pwd)$DESTINATION_FOLDER" -type f -print0 \
       -e "s/new-component/$COMPONENT_KEBAB_CASE/g" \
       -e "s/newComponent/$COMPONENT_CAMEL_CASE/g" \
       -e "s/NewComponent/$COMPONENT_PASCAL_CASE/g" \
-      -e "s/{{DESCRIPTION}}/$DESCRIPTION/g" \
-      -e "s/{{DESCRIPTION_EN}}/$DESCRIPTION_EN/g" \
     ;
 printf "%s✔︎$NC\n" "$GREEN"
 
-printf "Install new component for direct use "
-pnpm install --quiet
+if [[ "$PACKAGE" == "storybook" ]]; then
+  printf "Install component packages as dependencies for storybook: "
+  pnpm --filter ./packages/storybook add --save-dev --workspace \
+    "@nl-design-system-candidate/${COMPONENT_KEBAB_CASE}-react" \
+    "@nl-design-system-candidate/${COMPONENT_KEBAB_CASE}-docs"
+  printf "%s✔︎$NC\n" "$GREEN"
+fi
 
 echo ""
 echo "Done! 🎉"
