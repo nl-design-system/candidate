@@ -1,0 +1,69 @@
+{
+  "name": "@nl-design-system-candidate/form-field-error-message-react",
+  "version": "0.0.0",
+  "description": "React implementation of the NL Design System Form Field Error Message component",
+  "license": "EUPL-1.2",
+  "homepage": "https://nldesignsystem.nl/form-field-error-message",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
+  "type": "module",
+  "main": "./dist/form-field-error-message.js",
+  "files": [
+    "./dist/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/form-field-error-message.d.ts",
+      "import": "./dist/form-field-error-message.js"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.js"
+    }
+  },
+  "keywords": [
+    "nl-design-system",
+    "react"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-react/form-field-error-message-react"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "rollup --config ./rollup.config.mjs",
+    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/ ./coverage/",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "7.28.5",
+    "@babel/preset-react": "7.28.5",
+    "@babel/preset-typescript": "7.28.5",
+    "@babel/runtime": "7.28.4",
+    "@nl-design-system-candidate/form-field-error-message-css": "workspace:*",
+    "@nl-design-system/rollup-config-react-component": "1.0.7",
+    "@types/react": "19.2.7",
+    "react": "19.2.3",
+    "rimraf": "6.1.0",
+    "rollup": "4.53.2",
+    "typescript": "5.9.3",
+    "vitest": "4.0.10"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7",
+    "react": "^18 || ^19"
+  },
+  "dependencies": {
+    "clsx": "2.1.1"
+  }
+}

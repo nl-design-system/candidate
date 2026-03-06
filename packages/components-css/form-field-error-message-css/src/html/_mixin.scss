@@ -1,0 +1,8 @@
+@use "../mixin";
+
+/* @TODO: Change this to the appropriate element */
+@mixin nl-html--div {
+  div {
+    @include mixin.nl-form-field-error-message;
+  }
+}

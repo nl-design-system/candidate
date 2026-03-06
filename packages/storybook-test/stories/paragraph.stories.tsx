@@ -617,7 +617,7 @@ export const ParagraphLargeLetterAndWordSpacing: Story = {
 
 Voor [WCAG-succescriterium 1.4.12 Tekstafstand](https://nldesignsystem.nl/wcag/1.4.12) is het nodig dat het voor gebruikers mogelijk is om de ruimte tussen letters en tussen worden zoveel groter in te stellen.
 
-In CSS kun je dat simuleren door \`letter-spacing: 0.12em;\` en \`word-spacing: 0.16em;\` in te stellen op een element boven een component. Als ruimte tussen letters en woorden toeneemt, dan werkt het component goed.`,
+In CSS kun je dat simuleren door \`letter-spacing: 0.12em;\` en \`word-spacing: 0.16em;\` in te stellen op een element boven een component. Als ruimte tussen letters en woorden toeneemt, dan werkt de component goed.`,
       },
     },
     status: {

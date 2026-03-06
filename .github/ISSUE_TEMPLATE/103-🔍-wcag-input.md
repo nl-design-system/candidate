@@ -14,7 +14,7 @@ labels:
 - [ ] Documenteer de bevindingen in de GitHub Discussion
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 
-### Bekijk toegankelijkheidsrapporten van websites waar het component in gebruikt wordt
+### Bekijk toegankelijkheidsrapporten van websites waar de component in gebruikt wordt
 
 Vraag de community om input in de Community Sprints, op Slack en in Open Hours.
 
