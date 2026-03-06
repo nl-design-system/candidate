@@ -5,6 +5,7 @@ title: '{component-name} - 🚀 Gebruikt in de Themes repository'
 labels:
   - 🚀 Candidate Publicatiefase
   - developer relations
+type: Task
 ---
 
 ## 🚀 Gebruikt in de Themes repository

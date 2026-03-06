@@ -5,6 +5,7 @@ title: '{component-name} - 🚀 Gepubliceerd in Figma'
 labels:
   - 🚀 Candidate Publicatiefase
   - Figma
+type: Task
 ---
 
 ## 🚀 Gepubliceerd in Figma

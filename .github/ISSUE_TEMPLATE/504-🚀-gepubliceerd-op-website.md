@@ -5,6 +5,7 @@ title: '{component-name} - 🚀 Gepubliceerd op de website'
 labels:
   - 🚀 Candidate Publicatiefase
   - developer relations
+type: Task
 ---
 
 ## 🚀 Gepubliceerd op de website

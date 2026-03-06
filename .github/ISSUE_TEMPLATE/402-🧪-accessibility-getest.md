@@ -5,6 +5,8 @@ title: '{component-name} - 🧪 Accessibility getest'
 labels:
   - 🧪 Candidate Testfase
   - a11y specialist
+  - frontend
+type: Task
 ---
 
 ## 🧪 Accessibility getest

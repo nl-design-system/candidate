@@ -4,8 +4,8 @@ about: Er is besloten welke API's algemeen nuttig zijn en hoe deze APIs zijn opg
 title: '{component-name} - 📝 API bepaald'
 labels:
   - 📝 Candidate Voorbereidingsfase
-  - designer relations
   - developer relations
+type: Task
 ---
 
 ## 📝 API bepaald

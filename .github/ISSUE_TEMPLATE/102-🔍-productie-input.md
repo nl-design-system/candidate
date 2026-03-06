@@ -5,6 +5,7 @@ title: '{component-name} - 🔍 Productie input'
 labels:
   - 🔍 Candidate Selectiefase
   - developer relations
+type: Task
 ---
 
 ## 🔍 Productie input

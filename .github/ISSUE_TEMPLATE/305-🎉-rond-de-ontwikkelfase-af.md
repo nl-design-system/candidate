@@ -5,6 +5,7 @@ title: '{component-name} - 🎉 Rond de ontwikkelfase af'
 labels:
   - 🛠️ Candidate Ontwikkelfase
   - frontend
+type: Task
 ---
 
 ## 🎉 Rond de ontwikkelfase af
