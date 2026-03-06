@@ -25,6 +25,7 @@ if [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
   exit 0
 fi
 
+export LC_ALL=C  # prevents illegal byte sequence errors
 set -euo pipefail
 
 to_kebab_case() {
