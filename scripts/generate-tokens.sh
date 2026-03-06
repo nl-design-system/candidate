@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+export LC_ALL=C  # prevents illegal byte sequence errors
 set -euo pipefail
 
 script_name="${BASH_SOURCE[0]##*/}"
