@@ -5,8 +5,9 @@ title: '{component-name} - 📝 Anatomie bepaald'
 labels:
   - 📝 Candidate Voorbereidingsfase
   - a11y specialist
-  - designer relations
-  - developer relations
+  - Figma
+  - frontend
+type: Task
 ---
 
 ## 📝 Anatomie bepaald
@@ -14,6 +15,7 @@ labels:
 - [ ] Analyseer welke onderdelen de component uit kan bestaan
 - [ ] Maak een voorstel voor de anatomie
 - [ ] Bepaal of de anatomie zo kan worden meegenomen in de Candidate implementatie
+- [ ] Stem af met Design System Lead
 - [ ] Documenteer besluit in de Candidate repository
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 

@@ -5,8 +5,8 @@ title: '{component-name} - 🧪 Testcoverage getest'
 labels:
   - 🧪 Candidate Testfase
   - design system lead
-  - designer relations
-  - developer relations
+  - developer
+type: Task
 ---
 
 ## 🧪 Testcoverage getest

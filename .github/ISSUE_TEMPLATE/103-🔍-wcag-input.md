@@ -5,6 +5,7 @@ title: '{component-name} - 🔍 WCAG input'
 labels:
   - 🔍 Candidate Selectiefase
   - a11y specialist
+type: Task
 ---
 
 ## 🔍 WCAG input

@@ -5,6 +5,7 @@ title: '{component-name} - 🛠️ CSS component'
 labels:
   - 🛠️ Candidate Ontwikkelfase
   - frontend
+type: Task
 ---
 
 ## 🛠️ CSS component
