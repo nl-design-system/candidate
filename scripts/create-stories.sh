@@ -153,7 +153,7 @@ set +e # Temporary disable set -e because cp can exit with an 1 exit code
 find "$(pwd)$TEMPLATE_FOLDER" -type f \
   | sed -e "p;s/new-component/$COMPONENT_KEBAB_CASE/" \
         -e "s/scripts\/templates\/$PACKAGE_PARENT_DIR/packages\/$PACKAGE_PARENT_DIR/" \
-  | xargs -n2 cp -n;
+  | xargs -n2 cp;
 set -e
 printf "%s✔︎$NC\n" "$GREEN"
 
