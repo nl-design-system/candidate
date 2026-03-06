@@ -5,6 +5,8 @@ title: '{component-name} - 📝 Testcases voor gebruik vastgelegd'
 labels:
   - 📝 Candidate Voorbereidingsfase
   - frontend
+  - Figma
+type: Task
 ---
 
 ## 📝 Testcases voor gebruik vastgelegd

@@ -5,6 +5,7 @@ title: '{component-name} - 🔥 Fast Track'
 labels:
   - 🔍 Candidate Selectiefase
   - design system lead
+type: Task
 ---
 
 ## 🔥 Fast Track

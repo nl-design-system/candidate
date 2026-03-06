@@ -4,7 +4,11 @@ about: Alle acceptatiecriteria die in eerdere stappen zijn opgesteld zijn opgeno
 title: '{component-name} - 📝 Acceptatiecriteria vertaald naar Stories en Specs'
 labels:
   - 📝 Candidate Voorbereidingsfase
+  - developer relations
+  - designer relations
+  - a11y specialist
   - frontend
+type: Task
 ---
 
 ## 📝 Acceptatiecriteria vertaald naar Stories en Specs

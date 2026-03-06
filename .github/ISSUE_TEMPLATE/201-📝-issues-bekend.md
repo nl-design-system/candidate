@@ -5,6 +5,7 @@ title: '{component-name} - 📝 Issues bekend'
 labels:
   - 📝 Candidate Voorbereidingsfase
   - developer relations
+type: Task
 ---
 
 ## 📝 Issues bekend
@@ -14,7 +15,9 @@ Kijk naar de repositories in de Community waarin dit component geimplementeerd i
 - [ ] Bekijk welke issues er nog open staan in verschillende Community implementaties
 - [ ] Vergelijk de screenshots in de GitHub Discussion en de Community implementaties
 - [ ] Bepaal welke breaking changes die gepland staan worden meegenomen in de Candidate implementatie
+- [ ] Stem af met Design System Lead
 - [ ] Bepaal welke feature en design token requests kunnen worden meegenomen in de Candidate implementatie
+- [ ] Stem af met Design System Lead
 - [ ] Leg vast welke acceptatiecriteria nodig zijn om de bekende issues te voorkomen
 - [ ] Documenteer beslissingen in de GitHub Discussion
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status

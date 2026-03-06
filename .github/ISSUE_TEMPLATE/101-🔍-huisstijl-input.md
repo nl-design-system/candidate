@@ -5,6 +5,7 @@ title: '{component-name} - 🔍 Huisstijl input'
 labels:
   - 🔍 Candidate Selectiefase
   - designer relations
+type: Task
 ---
 
 ## 🔍 Huisstijl input

@@ -6,6 +6,7 @@ labels:
   - 📝 Candidate Voorbereidingsfase
   - designer relations
   - developer relations
+type: Task
 ---
 
 ## 🎉 Rond de voorbereidingsfase af

@@ -6,6 +6,7 @@ labels:
   - 🔍 Candidate Selectiefase
   - designer relations
   - developer relations
+type: Task
 ---
 
 ## 🎉 Rond de selectiefase af
