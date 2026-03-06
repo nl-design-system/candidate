@@ -7,7 +7,7 @@ GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
 
 if [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
-  echo "usage: ./create-package.sh [PACKAGE-TYPE] [COMPONENT-NAME] [COMPONENT-DESCRIPTION]"
+  echo "usage: ./create-package.sh [PACKAGE-TYPE] [COMPONENT-NAME] [COMPONENT-DESCRIPTION] [COMPONENT-DESCRIPTION-EN]"
   echo ""
   echo "PACKAGE TYPE:"
   echo "  What type of package are you trying to create."
@@ -22,6 +22,9 @@ if [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
   echo ""
   echo "COMPONENT DESCRIPTION:"
   echo "  The description of your component"
+  echo ""
+  echo "COMPONENT DESCRIPTION (EN):"
+  echo "  The English description of your component"
   exit 0
 fi
 
@@ -130,6 +133,12 @@ else
   DESCRIPTION=$3
 fi
 
+if [[ -z ${4+x} ]]; then
+  read -p "What is the English description of the component? " -r
+  DESCRIPTION_EN=$REPLY
+else
+  DESCRIPTION_EN=$4
+fi
 
 COMPONENT_KEBAB_CASE=$(to_kebab_case "$COMPONENT")
 COMPONENT_CAMEL_CASE=$(to_camel_case "$COMPONENT_KEBAB_CASE")
@@ -149,6 +158,7 @@ printf "Creating new component: %s$COMPONENT_KEBAB_CASE$NC\n" "$YELLOW"
 printf "Template:    %s$TEMPLATE_FOLDER$NC\n" "$CYAN"
 printf "Destination: %s$DESTINATION_FOLDER$NC\n" "$CYAN"
 printf "Description: %s\n" "$DESCRIPTION"
+printf "Description (EN): %s\n" "$DESCRIPTION_EN"
 echo ""
 read -p "Are you sure (y/N)? " -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
@@ -182,6 +192,7 @@ find "$(pwd)$DESTINATION_FOLDER" -type f -print0 \
       -e "s/newComponent/$COMPONENT_CAMEL_CASE/g" \
       -e "s/NewComponent/$COMPONENT_PASCAL_CASE/g" \
       -e "s/{{DESCRIPTION}}/$DESCRIPTION/g" \
+      -e "s/{{DESCRIPTION_EN}}/$DESCRIPTION_EN/g" \
     ;
 printf "%s✔︎$NC\n" "$GREEN"
 

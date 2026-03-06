@@ -1,13 +1,23 @@
 {
   "name": "@nl-design-system-candidate/new-component-tokens",
   "version": "0.0.0",
-  "description": "Design tokens voor de New Component component",
+  "description": "Design tokens of the NL Design System New Component component",
   "license": "EUPL-1.2",
-  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/new-component-tokens#readme",
+  "homepage": "https://nldesignsystem.nl/new-component",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
   "main": "./tokens.json",
   "exports": "./tokens.json",
   "files": [
     "./tokens.json"
+  ],
+  "keywords": [
+    "nl-design-system",
+    "design-tokens",
+    "new-component",
+    "new-component-component"
   ],
   "repository": {
     "type": "git+ssh",

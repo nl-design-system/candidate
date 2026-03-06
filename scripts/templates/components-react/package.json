@@ -25,7 +25,9 @@
   },
   "keywords": [
     "nl-design-system",
-    "react"
+    "react",
+    "new-component",
+    "new-component-component"
   ],
   "repository": {
     "type": "git+ssh",
