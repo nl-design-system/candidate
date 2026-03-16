@@ -2,4 +2,4 @@
 
 # Aliassen
 
-Ook bekend als:
+Ook bekend als: Bullet List.
