@@ -15,7 +15,6 @@ Component is, waar nodig, versimpeld of opgesplitst. Zodat er één of meerdere 
 - [ ] Verzamel input uit de Community
 - [ ] Besluit welke varianten Candidate worden
 - [ ] Documenteer besluit in de GitHub Discussion
-- [ ] Documenteer besluit in de Candidate repository
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 
 ### Verzamel input uit de Community
@@ -145,7 +144,7 @@ De varianten voor de Candidate component zijn bepaald, dat hebben we gedaan op b
 Laat het in deze Discussion weten als er uit gebruikersonderzoek naar voren is gekomen dat deze design beslissing een hele verbetering zou zijn.
 
 **💡 Tip**
-Je kunt varianten ook als extentie toevoegen aan de component. Documentatie hoe je dan kunt doen volgt. Vraag ons er gerust naar.
+Je kunt [varianten ook als extensie toevoegen](https://www.nldesignsystem.nl/handboek/componenten-vinden/#ik-mis-een-functionaliteit-binnen-een-candidate-of-hall-of-fame-component-wat-nu) aan een component.
 ```
 
 - Zet de naam en beschrijving van de varianten die we gaan meenemen naar Candidate in de GitHub Backlog issue van de component. Maak acceptatiecriteria voor alle varianten die in de component worden meegenomen. Voeg deze toe aan de `acceptance-criteria.md` van de component in de Candidate repository.
