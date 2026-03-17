@@ -155,7 +155,7 @@ Zijn er geen varianten? Documenteer dat dan ook in de GitHub Discussion.
 Er zijn meerdere implementaties van {component-naam} bekeken en met elkaar vergeleken. Op basis daarvan is besloten dat er géén specifieke varianten nodig zijn voor de Candidate component.
 ```
 
-- Maak acceptatiecriteria voor alle varianten die in de component worden meegenomen. Voeg deze toe aan de `acceptance-criteria.md` van de component in de Candidate repository.
+Maak acceptatiecriteria voor alle varianten die in de component worden meegenomen. Voeg deze toe aan de `acceptance-criteria.md` van de component in de Candidate repository.
 
 🚩 Checkpoint
 📝 Varianten bepaald: Done
