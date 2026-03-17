@@ -16,16 +16,16 @@ type: Task
 - [ ] Maak een voorstel voor de anatomie
 - [ ] Bepaal of de anatomie zo kan worden meegenomen in de Candidate implementatie
 - [ ] Stem af met Design System Lead
-- [ ] Documenteer besluit in de Candidate repository
+- [ ] Documenteer besluit in de GitHub Discussion
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 
-### Bepaal welke onderdelen de component uit kan bestaan
+### Bepaal uit welke onderdelen de component kan bestaan
 
 Bepaal op basis van de "Component gebruikt", "WCAG-input", "Issues bekend" en "Versimpeld of opgesplitst" fases uit welke onderdelen de component kan bestaan.
 
 ### Maak een voorstel voor de anatomie
 
-Is er een anatomie nodig? Leg deze dan in de volgende stappen vast en maak een schets om deze uit te leggen. Dat mag op papier, met een foto. Het mag in Figma, het mag in code. Het doel is dat we als kernteam weten wat ons te doen staat als we de component maken. We leggen het vast om voor beheer als alles nóg een keer gemaakt zou moeten worden in een heel andere techniek het makkelijk te maken om dezelfde afwegingen niet nog een keer te hoeven maken
+Is er een anatomie nodig? Leg deze dan in de volgende stappen vast en maak een schets om deze uit te leggen. Dat mag op papier, met een foto. Het mag in Figma, het mag in code. Het doel is dat we als kernteam weten wat ons te doen staat als we de component maken. We leggen het vast om voor beheer als alles nóg een keer gemaakt zou moeten worden in een heel andere techniek het makkelijk te maken om dezelfde afwegingen niet nog een keer te hoeven maken.
 
 #### Welke richtlijnen volg je bij het besluiten van de anatomie?
 
@@ -44,13 +44,11 @@ Maak een schets van de anatomie op een manier die voor jou het best werkt. Dat k
 >
 > **Stappen voor Figma**
 >
-> - Open de Documentatie website afbeeldingen Figma file.
+> - Open de ['Documentatie website afbeeldingen' Figma file](https://www.figma.com/design/0Y9Tbb373u6QGxGT6mqUnm/NL-Design-System---Doc-website---Afbeeldingen?node-id=3-23&t=RFNr3Ko3v4JUtIvr-1).
 > - Dupliceer een reeds bestaande page.
 > - Geef de page de naam van de component.
 > - Geef het frame de naam anatomy.
-> - Plaats de component vanuit de 'NL Design System - Bibliotheek' op het frame.
 > - Gebruik de 'Annotation number' en 'Annotation line' om onderdelen een te wijzen en nummeren. Probeer 48 spacing aan te houden tussen 'Annotation number' en de gehele component.
-> - Exporteer het frame als plaatje en voeg deze toe aan de betreffende Backlog issue van de component.
 
 ### Bepaal of de anatomie zo kan worden meegenomen in de Candidate implementatie
 
@@ -58,11 +56,11 @@ Zorg voor een meeting waar tenminste een designer, een developer, een toegankeli
 
 Tip: Zorg dat iedereen genoeg informatie heeft om niet alleen hun eigen expertise te gebruiken, maar ook alle relevante input die uit de community is verzameld in de eerdere stappen voor Candidate.
 
-### Leg de anatomie vast in het GitHub issue
+### Leg de anatomie vast in de GitHub Discussion
 
 Let op: Anatomie is niet altijd nodig. Soms bestaat de component maar uit 1 onderdeel. Check dus eerst met elkaar of de component écht uit meerdere onderdelen bestaat voordat je dieper op de anatomie ingaat.
 
-Voeg de schets toe aan de Backlog issue van de component in combinatie met de beschreven Anatomie uit de vorige stappen.
+Voeg de schets toe aan de GitHub Discussion van de component in combinatie met de beschreven Anatomie uit de vorige stappen.
 
 Tip: heb je de schets gemaakt met een tool waarvan je de URL kan delen voor het geval deze ooit moet worden aangepast? Deel deze dan ook bij het plaatje.
 
