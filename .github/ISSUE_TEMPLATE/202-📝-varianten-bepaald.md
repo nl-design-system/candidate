@@ -113,23 +113,23 @@ Voorbeeld hypothese voor RVO met 4 verschillende formaten voor font-size:
 
 ### Besluit welke varianten Candidate worden
 
-- Overleg de naam en beschrijving met het kernteam
-- Bepaal samen met de Design System Lead welke varianten in de Candidate component moeten worden opgenomen
-- Notuleer de besproken beredeneringen op, deze heb je nodig in de volgende stap.
+- Overleg de naam en beschrijving met het kernteam.
+- Bepaal samen met de Design System Lead welke varianten in de Candidate component moeten worden opgenomen.
+- Notuleer de besproken beredeneringen. Deze heb je nodig in de volgende stap.
 
 ### Documenteer besluit
 
-- Optioneel: splits, in overleg met de Design System Lead, de component op in meerdere componenten en zet de extra componenten met logica die we daarin gaan opnemen op de Backlog.
+- Optioneel: splits, in overleg met de Design System Lead, de component op in meerdere componenten. Zet de extra componenten, met logica die we daarin gaan opnemen, op de Backlog.
 - Documenteer in de GitHub Discussion welke varianten wel en niet worden meegenomen voor de Candidate implementatie en waarom.
 
 ```md
 ## Candidate voorbereidingsfase: Versimpeld of gesplitst
 
-De varianten voor de Candidate component zijn bepaald, dat hebben we gedaan op basis van alle voorbeelden die we in deze Discussion hebben gezien. Als een variant veel voor komt, dan is het een algemeen nuttige variant!
+De varianten voor de Candidate component zijn bepaald, dat hebben we gedaan op basis van alle voorbeelden die we in deze Discussion hebben gezien. Als een variant veel voorkomt, dan is het een algemeen nuttige variant!
 
 ### Deze varianten nemen we mee:
 
-**{variant-groep}** - {enum / boolean / string)
+**{variant-groep}** - (enum / boolean / string)
 
 - {variant-naam}
 - {variant-naam}
@@ -147,7 +147,15 @@ Laat het in deze Discussion weten als er uit gebruikersonderzoek naar voren is g
 Je kunt [varianten ook als extensie toevoegen](https://www.nldesignsystem.nl/handboek/componenten-vinden/#ik-mis-een-functionaliteit-binnen-een-candidate-of-hall-of-fame-component-wat-nu) aan een component.
 ```
 
-- Zet de naam en beschrijving van de varianten die we gaan meenemen naar Candidate in de GitHub Backlog issue van de component. Maak acceptatiecriteria voor alle varianten die in de component worden meegenomen. Voeg deze toe aan de `acceptance-criteria.md` van de component in de Candidate repository.
+Zijn er geen varianten? Documenteer dat dan ook in de GitHub Discussion.
+
+```md
+## Candidate voorbereidingsfase: Versimpeld of gesplitst
+
+Er zijn meerdere implementaties van {component-naam} bekeken en met elkaar vergeleken. Op basis daarvan is besloten dat er géén specifieke varianten nodig zijn voor de Candidate component.
+```
+
+- Maak acceptatiecriteria voor alle varianten die in de component worden meegenomen. Voeg deze toe aan de `acceptance-criteria.md` van de component in de Candidate repository.
 
 🚩 Checkpoint
 📝 Varianten bepaald: Done
