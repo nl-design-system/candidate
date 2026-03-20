@@ -18,6 +18,7 @@ Het is belangrijk dat het duidelijk is op welke manier de Candidate component aa
 - [ ] Stel acceptatiecriteria vast voor de component in context
 - [ ] Maak een PR in de documentatie repository
 - [ ] Maak een voorstel voor een toegankelijke HTML Semantiek
+- [ ] Voeg de acceptatiecriteria toe in het acceptance-criteria.md bestand van de component.
 
 ### Bekijk community implementaties
 
@@ -42,6 +43,10 @@ Voeg de beide categorieën toe als toegankelijkheids-acceptatiecriteria op de co
 ### Maak een voorstel voor een toegankelijke HTML Semantiek
 
 Maak een voorstel voor HTML semantiek-opties die zouden voldoen aan de opgestelde acceptatiecriteria voor de component en stem dit af met de Developer die de React component maakt. Voeg ook eventuele dingen toe die voor design belangrijk zijn en deel die met de Designers.
+
+### Voeg de acceptatiecriteria toe aan het acceptance-criteria.md bestand van de component
+
+Dit vind je in de map `packages` - `docs` - map van de component - `docs` in de Candidate repository. Is het bestand er nog niet? Maak het dan aan, of vraag daar hulp bij.
 
 🚩 Checkpoint
 📝 Acceptatiecriteria a11y
