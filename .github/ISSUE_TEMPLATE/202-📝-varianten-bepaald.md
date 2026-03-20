@@ -157,5 +157,9 @@ Er zijn meerdere implementaties van {component-naam} bekeken en met elkaar verge
 
 Maak acceptatiecriteria voor alle varianten die in de component worden meegenomen. Voeg deze toe aan de `acceptance-criteria.md` van de component in de Candidate repository.
 
+```md
+hier een voorbeeld
+```
+
 🚩 Checkpoint
 📝 Varianten bepaald: Done
