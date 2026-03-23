@@ -25,17 +25,13 @@ Component is, waar nodig, versimpeld of opgesplitst. Zodat er één of meerdere 
 - Verzamel alle varianten die worden gebruikt, bekijk hiervoor implementaties en voorbeelden in de GitHub discussion.
 - Geef de variant een naam en beschrijving en voeg screenshots bij als verduidelijking waar het over gaat.- Zet deze in een tabel en noteer welke varianten door welke organisaties worden gebruikt.
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
-
 Bijvoorbeeld voor Paragraph:
 
-| Paragraph | Amsterdam | Den Haag | DUO | Open Formulieren | Open Gemeenten | Rotterdam | RVO | Utrecht |
-| Lead/Big/Header paragraph/Intro-text | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Small/Details Small/Small print | ✅ | ✅ | - ✅ | - | - | ✅ | ✅ |
-| XL | - | - | - | - | - | - | ✅ | - |
+| Paragraph                            | Amsterdam   | Den Haag    | DUO         | Open Formulieren     | Open Gemeenten  | Rotterdam   | RVO         | Utrecht     |
+| :---                                 | :---        | :---        | :---        | :---                 | :---            | :---        | :---        | :---        |
+| Lead/Big/Header paragraph/Intro-text | ✅          | ✅          | ✅          | ✅                   | ✅              | ✅          | ✅         | ✅          |
+| Small/Details Small/Small print      | ✅          | ✅          | ✅          | -                    | -               | -           | ✅         | ✅          |
+| XL                                   | -           | -           | -           | -                    | -               | -           | ✅         | -          |
 
 Keuzes:
 
