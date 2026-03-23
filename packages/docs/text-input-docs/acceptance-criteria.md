@@ -11,44 +11,91 @@
 - Deze varianten worden gedocumenteerd op de website, in de README en in de standaard Storybook.
 - Deze varianten worden beschikbaar gemaakt in Figma.
 
-{
-**{variant-groep}** - (enum / boolean / string / number)
+**Type** - string (code) / enum (design)
 
-Is het een enum? Noteer dan de waarden en of er een default is.
+- Text (default)
+- Email
+- Url
+- Tel
+- Search
+- Password
 
-- {variant-naam}(default)
-- {variant-naam}
-- {variant-naam}
+**Type** - enum
 
-Is het een boolean? Noteer dan de twee opties en welke de default is.
+- xs
+- sm
+- md (default)
+- lg
+- xl
+- Full (100%)
 
-- true (default)
-- false
+**Value** - string (code) / Text - string (design)
 
-Is het een string of number? Laat deze dan leeg.
-}
+**Show Placeholder** - boolean
+
+- False (default)
+- True
+
+**Placeholder** - string (code) / Text - string (design)
+
+**State** - enum
+
+- Default (default)
+- Hover
+- Focus-visible
+
+**Disabled** - boolean
+
+- False (default)
+- True
+
+**Invalid** - boolean
+
+- False (default)
+- True
+
+**Read-only** - boolean
+
+- False (default)
+- True
+
+**Required** - boolean
+
+- False (default)
+- True
 
 ### Deze varianten worden niet ondersteund:
-
-{
-optioneel:
 
 - Deze varianten, die standaard in HTML beschikbaar zijn, worden niet ondersteund. Ze worden uit het HTMLElement-type gehaald met Omit tijdens het definiëren van de properties in Typescript.
 - Deze varianten worden niet gedocumenteerd
 - Deze varianten worden niet beschikbaar gemaakt in Figma.
 
-Documenteer de niet-ondersteunde varianten op basis van de notulen in dit GitHub-issue.
-}
+**Type**
+
+- color
+- range
+- radio
+- checkbox
+- file
+- submit
+- image
+- reset
+- button
 
 ### Deze varianten worden ondersteund, maar raden we niet aan:
-
-{
-optioneel:
 
 - Omdat deze varianten standaard in HTML beschikbaar zijn, worden ze ondersteund. Dit doen we door het HTMLElement-type te extenden in Typescript.
 - Deze varianten worden niet gedocumenteerd op de website, in de README en in de standaard Storybook.
 - Deze varianten worden wel meegenomen in de 'Test' Storybook.
 - Deze varianten worden beschikbaar gemaakt in Figma.
 
-Documenteer de ondersteunde, maar niet aangeraden varianten op basis van de notulen in dit GitHub-issue.
-}
+**Type**
+
+- hidden
+- :not([type])
+- date
+- month
+- week
+- time
+- datetime-local
+- number
