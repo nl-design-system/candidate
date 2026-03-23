@@ -4,14 +4,14 @@
 
 ## Varianten
 
-### Deze varianten worden ondersteund:
+### Deze varianten worden ondersteund
 
 - Varianten die standaard in HTML beschikbaar zijn, worden in Typescript gedefinieerd door de attributen van het standaard HTMLElement te gebruiken.
 - Varianten die niet standaard in HTML beschikbaar zijn, worden als uitgebreiding toegevoegd.
 - Deze varianten worden gedocumenteerd op de website, in de README en in de standaard Storybook.
 - Deze varianten worden beschikbaar gemaakt in Figma.
 
-**Type** - string (code) / enum (design)
+#### Type - string (code) / enum (design)
 
 - Text (default)
 - Email
@@ -20,7 +20,7 @@
 - Search
 - Password
 
-**Type** - enum
+#### Width - enum
 
 - xs
 - sm
@@ -29,48 +29,48 @@
 - xl
 - Full (100%)
 
-**Value** - string (code) / Text - string (design)
+#### Value - string (code) / Text - string (design)
 
-**Show Placeholder** - boolean
+#### Show Placeholder - boolean
 
 - False (default)
 - True
 
-**Placeholder** - string (code) / Text - string (design)
+#### Placeholder - string (code) / Text - string (design)
 
-**State** - enum
+#### State - enum
 
 - Default (default)
 - Hover
 - Focus-visible
 
-**Disabled** - boolean
+#### Disabled - boolean
 
 - False (default)
 - True
 
-**Invalid** - boolean
+#### Invalid - boolean
 
 - False (default)
 - True
 
-**Read-only** - boolean
+#### Read-only - boolean
 
 - False (default)
 - True
 
-**Required** - boolean
+#### Required - boolean
 
 - False (default)
 - True
 
-### Deze varianten worden niet ondersteund:
+### Deze varianten worden niet ondersteund
 
 - Deze varianten, die standaard in HTML beschikbaar zijn, worden niet ondersteund. Ze worden uit het HTMLElement-type gehaald met Omit tijdens het definiëren van de properties in Typescript.
 - Deze varianten worden niet gedocumenteerd
 - Deze varianten worden niet beschikbaar gemaakt in Figma.
 
-**Type**
+#### Type
 
 - Color
 - Range
@@ -82,14 +82,14 @@
 - Reset
 - Button
 
-### Deze varianten worden ondersteund, maar raden we niet aan:
+### Deze varianten worden ondersteund, maar raden we niet aan
 
 - Omdat deze varianten standaard in HTML beschikbaar zijn, worden ze ondersteund. Dit doen we door het HTMLElement-type te extenden in Typescript.
 - Deze varianten worden niet gedocumenteerd op de website, in de README en in de standaard Storybook.
 - Deze varianten worden wel meegenomen in de 'Test' Storybook.
 - Deze varianten worden beschikbaar gemaakt in Figma.
 
-**Type**
+#### Type
 
 - Hidden
 - :not([type])
