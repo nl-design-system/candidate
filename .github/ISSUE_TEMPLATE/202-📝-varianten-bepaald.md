@@ -165,10 +165,10 @@ Voorbeeld hypothese voor RVO met 4 verschillende formaten voor font-size:
 
 De varianten voor de Candidate component zijn bepaald, dat is gedaan op basis van alle voorbeelden die we in deze Discussion hebben gezien. Als een variant veel voorkomt, dan is het een algemeen nuttige variant.
 
-### Deze varianten worden ondersteund:
+### Deze varianten worden ondersteund
 
 {
-**{variant-groep}** - (enum / boolean / string / number)
+#### {variant-groep} - (enum / boolean / string / number)
 
 Is het een enum? Noteer dan de waarden en of er een default is.
 
@@ -184,11 +184,11 @@ Is het een boolean? Noteer dan de twee opties en welke de default is.
 Is het een string of number? Laat deze dan leeg.
 }
 
-### Deze varianten worden niet ondersteund:
+### Deze varianten worden niet ondersteund
 
 {Optioneel: welke varianten hebben we besloten om niet te supporten? Zie hiervoor de notulen in dit GitHub issue.}
 
-### Deze varianten worden ondersteund, maar raden we niet aan:
+### Deze varianten worden ondersteund, maar raden we niet aan
 
 {Optioneel: welke varianten ondersteunen we omdat ze standaard in HTML zitten, maar gaan we niet documenteren, niet beschikbaar maken in Figma en alleen meenemen in de test Storybook? Zie hiervoor de notulen in dit GitHub issue.}
 
@@ -215,7 +215,7 @@ Maak acceptatiecriteria voor alle varianten die in de component worden meegenome
 ```md
 ## Varianten
 
-### Deze varianten worden ondersteund:
+### Deze varianten worden ondersteund
 
 - Varianten die standaard in HTML beschikbaar zijn, worden in Typescript gedefinieerd door de attributen van het standaard HTMLElement te gebruiken.
 - Varianten die niet standaard in HTML beschikbaar zijn, worden als uitgebreiding toegevoegd.
@@ -223,7 +223,7 @@ Maak acceptatiecriteria voor alle varianten die in de component worden meegenome
 - Deze varianten worden beschikbaar gemaakt in Figma.
 
 {
-**{variant-groep}** - (enum / boolean / string / number)
+#### {variant-groep} - (enum / boolean / string / number)
 
 Is het een enum? Noteer dan de waarden en of er een default is.
 
@@ -239,7 +239,7 @@ Is het een boolean? Noteer dan de twee opties en welke de default is.
 Is het een string of number? Laat deze dan leeg.
 }
 
-### Deze varianten worden niet ondersteund:
+### Deze varianten worden niet ondersteund
 
 {
 optioneel:
@@ -251,7 +251,7 @@ optioneel:
 Documenteer de niet-ondersteunde varianten op basis van de notulen in dit GitHub-issue.
 }
 
-### Deze varianten worden ondersteund, maar raden we niet aan:
+### Deze varianten worden ondersteund, maar raden we niet aan
 
 {
 optioneel:
