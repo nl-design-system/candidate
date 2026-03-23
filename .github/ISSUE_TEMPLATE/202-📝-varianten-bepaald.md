@@ -1,7 +1,7 @@
 ---
 name: Kernteam - 📝 Varianten bepaald
 about: Component is, waar nodig, versimpeld of opgesplitst. Zodat er één of meerdere componenten over blijven met een duidelijke use case en documentatie.
-title: "{component-name} - 📝 Varianten bepaald"
+title: '{component-name} - 📝 Varianten bepaald'
 labels:
   - 📝 Candidate Voorbereidingsfase
   - designer relations
