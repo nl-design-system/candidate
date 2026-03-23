@@ -168,6 +168,7 @@ De varianten voor de Candidate component zijn bepaald, dat is gedaan op basis va
 ### Deze varianten worden ondersteund
 
 {
+
 #### {variant-groep} - (enum / boolean / string / number)
 
 Is het een enum? Noteer dan de waarden en of er een default is.
@@ -223,6 +224,7 @@ Maak acceptatiecriteria voor alle varianten die in de component worden meegenome
 - Deze varianten worden beschikbaar gemaakt in Figma.
 
 {
+
 #### {variant-groep} - (enum / boolean / string / number)
 
 Is het een enum? Noteer dan de waarden en of er een default is.
