@@ -1,7 +1,7 @@
 ---
 name: Kernteam - 📝 Varianten bepaald
 about: Component is, waar nodig, versimpeld of opgesplitst. Zodat er één of meerdere componenten over blijven met een duidelijke use case en documentatie.
-title: '{component-name} - 📝 Varianten bepaald'
+title: "{component-name} - 📝 Varianten bepaald"
 labels:
   - 📝 Candidate Voorbereidingsfase
   - designer relations
@@ -27,11 +27,11 @@ Component is, waar nodig, versimpeld of opgesplitst. Zodat er één of meerdere 
 
 Bijvoorbeeld voor Paragraph:
 
-| Paragraph                            | Amsterdam   | Den Haag    | DUO         | Open Formulieren     | Open Gemeenten  | Rotterdam   | RVO         | Utrecht     |
-| :---                                 | :---        | :---        | :---        | :---                 | :---            | :---        | :---        | :---        |
-| Lead/Big/Header paragraph/Intro-text | ✅          | ✅          | ✅          | ✅                   | ✅              | ✅          | ✅         | ✅          |
-| Small/Details Small/Small print      | ✅          | ✅          | ✅          | -                    | -               | -           | ✅         | ✅          |
-| XL                                   | -           | -           | -           | -                    | -               | -           | ✅         | -          |
+| Paragraph                            | Amsterdam | Den Haag | DUO | Open Formulieren | Open Gemeenten | Rotterdam | RVO | Utrecht |
+| :----------------------------------- | :-------- | :------- | :-- | :--------------- | :------------- | :-------- | :-- | :------ |
+| Lead/Big/Header paragraph/Intro-text | ✅        | ✅       | ✅  | ✅               | ✅             | ✅        | ✅  | ✅      |
+| Small/Details Small/Small print      | ✅        | ✅       | ✅  | -                | -              | -         | ✅  | ✅      |
+| XL                                   | -         | -        | -   | -                | -              | -         | ✅  | -       |
 
 Keuzes:
 
