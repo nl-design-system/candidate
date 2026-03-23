@@ -11,7 +11,7 @@
 - Deze varianten worden gedocumenteerd op de website, in de README en in de standaard Storybook.
 - Deze varianten worden beschikbaar gemaakt in Figma.
 
-#### Type
+#### Type {#type}
 
 String (code) / Enum (design)
 
@@ -90,7 +90,7 @@ Boolean
 - Deze varianten worden niet gedocumenteerd
 - Deze varianten worden niet beschikbaar gemaakt in Figma.
 
-#### Type
+#### Type {#not-supported-type}
 
 - Color
 - Range
@@ -109,7 +109,7 @@ Boolean
 - Deze varianten worden wel meegenomen in de 'Test' Storybook.
 - Deze varianten worden beschikbaar gemaakt in Figma.
 
-#### Type
+#### Type {#not-suggested-type}
 
 - Hidden
 - :not([type])
