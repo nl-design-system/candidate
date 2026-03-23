@@ -72,15 +72,15 @@
 
 **Type**
 
-- color
-- range
-- radio
-- checkbox
-- file
-- submit
-- image
-- reset
-- button
+- Color
+- Range
+- Radio
+- Checkbox
+- File
+- Submit
+- Image
+- Reset
+- Button
 
 ### Deze varianten worden ondersteund, maar raden we niet aan:
 
@@ -91,11 +91,11 @@
 
 **Type**
 
-- hidden
+- Hidden
 - :not([type])
-- date
-- month
-- week
-- time
-- datetime-local
-- number
+- Date
+- Month
+- Week
+- Time
+- Datetime-local
+- Number
