@@ -99,4 +99,3 @@
 - Time
 - Datetime-local
 - Number
-- 
