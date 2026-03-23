@@ -11,7 +11,9 @@
 - Deze varianten worden gedocumenteerd op de website, in de README en in de standaard Storybook.
 - Deze varianten worden beschikbaar gemaakt in Figma.
 
-#### Type - string (code) / enum (design)
+#### Type
+
+String (code) / Enum (design)
 
 - Text (default)
 - Email
@@ -20,7 +22,9 @@
 - Search
 - Password
 
-#### Width - enum
+#### Width
+
+Enum
 
 - xs
 - sm
@@ -29,37 +33,53 @@
 - xl
 - Full (100%)
 
-#### Value - string (code) / Text - string (design)
+#### Value
 
-#### Show Placeholder - boolean
+String (code) / Text - string (design)
+
+#### Show Placeholder
+
+Boolean
 
 - False (default)
 - True
 
-#### Placeholder - string (code) / Text - string (design)
+#### Placeholder
 
-#### State - enum
+String (code) / Text - string (design)
+
+#### State
+
+Enum
 
 - Default (default)
 - Hover
 - Focus-visible
 
-#### Disabled - boolean
+#### Disabled
+
+Boolean
 
 - False (default)
 - True
 
-#### Invalid - boolean
+#### Invalid
+
+Boolean
 
 - False (default)
 - True
 
-#### Read-only - boolean
+#### Read-only
+
+Boolean
 
 - False (default)
 - True
 
-#### Required - boolean
+#### Required
+
+Boolean
 
 - False (default)
 - True
