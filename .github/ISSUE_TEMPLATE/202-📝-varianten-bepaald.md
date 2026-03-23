@@ -25,6 +25,11 @@ Component is, waar nodig, versimpeld of opgesplitst. Zodat er één of meerdere 
 - Verzamel alle varianten die worden gebruikt, bekijk hiervoor implementaties en voorbeelden in de GitHub discussion.
 - Geef de variant een naam en beschrijving en voeg screenshots bij als verduidelijking waar het over gaat.- Zet deze in een tabel en noteer welke varianten door welke organisaties worden gebruikt.
 
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
 Bijvoorbeeld voor Paragraph:
 
 | Paragraph | Amsterdam | Den Haag | DUO | Open Formulieren | Open Gemeenten | Rotterdam | RVO | Utrecht |
@@ -116,12 +121,12 @@ Voorbeeld hypothese voor RVO met 4 verschillende formaten voor font-size:
 - Overleg de naam en beschrijving met het kernteam.
 - Bepaal samen met de Design System Lead welke varianten in de Candidate component moeten worden opgenomen.
 - Is het een variant die hoort bij een standaard HTML attribuut? Bepaal dan welke varianten wel worden ondersteund en ook geadviseerd worden, welke ondersteund worden maar niet geadviseerd worden en welke er niet ondersteund worden.
-- Notuleer de besproken beredeneringen. Deze heb je nodig in de volgende stap. Dat doe je met een comment in dit GitHub issue met een comment:
+- Notuleer de besproken beredeneringen. Deze heb je nodig in de volgende stap. Dat doe je met een comment in dit GitHub issue met een comment. Hieronder zie je een voorbeeld van Text Input
 
 ```md
-## Input type
+## Type
 
-### ondersteund:
+### Ondersteund:
 
 - text
 - search
@@ -130,7 +135,7 @@ Voorbeeld hypothese voor RVO met 4 verschillende formaten voor font-size:
 - email
 - password
 
-### ondersteund maar niet geadviseerd:
+### Ondersteund maar niet geadviseerd:
 
 - hidden
 - :not([type])
@@ -141,7 +146,7 @@ Voorbeeld hypothese voor RVO met 4 verschillende formaten voor font-size:
 - datetime-local
 - number
 
-### niet ondersteund:
+### Niet ondersteund:
 
 - color
 - range
