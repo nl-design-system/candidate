@@ -16,6 +16,8 @@ type: Task
 - [ ] Stem af met Design System Lead
 - [ ] Voeg de meest gebruikte alternatieven toe aan de component pagina in de candidate repository
 - [ ] Voeg de aliassen toe aan de keywords op de component pagina in de documentatie repository
+- [ ] Voeg de gerelateerde componenten toe aan de relaties JSON in de documentatie repository
+- [ ] Voeg de gerelateerde componenten toe aan de GitHub Discussion
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 
 ### Maak de packages beschikbaar voor de nieuwe Candidate component
@@ -54,7 +56,7 @@ Maak een PR aan gebruik hierbij de volgende opzet:
 
 ### Verzamel alternatieve namen voor de component
 
-Diverse design systems, Developers en Designers gebruiken verschillende woorden om hetzelfde component mee aan te duiden. Tijdens de Help Wanted fase is de naam van de component bepaald, maar door keywords en aliassen toe te voegen kan de component ook op de namen die we zelf niet gebruiken gevonden worden. Voor de componenten is er op Slack een uitgebreide lijst 'Component Keywords & Aliassen' waar we deze in eerste instantie in verzamelen.
+Diverse design systems, Developers en Designers gebruiken verschillende woorden om hetzelfde component mee aan te duiden. Tijdens de Help Wanted fase is de naam van de component bepaald, maar door keywords en aliassen toe te voegen kan de component ook op de namen die we zelf niet gebruiken gevonden worden. Voor de componenten is er op Slack een uitgebreide lijst 'Component Keywords & Aliassen' waar we deze in eerste instantie in verzamelen. Daarnaast kijken we ook naar de gerelateerde componenten die we in dit onderzoek tegenkomen, dit zijn componenten waar gebruikers mogelijk naar op zoek zijn wanneer ze bij deze component terechtkomen.
 
 #### Hoe kun je dit bijvoorbeeld doen?
 
@@ -63,12 +65,14 @@ Verzamel input:
 - Verzamel de huidige keywords voor deze component. Deze vind je in het Slack Canvas "[Component Keywords & Aliassen](https://codefornl.slack.com/docs/T68FXPFQV/F07BH78SAFP)" of in de keywords van de detail pagina van deze component in de documentatie repository. Noteer de resultaten in een comment in de issue.
 - Haal input op bij Designers en Developers uit de community door te vragen hoe zij de component ook wel noemen. Bijvoorbeeld middels een Mentimeter WordCloud quiz tijdens een Open Hour. Noteer de resultaten in een comment in de issue.
 - Verzamel welke keywords en andere gebruikte woorden voorkomen in het vakgebied. Je vind relevante bronnen in het Slack Canvas "[Inspiratie- en referentiebronnen voor componenten](https://codefornl.slack.com/docs/T68FXPFQV/F0AEQ1Q0WBS)". Noteer de resultaten in een comment in de issue.
+- Verzamel welke componenten de community en andere relevante bronnen noemen wanneer ze het over deze component hebben, bijvoorbeeld wanneer een gebruiker eigenlijk een Alert Dialog zoekt maar op een Modal Dialog terechtkomt. Noteer de resultaten in een comment in de issue.
 
-Maak een voorstel:
+Maak een voorstel in één comment:
 
 - Combineer de resultaten in en tel op hoevaak ze voorkomen.
 - Selecteer de 0 tot 5 meest genoemde keywords en voeg deze toe aan de kolom met 'Aliassen'. Nummer de lijst op volgorde van meest naar minst vaak genoemd.
 - Zijn er duidelijk veelgebruikte keywords die ook als je een zoekmachine (Google) gebruikt tot resultaten leiden? Neem deze ook op in Aliassen.
+- Maak een voorstel van gerelateerde componenten.
 - Stem met Design System Lead af.
 
 Verwerk de uitkomsten:
@@ -135,6 +139,35 @@ keywords:
 
 - **Commit Message**: `docs: candidate aliases as keywords for {naam-component}`
 - **Branch**: `docs/candidate-aliases-as-keywords-for-{naam-component}`
+
+### Voeg de gerelateerde componenten toe aan de GitHub Discussion
+
+In de GitHub Discussion, onder het kopje 'Gerelateerde componenten', voeg de gerelateerde componenten toe.
+
+Zoals we bijvoorbeeld hebben gedaan voor Unordered List:
+
+```md
+## Gerelateerde componenten
+
+[Ordered List](https://github.com/orgs/nl-design-system/discussions/230), [Rich Text Content](https://github.com/orgs/nl-design-system/discussions/289), [Link List](https://github.com/orgs/nl-design-system/discussions/266), [Task List](https://github.com/orgs/nl-design-system/discussions/295)
+```
+
+### Voeg de gerelateerde componenten toe aan de relaties JSON in de documentatie repository
+
+Dat kan in de `relations.json`.
+
+Zoals we bijvoorbeeld hebben gedaan voor Unordered List:
+
+```json
+  ...
+
+  "Unordered List": ["Ordered List", "Rich Text Content", "Link List", "Task List"],
+
+  ...
+```
+
+- **Commit Message**: `docs: candidate related components for {naam-component}`
+- **Branch**: `docs/candidate-related-components-for-{naam-component}`
 
 🚩 Checkpoint
 📝 Zoekwoorden
