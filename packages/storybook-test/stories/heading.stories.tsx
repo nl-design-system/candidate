@@ -5,6 +5,7 @@ import type { CSSProperties } from 'react';
 import '../../components-css/heading-css/src/heading.scss';
 import packageJSON from '../../components-react/heading-react/package.json';
 import { Heading } from '../../components-react/heading-react/src/heading';
+import { Code } from '../../components-react/code-react/src/code';
 import componentMarkdown from '../../docs/heading-docs/docs/component.md?raw';
 import tokens from '../../tokens/heading-tokens/tokens.json';
 import {
@@ -712,5 +713,29 @@ export const HeadingInColumn: Story = {
         aangegaan.
       </Paragraph>
     </div>
+  ),
+};
+
+export const HeadingCodeOnly: Story = {
+  name: 'Heading met alleen Code als tekstinhoud',
+  args: {
+    children: '',
+    level: 1,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Een kolom hoort niet te worden gebroken gelijk na een heading.',
+      },
+    },
+  },
+  render: () => (
+    <>
+      <Heading level={1}>API documentatie</Heading>
+      <Heading level={2}>
+        <Code>element.innerText</Code>
+      </Heading>
+      <Paragraph>Gebruik deze API niet, omdat deze verouderd is.</Paragraph>
+    </>
   ),
 };
