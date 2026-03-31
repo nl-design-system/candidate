@@ -24,8 +24,8 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 - De Form Field Error Message gebruikt geen `tabindex` attribuut, de component is ondersteunend, niet interactief.
 - Het input-element bevat een `aria-invalid="true"` attribuut wanneer de error zichtbaar is.
 - De Form Field Error Message inhoud is alleen zichtbaar en toegankelijk wanneer er een fout is.
-- Wanneer de tekst word ingevuld in realtime, is de Form Field Error Message component altijd in de DOM en in de accessibility tree.
+- Wanneer de tekst in realtime wordt ingevuld, is de Form Field Error Message component altijd aanwezig in de DOM en in de accessibility tree.
 
-### Could Have
+#### Could Have
 
 - Wanneer de tekst word ingevuld in realtime, maakt de Form Field Error Message gebruik van `role="alert"` attribuut.
