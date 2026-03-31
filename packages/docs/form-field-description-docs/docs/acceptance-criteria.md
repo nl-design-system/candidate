@@ -20,5 +20,5 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 #### Must Have
 
-- De Form Field Description bevat altijd een `id`, zodat het met `aria-describedby` aan het input-element gekoppeld kan worden.
-- De Form Field Description gebruikt geen `tabindex`, de component is ondersteunend, niet interactief.
+- De Form Field Description bevat altijd een `id` attribuut, zodat het met `aria-describedby` attribuut aan het input-element gekoppeld kan worden.
+- De Form Field Description gebruikt geen `tabindex` attribuut, de component is ondersteunend, niet interactief.
