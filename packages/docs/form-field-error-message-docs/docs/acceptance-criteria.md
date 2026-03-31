@@ -28,4 +28,4 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 #### Could Have
 
-- Wanneer de tekst word ingevuld in realtime, maakt de Form Field Error Message gebruik van `role="alert"` attribuut.
+- Wanneer de tekst in realtime wordt ingevuld, maakt de Form Field Error Message gebruik van `role="alert"` attribuut.
