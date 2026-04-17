@@ -25,11 +25,11 @@
     @include mixin.nl-button--forced-colors-disabled;
   }
 
-  .nl-button--pressed {
+  :is(.nl-button--pressed, :where(details[open]) > summary) {
     @include mixin.nl-button--forced-colors-pressed;
   }
 
-  .nl-button--pressed.nl-button--disabled {
+  :is(.nl-button--pressed, :where(details[open]) > summary).nl-button--disabled {
     @include mixin.nl-button--forced-colors-pressed-disabled;
   }
 
@@ -75,19 +75,19 @@
   @include mixin.nl-button--default-active;
 }
 
-.nl-button.nl-button--pressed {
+.nl-button:is(.nl-button--pressed, :where(details[open]) > summary) {
   @include mixin.nl-button--default-pressed;
 }
 
-.nl-button:where(.nl-button--pressed):hover {
+.nl-button:where(:is(.nl-button--pressed, :where(details[open]) > summary)):hover {
   @include mixin.nl-button--default-pressed-hover;
 }
 
-.nl-button:where(.nl-button--pressed):active {
+.nl-button:where(:is(.nl-button--pressed, :where(details[open]) > summary)):active {
   @include mixin.nl-button--default-pressed-active;
 }
 
-.nl-button.nl-button--pressed.nl-button--disabled {
+.nl-button:is(.nl-button--pressed, :where(details[open]) > summary).nl-button--disabled {
   @include mixin.nl-button--default-pressed-disabled;
 }
 
@@ -113,19 +113,19 @@
   @include mixin.nl-button--primary-active;
 }
 
-.nl-button:where(.nl-button--primary).nl-button--pressed {
+.nl-button:where(.nl-button--primary):is(.nl-button--pressed, :where(details[open]) > summary) {
   @include mixin.nl-button--primary-pressed;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--pressed):hover {
+.nl-button:where(.nl-button--primary:is(.nl-button--pressed, :where(details[open]) > summary)):hover {
   @include mixin.nl-button--primary-pressed-hover;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--pressed):active {
+.nl-button:where(.nl-button--primary:is(.nl-button--pressed, :where(details[open]) > summary)):active {
   @include mixin.nl-button--primary-pressed-active;
 }
 
-.nl-button:where(.nl-button--primary).nl-button--pressed.nl-button--disabled {
+.nl-button:where(.nl-button--primary):is(.nl-button--pressed, :where(details[open]) > summary).nl-button--disabled {
   @include mixin.nl-button--primary-pressed-disabled;
 }
 
@@ -146,19 +146,28 @@
   @include mixin.nl-button--primary-positive-active;
 }
 
-.nl-button:where(.nl-button--primary).nl-button--positive.nl-button--pressed {
+.nl-button:where(.nl-button--primary).nl-button--positive:is(.nl-button--pressed, :where(details[open]) > summary) {
   @include mixin.nl-button--primary-positive-pressed;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--positive).nl-button--pressed:hover {
+.nl-button:where(.nl-button--primary.nl-button--positive):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):hover {
   @include mixin.nl-button--primary-positive-pressed-hover;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--positive).nl-button--pressed:active {
+.nl-button:where(.nl-button--primary.nl-button--positive):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):active {
   @include mixin.nl-button--primary-positive-pressed-active;
 }
 
-.nl-button:where(.nl-button--primary).nl-button--positive.nl-button--pressed.nl-button--disabled {
+.nl-button:where(.nl-button--primary).nl-button--positive:is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ).nl-button--disabled {
   @include mixin.nl-button--primary-positive-pressed-disabled;
 }
 
@@ -179,19 +188,28 @@
   @include mixin.nl-button--primary-negative-active;
 }
 
-.nl-button:where(.nl-button--primary).nl-button--negative.nl-button--pressed {
+.nl-button:where(.nl-button--primary).nl-button--negative:is(.nl-button--pressed, :where(details[open]) > summary) {
   @include mixin.nl-button--primary-negative-pressed;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--negative).nl-button--pressed:hover {
+.nl-button:where(.nl-button--primary.nl-button--negative):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):hover {
   @include mixin.nl-button--primary-negative-pressed-hover;
 }
 
-.nl-button:where(.nl-button--primary.nl-button--negative).nl-button--pressed:active {
+.nl-button:where(.nl-button--primary.nl-button--negative):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):active {
   @include mixin.nl-button--primary-negative-pressed-active;
 }
 
-.nl-button:where(.nl-button--primary).nl-button--negative.nl-button--pressed.nl-button--disabled {
+.nl-button:where(.nl-button--primary).nl-button--negative:is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ).nl-button--disabled {
   @include mixin.nl-button--primary-negative-pressed-disabled;
 }
 
@@ -212,19 +230,19 @@
   @include mixin.nl-button--secondary-active;
 }
 
-.nl-button:where(.nl-button--secondary).nl-button--pressed {
+.nl-button:where(.nl-button--secondary):is(.nl-button--pressed, :where(details[open]) > summary) {
   @include mixin.nl-button--secondary-pressed;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--pressed):hover {
+.nl-button:where(.nl-button--secondary:is(.nl-button--pressed, :where(details[open]) > summary)):hover {
   @include mixin.nl-button--secondary-pressed-hover;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--pressed):active {
+.nl-button:where(.nl-button--secondary:is(.nl-button--pressed, :where(details[open]) > summary)):active {
   @include mixin.nl-button--secondary-pressed-active;
 }
 
-.nl-button:where(.nl-button--secondary).nl-button--pressed.nl-button--disabled {
+.nl-button:where(.nl-button--secondary):is(.nl-button--pressed, :where(details[open]) > summary).nl-button--disabled {
   @include mixin.nl-button--secondary-pressed-disabled;
 }
 
@@ -245,19 +263,28 @@
   @include mixin.nl-button--secondary-positive-active;
 }
 
-.nl-button:where(.nl-button--secondary).nl-button--positive.nl-button--pressed {
+.nl-button:where(.nl-button--secondary).nl-button--positive:is(.nl-button--pressed, :where(details[open]) > summary) {
   @include mixin.nl-button--secondary-positive-pressed;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--positive).nl-button--pressed:hover {
+.nl-button:where(.nl-button--secondary.nl-button--positive):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):hover {
   @include mixin.nl-button--secondary-positive-pressed-hover;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--positive).nl-button--pressed:active {
+.nl-button:where(.nl-button--secondary.nl-button--positive):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):active {
   @include mixin.nl-button--secondary-positive-pressed-active;
 }
 
-.nl-button:where(.nl-button--secondary).nl-button--positive.nl-button--pressed.nl-button--disabled {
+.nl-button:where(.nl-button--secondary).nl-button--positive:is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ).nl-button--disabled {
   @include mixin.nl-button--secondary-positive-pressed-disabled;
 }
 
@@ -278,19 +305,28 @@
   @include mixin.nl-button--secondary-negative-active;
 }
 
-.nl-button:where(.nl-button--secondary).nl-button--negative.nl-button--pressed {
+.nl-button:where(.nl-button--secondary).nl-button--negative:is(.nl-button--pressed, :where(details[open]) > summary) {
   @include mixin.nl-button--secondary-negative-pressed;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--negative).nl-button--pressed:hover {
+.nl-button:where(.nl-button--secondary.nl-button--negative):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):hover {
   @include mixin.nl-button--secondary-negative-pressed-hover;
 }
 
-.nl-button:where(.nl-button--secondary.nl-button--negative).nl-button--pressed:active {
+.nl-button:where(.nl-button--secondary.nl-button--negative):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):active {
   @include mixin.nl-button--secondary-negative-pressed-active;
 }
 
-.nl-button:where(.nl-button--secondary).nl-button--negative.nl-button--pressed.nl-button--disabled {
+.nl-button:where(.nl-button--secondary).nl-button--negative:is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ).nl-button--disabled {
   @include mixin.nl-button--secondary-negative-pressed-disabled;
 }
 
@@ -311,19 +347,19 @@
   @include mixin.nl-button--subtle-active;
 }
 
-.nl-button:where(.nl-button--subtle).nl-button--pressed {
+.nl-button:where(.nl-button--subtle):is(.nl-button--pressed, :where(details[open]) > summary) {
   @include mixin.nl-button--subtle-pressed;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--pressed):hover {
+.nl-button:where(.nl-button--subtle:is(.nl-button--pressed, :where(details[open]) > summary)):hover {
   @include mixin.nl-button--subtle-pressed-hover;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--pressed):active {
+.nl-button:where(.nl-button--subtle:is(.nl-button--pressed, :where(details[open]) > summary)):active {
   @include mixin.nl-button--subtle-pressed-active;
 }
 
-.nl-button:where(.nl-button--subtle).nl-button--pressed.nl-button--disabled {
+.nl-button:where(.nl-button--subtle):is(.nl-button--pressed, :where(details[open]) > summary).nl-button--disabled {
   @include mixin.nl-button--subtle-pressed-disabled;
 }
 
@@ -344,19 +380,28 @@
   @include mixin.nl-button--subtle-positive-active;
 }
 
-.nl-button:where(.nl-button--subtle).nl-button--positive.nl-button--pressed {
+.nl-button:where(.nl-button--subtle).nl-button--positive:is(.nl-button--pressed, :where(details[open]) > summary) {
   @include mixin.nl-button--subtle-positive-pressed;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--positive).nl-button--pressed:hover {
+.nl-button:where(.nl-button--subtle.nl-button--positive):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):hover {
   @include mixin.nl-button--subtle-positive-pressed-hover;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--positive).nl-button--pressed:active {
+.nl-button:where(.nl-button--subtle.nl-button--positive):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):active {
   @include mixin.nl-button--subtle-positive-pressed-active;
 }
 
-.nl-button:where(.nl-button--subtle).nl-button--positive.nl-button--pressed.nl-button--disabled {
+.nl-button:where(.nl-button--subtle).nl-button--positive:is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ).nl-button--disabled {
   @include mixin.nl-button--subtle-positive-pressed-disabled;
 }
 
@@ -377,19 +422,28 @@
   @include mixin.nl-button--subtle-negative-active;
 }
 
-.nl-button:where(.nl-button--subtle).nl-button--negative.nl-button--pressed {
+.nl-button:where(.nl-button--subtle).nl-button--negative:is(.nl-button--pressed, :where(details[open]) > summary) {
   @include mixin.nl-button--subtle-negative-pressed;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--negative).nl-button--pressed:hover {
+.nl-button:where(.nl-button--subtle.nl-button--negative):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):hover {
   @include mixin.nl-button--subtle-negative-pressed-hover;
 }
 
-.nl-button:where(.nl-button--subtle.nl-button--negative).nl-button--pressed:active {
+.nl-button:where(.nl-button--subtle.nl-button--negative):is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ):active {
   @include mixin.nl-button--subtle-negative-pressed-active;
 }
 
-.nl-button:where(.nl-button--subtle).nl-button--negative.nl-button--pressed.nl-button--disabled {
+.nl-button:where(.nl-button--subtle).nl-button--negative:is(
+    .nl-button--pressed,
+    :where(details[open]) > summary
+  ).nl-button--disabled {
   @include mixin.nl-button--subtle-negative-pressed-disabled;
 }
 
