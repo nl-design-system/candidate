@@ -278,6 +278,33 @@ De volledige inhoud van de Code Block moet leesbaar zijn, ook als de content hee
   },
 };
 
+export const Tabs: Story = {
+  name: 'Code Block met tabs en spaties',
+  args: {
+    children: `<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+\t<head>
+        <meta charset="utf-8" />
+\t\t<title>…</title>
+\t</head>
+\t<body>…</body>
+</html>`,
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Code Block waarbij de HTML inspringing heeft met Tab (U+0009) in plaats van Space (U+0020), behalve bij de regel met het \`<meta>\` element: daar is 8 keer Space gebruikt in plaats van 2 keer Tab.
+
+De regels met het \`<meta>\` element en het \`<title>\` element moeten moeten visueel even brede inspringing hebben.`,
+      },
+    },
+  },
+};
+
 export const LangeRegelLineOverflow: Story = {
   name: 'Code Block met 1 extra lange regel, die kan scrollen',
   args: {
