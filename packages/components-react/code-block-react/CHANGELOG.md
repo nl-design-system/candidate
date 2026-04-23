@@ -1,5 +1,16 @@
 # @nl-design-system-candidate/code-block-react
 
+## 1.4.0
+
+### Minor Changes
+
+- 91c0948: Display tabs as 4 spaces instead of 8 spaces.
+
+### Patch Changes
+
+- Updated dependencies [91c0948]
+  - @nl-design-system-candidate/code-block-css@1.2.0
+
 ## 1.3.7
 
 ### Patch Changes
