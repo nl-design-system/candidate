@@ -1,5 +1,17 @@
 # @nl-design-system-candidate/code-react
 
+## 2.0.0
+
+### Major Changes
+
+- e14c20f: Breaking change: removed the `nl.code.font-size` token.
+  The token was problematic because it caused very small letters when Code was used inside a Heading.
+
+### Patch Changes
+
+- Updated dependencies [e14c20f]
+  - @nl-design-system-candidate/code-css@3.0.0
+
 ## 1.2.7
 
 ### Patch Changes

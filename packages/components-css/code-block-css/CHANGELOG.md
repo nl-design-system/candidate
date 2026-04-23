@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-block-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 91c0948: Display tabs as 4 spaces instead of 8 spaces.
+
 ## 1.1.5
 
 ### Patch Changes

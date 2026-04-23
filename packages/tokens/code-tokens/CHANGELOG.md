@@ -1,5 +1,12 @@
 # @nl-design-system-candidate/code-tokens
 
+## 3.0.0
+
+### Major Changes
+
+- e14c20f: Breaking change: removed the `nl.code.font-size` token.
+  The token was problematic because it caused very small letters when Code was used inside a Heading.
+
 ## 2.0.4
 
 ### Patch Changes
