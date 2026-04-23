@@ -10,16 +10,18 @@ import { mergeCssMeta } from '../src/helpers/merge-css-meta';
 import { getExternalLinks } from '../src/helpers/external-links';
 import description from '@nl-design-system-candidate/link-docs/docs/description.md?raw';
 
-const externalLinks = getExternalLinks('https://nldesignsystem.nl/link', packageJSON.homepage);
+const externalLinks = getExternalLinks(
+  'https://nldesignsystem.nl/link',
+  packageJSON.homepage,
+  'https://www.npmjs.com/package/@nl-design-system-candidate/link-css',
+);
 
 const meta = {
   ...mergeCssMeta(linkMeta, externalLinks, {
     decorators: [ParagraphDecorator, ExampleBodyTextDecorator],
     parameters: {
       docs: {
-        description: {
-          component: description,
-        },
+        subtitle: description,
       },
     },
   }),
