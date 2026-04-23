@@ -338,7 +338,7 @@ export const CodeHeading: Story = {
   render: () => (
     <>
       <Heading level={1}>
-        De risico's van <Code>font-size</Code> voor inline elementen
+        De risico&apos;s van <Code>font-size</Code> voor inline elementen
       </Heading>
       <Paragraph>
         Wanneer je <Code>font-size</Code> instelt op inline elementen zoals <Code>{'<code>'}</Code>, dan kan het zijn
