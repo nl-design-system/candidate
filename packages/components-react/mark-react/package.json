@@ -49,7 +49,6 @@
     "@babel/preset-react": "7.28.5",
     "@babel/preset-typescript": "7.28.5",
     "@babel/runtime": "7.28.4",
-    "@nl-design-system-candidate/mark-css": "workspace:*",
     "@nl-design-system/rollup-config-react-component": "1.0.7",
     "@types/react": "19.2.7",
     "react": "19.2.3",
@@ -61,5 +60,8 @@
   "peerDependencies": {
     "@babel/runtime": "^7",
     "react": "^18 || ^19"
+  },
+  "dependencies": {
+    "@nl-design-system-candidate/mark-css": "workspace:*"
   }
 }

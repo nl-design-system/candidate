@@ -282,6 +282,9 @@ importers:
 
   packages/components-react/button-react:
     dependencies:
+      '@nl-design-system-candidate/button-css':
+        specifier: workspace:*
+        version: link:../../components-css/button-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -298,9 +301,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/button-css':
-        specifier: workspace:*
-        version: link:../../components-css/button-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -325,6 +325,9 @@ importers:
 
   packages/components-react/code-block-react:
     dependencies:
+      '@nl-design-system-candidate/code-block-css':
+        specifier: workspace:*
+        version: link:../../components-css/code-block-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -341,9 +344,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/code-block-css':
-        specifier: workspace:*
-        version: link:../../components-css/code-block-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -367,6 +367,10 @@ importers:
         version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
 
   packages/components-react/code-react:
+    dependencies:
+      '@nl-design-system-candidate/code-css':
+        specifier: workspace:*
+        version: link:../../components-css/code-css
     devDependencies:
       '@babel/preset-env':
         specifier: 7.28.5
@@ -380,9 +384,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/code-css':
-        specifier: workspace:*
-        version: link:../../components-css/code-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -406,6 +407,10 @@ importers:
         version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
 
   packages/components-react/color-sample-react:
+    dependencies:
+      '@nl-design-system-candidate/color-sample-css':
+        specifier: workspace:*
+        version: link:../../components-css/color-sample-css
     devDependencies:
       '@babel/preset-env':
         specifier: 7.28.5
@@ -419,9 +424,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/color-sample-css':
-        specifier: workspace:*
-        version: link:../../components-css/color-sample-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -445,6 +447,10 @@ importers:
         version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
 
   packages/components-react/data-badge-react:
+    dependencies:
+      '@nl-design-system-candidate/data-badge-css':
+        specifier: workspace:*
+        version: link:../../components-css/data-badge-css
     devDependencies:
       '@babel/preset-env':
         specifier: 7.28.5
@@ -458,9 +464,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/data-badge-css':
-        specifier: workspace:*
-        version: link:../../components-css/data-badge-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -485,6 +488,9 @@ importers:
 
   packages/components-react/form-field-description-react:
     dependencies:
+      '@nl-design-system-candidate/form-field-description-css':
+        specifier: workspace:*
+        version: link:../../components-css/form-field-description-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -501,9 +507,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/form-field-description-css':
-        specifier: workspace:*
-        version: link:../../components-css/form-field-description-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -528,6 +531,9 @@ importers:
 
   packages/components-react/form-field-error-message-react:
     dependencies:
+      '@nl-design-system-candidate/form-field-error-message-css':
+        specifier: workspace:*
+        version: link:../../components-css/form-field-error-message-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -544,9 +550,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/form-field-error-message-css':
-        specifier: workspace:*
-        version: link:../../components-css/form-field-error-message-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -571,6 +574,9 @@ importers:
 
   packages/components-react/form-field-label-react:
     dependencies:
+      '@nl-design-system-candidate/form-field-label-css':
+        specifier: workspace:*
+        version: link:../../components-css/form-field-label-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -587,9 +593,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/form-field-label-css':
-        specifier: workspace:*
-        version: link:../../components-css/form-field-label-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.6
         version: 1.0.6(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -613,6 +616,10 @@ importers:
         version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
 
   packages/components-react/heading-react:
+    dependencies:
+      '@nl-design-system-candidate/heading-css':
+        specifier: workspace:*
+        version: link:../../components-css/heading-css
     devDependencies:
       '@babel/preset-env':
         specifier: 7.28.5
@@ -626,9 +633,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/heading-css':
-        specifier: workspace:*
-        version: link:../../components-css/heading-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -653,6 +657,9 @@ importers:
 
   packages/components-react/icon-react:
     dependencies:
+      '@nl-design-system-candidate/icon-css':
+        specifier: workspace:*
+        version: link:../../components-css/icon-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -669,9 +676,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/icon-css':
-        specifier: workspace:*
-        version: link:../../components-css/icon-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -696,6 +700,9 @@ importers:
 
   packages/components-react/link-react:
     dependencies:
+      '@nl-design-system-candidate/link-css':
+        specifier: workspace:*
+        version: link:../../components-css/link-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -712,9 +719,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/link-css':
-        specifier: workspace:*
-        version: link:../../components-css/link-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -738,6 +742,10 @@ importers:
         version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
 
   packages/components-react/mark-react:
+    dependencies:
+      '@nl-design-system-candidate/mark-css':
+        specifier: workspace:*
+        version: link:../../components-css/mark-css
     devDependencies:
       '@babel/preset-env':
         specifier: 7.28.5
@@ -751,9 +759,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/mark-css':
-        specifier: workspace:*
-        version: link:../../components-css/mark-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -777,6 +782,10 @@ importers:
         version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
 
   packages/components-react/number-badge-react:
+    dependencies:
+      '@nl-design-system-candidate/number-badge-css':
+        specifier: workspace:*
+        version: link:../../components-css/number-badge-css
     devDependencies:
       '@babel/preset-env':
         specifier: 7.28.5
@@ -790,9 +799,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/number-badge-css':
-        specifier: workspace:*
-        version: link:../../components-css/number-badge-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -817,6 +823,9 @@ importers:
 
   packages/components-react/ordered-list-react:
     dependencies:
+      '@nl-design-system-candidate/ordered-list-css':
+        specifier: workspace:*
+        version: link:../../components-css/ordered-list-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -833,9 +842,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/ordered-list-css':
-        specifier: workspace:*
-        version: link:../../components-css/ordered-list-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -860,6 +866,9 @@ importers:
 
   packages/components-react/paragraph-react:
     dependencies:
+      '@nl-design-system-candidate/paragraph-css':
+        specifier: workspace:*
+        version: link:../../components-css/paragraph-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -876,9 +885,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/paragraph-css':
-        specifier: workspace:*
-        version: link:../../components-css/paragraph-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -903,6 +909,9 @@ importers:
 
   packages/components-react/skip-link-react:
     dependencies:
+      '@nl-design-system-candidate/skip-link-css':
+        specifier: workspace:*
+        version: link:../../components-css/skip-link-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -919,9 +928,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/skip-link-css':
-        specifier: workspace:*
-        version: link:../../components-css/skip-link-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -946,6 +952,9 @@ importers:
 
   packages/components-react/text-input-react:
     dependencies:
+      '@nl-design-system-candidate/text-input-css':
+        specifier: workspace:*
+        version: link:../../components-css/text-input-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -962,9 +971,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/text-input-css':
-        specifier: workspace:*
-        version: link:../../components-css/text-input-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -989,6 +995,9 @@ importers:
 
   packages/components-react/unordered-list-react:
     dependencies:
+      '@nl-design-system-candidate/unordered-list-css':
+        specifier: workspace:*
+        version: link:../../components-css/unordered-list-css
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1005,9 +1014,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
-      '@nl-design-system-candidate/unordered-list-css':
-        specifier: workspace:*
-        version: link:../../components-css/unordered-list-css
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
