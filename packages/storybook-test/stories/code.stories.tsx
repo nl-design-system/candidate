@@ -1,7 +1,7 @@
+import { Heading } from '@nl-design-system-candidate/heading-react/css';
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import '../../components-css/code-css/src/code.scss';
 import packageJSON from '../../components-react/code-react/package.json';
 import { Code } from '../../components-react/code-react/src/code';
 import componentMarkdown from '../../docs/code-docs/docs/component.md?raw';
@@ -63,6 +63,7 @@ import {
   WCAG22_413_STATUS_MESSAGES,
 } from '../src/WcagTests';
 import tokens from '../../tokens/code-tokens/tokens.json';
+import '../../components-css/code-css/src/code.scss';
 
 const meta = {
   argTypes: {
@@ -315,5 +316,34 @@ export const WhiteSpaceCharacters: Story = {
       Gebruik het derde argument van deze functie om de hoeveelheid spaties voor inspringing te bepalen:{' '}
       <Code>{'JSON.stringify(json, null, "    ");'}</Code>
     </Paragraph>
+  ),
+};
+
+export const CodeHeading: Story = {
+  name: 'Code in een Heading',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een fragment Code die in een heading staat. De Heading heeft grotere letters dan standaardtekst. De lettergrootte van Code past zich aan bij die van de Heading.',
+      },
+    },
+    status: { type: [] },
+  },
+  render: () => (
+    <>
+      <Heading level={1}>
+        De risico's van <Code>font-size</Code> voor inline elementen
+      </Heading>
+      <Paragraph>
+        Wanneer je <Code>font-size</Code> instelt op inline elementen zoals <Code>{'<code>'}</Code>, dan kan het zijn
+        dat de tekst veel te klein wordt wanneer ze in een Heading geplaatst worden.
+      </Paragraph>
+    </>
   ),
 };
