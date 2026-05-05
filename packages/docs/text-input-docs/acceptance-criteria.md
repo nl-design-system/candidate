@@ -119,3 +119,12 @@ Boolean
 - Time
 - Datetime-local
 - Number
+
+## Acceptatiecriteria toegankelijkheid van de component
+
+- Het is mogelijk om autocomplete in te stellen bij de Text Input.
+- Placeholderteksten blijven leesbaar wanneer de tekstafstand vergroot wordt.
+- Als je de tekst van placeholders vergroot tot 200% blijft deze in zijn geheel zichtbaar.
+- Je kunt de Text Input bereiken en bedienen met het toetsenbord.
+- Als de Text Input de toetsenbordfocus krijgt is de focus zichtbaar.
+- Het is mogelijk de Text Input een toegankelijke naam en de juiste rol te geven en het `value`-attribuut is aanwezig en instelbaar.
