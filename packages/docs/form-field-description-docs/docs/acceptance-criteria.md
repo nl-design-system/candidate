@@ -22,3 +22,10 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 - De Form Field Description bevat altijd een `id` attribuut, zodat het met `aria-describedby` attribuut aan het input-element gekoppeld kan worden.
 - De Form Field Description gebruikt geen `tabindex` attribuut, de component is ondersteunend, niet interactief.
+
+## Acceptatiecriteria toegankelijkheid van de component
+
+- De Form Field Description kan aan een element voor formulierinvoer gekoppeld worden.
+- Tekst in de Form Field Description blijft leesbaar wanneer de tekstafstand vergroot wordt.
+- De Form Field Description is standaard niet bereikbaar en bedienbaar met het toetsenbord.
+- De Form Field Description komt standaard niet voor in de focusvolgorde van de pagina.
