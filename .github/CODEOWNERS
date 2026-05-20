@@ -1,7 +1,6 @@
+# See: https://nldesignsystem.nl/codeowners
+
 * @nl-design-system/kernteam-committer
 
-# Order matters, see:
-# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
-
-# Protect this file itself:
+# Protect this file itself (order matters, keep this line last):
 .github/CODEOWNERS @nl-design-system/kernteam-admin
