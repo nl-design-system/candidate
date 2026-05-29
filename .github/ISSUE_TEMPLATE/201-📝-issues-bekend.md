@@ -10,35 +10,45 @@ type: Task
 
 ## 📝 Issues bekend
 
-Kijk naar de repositories in de Community waarin dit component geimplementeerd is. Stel vragen in Developer Open Hour en Designer Open Hour. Bepaal welke belangrijke issues er nog open staan en welke features die nog niet in de Community component zijn meegenomen.
-
+- [ ] Vraag bij de Community uit naar issues
 - [ ] Bekijk welke issues er nog open staan in verschillende Community implementaties
 - [ ] Vergelijk de screenshots in de GitHub Discussion en de Community implementaties
-- [ ] Bepaal welke breaking changes die gepland staan worden meegenomen in de Candidate implementatie
 - [ ] Stem af met Design System Lead
+- [ ] Bepaal welke breaking changes die gepland staan worden meegenomen in de Candidate implementatie
 - [ ] Bepaal welke feature en design token requests kunnen worden meegenomen in de Candidate implementatie
 - [ ] Stem af met Design System Lead
 - [ ] Leg vast welke acceptatiecriteria nodig zijn om de bekende issues te voorkomen
+- [ ] Stem af met Design System Lead
 - [ ] Documenteer beslissingen in de GitHub Discussion
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 
+### Vraag bij de Community uit naar issues
+
+Stel vragen in Developer Open Hour en Designer Open Hour.
+
 ### Bekijk welke issues er nog open staan in verschillende Community implementaties
+
+Community implementaties kan je vinden middels
+
+- een search binnen de nl-design-system GitHub Organisatie: https://github.com/search?q=org%3Anl-design-system&type=code
+- de lijst van repositories van de NL Design System GitHub Organisatie:
+- de lijst van design systems in https://github.com/nl-design-system/.github/blob/main/profile/README.md. Hier staan ook repositories tussen die niet binnen onze organisatie vallen, zoals Amsterdam.
 
 - Kijk welke Community repositories deze component hebben en zoek bij deze repositories op de naam van de component.
 - Bepaal welke open staande issues relevant zijn voor deze component en plaats deze issues in een comment onder dit issue.
 - Kijk ook of er in de GitHub Discussion van de component comments staan waaruit blijkt dat er nog feature requests of issues voor de component zijn.
 - Analyseer welke issues moeten worden voorkomen met acceptatiecriteria en welke breaking changes moeten worden overwogen voor de Candidate implementatie
 
-### Bepaal welke breaking changes die gepland staan worden meegenomen in de Candidate implementatie
-
-- Beoordeel wat de impact en wenselijkheid is van deze voorgestelde breaking changes en API-wijzigingen.
-- Bepaal met de Design System Lead en Product Manager welke API wijzigingen doorgevoerd kunnen worden in de Candidate component en welke eerst in de Community moeten worden uitgetest.
-
 ### Vergelijk de screenshots in de GitHub Discussion en de Community implementaties
 
 - Analyseer welke functionaliteit er nog nodig is om de verzamelde screenshots in de GitHub Discussion voor elkaar te krijgen.
 - Vergelijk je welke features nog niet bestaan in de Community implementaties, maar wel gewenst zijn.
 - Maak een voorstel welke nieuwe design tokens en component variaties moeten worden overwogen voor de Candidate component
+
+### Bepaal welke breaking changes die gepland staan worden meegenomen in de Candidate implementatie
+
+- Beoordeel wat de impact en wenselijkheid is van deze voorgestelde breaking changes en API-wijzigingen.
+- Bepaal met de Design System Lead en Product Manager welke API wijzigingen doorgevoerd kunnen worden in de Candidate component en welke eerst in de Community moeten worden uitgetest.
 
 ### Bepaal welke feature en design token requests kunnen worden meegenomen in de Candidate implementatie
 
