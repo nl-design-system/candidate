@@ -118,6 +118,15 @@ importers:
         specifier: 4.0.10
         version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
 
+  packages/components-css/alert-css:
+    devDependencies:
+      rimraf:
+        specifier: 6.1.0
+        version: 6.1.0
+      sass:
+        specifier: 1.94.1
+        version: 1.94.1
+
   packages/components-css/button-css:
     devDependencies:
       rimraf:
@@ -279,6 +288,49 @@ importers:
       sass:
         specifier: 1.94.1
         version: 1.94.1
+
+  packages/components-react/alert-react:
+    dependencies:
+      '@nl-design-system-candidate/alert-css':
+        specifier: workspace:*
+        version: link:../../components-css/alert-css
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+    devDependencies:
+      '@babel/preset-env':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5)
+      '@babel/preset-react':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5)
+      '@babel/preset-typescript':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5)
+      '@babel/runtime':
+        specifier: 7.28.4
+        version: 7.28.4
+      '@nl-design-system/rollup-config-react-component':
+        specifier: 1.0.7
+        version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(tslib@2.6.3)(typescript@5.9.3)
+      '@types/react':
+        specifier: 19.2.7
+        version: 19.2.7
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+      rimraf:
+        specifier: 6.1.0
+        version: 6.1.0
+      rollup:
+        specifier: 4.53.2
+        version: 4.53.2
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: 4.0.10
+        version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
 
   packages/components-react/button-react:
     dependencies:
@@ -1036,6 +1088,21 @@ importers:
         specifier: 4.0.10
         version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
 
+  packages/docs/alert-docs:
+    devDependencies:
+      '@nl-design-system-candidate/alert-react':
+        specifier: workspace:*
+        version: link:../../components-react/alert-react
+      '@storybook/react-vite':
+        specifier: 9.1.5
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.53.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.2.2(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1)))(typescript@5.9.3)(vite@7.2.2(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1))
+      '@types/react':
+        specifier: 19.2.7
+        version: 19.2.7
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+
   packages/docs/button-docs:
     devDependencies:
       '@nl-design-system-candidate/button-react':
@@ -1317,6 +1384,12 @@ importers:
       '@fontsource/source-serif-pro':
         specifier: 5.2.5
         version: 5.2.5
+      '@nl-design-system-candidate/alert-docs':
+        specifier: workspace:*
+        version: link:../docs/alert-docs
+      '@nl-design-system-candidate/alert-react':
+        specifier: workspace:*
+        version: link:../components-react/alert-react
       '@nl-design-system-candidate/button-docs':
         specifier: workspace:*
         version: link:../docs/button-docs
@@ -1662,6 +1735,8 @@ importers:
       vitest:
         specifier: 4.0.10
         version: 4.0.10(@types/debug@4.1.12)(@types/node@24.10.4)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1)
+
+  packages/tokens/alert-tokens: {}
 
   packages/tokens/button-tokens: {}
 

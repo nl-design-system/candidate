@@ -1,0 +1,38 @@
+{
+  "name": "@nl-design-system-candidate/alert-docs",
+  "version": "0.0.0",
+  "description": "Documentation of the NL Design System Alert component",
+  "license": "CC0-1.0",
+  "homepage": "https://nldesignsystem.nl/alert",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "docs",
+    "alert",
+    "alert-component"
+  ],
+  "files": [
+    "./docs/",
+    "./stories/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/docs/alert-docs"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@nl-design-system-candidate/alert-react": "workspace:*",
+    "@storybook/react-vite": "9.1.5",
+    "@types/react": "19.2.7",
+    "react": "19.2.3"
+  }
+}

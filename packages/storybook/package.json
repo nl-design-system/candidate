@@ -22,6 +22,8 @@
   "devDependencies": {
     "@fontsource/fira-sans": "5.2.7",
     "@fontsource/source-serif-pro": "5.2.5",
+    "@nl-design-system-candidate/alert-docs": "workspace:*",
+    "@nl-design-system-candidate/alert-react": "workspace:*",
     "@nl-design-system-candidate/button-docs": "workspace:*",
     "@nl-design-system-candidate/button-react": "workspace:*",
     "@nl-design-system-candidate/code-block-docs": "workspace:*",
