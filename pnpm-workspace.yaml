@@ -39,3 +39,7 @@ savePrefix: ''
 
 # Configure pnpm to not fail when there are missing or invalid peer dependencies in the tree.
 strictPeerDependencies: false
+
+overrides:
+  glob: ^11.1.0 || ^12.0.0
+provenance: true
