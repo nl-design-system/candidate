@@ -106,6 +106,7 @@ jobs:
             coverage
             dist
             tmp
+            .husky
 
   build:
     runs-on: ubuntu-latest
