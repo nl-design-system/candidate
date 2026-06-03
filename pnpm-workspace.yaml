@@ -7,6 +7,12 @@ packages:
   - 'packages/docs/*'
   - 'packages/tokens/*'
 
+allowBuilds:
+  esbuild: true
+
+overrides:
+  glob: ^11.1.0 || ^12.0.0
+
 # Configure pnpm so peer dependencies must be explicitly added instead of being automatically installed.
 autoInstallPeers: false
 
@@ -40,6 +46,4 @@ savePrefix: ''
 # Configure pnpm to not fail when there are missing or invalid peer dependencies in the tree.
 strictPeerDependencies: false
 
-overrides:
-  glob: ^11.1.0 || ^12.0.0
 provenance: true
