@@ -66,4 +66,5 @@ jobs:
   chromatic:
     needs: publish
     uses: ./.github/workflows/chromatic.yml
-    secrets: inherit
+    secrets:
+      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

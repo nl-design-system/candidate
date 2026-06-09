@@ -183,9 +183,11 @@ jobs:
   codecov:
     needs: test
     uses: ./.github/workflows/codecov.yml
-    secrets: inherit
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   chromatic:
     needs: build
     uses: ./.github/workflows/chromatic.yml
-    secrets: inherit
+    secrets:
+      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
