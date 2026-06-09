@@ -1,6 +1,4 @@
 name: publish
-# Triggers the following workflows:
-# - .github/workflows/chromatic.yml
 
 on:
   push:
@@ -64,3 +62,8 @@ jobs:
           setupGitUser: false
           title: "docs(release): design system packages"
           publish: "pnpm run changeset:publish"
+
+  chromatic:
+    needs: publish
+    uses: ./.github/workflows/chromatic.yml
+    secrets: inherit
