@@ -1,7 +1,4 @@
 name: Continuous Integration
-# Triggers the following workflows:
-# - .github/workflows/codecov.yml
-# - .github/workflows/chromatic.yml
 
 on:
   pull_request:
@@ -182,3 +179,13 @@ jobs:
           name: coverage-report
           path: packages/components-react/*/coverage/
           retention-days: 1
+
+  codecov:
+    needs: test
+    uses: ./.github/workflows/codecov.yml
+    secrets: inherit
+
+  chromatic:
+    needs: build
+    uses: ./.github/workflows/chromatic.yml
+    secrets: inherit
