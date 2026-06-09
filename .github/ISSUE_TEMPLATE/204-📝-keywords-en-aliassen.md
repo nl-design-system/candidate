@@ -15,7 +15,7 @@ type: Task
 - [ ] Verzamel alternatieve namen voor de component
 - [ ] Stem af met Design System Lead
 - [ ] Voeg de meest gebruikte alternatieven toe aan de component pagina in de candidate repository
-- [ ] Voeg de aliassen toe aan de keywords op de component pagina in de documentatie repository
+- [ ] Update de keywords op de component pagina in de documentatie repository
 - [ ] Voeg de gerelateerde componenten toe aan de relaties JSON in de documentatie repository
 - [ ] Voeg de gerelateerde componenten toe aan de GitHub Discussion
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
@@ -97,7 +97,9 @@ Maak een PR aan gebruik hierbij de volgende opzet:
 - **Commit Message**: `docs: candidate aliases for {naam-component}`
 - **Branch**: `docs/candidate-aliases-for-{naam-component}`
 
-### Voeg de aliassen toe aan de keywords op de component pagina in de documentatie repository
+### Update de keywords op de component pagina in de documentatie repository
+
+Update de keywords met de vastgestelde keywords en aliassen in deze issue.
 
 Dat kan in de metadata bovenin het bestand.
 
@@ -137,8 +139,8 @@ keywords:
 - verzenden
 ```
 
-- **Commit Message**: `docs: candidate aliases as keywords for {naam-component}`
-- **Branch**: `docs/candidate-aliases-as-keywords-for-{naam-component}`
+- **Commit Message**: `docs: candidate update keywords for {naam-component}`
+- **Branch**: `docs/candidate-update-keywords-for-{naam-component}`
 
 ### Voeg de gerelateerde componenten toe aan de GitHub Discussion
 
