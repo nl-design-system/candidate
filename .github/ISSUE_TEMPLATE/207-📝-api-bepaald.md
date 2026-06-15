@@ -29,9 +29,10 @@ Breng in kaart welke API’s community componenten nu hebben. Dat zijn de modifi
 
 #### Hoe kun je dit bijvoorbeeld doen als Designer?
 
-- Maak een canvas aan
-- Bekijk de component in Figma en maak een lijst van de properties die worden gebruikt en beschrijf wat er in zo’n property als opties aangeboden wordt. Zoals bijvoorbeeld `number`, `text`, of specifieke waardes
-- Bekijk de component in Storybook en maak notities wanneer de APIs daar van Figma lijken te verschillen
+- Maak een canvas aan.
+- Optioneel: vraag tijdens Design Open Hour of via Slack naar linkjes in Figma van deze component.
+- Bekijk de component in Figma en maak een lijst van de properties die worden gebruikt en beschrijf wat er in zo’n property als opties aangeboden wordt. Zoals `number`, `text`, of specifieke waardes.
+- Bekijk de component in Storybook en maak notities wanneer de APIs daar van Figma lijken te verschillen.
 
 ### Bepaal de APIs die beschikbaar worden gemaakt voor de component
 
