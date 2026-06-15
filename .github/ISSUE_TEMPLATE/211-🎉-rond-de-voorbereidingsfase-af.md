@@ -38,7 +38,10 @@ Dat kan door in het GitHub projectbord te kijken of de status van de 📝 select
 Dat kan in het #nl-design-system kanaal met het volgende bericht
 
 ```md
-📣 Joehoe!! We hebben de voorbereidingen om {component-naam} Candidate te maken getroffen. Dat betekent dat we diep hebben nagedacht over de varianten, design tokens, semantiek en anatomie.
+📣 Joehoe!! We hebben de voorbereidingen om {component-naam} Candidate te maken getroffen.
+
+Daarbij hebben we openstaande issues en pull requests bekeken, input uit de GitHub Discussion meegenomen en aanvullende feedback uitgevraagd bij de community. Op basis daarvan hebben we de varianten, design tokens, semantiek en anatomie van deze component bepaald.
+
 Je kunt al onze overwegingen vinden in de [GitHub Discussion van {component-naam}]({discussion-url}).
 
 Mis je iets? Laat ons dan via die Discussion weten wat dat is en waarom je het zo belangrijk vindt.
