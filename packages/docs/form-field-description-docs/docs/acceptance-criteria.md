@@ -29,3 +29,33 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 - Tekst in de Form Field Description blijft leesbaar wanneer de tekstafstand vergroot wordt.
 - De Form Field Description is standaard niet bereikbaar en bedienbaar met het toetsenbord.
 - De Form Field Description komt standaard niet voor in de focusvolgorde van de pagina.
+
+## Acceptatiecriteria APIs van de component
+
+### CSS API
+
+- Block class: `nl-form-field-description`
+
+- Modifier classes:
+  - geen
+
+- Element classes:
+  - geen
+
+## React API
+
+### Extends
+
+Extends `HTMLAttributes<HTMLDivElement>` voor standaard HTML-attributen en events van een `div` element.
+
+### Properties
+
+Alle props uit `HTMLAttributes<HTMLDivElement>` worden doorgestuurd naar het onderliggende `div` element, zoals het `id` attribuut.
+
+De volgende props worden expliciet ondersteund:
+
+| Prop        | Type                  | Verplicht | Omschrijving                                                                                        |
+| ----------- | --------------------- | --------- | --------------------------------------------------------------------------------------------------- |
+| `children`  | `ReactNode`           | nee       | Inhoud in de vorm van een `p` element of phrasing content met uitzondering van interactive content. |
+| `className` | `string`              | nee       | Extra CSS classes naast `nl-form-field-description`.                                                |
+| `ref`       | `Ref<HTMLDivElement>` | nee       | Ref naar het onderliggende `div` element.                                                           |
