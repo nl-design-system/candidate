@@ -54,6 +54,4 @@ Button (default)
 
 #### Sluit-functie
 
-Hoewel er in de community meerdere Alerts met een sluit-functie zijn, wordt deze functie niet meegenomen voor de Candidate component. De sluit-functie wordt in alle waarschijnlijkheid wel toegevoegd aan de Notification Banner.
-
-[Bekijk de GitHub Discussion voor Notification Banner](https://github.com/orgs/nl-design-system/discussions/281)
+Hoewel er in de community meerdere Alerts met een sluit-functie zijn, wordt deze functie niet meegenomen voor de Candidate component.
