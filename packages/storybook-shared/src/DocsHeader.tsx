@@ -12,10 +12,13 @@ export function DocsHeader() {
 
   return (
     <div style={{ display: 'flex', gap: '1rem', marginBlock: '1rem' }}>
-      {(externalLinks as ExternalLink[]).map(({ name, url }) => (
-        <a key={url} href={url} target="_blank" rel="noreferrer">
-          {name}
-        </a>
+      {(externalLinks as ExternalLink[]).map(({ name, url }, index, list) => (
+        <>
+          <a key={url} href={url} target="_blank" rel="noreferrer">
+            {name}
+          </a>
+          {index < list.length - 1 ? <span>⋅</span> : <></>}
+        </>
       ))}
     </div>
   );
