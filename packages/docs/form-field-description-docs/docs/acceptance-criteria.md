@@ -36,10 +36,10 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 - Block class: `nl-form-field-description`
 
-- Modifier classes:
+- Element classes:
   - geen
 
-- Element classes:
+- Modifier classes:
   - geen
 
 ## React API
