@@ -210,11 +210,12 @@ Zijn er geen varianten? Documenteer dat dan ook in de GitHub Discussion.
 Er zijn meerdere implementaties van {component-naam} bekeken en met elkaar vergeleken. Op basis daarvan is besloten dat er géén specifieke varianten nodig zijn voor de Candidate component.
 ```
 
-#### Documenteer besluit in de acceptatiecriteria
+### Documenteer besluit in de acceptatiecriteria
 
 Maak acceptatiecriteria voor alle varianten die in de component worden meegenomen. Voeg deze toe aan de `acceptance-criteria.md` van de component in de Candidate repository.
 
-**Let op!** In tegenstelling tot de GitHub Discussion wordt er in de acceptatiecriteria niet naar andere componenten verwezen.
+**Let op!**
+In tegenstelling tot de GitHub Discussion wordt er in de acceptatiecriteria niet naar andere componenten verwezen.
 
 ```md
 ## Varianten
@@ -244,22 +245,23 @@ Is het een boolean? Noteer dan de twee opties en welke de default is.
 Is het een string of number? Laat deze dan leeg.
 }
 
-### Deze varianten worden niet ondersteund
+<!--
+Indien van toepassing...
 
-{
-optioneel:
+### Deze varianten worden niet ondersteund
 
 - Deze varianten, die standaard in HTML beschikbaar zijn, worden niet ondersteund. Ze worden uit het HTMLElement-type gehaald met Omit tijdens het definiëren van de properties in Typescript.
 - Deze varianten worden niet gedocumenteerd
 - Deze varianten worden niet beschikbaar gemaakt in Figma.
 
 Documenteer de niet-ondersteunde varianten op basis van de notulen in dit GitHub-issue.
-}
+
+-->
+
+<!--
+Indien van toepassing...
 
 ### Deze varianten worden ondersteund, maar raden we niet aan
-
-{
-optioneel:
 
 - Omdat deze varianten standaard in HTML beschikbaar zijn, worden ze ondersteund. Dit doen we door het HTMLElement-type te extenden in Typescript.
 - Deze varianten worden niet gedocumenteerd op de website, in de README en in de standaard Storybook.
@@ -267,7 +269,8 @@ optioneel:
 - Deze varianten worden beschikbaar gemaakt in Figma.
 
 Documenteer de ondersteunde, maar niet aangeraden varianten op basis van de notulen in dit GitHub-issue.
-}
+
+-->
 ```
 
 Zijn er geen varianten? Documenteer dat dan ook in acceptatiecriteria.
