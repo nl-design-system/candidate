@@ -2,6 +2,10 @@
 
 # Acceptatiecriteria voor het maken van de Form Field Description component
 
+## Varianten
+
+Er zijn meerdere implementaties van Form Field Description bekeken en met elkaar vergeleken. Op basis daarvan is besloten dat er géén specifieke varianten nodig zijn voor de Candidate component.
+
 ## Semantiek
 
 Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste zijn voor deze component.

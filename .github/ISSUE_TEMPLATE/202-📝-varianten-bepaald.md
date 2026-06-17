@@ -15,6 +15,7 @@ Component is, waar nodig, versimpeld of opgesplitst. Zodat er één of meerdere 
 - [ ] Verzamel input uit de Community
 - [ ] Besluit welke varianten Candidate worden
 - [ ] Documenteer besluit in de GitHub Discussion
+- [ ] Documenteer besluit in de acceptatiecriteria
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 
 ### Verzamel input uit de Community
@@ -155,7 +156,7 @@ Voorbeeld hypothese voor RVO met 4 verschillende formaten voor font-size:
 - button
 ```
 
-### Documenteer besluit
+### Documenteer besluit in de GitHub Discussion
 
 - Optioneel: splits, in overleg met de Design System Lead, de component op in meerdere componenten. Zet de extra componenten, met logica die we daarin gaan opnemen, op de Backlog.
 - Documenteer in de GitHub Discussion welke varianten wel en niet worden meegenomen voor de Candidate implementatie en waarom.
@@ -173,7 +174,7 @@ De varianten voor de Candidate component zijn bepaald, dat is gedaan op basis va
 
 Is het een enum? Noteer dan de waarden en of er een default is.
 
-- {variant-naam}(default)
+- {variant-naam} (default)
 - {variant-naam}
 - {variant-naam}
 
@@ -209,9 +210,11 @@ Zijn er geen varianten? Documenteer dat dan ook in de GitHub Discussion.
 Er zijn meerdere implementaties van {component-naam} bekeken en met elkaar vergeleken. Op basis daarvan is besloten dat er géén specifieke varianten nodig zijn voor de Candidate component.
 ```
 
-#### Voeg de besluiten toe aan de acceptatiecriteria
+#### Documenteer besluit in de acceptatiecriteria
 
 Maak acceptatiecriteria voor alle varianten die in de component worden meegenomen. Voeg deze toe aan de `acceptance-criteria.md` van de component in de Candidate repository.
+
+**Let op!** In tegenstelling tot de GitHub Discussion wordt er in de acceptatiecriteria niet naar andere componenten verwezen.
 
 ```md
 ## Varianten
@@ -229,7 +232,7 @@ Maak acceptatiecriteria voor alle varianten die in de component worden meegenome
 
 Is het een enum? Noteer dan de waarden en of er een default is.
 
-- {variant-naam}(default)
+- {variant-naam} (default)
 - {variant-naam}
 - {variant-naam}
 
@@ -265,6 +268,14 @@ optioneel:
 
 Documenteer de ondersteunde, maar niet aangeraden varianten op basis van de notulen in dit GitHub-issue.
 }
+```
+
+Zijn er geen varianten? Documenteer dat dan ook in acceptatiecriteria.
+
+```md
+## Varianten
+
+Er zijn meerdere implementaties van {component-naam} bekeken en met elkaar vergeleken. Op basis daarvan is besloten dat er géén specifieke varianten nodig zijn voor de Candidate component.
 ```
 
 🚩 Checkpoint
