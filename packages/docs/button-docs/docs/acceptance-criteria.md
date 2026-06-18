@@ -79,3 +79,15 @@ Het moet mogelijk zijn dat een bezoeker met een enkele aanwijzer (zoals een muis
   - De component kan worden geactiveerd met de `Space` op `keyup`.
   - De `Space` activatie is cancelable door `Tab` te doen en focus te verplaatsen vooraf aan keyup.
 - De component ondersteunt pointer-gedrag waarbij een klik geannuleerd wordt wanneer de gebruiker de aanwijzer indrukt, buiten de component beweegt en pas dan loslaat.
+
+## Acceptatiecriteria toegankelijkheid van de component
+
+- Het is mogelijk om relaties met andere componenten aan te geven.
+- Als je de tekst vergroot tot 200% blijft deze in zijn geheel zichtbaar.
+- Als je de tekstafstand vergroot blijft de tekst in zijn geheel zichtbaar.
+- Je kunt de button focussen met de tabtoets en activeren met de spatiebalk en de entertoets.
+- Wanneer een button de toetsenbordfocus krijgt is de focus zichtbaar.
+- Als de gebruiker een button indrukt met een aanwijzer zoals een muis of vinger, is er de mogelijkheid om de actie te voorkomen of ongedaan te maken.
+- De button heeft een rol van button en het type is instelbaar.
+
+[Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/button/)

@@ -9,3 +9,5 @@
 - Tekst in de Ordered List blijft leesbaar wanneer de tekstafstand vergroot wordt.
 - De Ordered List is standaard niet bereikbaar en bedienbaar met het toetsenbord.
 - De Ordered List komt standaard niet voor in de focusvolgorde van de pagina.
+
+[Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/ordered-list/)

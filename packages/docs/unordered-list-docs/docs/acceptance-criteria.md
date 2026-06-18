@@ -9,3 +9,5 @@
 - Tekst in de Unordered List blijft leesbaar wanneer de tekstafstand vergroot wordt.
 - De Unordered List is standaard niet bereikbaar en bedienbaar met het toetsenbord.
 - De Unordered List komt standaard niet voor in de focusvolgorde van de pagina.
+
+[Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/unordered-list/)

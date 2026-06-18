@@ -9,3 +9,5 @@
 - Tekst in het Form Field Label blijft leesbaar wanneer de tekstafstand vergroot wordt.
 - Het Form Field Label is standaard niet bereikbaar en bedienbaar met het toetsenbord.
 - Het Form Field Label komt standaard niet voor in de focusvolgorde van de pagina.
+
+[Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/form-field-label/)
