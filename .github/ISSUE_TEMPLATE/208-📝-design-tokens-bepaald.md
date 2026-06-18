@@ -105,7 +105,7 @@ Beschikbare design tokens vind je in: [{component}-tokens/tokens.json]({url}).
 Laat het in deze Discussion weten als er uit gebruikersonderzoek naar voren is gekomen dat deze design-beslissing een hele verbetering zou zijn.
 
 **💡 Tip**
-Je kunt [desing tokens ook als extensie toevoegen](https://www.nldesignsystem.nl/handboek/componenten-vinden/#ik-mis-een-functionaliteit-binnen-een-candidate-of-hall-of-fame-component-wat-nu) aan een component.
+Je kunt [design tokens ook als extensie toevoegen](https://www.nldesignsystem.nl/handboek/componenten-vinden/#ik-mis-een-functionaliteit-binnen-een-candidate-of-hall-of-fame-component-wat-nu) aan een component.
 ```
 
 ### Documenteer besluit in de Candidate repository
