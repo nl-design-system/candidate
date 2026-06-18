@@ -278,7 +278,7 @@ Zijn er geen varianten? Documenteer dat dan ook in acceptatiecriteria.
 ```md
 ## Varianten
 
-Er zijn meerdere implementaties van {component-naam} bekeken en met elkaar vergeleken. Op basis daarvan is besloten dat er géén specifieke varianten nodig zijn voor de Candidate component.
+Er zijn géén specifieke varianten nodig voor de Candidate component.
 ```
 
 🚩 Checkpoint

@@ -4,7 +4,7 @@
 
 ## Varianten
 
-Er zijn meerdere implementaties van Form Field Description bekeken en met elkaar vergeleken. Op basis daarvan is besloten dat er géén specifieke varianten nodig zijn voor de Candidate component.
+Er zijn géén specifieke varianten nodig voor de Candidate component.
 
 ## Semantiek
 
