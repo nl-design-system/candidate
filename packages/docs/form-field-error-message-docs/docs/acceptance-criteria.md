@@ -2,6 +2,10 @@
 
 # Acceptatiecriteria voor het maken van de Form Field Error Message component
 
+## Varianten
+
+Er zijn géén specifieke varianten nodig voor de Candidate component.
+
 ## Acceptatiecriteria toegankelijkheid van de component
 
 - De Form Field Error Message kan aan een element voor formulierinvoer gekoppeld worden

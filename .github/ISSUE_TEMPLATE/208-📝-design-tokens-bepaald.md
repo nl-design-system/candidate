@@ -83,8 +83,7 @@ Leg vast welke design tokens varianten wel en niet worden meegenomen voor de Can
 ```md
 ## Candidate voorbereidingsfase: Design tokens bepaald
 
-De design tokens voor de Candidate component zijn bepaald. Dat hebben we gedaan op basis van alle designs die we in deze Discussion hebben gezien.
-Als een beslissing 2+ keer voor komt, dan is het een algemeen nuttige beslissing!
+De design tokens voor de Candidate component zijn bepaald. Dat hebben we gedaan op basis van alle designs die we in deze Discussion hebben gezien. Als een beslissing vaker dan 2 keer voorkomt, is het een algemeen nuttige beslissing.
 
 ### Deze design tokens nemen we mee:
 
@@ -95,10 +94,10 @@ Beschikbare design tokens vind je in: [{component}-tokens/tokens.json]({url}).
 
 ### Mis je een design token?
 
-Laat het in deze Discussion weten als er uit gebruikersonderzoek naar voren is gekomen dat deze design beslissing een hele verbetering zou zijn.
+Laat het in deze Discussion weten als er uit gebruikersonderzoek naar voren is gekomen dat deze design-beslissing een hele verbetering zou zijn.
 
 **💡 Tip**
-Je kunt design tokens ook als extentie toevoegen aan de component. Documentatie hoe je dan kunt doen volgt. Vraag ons er gerust naar.
+Je kunt design tokens ook als extensie toevoegen aan de component. Documentatie hoe je dan kunt doen volgt. Vraag ons er gerust naar.
 ```
 
 ### Bepaal de logische common tokens voor alle component-tokens
