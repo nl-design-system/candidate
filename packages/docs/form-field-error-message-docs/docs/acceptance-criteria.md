@@ -14,6 +14,8 @@ Er zijn géén specifieke varianten nodig voor de Candidate component.
 - De Form Field Error Message komt standaard niet voor in de focusvolgorde van de pagina.
 - Het is mogelijk om de Form Field Error Message de rol `alert` te geven.
 
+[Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/form-field-error-message/)
+
 ## Acceptatiecriteria APIs van de component
 
 ### CSS API

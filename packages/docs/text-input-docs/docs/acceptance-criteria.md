@@ -128,3 +128,5 @@ Boolean
 - Je kunt de Text Input bereiken en bedienen met het toetsenbord.
 - Als de Text Input de toetsenbordfocus krijgt is de focus zichtbaar.
 - Het is mogelijk de Text Input een toegankelijke naam en de juiste rol te geven en het `value`-attribuut is aanwezig en instelbaar.
+
+[Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/text-input/)

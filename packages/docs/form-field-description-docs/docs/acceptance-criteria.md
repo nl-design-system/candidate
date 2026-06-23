@@ -34,6 +34,8 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 - De Form Field Description is standaard niet bereikbaar en bedienbaar met het toetsenbord.
 - De Form Field Description komt standaard niet voor in de focusvolgorde van de pagina.
 
+[Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/form-field-description/)
+
 ## Acceptatiecriteria APIs van de component
 
 ### CSS API
