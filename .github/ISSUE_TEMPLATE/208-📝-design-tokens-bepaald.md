@@ -12,17 +12,21 @@ type: Task
 ## 📝 Design tokens bepaald
 
 - [ ] Maak een overzicht van de gebruikte design tokens
-- [ ] Nieuw: maak een overzicht van de missende design tokens
+- [ ] Maak een overzicht van de missende design tokens
 - [ ] Verzamel de design tokens voor states
 - [ ] Verzamel de design tokens voor varianten
 - [ ] Bepaal welke tokens algemeen nuttig zijn
-- [ ] Documenteer beslissingen in de GitHub Discussion
+- [ ] Bepaal de logische common tokens voor alle component-tokens
+- [ ] Documenteer besluit in de GitHub Discussion
+- [ ] Documenteer besluit in de Candidate repository
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 
-### Maak een overzicht van alle design tokens die gebruikt worden voor verschillende huisstijlen
+### Maak een overzicht van van de gebruikte design tokens
 
 - Maak een Canvas aan die gedeeld wordt met het kernteam kanaal.
-- Verzamel alle design tokens die worden gebruikt, bekijk hiervoor implementaties en voorbeelden in de GitHub discussion. En kies de design token naam die klopt met de NL Design System naming convention.
+- Verzamel alle design tokens die worden gebruikt voor verschillende huisstijlen
+  - Bekijk hiervoor implementaties en voorbeelden in de GitHub discussion
+  - Kies de design token naam die klopt met de NL Design System naming convention.
 - Zet deze in een tabel en noteer welke design tokens door welke organisaties worden gebruikt.
 
 > [!WARNING]
@@ -74,9 +78,13 @@ Bijvoorbeeld
 
 ### Bepaal welke tokens algemeen nuttig zijn
 
-- Bepaal samen met de Design System Lead welke design tokens in de Candidate component moeten worden opgenomen, welke niet meegenomen worden omdat ze snowflakes zijn en welke niet aan onze richtlijnen voldoen
+Bepaal samen met de Design System Lead welke design tokens in de Candidate component moeten worden opgenomen, welke niet meegenomen worden omdat ze snowflakes zijn en welke niet aan onze richtlijnen voldoen.
 
-### Documenteer beslissingen in de GitHub Discussion
+### Bepaal de logische common tokens voor alle component-tokens
+
+Component tokens zijn gekoppeld aan logische Common (basis) tokens.
+
+### Documenteer besluit in de GitHub Discussion
 
 Leg vast welke design tokens varianten wel en niet worden meegenomen voor de Candidate implementatie en waarom. Dat kan met dit bericht.
 
@@ -97,17 +105,14 @@ Beschikbare design tokens vind je in: [{component}-tokens/tokens.json]({url}).
 Laat het in deze Discussion weten als er uit gebruikersonderzoek naar voren is gekomen dat deze design-beslissing een hele verbetering zou zijn.
 
 **💡 Tip**
-Je kunt design tokens ook als extensie toevoegen aan de component. Documentatie hoe je dan kunt doen volgt. Vraag ons er gerust naar.
+Je kunt [design tokens ook als extensie toevoegen](https://www.nldesignsystem.nl/handboek/componenten-vinden/#ik-mis-een-functionaliteit-binnen-een-candidate-of-hall-of-fame-component-wat-nu) aan een component.
 ```
 
-### Bepaal de logische common tokens voor alle component-tokens
+### Documenteer besluit in de Candidate repository
 
-- Component tokens zijn gekoppeld aan logische Common (basis) tokens.
-
-### Leg de tokens vast in tokens.json
-
-- Tokens zijn gedocumenteerd in tokens.json formaat en beschikbaar op NPM als `@nl-design-system-candidate/{component}-tokens`
+- Leg de tokens vast in het `tokens.json` bestand van de component in de Candidate repository.
 - Zorg dat de design tokens NL Design System naming conventies volgen en zijn geprefixed met 'nl'.
+- Maak de tokens beschikbaar op NPM als `@nl-design-system-candidate/{component}-tokens`
 
 🚩 Checkpoint
 Design tokens bepaald
