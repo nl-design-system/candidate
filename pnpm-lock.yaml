@@ -6,6 +6,7 @@ settings:
 
 overrides:
   glob: ^11.1.0 || ^12.0.0
+  vite@>=7.0.0 <=7.3.4: ^7.3.5
 
 importers:
 
@@ -2968,7 +2969,7 @@ packages:
     resolution: {integrity: sha512-J4BaTocTOYFkMHIra1JDWrMWpNmBl4EkplIwHEsV8aeUOtdWjwSnln9U7twjMFTAEB7mptNtSKyVi1Y2W9sDJw==}
     peerDependencies:
       typescript: '>= 4.3.x'
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+      vite: ^7.3.5
     peerDependenciesMeta:
       typescript:
         optional: true
@@ -3505,13 +3506,13 @@ packages:
     resolution: {integrity: sha512-CyvYA5w1BKeSVaRavKi+euWxLffshq0v9Rz/5E9MKCitbYtjwkDH6UMIYmcbTs906mEBuYqrbz3nygDP0ppodw==}
     peerDependencies:
       storybook: ^9.1.16
-      vite: ^5.0.0 || ^6.0.0 || ^7.0.0
+      vite: ^7.3.5
 
   '@storybook/builder-vite@9.1.5':
     resolution: {integrity: sha512-sgt/9+Yl/5O7Bj5hdbHfadN8e/e4CNiDZKDcbLOMpOjKKoqF8vm19I1QocWIAiKjTOhF+4E9v9LddjtAGnfqHQ==}
     peerDependencies:
       storybook: ^9.1.5
-      vite: ^5.0.0 || ^6.0.0 || ^7.0.0
+      vite: ^7.3.5
 
   '@storybook/csf-plugin@9.1.16':
     resolution: {integrity: sha512-GKlNNlmWeFBQxhQY5hZOSnFGbeKq69jal0dYNWoSImTjor28eYRHb9iQkDzRpijLPizBaB9MlxLsLrgFDp7adA==}
@@ -3557,7 +3558,7 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       storybook: ^9.1.16
-      vite: ^5.0.0 || ^6.0.0 || ^7.0.0
+      vite: ^7.3.5
 
   '@storybook/react-vite@9.1.5':
     resolution: {integrity: sha512-OYbkHHNCrn8MNPd+4KxMjcSR4M/YHa84h8sWDUHhKRTRtZFmj8i/QDW3E8tGx2BRLxXw3dTYe9J5UYBhJDDxFA==}
@@ -3566,7 +3567,7 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       storybook: ^9.1.5
-      vite: ^5.0.0 || ^6.0.0 || ^7.0.0
+      vite: ^7.3.5
 
   '@storybook/react@9.1.16':
     resolution: {integrity: sha512-M/SkHJJdtiGpodBJq9+DYmSkEOD+VqlPxKI+FvbHESTNs//1IgqFIjEWetd8quhd9oj/gvo4ICBAPu+UmD6M9w==}
@@ -3819,7 +3820,7 @@ packages:
     resolution: {integrity: sha512-46ryTE9RZO/rfDd7pEqFl7etuyzekzEhUbTW3BvmeO/BcCMEgq59BKhek3dXDWgAj4oMK6OZi+vRr1wPW6qjEQ==}
     peerDependencies:
       msw: ^2.4.9
-      vite: ^5.0.0 || ^6.0.0 || ^7.0.0-0
+      vite: ^7.3.5
     peerDependenciesMeta:
       msw:
         optional: true
@@ -3830,7 +3831,7 @@ packages:
     resolution: {integrity: sha512-LEiN/xe4OSIbKe9HQIp5OC24agGD9J5CnmMgsLohVVoOPWL9a2sBoR6VBx43jQZb7Kr1l4RCuyCJzcAa0+dojw==}
     peerDependencies:
       msw: ^2.4.9
-      vite: ^6.0.0 || ^7.0.0 || ^8.0.0
+      vite: ^7.3.5
     peerDependenciesMeta:
       msw:
         optional: true
@@ -6797,46 +6798,6 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite@7.2.2:
-    resolution: {integrity: sha512-BxAKBWmIbrDgrokdGZH1IgkIk/5mMHDreLDmCJ0qpyJaAteP8NvMhkwr/ZCQNqNH97bw/dANTE9PDzqwJghfMQ==}
-    engines: {node: ^20.19.0 || >=22.12.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^20.19.0 || >=22.12.0
-      jiti: '>=1.21.0'
-      less: ^4.0.0
-      lightningcss: ^1.21.0
-      sass: ^1.70.0
-      sass-embedded: ^1.70.0
-      stylus: '>=0.54.8'
-      sugarss: ^5.0.0
-      terser: ^5.16.0
-      tsx: ^4.8.1
-      yaml: ^2.4.2
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      jiti:
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      sass-embedded:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-      tsx:
-        optional: true
-      yaml:
-        optional: true
-
   vite@7.3.6:
     resolution: {integrity: sha512-4XP60spRGjSZFf1qYH+dJIkK2znL3zQfl9KkOV9MkkRR/3Dls0dxaBsQPTloEc5BLXWPL9vsOxopxyKoMmDueg==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -9254,13 +9215,13 @@ snapshots:
     optionalDependencies:
       vite: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1)
 
-  '@vitest/mocker@4.1.8(vite@7.2.2(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1))':
+  '@vitest/mocker@4.1.8(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1))':
     dependencies:
       '@vitest/spy': 4.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.2.2(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1)
+      vite: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1)
 
   '@vitest/pretty-format@3.2.4':
     dependencies:
@@ -12730,20 +12691,6 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite@7.2.2(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1):
-    dependencies:
-      esbuild: 0.25.3
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
-      postcss: 8.5.6
-      rollup: 4.53.2
-      tinyglobby: 0.2.15
-    optionalDependencies:
-      '@types/node': 24.10.4
-      fsevents: 2.3.3
-      sass: 1.94.1
-      yaml: 2.8.1
-
   vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1):
     dependencies:
       esbuild: 0.28.1
@@ -12761,7 +12708,7 @@ snapshots:
   vitest@4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0)(sass@1.94.1)(yaml@2.8.1):
     dependencies:
       '@vitest/expect': 4.1.8
-      '@vitest/mocker': 4.1.8(vite@7.2.2(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1))
+      '@vitest/mocker': 4.1.8(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1))
       '@vitest/pretty-format': 4.1.8
       '@vitest/runner': 4.1.8
       '@vitest/snapshot': 4.1.8
@@ -12778,7 +12725,7 @@ snapshots:
       tinyexec: 1.2.4
       tinyglobby: 0.2.15
       tinyrainbow: 3.1.0
-      vite: 7.2.2(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1)
+      vite: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.10.4

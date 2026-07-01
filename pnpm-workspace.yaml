@@ -12,6 +12,7 @@ allowBuilds:
 
 overrides:
   glob: ^11.1.0 || ^12.0.0
+  vite@>=7.0.0 <=7.3.4: ^7.3.5
 
 # Configure pnpm so peer dependencies must be explicitly added instead of being automatically installed.
 autoInstallPeers: false
