@@ -6,6 +6,7 @@ settings:
 
 overrides:
   glob: ^11.1.0 || ^12.0.0
+  lodash@>=4.0.0 <=4.17.23: ^4.17.24
   vite@>=7.0.0 <=7.3.4: ^7.3.5
 
 importers:
@@ -5292,8 +5293,8 @@ packages:
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
 
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  lodash@4.18.1:
+    resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
 
   log-update@6.1.0:
     resolution: {integrity: sha512-9ie8ItPR6tjY5uYJh8K/Zrv/RMZ5VOlOWvtZdEHYSTFKZfIBPQa9tOAEeAWhd+AnIneLJ22w5fjOYtoutpWq5w==}
@@ -8259,7 +8260,7 @@ snapshots:
 
   '@etchteam/storybook-addon-status@7.0.1(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1)))':
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.18.1
       storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.8.1))
 
   '@fontsource/fira-code@5.2.7': {}
@@ -8812,7 +8813,7 @@ snapshots:
       '@types/lodash': 4.17.20
       color-convert: 2.0.1
       dequal: 2.0.3
-      lodash: 4.17.21
+      lodash: 4.18.1
       markdown-to-jsx: 7.7.1(react@19.2.3)
       memoizerific: 1.11.3
       polished: 4.2.2
@@ -9409,7 +9410,7 @@ snapshots:
 
   async@2.6.4:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.18.1
 
   available-typed-arrays@1.0.7:
     dependencies:
@@ -10872,7 +10873,7 @@ snapshots:
 
   lodash.uniq@4.5.0: {}
 
-  lodash@4.17.21: {}
+  lodash@4.18.1: {}
 
   log-update@6.1.0:
     dependencies:
