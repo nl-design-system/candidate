@@ -41,7 +41,7 @@
     "@utrecht/icon-css": "3.0.1",
     "@whitespace/storybook-addon-html": "8.0.2",
     "clsx": "2.1.1",
-    "lodash-es": "4.17.21",
+    "lodash-es": "4.18.1",
     "prettier": "3.6.2",
     "react-dom": "19.2.3",
     "react": "19.2.3",
