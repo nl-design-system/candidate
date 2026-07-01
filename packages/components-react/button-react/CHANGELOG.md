@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/button-react
 
+## 1.1.1
+
+### Patch Changes
+
+- 3a39016: Upgrade rollup (fixes GHSA-mw96-cpmx-2vgc)
+
 ## 1.1.0
 
 ### Minor Changes
