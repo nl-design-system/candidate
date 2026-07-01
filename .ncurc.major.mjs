@@ -1,6 +1,6 @@
-const minorConfig = require('./.ncurc.minor.cjs');
+import minorConfig from './.ncurc.minor.mjs';
 
-module.exports = {
+export default {
   ...minorConfig,
   // Keep the contents of `reject` in line with "version-update:semver-major" ignore entries in .github/dependabot.yml
   reject: [
