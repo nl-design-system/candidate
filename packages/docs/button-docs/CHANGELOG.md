@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/button-docs
 
+## 1.1.0
+
+### Minor Changes
+
+- ee18f2c: Verwijzingen naar meer uitleg over toegankelijkheidscriteria op de documentatie website toegevoegd.
+
 ## 1.0.3
 
 ### Patch Changes

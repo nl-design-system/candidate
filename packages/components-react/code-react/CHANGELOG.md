@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/code-react
 
+## 2.0.1
+
+### Patch Changes
+
+- 3a39016: Upgrade rollup (fixes GHSA-mw96-cpmx-2vgc)
+
 ## 2.0.0
 
 ### Major Changes
