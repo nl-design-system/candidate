@@ -15,10 +15,24 @@
 
 Enum
 
-- Info (default)
+- Default (default)
 - Error
 - Success
 - Warning
+- Accent-1
+- Accent-2
+- Accent-3
+
+#### Show Icon
+
+Boolean
+
+- True (default)
+- False
+
+#### Icon
+
+Slot
 
 #### Show Header
 
@@ -54,8 +68,43 @@ Slot
 - Button
 - Link
 
-### Deze varianten worden niet ondersteund
+---
 
-#### Sluit-functie
+#### Show Header - boolean
 
-Hoewel er in de community meerdere Alerts met een sluit-functie zijn, wordt deze functie niet meegenomen voor de Candidate component.
+- True (default)
+- False
+
+#### Header - slot
+
+Heading (default)
+
+#### Body - slot
+
+Paragraph (default)
+
+#### Show Footer - boolean
+
+- True
+- False (default)
+
+#### Footer - slot
+
+- Action Group
+- Button
+- Link
+
+#### Element - enum
+
+- Div (default)
+- Article
+- Aside
+- Section
+- Footer
+
+### Mis je een variant?
+
+Laat het in deze Discussion weten als er uit gebruikersonderzoek naar voren is gekomen dat deze design beslissing een hele verbetering zou zijn.
+
+**💡 Tip**
+Je kunt [varianten ook als extensie toevoegen](https://www.nldesignsystem.nl/handboek/componenten-vinden/#ik-mis-een-functionaliteit-binnen-een-candidate-of-hall-of-fame-component-wat-nu) aan een component.
