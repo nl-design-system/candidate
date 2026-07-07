@@ -68,32 +68,6 @@ Slot
 - Button
 - Link
 
----
-
-#### Show Header - boolean
-
-- True (default)
-- False
-
-#### Header - slot
-
-Heading (default)
-
-#### Body - slot
-
-Paragraph (default)
-
-#### Show Footer - boolean
-
-- True
-- False (default)
-
-#### Footer - slot
-
-- Action Group
-- Button
-- Link
-
 #### Element - enum
 
 - Div (default)
