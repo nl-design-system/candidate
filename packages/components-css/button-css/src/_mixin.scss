@@ -135,12 +135,12 @@
   block-size: 24px;
   display: block;
   inline-size: 24px;
-  /* stylelint-disable-next-line property-disallowed-list */
+  /* stylelint-disable-next-line csstools/use-logical */
   left: 50%;
   position: absolute;
-  /* stylelint-disable-next-line property-disallowed-list */
+  /* stylelint-disable-next-line csstools/use-logical */
   right: 0;
-  /* stylelint-disable-next-line property-disallowed-list */
+  /* stylelint-disable-next-line csstools/use-logical */
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
@@ -148,7 +148,7 @@
 @mixin nl-button__label--sr-only {
   /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
   block-size: 1px !important;
-  border: 0 !important;
+  border-width: 0 !important;
   clip-path: inset(50%) !important;
   inline-size: 1px !important;
   /* stylelint-disable-next-line property-disallowed-list */
