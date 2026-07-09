@@ -133,7 +133,8 @@ export default {
     'scss/operator-no-newline-after': null,
     'scss/percent-placeholder-pattern': '^(ams|rhc|denhaag|example|nl|nlds|utrecht|ma|basis|pra|voorbeeld)-[a-z0-9-]+$',
     'selector-attribute-quotes': ['always'],
-    'selector-class-pattern': '^(ams|rhc|denhaag|example|nl|nlds|utrecht|ma|basis|pra|voorbeeld)-[a-z0-9_-]+$',
+    'selector-class-pattern':
+      '^(ams|rhc|denhaag|example|nl|nlds|utrecht|ma|basis|pra|voorbeeld|candidate)-[a-z0-9_-]+$',
     'selector-max-id': [0],
     'selector-pseudo-class-no-unknown': [true],
     'selector-pseudo-element-no-unknown': [true],
