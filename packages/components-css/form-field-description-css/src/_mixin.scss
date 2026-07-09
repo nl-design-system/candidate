@@ -1,3 +1,13 @@
 @mixin nl-form-field-description {
-  /* TODO: Add styling */
+  color: var(--nl-form-field-description-color);
+  font-family: var(--nl-form-field-description-font-family, inherit);
+  font-size: var(--nl-form-field-description-font-size, inherit);
+  font-weight: var(--nl-form-field-description-font-weight);
+  line-height: var(--nl-form-field-description-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+@mixin nl-form-field-description--disabled {
+  color: var(--nl-form-field-description-disabled-color);
 }
