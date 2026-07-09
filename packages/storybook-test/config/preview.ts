@@ -2,6 +2,7 @@ import '@fontsource/fira-code';
 import { StoryRootDecorator } from '@nl-design-system-candidate/storybook-shared/src/StoryRootDecorator';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
+import '@nl-design-system-candidate/storybook-shared/src/voorbeeld-theme-extensions.css';
 import type { Preview } from '@storybook/react-vite';
 import { DocsPage } from '../src/DocsPage';
 import { statuses } from './statuses';
@@ -27,7 +28,7 @@ const preview: Preview = {
     },
   },
   initialGlobals: {
-    storyRootClassname: 'voorbeeld-theme',
+    storyRootClassname: 'voorbeeld-theme candidate-theme',
     dir: undefined,
     lang: undefined,
     viewport: { value: undefined },

@@ -1,0 +1,14 @@
+/* 
+This is a temporary theme for demonstration purposes. 
+Components that do not yet exist will not be added to the candidate-theme token package. 
+These component tokens can be removed once this pull request https://github.com/nl-design-system/themes/pull/1248 is merged. 
+*/
+
+.candidate-theme {
+  --nl-form-field-description-color: var(--basis-color-default-color-subtle);
+  --nl-form-field-description-font-family: var(--basis-text-font-family-default);
+  --nl-form-field-description-font-size: var(--basis-text-font-size-md);
+  --nl-form-field-description-font-weight: var(--basis-text-font-weight-default);
+  --nl-form-field-description-line-height: var(--basis-text-line-height-md);
+  --nl-form-field-description-disabled-color: var(--basis-color-disabled-color-subtle);
+}

@@ -1,6 +1,7 @@
 import { StoryRootDecorator } from '@nl-design-system-candidate/storybook-shared/src/StoryRootDecorator';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
+import '@nl-design-system-candidate/storybook-shared/src/voorbeeld-theme-extensions.css';
 import type { Preview } from '@storybook/react-vite';
 import { DocsPage } from '../src/DocsPage';
 import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
@@ -8,7 +9,7 @@ import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHt
 const preview: Preview = {
   decorators: [StoryRootDecorator],
   initialGlobals: {
-    storyRootClassname: 'voorbeeld-theme',
+    storyRootClassname: 'voorbeeld-theme candidate-theme',
   },
   parameters: {
     controls: { expanded: false },
