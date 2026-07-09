@@ -15,6 +15,15 @@ const meta = {
         type: { summary: undefined },
       },
     },
+    styleDisabled: {
+      name: 'nl-form-field-description--disabled',
+      description: 'Geeft aan dat het formulierveld uitgeschakeld is en niet ingevuld kan worden',
+      control: 'boolean',
+      table: {
+        category: CLASSES,
+        type: { summary: undefined },
+      },
+    },
     children: {
       table: { disable: true },
     },
