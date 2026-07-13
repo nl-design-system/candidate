@@ -4,7 +4,23 @@
 
 ## Varianten
 
-Er zijn géén specifieke varianten nodig voor de Candidate component.
+### Deze varianten worden ondersteund
+
+- Varianten die standaard in HTML beschikbaar zijn, worden in Typescript gedefinieerd door de attributen van het standaard HTMLElement te gebruiken.
+- Varianten die niet standaard in HTML beschikbaar zijn, worden als uitgebreiding toegevoegd.
+- Deze varianten worden gedocumenteerd op de website, in de README en in de standaard Storybook.
+- Deze varianten worden beschikbaar gemaakt in Figma.
+
+#### Disabled
+
+Boolean
+
+- False (default)
+- True
+
+#### Children
+
+String (code) / Text - string (design)
 
 ## Semantiek
 
