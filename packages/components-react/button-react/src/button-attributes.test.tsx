@@ -12,6 +12,16 @@ const text = 'text';
 const ButtonComponent = (props: ButtonProps) => <Button {...props} />;
 
 describe('Button', () => {
+  it(`handles [aria-controls] correctly`, () => {
+    render(<ButtonComponent aria-controls="region-id">{text}</ButtonComponent>);
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('aria-controls', 'region-id');
+  });
+
+  // note: full aria-controls relationship is validated in Playwright E2E tests
+  it.todo('verify aria-controls relationship in a real browser environment');
+
   it(`handles [autofocus] correctly`, () => {
     render(<ButtonComponent autoFocus />);
     const button = screen.getByRole('button');
@@ -34,6 +44,8 @@ describe('Button', () => {
     await user.click(button);
     expect(dialog).toBeVisible();
   });
+  // we created a issue to implement these test cases using end-to-end testing with Playwright:
+  // https://github.com/nl-design-system/candidate/issues/1233
 
   // Vitest does not report states for dialogs. Need to upgrade to vitest with browser mode
   it.todo(`handles [commandfor="id"][command="close"] correctly`, () => {});
@@ -53,7 +65,7 @@ describe('Button', () => {
   // Vitest does not report states for dialogs. Need to upgrade to vitest with browser mode
   it.todo(`handles [commandfor="id"][command="--custom-event"] correctly`, () => {});
 
-  it(`handles [disabled] correctly`, () => {
+  it('renders the HTML-attribute disabled correctly', () => {
     render(<ButtonComponent htmlDisabled />);
     const button = screen.getByRole('button');
 
@@ -98,6 +110,17 @@ describe('Button', () => {
     // expect((submitEvent?.target as HTMLFormElement)?.action).toBe('foo');
   });
 
+  it(`handles [formenctype] correctly`, () => {
+    render(
+      <ButtonComponent type="submit" formEncType="multipart/form-data">
+        {text}
+      </ButtonComponent>,
+    );
+    const button = screen.getByRole('button');
+
+    expect(button).toHaveAttribute('formenctype', 'multipart/form-data');
+  });
+
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
   it.todo(`handles [formmethod="post"] correctly`, () => {});
 
@@ -136,6 +159,28 @@ describe('Button', () => {
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
   it.todo(`handles [popovertarget="id"][popovertargetaction="toggle"] correctly`, () => {});
+
+  it(`handles [tabindex="0"] correctly`, async () => {
+    const user = userEvent.setup();
+    render(<ButtonComponent tabIndex={0}>{text}</ButtonComponent>);
+    const button = screen.getByRole('button');
+
+    await user.tab();
+    expect(button).toHaveFocus();
+  });
+
+  it(`handles [tabindex="-1"] correctly`, async () => {
+    const user = userEvent.setup();
+    render(
+      <>
+        <ButtonComponent tabIndex={-1}>{text}</ButtonComponent>
+        <button>other</button>
+      </>,
+    );
+
+    await user.tab();
+    expect(screen.getByRole('button', { name: 'other' })).toHaveFocus();
+  });
 
   it(`handles [type="submit"] correctly`, () => {
     const submitHandler = vi.fn((event) => event.preventDefault());
