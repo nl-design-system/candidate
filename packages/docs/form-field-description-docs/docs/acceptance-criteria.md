@@ -20,7 +20,7 @@ Boolean
 
 #### Children
 
-String (code) / Text - string (design)
+Rich text (code) / Text - string (design)
 
 ## Semantiek
 
