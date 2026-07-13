@@ -2,6 +2,33 @@
 
 # Acceptatiecriteria voor het maken van de Form Field Label component
 
+## Varianten
+
+### Deze varianten worden ondersteund
+
+- Varianten die standaard in HTML beschikbaar zijn, worden in Typescript gedefinieerd door de attributen van het standaard HTMLElement te gebruiken.
+- Varianten die niet standaard in HTML beschikbaar zijn, worden als uitgebreiding toegevoegd.
+- Deze varianten worden gedocumenteerd op de website, in de README en in de standaard Storybook.
+- Deze varianten worden beschikbaar gemaakt in Figma.
+
+#### Type
+
+Enum
+
+- Default (default)
+- Option
+
+#### Disabled
+
+Boolean
+
+- False (default)
+- True
+
+#### Children
+
+Rich text (code) / Text - string (design)
+
 ## Acceptatiecriteria toegankelijkheid van de component
 
 - Het Form Field Label kan aan een element voor formulierinvoer gekoppeld worden.
