@@ -29,6 +29,42 @@ Boolean
 
 Rich text (code) / Text - string (design)
 
+## Semantiek
+
+Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste zijn voor deze component.
+
+### Welke HTML elementen het beste zijn voor deze component
+
+#### Must Have elementen
+
+- De Form Field Label is opgemaakt met het HTML `label` element.
+
+#### Could Have elementen
+
+- De Form Field Label mag een inhoud bevatten welke bestaat in de vorm van een `p` element en [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0) met uitzondering van [interactive content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#interactive-content-0).
+
+### Welke HTML attributen het beste zijn voor deze component
+
+#### Must Have attributen
+
+- De Form Field Label bevat altijd een HTML `for` attribuut, zodat het met een HTML `id` attribuut aan het input-element gekoppeld kan worden.
+- De Form Field Label gebruikt geen HTML `tabindex` attribuut, de component is ondersteunend, niet interactief.
+
+### Alternatieve HTML
+
+- De CSS ondersteund een Form Field Label met een BEM block class op de HTML `label` element.
+- De CSS ondersteund een Form Field Label met een BEM block class op de HTML `div` element.
+- De CSS ondersteund een Form Field Label met een BEM block class op de HTML `span` element.
+- De CSS ondersteund een Form Field Label binnen een element met de `nl-html` class met een HTML `label` element zonder component classes.
+- De CSS ondersteund een Form Field Label binnen een element met de `nl-html--form-field-label` class met een HTML `label` element zonder component classes.
+- De CSS ondersteund een semantische HTML Label bestaande uit een HTML `label` element zonder component classes.
+
+### Forced Colors modus
+
+- De Form Field Label tekstkleur in Forced Colors modus is CanvasText.
+- De Form Field Label tekstkleur van de `disabled` variant in Forced Colors modus is GrayText.
+- De Form Field Label tekstkleur van de `option` variant in Forced Colors modus is ButtonText.
+
 ## Acceptatiecriteria toegankelijkheid van de component
 
 - Het Form Field Label kan aan een element voor formulierinvoer gekoppeld worden.
