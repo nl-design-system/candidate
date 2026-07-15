@@ -1,0 +1,17 @@
+{
+  "name": "@nl-design-system-candidate/playwright-config",
+  "license": "EUPL-1.2",
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/playwright-config"
+  },
+  "devDependencies": {
+    "@nl-design-system/tsconfig": "1.0.5",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "@playwright/experimental-ct-react": "1.61.1"
+  }
+}
