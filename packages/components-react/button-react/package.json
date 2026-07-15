@@ -38,9 +38,10 @@
   },
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs",
-    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/ ./coverage/",
+    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/ ./coverage/ ./playwright-report/ ./test-results/",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test --config ./e2e/playwright-ct.config.ts",
     "test:watch": "vitest",
     "typecheck": "tsc"
   },
@@ -50,6 +51,9 @@
     "@babel/preset-typescript": "7.28.5",
     "@babel/runtime": "7.28.4",
     "@nl-design-system/rollup-config-react-component": "1.0.7",
+    "@axe-core/playwright": "4.12.1",
+    "@nl-design-system-candidate/playwright-config": "workspace:*",
+    "@playwright/experimental-ct-react": "1.61.1",
     "@types/react": "19.2.7",
     "react": "19.2.3",
     "rimraf": "6.1.0",

@@ -1,0 +1,8 @@
+{
+  "extends": "@nl-design-system/tsconfig",
+  "compilerOptions": {
+    "lib": ["DOM", "ESNext"],
+    "module": "esnext",
+    "moduleResolution": "bundler"
+  }
+}

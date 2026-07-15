@@ -10,6 +10,8 @@ build/
 coverage/
 dist/
 tmp/
+playwright-report/
+test-results/
 
 # Ignore archives
 *.7z
