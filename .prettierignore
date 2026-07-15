@@ -10,6 +10,11 @@ dist/
 tmp/
 CHANGELOG.md
 
+# Ignore generated files from Playwright
+playwright-report/
+test-results/
+e2e/playwright/.cache/
+
 # The indentation of dependency JSON files should only be updated by `yarn` and
 # `npm` commands, so dependency automation scripts (such as Dependabot and
 # Snyk) automatically use the correct indentation.
