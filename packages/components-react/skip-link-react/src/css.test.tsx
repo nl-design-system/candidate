@@ -12,7 +12,7 @@ const text = 'Skip to main content';
 describe('Skip link (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<SkipLink href="#main-content">{text}</SkipLink>);
-    const style = global.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

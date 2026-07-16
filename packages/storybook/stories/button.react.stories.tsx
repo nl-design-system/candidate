@@ -46,7 +46,7 @@ export const ToggleButton = {
     const [{ pressed, disabled }, updateArgs] = useArgs();
 
     function onClick() {
-      if (Boolean(disabled) === false) {
+      if (!disabled) {
         updateArgs({ pressed: !pressed });
       }
     }

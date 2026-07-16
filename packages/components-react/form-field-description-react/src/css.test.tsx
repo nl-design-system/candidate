@@ -12,7 +12,7 @@ afterEach(() => {
 describe('FormFieldDescription (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<FormFieldDescription>{text}</FormFieldDescription>);
-    const style = globalThis.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

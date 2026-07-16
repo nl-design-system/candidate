@@ -1,11 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import type { ComponentType } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import {
-  NewComponent as NewComponentComponent,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  type NewComponentProps,
-} from '@nl-design-system-candidate/new-component-react';
+import { NewComponent as NewComponentComponent } from '@nl-design-system-candidate/new-component-react';
 
 const _meta = { component: NewComponentComponent } satisfies Meta<typeof NewComponentComponent>;
 

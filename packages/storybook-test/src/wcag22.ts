@@ -1,10 +1,13 @@
 import type { SuccessCriterium } from './wcag21';
 import { successCriteria as wcag21 } from './wcag21';
 
-const stringSort = (a: string, b: string): number => (a === b ? 0 : a > b ? 1 : -1);
+const stringSort = (a: string, b: string): number => {
+  if (a === b) return 0;
+  return a > b ? 1 : -1;
+};
 
 // https://stackoverflow.com/questions/40201533/sort-version-dotted-number-strings-in-javascript
-const versionPad = (str: string) => str.replace(/\d+/g, (n) => String(Number(n) + 100000));
+const versionPad = (str: string) => str.replaceAll(/\d+/g, (n) => String(Number(n) + 100_000));
 
 export const versionSort = (a: string, b: string): number => stringSort(versionPad(a), versionPad(b));
 
@@ -122,6 +125,6 @@ export const successCriteria: SuccessCriterium[] = [
     ...sc,
     fragment: new URL(sc.url).hash.replace(/^#/, ''),
   }))
-  .filter(({ sc }) => !deprecatedCriteria.find((deprecated) => deprecated.sc === sc));
+  .filter(({ sc }) => deprecatedCriteria.every((deprecated) => deprecated.sc !== sc));
 
 export const successCriteriaMap = new Map(successCriteria.map((data) => [data.sc, data]));

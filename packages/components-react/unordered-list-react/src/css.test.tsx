@@ -12,7 +12,7 @@ afterEach(() => {
 describe('UnorderedList (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<UnorderedList>{text}</UnorderedList>);
-    const style = globalThis.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

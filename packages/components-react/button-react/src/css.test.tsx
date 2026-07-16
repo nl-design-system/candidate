@@ -12,7 +12,7 @@ const testCode = 'Klik mij!';
 describe('Button (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<Button>{testCode}</Button>);
-    const style = global.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

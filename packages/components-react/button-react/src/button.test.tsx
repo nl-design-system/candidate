@@ -322,25 +322,11 @@ describe('Button', () => {
     expect(handler).toHaveBeenCalled();
   });
 
-  it('accepts an purpose="primary" prop', () => {
-    render(<Button purpose="primary">{text}</Button>);
+  it.each(['primary', 'secondary', 'subtle'] as const)('accepts an purpose="%s" prop', (purpose) => {
+    render(<Button purpose={purpose}>{text}</Button>);
     const button = screen.getByRole('button');
 
-    expect(button).toHaveClass('nl-button--primary');
-  });
-
-  it('accepts an purpose="secondary" prop', () => {
-    render(<Button purpose="secondary">{text}</Button>);
-    const button = screen.getByRole('button');
-
-    expect(button).toHaveClass('nl-button--secondary');
-  });
-
-  it('accepts an purpose="subtle" prop', () => {
-    render(<Button purpose="subtle">{text}</Button>);
-    const button = screen.getByRole('button');
-
-    expect(button).toHaveClass('nl-button--subtle');
+    expect(button).toHaveClass(`nl-button--${purpose}`);
   });
 
   it('accepts an hint="postive" prop', () => {
@@ -407,7 +393,7 @@ describe('Button', () => {
   it('renders an accessible name that is combined from iconStart, label, children, iconEnd (in that order), with white space between', () => {
     render(
       <Button iconStart="[icon-start]" iconEnd="[icon-end]" label="[label]">
-        {'[children]'}
+        [children]
       </Button>,
     );
 
@@ -438,7 +424,7 @@ describe('Button', () => {
     it('renders an accessible name that is combined from iconStart, label, children, iconEnd (in that order), with white space between', () => {
       render(
         <Button iconOnly iconStart="[icon-start]" iconEnd="[icon-end]" label="[label]">
-          {'[children]'}
+          [children]
         </Button>,
       );
 

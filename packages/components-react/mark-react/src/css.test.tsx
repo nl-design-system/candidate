@@ -12,7 +12,7 @@ const text = 'gemarkeerd';
 describe('Mark (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<Mark>{text}</Mark>);
-    const style = global.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

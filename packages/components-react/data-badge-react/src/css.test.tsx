@@ -12,7 +12,7 @@ const value = 1024;
 describe('Data Badge (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<DataBadge>{value}</DataBadge>);
-    const style = global.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

@@ -28,7 +28,7 @@ describe('Data Badge', () => {
       expect(dataBadge).toBeInTheDocument();
     });
 
-    it('renders an HTML span element when neither "value" nor "dateTime" is passed', () => {
+    it('renders the children as its text content', () => {
       render(<DataBadge>{value}</DataBadge>);
       const dataBadge = screen.getByText(value);
 

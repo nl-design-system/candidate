@@ -89,7 +89,7 @@ export const ButtonIconOnly: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Deze Button heeft een Icon, maar geen toegankelijk label. De Button voldoet niet aan [WCAG Succescriterium 1.3.1](http://nldesignsystem.nl/wcag/1.3.1/), omdat informatie visueel beschikbaar is die niet beschikbaar is in tekst.`,
+        story: `Deze Button heeft een Icon, maar geen toegankelijk label. De Button voldoet niet aan [WCAG Succescriterium 1.3.1](https://nldesignsystem.nl/wcag/1.3.1/), omdat informatie visueel beschikbaar is die niet beschikbaar is in tekst.`,
       },
     },
     status: { type: [] },
@@ -110,7 +110,7 @@ export const ButtonFunctionalIcon: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Deze Button heeft een Icon die extra informatie geeft die niet in tekst beschikbaar is. Als je de icoon ziet, weet je dat de "Volgen" knop gaat over Facebook. Die informatie staat niet in de tekst, daarom voldoet de Button niet aan aan [WCAG Succescriterium 1.3.1](http://nldesignsystem.nl/wcag/1.3.1/), omdat informatie visueel beschikbaar is die niet beschikbaar is in tekst.`,
+        story: `Deze Button heeft een Icon die extra informatie geeft die niet in tekst beschikbaar is. Als je de icoon ziet, weet je dat de "Volgen" knop gaat over Facebook. Die informatie staat niet in de tekst, daarom voldoet de Button niet aan aan [WCAG Succescriterium 1.3.1](https://nldesignsystem.nl/wcag/1.3.1/), omdat informatie visueel beschikbaar is die niet beschikbaar is in tekst.`,
       },
     },
     status: { type: [] },
@@ -371,18 +371,18 @@ export const ButtonIllogicalOrder: Story = {
   render: function Render(args) {
     const [updatedArgs, updateArgs] = useArgs();
 
-    const expanded = args['aria-expanded'] === 'true';
+    const isExpanded = args['aria-expanded'] === 'true';
 
     const onClick = () => {
       updateArgs({
-        iconStart: expanded ? <IconChevronUp /> : <IconChevronDown />,
-        'aria-expanded': expanded ? 'false' : 'true',
+        iconStart: isExpanded ? <IconChevronUp /> : <IconChevronDown />,
+        'aria-expanded': isExpanded ? 'false' : 'true',
       });
     };
 
     return (
       <>
-        <div hidden={expanded ? undefined : true}>
+        <div hidden={isExpanded ? undefined : true}>
           <p>Extra informatie die alleen zichtbaar is wanneer de Expanded is heeft.</p>
         </div>
         <Button {...args} {...updatedArgs} onClick={onClick} />
@@ -429,13 +429,13 @@ export const ButtonSmallTargetsize: Story = {
   render: function Render(args) {
     const [updatedArgs, updateArgs] = useArgs();
 
-    const pressed = args['aria-pressed'] === 'true';
+    const isPressed = args['aria-pressed'] === 'true';
 
     const onClick = () => {
       updateArgs({
-        'aria-label': pressed ? 'Toevoegen aan favorieten' : 'Verwijderen uit favorieten',
-        iconStart: pressed ? <IconStar width="16" height="16" /> : <IconStarFilled width="16" height="16" />,
-        'aria-pressed': pressed ? 'false' : 'true',
+        'aria-label': isPressed ? 'Toevoegen aan favorieten' : 'Verwijderen uit favorieten',
+        iconStart: isPressed ? <IconStar width="16" height="16" /> : <IconStarFilled width="16" height="16" />,
+        'aria-pressed': isPressed ? 'false' : 'true',
       });
     };
 

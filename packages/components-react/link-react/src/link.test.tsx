@@ -58,7 +58,7 @@ describe('Link', () => {
     expect(link).toBeVisible();
   });
 
-  it(`supports hiding the HTML "a" element visually and from the accessibility tree using the global HTML attribute "hidden"`, ({
+  it('supports hiding the HTML "a" element visually and from the accessibility tree using the global HTML attribute "hidden"', ({
     expect,
   }) => {
     expect.assertions(2);
@@ -71,8 +71,8 @@ describe('Link', () => {
 
     try {
       screen.getByRole('link');
-    } catch (e) {
-      expect(e).toBeDefined();
+    } catch (error) {
+      expect(error).toBeDefined();
     }
     expect(link).not.toBeVisible();
   });
