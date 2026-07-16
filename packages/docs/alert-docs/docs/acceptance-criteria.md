@@ -59,3 +59,12 @@ Slot
 #### Sluit-functie
 
 Hoewel er in de community meerdere Alerts met een sluit-functie zijn, wordt deze functie niet meegenomen voor de Candidate component.
+
+## Acceptatiecriteria toegankelijkheid van de component
+
+- Tekst in de Alert blijft leesbaar wanneer de tekstafstand vergroot wordt.
+- De Alert is standaard niet bereikbaar en bedienbaar met het toetsenbord.
+- Het is mogelijk om via code de toetsenbordfocus naar de Alert te verplaatsen.
+- Het is mogelijk om van de Alert een live-region te maken.
+
+[Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/alert/)
