@@ -41,20 +41,35 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 #### Could Have elementen
 
-- De Form Field Label mag een inhoud bevatten welke bestaat in de vorm van een `p` element en [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0) met uitzondering van [interactive content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#interactive-content-0).
+- De Form Field Label mag een inhoud bevatten welke bestaat in de vorm van Radio Button, Checkbox of Switch component.
+- De Form Field Label mag een inhoud bevatten welke bestaat in de vorm van [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0) met uitzondering van [interactive content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#interactive-content-0).
 
 ### Welke HTML attributen het beste zijn voor deze component
 
 #### Must Have attributen
 
-- De Form Field Label bevat altijd een HTML `for` attribuut, zodat het met een HTML `id` attribuut aan het input-element gekoppeld kan worden.
 - De Form Field Label gebruikt geen HTML `tabindex` attribuut, de component is ondersteunend, niet interactief.
+
+#### Could Have attributen
+
+- De Form Field Label accepteert een HTML `for` attribuut, zodat het met een HTML `id` attribuut aan het input-element gekoppeld kan worden.
 
 ### Alternatieve HTML
 
-- De CSS ondersteund een Form Field Label met een BEM block class op de HTML `label` element.
-- De CSS ondersteund een Form Field Label met een BEM block class op de HTML `div` element.
-- De CSS ondersteund een Form Field Label met een BEM block class op de HTML `span` element.
+#### Alternatieve HTML voor Form Field Label zonder `option`
+
+- De CSS ondersteund een Form Field Label met de `nl-form-field-label` class op de HTML `label` element.
+- De CSS ondersteund een Form Field Label met de `nl-form-field-label` class op de HTML `div` element.
+- De CSS ondersteund een Form Field Label met de `nl-form-field-label` class op de HTML `span` element.
+- De CSS ondersteund een Form Field Label binnen een element met de `nl-html` class met een HTML `label` element zonder component classes.
+- De CSS ondersteund een Form Field Label binnen een element met de `nl-html--form-field-label` class met een HTML `label` element zonder component classes.
+- De CSS ondersteund een semantische HTML Label bestaande uit een HTML `label` element zonder component classes.
+
+#### Alternatieve HTML voor Form Field Label met `option`
+
+- De CSS ondersteund een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--option` class op de HTML `label` element.
+- De CSS ondersteund een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--option` class op de HTML `div` element.
+- De CSS ondersteund een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--option` class op de HTML `span` element.
 - De CSS ondersteund een Form Field Label binnen een element met de `nl-html` class met een HTML `label` element zonder component classes.
 - De CSS ondersteund een Form Field Label binnen een element met de `nl-html--form-field-label` class met een HTML `label` element zonder component classes.
 - De CSS ondersteund een semantische HTML Label bestaande uit een HTML `label` element zonder component classes.
@@ -63,7 +78,7 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 - De Form Field Label tekstkleur in Forced Colors modus is CanvasText.
 - De Form Field Label tekstkleur van de `disabled` variant in Forced Colors modus is GrayText.
-- De Form Field Label tekstkleur van de `option` variant in Forced Colors modus is ButtonText.
+- De Form Field Label tekstkleur van de `option` variant in Forced Colors modus is CanvasText.
 
 ## Acceptatiecriteria toegankelijkheid van de component
 
