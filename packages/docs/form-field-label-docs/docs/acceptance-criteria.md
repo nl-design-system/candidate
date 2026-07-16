@@ -101,5 +101,5 @@ De volgende props worden expliciet ondersteund:
 | `<FormFieldLabel type="option" input={...} disabled />`  |   ✅   |                                                                                                                                    |
 | `<FormFieldLabel type="inherit" />`                      |   ✅   |                                                                                                                                    |
 | `<FormFieldLabel type="inherit" disabled />`             |   ❌   | `type="inherit"` mag niet gecombineerd worden met `disabled`                                                                       |
-| `<FormFieldLabel type="inherit" input={...} />`          |   ❌   | `input` mag alleen gebruikt worden in combinatie met `type="option"`                                                               |
+| `<FormFieldLabel type="inherit" input={...} />`          |   ❌   | `type="inherit"` mag niet gecombineerd worden met `input` ; `input` mag alleen gebruikt worden in combinatie met `type="option"`   |
 | `<FormFieldLabel type="inherit" input={...} disabled />` |   ❌   | `type="inherit"` mag niet gecombineerd worden met `disabled`; `input` mag alleen gebruikt worden in combinatie met `type="option"` |
