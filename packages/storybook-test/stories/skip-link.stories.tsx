@@ -38,8 +38,7 @@ const dutchLocale: ExamplePageLocale = {
     paragraph: (
       <>
         {'Je kunt contact met ons opnemen via ons e-mailadres: '}
-        <a href="mailto:hello@example.com">hello@example.com</a>
-        {'.'}
+        <a href="mailto:hello@example.com">hello@example.com</a>.
       </>
     ),
   },
@@ -60,8 +59,7 @@ const englishLocale: ExamplePageLocale = {
     paragraph: (
       <>
         {'Contact Mary Poppins via e-mail: '}
-        <a href="mailto:mary@example.com">mary@example.com</a>
-        {'.'}
+        <a href="mailto:mary@example.com">mary@example.com</a>.
       </>
     ),
   },
@@ -81,9 +79,8 @@ const arabicLocale: ExamplePageLocale = {
     organisation: 'Acme Inc.',
     paragraph: (
       <>
-        {'يمكنك التواصل معنا عبر عنوان البريد الإلكتروني الخاص بنا:'}
-        <a href="mailto:hello@example.com">hello@example.com</a>
-        {'.'}
+        يمكنك التواصل معنا عبر عنوان البريد الإلكتروني الخاص بنا:
+        <a href="mailto:hello@example.com">hello@example.com</a>.
       </>
     ),
   },
@@ -126,7 +123,7 @@ const ExamplePage = ({
 const ExamplePageDecorator: Decorator = (Story, context) => {
   return (
     <ExamplePage
-      mainId={typeof context.args['href'] === 'string' ? context.args['href'].substring(1) : undefined}
+      mainId={typeof context.args['href'] === 'string' ? context.args['href'].slice(1) : undefined}
       {...context.globals['page']}
     >
       {Story()}

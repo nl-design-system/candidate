@@ -81,8 +81,8 @@ headingLevels.forEach((level) => {
 
       try {
         screen.getByRole('heading', { level });
-      } catch (e) {
-        expect(e).toBeDefined();
+      } catch (error) {
+        expect(error).toBeDefined();
       }
       expect(heading).not.toBeVisible();
     });

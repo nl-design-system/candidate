@@ -137,7 +137,7 @@ describe('Code Block', () => {
     expect(codeBlock).toBeVisible();
   });
 
-  it(`supports hiding the HTML pre element visually and from the accessibility tree using the global HTML attribute "hidden"`, () => {
+  it('supports hiding the HTML pre element visually and from the accessibility tree using the global HTML attribute "hidden"', () => {
     const { container } = render(<CodeBlock hidden>{testCode}</CodeBlock>);
     const codeBlock = container.querySelector('pre:only-child');
 

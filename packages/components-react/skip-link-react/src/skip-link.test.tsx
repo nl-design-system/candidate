@@ -63,8 +63,8 @@ describe('Skip link', () => {
 
     try {
       screen.getByRole('link');
-    } catch (e) {
-      expect(e).toBeDefined();
+    } catch (error) {
+      expect(error).toBeDefined();
     }
 
     expect(skipLink).not.toBeVisible();

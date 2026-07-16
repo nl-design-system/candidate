@@ -12,7 +12,7 @@ afterEach(() => {
 describe('NewComponent (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<NewComponent>{text}</NewComponent>);
-    const style = globalThis.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

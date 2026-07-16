@@ -12,7 +12,7 @@ afterEach(() => {
 describe('FormFieldLabel (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<FormFieldLabel>{text}</FormFieldLabel>);
-    const style = globalThis.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

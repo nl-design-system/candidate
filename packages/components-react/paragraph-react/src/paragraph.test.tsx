@@ -47,7 +47,7 @@ describe('Paragraph', () => {
       expect(paragraph).toBeVisible();
     });
 
-    it(`supports hiding the HTML p element visually and from the accessibility tree using the global HTML attribute "hidden"`, ({
+    it('supports hiding the HTML p element visually and from the accessibility tree using the global HTML attribute "hidden"', ({
       expect,
     }) => {
       expect.assertions(2);
@@ -56,8 +56,8 @@ describe('Paragraph', () => {
 
       try {
         screen.getByRole('paragraph');
-      } catch (e) {
-        expect(e).toBeDefined();
+      } catch (error) {
+        expect(error).toBeDefined();
       }
       expect(paragraph).not.toBeVisible();
     });
@@ -148,7 +148,7 @@ describe('Paragraph', () => {
       expect(paragraph).toBeVisible();
     });
 
-    it(`supports hiding the HTML p element visually and from the accessibility tree using the global HTML attribute "hidden"`, ({
+    it('supports hiding the HTML p element visually and from the accessibility tree using the global HTML attribute "hidden"', ({
       expect,
     }) => {
       expect.assertions(2);
@@ -161,8 +161,8 @@ describe('Paragraph', () => {
 
       try {
         screen.getByRole('paragraph');
-      } catch (e) {
-        expect(e).toBeDefined();
+      } catch (error) {
+        expect(error).toBeDefined();
       }
       expect(paragraph).not.toBeVisible();
     });

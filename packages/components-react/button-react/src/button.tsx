@@ -154,7 +154,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
   const hasIcon = Boolean(iconStart || iconEnd);
 
   // Is there markup inside `children`
-  const isChildrenFormatted = Children.toArray(children).some(isValidElement);
+  const isChildrenFormatted = Children.toArray(children).some((child) => isValidElement(child));
 
   // Should the children be wrapped in a span:
   // 1. there is markup in `children` _and_ there is an icon: `children`

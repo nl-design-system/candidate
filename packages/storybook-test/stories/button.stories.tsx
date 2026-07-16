@@ -103,90 +103,89 @@ import { useArgs } from 'storybook/preview-api';
 const meta = {
   ...merge({
     ...reactMeta,
-    ...{
-      args: {
-        label: 'Klik mij nu!',
-      },
-      component: ButtonComponent,
-      decorators: [ButtonDecorator],
-      globals: {
-        dir: 'ltr',
-        lang: 'nl',
-        title: 'Button van de dag',
-      },
-      parameters: {
-        acceptanceCriteria,
-        docs: {
-          description: {
-            component: componentMarkdown,
-          },
+
+    args: {
+      label: 'Klik mij nu!',
+    },
+    component: ButtonComponent,
+    decorators: [ButtonDecorator],
+    globals: {
+      dir: 'ltr',
+      lang: 'nl',
+      title: 'Button van de dag',
+    },
+    parameters: {
+      acceptanceCriteria,
+      docs: {
+        description: {
+          component: componentMarkdown,
         },
-        externalLinks: [
-          {
-            name: 'Open op NL Design System',
-            url: 'https://nldesignsystem.nl/button',
-          },
-          {
-            name: 'Open op GitHub',
-            url: packageJSON.homepage,
-          },
+      },
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/button',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
+      ],
+      testResult: {
+        notApplicable: [
+          WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
+          WCAG22_122_CAPTIONS_PRERECORDED,
+          WCAG22_123_AUDIO_DESCRIPTION_OR_MEDIA_ALTERNATIVE_PRERECORDED,
+          WCAG22_124_CAPTIONS_LIVE,
+          WCAG22_125_AUDIO_DESCRIPTION_PRERECORDED,
+          WCAG22_132_MEANINGFUL_SEQUENCE,
+          WCAG22_133_SENSORY_CHARACTERISTICS,
+          WCAG22_134_ORIENTATION,
+          WCAG22_135_IDENTIFY_INPUT_PURPOSE,
+          WCAG22_1410_REFLOW,
+          WCAG22_1413_CONTENT_ON_HOVER_OR_FOCUS,
+          WCAG22_141_USE_OF_COLOR,
+          WCAG22_142_AUDIO_CONTROL,
+          WCAG22_214_CHARACTER_KEY_SHORTCUTS,
+          WCAG22_221_TIMING_ADJUSTABLE,
+          WCAG22_222_PAUSE_STOP_HIDE,
+          WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+          WCAG22_241_BYPASS_BLOCKS,
+          WCAG22_242_PAGE_TITLED,
+          WCAG22_243_FOCUS_ORDER,
+          WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+          WCAG22_245_MULTIPLE_WAYS,
+          WCAG22_251_POINTER_GESTURES,
+          WCAG22_254_MOTION_ACTUATION,
+          WCAG22_257_DRAGGING_MOVEMENTS,
+          WCAG22_311_LANGUAGE_OF_PAGE,
+          WCAG22_322_ON_INPUT,
+          WCAG22_323_CONSISTENT_NAVIGATION,
+          WCAG22_326_CONSISTENT_HELP,
+          WCAG22_331_ERROR_IDENTIFICATION,
+          WCAG22_332_LABELS_OR_INSTRUCTIONS,
+          WCAG22_333_ERROR_SUGGESTION,
+          WCAG22_334_ERROR_PREVENTION_LEGAL_FINANCIAL_DATA,
+          WCAG22_337_REDUNDANT_ENTRY,
+          WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
+          WCAG22_413_STATUS_MESSAGES,
         ],
-        testResult: {
-          notApplicable: [
-            WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
-            WCAG22_122_CAPTIONS_PRERECORDED,
-            WCAG22_123_AUDIO_DESCRIPTION_OR_MEDIA_ALTERNATIVE_PRERECORDED,
-            WCAG22_124_CAPTIONS_LIVE,
-            WCAG22_125_AUDIO_DESCRIPTION_PRERECORDED,
-            WCAG22_132_MEANINGFUL_SEQUENCE,
-            WCAG22_133_SENSORY_CHARACTERISTICS,
-            WCAG22_134_ORIENTATION,
-            WCAG22_135_IDENTIFY_INPUT_PURPOSE,
-            WCAG22_1410_REFLOW,
-            WCAG22_1413_CONTENT_ON_HOVER_OR_FOCUS,
-            WCAG22_141_USE_OF_COLOR,
-            WCAG22_142_AUDIO_CONTROL,
-            WCAG22_214_CHARACTER_KEY_SHORTCUTS,
-            WCAG22_221_TIMING_ADJUSTABLE,
-            WCAG22_222_PAUSE_STOP_HIDE,
-            WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
-            WCAG22_241_BYPASS_BLOCKS,
-            WCAG22_242_PAGE_TITLED,
-            WCAG22_243_FOCUS_ORDER,
-            WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
-            WCAG22_245_MULTIPLE_WAYS,
-            WCAG22_251_POINTER_GESTURES,
-            WCAG22_254_MOTION_ACTUATION,
-            WCAG22_257_DRAGGING_MOVEMENTS,
-            WCAG22_311_LANGUAGE_OF_PAGE,
-            WCAG22_322_ON_INPUT,
-            WCAG22_323_CONSISTENT_NAVIGATION,
-            WCAG22_326_CONSISTENT_HELP,
-            WCAG22_331_ERROR_IDENTIFICATION,
-            WCAG22_332_LABELS_OR_INSTRUCTIONS,
-            WCAG22_333_ERROR_SUGGESTION,
-            WCAG22_334_ERROR_PREVENTION_LEGAL_FINANCIAL_DATA,
-            WCAG22_337_REDUNDANT_ENTRY,
-            WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
-            WCAG22_413_STATUS_MESSAGES,
-          ],
-          notTested: [
-            WCAG22_111_NON_TEXT_CONTENT,
-            WCAG22_1411_NON_TEXT_CONTRAST,
-            WCAG22_143_CONTRAST_MINIMUM,
-            WCAG22_145_IMAGES_OF_TEXT,
-            WCAG22_212_NO_KEYBOARD_TRAP,
-            WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
-            WCAG22_246_HEADINGS_AND_LABELS,
-            WCAG22_253_LABEL_IN_NAME,
-            WCAG22_258_TARGET_SIZE_MINIMUM,
-            WCAG22_312_LANGUAGE_OF_PARTS,
-            WCAG22_321_ON_FOCUS,
-            WCAG22_324_CONSISTENT_IDENTIFICATION,
-          ],
-        },
-        tokens,
+        notTested: [
+          WCAG22_111_NON_TEXT_CONTENT,
+          WCAG22_1411_NON_TEXT_CONTRAST,
+          WCAG22_143_CONTRAST_MINIMUM,
+          WCAG22_145_IMAGES_OF_TEXT,
+          WCAG22_212_NO_KEYBOARD_TRAP,
+          WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+          WCAG22_246_HEADINGS_AND_LABELS,
+          WCAG22_253_LABEL_IN_NAME,
+          WCAG22_258_TARGET_SIZE_MINIMUM,
+          WCAG22_312_LANGUAGE_OF_PARTS,
+          WCAG22_321_ON_FOCUS,
+          WCAG22_324_CONSISTENT_IDENTIFICATION,
+        ],
       },
+      tokens,
     },
   }),
   title: 'Componenten/Button',
@@ -202,9 +201,9 @@ export const ButtonChildrenLineBreak: Story = {
     label: undefined,
     children: (
       <>
-        {'Vorige pagina:'}
+        Vorige pagina:
         <br />
-        {'Hoofdstuk 2'}
+        Hoofdstuk 2
       </>
     ),
   },
@@ -257,9 +256,9 @@ export const ButtonLabelLineBreak: Story = {
   args: {
     label: (
       <>
-        {'Vorige pagina:'}
+        Vorige pagina:
         <br />
-        {'Hoofdstuk 2'}
+        Hoofdstuk 2
       </>
     ),
   },
@@ -616,11 +615,11 @@ export const ButtonInformativeIconStartAndEnd: Story = {
   render: function Render(args) {
     const [updatedArgs, updateArgs] = useArgs();
 
-    const pressed = args['aria-pressed'] === 'true';
+    const isPressed = args['aria-pressed'] === 'true';
 
     const onClick = () => {
       updateArgs({
-        iconStart: pressed ? (
+        iconStart: isPressed ? (
           <Icon role="img" aria-label="Toevoegen">
             <IconPlus />
           </Icon>
@@ -629,7 +628,7 @@ export const ButtonInformativeIconStartAndEnd: Story = {
             <IconCheck />
           </Icon>
         ),
-        'aria-pressed': pressed ? 'false' : 'true',
+        'aria-pressed': isPressed ? 'false' : 'true',
       });
     };
 
@@ -1596,7 +1595,7 @@ export const ButtonRegionExpandable: Story = {
     ),
   },
   render: function Render({ ...args }: ButtonProps) {
-    const [_, updateArgs] = useArgs();
+    const [, updateArgs] = useArgs();
 
     return (
       <section>
@@ -2243,6 +2242,8 @@ export const NotEnoughSpace: Story = {
   },
 };
 
+const onCancelClickButtonClick = () => alert('geklikt');
+
 export const CancelClick: Story = {
   name: 'Cancel een klik door te slepen',
   parameters: {
@@ -2281,8 +2282,7 @@ export const CancelClick: Story = {
   render: (props, { component }) => {
     const Button = component as ComponentType<ButtonProps>;
 
-    const onClick = () => alert('geklikt');
-    return <Button {...props} onClick={onClick} />;
+    return <Button {...props} onClick={onCancelClickButtonClick} />;
   },
 };
 

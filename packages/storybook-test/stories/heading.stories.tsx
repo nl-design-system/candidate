@@ -525,11 +525,11 @@ export const HeadingArabic: Story = {
   args: {
     children: (
       <>
-        {'عيد الفطر ('}
+        عيد الفطر (
         <span lang="nl" dir="ltr">
           Suikerfeest
         </span>
-        {')'}
+        )
       </>
     ),
     dir: 'rtl',

@@ -12,7 +12,7 @@ const text = 'text';
 const ButtonComponent = (props: ButtonProps) => <Button {...props} />;
 
 describe('Button', () => {
-  it(`handles [aria-controls] correctly`, () => {
+  it('handles [aria-controls] correctly', () => {
     render(<ButtonComponent aria-controls="region-id">{text}</ButtonComponent>);
     const button = screen.getByRole('button');
 
@@ -22,19 +22,19 @@ describe('Button', () => {
   // note: full aria-controls relationship is validated in Playwright E2E tests
   it.todo('verify aria-controls relationship in a real browser environment');
 
-  it(`handles [autofocus] correctly`, () => {
+  it('handles [autofocus] correctly', () => {
     render(<ButtonComponent autoFocus />);
     const button = screen.getByRole('button');
     expect(button).toHaveFocus();
   });
 
   // Vitest does not report states for dialogs. Need to upgrade to vitest with browser mode
-  it.todo(`handles [commandfor="id"][command="show-modal"] correctly`, async () => {
+  it.todo('handles [commandfor="id"][command="show-modal"] correctly', async () => {
     const user = userEvent.setup();
     render(
       <>
         <dialog id="id">dialog</dialog>
-        {/*<ButtonComponent commandFor="id" command="show-modal" />*/}
+        {/* <ButtonComponent commandFor="id" command="show-modal" /> */}
       </>,
     );
     const button = screen.getByRole('button');
@@ -48,22 +48,22 @@ describe('Button', () => {
   // https://github.com/nl-design-system/candidate/issues/1233
 
   // Vitest does not report states for dialogs. Need to upgrade to vitest with browser mode
-  it.todo(`handles [commandfor="id"][command="close"] correctly`, () => {});
+  it.todo('handles [commandfor="id"][command="close"] correctly', () => {});
 
   // Vitest does not report states for dialogs. Need to upgrade to vitest with browser mode
-  it.todo(`handles [commandfor="id"][command="request-close"] correctly`, () => {});
+  it.todo('handles [commandfor="id"][command="request-close"] correctly', () => {});
 
   // Vitest does not report states for dialogs. Need to upgrade to vitest with browser mode
-  it.todo(`handles [commandfor="id"][command="show-popover"] correctly`, () => {});
+  it.todo('handles [commandfor="id"][command="show-popover"] correctly', () => {});
 
   // Vitest does not report states for dialogs. Need to upgrade to vitest with browser mode
-  it.todo(`handles [commandfor="id"][command="hide-popover"] correctly`, () => {});
+  it.todo('handles [commandfor="id"][command="hide-popover"] correctly', () => {});
 
   // Vitest does not report states for dialogs. Need to upgrade to vitest with browser mode
-  it.todo(`handles [commandfor="id"][command="toggle-popover"] correctly`, () => {});
+  it.todo('handles [commandfor="id"][command="toggle-popover"] correctly', () => {});
 
   // Vitest does not report states for dialogs. Need to upgrade to vitest with browser mode
-  it.todo(`handles [commandfor="id"][command="--custom-event"] correctly`, () => {});
+  it.todo('handles [commandfor="id"][command="--custom-event"] correctly', () => {});
 
   it('renders the HTML-attribute disabled correctly', () => {
     render(<ButtonComponent htmlDisabled />);
@@ -72,7 +72,7 @@ describe('Button', () => {
     expect(button).toBeDisabled();
   });
 
-  it(`handles [form] correctly`, () => {
+  it('handles [form] correctly', () => {
     const submitHandler = vi.fn((event) => event.preventDefault());
 
     render(
@@ -89,7 +89,7 @@ describe('Button', () => {
   });
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [formaction] correctly`, () => {
+  it.todo('handles [formaction] correctly', () => {
     // let submitEvent: SubmitEvent;
     const submitHandler = vi.fn((event) => {
       event.preventDefault();
@@ -110,7 +110,7 @@ describe('Button', () => {
     // expect((submitEvent?.target as HTMLFormElement)?.action).toBe('foo');
   });
 
-  it(`handles [formenctype] correctly`, () => {
+  it('handles [formenctype] correctly', () => {
     render(
       <ButtonComponent type="submit" formEncType="multipart/form-data">
         {text}
@@ -122,45 +122,45 @@ describe('Button', () => {
   });
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [formmethod="post"] correctly`, () => {});
+  it.todo('handles [formmethod="post"] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [formmethod="get"] correctly`, () => {});
+  it.todo('handles [formmethod="get"] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [formmethod="dialog"] correctly`, () => {});
+  it.todo('handles [formmethod="dialog"] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [formnovalidate] correctly`, () => {});
+  it.todo('handles [formnovalidate] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [formtarget="_self"] correctly`, () => {});
+  it.todo('handles [formtarget="_self"] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [formtarget="_blank"] correctly`, () => {});
+  it.todo('handles [formtarget="_blank"] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [formtarget="_parent"] correctly`, () => {});
+  it.todo('handles [formtarget="_parent"] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [formtarget="_top"] correctly`, () => {});
+  it.todo('handles [formtarget="_top"] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [name] correctly`, () => {});
+  it.todo('handles [name] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [popovertarget] correctly`, () => {});
+  it.todo('handles [popovertarget] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [popovertarget="id"][popovertargetaction="hide"] correctly`, () => {});
+  it.todo('handles [popovertarget="id"][popovertargetaction="hide"] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [popovertarget="id"][popovertargetaction="show"] correctly`, () => {});
+  it.todo('handles [popovertarget="id"][popovertargetaction="show"] correctly', () => {});
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [popovertarget="id"][popovertargetaction="toggle"] correctly`, () => {});
+  it.todo('handles [popovertarget="id"][popovertargetaction="toggle"] correctly', () => {});
 
-  it(`handles [tabindex="0"] correctly`, async () => {
+  it('handles [tabindex="0"] correctly', async () => {
     const user = userEvent.setup();
     render(<ButtonComponent tabIndex={0}>{text}</ButtonComponent>);
     const button = screen.getByRole('button');
@@ -169,7 +169,7 @@ describe('Button', () => {
     expect(button).toHaveFocus();
   });
 
-  it(`handles [tabindex="-1"] correctly`, async () => {
+  it('handles [tabindex="-1"] correctly', async () => {
     const user = userEvent.setup();
     render(
       <>
@@ -182,7 +182,7 @@ describe('Button', () => {
     expect(screen.getByRole('button', { name: 'other' })).toHaveFocus();
   });
 
-  it(`handles [type="submit"] correctly`, () => {
+  it('handles [type="submit"] correctly', () => {
     const submitHandler = vi.fn((event) => event.preventDefault());
 
     render(
@@ -195,7 +195,7 @@ describe('Button', () => {
     expect(submitHandler).toHaveBeenCalled();
   });
 
-  it(`handles [type="reset"] correctly`, async () => {
+  it('handles [type="reset"] correctly', async () => {
     const user = userEvent.setup();
 
     render(
@@ -215,7 +215,7 @@ describe('Button', () => {
     expect(input.value).toBe('');
   });
 
-  it(`handles [type="button"] correctly`, () => {
+  it('handles [type="button"] correctly', () => {
     const submitHandler = vi.fn((event) => event.preventDefault());
 
     render(
@@ -230,5 +230,5 @@ describe('Button', () => {
   });
 
   // Vitest does not report enough data. Need to upgrade to vitest with browser mode
-  it.todo(`handles [value="my-name"] correctly`, () => {});
+  it.todo('handles [value="my-name"] correctly', () => {});
 });

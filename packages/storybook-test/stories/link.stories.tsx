@@ -445,16 +445,16 @@ Een Placeholder-link is niet focusbaar. In de accessibility tree staan ze wel, a
           <li>
             <Link {...props} />
           </li>
-          {Array(22)
-            .fill(0)
-            .map((_, i) => i + 3)
-            .map((day) => (
+          {Array.from({ length: 22 }, (_, i) => {
+            const day = i + 3;
+            return (
               <li key={day}>
                 <Link href={`https://www.htmhell.dev/adventcalendar/2024/${day}/`} disabled>
                   {day} december
                 </Link>
               </li>
-            ))}
+            );
+          })}
         </ul>
       </>
     );

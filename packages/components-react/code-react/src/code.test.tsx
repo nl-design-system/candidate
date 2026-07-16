@@ -80,7 +80,7 @@ describe('Code', () => {
     expect(code).toBeVisible();
   });
 
-  it(`supports hiding the HTML data element visually and from the accessibility tree using the global HTML attribute "hidden"`, () => {
+  it('supports hiding the HTML data element visually and from the accessibility tree using the global HTML attribute "hidden"', () => {
     const { container } = render(<Code hidden>{text}</Code>);
     const code = container.querySelector('code:only-child');
 

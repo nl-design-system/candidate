@@ -2,8 +2,6 @@ import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-css/new-component-css/package.json';
 import { type NewComponentProps } from '@nl-design-system-candidate/new-component-react';
 import newComponentMeta from '@nl-design-system-candidate/new-component-docs/stories/new-component.css.meta';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import * as Stories from '@nl-design-system-candidate/new-component-docs/stories/new-component.stories';
 import '../../components-css/new-component-css/src/test.scss';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta';
 import { getExternalLinks } from '../src/helpers/external-links';

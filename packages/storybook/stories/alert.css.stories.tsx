@@ -2,8 +2,6 @@ import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-css/alert-css/package.json';
 import { type AlertProps } from '@nl-design-system-candidate/alert-react';
 import alertMeta from '@nl-design-system-candidate/alert-docs/stories/alert.css.meta';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import * as Stories from '@nl-design-system-candidate/alert-docs/stories/alert.stories';
 import '../../components-css/alert-css/src/test.scss';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta';
 import { getExternalLinks } from '../src/helpers/external-links';

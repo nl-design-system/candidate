@@ -12,7 +12,7 @@ afterEach(() => {
 describe('TextInput (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<TextInput>{text}</TextInput>);
-    const style = globalThis.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

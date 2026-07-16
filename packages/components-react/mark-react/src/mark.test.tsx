@@ -39,7 +39,7 @@ describe('Mark', () => {
     expect(mark).toBeVisible();
   });
 
-  it(`supports hiding the HTML mark element visually and from the accessibility tree using the global HTML attribute "hidden"`, ({
+  it('supports hiding the HTML mark element visually and from the accessibility tree using the global HTML attribute "hidden"', ({
     expect,
   }) => {
     expect.assertions(2);
@@ -48,8 +48,8 @@ describe('Mark', () => {
 
     try {
       screen.getByRole('mark');
-    } catch (e) {
-      expect(e).toBeDefined();
+    } catch (error) {
+      expect(error).toBeDefined();
     }
     expect(mark).not.toBeVisible();
   });
