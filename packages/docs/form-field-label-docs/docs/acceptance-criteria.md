@@ -58,12 +58,15 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 #### Alternatieve HTML voor Form Field Label zonder `option`
 
-- De CSS ondersteund een Form Field Label met de `nl-form-field-label` class op de HTML `label` element.
-- De CSS ondersteund een Form Field Label met de `nl-form-field-label` class op de HTML `div` element.
-- De CSS ondersteund een Form Field Label met de `nl-form-field-label` class op de HTML `span` element.
-- De CSS ondersteund een Form Field Label binnen een element met de `nl-html` class met een HTML `label` element zonder component classes.
-- De CSS ondersteund een Form Field Label binnen een element met de `nl-html--form-field-label` class met een HTML `label` element zonder component classes.
-- De CSS ondersteund een semantische HTML Label bestaande uit een HTML `label` element zonder component classes.
+- De CSS ondersteunt een Form Field Label met de `nl-form-field-label` class op de HTML-element `label`.
+- De CSS ondersteunt een Form Field Label met de `nl-form-field-label` class op de HTML-element `div`.
+- De CSS ondersteunt een Form Field Label met de `nl-form-field-label` class op de HTML-element `span`.
+
+Voor de HTML component:
+
+- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html` class met een `label` HTML-element zonder component classes.
+- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html--form-field-label` class met een `label` HTML-element zonder component classes.
+- De CSS ondersteunt een `label` HTML-element, zonder dat er class names nodig zijn.
 
 #### Alternatieve HTML voor Form Field Label met `option`
 
