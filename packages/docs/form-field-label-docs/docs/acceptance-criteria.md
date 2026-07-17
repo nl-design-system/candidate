@@ -70,12 +70,15 @@ Voor de HTML component:
 
 #### Alternatieve HTML voor Form Field Label met `option`
 
-- De CSS ondersteund een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--option` class op de HTML `label` element.
-- De CSS ondersteund een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--option` class op de HTML `div` element.
-- De CSS ondersteund een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--option` class op de HTML `span` element.
-- De CSS ondersteund een Form Field Label binnen een element met de `nl-html` class met een HTML `label` element zonder component classes.
-- De CSS ondersteund een Form Field Label binnen een element met de `nl-html--form-field-label` class met een HTML `label` element zonder component classes.
-- De CSS ondersteund een semantische HTML Label bestaande uit een HTML `label` element zonder component classes.
+- De CSS ondersteunt een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--option` class op de HTML `label` element.
+- De CSS ondersteunt een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--option` class op de HTML `div` element.
+- De CSS ondersteunt een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--option` class op de HTML `span` element.
+
+Voor de HTML component:
+
+- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html` class met een HTML `label` element zonder component classes.
+- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html--form-field-label` class met een HTML `label` element zonder component classes.
+- De CSS ondersteunt een semantische HTML Label bestaande uit een HTML `label` element zonder component classes.
 
 ### Forced Colors modus
 
