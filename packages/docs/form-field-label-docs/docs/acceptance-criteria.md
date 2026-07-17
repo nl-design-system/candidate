@@ -53,6 +53,10 @@ Rich text (code) / Text - string (design)
   - `nl-form-field-label--inherit`
   - `nl-form-field-label--disabled`
 
+- HTML classes:
+  - `nl-html`
+  - `nl-html--form-field-label`
+
 #### Geldige combinaties van CSS classes
 
 | Configuratie                                                                                                 | Geldig | Opmerking                                                               |
