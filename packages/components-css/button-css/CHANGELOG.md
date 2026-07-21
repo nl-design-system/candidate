@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/button-css
 
+## 1.1.1
+
+### Patch Changes
+
+- 038c7f0: Prefer `border-width: 0` over `border: 0` to adhere to updated lint rules.
+
 ## 1.1.0
 
 ### Minor Changes

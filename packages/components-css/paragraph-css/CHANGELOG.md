@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/paragraph-css
 
+## 2.1.4
+
+### Patch Changes
+
+- 01df7bb: Documentation improvements in README
+
 ## 2.1.3
 
 ### Patch Changes

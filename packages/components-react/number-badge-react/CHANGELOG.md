@@ -1,5 +1,13 @@
 # @nl-design-system-candidate/number-badge-react
 
+## 1.3.3
+
+### Patch Changes
+
+- 3a39016: Upgrade rollup (fixes GHSA-mw96-cpmx-2vgc)
+- Updated dependencies [038c7f0]
+  - @nl-design-system-candidate/number-badge-css@1.1.6
+
 ## 1.3.2
 
 ### Patch Changes
