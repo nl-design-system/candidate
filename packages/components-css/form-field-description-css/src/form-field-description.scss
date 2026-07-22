@@ -1,5 +1,9 @@
-@use "mixin";
+@use "mixin" as *;
 
 .nl-form-field-description {
-  @include mixin.nl-form-field-description;
+  @include nl-form-field-description;
+}
+
+.nl-form-field-description--disabled {
+  @include nl-form-field-description--disabled;
 }

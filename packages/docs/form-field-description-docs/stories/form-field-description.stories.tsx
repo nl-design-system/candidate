@@ -9,3 +9,10 @@ export const FormFieldDescription: Story = {
     children: `Form Field Description`,
   },
 };
+export const FormFieldDescriptionDisabled: Story = {
+  name: 'Form Field Description Disabled',
+  args: {
+    children: `Form Field Description Disabled`,
+    disabled: true,
+  },
+};
