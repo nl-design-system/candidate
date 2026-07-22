@@ -30,18 +30,18 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 #### Must Have elementen
 
-- De Form Field Description is opgemaakt met het `div` element.
+- De Form Field Description is opgemaakt met het HTML `div` element.
 
 #### Could Have elementen
 
-- De Form Field Description mag een inhoud bevatten welke bestaat in de vorm van een `p` element en [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0) met uitzondering van [interactive content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#interactive-content-0).
+- De Form Field Description mag een inhoud bevatten welke bestaat in de vorm van een HTML `p` element en [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0) met uitzondering van [interactive content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#interactive-content-0).
 
 ### Welke HTML attributen het beste zijn voor deze component
 
 #### Must Have attributen
 
-- De Form Field Description bevat altijd een `id` attribuut, zodat het met `aria-describedby` attribuut aan het input-element gekoppeld kan worden.
-- De Form Field Description gebruikt geen `tabindex` attribuut, de component is ondersteunend, niet interactief.
+- De Form Field Description bevat altijd een HTML `id` attribuut, zodat het met WAI-ARIA `aria-describedby` attribuut aan het input-element gekoppeld kan worden.
+- De Form Field Description gebruikt geen HTML `tabindex` attribuut, de component is ondersteunend, niet interactief.
 
 ## Acceptatiecriteria toegankelijkheid van de component
 
@@ -62,22 +62,23 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
   - geen
 
 - Modifier classes:
-  - geen
+  - `nl-form-field-description--disabled`
 
-## React API
+### React API
 
-### Extends
+#### Extends
 
-Extends `HTMLAttributes<HTMLDivElement>` voor standaard HTML-attributen en events van een `div` element.
+Extends `HTMLAttributes<HTMLDivElement>` voor standaard HTML-attributen en events van een HTML `div` element.
 
-### Properties
+#### Properties
 
-Alle props uit `HTMLAttributes<HTMLDivElement>` worden doorgestuurd naar het onderliggende `div` element, zoals het `id` attribuut.
+Alle props uit `HTMLAttributes<HTMLDivElement>` worden doorgestuurd naar het onderliggende HTML `div` element, zoals het HTML `id` attribuut.
 
 De volgende props worden expliciet ondersteund:
 
-| Prop        | Type                  | Verplicht | Omschrijving                                                                                        |
-| ----------- | --------------------- | --------- | --------------------------------------------------------------------------------------------------- |
-| `children`  | `ReactNode`           | nee       | Inhoud in de vorm van een `p` element of phrasing content met uitzondering van interactive content. |
-| `className` | `string`              | nee       | Extra CSS classes naast `nl-form-field-description`.                                                |
-| `ref`       | `Ref<HTMLDivElement>` | nee       | Ref naar het onderliggende `div` element.                                                           |
+| Prop        | Type                  | Default | Verplicht | Omschrijving                                                                                                                       |
+| ----------- | --------------------- | ------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `children`  | `ReactNode`           | -       | nee       | Inhoud in de vorm van een HTML `p` element of phrasing content met uitzondering van interactive content.                           |
+| `className` | `string`              | -       | nee       | Extra CSS classes naast `nl-form-field-description`.                                                                               |
+| `ref`       | `Ref<HTMLDivElement>` | -       | nee       | Ref naar het onderliggende HTML `div` element.                                                                                     |
+| `disabled`  | `boolean`             | -       | nee       | Voegt de CSS class `nl-form-field-description--disabled` toe om aan te geven dat het gekoppelde formulierelement is uitgeschakeld. |
