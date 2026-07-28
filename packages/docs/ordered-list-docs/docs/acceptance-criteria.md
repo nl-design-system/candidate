@@ -42,13 +42,13 @@
 
 ### OrderedList
 
-#### Extends
+#### OrderedList extends
 
 Extends `OlHTMLAttributes<HTMLOListElement>` voor standaard HTML-attributen en events van een HTML `ol` element.
 
 Alle standaard HTML-attributen en events worden doorgestuurd naar het onderliggende `ol` HTML-element.
 
-#### Properties
+#### OrderedList properties
 
 De volgende props worden expliciet ondersteund:
 
@@ -61,13 +61,13 @@ De volgende props worden expliciet ondersteund:
 
 ### OrderedListItem
 
-#### Extends
+#### OrderedListItem extends
 
 Extends `LiHTMLAttributes<HTMLLIElement>` voor standaard HTML-attributen en events van een HTML `li` element.
 
 Alle standaard HTML-attributen en events worden doorgestuurd naar het onderliggende `li` HTML-element.
 
-#### Properties
+#### OrderedListItem properties
 
 De volgende props worden expliciet ondersteund:
 
@@ -80,7 +80,7 @@ De volgende props worden expliciet ondersteund:
 | `ref`         | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                               |
 | `restProps`   | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element. |
 
-#### Geldige combinaties van React properties
+#### Geldige combinaties van React OrderedListItem properties
 
 | Configuratie                                                                     | Geldig | Opmerking                                                               |
 | -------------------------------------------------------------------------------- | :----: | ----------------------------------------------------------------------- |
