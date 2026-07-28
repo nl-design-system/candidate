@@ -83,13 +83,13 @@ Voor de HTML component:
 
 ### UnorderedList
 
-#### Extends
+#### UnorderedList extends
 
 Extends `UlHTMLAttributes<HTMLUListElement>` voor standaard HTML-attributen en events van een HTML `ul` element.
 
 Alle standaard HTML-attributen en events worden doorgestuurd naar het onderliggende `ul` HTML-element.
 
-#### Properties
+#### UnorderedList properties
 
 De volgende props worden expliciet ondersteund:
 
@@ -102,13 +102,13 @@ De volgende props worden expliciet ondersteund:
 
 ### UnorderedListItem
 
-#### Extends
+#### UnorderedListItem extends
 
 Extends `LiHTMLAttributes<HTMLLIElement>` voor standaard HTML-attributen en events van een HTML `li` element.
 
 Alle standaard HTML-attributen en events worden doorgestuurd naar het onderliggende `li` HTML-element.
 
-#### Properties
+#### UnorderedListItem properties
 
 De volgende props worden expliciet ondersteund:
 
@@ -121,7 +121,7 @@ De volgende props worden expliciet ondersteund:
 | `ref`         | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                               |
 | `restProps`   | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element. |
 
-#### Geldige combinaties van React properties
+#### Geldige combinaties van React UnorderedListItem properties
 
 | Configuratie                                                                             | Geldig | Opmerking                                                                         |
 | ---------------------------------------------------------------------------------------- | :----: | --------------------------------------------------------------------------------- |
