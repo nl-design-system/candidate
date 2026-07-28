@@ -11,3 +11,79 @@
 - De Ordered List komt standaard niet voor in de focusvolgorde van de pagina.
 
 [Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/ordered-list/)
+
+## Acceptatiecriteria APIs van de component
+
+### CSS API
+
+- Block class: `nl-ordered-list`
+
+- Element classes:
+  - `nl-ordered-list__item`
+  - `nl-ordered-list__marker`
+
+- Modifier classes:
+  - `nl-ordered-list--arabic`
+
+- HTML classes:
+  - `nl-html`
+  - `nl-html--ordered-list`
+
+#### Geldige combinaties van CSS classes
+
+| Configuratie                              | Geldig | Opmerking                                                      |
+| ----------------------------------------- | :----: | -------------------------------------------------------------- |
+| `nl-ordered-list`                         |   ✅   |                                                                |
+| `nl-ordered-list nl-ordered-list--arabic` |   ✅   | Forceert Arabische nummering ongeacht de browser instellingen. |
+| `nl-ordered-list__item`                   |   ✅   | Gebruik als child van `nl-ordered-list`.                       |
+| `nl-ordered-list__marker`                 |   ✅   | Gebruik een custom marker binnen een `nl-ordered-list__item`.  |
+
+## React API
+
+### OrderedList
+
+#### Extends
+
+Extends `OlHTMLAttributes<HTMLOListElement>` voor standaard HTML-attributen en events van een HTML `ol` element.
+
+Alle standaard HTML-attributen en events worden doorgestuurd naar het onderliggende `ol` HTML-element.
+
+#### Properties
+
+De volgende props worden expliciet ondersteund:
+
+| Prop        | Type                                 | Default | Verplicht | Omschrijving                                                                                |
+| ----------- | ------------------------------------ | ------- | --------- | ------------------------------------------------------------------------------------------- |
+| `children`  | `ReactNode`                          | -       | nee       | De inhoud van de lijst, doorgaans één of meer `OrderedListItem` componenten.                |
+| `className` | `string`                             | -       | nee       | Extra CSS classes naast `nl-ordered-list`.                                                  |
+| `ref`       | `Ref<HTMLOListElement>`              | -       | nee       | Ref naar het onderliggende `ol` HTML-element.                                               |
+| `restProps` | `OlHTMLAttributes<HTMLOListElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `ol` HTML-element. |
+
+### OrderedListItem
+
+#### Extends
+
+Extends `LiHTMLAttributes<HTMLLIElement>` voor standaard HTML-attributen en events van een HTML `li` element.
+
+Alle standaard HTML-attributen en events worden doorgestuurd naar het onderliggende `li` HTML-element.
+
+#### Properties
+
+De volgende props worden expliciet ondersteund:
+
+| Prop          | Type                              | Default | Verplicht | Omschrijving                                                                                |
+| ------------- | --------------------------------- | ------- | --------- | ------------------------------------------------------------------------------------------- |
+| `children`    | `ReactNode`                       | -       | nee       | De inhoud van de component.                                                                 |
+| `marker`      | `ReactNode`                       | -       | nee       | De inhoud van de marker slot, weergegeven in een `span.nl-ordered-list__marker`.            |
+| `markerLabel` | `string`                          | -       | nee\*     | Toegankelijke naam voor de custom marker. Verplicht wanneer `marker` is opgegeven.          |
+| `className`   | `string`                          | -       | nee       | Extra CSS classes naast `nl-ordered-list__item`.                                            |
+| `ref`         | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                               |
+| `restProps`   | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element. |
+
+#### Geldige combinaties van React properties
+
+| Configuratie                                                                     | Geldig | Opmerking                                                               |
+| -------------------------------------------------------------------------------- | :----: | ----------------------------------------------------------------------- |
+| `<OrderedListItem marker={<Icon />} markerLabel="Stap 1">Item</OrderedListItem>` |   ✅   | Een custom marker moet een toegankelijke naam hebben.                   |
+| `<OrderedListItem marker={<Icon />}>Item</OrderedListItem>`                      |   ❌   | `markerLabel` is verplicht wanneer een custom marker wordt gebruikt.    |
+| `<OrderedListItem markerLabel="Stap 1">Item</OrderedListItem>`                   |   ❌   | `markerLabel` heeft alleen betekenis wanneer ook `marker` is opgegeven. |
