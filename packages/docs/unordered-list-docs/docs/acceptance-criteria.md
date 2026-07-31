@@ -68,7 +68,7 @@ Voor de HTML component:
   - `nl-unordered-list__marker`
 
 - HTML classes:
-  - `nl-html`
+  - `nl-html--all`
   - `nl-html--unordered-list`
 
 #### Geldige combinaties van CSS classes
