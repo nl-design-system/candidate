@@ -27,7 +27,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 #### Must Have attributen
 
 - De Unordered List gebruikt het `role` HTML-attribuut met de waarde `list`.
-- De Unordered List gebruikt geen `tabindex` HTML-attribuut. De component is ondersteunend, niet interactief.
+- De Unordered List gebruikt geen `tabindex` HTML-attribuut. De component is informatief, niet interactief.
 - Het Unordered List Item Slot voor een custom marker gebruikt het `aria-hidden` HTML-attribuut met de waarde `true`.
 
 ### Alternatieve HTML
