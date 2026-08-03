@@ -65,7 +65,13 @@ Voor de HTML component:
 
 - Element classes:
   - `nl-unordered-list__item`
-  - `nl-unordered-list__marker`
+  - `nl-unordered-list__inline-marker`
+
+- Pseudo-element classes:
+  - `nl-unordered-list__marker` voor `::marker`
+
+- Modifier classes:
+  - geen
 
 - HTML classes:
   - `nl-html--all`
@@ -73,11 +79,11 @@ Voor de HTML component:
 
 #### Geldige combinaties van CSS classes
 
-| Configuratie                | Geldig | Opmerking                                                       |
-| --------------------------- | :----: | --------------------------------------------------------------- |
-| `nl-unordered-list`         |   ✅   |                                                                 |
-| `nl-unordered-list__item`   |   ✅   | Gebruik als child van `nl-unordered-list`.                      |
-| `nl-unordered-list__marker` |   ✅   | Gebruik een custom marker binnen een `nl-unordered-list__item`. |
+| Configuratie                       | Geldig | Opmerking                                                       |
+| ---------------------------------- | :----: | --------------------------------------------------------------- |
+| `nl-unordered-list`                |   ✅   |                                                                 |
+| `nl-unordered-list__item`          |   ✅   | Gebruik als child van `nl-unordered-list`.                      |
+| `nl-unordered-list__inline-marker` |   ✅   | Gebruik een inline marker binnen een `nl-unordered-list__item`. |
 
 ## React API
 
@@ -112,19 +118,19 @@ Alle standaard HTML-attributen en events worden doorgestuurd naar het onderligge
 
 De volgende props worden expliciet ondersteund:
 
-| Prop          | Type                              | Default | Verplicht | Omschrijving                                                                                |
-| ------------- | --------------------------------- | ------- | --------- | ------------------------------------------------------------------------------------------- |
-| `children`    | `ReactNode`                       | -       | nee       | De inhoud van de component.                                                                 |
-| `marker`      | `ReactNode`                       | -       | nee       | De inhoud van de marker slot, weergegeven in een `span.nl-unordered-list__marker`.          |
-| `markerLabel` | `string`                          | -       | nee       | Toegankelijke naam voor de custom marker.                                                   |
-| `className`   | `string`                          | -       | nee       | Extra CSS classes naast `nl-unordered-list__item`.                                          |
-| `ref`         | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                               |
-| `restProps`   | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element. |
+| Prop                | Type                              | Default | Verplicht | Omschrijving                                                                                     |
+| ------------------- | --------------------------------- | ------- | --------- | ------------------------------------------------------------------------------------------------ |
+| `children`          | `ReactNode`                       | -       | nee       | De inhoud van de component.                                                                      |
+| `inlineMarker`      | `ReactNode`                       | -       | nee       | De inhoud van de inline marker slot, weergegeven in een `span.nl-unordered-list__inline-marker`. |
+| `inlineMarkerLabel` | `string`                          | -       | nee       | Toegankelijke naam voor de inline marker.                                                        |
+| `className`         | `string`                          | -       | nee       | Extra CSS classes naast `nl-unordered-list__item`.                                               |
+| `ref`               | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                                    |
+| `restProps`         | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element.      |
 
 #### Geldige combinaties van React UnorderedListItem properties
 
-| Configuratie                                                                             | Geldig | Opmerking                                                                         |
-| ---------------------------------------------------------------------------------------- | :----: | --------------------------------------------------------------------------------- |
-| `<UnorderedListItem marker={<Icon />}>Item</UnorderedListItem>`                          |   ✅   | Een custom marker mag zonder toegankelijke naam worden gebruikt.                  |
-| `<UnorderedListItem marker={<Icon />} markerLabel="Afgecheckt">Item</UnorderedListItem>` |   ✅   | Een toegankelijke naam kan worden opgegeven wanneer de marker betekenis toevoegt. |
-| `<UnorderedListItem markerLabel="Afgecheckt">Item</UnorderedListItem>`                   |   ❌   | `markerLabel` heeft alleen betekenis wanneer ook `marker` is opgegeven.           |
+| Configuratie                                                                                         | Geldig | Opmerking                                                                                |
+| ---------------------------------------------------------------------------------------------------- | :----: | ---------------------------------------------------------------------------------------- |
+| `<UnorderedListItem inlineMarker={<Icon />}>Item</UnorderedListItem>`                                |   ✅   | Een inline marker mag zonder toegankelijke naam worden gebruikt.                         |
+| `<UnorderedListItem inlineMarker={<Icon />} inlineMarkerLabel="Afgecheckt">Item</UnorderedListItem>` |   ✅   | Een toegankelijke naam kan worden opgegeven wanneer de inline marker betekenis toevoegt. |
+| `<UnorderedListItem inlineMarkerLabel="Afgecheckt">Item</UnorderedListItem>`                         |   ❌   | `inlineMarkerLabel` heeft alleen betekenis wanneer ook `inlineMarker` is opgegeven.      |
