@@ -28,7 +28,7 @@ Enum
 
 - xs
 - sm
-- md (default)
+- md (default in Figma)
 - lg
 - xl
 - Full (100%)
@@ -201,7 +201,7 @@ Boolean
 | `nl-text-input nl-text-input--read-only nl-text-input--required` |   ✅   |                                                                                                                           |
 | `nl-text-input nl-text-input--xs`                                |   ✅   |                                                                                                                           |
 | `nl-text-input nl-text-input--sm`                                |   ✅   |                                                                                                                           |
-| `nl-text-input nl-text-input--md`                                |   ✅   | Default styling                                                                                                           |
+| `nl-text-input nl-text-input--md`                                |   ✅   | Default styling in Figma.                                                                                               |
 | `nl-text-input nl-text-input--lg`                                |   ✅   |                                                                                                                           |
 | `nl-text-input nl-text-input--xl`                                |   ✅   |                                                                                                                           |
 | `nl-text-input nl-text-input--stretch`                           |   ✅   |                                                                                                                           |
@@ -242,7 +242,7 @@ De volgende props worden expliciet ondersteund:
 | `disabled`     | `boolean`                                                                                                                                          | -       | nee       | Voegt de CSS class `nl-text-input--disabled` toe en zet het `disabled` HTML-attribuut.                                                                                                                                                                   |
 | `readOnly`     | `boolean`                                                                                                                                          | -       | nee       | Voegt de CSS class `nl-text-input--read-only` toe en zet het `readonly` HTML-attribuut.                                                                                                                                                                  |
 | `required`     | `boolean`                                                                                                                                          | -       | nee       | Voegt de CSS class `nl-text-input--required` toe en zet het `required` HTML-attribuut.                                                                                                                                                                   |
-| `size`         | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'full'`                                                                                                   | -       | nee       | Bepaalt de grootte van het inputveld. `md` is de default styling. `full` vertaalt naar `nl-text-input--stretch`.                                                                                                                                         |
+| `size`         | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'full'`                                                                                                   | -       | nee       | Bepaalt de grootte van het inputveld. `md` is de default styling in Figma. `full` vertaalt naar `nl-text-input--stretch`.                                                                                                                                         |
 
 #### Deprecated gedrag
 
@@ -262,7 +262,7 @@ De volgende props worden expliciet ondersteund:
 | `<TextInput readOnly required />`                   |   ✅   |                                                                                                                                                |
 | `<TextInput size="xs" />`                           |   ✅   |                                                                                                                                                |
 | `<TextInput size="sm" />`                           |   ✅   |                                                                                                                                                |
-| `<TextInput size="md" />`                           |   ✅   | Default styling                                                                                                                                |
+| `<TextInput size="md" />`                           |   ✅   | Default styling in Figma.                                                                                                                               |
 | `<TextInput size="lg" />`                           |   ✅   |                                                                                                                                                |
 | `<TextInput size="xl" />`                           |   ✅   |                                                                                                                                                |
 | `<TextInput size="full" />`                         |   ✅   | Voegt `nl-text-input--stretch` toe                                                                                                             |
