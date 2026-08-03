@@ -12,7 +12,7 @@ const testCode = "import { CodeBlock } from '@nl-design-system-candidate/code-bl
 describe('Code Block (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<CodeBlock>{testCode}</CodeBlock>);
-    const style = global.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

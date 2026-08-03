@@ -40,14 +40,14 @@ describe('Number Badge', () => {
       expect(numberBadge).toBeInTheDocument();
     });
 
-    it(`renders an element with Number for the value attribute "1e6"`, () => {
+    it('renders an element with Number for the value attribute "1e6"', () => {
       render(<NumberBadge value={1e6}>1000000</NumberBadge>);
       const numberBadge = screen.getByText('1000000');
 
       expect(numberBadge).toHaveAttribute('value', '1000000');
     });
 
-    it(`renders an element with String for the value attribute "-Infinity"`, () => {
+    it('renders an element with String for the value attribute "-Infinity"', () => {
       render(<NumberBadge value="-Infinity">-Infinity</NumberBadge>);
       const numberBadge = screen.getByText('-Infinity');
 

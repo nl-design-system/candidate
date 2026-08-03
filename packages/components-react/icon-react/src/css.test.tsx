@@ -16,7 +16,7 @@ describe('Icon (css import)', () => {
         <SvgIcon />
       </Icon>,
     );
-    const style = global.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

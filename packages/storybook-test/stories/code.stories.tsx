@@ -283,7 +283,8 @@ export const HypenatedBodyText: Story = {
     </Paragraph>
   ),
 };
-
+// TODO: Rename this story to meet eslint requirements in a separate PR
+// eslint-disable-next-line unicorn/consistent-compound-words
 export const WhiteSpaceCharacters: Story = {
   name: 'Code met meerdere spaties achter elkaar',
   decorators: ExampleBodyTextDecorator,
@@ -314,6 +315,7 @@ export const WhiteSpaceCharacters: Story = {
   render: () => (
     <Paragraph>
       Gebruik het derde argument van deze functie om de hoeveelheid spaties voor inspringing te bepalen:{' '}
+      {/* eslint-disable-next-line @stylistic/jsx-curly-brace-presence -- the four spaces must not be collapsed to one */}
       <Code>{'JSON.stringify(json, null, "    ");'}</Code>
     </Paragraph>
   ),

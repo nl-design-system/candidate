@@ -77,7 +77,7 @@ describe('Color sample', () => {
     expect(colorSample).toBeVisible();
   });
 
-  it(`supports hiding the HTML data element visually and from the accessibility tree using the global HTML attribute "hidden"`, ({
+  it('supports hiding the HTML data element visually and from the accessibility tree using the global HTML attribute "hidden"', ({
     expect,
   }) => {
     expect.assertions(2);
@@ -86,8 +86,8 @@ describe('Color sample', () => {
 
     try {
       screen.getByRole('img');
-    } catch (e) {
-      expect(e).toBeDefined();
+    } catch (error) {
+      expect(error).toBeDefined();
     }
 
     expect(colorSample).not.toBeVisible();

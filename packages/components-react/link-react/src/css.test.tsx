@@ -13,7 +13,7 @@ const text = 'Bezoek een voorbeeld site';
 describe('Link (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<Link href={href}>{text}</Link>);
-    const style = global.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

@@ -12,7 +12,7 @@ afterEach(() => {
 describe('FormFieldErrorMessage (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<FormFieldErrorMessage>{text}</FormFieldErrorMessage>);
-    const style = globalThis.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

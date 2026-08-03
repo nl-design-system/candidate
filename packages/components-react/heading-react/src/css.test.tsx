@@ -10,7 +10,7 @@ afterEach(() => {
 describe('Heading (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<Heading level={1} />);
-    const style = global.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });

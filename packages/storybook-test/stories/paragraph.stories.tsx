@@ -287,7 +287,7 @@ const longWordsNl = [
   'voetgangersgebied',
   'vreemdelingenpaspoort',
   'woonwagenstandplaats',
-].sort();
+];
 
 export const ParagraphWordBreak: Story = {
   name: 'Paragraph: woorden die niet op 1 regel passen',

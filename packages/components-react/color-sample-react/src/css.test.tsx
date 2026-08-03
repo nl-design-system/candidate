@@ -12,7 +12,7 @@ const value = '#ff1493';
 describe('Color sample (css import)', () => {
   it('injects a <style> block into the document', () => {
     render(<ColorSample value={value} />);
-    const style = global.document.querySelector('style');
+    const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
   });
