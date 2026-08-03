@@ -210,13 +210,6 @@ Boolean
 | `nl-text-input nl-text-input--numeric`                           |   ✅   |                                                                                                                           |
 | `nl-text-input nl-text-input--invalid nl-text-input--disabled`   |   ❌   | `invalid` en `disabled` mogen niet gecombineerd worden omdat een uitgeschakelde input niet interactief of valideerbaar is |
 | `nl-text-input nl-text-input--disabled nl-text-input--read-only` |   ❌   | `disabled` en `read-only` vertegenwoordigen verschillende interactiestaten en mogen niet gecombineerd worden              |
-| `nl-text-input nl-text-input--xs nl-text-input--sm`              |   ❌   | Er mag maximaal één size modifier actief zijn                                                                             |
-| `nl-text-input nl-text-input--sm nl-text-input--md`              |   ❌   | Er mag maximaal één size modifier actief zijn                                                                             |
-| `nl-text-input nl-text-input--md nl-text-input--lg`              |   ❌   | Er mag maximaal één size modifier actief zijn                                                                             |
-| `nl-text-input nl-text-input--lg nl-text-input--xl`              |   ❌   | Er mag maximaal één size modifier actief zijn                                                                             |
-| `nl-text-input nl-text-input--numeric nl-text-input--password`   |   ❌   | Er mag maximaal één type modifier actief zijn                                                                             |
-| `nl-text-input nl-text-input--numeric nl-text-input--url`        |   ❌   | Er mag maximaal één type modifier actief zijn                                                                             |
-| `nl-text-input nl-text-input--password nl-text-input--url`       |   ❌   | Er mag maximaal één type modifier actief zijn                                                                             |
 
 ## React API
 
@@ -274,5 +267,4 @@ De volgende props worden expliciet ondersteund:
 | `<TextInput invalid size="xl" />`                   |   ✅   | State en size mogen gecombineerd worden                                                                                                        |
 | `<TextInput disabled readOnly />`                   |   ❌   | `disabled` en `readOnly` mogen niet gecombineerd worden                                                                                        |
 | `<TextInput invalid disabled />`                    |   ❌   | `invalid` en `disabled` mogen niet gecombineerd worden                                                                                         |
-| `<TextInput size="xs" size="lg" />`                 |   ❌   | Er mag maximaal één size-waarde actief zijn                                                                                                    |
 | `<TextInput invalid={false} aria-invalid="true" />` |   ⚠️   | Toegestaan, maar `aria-invalid` is deprecated. Gebruik alleen wanneer de visuele styling en functionele invalid-state bewust gescheiden worden |
