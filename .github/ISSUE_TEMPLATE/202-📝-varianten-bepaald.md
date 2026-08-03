@@ -222,7 +222,7 @@ In tegenstelling tot de GitHub Discussion wordt er in de acceptatiecriteria niet
 
 ### Deze varianten worden ondersteund
 
-- Varianten die standaard in HTML beschikbaar zijn, worden in Typescript gedefinieerd door de attributen van het standaard HTMLElement te gebruiken.
+- Varianten die standaard in HTML beschikbaar zijn, worden in TypeScript gedefinieerd door de attributen van het standaard HTMLElement te gebruiken.
 - Varianten die niet standaard in HTML beschikbaar zijn, worden als uitgebreiding toegevoegd.
 - Deze varianten worden gedocumenteerd op de website, in de README en in de standaard Storybook.
 - Deze varianten worden beschikbaar gemaakt in Figma.
@@ -250,7 +250,7 @@ Indien van toepassing...
 
 ### Deze varianten worden niet ondersteund
 
-- Deze varianten, die standaard in HTML beschikbaar zijn, worden niet ondersteund. Ze worden uit het HTMLElement-type gehaald met Omit tijdens het definiëren van de properties in Typescript.
+- Deze varianten, die standaard in HTML beschikbaar zijn, worden niet ondersteund. Ze worden uit het HTMLElement-type gehaald met Omit tijdens het definiëren van de properties in TypeScript.
 - Deze varianten worden niet gedocumenteerd
 - Deze varianten worden niet beschikbaar gemaakt in Figma.
 
@@ -263,7 +263,7 @@ Indien van toepassing...
 
 ### Deze varianten worden ondersteund, maar raden we niet aan
 
-- Omdat deze varianten standaard in HTML beschikbaar zijn, worden ze ondersteund. Dit doen we door het HTMLElement-type te extenden in Typescript.
+- Omdat deze varianten standaard in HTML beschikbaar zijn, worden ze ondersteund. Dit doen we door het HTMLElement-type te extenden in TypeScript.
 - Deze varianten worden niet gedocumenteerd op de website, in de README en in de standaard Storybook.
 - Deze varianten worden wel meegenomen in de 'Test' Storybook.
 - Deze varianten worden beschikbaar gemaakt in Figma.
