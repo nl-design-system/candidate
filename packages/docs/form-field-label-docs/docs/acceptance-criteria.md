@@ -82,9 +82,9 @@ Voor de HTML component:
 
 ### Forced Colors modus
 
-- De Form Field Label tekstkleur in Forced Colors modus is `CanvasText`.
+- De Form Field Label tekstkleur in Forced Colors modus is `currentColor`.
 - De Form Field Label tekstkleur van de `disabled` variant in Forced Colors modus is `GrayText`.
-- De Form Field Label tekstkleur van de `option` variant in Forced Colors modus is `CanvasText`.
+- De Form Field Label tekstkleur van de `option` variant in Forced Colors modus is `currentColor`.
 
 ## Acceptatiecriteria toegankelijkheid van de component
 
