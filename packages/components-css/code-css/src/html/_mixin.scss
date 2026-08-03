@@ -1,6 +1,6 @@
 @use "../mixin";
 
-@mixin code {
+@mixin nl-html--code {
   code {
     @include mixin.nl-code;
   }

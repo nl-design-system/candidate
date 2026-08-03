@@ -1,13 +1,15 @@
 @use "./mixin";
 
-@include mixin.h1;
+@include mixin.nl-html--level-1;
 
-@include mixin.h2;
+@include mixin.nl-html--level-2;
 
-@include mixin.h3;
+@include mixin.nl-html--level-3;
 
-@include mixin.h4;
+@include mixin.nl-html--level-4;
 
-@include mixin.h5;
+@include mixin.nl-html--level-5;
 
-@include mixin.h6;
+@include mixin.nl-html--level-6;
+
+@include mixin.nl-html--heading;

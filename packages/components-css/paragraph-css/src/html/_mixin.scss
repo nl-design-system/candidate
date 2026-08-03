@@ -1,6 +1,6 @@
 @use "../mixin";
 
-@mixin p {
+@mixin nl-html--paragraph {
   p {
     @include mixin.nl-paragraph;
   }

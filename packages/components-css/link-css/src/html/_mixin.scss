@@ -1,6 +1,6 @@
 @use "../mixin";
 
-@mixin nl-link--html-a {
+@mixin nl-html--link {
   /* link styles should only apply to links with `href`, not on disabled links */
   a:any-link {
     @include mixin.nl-link;
