@@ -267,4 +267,4 @@ De volgende props worden expliciet ondersteund:
 | `<TextInput invalid size="xl" />`                   |   ✅   | State en size mogen gecombineerd worden                                                                                                        |
 | `<TextInput disabled readOnly />`                   |   ❌   | `disabled` en `readOnly` mogen niet gecombineerd worden                                                                                        |
 | `<TextInput invalid disabled />`                    |   ❌   | `invalid` en `disabled` mogen niet gecombineerd worden                                                                                         |
-| `<TextInput invalid={false} aria-invalid="true" />` |   ⚠️   | Toegestaan, maar `aria-invalid` is deprecated. Gebruik alleen wanneer de visuele styling en functionele invalid-state bewust gescheiden worden |
+| `<TextInput invalid={false} aria-invalid="true" />` |   ⚠️   | Toegestaan, maar gebruik `aria-invalid` alleen wanneer de visuele styling en functionele invalid-state bewust gescheiden worden |
