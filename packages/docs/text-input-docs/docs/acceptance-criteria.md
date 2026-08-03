@@ -261,7 +261,7 @@ De volgende props worden expliciet ondersteund:
 | `<TextInput size="stretch" />`                      |   ✅   | Voegt `nl-text-input--stretch` toe                                                                                                             |
 | `<TextInput type="password" />`                     |   ✅   | Voegt `nl-text-input--password` styling toe                                                                                                    |
 | `<TextInput type="url" />`                          |   ✅   | Voegt `nl-text-input--url` styling toe                                                                                                         |
-| `<TextInput type="email" />`                        |   ✅   | Wordt behandeld als URL-type styling                                                                                                           |
+| `<TextInput type="email" />`                        |   ✅   | Voegt `nl-text-input--url` styling toe                                                                                                           |
 | `<TextInput inputMode="numeric" />`                 |   ✅   | Voegt `nl-text-input--numeric` styling toe                                                                                                     |
 | `<TextInput type="password" size="lg" />`           |   ✅   | Type en size mogen gecombineerd worden                                                                                                         |
 | `<TextInput invalid size="xl" />`                   |   ✅   | State en size mogen gecombineerd worden                                                                                                        |
