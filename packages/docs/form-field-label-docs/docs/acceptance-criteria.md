@@ -64,7 +64,7 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 Voor de HTML component:
 
-- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html` class met een `label` HTML-element zonder component classes.
+- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html--all` class met een `label` HTML-element zonder component classes.
 - De CSS ondersteunt een Form Field Label binnen een element met de `nl-html--form-field-label` class met een `label` HTML-element zonder component classes.
 - De CSS ondersteunt een `label` HTML-element, zonder dat er class names nodig zijn.
 
