@@ -164,7 +164,7 @@ Boolean
   - `nl-text-input--url`
 
 - HTML classes:
-  - `nl-html`
+  - `nl-html--all`
   - `nl-html--text-input`
 
     Daarbinnen selectors met automatische type-detectie:
