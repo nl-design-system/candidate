@@ -20,8 +20,10 @@
 
 - Element classes:
   - `nl-ordered-list__item`
-  - `nl-ordered-list__marker`
   - `nl-ordered-list__inline-marker`
+
+- Pseudo-element classes:
+  - `nl-ordered-list__marker` voor `::marker`
 
 - Modifier classes:
   - geen
