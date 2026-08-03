@@ -26,7 +26,7 @@
   - geen
 
 - HTML classes:
-  - `nl-html`
+  - `nl-html--all`
   - `nl-html--ordered-list`
 
 #### Geldige combinaties van CSS classes
