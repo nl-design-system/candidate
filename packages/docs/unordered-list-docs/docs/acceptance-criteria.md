@@ -114,7 +114,7 @@ De volgende props worden expliciet ondersteund:
 
 | Prop          | Type                              | Default | Verplicht | Omschrijving                                                                                |
 | ------------- | --------------------------------- | ------- | --------- | ------------------------------------------------------------------------------------------- |
-| `children`    | `ReactNode`                       | -       | ja        | De inhoud van de component.                                                                 |
+| `children`    | `ReactNode`                       | -       | nee       | De inhoud van de component.                                                                 |
 | `marker`      | `ReactNode`                       | -       | nee       | De inhoud van de marker slot, weergegeven in een `span.nl-unordered-list__marker`.          |
 | `markerLabel` | `string`                          | -       | nee       | Toegankelijke naam voor de custom marker.                                                   |
 | `className`   | `string`                          | -       | nee       | Extra CSS classes naast `nl-unordered-list__item`.                                          |
