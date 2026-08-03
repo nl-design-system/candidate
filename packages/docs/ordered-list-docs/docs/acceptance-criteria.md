@@ -32,6 +32,9 @@
   - `nl-html--all`
   - `nl-html--ordered-list`
 
+- Aanvullende selectors:
+  - `:lang(ar)` voor Arabische nummering
+
 #### Geldige combinaties van CSS classes
 
 | Configuratie                     | Geldig | Opmerking                                                     |
