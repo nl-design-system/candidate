@@ -48,7 +48,7 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 #### Must Have attributen
 
-- De Form Field Label gebruikt geen `tabindex` HTML-attribuut. De component is informatief, niet interactief.
+- De Form Field Label gebruikt geen `tabindex` HTML-attribuut. De component is interactief, maar het gekoppelde formuliercomponent moet focusbaar zijn, niet de label.
 
 #### Could Have attributen
 
