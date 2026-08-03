@@ -19,8 +19,8 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 - De Ordered List Item mag een inhoud bevatten in de vorm van [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0).
 - De Ordered List Item mag een geneste Ordered List bevatten in de vorm van een `ol` HTML-element.
 - De Ordered List Item mag een geneste Unordered List bevatten in de vorm van een `ul` HTML-element.
-- De Ordered List Item mag een slot bevatten in de vorm van een `span` HTML-element om een custom marker in te plaatsen.
-- De custom marker in het Ordered List Item Slot volgt de acceptatiecriteria van de Icon component in de vorm van een informatieve Icon met een beschrijvende alternatieve tekst.
+- De Ordered List Item mag een Ordered List Inline Marker bevatten in de vorm van een `span` HTML-element om een inline marker in te plaatsen.
+- De inhoud van de Ordered List Inline Marker volgt de acceptatiecriteria van de Icon component in de vorm van een informatieve Icon met een beschrijvende alternatieve tekst.
 
 ### Welke HTML-attributen het beste zijn voor deze component
 
@@ -31,7 +31,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 
 #### Could Have attributen
 
-- Het Ordered List Item Slot voor een custom marker gebruikt het `aria-hidden` HTML-attribuut met de waarde `true`.
+- De Ordered List Inline Marker gebruikt het `aria-hidden` HTML-attribuut met de waarde `true`.
 - De Ordered List accepteert het `reversed` HTML-attribuut om de nummering in omgekeerde volgorde weer te geven.
 - De Ordered List accepteert het `start` HTML-attribuut met een numerieke waarde om de nummering vanaf een specifiek getal te laten beginnen.
 - De Ordered List accepteert het `type` HTML-attribuut met de waarde `1` om de lijst te nummeren met cijfers (`1`, `2`, `3`, ...).
@@ -55,7 +55,7 @@ Voor de HTML component:
 ### Forced Colors modus
 
 - De Ordered List tekstkleur in Forced Colors modus is `currentColor`.
-- De Ordered List tekstkleur van de marker in Forced Colors modus is `currentColor`.
+- De Ordered List tekstkleur van de inline marker in Forced Colors modus is `currentColor`.
 
 ## Acceptatiecriteria toegankelijkheid van de component
 
