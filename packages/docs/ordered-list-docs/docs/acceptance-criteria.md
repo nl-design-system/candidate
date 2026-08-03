@@ -49,7 +49,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 Voor de HTML component:
 
 - De CSS ondersteunt een Ordered List binnen een element met de `nl-html--all` classes met een `ol` HTML-element en onderliggende `li` HTML-elementen zonder component classes.
-- De CSS ondersteunt een Ordered List binnen een element met de `nl-html` en `nl-html--ordered-list` classes met een `ol` HTML-element en onderliggende `li` HTML-elementen zonder component classes.
+- De CSS ondersteunt een Ordered List binnen een element met de `nl-html--ordered-list` classes met een `ol` HTML-element en onderliggende `li` HTML-elementen zonder component classes.
 - De CSS ondersteunt een semantische HTML Ordered List bestaande uit `ol` en `li` HTML-elementen zonder component classes.
 
 ### Forced Colors modus
