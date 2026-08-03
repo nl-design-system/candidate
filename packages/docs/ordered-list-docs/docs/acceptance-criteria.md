@@ -23,7 +23,7 @@
   - `nl-ordered-list__marker`
 
 - Modifier classes:
-  - `nl-ordered-list--arabic`
+  - geen
 
 - HTML classes:
   - `nl-html`
@@ -34,7 +34,6 @@
 | Configuratie                              | Geldig | Opmerking                                                      |
 | ----------------------------------------- | :----: | -------------------------------------------------------------- |
 | `nl-ordered-list`                         |   ✅   |                                                                |
-| `nl-ordered-list nl-ordered-list--arabic` |   ✅   | Forceert Arabische nummering ongeacht de browser instellingen. |
 | `nl-ordered-list__item`                   |   ✅   | Gebruik als child van `nl-ordered-list`.                       |
 | `nl-ordered-list__marker`                 |   ✅   | Gebruik een custom marker binnen een `nl-ordered-list__item`.  |
 
