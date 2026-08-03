@@ -27,7 +27,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 #### Must Have attributen
 
 - De Ordered List gebruikt het `role` HTML-attribuut met de waarde `list`.
-- De Ordered List gebruikt geen `tabindex` HTML-attribuut. De component is ondersteunend, niet interactief.
+- De Ordered List gebruikt geen `tabindex` HTML-attribuut. De component is informatief, niet interactief.
 
 #### Could Have attributen
 
