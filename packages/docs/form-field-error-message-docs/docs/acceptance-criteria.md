@@ -15,7 +15,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 #### Must Have elementen
 
 - De Form Field Error Message is opgemaakt met het `div` HTML-element.
-- De Form Field Error Message `div` HTML-element bevat een `div` HTML-element voor de content.
+- De Form Field Error Message `div` HTML-element bevat een `div` HTML-element voor de Content.
 
 #### Could Have elementen
 
