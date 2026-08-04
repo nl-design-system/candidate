@@ -161,6 +161,7 @@ Boolean
   **Types**
   - `nl-text-input--numeric`
   - `nl-text-input--password`
+  - `nl-text-input--password-visible`
   - `nl-text-input--url`
 
 - HTML classes:
