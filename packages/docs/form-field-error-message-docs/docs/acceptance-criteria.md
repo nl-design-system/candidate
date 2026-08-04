@@ -20,7 +20,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 #### Could Have elementen
 
 - De Form Field Error Message `div` HTML-element bevat een `div` HTML-element voor de Icon.
-- De Form Field Error Message icon mag een inhoud bevatten welke bestaat in de vorm van een `p` HTML-element en [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0) met uitzondering van [interactive content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#interactive-content-0).
+- De Form Field Error Message Icon mag een inhoud bevatten welke bestaat uit [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0) met uitzondering van [interactive content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#interactive-content-0).
 - De Form Field Error Message Content mag een inhoud bevatten welke bestaat in de vorm van een `p` HTML-element en [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0) met uitzondering van [interactive content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#interactive-content-0).
 
 ### Welke HTML-attributen het beste zijn voor deze component
