@@ -22,7 +22,7 @@ String (code) / Enum (design)
 - Search
 - Password
 
-#### Width
+#### Value Size
 
 Enum
 
@@ -39,7 +39,7 @@ String (code) / Text - string (design)
 
 #### Show Placeholder
 
-Boolean
+Boolean (design)
 
 - False (default)
 - True
@@ -50,7 +50,7 @@ String (code) / Text - string (design)
 
 #### State
 
-Enum
+Enum (design)
 
 - Default (default)
 - Hover
