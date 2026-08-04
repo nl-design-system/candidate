@@ -12,7 +12,7 @@ type: Task
 
 Gebruik [de documentatie over het releasen van nieuwe candidate componenten](https://github.com/nl-design-system/candidate?tab=readme-ov-file#release-van-nieuwe-candidate-componenten)
 
-- [ ] Maak een pull-request aan om de NPM package publiek te maken (verwijder private: true uit package.json van het package)
+- [ ] Maak een pull-request aan om de NPM packages publiek te maken (verwijder private: true uit package.json van de packages)
 - [ ] Maak een changeset met major om de package te bumpen
 - [ ] Vraag het kernteam om een review zodat die gemerged wordt
 - [ ] `package.json#description` Nederlandstalig
