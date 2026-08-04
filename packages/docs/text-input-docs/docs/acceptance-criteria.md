@@ -142,7 +142,7 @@ Boolean
 
 - Pseudo-element classes:
   - `nl-text-input__value`
-  
+
 - Modifier classes:
 
   **States**
@@ -235,40 +235,40 @@ De volgende props worden expliciet ondersteund:
 | `type`         | `string \| 'text' \| 'password' \| 'email' \| 'tel' \| 'url' \| 'search' \| 'number' \| 'month' \| 'week' \| 'date' \| 'time' \| 'datetime-local'` | `text`  | nee       | Komt overeen met de `type` HTML-attribuut van de `input` HTML-element. Voegt de class `nl-text-input--password` toe bij `password`. Voegt de class `nl-text-input--url` toe bij `url` en `email`. Voegt de class `nl-text-input--numeric` toe bij `tel`. |
 | `dir`          | `'auto'`                                                                                                                                           | -       | nee       | Richting van de tekstinvoer.                                                                                                                                                                                                                             |
 | `invalid`      | `boolean`                                                                                                                                          | -       | nee       | Voegt de CSS class `nl-text-input--invalid` toe en zet het `invalid` HTML-attribuut met de waarde.                                                                                                                                                       |
-| `aria-invalid` | `boolean \| 'grammar' \| 'spelling'`                                                                                                               | -       | nee       | Gebruik `invalid` tenzij de visuele styling en functionele invalid-state bewust los van elkaar moeten worden beheerd.                                                                                                                        |
+| `aria-invalid` | `boolean \| 'grammar' \| 'spelling'`                                                                                                               | -       | nee       | Gebruik `invalid` tenzij de visuele styling en functionele invalid-state bewust los van elkaar moeten worden beheerd.                                                                                                                                    |
 | `disabled`     | `boolean`                                                                                                                                          | -       | nee       | Voegt de CSS class `nl-text-input--disabled` toe en zet het `disabled` HTML-attribuut.                                                                                                                                                                   |
 | `readOnly`     | `boolean`                                                                                                                                          | -       | nee       | Voegt de CSS class `nl-text-input--read-only` toe en zet het `readonly` HTML-attribuut.                                                                                                                                                                  |
 | `required`     | `boolean`                                                                                                                                          | -       | nee       | Voegt de CSS class `nl-text-input--required` toe en zet het `required` HTML-attribuut.                                                                                                                                                                   |
 | `size`         | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'stretch'`                                                                                                | -       | nee       | Bepaalt de grootte van het inputveld. `md` is de default styling in Figma.                                                                                                                                                                               |
 
-#### Deprecated gedrag
+#### Tip
 
-- Property `aria-invalid` is toegestaan, maar wordt afgeraden. Gebruik `invalid` om de visuele en functionele invalid-state van het component te beheren. Gebruik `aria-invalid` alleen wanneer je bewust de toegankelijkheidsstatus los wilt beheren van de visuele styling.
+De `aria-invalid` property wordt ondersteund, maar het gebruik ervan wordt afgeraden. Gebruik de `invalid` property om zowel de visuele weergave als de toegankelijkheidsstatus van het component te beheren. Gebruik `aria-invalid` alleen wanneer je de toegankelijkheidsstatus bewust los wilt beheren van de visuele invalid-state van het component.
 
 #### Geldige combinaties van React properties
 
-| Configuratie                                        | Geldig | Opmerking                                                                                                                                      |
-| --------------------------------------------------- | :----: | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<TextInput />`                                     |   ✅   |                                                                                                                                                |
-| `<TextInput invalid />`                             |   ✅   |                                                                                                                                                |
-| `<TextInput disabled />`                            |   ✅   |                                                                                                                                                |
-| `<TextInput readOnly />`                            |   ✅   |                                                                                                                                                |
-| `<TextInput required />`                            |   ✅   |                                                                                                                                                |
-| `<TextInput invalid required />`                    |   ✅   |                                                                                                                                                |
-| `<TextInput disabled required />`                   |   ✅   |                                                                                                                                                |
-| `<TextInput readOnly required />`                   |   ✅   |                                                                                                                                                |
-| `<TextInput size="xs" />`                           |   ✅   |                                                                                                                                                |
-| `<TextInput size="sm" />`                           |   ✅   |                                                                                                                                                |
-| `<TextInput size="md" />`                           |   ✅   | Default styling in Figma.                                                                                                                      |
-| `<TextInput size="lg" />`                           |   ✅   |                                                                                                                                                |
-| `<TextInput size="xl" />`                           |   ✅   |                                                                                                                                                |
-| `<TextInput size="stretch" />`                      |   ✅   | Voegt `nl-text-input--stretch` toe                                                                                                             |
-| `<TextInput type="password" />`                     |   ✅   | Voegt `nl-text-input--password` styling toe                                                                                                    |
-| `<TextInput type="url" />`                          |   ✅   | Voegt `nl-text-input--url` styling toe                                                                                                         |
-| `<TextInput type="email" />`                        |   ✅   | Voegt `nl-text-input--url` styling toe                                                                                                           |
-| `<TextInput inputMode="numeric" />`                 |   ✅   | Voegt `nl-text-input--numeric` styling toe                                                                                                     |
-| `<TextInput type="password" size="lg" />`           |   ✅   | Type en size mogen gecombineerd worden                                                                                                         |
-| `<TextInput invalid size="xl" />`                   |   ✅   | State en size mogen gecombineerd worden                                                                                                        |
-| `<TextInput disabled readOnly />`                   |   ❌   | `disabled` en `readOnly` mogen niet gecombineerd worden                                                                                        |
-| `<TextInput invalid disabled />`                    |   ❌   | `invalid` en `disabled` mogen niet gecombineerd worden                                                                                         |
+| Configuratie                                        | Geldig | Opmerking                                                                                                                       |
+| --------------------------------------------------- | :----: | ------------------------------------------------------------------------------------------------------------------------------- |
+| `<TextInput />`                                     |   ✅   |                                                                                                                                 |
+| `<TextInput invalid />`                             |   ✅   |                                                                                                                                 |
+| `<TextInput disabled />`                            |   ✅   |                                                                                                                                 |
+| `<TextInput readOnly />`                            |   ✅   |                                                                                                                                 |
+| `<TextInput required />`                            |   ✅   |                                                                                                                                 |
+| `<TextInput invalid required />`                    |   ✅   |                                                                                                                                 |
+| `<TextInput disabled required />`                   |   ✅   |                                                                                                                                 |
+| `<TextInput readOnly required />`                   |   ✅   |                                                                                                                                 |
+| `<TextInput size="xs" />`                           |   ✅   |                                                                                                                                 |
+| `<TextInput size="sm" />`                           |   ✅   |                                                                                                                                 |
+| `<TextInput size="md" />`                           |   ✅   | Default styling in Figma.                                                                                                       |
+| `<TextInput size="lg" />`                           |   ✅   |                                                                                                                                 |
+| `<TextInput size="xl" />`                           |   ✅   |                                                                                                                                 |
+| `<TextInput size="stretch" />`                      |   ✅   | Voegt `nl-text-input--stretch` toe                                                                                              |
+| `<TextInput type="password" />`                     |   ✅   | Voegt `nl-text-input--password` styling toe                                                                                     |
+| `<TextInput type="url" />`                          |   ✅   | Voegt `nl-text-input--url` styling toe                                                                                          |
+| `<TextInput type="email" />`                        |   ✅   | Voegt `nl-text-input--url` styling toe                                                                                          |
+| `<TextInput inputMode="numeric" />`                 |   ✅   | Voegt `nl-text-input--numeric` styling toe                                                                                      |
+| `<TextInput type="password" size="lg" />`           |   ✅   | Type en size mogen gecombineerd worden                                                                                          |
+| `<TextInput invalid size="xl" />`                   |   ✅   | State en size mogen gecombineerd worden                                                                                         |
+| `<TextInput disabled readOnly />`                   |   ❌   | `disabled` en `readOnly` mogen niet gecombineerd worden                                                                         |
+| `<TextInput invalid disabled />`                    |   ❌   | `invalid` en `disabled` mogen niet gecombineerd worden                                                                          |
 | `<TextInput invalid={false} aria-invalid="true" />` |   ⚠️   | Toegestaan, maar gebruik `aria-invalid` alleen wanneer de visuele styling en functionele invalid-state bewust gescheiden worden |
