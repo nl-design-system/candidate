@@ -40,6 +40,8 @@ import '@nl-design-system-candidate/button-css/dist/button.css';
 | `.nl-button--negative`   | Indicatie van een negatief resultaat                                                                                                         |
 | `.nl-button__icon-start` | Een child element (`<span>`) met een voor aan het begin icoon                                                                                |
 | `.nl-button__icon-end`   | Een child element (`<span>`) met een voor aan het eind icoon                                                                                 |
+| `.nl-button--icon-only`  | Maakt van de button een icon-only button, waarbij het label visueel verborgen wordt                                                          |
+| `.nl-button__label`      | Een child element (`<span>`) met het label van de button                                                                                     |
 
 ## Beschikbare attributen
 
@@ -95,5 +97,24 @@ element. Gebeurd dit niet, dan komt er extra ruimte rond de elementen in het lab
 <button class="nl-button">
   <span class="nl-button__icon-start">❤️</span>
   <span>Vind <em>ik</em> leuk!</span>
+</button>
+```
+
+## Een icon-only button
+
+Een button met alleen een icoon kan gemaakt worden door de class
+`.nl-button--icon-only` toe te voegen. Het icoon blijft in een `<span>`
+element met de class `nl-button__icon-start` (of `nl-button__icon-end`)
+staan, en het label blijft in een `<span>` element met de class
+`nl-button__label` staan.
+
+De class `.nl-button--icon-only` zorgt ervoor dat `.nl-button__label` visueel
+verborgen wordt, maar wel beschikbaar blijft voor de screenreader. Hierdoor is
+een `aria-label` niet nodig.
+
+```html
+<button class="nl-button nl-button--icon-only">
+  <span class="nl-button__icon-start">❤️</span>
+  <span class="nl-button__label">Vind ik leuk</span>
 </button>
 ```
