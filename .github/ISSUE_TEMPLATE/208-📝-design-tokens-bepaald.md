@@ -112,7 +112,6 @@ Je kunt [design tokens ook als extensie toevoegen](https://www.nldesignsystem.nl
 
 - Leg de tokens vast in het `tokens.json` bestand van de component in de Candidate repository.
 - Zorg dat de design tokens NL Design System naming conventies volgen en zijn geprefixed met 'nl'.
-- Maak de tokens beschikbaar op NPM als `@nl-design-system-candidate/{component}-tokens`
 
 🚩 Checkpoint
 Design tokens bepaald
