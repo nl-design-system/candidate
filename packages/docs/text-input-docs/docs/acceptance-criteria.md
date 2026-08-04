@@ -140,6 +140,9 @@ Boolean
 - Element classes:
   - `nl-text-input__placeholder`
 
+- Pseudo-element classes:
+  - `nl-text-input__value`
+  
 - Modifier classes:
 
   **States**
