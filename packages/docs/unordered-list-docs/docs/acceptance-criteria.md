@@ -56,3 +56,81 @@ Voor de HTML component:
 - De Unordered List komt standaard niet voor in de focusvolgorde van de pagina.
 
 [Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/unordered-list/)
+
+## Acceptatiecriteria APIs van de component
+
+### CSS API
+
+- Block class: `nl-unordered-list`
+
+- Element classes:
+  - `nl-unordered-list__item`
+  - `nl-unordered-list__inline-marker`
+
+- Pseudo-element classes:
+  - `nl-unordered-list__marker` voor `::marker`
+
+- Modifier classes:
+  - geen
+
+- HTML classes:
+  - `nl-html--all`
+  - `nl-html--unordered-list`
+
+#### Geldige combinaties van CSS classes
+
+| Configuratie                       | Geldig | Opmerking                                                       |
+| ---------------------------------- | :----: | --------------------------------------------------------------- |
+| `nl-unordered-list`                |   ✅   |                                                                 |
+| `nl-unordered-list__item`          |   ✅   | Gebruik als child van `nl-unordered-list`.                      |
+| `nl-unordered-list__inline-marker` |   ✅   | Gebruik een inline marker binnen een `nl-unordered-list__item`. |
+
+## React API
+
+### UnorderedList
+
+#### UnorderedList extends
+
+Extends `UlHTMLAttributes<HTMLUListElement>` voor standaard HTML-attributen en events van een HTML `ul` element.
+
+Alle standaard HTML-attributen en events worden doorgestuurd naar het onderliggende `ul` HTML-element.
+
+#### UnorderedList properties
+
+De volgende props worden expliciet ondersteund:
+
+| Prop        | Type                                 | Default | Verplicht | Omschrijving                                                                                |
+| ----------- | ------------------------------------ | ------- | --------- | ------------------------------------------------------------------------------------------- |
+| `children`  | `ReactNode`                          | -       | nee       | De inhoud van de lijst, doorgaans één of meer `UnorderedListItem` componenten.              |
+| `className` | `string`                             | -       | nee       | Extra CSS classes naast `nl-unordered-list`.                                                |
+| `ref`       | `Ref<HTMLUListElement>`              | -       | nee       | Ref naar het onderliggende `ul` HTML-element.                                               |
+| `restProps` | `UlHTMLAttributes<HTMLUListElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `ul` HTML-element. |
+
+### UnorderedListItem
+
+#### UnorderedListItem extends
+
+Extends `LiHTMLAttributes<HTMLLIElement>` voor standaard HTML-attributen en events van een HTML `li` element.
+
+Alle standaard HTML-attributen en events worden doorgestuurd naar het onderliggende `li` HTML-element.
+
+#### UnorderedListItem properties
+
+De volgende props worden expliciet ondersteund:
+
+| Prop                | Type                              | Default | Verplicht | Omschrijving                                                                                     |
+| ------------------- | --------------------------------- | ------- | --------- | ------------------------------------------------------------------------------------------------ |
+| `children`          | `ReactNode`                       | -       | nee       | De inhoud van de component.                                                                      |
+| `inlineMarker`      | `ReactNode`                       | -       | nee       | De inhoud van de inline marker slot, weergegeven in een `span.nl-unordered-list__inline-marker`. |
+| `inlineMarkerLabel` | `string`                          | -       | nee       | Toegankelijke naam voor de inline marker.                                                        |
+| `className`         | `string`                          | -       | nee       | Extra CSS classes naast `nl-unordered-list__item`.                                               |
+| `ref`               | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                                    |
+| `restProps`         | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element.      |
+
+#### Geldige combinaties van React UnorderedListItem properties
+
+| Configuratie                                                                                         | Geldig | Opmerking                                                                                |
+| ---------------------------------------------------------------------------------------------------- | :----: | ---------------------------------------------------------------------------------------- |
+| `<UnorderedListItem inlineMarker={<Icon />}>Item</UnorderedListItem>`                                |   ✅   | Een inline marker mag zonder toegankelijke naam worden gebruikt.                         |
+| `<UnorderedListItem inlineMarker={<Icon />} inlineMarkerLabel="Afgecheckt">Item</UnorderedListItem>` |   ✅   | Een toegankelijke naam kan worden opgegeven wanneer de inline marker betekenis toevoegt. |
+| `<UnorderedListItem inlineMarkerLabel="Afgecheckt">Item</UnorderedListItem>`                         |   ❌   | `inlineMarkerLabel` heeft alleen betekenis wanneer ook `inlineMarker` is opgegeven.      |
