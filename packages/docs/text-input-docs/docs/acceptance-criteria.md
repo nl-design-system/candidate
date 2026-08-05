@@ -137,10 +137,8 @@ Boolean
 
 - Block class: `nl-text-input`
 
-- Element classes:
-  - `nl-text-input__placeholder`
-
 - Pseudo-element classes:
+  - `nl-text-input__placeholder`
   - `nl-text-input__value`
 
 - Modifier classes:
