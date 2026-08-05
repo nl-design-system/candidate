@@ -146,10 +146,12 @@ Boolean
   **States**
   - `nl-text-input--invalid`
   - `nl-text-input--disabled`
-  - `nl-text-input--hover`
-  - `nl-text-input--focus-visible`
   - `nl-text-input--read-only`
   - `nl-text-input--required`
+
+  **Test States**
+  - `nl-text-input--hover`
+  - `nl-text-input--focus-visible`
 
   **Sizes**
   - `nl-text-input--xs`
