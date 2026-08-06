@@ -116,7 +116,7 @@ Voor de HTML component:
   - `nl-html--ordered-list`
 
 - Aanvullende selectors:
-  - `:lang(ar)` voor Arabische nummering
+  - `:lang(ar)` op de Ordered List voor Arabische nummering
 
 #### Geldige combinaties van CSS classes
 
