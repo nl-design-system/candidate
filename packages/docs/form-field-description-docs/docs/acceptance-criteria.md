@@ -34,7 +34,7 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 
 #### Could Have elementen
 
-- De Form Field Description mag een inhoud bevatten welke bestaat in de vorm van een HTML `p` element en [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0) met uitzondering van [interactive content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#interactive-content-0).
+- De Form Field Description mag een inhoud bevatten welke bestaat in de vorm van een HTML `p` element en [phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content) met uitzondering van [interactive content](https://html.spec.whatwg.org/multipage/dom.html#interactive-content).
 
 ### Welke HTML attributen het beste zijn voor deze component
 

@@ -16,7 +16,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 #### Could Have elementen
 
 - De Unordered List Item mag een inhoud bevatten in de vorm van een `p` HTML-element.
-- De Unordered List Item mag een inhoud bevatten in de vorm van [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0).
+- De Unordered List Item mag een inhoud bevatten in de vorm van [phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content).
 - De Unordered List Item mag een geneste Unordered List bevatten in de vorm van een `ul` HTML-element.
 - De Unordered List Item mag een geneste Ordered List bevatten in de vorm van een `ol` HTML-element.
 - De Unordered List Item mag een Unordered List Inline Marker bevatten in de vorm van een `span` HTML-element.
