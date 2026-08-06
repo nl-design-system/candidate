@@ -22,7 +22,7 @@
   - `nl-ordered-list__item`
   - `nl-ordered-list__inline-marker`
 
-- Pseudo-element classes:
+- Pseudo-element mixins:
   - `nl-ordered-list__marker` voor `::marker`
 
 - Modifier classes:
