@@ -30,7 +30,6 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 - De Form Field Error Message Content bevat altijd een `id` HTML-attribuut, zodat het met `aria-describedby` HTML-attribuut aan het input-element gekoppeld kan worden.
 - Gebruik geen `tabindex` HTML-attribuut, de Form Field Error Message is informatief, niet interactief.
 - De Form Field Error Message is alleen zichtbaar en toegankelijk wanneer er een fout is.
-- Wanneer de tekst word ingevuld aan de client-side, is de Form Field Error Message component altijd in de DOM en in de accessibility tree.
 
 #### Could Have attributen
 
