@@ -114,6 +114,18 @@ Voor de HTML component:
   - `nl-html--all`
   - `nl-html--form-field-label`
 
+  Automatische styling via de volgende selectors:
+  - `nl-field-label--option` via:
+    - `label:has([type="checkbox" i])` voor Switch en Checkbox
+    - `label:has([type="radio" i])`
+
+  - `nl-field-label--disabled` via:
+    - `label:has([type="checkbox" i]:disabled)` voor Switch en Checkbox
+    - `label:has([type="radio" i]:disabled)`
+
+  - `nl-field-label--inherit` via:
+    - `:is(h1, h2, h3, h4, h5, h6) label`
+
 #### Geldige combinaties van CSS classes
 
 | Configuratie                                                                                                 | Geldig | Opmerking                                                               |
