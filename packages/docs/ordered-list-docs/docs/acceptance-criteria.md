@@ -31,7 +31,6 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 
 #### Could Have attributen
 
-- De Ordered List Inline Marker gebruikt het `aria-hidden` HTML-attribuut met de waarde `true`.
 - De Ordered List accepteert het `reversed` HTML-attribuut om de nummering in omgekeerde volgorde weer te geven.
 - De Ordered List accepteert het `start` HTML-attribuut met een numerieke waarde om de nummering vanaf een specifiek getal te laten beginnen.
 - De Ordered List accepteert het `type` HTML-attribuut met de waarde `1` om de lijst te nummeren met cijfers (`1`, `2`, `3`, ...).
