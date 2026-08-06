@@ -19,7 +19,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 - De Unordered List Item mag een inhoud bevatten in de vorm van [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0).
 - De Unordered List Item mag een geneste Unordered List bevatten in de vorm van een `ul` HTML-element.
 - De Unordered List Item mag een geneste Ordered List bevatten in de vorm van een `ol` HTML-element.
-- De Unordered List Item mag een Unordered List Inline Marker bevatten in de vorm van een `span` HTML-element om een inline marker in te plaatsen.
+- De Unordered List Item mag een Unordered List Inline Marker bevatten in de vorm van een `span` HTML-element.
 - De inhoud van de Unordered List Inline Marker volgt de acceptatiecriteria van de Icon component in de vorm van een informatieve Icon met een beschrijvende alternatieve tekst.
 
 ### Welke HTML-attributen het beste zijn voor deze component
