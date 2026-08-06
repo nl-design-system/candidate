@@ -28,7 +28,6 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 
 - De Unordered List gebruikt het `role` HTML-attribuut met de waarde `list`.
 - De Unordered List gebruikt geen `tabindex` HTML-attribuut. De component is informatief, niet interactief.
-- De Unordered List Inline Marker gebruikt het `aria-hidden` HTML-attribuut met de waarde `true`.
 
 ### Alternatieve HTML
 
