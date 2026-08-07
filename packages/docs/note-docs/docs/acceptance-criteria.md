@@ -82,3 +82,11 @@ Laat het in deze Discussion weten als er uit gebruikersonderzoek naar voren is g
 
 **💡 Tip**
 Je kunt [varianten ook als extensie toevoegen](https://www.nldesignsystem.nl/handboek/componenten-vinden/#ik-mis-een-functionaliteit-binnen-een-candidate-of-hall-of-fame-component-wat-nu) aan een component.
+
+## Acceptatiecriteria toegankelijkheid van de component
+
+- Tekst in de Note blijft leesbaar wanneer de tekstafstand vergroot wordt.
+- De Note is standaard niet bereikbaar en bedienbaar met het toetsenbord.
+- De Note komt standaard niet voor in de normale focusvolgorde op de pagina.
+
+[Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/note/)
