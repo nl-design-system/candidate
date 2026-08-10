@@ -28,8 +28,8 @@ Enum
 
 - xs
 - sm
-- md (default in Figma)
-- lg
+- md
+- lg (default in Figma)
 - xl
 - stretch (100%)
 
