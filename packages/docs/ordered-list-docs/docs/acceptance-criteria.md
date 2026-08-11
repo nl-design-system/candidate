@@ -20,7 +20,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 - De Ordered List Item mag een inhoud bevatten in de vorm van [phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content).
 - De Ordered List Item mag een geneste Ordered List bevatten in de vorm van een `ol` HTML-element.
 - De Ordered List Item mag een geneste Unordered List bevatten in de vorm van een `ul` HTML-element.
-- De Ordered List Item mag een Ordered List Inline Marker bevatten in de vorm van een `span` HTML-element om een inline marker in te plaatsen.
+- De Ordered List Item mag een Ordered List Inline Marker bevatten in de vorm van een `span` HTML-element.
 - De Ordered List Inline Marker mag een informatief label bevatten in de vorm van een `span` HTML-element met een tekstuele inhoud die visueel verborgen is maar beschikbaar blijft voor hulptechnologieën.
 - De inhoud van de Ordered List Inline Marker volgt de acceptatiecriteria van de Icon component in de vorm van een informatieve Icon met een beschrijvende alternatieve tekst.
 
