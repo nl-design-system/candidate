@@ -12,6 +12,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 
 - De Ordered List is opgemaakt met het `ol` HTML-element.
 - De Ordered List bevat één of meer `li` HTML-elementen.
+- De Ordered List Inline Marker is verborgen voor hulptechnologieën met het `aria-hidden="true"` HTML-attribuut.
 
 #### Could Have elementen
 
