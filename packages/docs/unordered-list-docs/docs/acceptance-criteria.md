@@ -12,6 +12,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 
 - De Unordered List is opgemaakt met het `ul` HTML-element.
 - De Unordered List bevat één of meer `li` HTML-elementen.
+- De Unordered List Inline Marker is verborgen voor hulptechnologieën met het `aria-hidden="true"` HTML-attribuut.
 
 #### Could Have elementen
 
