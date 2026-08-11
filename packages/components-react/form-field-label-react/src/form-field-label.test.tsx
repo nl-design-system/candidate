@@ -10,17 +10,60 @@ afterEach(() => {
   cleanup();
 });
 
-describe('FormFieldLabel', () => {
-  it(`has displayName "${displayName}"`, () => {
-    expect(FormFieldLabel.displayName).toBe(displayName);
+describe('Form Field Label', () => {
+  describe('Use Cases', () => {
+    it.todo('supports phrasing content', () => {});
+    it.todo('supports nesting the associated form control instead of using `for` HTML-attribute', () => {});
   });
 
-  it('forwards React refs to the HTMLButtonElement', () => {
-    const ref = createRef<HTMLDivElement>();
-    render(<FormFieldLabel ref={ref}>form-field-label</FormFieldLabel>);
-    const element = screen.getByText('form-field-label');
+  describe('HTML API', () => {
+    it.todo('renders a `label` HTML-element', () => {});
+    it.todo('supports the `for` HTML-attribute', () => {});
+    it.todo('supports the `hidden` HTML-attribute', () => {});
+    it.todo('supports the `lang` HTML-attribute', () => {});
+    it.todo('supports the `dir` HTML-attribute', () => {});
+  });
 
-    expect(ref.current).toBe(element);
-    expect(element).toBeInstanceOf(HTMLDivElement);
+  describe('CSS API', () => {
+    it.todo('adds `nl-form-field-label` class by default', () => {});
+    it.todo('adds `nl-form-field-label--option` class when `type="option"`', () => {});
+    it.todo('adds `nl-form-field-label--inherit` class when `type="inherit"`', () => {});
+    it.todo('adds `nl-form-field-label--disabled` class when `disabled` is true', () => {});
+  });
+
+  describe('Property: Type', () => {
+    it.todo('supports `type="option"`', () => {});
+    it.todo('supports `type="inherit"`', () => {});
+  });
+
+  describe('Slot: Input', () => {
+    it.todo('supports an input slot for radio', () => {});
+    it.todo('supports an input slot for checkbox', () => {});
+    it.todo('supports an input slot for switch', () => {});
+    it.todo('requires `type="option"` when an input slot is used', () => {});
+    it.todo('requires an input slot when `type="option"` is used', () => {});
+  });
+
+  describe('Component API', () => {
+    it.todo('supports forwarding HTML-attributes to the underlying `label`', () => {});
+    it.todo('supports the `for` HTML-attribute', () => {});
+    it.todo('supports the `hidden` HTML-attribute', () => {});
+    it.todo('supports the `lang` HTML-attribute', () => {});
+    it.todo('supports the `dir` HTML-attribute', () => {});
+  });
+
+  describe('React API', () => {
+    it.todo(`has displayName "${displayName}"`, () => {
+      expect(FormFieldLabel.displayName).toBe(displayName);
+    });
+
+    it.todo('forwards React refs to the HTMLLabelElement', () => {
+      const ref = createRef<HTMLDivElement>();
+      render(<FormFieldLabel ref={ref}>form-field-label</FormFieldLabel>);
+      const element = screen.getByText('form-field-label');
+
+      expect(ref.current).toBe(element);
+      expect(element).toBeInstanceOf(HTMLDivElement);
+    });
   });
 });
