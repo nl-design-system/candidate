@@ -11,7 +11,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 #### Must Have elementen
 
 - De Ordered List is opgemaakt met het `ol` HTML-element.
-- De Ordered List bevat een inhoud welke bestaat uit één of meer `li` HTML-elementen.
+- De Ordered List bevat één of meer `li` HTML-elementen.
 
 #### Could Have elementen
 
