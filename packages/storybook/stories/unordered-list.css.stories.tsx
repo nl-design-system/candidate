@@ -10,10 +10,10 @@ const externalLinks = getExternalLinks('https://nldesignsystem.nl/unordered-list
 
 const meta = {
   ...mergeCssMeta(unorderedListMeta, externalLinks),
-  title: 'CSS Componenten/Unordered List',
+  title: 'In Progress/CSS Componenten/Unordered List',
   id: 'css-unordered-list',
 } satisfies Meta<typeof UnorderedListComponent>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const UnorderedList = Stories.UnorderedList;
