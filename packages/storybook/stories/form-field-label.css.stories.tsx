@@ -10,10 +10,10 @@ const externalLinks = getExternalLinks('https://nldesignsystem.nl/form-field-lab
 
 const meta = {
   ...mergeCssMeta(formFieldLabelMeta, externalLinks),
-  title: 'CSS Componenten/Form Field Label',
+  title: 'In Progress/CSS Componenten/Form Field Label',
   id: 'css-form-field-label',
 } satisfies Meta<typeof FormFieldLabelComponent>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const FormFieldLabel = Stories.FormFieldLabel;

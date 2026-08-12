@@ -10,10 +10,10 @@ const externalLinks = getExternalLinks('https://nldesignsystem.nl/form-field-lab
 const meta = {
   ...formFieldLabelMeta,
   ...externalLinks,
-  title: 'React Componenten/Form Field Label',
+  title: 'In Progress/React Componenten/Form Field Label',
   id: 'form-field-label',
 } satisfies Meta<typeof FormFieldLabelComponent>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const FormFieldLabel = Stories.FormFieldLabel;
