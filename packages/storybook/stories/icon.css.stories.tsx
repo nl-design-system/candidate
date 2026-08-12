@@ -10,7 +10,7 @@ const externalLinks = getExternalLinks('https://nldesignsystem.nl/icon', package
 
 const meta = {
   ...mergeCssMeta(iconMeta, externalLinks),
-  title: 'CSS Componenten/Icon',
+  title: 'In Progress/CSS Componenten/Icon',
   id: 'css-icon',
 } satisfies Meta<typeof IconComponent>;
 
