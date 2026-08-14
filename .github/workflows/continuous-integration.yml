@@ -47,7 +47,7 @@ jobs:
           pnpm audit --audit-level critical
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts --frozen-lockfile
 
   lint:
     runs-on: ubuntu-latest
@@ -76,7 +76,7 @@ jobs:
           pnpm audit --audit-level critical
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts --frozen-lockfile
 
       - name: Lint
         run: pnpm run lint
@@ -129,7 +129,7 @@ jobs:
           pnpm audit --audit-level critical
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts --frozen-lockfile
 
       - name: Build
         run: pnpm run build
@@ -165,7 +165,7 @@ jobs:
           pnpm audit --audit-level critical
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --ignore-scripts --frozen-lockfile
 
       - name: Build
         run: pnpm run build
