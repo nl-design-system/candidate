@@ -152,7 +152,8 @@ export const FormFieldDescriptionWithParagraphComponent: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een Form Field Description die een NL Paragraph component bevat als child element.',
+        story:
+          'De kleur en typografie van de tekst in de NL Paragraph component komen overeen met het design van de Form Field Description.',
       },
     },
     status: { type: [] },
@@ -187,7 +188,8 @@ export const FormFieldDescriptionWithMultipleParagraphComponents: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een Form Field Description die meerdere NL Paragraph componenten bevat als child elementen.',
+        story:
+          'De kleur en typografie van alle alinea’s in de NL Paragraph componenten komen overeen met het design van de Form Field Description.',
       },
     },
     status: { type: [] },
@@ -222,7 +224,7 @@ export const FormFieldDescriptionWithPhrasingContent: Story = {
     docs: {
       description: {
         story:
-          'Een Form Field Description met een `span` element als voorbeeld van phrasing content als child element.',
+          'De tekst in het `span` element krijgt de kleur van de Form Field Description en wordt inline weergegeven, zonder extra witruimte boven of onder.',
       },
     },
     status: { type: [] },
