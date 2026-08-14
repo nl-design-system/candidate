@@ -96,7 +96,9 @@ export const FormFieldDescriptionWithDetailsAndSummary: Story = {
             </p>
           </details>
         </FormFieldDescription>
-        <textarea id="omschrijving" aria-describedby={DESCRIPTION_ID} />
+        <div>
+          <textarea id="omschrijving" aria-describedby={DESCRIPTION_ID} />
+        </div>
       </>
     );
   },
@@ -125,7 +127,9 @@ export const FormFieldDescriptionWithRole: Story = {
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID} role="definition">
           {POSTCODE_HELP_TEXT}
         </FormFieldDescription>
-        <input id="postcode" aria-describedby={POSTCODE_DESCRIPTION_ID} type="text" />
+        <div>
+          <input id="postcode" aria-describedby={POSTCODE_DESCRIPTION_ID} type="text" />
+        </div>
       </>
     );
   },
@@ -151,7 +155,9 @@ export const FormFieldDescriptionAboveTextInputViaVisualOrder: Story = {
     return (
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <label htmlFor={POSTCODE_DESCRIPTION_ID}>Postcode</label>
-        <input id="postcode" aria-describedby={POSTCODE_DESCRIPTION_ID} type="text" style={{ order: 2 }} />
+        <div>
+          <input id="postcode" aria-describedby={POSTCODE_DESCRIPTION_ID} type="text" style={{ order: 2 }} />
+        </div>
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID} style={{ order: 1 }}>
           {POSTCODE_HELP_TEXT}
         </FormFieldDescription>
@@ -182,7 +188,9 @@ export const FormFieldDescriptionAboveTextInput: Story = {
     return (
       <>
         <label htmlFor={POSTCODE_DESCRIPTION_ID}>Postcode</label>
-        <input id="postcode" aria-describedby={POSTCODE_DESCRIPTION_ID} type="text" />
+        <div>
+          <input id="postcode" aria-describedby={POSTCODE_DESCRIPTION_ID} type="text" />
+        </div>
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>{POSTCODE_HELP_TEXT}</FormFieldDescription>
       </>
     );
@@ -214,7 +222,9 @@ export const FormFieldDescriptionAriaLabelledBy: Story = {
       <>
         <label htmlFor={POSTCODE_DESCRIPTION_ID}>Postcode</label>
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>{POSTCODE_HELP_TEXT}</FormFieldDescription>
-        <input id="postcode" aria-labelledby={POSTCODE_DESCRIPTION_ID} type="text" />
+        <div>
+          <input id="postcode" aria-labelledby={POSTCODE_DESCRIPTION_ID} type="text" />
+        </div>
       </>
     );
   },
@@ -244,12 +254,14 @@ export const FormFieldDescriptionAriaLabelledByLabelAndDescription: Story = {
           Postcode
         </label>
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>{POSTCODE_HELP_TEXT}</FormFieldDescription>
-        <input
-          id="postcode"
-          aria-labelledby={`${POSTCODE_LABEL_ID} ${POSTCODE_DESCRIPTION_ID}`}
-          type="text"
-          autoComplete="postal-code"
-        />
+        <div>
+          <input
+            id="postcode"
+            aria-labelledby={`${POSTCODE_LABEL_ID} ${POSTCODE_DESCRIPTION_ID}`}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
       </>
     );
   },
@@ -276,7 +288,9 @@ export const FormFieldDescriptionWithoutRelationWithInput: Story = {
       <>
         <label htmlFor={POSTCODE_INPUT_ID}>Postcode</label>
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>{POSTCODE_HELP_TEXT}</FormFieldDescription>
-        <input id={POSTCODE_INPUT_ID} type="text" autoComplete="postal-code" />
+        <div>
+          <input id={POSTCODE_INPUT_ID} type="text" autoComplete="postal-code" />
+        </div>
       </>
     );
   },
@@ -305,12 +319,14 @@ export const FormFieldDescriptionWithTabindexAttribute: Story = {
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID} tabIndex={0}>
           {POSTCODE_HELP_TEXT}
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="text"
-          autoComplete="postal-code"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
       </>
     );
   },
@@ -335,7 +351,9 @@ export const FormFieldDescriptionAriaDescription: Story = {
   render: () => (
     <>
       <label htmlFor="postcode">Postcode</label>
-      <input id="postcode" type="text" autoComplete="postal-code" aria-description={POSTCODE_HELP_TEXT} />
+      <div>
+        <input id="postcode" type="text" autoComplete="postal-code" aria-description={POSTCODE_HELP_TEXT} />
+      </div>
     </>
   ),
   parameters: {
@@ -369,7 +387,9 @@ export const FormFieldDescriptionWithUnorderedListWithoutBullets: Story = {
             </ul>
           </UnorderedList>
         </FormFieldDescription>
-        <input id={INPUT_ID} aria-describedby={PASSWORD_DESCRIPTION_ID} type="password" />
+        <div>
+          <input id={INPUT_ID} aria-describedby={PASSWORD_DESCRIPTION_ID} type="password" />
+        </div>
       </>
     );
   },
@@ -396,13 +416,15 @@ export const FormFieldDescriptionANDAriaDescription: Story = {
       <>
         <label htmlFor={POSTCODE_INPUT_ID}>Postcode</label>
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>{POSTCODE_HELP_TEXT}</FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          aria-description={POSTCODE_HELP_TEXT} // NOSONAR
-          type="text"
-          autoComplete="postal-code"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            aria-description={POSTCODE_HELP_TEXT} // NOSONAR
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
       </>
     );
   },
