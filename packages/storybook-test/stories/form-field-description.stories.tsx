@@ -70,12 +70,14 @@ export const FormFieldDescriptionWithParagraphElement: Story = {
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
           <p>Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.</p>
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="text"
-          autoComplete="postal-code"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
       </>
     );
   },
@@ -105,12 +107,14 @@ export const FormFieldDescriptionWithMultipleParagraphElements: Story = {
           <p>Een postcode bestaat uit 4 cijfers, een spatie en 2 letters.</p>
           <p>Bijvoorbeeld: 1234 AB.</p>
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="text"
-          autoComplete="postal-code"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
       </>
     );
   },
@@ -140,12 +144,14 @@ export const FormFieldDescriptionWithParagraphComponent: Story = {
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
           <Paragraph>Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.</Paragraph>
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="text"
-          autoComplete="postal-code"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
       </>
     );
   },
@@ -176,12 +182,14 @@ export const FormFieldDescriptionWithMultipleParagraphComponents: Story = {
           <Paragraph>Een postcode bestaat uit 4 cijfers, een spatie en 2 letters.</Paragraph>
           <Paragraph>Bijvoorbeeld: 1234 AB.</Paragraph>
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="text"
-          autoComplete="postal-code"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
       </>
     );
   },
@@ -211,12 +219,14 @@ export const FormFieldDescriptionWithPhrasingContent: Story = {
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
           <span>Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.</span>
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="text"
-          autoComplete="postal-code"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
       </>
     );
   },
@@ -246,12 +256,14 @@ export const FormFieldDescriptionRelationWithInput: Story = {
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="text"
-          autoComplete="postal-code"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
       </>
     );
   },
@@ -281,12 +293,14 @@ export const FormFieldDescriptionAboveTextInput: Story = {
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="text"
-          autoComplete="postal-code"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
       </>
     );
   },
@@ -316,13 +330,15 @@ export const FormFieldDescriptionBelowTextInputViaStyling: Story = {
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID} style={{ order: 2 }}>
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="text"
-          autoComplete="postal-code"
-          style={{ order: 1 }}
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+            style={{ order: 1 }}
+          />
+        </div>
       </div>
     );
   },
@@ -358,12 +374,14 @@ export const FormFieldDescriptionWithUnorderedList: Story = {
             </ul>
           </UnorderedList>
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="password"
-          autoComplete="new-password"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="password"
+            autoComplete="new-password"
+          />
+        </div>
       </>
     );
   },
@@ -400,12 +418,14 @@ export const FormFieldDescriptionWithParagraphAndUnorderedList: Story = {
             </ul>
           </UnorderedList>
         </FormFieldDescription>
-        <input
-          id={POSTCODE_INPUT_ID}
-          aria-describedby={POSTCODE_DESCRIPTION_ID}
-          type="password"
-          autoComplete="new-password"
-        />
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="password"
+            autoComplete="new-password"
+          />
+        </div>
       </>
     );
   },
@@ -435,7 +455,9 @@ export const FormFieldDescriptionDisabled: Story = {
         <FormFieldDescription id={DESCRIPTION_ID} disabled>
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldDescription>
-        <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" disabled />
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" disabled />
+        </div>
       </>
     );
   },
@@ -464,7 +486,9 @@ export const FormFieldDescriptionDisabledWithParagraphElement: Story = {
         <FormFieldDescription id={DESCRIPTION_ID} disabled>
           <p>Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.</p>
         </FormFieldDescription>
-        <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" disabled />
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" disabled />
+        </div>
       </>
     );
   },
@@ -493,7 +517,9 @@ export const FormFieldDescriptionDisabledWithParagraphComponent: Story = {
         <FormFieldDescription id={DESCRIPTION_ID} disabled>
           <Paragraph>Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.</Paragraph>
         </FormFieldDescription>
-        <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" disabled />
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" disabled />
+        </div>
       </>
     );
   },
@@ -525,7 +551,9 @@ export const FormFieldDescriptionTextSpacing: Story = {
           Beschrijf het probleem zo specifiek mogelijk. Vermeld in ieder geval de foutcode (indien bekend), wanneer het
           probleem voor het eerst optrad en welke stappen je al hebt ondernomen. (Max. 500 woorden).
         </FormFieldDescription>
-        <textarea id={POSTCODE_INPUT_ID} aria-describedby={POSTCODE_DESCRIPTION_ID} />
+        <div>
+          <textarea id={POSTCODE_INPUT_ID} aria-describedby={POSTCODE_DESCRIPTION_ID} />
+        </div>
       </>
     );
   },
