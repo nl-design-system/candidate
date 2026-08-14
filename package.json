@@ -19,6 +19,7 @@
     "pnpm": "^11.4.0"
   },
   "devDependencies": {
+    "@playwright/experimental-ct-react": "1.61.1",
     "@babel/plugin-transform-runtime": "7.28.5",
     "@babel/preset-env": "7.28.5",
     "@babel/preset-react": "7.28.5",
@@ -86,6 +87,8 @@
     "test-update:lint": "pnpm run lint",
     "test-update:build": "pnpm run build",
     "test-update:test": "pnpm run test",
+    "install-playwright": "playwright install --with-deps",
+    "test-e2e": "pnpm --recursive run test-e2e",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.mjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.mjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.mjs",
