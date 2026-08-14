@@ -44,6 +44,9 @@ importers:
       '@nl-design-system/tsconfig':
         specifier: 1.0.5
         version: 1.0.5(typescript@5.9.3)
+      '@playwright/experimental-ct-react':
+        specifier: 1.61.1
+        version: 1.61.1(@types/node@24.10.4)(sass@1.94.1)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))(yaml@2.9.0)
       '@testing-library/dom':
         specifier: 10.4.1
         version: 10.4.1
