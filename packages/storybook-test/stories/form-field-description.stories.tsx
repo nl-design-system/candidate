@@ -9,7 +9,18 @@ import { FormFieldDescription } from '../../components-react/form-field-descript
 import componentMarkdown from '../../docs/form-field-description-docs/docs/component.md?raw';
 import tokens from '../../tokens/form-field-description-tokens/tokens.json';
 import { LargeLetterSpacingDecorator, LargeLineHeightDecorator, LargeWordSpacingDecorator } from '../src/TextDecorator';
+import type { PropsWithChildren } from 'react';
 // import { } from '../src/WcagTests'; // Vul aan door toegankelijkheidsexpert
+
+const FormFieldDescriptionWrapper = ({
+  children,
+  Component = 'div',
+  ...restProps
+}: PropsWithChildren<{ Component: keyof JSX.IntrinsicElements }>) => (
+  <Component className="nl-form-field-description" {...restProps}>
+    {children}
+  </Component>
+);
 
 const meta = {
   argTypes: {
@@ -272,6 +283,38 @@ export const FormFieldDescriptionRelationWithInput: Story = {
       description: {
         story:
           'Een Form Field Description gekoppeld aan een HTML input element via het `aria-describedby` attribuut. De Form Field Description wordt voorgelezen door een screenreader bij focus op het input element.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldDescriptionAsParagraph: Story = {
+  name: 'Form Field Description als een HTML-element p in plaats van div',
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  render: () => {
+    const INPUT_ID = 'E37AE1FB-858C-4998-B2C7-44DD3DA42659';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
+    return (
+      <>
+        <label htmlFor={INPUT_ID}>Postcode</label>
+        <FormFieldDescriptionWrapper Component="p" id={DESCRIPTION_ID}>
+          Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
+        </FormFieldDescriptionWrapper>
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De kleur en typografie van de tekst komen overeen met het design van de Form Field Description. De witruimte boven en onder de Form Field Description is niet anders, dan wanneer het HTML-element div wordt gebruikt.',
       },
     },
     status: { type: [] },
