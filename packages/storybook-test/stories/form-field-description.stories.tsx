@@ -368,9 +368,9 @@ export const FormFieldDescriptionWithUnorderedList: Story = {
         <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
           <UnorderedList>
             <ul>
-              <li>Minimaal 8 tekens.</li>
-              <li>Minimaal één hoofdletter.</li>
-              <li>Minimaal één cijfer.</li>
+              <li>Minimaal 8 tekens</li>
+              <li>Minimaal één hoofdletter</li>
+              <li>Minimaal één cijfer</li>
             </ul>
           </UnorderedList>
         </FormFieldDescription>

@@ -380,11 +380,9 @@ export const FormFieldDescriptionWithUnorderedListWithoutBullets: Story = {
         <label htmlFor={INPUT_ID}>Wachtwoord</label>
         <FormFieldDescription id={PASSWORD_DESCRIPTION_ID}>
           <UnorderedList>
-            <ul style={{ listStyle: 'none' }}>
-              <li>Minimaal 8 tekens.</li>
-              <li>Minimaal één hoofdletter.</li>
-              <li>Minimaal één cijfer.</li>
-            </ul>
+            <li>Minimaal 8 tekens</li>
+            <li>Minimaal één hoofdletter</li>
+            <li>Minimaal één cijfer</li>
           </UnorderedList>
         </FormFieldDescription>
         <div>
@@ -396,7 +394,7 @@ export const FormFieldDescriptionWithUnorderedListWithoutBullets: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Fout: De opsommingstekens (bullets) ontbreken bij de lijstitems. Visueel is niet duidelijk dat het om een lijst gaat. Verwijder \`list-style: none\` niet, want dit verwijdert de bullets die nodig zijn om de lijst herkenbaar te maken.`,
+        story: `Fout: Er is een opsomming met drie items. De de items in de opsomming hebben geen lees leestekens aan het einde van de zin, waardoor de informatie als platte tekst niet zo duidelijk is als met de Unordered List. Een screenreader leest bijvoorbeeld 1 lange zin: "minimaal 8 tekens minimaal één hoofdletter minimaal één cijfer". Dat is onvoldoende, visueel is de informatie duidelijker. Gebruik leestekens zodat de items als aparte zinnen worden uitgesproken.`,
       },
     },
     status: { type: [] },
