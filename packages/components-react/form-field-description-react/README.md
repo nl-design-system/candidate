@@ -52,11 +52,11 @@ Always give the `FormFieldDescription` an `id` and link it via `aria-describedby
 
 ```jsx
 <div>
-  <label htmlFor="naam">Name</label>
+  <label htmlFor="name">Name</label>
   <FormFieldDescription id="name-description">
     Enter your full name, as shown on your identity document.
   </FormFieldDescription>
-  <input id="naam" aria-describedby="name-description" type="text" />
+  <input id="name" aria-describedby="name-description" type="text" />
 </div>
 ```
 
