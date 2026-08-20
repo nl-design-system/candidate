@@ -7,6 +7,8 @@ import packageJSON from '../../components-react/form-field-description-react/pac
 import { FormFieldDescription } from '../../components-react/form-field-description-react/src/form-field-description';
 import { CandidateDisableCssDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateDisableCssDecorator';
 
+// stories aanpassen n.a.v. feedback
+
 const POSTCODE_HELP_TEXT = 'Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.';
 
 const meta = {
