@@ -12,6 +12,8 @@ import { LargeLetterSpacingDecorator, LargeLineHeightDecorator, LargeWordSpacing
 import type { PropsWithChildren } from 'react';
 // import { } from '../src/WcagTests'; // Vul aan door toegankelijkheidsexpert
 
+// stories aanpassen n.a.v. feedback
+
 const FormFieldDescriptionWrapper = ({
   children,
   Component = 'div',
