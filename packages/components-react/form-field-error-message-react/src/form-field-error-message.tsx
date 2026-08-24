@@ -1,18 +1,19 @@
-import type { ReactNode, HTMLAttributes } from 'react';
-import { clsx } from 'clsx';
-import { forwardRef } from 'react';
+import { forwardRef, type ReactNode, type HTMLAttributes } from 'react';
+import clsx from 'clsx';
 
 export interface FormFieldErrorMessageProps extends HTMLAttributes<HTMLDivElement> {
-  children: ReactNode; // Needed in template file, feel free to remove
+  children?: ReactNode;
+  icon?: ReactNode;
 }
 
 export const FormFieldErrorMessage = forwardRef<HTMLDivElement, FormFieldErrorMessageProps>(
-  function FormFieldErrorMessage(props, forwardedRef) {
-    const { children, className, ...restProps } = props;
-
+  ({ id, role, className, children, icon, ...restProps }, ref) => {
     return (
-      <div className={clsx('nl-form-field-error-message', className)} ref={forwardedRef} {...restProps}>
-        {children}
+      <div ref={ref} className={clsx('nl-form-field-error-message', className)} {...restProps}>
+        {icon && <div className={clsx('nl-form-field-error-message__icon')}>{icon}</div>}
+        <div id={id} role={role} className={clsx('nl-form-field-error-message__content')}>
+          {children}
+        </div>
       </div>
     );
   },
