@@ -2,6 +2,29 @@
 
 # Acceptatiecriteria voor het maken van de Unordered List component
 
+## Varianten
+
+### Deze varianten worden ondersteund
+
+- Varianten die standaard in HTML beschikbaar zijn, worden in TypeScript gedefinieerd door de attributen van het standaard HTMLElement te gebruiken.
+- Varianten die niet standaard in HTML beschikbaar zijn, worden als uitbreiding toegevoegd.
+- Deze varianten worden gedocumenteerd op de website, in de README en in de standaard Storybook.
+- Deze varianten worden beschikbaar gemaakt in Figma.
+
+#### Item
+
+##### Level
+
+Enum
+
+- 1
+- 2
+- 3
+
+#### Content
+
+String (code) / Text - string (design)
+
 ## Semantiek
 
 Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste zijn voor deze component.
