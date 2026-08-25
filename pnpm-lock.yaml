@@ -1798,6 +1798,8 @@ importers:
 
   packages/tokens/mark-tokens: {}
 
+  packages/tokens/note-tokens: {}
+
   packages/tokens/number-badge-tokens: {}
 
   packages/tokens/ordered-list-tokens: {}
