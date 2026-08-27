@@ -7,7 +7,10 @@ export type HeadingLevel = (typeof headingLevels)[number];
 export type HeadingAppearance = `level-${HeadingLevel}`;
 
 export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
+  /** Sets the semantic level of the heading element */
   level: HeadingLevel;
+
+  /** Allows the appearance of the heading to differ from the semantic level */
   appearance?: HeadingAppearance;
 }
 
