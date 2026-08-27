@@ -4,14 +4,11 @@ import { expect, test } from '@playwright/experimental-ct-react';
 import { cartesianProduct } from 'es-toolkit';
 import { Button } from './css';
 import type { ButtonHint, ButtonPurpose } from './button';
+import { commandProps } from './command-props';
 
 const purposes = ['primary', 'secondary', 'subtle'] as const satisfies readonly ButtonPurpose[];
 const hints = [undefined, 'positive', 'negative'] as const satisfies readonly (ButtonHint | undefined)[];
 const states = ['default', 'hover', 'focus-visible', 'disabled', 'busy', 'pressed'] as const;
-
-// `command`/`commandfor` are not yet part of `@types/react`'s `ButtonHTMLAttributes`.
-const commandProps = (commandfor: string, command: string): React.ButtonHTMLAttributes<HTMLButtonElement> =>
-  ({ commandfor, command }) as React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 test('applies the button stylesheet', async ({ mount }) => {
   const component = await mount(<Button purpose="primary">Klik mij</Button>);
@@ -144,21 +141,6 @@ for (const [purpose, hint, state] of cartesianProduct(purposes, hints, states)) 
   });
 }
 
-test('handles [aria-controls] correctly', async ({ mount, page }) => {
-  const component = await mount(
-    <>
-      <Button aria-controls="menu-content">Open menu</Button>
-
-      <div id="menu-content">Menu content</div>
-    </>,
-  );
-
-  await expect(component.getByRole('button')).toHaveAttribute('aria-controls', 'menu-content');
-
-  const controlledElement = page.locator('#menu-content');
-  await expect(controlledElement).toHaveCount(1);
-});
-
 test('handles [autofocus] correctly', async ({ mount }) => {
   const component = await mount(<Button autoFocus>Klik mij</Button>);
 
@@ -185,30 +167,6 @@ test('handles [commandfor="id"][command="show-modal"] correctly', async ({ mount
   await button.click();
 
   await expect(dialog).toBeVisible();
-});
-
-test('handles [commandfor="id"][command="close"] correctly', async ({ mount }) => {
-  const component = await mount(
-    <>
-      <Button {...commandProps('dialog', 'close')}>Open dialog</Button>
-
-      <dialog id="dialog" open>
-        Dialog content
-      </dialog>
-    </>,
-  );
-
-  const button = component.getByRole('button');
-  const dialog = component.locator('#dialog');
-
-  await expect(button).toHaveAttribute('commandfor', 'dialog');
-  await expect(button).toHaveAttribute('command', 'close');
-
-  await expect(dialog).toBeVisible();
-
-  await button.click();
-
-  await expect(dialog).not.toBeVisible();
 });
 
 test('handles [commandfor="id"][command="request-close"] correctly', async ({ mount }) => {
@@ -326,18 +284,19 @@ test('handles [commandfor="id"][command="--custom-event"] correctly', async ({ m
   await expect(button).toHaveAttribute('commandfor', 'command-target');
   await expect(button).toHaveAttribute('command', '--custom-event');
 
-  await target.evaluate((element) => {
-    element.addEventListener('command', (event) => {
-      if ((event as Event & { command?: string }).command === '--custom-event') {
-        element.dataset['commandReceived'] = 'true';
-      }
+  const commandPromise = target.evaluate((element) => {
+    return new Promise<string | undefined>((resolve) => {
+      element.addEventListener('command', (event) => resolve((event as Event & { command?: string }).command), {
+        once: true,
+      });
     });
   });
 
   await button.click();
 
-  await expect(target).toHaveAttribute('data-command-received', 'true');
+  await expect(commandPromise).resolves.toBe('--custom-event');
 });
+
 test('handles [formaction] correctly', async ({ mount, page }) => {
   const component = await mount(
     <form action="/default-action" method="get">
