@@ -14,6 +14,7 @@ import {
   IconCheck,
   IconChevronDown,
   IconChevronUp,
+  IconInfoCircleFilled,
   IconLanguage,
   IconLink,
   IconMultiplier2x,
@@ -2656,10 +2657,12 @@ Test deze functionaliteit door het formulier met de eerste button te verzenden. 
   },
 };
 
-const DivButton = ({
+const CustomButton = ({
+  Component = 'div',
   label,
   iconStart,
   iconEnd,
+  iconOnly,
   children,
   pressed,
   purpose,
@@ -2667,9 +2670,9 @@ const DivButton = ({
   hint,
   className,
   ...args
-}: ButtonProps) => {
+}: ButtonProps & { Component: 'div' | 'summary' }) => {
   return (
-    <div
+    <Component
       role="button"
       tabIndex={0}
       className={clsx('nl-button', className, {
@@ -2680,6 +2683,7 @@ const DivButton = ({
         'nl-button--subtle': purpose === 'subtle',
         'nl-button--positive': Boolean(purpose) && hint === 'positive',
         'nl-button--negative': Boolean(purpose) && hint === 'negative',
+        'nl-button--icon-only': iconOnly,
       })}
       {...args}
     >
@@ -2687,7 +2691,7 @@ const DivButton = ({
       {label && <span className="nl-button__label">{label}</span>}
       {children}
       {iconEnd && <span className="nl-button__icon-end">{iconEnd}</span>}
-    </div>
+    </Component>
   );
 };
 
@@ -2753,7 +2757,7 @@ Een \`div\` is standaard niet bedienbaar met het toetsenbord. Om te beginnen moe
       ],
     },
   },
-  render: DivButton,
+  render: CustomButton,
 };
 
 export const DecorativeButtonContentEditable: Story = {
@@ -2802,7 +2806,7 @@ De Button zelf moet niet focusbaar zijn, omdat dit element niet interactief is, 
       ],
     },
   },
-  render: DivButton,
+  render: CustomButton,
 };
 
 export const DecorativeButtonDisabled: Story = {
@@ -2848,7 +2852,7 @@ De Button is niet interactief, de button is decoratief.`,
       ],
     },
   },
-  render: DivButton,
+  render: CustomButton,
 };
 
 export const DecorativeButtonPressed: Story = {
@@ -2894,7 +2898,7 @@ De Button is niet interactief, de button is decoratief.`,
       ],
     },
   },
-  render: DivButton,
+  render: CustomButton,
 };
 
 const EditIconButton = ({ ...args }: ButtonProps) => {
@@ -2988,7 +2992,7 @@ export const ButtonIconEditable: Story = {
 
     return (
       <>
-        <DivButton
+        <CustomButton
           {...args}
           {...updatedArgs}
           iconStart={
@@ -3368,6 +3372,79 @@ export const ButtonKlein: Story = {
           'De button is 24 pixels hoog en breed, maar doordat met `border-radius` de button rond is gemaakt is het zichtbare oppervlakte minder dan 24 x 24 = 576 pixels. Het aanwijzergebied is wel vierkant en 24 x 24 pixels groot, dus je kunt de button aanklikken net buiten zichtbare button naast het afgeronde hoekje.',
       },
     },
+  },
+};
+
+export const ButtonSummary: Story = {
+  name: 'Button op het summary element',
+  args: {
+    purpose: 'primary',
+    iconStart: (
+      <Icon role="img" aria-label="Toevoegen">
+        <IconPlus />
+      </Icon>
+    ),
+    iconEnd: (
+      <Icon role="img" aria-label="Winkelmandje">
+        <IconShoppingCart />
+      </Icon>
+    ),
+    label: undefined,
+    'aria-pressed': 'false',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Button met twee informatieve iconen. Na het activeren van de knop krijgt de knop de state "pressed", en verandert de alternatieve tekst van het linkse icoon van "Toevoegen" naar "Toegevoegd". Het rechtse icoon blijft hetzelfde.`,
+      },
+    },
+  },
+  render: function Render(args) {
+    return (
+      <details>
+        <CustomButton Component="summary" {...args} />
+        <div>fokdokfpaosdkfasd</div>
+      </details>
+    );
+  },
+};
+
+export const ButtonLabelSummary: Story = {
+  name: 'Button op het summary element',
+  args: {
+    purpose: 'subtle',
+    iconStart: (
+      <Icon role="img" aria-label="Informatie">
+        <IconInfoCircleFilled />
+      </Icon>
+    ),
+    iconOnly: true,
+    label: undefined,
+    style: {
+      '--nl-button-border-radius': '9999px',
+      '--nl-button-min-block-size': '24px',
+      '--nl-button-min-inline-size': '24px',
+      '--nl-button-icon-size': '16px',
+      '--nl-button-icon-only-padding-inline-start': '0',
+      '--nl-button-icon-only-padding-inline-end': '0',
+      '--nl-button-icon-only-padding-block-end': '0',
+      '--nl-button-icon-only-padding-block-start': '0',
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Button met twee informatieve iconen. Na het activeren van de knop krijgt de knop de state "pressed", en verandert de alternatieve tekst van het linkse icoon van "Toevoegen" naar "Toegevoegd". Het rechtse icoon blijft hetzelfde.`,
+      },
+    },
+  },
+  render: function Render(args) {
+    return (
+      <details>
+        <CustomButton Component="summary" {...args} />
+        <div>fokdokfpaosdkfasd</div>
+      </details>
+    );
   },
 };
 
