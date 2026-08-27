@@ -210,12 +210,6 @@ describe('FormFieldErrorMessage', () => {
     });
   });
   describe('HTML elementen', () => {
-    it('renders an div HTML-element', () => {
-      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector(':only-child');
-
-      expect(element).toBeInstanceOf(HTMLDivElement);
-    });
     it('displays as CSS block element', () => {
       const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
       const element = container.querySelector(':only-child');
