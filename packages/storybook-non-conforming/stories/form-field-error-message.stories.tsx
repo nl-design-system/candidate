@@ -59,7 +59,7 @@ export const FormFieldErrorMessageWithInteractiveContent: Story = {
     docs: {
       description: {
         story:
-          'Fout: De Form Field Error Message bevat een link. Interactieve content in een foutmelding is niet toegestaan, omdat de foutmelding informatief is en niet interactief.',
+          'De bezoeker krijgt een foutmelding met een link, terwijl een foutmelding alleen bedoeld is om informatie over een fout bij het invoerveld te geven. Interactieve inhoud in een foutmelding kan de bezoeker afleiden van het herstellen van de fout. Dit is vooral onduidelijk voor schermlezergebruikers, omdat de foutmelding niet alleen informatie bevat maar ook een actie aanbiedt. Plaats interactieve inhoud daarom buiten de foutmelding.',
       },
     },
     status: { type: [] },
@@ -67,7 +67,7 @@ export const FormFieldErrorMessageWithInteractiveContent: Story = {
 };
 
 export const FormFieldErrorMessageAsSpan: Story = {
-  name: 'Fout: Form Field Error Message als HTML span element',
+  name: 'Fout: Form Field Error Message als HTML-element span',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -92,7 +92,7 @@ export const FormFieldErrorMessageAsSpan: Story = {
     docs: {
       description: {
         story:
-          'Fout: De Form Field Error Message is opgemaakt als een HTML `span` element in plaats van een HTML `div` element. De standaardwaarde van de CSS-eigenschap `display` van een `span` element is `inline`, voor een `div` element is dit `block`. Wanneer de CSS niet wordt ingeladen, wordt de foutmelding inline weergegeven naast andere elementen.',
+          'De foutmelding wordt zonder de bijbehorende opmaak direct naast andere content weergegeven. Daardoor is de melding minder duidelijk herkenbaar als foutmelding bij het invoerveld. Dit gebeurt wanneer de CSS niet wordt ingeladen: het HTML-element `span` wordt standaard als inline-element weergegeven, waardoor de foutmelding niet op een eigen regel staat. Gebruik een blokelement voor de foutmelding, zodat deze ook zonder CSS als afzonderlijke tekst wordt weergegeven.',
       },
     },
     status: { type: [] },
@@ -100,7 +100,7 @@ export const FormFieldErrorMessageAsSpan: Story = {
 };
 
 export const FormFieldErrorMessageAsStatus: Story = {
-  name: 'Fout: Form input met Form Field Error Message als Form Field Status',
+  name: 'Fout: Form Field Error Message gebruikt als statusmelding',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -124,7 +124,7 @@ export const FormFieldErrorMessageAsStatus: Story = {
     docs: {
       description: {
         story:
-          'Fout: Een Form Field Error Message wordt gebruikt als statusmelding voor een tekenrestant. Een Form Field Error Message onderbreekt een bezoeker om de melding voor te lezen. Gebruik in plaats daarvan een Form Field Status.',
+          'De foutmelding wordt gebruikt als statusmelding voor een tekenrestant. Een foutmelding onderbreekt een schermlezergebruiker om de melding voor te lezen. Gebruik in plaats daarvan een statusmelding.',
       },
     },
     status: { type: [] },
@@ -132,7 +132,7 @@ export const FormFieldErrorMessageAsStatus: Story = {
 };
 
 export const FormFieldErrorMessageAboveTextInputViaVisualOrder: Story = {
-  name: 'Fout: Form Field Error Message boven het invoerveld in de Form Field via visual order',
+  name: 'Fout: Form Field Error Message boven het invoerveld via visuele volgorde',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -156,7 +156,7 @@ export const FormFieldErrorMessageAboveTextInputViaVisualOrder: Story = {
     docs: {
       description: {
         story:
-          'Fout: De Form Field Error Message staat visueel boven het invoerveld door middel van visuele volgorde (visual order) in plaats van document order. Voor een bezoeker die gebruik maakt van een screenreader staat de melding nog steeds ónder het veld.',
+          'De foutmelding staat visueel boven het invoerveld, maar in de documentvolgorde staat deze eronder. Voor schermlezergebruikers klinkt de melding op een onlogische plek in de pagina, omdat de tekst niet in de juiste volgorde verschijnt. De melding is met CSS verplaatst via de visuele volgorde, terwijl het invoerveld eerst in de DOM staat. Plaats de foutmelding tussen het label en het invoerveld in de juiste documentvolgorde.',
       },
     },
     status: { type: [] },
@@ -188,7 +188,7 @@ export const FormFieldErrorMessageBelowTextInput: Story = {
     docs: {
       description: {
         story:
-          'Fout: De Form Field Error Message staat onder het invoerveld in de Form Field. Een bezoeker ziet de foutmelding pas nadat het invoerveld al gepasseerd is.',
+          'De foutmelding staat onder het invoerveld in plaats van tussen het label en het invoerveld. Bezoekers zien de melding pas nadat ze al voorbij het veld zijn. Plaats de foutmelding direct boven het invoerveld.',
       },
     },
     status: { type: [] },
@@ -196,7 +196,7 @@ export const FormFieldErrorMessageBelowTextInput: Story = {
 };
 
 export const FormFieldErrorMessageWithDetailsAndSummary: Story = {
-  name: 'Fout: Form Field Error Message met HTML details element en HTML summary element',
+  name: 'Fout: Form Field Error Message met het HTML-element details en summary',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -223,7 +223,7 @@ export const FormFieldErrorMessageWithDetailsAndSummary: Story = {
     docs: {
       description: {
         story:
-          'Fout: De Form Field Error Message bevat een HTML `details` element en een HTML `summary` element. Een foutmelding in een `details`-`summary` combinatie wordt niet goed voorgelezen door screenreaders wanneer een bezoeker met het toetsenbord focust op het bijbehorende invoerveld.',
+          'De foutmelding is verborgen achter een `details`-`summary` HTML-element combinatie. Voor schermlezergebruikers wordt de tekst niet op een duidelijke manier voorgelezen bij het bijbehorende invoerveld. Gebruik een foutmelding zonder inklapbare content.',
       },
     },
     status: { type: [] },
@@ -231,7 +231,7 @@ export const FormFieldErrorMessageWithDetailsAndSummary: Story = {
 };
 
 export const FormFieldErrorMessageLate: Story = {
-  name: 'Fout: Form Field Error Message die te laat verschijnt',
+  name: 'Fout: Form Field Error Message verschijnt te laat',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -260,7 +260,7 @@ export const FormFieldErrorMessageLate: Story = {
     docs: {
       description: {
         story:
-          'Fout: De Form Field Error Message is gekoppeld aan het eerste invoerveld, maar het tweede invoerveld heeft geen foutmelding. In een dynamisch formulier kan deze opzet ertoe leiden dat de foutmelding te laat wordt voorgelezen, pas wanneer de bezoeker focus verplaatst naar het volgende invoerveld.',
+          'De Form Field Error Message is gekoppeld aan het eerste invoerveld, maar het tweede invoerveld heeft geen foutmelding. In een dynamisch formulier kan deze opzet ertoe leiden dat de foutmelding te laat wordt voorgelezen, pas wanneer de schermlezergebruiker de focus verplaatst naar het volgende invoerveld.',
       },
     },
     status: { type: [] },
@@ -268,7 +268,7 @@ export const FormFieldErrorMessageLate: Story = {
 };
 
 export const FormFieldErrorMessageWithAlertComponent: Story = {
-  name: 'Fout: Form Field Error Message die tegelijkertijd met Alert verschijnt.',
+  name: 'Fout: Form Field Error Message verschijnt tegelijkertijd met Alert',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -295,7 +295,7 @@ export const FormFieldErrorMessageWithAlertComponent: Story = {
     docs: {
       description: {
         story:
-          'Fout: De Form Field Error Message verschijnt tegelijkertijd met een Alert. Omdat beiden een live-region zijn, worden beide meldingen voorgelezen aan de bezoeker, wat verwarrend kan zijn.',
+          'De foutmelding en de algemene waarschuwing worden tegelijkertijd voorgelezen. Beide elementen zijn live regions, waardoor hun inhoud tegelijk wordt aangekondigd. Bezoekers krijgen dan twee meldingen op hetzelfde moment, wat verwarrend en onduidelijk is.',
       },
     },
     status: { type: [] },
@@ -303,7 +303,7 @@ export const FormFieldErrorMessageWithAlertComponent: Story = {
 };
 
 export const FormFieldErrorMessageTable: Story = {
-  name: 'Fout: Form Field Error Message met een table',
+  name: 'Fout: Form Field Error Message met tabel',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -346,7 +346,7 @@ export const FormFieldErrorMessageTable: Story = {
     docs: {
       description: {
         story:
-          'Fout: De Form Field Error Message bevat een HTML `table` element. Een screenreader leest alle tabelinformatie op, wat niet gebruiksvriendelijk is voor een foutmelding.',
+          'De foutmelding bevat een tabel met alle eisen. Voor schermlezergebruikers wordt die informatie volledig voorgelezen, waardoor de boodschap niet meer als één duidelijke waarschuwing werkt. De melding is opgebouwd uit een HTML-element `table` in plaats van normale tekst of een lijst. Gebruik tekst of een eenvoudige lijst, zodat de foutmelding beter te volgen is.',
       },
     },
     status: { type: [] },
@@ -354,7 +354,7 @@ export const FormFieldErrorMessageTable: Story = {
 };
 
 export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
-  name: 'Fout: Form Field Error Message met een lijst zonder punten',
+  name: 'Fout: Form Field Error Message met lijst zonder punten',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -383,7 +383,7 @@ export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
     docs: {
       description: {
         story:
-          'Fout: De lijstitems in de Form Field Error Message eindigen niet met een punt. Een screenreader leest alle items achter elkaar op in één zin, wat niet gebruiksvriendelijk is.',
+          'De lijstitems in de foutmelding eindigen niet met een punt. Voor schermlezergebruikers worden deze items achter elkaar als één lange zin voorgelezen, wat de foutmelding minder duidelijk maakt. Laat elk item eindigen met een punt zodat de items als aparte zinnen worden uitgesproken.',
       },
     },
     status: { type: [] },
@@ -391,7 +391,7 @@ export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
 };
 
 export const FormFieldErrorMessageWithRedundantRole: Story = {
-  name: 'Fout: Form Field Error Message met onnodige role en aria-live',
+  name: 'Fout: Form Field Error Message met overbodige HTML-elementen role en aria-live',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -415,7 +415,7 @@ export const FormFieldErrorMessageWithRedundantRole: Story = {
     docs: {
       description: {
         story:
-          'Fout: De Form Field Error Message heeft zowel een `role` attribuut als `aria-live="polite"`, terwijl de melding alleen informatieve tekst is die via `aria-describedby` aan het invoerveld is gekoppeld. Voeg geen live region of role toe wanneer de foutmelding niet dynamisch wordt bijgewerkt.',
+          'De Form Field Error Message heeft zowel een HTML-attribuut `role` als WAI-ARIA-attribuut `aria-live="polite"`, terwijl de melding alleen informatieve tekst is die via WAI-ARIA-attribuut `aria-describedby` aan het invoerveld is gekoppeld. Dit is onnodig en voegt geen waarde toe. Voeg geen live region of role toe wanneer de foutmelding niet dynamisch wordt bijgewerkt.',
       },
     },
     status: { type: [] },
