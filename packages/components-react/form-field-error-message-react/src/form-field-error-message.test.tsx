@@ -49,20 +49,26 @@ describe('FormFieldErrorMessage', () => {
       expect(formFieldErrorMessage).toHaveTextContent(content);
     });
   });
-  describe('Globale HTML-attributen', () => {
-    it('can set HTML dir attribute', () => {
+  describe('HTML', () => {
+    it('renders an HTML-element `div`', () => {
+      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector(':only-child');
+
+      expect(element).toBeInstanceOf(HTMLDivElement);
+    });
+    it('can set an HTML-attribute `dir`', () => {
       const { container } = render(<FormFieldErrorMessage dir="rtl">{content}</FormFieldErrorMessage>);
       const element = container.querySelector('.nl-form-field-error-message');
 
       expect(element).toHaveAttribute('dir', 'rtl');
     });
-    it('can set HTML lang attribute', () => {
+    it('can set an HTML-attribute `lang`', () => {
       const { container } = render(<FormFieldErrorMessage lang="en">{content}</FormFieldErrorMessage>);
       const element = container.querySelector('.nl-form-field-error-message');
 
       expect(element).toHaveAttribute('lang', 'en');
     });
-    it('can set HTML role attribute', () => {
+    it('can set an HTML-attribute `role`', () => {
       render(<FormFieldErrorMessage role="alert">{content}</FormFieldErrorMessage>);
       const formFieldErrorMessageContent = screen.getByRole('alert');
       expect(formFieldErrorMessageContent).toBeInTheDocument();
@@ -89,7 +95,7 @@ describe('FormFieldErrorMessage', () => {
     });
   });
   describe('Icon', () => {
-    it('icon slot renders an div HTML-element', () => {
+    it('renders an HTML-element `div` ', () => {
       const { container } = render(<FormFieldErrorMessage icon={<div>Icon</div>}>{content}</FormFieldErrorMessage>);
       const formFieldErrorMessageIcon = container.querySelector('.nl-form-field-error-message__icon');
 
@@ -100,7 +106,7 @@ describe('FormFieldErrorMessage', () => {
       const element = container.querySelector('.nl-form-field-error-message__icon');
       expect(element).toContainElement(container.querySelector('svg'));
     });
-    it('icon slot can contain HTML p element', () => {
+    it('can contain an HTML-element `p` ', () => {
       const { container } = render(<FormFieldErrorMessage icon={<p>Icon</p>}>{content}</FormFieldErrorMessage>);
       const element = container.querySelector('.nl-form-field-error-message__icon');
 
@@ -114,7 +120,7 @@ describe('FormFieldErrorMessage', () => {
     });
   });
   describe('Content', () => {
-    it('content slot renders an div HTML-element', () => {
+    it('renders an HTML-element `div`', () => {
       const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
       const formFieldErrorMessageContent = container.querySelector('.nl-form-field-error-message__content');
       expect(formFieldErrorMessageContent).toBeInstanceOf(HTMLDivElement);
@@ -129,7 +135,7 @@ describe('FormFieldErrorMessage', () => {
       expect(element).toContainElement(container.querySelector('p'));
       expect(element).toHaveTextContent(content);
     });
-    it('content slot can contain HTML p element', () => {
+    it('can contain an HTML-element `p`', () => {
       const { container } = render(
         <FormFieldErrorMessage>
           <p>{content}</p>
@@ -139,7 +145,7 @@ describe('FormFieldErrorMessage', () => {
       expect(element).toContainElement(container.querySelector('p'));
       expect(element).toHaveTextContent(content);
     });
-    it('content slot can contain phrasing content', () => {
+    it('can contain an HTML-element `span`', () => {
       const { container } = render(
         <FormFieldErrorMessage>
           <span>{content}</span>
@@ -150,8 +156,8 @@ describe('FormFieldErrorMessage', () => {
       expect(element).toHaveTextContent(content);
     });
   });
-  describe('Accessibility', () => {
-    it('has HTML id attribute', () => {
+  describe('accessibility', () => {
+    it('has an HTML-attribute `id`', () => {
       const { container } = render(
         <FormFieldErrorMessage id="form-field-error-message-id">{content}</FormFieldErrorMessage>,
       );
@@ -159,7 +165,7 @@ describe('FormFieldErrorMessage', () => {
 
       expect(element).toHaveAttribute('id', 'form-field-error-message-id');
     });
-    it('can contain HTML role attribute with alert value', () => {
+    it('can contain an HTML-attribute `role` with value `alert`', () => {
       render(
         <FormFieldErrorMessage id="form-field-error-message-id" role="alert">
           {content}
