@@ -68,8 +68,7 @@ When the error message is added or updated at the client side, for example after
 
 ### Do not add `tabIndex`
 
-`FormFieldErrorMessage` is informative, not interactive, and should not become
-part of the page's tab order.
+Do not add `tabIndex` to a `FormFieldErrorMessage`. It is informative and should not become part of the page's tab order. The message is already announced from the associated input field through `aria-describedby` when the field receives focus.
 
 ### Content of the Form Field Error Message
 
