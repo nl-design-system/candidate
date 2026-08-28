@@ -113,7 +113,7 @@ Je kunt [design tokens ook als extensie toevoegen](https://www.nldesignsystem.nl
 
 - Leg vast welke design tokens wel en niet worden meegenomen voor de Candidate implementatie.
 - Neem belangrijke afwegingen over uit het Slack Canvas.
-- Noteer afwijkingen van de standaard die nuttig zijn om te weten tijdens de ontwikkelfase. Denk daarbij aan een design token voor `border-width` die als `box-shadow` geïmplementeerd moet worden. 
+- Noteer afwijkingen van de standaard die nuttig zijn om te weten tijdens de ontwikkelfase. Denk daarbij aan een design token voor `border-width` die als `box-shadow` geïmplementeerd moet worden.
 
 ### Documenteer besluit in de Candidate repository
 
