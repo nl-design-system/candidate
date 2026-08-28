@@ -77,7 +77,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const FormFieldErrorMessageShort: Story = {
-  name: 'Form Field Error Message met een foutmelding bij een niet-ingevuld veld',
+  name: 'Form Field Error Message met een korte foutmelding bij een niet-ingevuld veld',
   globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000001';
@@ -98,7 +98,7 @@ export const FormFieldErrorMessageShort: Story = {
     docs: {
       description: {
         story:
-          'Een korte foutmelding is gekoppeld aan het invoerveld via `aria-describedby`. Een screenreader leest de foutmelding voor bij focus op het invoerveld.',
+          'Een korte foutmelding is gekoppeld aan het invoerveld via het WAI-ARIA-attribuut `aria-describedby`. Een screenreader leest de foutmelding voor bij focus op het invoerveld.',
       },
     },
     status: { type: [] },
@@ -129,7 +129,7 @@ export const FormFieldErrorMessageLong: Story = {
     docs: {
       description: {
         story:
-          'Een lange foutmelding is gekoppeld aan het invoerveld. De tekst loopt over meerdere regels en blijft leesbaar.',
+          'Een lange foutmelding is gekoppeld aan het invoerveld via het WAI-ARIA-attribuut `aria-describedby`. De tekst loopt over meerdere regels en blijft leesbaar. Een screenreader leest de foutmelding voor bij focus op het invoerveld.',
       },
     },
     status: { type: [] },
@@ -174,7 +174,7 @@ export const FormFieldErrorMessageMultiple: Story = {
 };
 
 export const FormFieldErrorMessageWithParagraphComponent: Story = {
-  name: 'Form Field Error Message met een NL Paragraph component',
+  name: 'Form Field Error Message met een NL Paragraph-component',
   globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000004';
@@ -198,7 +198,7 @@ export const FormFieldErrorMessageWithParagraphComponent: Story = {
     docs: {
       description: {
         story:
-          'De kleur en typografie van de tekst in de NL Paragraph component komen overeen met het design van de Form Field Error Message.',
+          'De foutmelding bestaat uit één alinea. De foutmelding heeft dezelfde kleur en typografie als de standaard tekst in het ontwerp. De style van de tekst in de NL Paragraph-component word overgenomen van de NL Form Field Error Message-component.',
       },
     },
     status: { type: [] },
@@ -206,7 +206,7 @@ export const FormFieldErrorMessageWithParagraphComponent: Story = {
 };
 
 export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
-  name: 'Form Field Error Message met twee NL Paragraph componenten',
+  name: 'Form Field Error Message met twee NL Paragraph-componenten',
   globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000005';
@@ -228,7 +228,7 @@ export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
     docs: {
       description: {
         story:
-          "De kleur en typografie van alle alinea's in de NL Paragraph componenten komen overeen met het design van de Form Field Error Message.",
+          "De foutmelding bestaat uit twee alinea's met duidelijke ruimte ertussen. De foutmelding heeft dezelfde kleur en typografie als de standaard tekst in het ontwerp. De style van de tekst in de NL Paragraph-componenten word overgenomen van de NL Form Field Error Message-component.',",
       },
     },
     status: { type: [] },
@@ -258,7 +258,7 @@ export const FormFieldErrorMessageLangLTR: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding is in een andere taal dan de hoofdtaal van de pagina, in dit geval Engels. De afwijkende taal is aangegeven met het HTML lang-attribuut, zodat een screenreader de tekst in de juiste taal uitspreekt.',
+          'De foutmelding staat in het Engels, terwijl de rest van de pagina in het Nederlands is. De afwijkende taal is expliciet aangegeven, zodat de tekst correct wordt uitgesproken door een screenreader. De afwijkende taal is aangegeven met het HTML-attribuut `lang`.',
       },
     },
     status: { type: [] },
@@ -287,7 +287,7 @@ export const FormFieldErrorMessageLangRTL: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding is in het Arabisch, een taal met een andere schrijf- en leesrichting. De richting is aangegeven met het HTML dir-attribuut, zodat de tekst van rechts naar links wordt weergegeven.',
+          'De foutmelding is in het Arabisch, een taal met een andere schrijf- en leesrichting. De richting van de tekst past bij de de taal. De taal is aangegeven met het HTML-attribuut `lang`. De richting is aangegeven met het HTML-attribuut `dir`, zodat de tekst van rechts naar links wordt weergegeven.',
       },
     },
     status: { type: [] },
@@ -316,7 +316,7 @@ export const FormFieldErrorMessageVerticalText: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding is in het Japans met verticale tekstrichting. Het lang-attribuut en de writing-mode zijn correct ingesteld.',
+          'De foutmelding staat in het Japans met verticale tekstrichting. De richting van de tekst past bij de de taal. De taal is aangegeven met het HTML-attribuut `lang`. De richting is aangegeven met de CSS-eigenschap `writingMode`, zodat de tekst van boven naar beneden wordt weergegeven.',
       },
     },
     status: { type: [] },
@@ -344,7 +344,8 @@ export const FormFieldErrorMessageLargeText: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'De tekst is vergroot naar 200%. De foutmelding loopt niet buiten de container.',
+        story:
+          'De tekst is vergroot tot 200% zoom. De foutmelding blijft goed leesbaar en loopt niet buiten de ruimte van het element.',
       },
     },
     status: { type: [] },
@@ -373,7 +374,7 @@ export const FormFieldErrorMessageAboveTextInput: Story = {
     docs: {
       description: {
         story:
-          'De Form Field Error Message staat boven het invoerveld in de DOM-volgorde, tussen het label en het invoerveld. Een screenreader leest de foutmelding voor bij focus op het invoerveld.',
+          'De foutmelding staat direct boven het invoerveld, tussen het label en het veld. Zo ziet de bezoeker meteen welke invoer fout is en wordt de melding ook goed voorgelezen bij focus op het invoerveld.',
       },
     },
     status: { type: [] },
@@ -381,7 +382,7 @@ export const FormFieldErrorMessageAboveTextInput: Story = {
 };
 
 export const FormFieldErrorMessageBelowTextInputViaStyling: Story = {
-  name: 'Form Field Error Message door styling onder het invoerveld in de Form Field (niet aangeraden)',
+  name: 'Form Field Error Message door styling onder het invoerveld (niet aangeraden)',
   globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000011';
@@ -404,7 +405,7 @@ export const FormFieldErrorMessageBelowTextInputViaStyling: Story = {
     docs: {
       description: {
         story:
-          'De Form Field Error Message staat visueel onder het invoerveld door middel van CSS styling. In de DOM staat de melding op de juiste plaats boven het invoerveld, zodat een screenreader de foutmelding correct voorleest.',
+          'De foutmelding staat visueel onder het invoerveld, terwijl deze in de code boven het veld staat. Voor schermlezergebruikers kan dat verwarrend zijn omdat de melding niet in de logische volgorde wordt gelezen. De oplossing is om de foutmelding in de juiste plaats in de DOM te houden en niet alleen door styling te verschuiven.',
       },
     },
     status: { type: [] },
@@ -435,7 +436,7 @@ export const FormFieldErrorMessageWordBreak: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding bevat buitengewoon lange woorden. Woorden worden aan het einde van de regel afgebroken en vervolgd op de volgende regel. Tekst valt niet buiten beeld.',
+          'De foutmelding bevat buitengewoon lange woorden. Woorden worden afgebroken aan het einde van de regel en vervolgd op de volgende regel.  Tekst valt niet buiten beeld.',
       },
     },
     status: { type: [] },
@@ -466,7 +467,7 @@ export const FormFieldErrorMessageSmallViewport: Story = {
     docs: {
       description: {
         story:
-          'Een lange foutmelding in een kleine viewport, vergelijkbaar met 400% zoom. De tekst is over meerdere regels verdeeld. Er valt geen tekst buiten beeld aan de rechterkant, en aan de onderkant is scrollen mogelijk.',
+          'De lange foutmelding is in een kleine viewport te zien zonder dat er tekst buiten het beeld valt. De boodschap blijft leesbaar omdat deze over meerdere regels wordt verdeeld. De kleine viewport is vergelijkbaar met 400% zoom. Er valt geen tekst buiten beeld aan de rechterkant, en aan de onderkant is scrollen mogelijk.',
       },
     },
     status: { type: [] },
@@ -500,15 +501,16 @@ export const FormFieldErrorMessageList: Story = {
     docs: {
       description: {
         story:
-          'De lijstitems eindigen met een punt. Een screenreader leest elk item als een aparte zin voor, wat de foutmelding duidelijker maakt.',
+          'De foutmelding bevat een lijst waarvan elke item eindigt met een punt. De foutmelding is gekoppeld aan het invoerveld via het WAI-ARIA-attribuut `aria-describedby`. De screenreader leest de foutmelding voor bij focus op het invoerveld en leest elk item als een aparte zin voor. Wanneer de items niet eindigen met een punt worden de items als een doorlopende zin voorgelezen, waardoor de boodschap minder duidelijk is.',
       },
     },
     status: { type: [] },
   },
 };
 
+// TODO: copy to non conforming stories
 export const FormFieldErrorMessageProgrammaticFocus: Story = {
-  name: 'Form Field Error Message met tabindex="-1" voor programmatische focus',
+  name: 'Fout: Form Field Error Message met tabindex="-1" voor programmatische focus',
   globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000015';
@@ -529,7 +531,7 @@ export const FormFieldErrorMessageProgrammaticFocus: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding heeft tabindex="-1". De melding is niet bereikbaar via normale toetsenbordnavigatie, maar kan na een validatiefout programmatisch focus krijgen zodat toetsenbord- en screenreadergebruikers direct worden geïnformeerd.',
+          'De foutmelding komt in de focus-volgorde voor, hoewel deze alleen informatief is en niet interactief. Gebruikers die met het toetsenbord navigeren, kunnen hierdoor onnodig op de melding terechtkomen. De oplossing is om de foutmelding niet via focus in de tabvolgorde te zetten en deze in plaats daarvan alleen aan het invoerveld te koppelen. Maak geen gebruik van het HTML-attribuut `tabindex` op de foutmelding, zodat deze niet in de tabvolgorde voorkomt. Maak gebruik van de WAI-ARIA-attribuut `aria-describedby` op het invoerveld, zodat de foutmelding wordt voorgelezen bij focus op het veld.',
       },
     },
     status: { type: [] },
@@ -565,7 +567,7 @@ export const FormFieldErrorMessageForcedColorsMode: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding blijft leesbaar in Forced Colors Mode. De tekstkleur past zich aan aan de systeemkleuren. Dit is een gesimuleerde weergave binnen Storybook (via de toolbar-knop "Forced Colors"); controleer voor definitieve verificatie ook de echte Forced Colors mode via de browser DevTools of het besturingssysteem.',
+          'De foutmelding blijft goed leesbaar in de modus voor hoge contrastkleurinstellingen. De tekstkleur past zich aan de systeemkleuren aan, zodat de boodschap ook in deze weergave duidelijk te zien is. Dit is een gesimuleerde weergave binnen Storybook (via de toolbar-knop "Forced Colors"), controleer voor definitieve verificatie ook de echte Forced Colors mode via de browser DevTools of het besturingssysteem.',
       },
     },
     status: { type: [] },
@@ -573,7 +575,7 @@ export const FormFieldErrorMessageForcedColorsMode: Story = {
 };
 
 export const FormFieldErrorMessageWithCode: Story = {
-  name: 'Form Field Error Message met een code element',
+  name: 'Form Field Error Message met een code fragment',
   globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000017';
@@ -596,7 +598,7 @@ export const FormFieldErrorMessageWithCode: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding bevat een code element binnen een Paragraph, zodat de tekst kan wrappen over meerdere regels en de regelafstand voldoende is.',
+          'De foutmelding bevat een code fragment binnen een paragraaf. De tekst kan wrappen over meerdere regels en de regelafstand is voldoende. De foutmelding bevat een HTML-element `code` binnen een HTML-element `p` in de tekst.',
       },
     },
     status: { type: [] },
@@ -632,7 +634,7 @@ export const FormFieldErrorMessageWithIcon: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding heeft een decoratief icoon vóór de tekst. Het icoon is verborgen voor screenreaders (`aria-hidden`), omdat de tekst van de foutmelding de betekenis al volledig overbrengt.',
+          'De foutmelding heeft een icoon naast de tekst. Het icoon is decoratief en wordt niet voorgelezen voor schermlezergebruikers, omdat de tekst zelf al de volledige boodschap overbrengt. De icoon is verborgen middels de WAI-ARIA-attribuut `aria-hidden="true"`.',
       },
     },
     status: { type: [] },
