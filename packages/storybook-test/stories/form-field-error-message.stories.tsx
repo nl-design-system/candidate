@@ -77,6 +77,7 @@ const meta = {
     tokens,
   },
   title: 'Componenten/Form Field Error Message',
+  globals: { dir: 'ltr', lang: 'nl' },
 } satisfies Meta<typeof FormFieldErrorMessage>;
 
 export default meta;
@@ -85,7 +86,6 @@ type Story = StoryObj<typeof meta>;
 
 export const FormFieldErrorMessageShort: Story = {
   name: 'Form Field Error Message met een korte foutmelding bij een niet-ingevuld veld',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000001';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -114,7 +114,6 @@ export const FormFieldErrorMessageShort: Story = {
 
 export const FormFieldErrorMessageLong: Story = {
   name: 'Form Field Error Message met een lange foutmelding bij een niet-ingevuld veld',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000002';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -145,7 +144,6 @@ export const FormFieldErrorMessageLong: Story = {
 
 export const FormFieldErrorMessageMultiple: Story = {
   name: 'Form Field Error Message met een foutmelding van meerdere paragrafen bij een niet-ingevuld veld',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000003';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -182,7 +180,6 @@ export const FormFieldErrorMessageMultiple: Story = {
 
 export const FormFieldErrorMessageWithParagraphComponent: Story = {
   name: 'Form Field Error Message met een NL Paragraph-component',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000004';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -214,7 +211,6 @@ export const FormFieldErrorMessageWithParagraphComponent: Story = {
 
 export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
   name: 'Form Field Error Message met twee NL Paragraph-componenten',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000005';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -244,7 +240,7 @@ export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
 
 export const FormFieldErrorMessageLangLTR: Story = {
   name: 'Form Field Error Message in het Engels',
-  globals: { dir: 'ltr', lang: 'nl' },
+  globals: { dir: 'ltr', lang: 'en' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000006';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -274,7 +270,7 @@ export const FormFieldErrorMessageLangLTR: Story = {
 
 export const FormFieldErrorMessageLangRTL: Story = {
   name: 'Form Field Error Message in het Arabisch',
-  globals: { dir: 'ltr', lang: 'nl' },
+  globals: { dir: 'ltr', lang: 'ar' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000007';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -303,7 +299,7 @@ export const FormFieldErrorMessageLangRTL: Story = {
 
 export const FormFieldErrorMessageVerticalText: Story = {
   name: 'Form Field Error Message in het Japans',
-  globals: { dir: 'ltr', lang: 'nl' },
+  globals: { dir: 'ltr', lang: 'ja' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000008';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -332,7 +328,6 @@ export const FormFieldErrorMessageVerticalText: Story = {
 
 export const FormFieldErrorMessageLargeText: Story = {
   name: 'Form Field Error Message met 200% zoom',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000009';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -361,7 +356,6 @@ export const FormFieldErrorMessageLargeText: Story = {
 
 export const FormFieldErrorMessageAboveTextInput: Story = {
   name: 'Form Field Error Message boven het invoerveld in de Form Field',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000010';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -390,7 +384,6 @@ export const FormFieldErrorMessageAboveTextInput: Story = {
 
 export const FormFieldErrorMessageBelowTextInputViaStyling: Story = {
   name: 'Form Field Error Message door styling onder het invoerveld (niet aangeraden)',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000011';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -421,7 +414,6 @@ export const FormFieldErrorMessageBelowTextInputViaStyling: Story = {
 
 export const FormFieldErrorMessageWordBreak: Story = {
   name: 'Form Field Error Message met woorden die niet op 1 regel passen',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000012';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -452,7 +444,7 @@ export const FormFieldErrorMessageWordBreak: Story = {
 
 export const FormFieldErrorMessageSmallViewport: Story = {
   name: 'Form Field Error Message in een kleine viewport',
-  globals: { dir: 'ltr', lang: 'nl', viewport: { value: 'wcag400' } },
+  globals: { viewport: { value: 'wcag400' } },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000013';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -483,7 +475,6 @@ export const FormFieldErrorMessageSmallViewport: Story = {
 
 export const FormFieldErrorMessageList: Story = {
   name: 'Form Field Error Message met een lijst met punten',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000014';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -517,7 +508,7 @@ export const FormFieldErrorMessageList: Story = {
 
 export const FormFieldErrorMessageForcedColorsMode: Story = {
   name: 'Form Field Error Message in Forced Colors mode',
-  globals: { dir: 'ltr', lang: 'nl', forcedColors: 'active' },
+  globals: { forcedColors: 'active' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000016';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -553,7 +544,7 @@ export const FormFieldErrorMessageForcedColorsMode: Story = {
 
 export const FormFieldErrorMessageWithCode: Story = {
   name: 'Form Field Error Message met een code fragment',
-  globals: { dir: 'ltr', lang: 'nl' },
+  globals: { dir: 'ltr', lang: 'en' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000017';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -584,7 +575,6 @@ export const FormFieldErrorMessageWithCode: Story = {
 
 export const FormFieldErrorMessageWithIcon: Story = {
   name: 'Form Field Error Message met een icoon',
-  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000018';
     const ERROR_ID = `${INPUT_ID}-error`;
