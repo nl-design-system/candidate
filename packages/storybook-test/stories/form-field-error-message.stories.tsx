@@ -508,36 +508,6 @@ export const FormFieldErrorMessageList: Story = {
   },
 };
 
-// TODO: copy to non conforming stories
-export const FormFieldErrorMessageProgrammaticFocus: Story = {
-  name: 'Fout: Form Field Error Message met tabindex="-1" voor programmatische focus',
-  globals: { dir: 'ltr', lang: 'nl' },
-  render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000015';
-    const ERROR_ID = `${INPUT_ID}-error`;
-    return (
-      <>
-        <label htmlFor={INPUT_ID}>Naam</label>
-        <FormFieldErrorMessage id={ERROR_ID} tabIndex={-1}>
-          Het veld Naam is niet ingevuld. Dit is een verplicht veld.
-        </FormFieldErrorMessage>
-        <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
-        </div>
-      </>
-    );
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'De foutmelding komt in de focus-volgorde voor, hoewel deze alleen informatief is en niet interactief. Gebruikers die met het toetsenbord navigeren, kunnen hierdoor onnodig op de melding terechtkomen. De oplossing is om de foutmelding niet via focus in de tabvolgorde te zetten en deze in plaats daarvan alleen aan het invoerveld te koppelen. Maak geen gebruik van het HTML-attribuut `tabindex` op de foutmelding, zodat deze niet in de tabvolgorde voorkomt. Maak gebruik van de WAI-ARIA-attribuut `aria-describedby` op het invoerveld, zodat de foutmelding wordt voorgelezen bij focus op het veld.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
 export const FormFieldErrorMessageForcedColorsMode: Story = {
   name: 'Form Field Error Message in Forced Colors mode',
   globals: { dir: 'ltr', lang: 'nl', forcedColors: 'active' },
