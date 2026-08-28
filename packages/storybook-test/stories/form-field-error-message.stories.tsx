@@ -15,6 +15,13 @@ import tokens from '../../tokens/form-field-error-message-tokens/tokens.json';
 
 const meta = {
   argTypes: {
+    id: {
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+      },
+      type: { name: 'string', required: false },
+    },
     children: {
       control: { type: 'text' },
       table: {
@@ -29,7 +36,7 @@ const meta = {
       },
       type: { name: 'string', required: false },
     },
-    className: {
+    role: {
       control: { type: 'text' },
       table: {
         type: { summary: 'string' },
