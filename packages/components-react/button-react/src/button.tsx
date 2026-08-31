@@ -92,10 +92,16 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
 
     /**
      * Indicates that the button is not available because an action is being
-     * performed. It changes the cursor to `wait` and sets `aria-disabled` to
-     * true.
-     * Make sure to update the label to indicate that the button is not
-     * actionable
+     * performed. It changes the cursor to `wait`.
+     *
+     * For a non-toggle button, `aria-disabled` is also set to `true`, to
+     * prevent the (asynchronous) action from being triggered again.
+     *
+     * A toggle button (`toggle`) is kept interactive while busy, so the user
+     * can still undo an accidental toggle (e.g. cancel a "Like" action)
+     * while it is pending.
+     *
+     * Make sure to update the label to indicate that the button is busy.
      */
     busy?: boolean;
 
@@ -179,7 +185,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
         'nl-button--icon-only': iconOnly,
       })}
       aria-pressed={toggle ? String(Boolean(pressed)) : undefined}
-      aria-disabled={disabled || busy ? 'true' : undefined}
+      aria-disabled={disabled || (busy && !toggle) ? 'true' : undefined}
       disabled={htmlDisabled}
       {...restProps}
     >

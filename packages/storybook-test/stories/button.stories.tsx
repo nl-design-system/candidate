@@ -1,6 +1,7 @@
 /* eslint-disable no-alert */
 /* eslint-disable react/no-unescaped-entities */
-import type { ComponentType, HTMLAttributes } from 'react';
+import type { ComponentType, FormEvent, HTMLAttributes } from 'react';
+import { useState } from 'react';
 import clsx from 'clsx';
 import { merge } from 'lodash-es';
 import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
@@ -14,6 +15,8 @@ import {
   IconCheck,
   IconChevronDown,
   IconChevronUp,
+  IconHeart,
+  IconHeartFilled,
   IconLanguage,
   IconLink,
   IconMultiplier2x,
@@ -633,6 +636,84 @@ export const ButtonInformativeIconStartAndEnd: Story = {
     };
 
     return <ButtonComponent {...args} {...updatedArgs} onClick={onClick} />;
+  },
+};
+
+export const ButtonBusySubmitStep: Story = {
+  name: 'Interactief: Submit Button "Volgende" die busy is tijdens het versturen',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een Button met \`type="submit"\` in een formulier met twee stappen. Klik op "Volgende >" om verder te gaan naar "Stap 2". De button is daarna 2 seconden \`busy\`: \`aria-disabled="true"\` wordt gezet, zodat het formulier niet dubbel verstuurd kan worden zolang de actie loopt.`,
+      },
+    },
+    status: { type: [] },
+  },
+  render: function Render(_props, { component }) {
+    const Button = component as ComponentType<ButtonProps>;
+    const [step, setStep] = useState<1 | 2>(1);
+    const [busy, setBusy] = useState(false);
+
+    const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      setBusy(true);
+      setTimeout(() => {
+        setBusy(false);
+        setStep(2);
+      }, 2000);
+    };
+
+    return (
+      <form onSubmit={onSubmit}>
+        <h2>{step === 1 ? 'Stap 1' : 'Stap 2'}</h2>
+        {step === 1 ? (
+          <Button type="submit" busy={busy}>
+            {busy ? 'Bezig...' : 'Volgende >'}
+          </Button>
+        ) : (
+          <p>Je bent aangekomen op Stap 2.</p>
+        )}
+      </form>
+    );
+  },
+};
+
+export const ButtonBusyToggleLike: Story = {
+  name: 'Interactief: Toggle Button "Like" die busy is tijdens het bijwerken',
+  args: {
+    label: undefined,
+    pressed: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Een toggle Button "Like" die na een klik 2 seconden \`busy\` is, terwijl de like op de achtergrond verwerkt wordt. Omdat het een toggle button is, blijft de button ondanks \`busy\` bedienbaar: \`aria-disabled\` wordt niet gezet. Zo kan de gebruiker de actie tijdens het busy zijn ongedaan maken, bijvoorbeeld na een per ongeluk geplaatste like op een trage verbinding.`,
+      },
+    },
+    status: { type: [] },
+  },
+  render: function Render(args) {
+    const [pressed, setPressed] = useState(false);
+    const [busy, setBusy] = useState(false);
+
+    const onClick = () => {
+      setPressed((current) => !current);
+      setBusy(true);
+      setTimeout(() => setBusy(false), 2000);
+    };
+
+    return (
+      <ButtonComponent
+        {...args}
+        toggle
+        pressed={pressed}
+        busy={busy}
+        aria-label={pressed ? 'Like verwijderen' : 'Like'}
+        iconStart={<Icon>{pressed ? <IconHeartFilled /> : <IconHeart />}</Icon>}
+        onClick={onClick}
+      />
+    );
   },
 };
 

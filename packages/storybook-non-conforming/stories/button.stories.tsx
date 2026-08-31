@@ -308,6 +308,29 @@ De Button voldoet niet aan [WCAG-succescriterium 1.3.1 Info en relaties](https:/
   },
 };
 
+export const ButtonNoBusyState: Story = {
+  name: 'Fout: Button is busy, maar die informatie is niet beschikbaar voor hulpsoftware',
+  decorators: ExampleBodyTextDecorator,
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  args: {
+    children: '⏳ Verzenden',
+    className: 'nl-button--busy',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `Deze Button heeft wel het visueel ontwerp van een Busy Button, maar die informatie is niet beschikbaar voor hulpsoftware. Er ontbreekt \`aria-disabled="true"\`. Een screenreadergebruiker krijgt niet mee dat de actie al bezig is, en kan de knop opnieuw activeren, bijvoorbeeld een dubbele verzending veroorzaken.
+
+De Button voldoet niet aan [WCAG-succescriterium 4.1.2 Naam, rol, waarde](https://nldesignsystem.nl/wcag/4.1.2/), omdat de status van het component niet programmatisch bepaald kan worden.`,
+      },
+    },
+    status: { type: [] },
+  },
+};
+
 export const ButtonNoExpanded: Story = {
   name: 'Fout: Button is expanded, maar die informatie is niet beschikbaar voor hulpsoftware',
   decorators: ExampleBodyTextDecorator,
