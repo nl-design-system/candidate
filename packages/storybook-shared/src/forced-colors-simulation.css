@@ -1,0 +1,27 @@
+/* Approximates Forced Colors Mode with CSS System Color keywords, since forced-colors can only be
+   toggled by the browser/OS itself, never from page-side CSS or JavaScript. Not pixel-accurate for
+   every component; verify with the browser DevTools "Emulate CSS media feature forced-colors" too. */
+
+[data-forced-colors="active"] {
+  background-color: Canvas !important;
+  color: CanvasText !important;
+}
+
+[data-forced-colors="active"] a {
+  color: LinkText !important;
+}
+
+[data-forced-colors="active"] button,
+[data-forced-colors="active"] input,
+[data-forced-colors="active"] select,
+[data-forced-colors="active"] textarea {
+  background-color: Field !important;
+  border-color: ButtonText !important;
+  color: FieldText !important;
+}
+
+[data-forced-colors="active"] * {
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
