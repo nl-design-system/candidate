@@ -3,7 +3,6 @@ import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { Button, ButtonProps } from './button';
-import { commandProps } from './command-props';
 
 afterEach(() => {
   cleanup();
@@ -21,7 +20,11 @@ describe('Button', () => {
   });
 
   it('passes through commandfor and command attributes', () => {
-    render(<Button {...commandProps('dialog', 'close')}>Close dialog</Button>);
+    render(
+      <Button commandfor="dialog" command="close">
+        Close dialog
+      </Button>,
+    );
 
     expect(screen.getByRole('button')).toHaveAttribute('commandfor', 'dialog');
     expect(screen.getByRole('button')).toHaveAttribute('command', 'close');

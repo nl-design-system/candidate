@@ -4,7 +4,6 @@ import { expect, test } from '@playwright/experimental-ct-react';
 import { cartesianProduct } from 'es-toolkit';
 import { Button } from './css';
 import type { ButtonHint, ButtonPurpose } from './button';
-import { commandProps } from './command-props';
 
 const purposes = ['primary', 'secondary', 'subtle'] as const satisfies readonly ButtonPurpose[];
 const hints = [undefined, 'positive', 'negative'] as const satisfies readonly (ButtonHint | undefined)[];
@@ -150,7 +149,9 @@ test('handles [autofocus] correctly', async ({ mount }) => {
 test('handles [commandfor="id"][command="show-modal"] correctly', async ({ mount }) => {
   const component = await mount(
     <>
-      <Button {...commandProps('dialog', 'show-modal')}>Open dialog</Button>
+      <Button commandfor="dialog" command="show-modal">
+        Open dialog
+      </Button>
 
       <dialog id="dialog">Dialog content</dialog>
     </>,
@@ -172,7 +173,9 @@ test('handles [commandfor="id"][command="show-modal"] correctly', async ({ mount
 test('handles [commandfor="id"][command="request-close"] correctly', async ({ mount }) => {
   const component = await mount(
     <>
-      <Button {...commandProps('dialog', 'request-close')}>Close dialog</Button>
+      <Button commandfor="dialog" command="request-close">
+        Close dialog
+      </Button>
 
       <dialog id="dialog" open>
         Dialog content
@@ -195,7 +198,9 @@ test('handles [commandfor="id"][command="request-close"] correctly', async ({ mo
 test('handles [commandfor="id"][command="show-popover"] correctly', async ({ mount }) => {
   const component = await mount(
     <>
-      <Button {...commandProps('popover', 'show-popover')}>Open popover</Button>
+      <Button commandfor="popover" command="show-popover">
+        Open popover
+      </Button>
 
       <div id="popover" popover="">
         Popover content
@@ -219,7 +224,9 @@ test('handles [commandfor="id"][command="show-popover"] correctly', async ({ mou
 test('handles [commandfor="id"][command="hide-popover"] correctly', async ({ mount }) => {
   const component = await mount(
     <>
-      <Button {...commandProps('popover', 'hide-popover')}>Hide popover</Button>
+      <Button commandfor="popover" command="hide-popover">
+        Hide popover
+      </Button>
 
       <div id="popover" popover="">
         Popover content
@@ -245,7 +252,9 @@ test('handles [commandfor="id"][command="hide-popover"] correctly', async ({ mou
 test('handles [commandfor="id"][command="toggle-popover"] correctly', async ({ mount }) => {
   const component = await mount(
     <>
-      <Button {...commandProps('popover', 'toggle-popover')}>Toggle popover</Button>
+      <Button commandfor="popover" command="toggle-popover">
+        Toggle popover
+      </Button>
 
       <div id="popover" popover="">
         Popover content
@@ -272,7 +281,9 @@ test('handles [commandfor="id"][command="toggle-popover"] correctly', async ({ m
 test('handles [commandfor="id"][command="--custom-event"] correctly', async ({ mount }) => {
   const component = await mount(
     <>
-      <Button {...commandProps('command-target', '--custom-event')}>Run command</Button>
+      <Button commandfor="command-target" command="--custom-event">
+        Run command
+      </Button>
 
       <div id="command-target">Command target</div>
     </>,
