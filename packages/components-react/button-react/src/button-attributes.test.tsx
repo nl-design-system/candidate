@@ -35,6 +35,17 @@ describe('Button', () => {
     expect(button).toHaveFocus();
   });
 
+  // Real navigation for `_parent`/`_top` needs an actual frame ancestry to navigate, which
+  // isn't testable outside a real browser — only the attribute pass-through is verified here.
+  for (const target of ['_parent', '_top'] as const) {
+    it(`handles [formtarget="${target}"] correctly`, () => {
+      render(<ButtonComponent formTarget={target}>{text}</ButtonComponent>);
+      const button = screen.getByRole('button');
+
+      expect(button).toHaveAttribute('formtarget', target);
+    });
+  }
+
   it('renders the HTML-attribute disabled correctly', () => {
     render(<ButtonComponent htmlDisabled />);
     const button = screen.getByRole('button');

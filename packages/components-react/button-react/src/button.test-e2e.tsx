@@ -140,12 +140,6 @@ for (const [purpose, hint, state] of cartesianProduct(purposes, hints, states)) 
   });
 }
 
-test('handles [autofocus] correctly', async ({ mount }) => {
-  const component = await mount(<Button autoFocus>Klik mij</Button>);
-
-  await expect(component).toBeFocused();
-});
-
 test('handles [commandfor="id"][command="show-modal"] correctly', async ({ mount }) => {
   const component = await mount(
     <>
@@ -474,26 +468,6 @@ test('handles [formtarget="_blank"] correctly', async ({ mount, page }) => {
   await expect(newPage).toHaveURL(/\/submit\?name=John/);
 });
 
-// `_parent` and `_top` can't be exercised for real navigation here: the CT harness mounts
-// components directly into the top-level page (no iframe), so there's no distinct ancestor
-// frame to navigate. Only the attribute pass-through is verified.
-for (const target of ['_parent', '_top'] as const) {
-  test(`handles [formtarget="${target}"] correctly`, async ({ mount }) => {
-    const component = await mount(
-      <div>
-        <form target={target}>
-          <Button formTarget={target} type="submit">
-            Submit
-          </Button>
-        </form>
-      </div>,
-    );
-
-    const button = component.getByRole('button', { name: 'Submit' });
-
-    await expect(button).toHaveAttribute('formtarget', target);
-  });
-}
 test('handles [name] correctly', async ({ mount, page }) => {
   const component = await mount(
     <div>
