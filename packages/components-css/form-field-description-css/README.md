@@ -23,7 +23,7 @@ If you use a CDN, you can import the CSS like this:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@nl-design-system-candidate/form-field-description-css@1/dist/form-field-description.css"
+  href="https://cdn.jsdelivr.net/npm/@nl-design-system-candidate/form-field-description-css/dist/form-field-description.css"
 />
 ```
 

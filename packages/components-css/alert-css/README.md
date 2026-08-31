@@ -27,7 +27,7 @@ yarn add @nl-design-system-candidate/alert-css
 You can import the CSS directly from a CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nl-design-system-candidate/alert-css@1/dist/alert.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nl-design-system-candidate/alert-css/dist/alert.css" />
 ```
 
 You can import the CSS directly from the `node_modules/`
