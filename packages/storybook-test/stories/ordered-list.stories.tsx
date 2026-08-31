@@ -18,6 +18,9 @@ const meta = {
       description: {
         component: componentMarkdown,
       },
+      source: {
+        type: 'dynamic',
+      },
     },
     externalLinks: [
       {
