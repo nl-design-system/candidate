@@ -1,5 +1,14 @@
 # @nl-design-system-candidate/button-css
 
+## 1.1.1
+
+### Patch Changes
+
+- 5686d50: Add icon-only button documentation
+- 038c7f0: Prefer `border-width: 0` over `border: 0` to adhere to updated lint rules.
+- 300660a: Update CDN link in README to not set version of package.
+- cfa7565: Add `nl-button--forced-colors-test` class for testing the existing forced-colors styling in Storybook
+
 ## 1.1.0
 
 ### Minor Changes

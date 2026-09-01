@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-candidate/paragraph-react",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "React implementation of the NL Design System Paragraph component",
   "license": "EUPL-1.2",
   "homepage": "https://nldesignsystem.nl/paragraph",

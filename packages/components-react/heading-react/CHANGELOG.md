@@ -1,5 +1,13 @@
 # @nl-design-system-candidate/heading-react
 
+## 1.1.8
+
+### Patch Changes
+
+- 3a39016: Upgrade rollup (fixes GHSA-mw96-cpmx-2vgc)
+- Updated dependencies [52b06b1]
+  - @nl-design-system-candidate/heading-css@2.0.0
+
 ## 1.1.7
 
 ### Patch Changes

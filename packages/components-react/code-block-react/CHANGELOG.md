@@ -1,5 +1,13 @@
 # @nl-design-system-candidate/code-block-react
 
+## 1.4.1
+
+### Patch Changes
+
+- 3a39016: Upgrade rollup (fixes GHSA-mw96-cpmx-2vgc)
+- Updated dependencies [52b06b1]
+  - @nl-design-system-candidate/code-block-css@2.0.0
+
 ## 1.4.0
 
 ### Minor Changes
