@@ -1,5 +1,21 @@
 # @nl-design-system-candidate/paragraph-css
 
+## 3.0.0
+
+### Major Changes
+
+- 52b06b1: This release contains potentially **breaking** changes: the HTML SCSS mixin names have been standardized to a `nl-html--*` naming convention.
+  - code-block-css: `pre` → `nl-html--code-block`
+  - code-css: `code` → `nl-html--code`
+  - heading-css: `h1`–`h6` → `nl-html--h1`–`nl-html--h6`
+  - link-css: `nl-link--html-a` → `nl-html--link`
+  - mark-css: `mark` → `nl-html--mark`
+  - paragraph-css: `p` → `nl-html--paragraph`
+
+### Patch Changes
+
+- 01df7bb: Documentation improvements in README
+
 ## 2.1.3
 
 ### Patch Changes
