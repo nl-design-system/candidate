@@ -116,12 +116,12 @@ Voor de HTML component:
 
   Automatische styling via de volgende selectors:
   - `nl-field-label--option` via:
-    - `label:has([type="checkbox" i])` voor Switch en Checkbox
-    - `label:has([type="radio" i])`
+    - `label:where([type="checkbox" i])` voor Switch en Checkbox
+    - `label:where([type="radio" i])`
 
   - `nl-field-label--disabled` via:
-    - `label:has([type="checkbox" i]:disabled)` voor Switch en Checkbox
-    - `label:has([type="radio" i]:disabled)`
+    - `label:where([type="checkbox" i]:disabled)` voor Switch en Checkbox
+    - `label:where([type="radio" i]:disabled)`
 
   - `nl-field-label--inherit` via:
     - `:is(h1, h2, h3, h4, h5, h6) label`
