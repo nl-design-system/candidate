@@ -139,3 +139,443 @@ for (const [purpose, hint, state] of cartesianProduct(purposes, hints, states)) 
     expect(results.violations).toEqual([]);
   });
 }
+
+test('handles [commandfor="id"][command="show-modal"] correctly', async ({ mount }) => {
+  const component = await mount(
+    <>
+      <Button commandfor="dialog" command="show-modal">
+        Open dialog
+      </Button>
+
+      <dialog id="dialog">Dialog content</dialog>
+    </>,
+  );
+
+  const button = component.getByRole('button');
+  const dialog = component.locator('#dialog');
+
+  await expect(button).toHaveAttribute('commandfor', 'dialog');
+  await expect(button).toHaveAttribute('command', 'show-modal');
+
+  await expect(dialog).not.toBeVisible();
+
+  await button.click();
+
+  await expect(dialog).toBeVisible();
+});
+
+test('handles [commandfor="id"][command="request-close"] correctly', async ({ mount }) => {
+  const component = await mount(
+    <>
+      <Button commandfor="dialog" command="request-close">
+        Close dialog
+      </Button>
+
+      <dialog id="dialog" open>
+        Dialog content
+      </dialog>
+    </>,
+  );
+
+  const button = component.getByRole('button');
+  const dialog = component.locator('#dialog');
+
+  await expect(button).toHaveAttribute('commandfor', 'dialog');
+  await expect(button).toHaveAttribute('command', 'request-close');
+
+  await expect(dialog).toBeVisible();
+
+  await button.click();
+
+  await expect(dialog).not.toBeVisible();
+});
+test('handles [commandfor="id"][command="show-popover"] correctly', async ({ mount }) => {
+  const component = await mount(
+    <>
+      <Button commandfor="popover" command="show-popover">
+        Open popover
+      </Button>
+
+      <div id="popover" popover="">
+        Popover content
+      </div>
+    </>,
+  );
+
+  const button = component.getByRole('button');
+  const popover = component.locator('#popover');
+
+  await expect(button).toHaveAttribute('commandfor', 'popover');
+  await expect(button).toHaveAttribute('command', 'show-popover');
+
+  await expect(popover).not.toBeVisible();
+
+  await button.click();
+
+  await expect(popover).toBeVisible();
+});
+
+test('handles [commandfor="id"][command="hide-popover"] correctly', async ({ mount }) => {
+  const component = await mount(
+    <>
+      <Button commandfor="popover" command="hide-popover">
+        Hide popover
+      </Button>
+
+      <div id="popover" popover="">
+        Popover content
+      </div>
+    </>,
+  );
+
+  const button = component.getByRole('button');
+  const popover = component.locator('#popover');
+
+  await expect(button).toHaveAttribute('commandfor', 'popover');
+  await expect(button).toHaveAttribute('command', 'hide-popover');
+
+  await popover.evaluate((element) => {
+    (element as HTMLElement & { showPopover: () => void }).showPopover();
+  });
+  await expect(popover).toBeVisible();
+
+  await button.click();
+
+  await expect(popover).not.toBeVisible();
+});
+test('handles [commandfor="id"][command="toggle-popover"] correctly', async ({ mount }) => {
+  const component = await mount(
+    <>
+      <Button commandfor="popover" command="toggle-popover">
+        Toggle popover
+      </Button>
+
+      <div id="popover" popover="">
+        Popover content
+      </div>
+    </>,
+  );
+
+  const button = component.getByRole('button');
+  const popover = component.locator('#popover');
+
+  await expect(button).toHaveAttribute('commandfor', 'popover');
+  await expect(button).toHaveAttribute('command', 'toggle-popover');
+
+  await expect(popover).not.toBeVisible();
+
+  await button.click();
+
+  await expect(popover).toBeVisible();
+
+  await button.click();
+
+  await expect(popover).not.toBeVisible();
+});
+test('handles [commandfor="id"][command="--custom-event"] correctly', async ({ mount }) => {
+  const component = await mount(
+    <>
+      <Button commandfor="command-target" command="--custom-event">
+        Run command
+      </Button>
+
+      <div id="command-target">Command target</div>
+    </>,
+  );
+
+  const button = component.getByRole('button');
+  const target = component.locator('#command-target');
+
+  await expect(button).toHaveAttribute('commandfor', 'command-target');
+  await expect(button).toHaveAttribute('command', '--custom-event');
+
+  const commandPromise = target.evaluate((element) => {
+    return new Promise<string | undefined>((resolve) => {
+      element.addEventListener('command', (event) => resolve((event as Event & { command?: string }).command), {
+        once: true,
+      });
+    });
+  });
+
+  await button.click();
+
+  await expect(commandPromise).resolves.toBe('--custom-event');
+});
+
+test('handles [formaction] correctly', async ({ mount, page }) => {
+  const component = await mount(
+    <form action="/default-action" method="get">
+      <Button formAction="/button-action" type="submit">
+        Submit
+      </Button>
+    </form>,
+  );
+
+  const button = component.getByRole('button', { name: 'Submit' });
+
+  await expect(button).toHaveAttribute('formaction', '/button-action');
+
+  const requestPromise = page.waitForRequest((request) => request.url().includes('/button-action'));
+
+  await button.click();
+
+  const request = await requestPromise;
+
+  expect(request.url()).toContain('/button-action');
+
+  await page.waitForLoadState('networkidle');
+});
+test('handles [formenctype] correctly', async ({ mount, page }) => {
+  const component = await mount(
+    <form action="/submit" method="post" encType="application/x-www-form-urlencoded">
+      <input name="name" value="John" />
+
+      <Button formEncType="multipart/form-data" type="submit">
+        Submit
+      </Button>
+    </form>,
+  );
+
+  const button = component.getByRole('button', { name: 'Submit' });
+
+  await expect(button).toHaveAttribute('formenctype', 'multipart/form-data');
+
+  const requestPromise = page.waitForRequest((request) => request.url().includes('/submit'));
+
+  await button.click();
+
+  const request = await requestPromise;
+
+  expect(request.postData()).toContain('John');
+  expect(request.headers()['content-type']).toContain('multipart/form-data');
+
+  await page.waitForLoadState('networkidle');
+});
+test('handles [formmethod="get"] correctly', async ({ mount, page }) => {
+  const component = await mount(
+    <form action="/submit" method="post">
+      <input name="name" value="John" />
+      <Button type="submit" formMethod="get">
+        Submit
+      </Button>
+    </form>,
+  );
+
+  const button = component.getByRole('button', { name: 'Submit' });
+
+  await expect(button).toHaveAttribute('formmethod', 'get');
+
+  await button.click();
+
+  await expect(page).toHaveURL(/\/submit\?name=John/);
+  await page.waitForLoadState('networkidle');
+});
+test('handles [formmethod="dialog"] correctly', async ({ mount }) => {
+  const component = await mount(
+    <dialog open>
+      <form>
+        <Button formMethod="dialog" type="submit">
+          Close dialog
+        </Button>
+      </form>
+    </dialog>,
+  );
+
+  const button = component.getByRole('button', { name: 'Close dialog' });
+
+  await expect(button).toHaveAttribute('formmethod', 'dialog');
+  await expect(component).toBeVisible();
+
+  await button.click();
+
+  await expect(component).not.toBeVisible();
+});
+test('handles [formnovalidate] correctly', async ({ mount }) => {
+  const component = await mount(
+    <div>
+      <form>
+        <input name="email" type="email" required />
+        <Button formNoValidate type="submit">
+          Submit
+        </Button>
+      </form>
+    </div>,
+  );
+
+  const button = component.getByRole('button', { name: 'Submit' });
+  const form = component.locator('form');
+
+  await expect(button).toHaveAttribute('formnovalidate');
+
+  await form.evaluate((element) => {
+    element.addEventListener('submit', (event) => {
+      event.preventDefault();
+      element.dataset['submitted'] = 'true';
+    });
+  });
+
+  await button.click();
+
+  await expect(form).toHaveAttribute('data-submitted', 'true');
+});
+test('handles [formtarget="_self"] correctly', async ({ mount, page }) => {
+  const component = await mount(
+    <div>
+      <form action="/submit" method="get" target="_blank">
+        <input name="name" value="John" />
+        <Button formTarget="_self" type="submit">
+          Submit
+        </Button>
+      </form>
+    </div>,
+  );
+
+  const button = component.getByRole('button', { name: 'Submit' });
+
+  await expect(button).toHaveAttribute('formtarget', '_self');
+
+  const pagesBefore = page.context().pages().length;
+
+  await button.click();
+
+  await expect(page).toHaveURL(/\/submit\?name=John/);
+  expect(page.context().pages()).toHaveLength(pagesBefore);
+  await page.waitForLoadState('networkidle');
+});
+test('handles [formtarget="_blank"] correctly', async ({ mount, page }) => {
+  const component = await mount(
+    <div>
+      <form action="/submit" method="get">
+        <input name="name" value="John" />
+
+        <Button formTarget="_blank" type="submit">
+          Submit
+        </Button>
+      </form>
+    </div>,
+  );
+
+  const button = component.getByRole('button', { name: 'Submit' });
+
+  await expect(button).toHaveAttribute('formtarget', '_blank');
+
+  const newPagePromise = page.waitForEvent('popup');
+
+  await button.click();
+
+  const newPage = await newPagePromise;
+
+  await expect(newPage).toHaveURL(/\/submit\?name=John/);
+});
+
+test('handles [name] correctly', async ({ mount, page }) => {
+  const component = await mount(
+    <div>
+      <form action="/submit" method="get">
+        <Button name="action" value="save" type="submit">
+          Save
+        </Button>
+      </form>
+    </div>,
+  );
+
+  const button = component.getByRole('button', { name: 'Save' });
+
+  await expect(button).toHaveAttribute('name', 'action');
+
+  await button.click();
+
+  await expect(page).toHaveURL(/\/submit\?action=save/);
+  await page.waitForLoadState('networkidle');
+});
+
+test('handles [popovertarget] correctly', async ({ mount }) => {
+  const component = await mount(
+    <div>
+      <Button popoverTarget="popover">Open popover</Button>
+
+      <div id="popover" popover="">
+        Popover content
+      </div>
+    </div>,
+  );
+
+  const button = component.getByRole('button', { name: 'Open popover' });
+  const popover = component.locator('#popover');
+
+  await expect(button).toHaveAttribute('popovertarget', 'popover');
+  await expect(popover).not.toBeVisible();
+
+  await button.click();
+
+  await expect(popover).toBeVisible();
+});
+test('handles [popovertarget="id"][popovertargetaction="hide"] correctly', async ({ mount }) => {
+  const component = await mount(
+    <div>
+      <button popoverTarget="popover" popoverTargetAction="show">
+        Open popover
+      </button>
+      <Button popoverTarget="popover" popoverTargetAction="hide">
+        Close popover
+      </Button>
+      <div id="popover" popover="">
+        Popover content
+      </div>
+    </div>,
+  );
+
+  const openButton = component.getByRole('button', { name: 'Open popover' });
+  const closeButton = component.getByRole('button', { name: 'Close popover' });
+  const popover = component.locator('#popover');
+
+  await expect(openButton).toHaveAttribute('popovertarget', 'popover');
+  await expect(openButton).toHaveAttribute('popovertargetaction', 'show');
+
+  await expect(closeButton).toHaveAttribute('popovertarget', 'popover');
+  await expect(closeButton).toHaveAttribute('popovertargetaction', 'hide');
+
+  await expect(popover).not.toBeVisible();
+
+  await openButton.click();
+
+  await expect(popover).toBeVisible();
+
+  await closeButton.click();
+
+  await expect(popover).not.toBeVisible();
+});
+
+const popoverTargetActions = [
+  { action: 'show', label: 'Open popover', expectedVisibilityAfterClicks: [true] },
+  { action: 'toggle', label: 'Toggle popover', expectedVisibilityAfterClicks: [true, false] },
+] as const;
+
+for (const { action, label, expectedVisibilityAfterClicks } of popoverTargetActions) {
+  test(`handles [popovertarget="id"][popovertargetaction="${action}"] correctly`, async ({ mount }) => {
+    const component = await mount(
+      <div>
+        <Button popoverTarget="popover" popoverTargetAction={action}>
+          {label}
+        </Button>
+        <div id="popover" popover="">
+          Popover content
+        </div>
+      </div>,
+    );
+
+    const button = component.getByRole('button', { name: label });
+    const popover = component.locator('#popover');
+
+    await expect(button).toHaveAttribute('popovertarget', 'popover');
+    await expect(button).toHaveAttribute('popovertargetaction', action);
+
+    await expect(popover).not.toBeVisible();
+
+    for (const expectedVisible of expectedVisibilityAfterClicks) {
+      await button.click();
+      if (expectedVisible) await expect(popover).toBeVisible();
+      else await expect(popover).not.toBeVisible();
+    }
+  });
+}
