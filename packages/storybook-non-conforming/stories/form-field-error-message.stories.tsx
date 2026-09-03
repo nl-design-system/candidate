@@ -42,12 +42,14 @@ export const FormFieldErrorMessageWithInteractiveContent: Story = {
     lang: 'nl',
   },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000001';
+    const INPUT_ID = 'f4fea1ac-3e4d-42dc-93b7-03eb80c6ddf3';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <input id={INPUT_ID} aria-describedby={ERROR_ID} type="checkbox" />
-        <label htmlFor={INPUT_ID}>Voorwaarden</label>
+        <div>
+          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="checkbox" />
+          <label htmlFor={INPUT_ID}>Voorwaarden</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           Het veld Voorwaarden is niet aangevinkt. Dit is een verplicht veld.{' '}
           <a href="/voorwaarden">Lees de voorwaarden.</a>
@@ -74,7 +76,7 @@ export const FormFieldErrorMessageAsSpan: Story = {
   },
   decorators: CandidateDisableCssDecorator,
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000002';
+    const INPUT_ID = 'b4a76e12-9e01-4c70-a472-05fcf9066668';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
@@ -106,11 +108,13 @@ export const FormFieldErrorMessageAsStatus: Story = {
     lang: 'nl',
   },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000004';
+    const INPUT_ID = 'f7a0b878-8414-4d62-91ea-7dc894d222eb';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Uw idee</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Uw idee</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID} role="alert">
           Nog 250 karakters over.
         </FormFieldErrorMessage>
@@ -138,11 +142,13 @@ export const FormFieldErrorMessageAboveTextInputViaVisualOrder: Story = {
     lang: 'nl',
   },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000005';
+    const INPUT_ID = 'bc234966-e61c-48c3-8b7f-5cb4e9cc86e0';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Postcode</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
           <FormFieldErrorMessage id={ERROR_ID} style={{ order: -1 }}>
@@ -170,11 +176,13 @@ export const FormFieldErrorMessageBelowTextInput: Story = {
     lang: 'nl',
   },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000005C';
+    const INPUT_ID = 'f3784393-7cd9-4cb3-a5de-3e8dc8a8a344';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Postcode</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
         <div>
           <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
         </div>
@@ -202,11 +210,13 @@ export const FormFieldErrorMessageWithDetailsAndSummary: Story = {
     lang: 'nl',
   },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000006';
+    const INPUT_ID = 'eaf45a0c-cdcf-4ad5-b4cc-dea92a5bf0ed';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           <details>
             <summary>Foutmelding</summary>
@@ -237,19 +247,23 @@ export const FormFieldErrorMessageLate: Story = {
     lang: 'nl',
   },
   render: () => {
-    const NAME_INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000007';
+    const NAME_INPUT_ID = 'd7c0f997-3dd2-4ea3-b346-3d326dc4e9af';
     const NAME_ERROR_ID = `${NAME_INPUT_ID}-error`;
-    const POSTCODE_INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000008';
+    const POSTCODE_INPUT_ID = 'dacc4838-d81f-410b-bf9c-7087d38326bd';
     return (
       <>
-        <label htmlFor={NAME_INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={NAME_INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage id={NAME_ERROR_ID} role="alert">
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
           <input id={NAME_INPUT_ID} aria-describedby={NAME_ERROR_ID} type="text" autoComplete="name" />
         </div>
-        <label htmlFor={POSTCODE_INPUT_ID}>Postcode</label>
+        <div>
+          <label htmlFor={POSTCODE_INPUT_ID}>Postcode</label>
+        </div>
         <div>
           <input id={POSTCODE_INPUT_ID} type="text" autoComplete="postal-code" />
         </div>
@@ -274,14 +288,16 @@ export const FormFieldErrorMessageWithAlertComponent: Story = {
     lang: 'nl',
   },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000009';
+    const INPUT_ID = 'c4b14e44-b1b6-45c0-8576-ce64bffb97b3';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
         <div role="alert">
           <p>Formulier is niet correct ingevuld. Controleer dit veld: Naam.</p>
         </div>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID} role="alert">
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
@@ -309,11 +325,13 @@ export const FormFieldErrorMessageTable: Story = {
     lang: 'nl',
   },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000010';
+    const INPUT_ID = '8905fe00-db4b-4294-93e8-aa3cc9f1a832';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Wachtwoord</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Wachtwoord</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           <table>
             <thead>
@@ -360,11 +378,13 @@ export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
     lang: 'nl',
   },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000011';
+    const INPUT_ID = 'fc91c621-64bc-44ea-afd1-eee35fa0a5e4';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Wachtwoord</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Wachtwoord</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           Het ingevulde wachtwoord voldoet niet aan de eisen. Een wachtwoord moet voldoen aan de volgende eisen:
           <ul>
@@ -397,11 +417,13 @@ export const FormFieldErrorMessageWithRedundantRole: Story = {
     lang: 'nl',
   },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000012';
+    const INPUT_ID = 'f3b7ae8e-40a1-406d-8202-7462d601e43b';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID} role="status" aria-live="polite">
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
@@ -426,11 +448,13 @@ export const FormFieldErrorMessageProgrammaticFocus: Story = {
   name: 'Fout: Form Field Error Message met tabindex="-1" voor programmatische focus',
   globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-0001-0001-0001-000000000013';
+    const INPUT_ID = 'f9456de1-9202-420e-a18b-ebcbd85d1fa2';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID} tabIndex={-1}>
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
