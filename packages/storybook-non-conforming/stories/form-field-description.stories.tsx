@@ -136,7 +136,7 @@ export const FormFieldDescriptionWithRole: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Form Field Description met een \`role\` attribuut. De semantiek is al geregeld via het \`aria-describedby\` attribuut op het invoerveld. Een extra \`role\` op de Form Field Description is overbodig en kan verwarring veroorzaken bij hulpsoftware.`,
+        story: `Een Form Field Description met een \`role\` attribuut. De semantiek is al geregeld via het \`aria-describedby\` attribuut op het invoerveld. Een extra \`role\` op de Form Field Description zorgt ervoor dat de beschrijving niet wordt voorgelezen door VoiceOver in Safari, in de [baseline van augustus 2026](https://nldesignsystem.nl/baseline/2026-08/).`,
       },
     },
     status: { type: [] },
@@ -231,7 +231,7 @@ export const FormFieldDescriptionAriaLabelledBy: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Fout: De Form Field Description is gekoppeld via \`aria-labelledby\` in plaats van \`aria-describedby\`. Hierdoor wordt de toegankelijke naam van het invoerveld bepaald door de Form Field Description in plaats van de Form Field Label. Gebruik in plaats daarvan \`aria-describedby\`.`,
+        story: `De Form Field Description is gekoppeld via \`aria-labelledby\` in plaats van \`aria-describedby\`. Hierdoor wordt de toegankelijke naam van het invoerveld bepaald door de Form Field Description in plaats van de Form Field Label. Gebruik in plaats daarvan \`aria-describedby\`.`,
       },
     },
     status: { type: [] },
@@ -268,7 +268,7 @@ export const FormFieldDescriptionAriaLabelledByLabelAndDescription: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Fout: De Form Field Description is opgenomen in \`aria-labelledby\` samen met het label. Alle informatie wordt wel voorgelezen, maar als onderdeel van de toegankelijke naam in plaats van de beschrijving. Hierdoor wordt de toegankelijke naam van het invoerveld veel te lang, en heeft de bezoeker niet de mogelijkheid om de description over te slaan zoals dat wel kan met \`aria-describedby\`. Gebruik in plaats daarvan \`aria-describedby\` voor de Form Field Description.`,
+        story: `De Form Field Description is opgenomen in \`aria-labelledby\` samen met het label. Alle informatie wordt wel voorgelezen, maar als onderdeel van de toegankelijke naam in plaats van de beschrijving. Hierdoor wordt de toegankelijke naam van het invoerveld veel te lang, en heeft de bezoeker niet de mogelijkheid om de description over te slaan zoals dat wel kan met \`aria-describedby\`. Gebruik in plaats daarvan \`aria-describedby\` voor de Form Field Description.`,
       },
     },
     status: { type: [] },
@@ -298,7 +298,7 @@ export const FormFieldDescriptionWithoutRelationWithInput: Story = {
     docs: {
       description: {
         story:
-          'Fout: De Form Field Description is niet gekoppeld aan het invoerveld via `aria-describedby`. De beschrijving wordt niet voorgelezen door een screenreader bij focus op het invoerveld.',
+          'De Form Field Description is niet gekoppeld aan het invoerveld via `aria-describedby`. De beschrijving wordt niet voorgelezen door een screenreader bij focus op het invoerveld.',
       },
     },
     status: { type: [] },
@@ -328,7 +328,7 @@ export const FormFieldDescriptionWithTabindexAttribute: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Fout: De Form Field Description krijgt focus via \`Tab\` tijdens toetsenbordnavigatie. Het is onlogisch dat dit element in de focusvolgorde voorkomt, want de component is informatief, niet interactief.
+        story: `De Form Field Description krijgt focus via \`Tab\` tijdens toetsenbordnavigatie. Het is onlogisch dat dit element in de focusvolgorde voorkomt, want de component is informatief, niet interactief.
 
 De beschrijving wordt al voorgelezen via \`aria-describedby\` bij focus op het invoerveld.`,
       },
@@ -357,7 +357,7 @@ export const FormFieldDescriptionAriaDescription: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Fout: De beschrijving staat in een \`aria-description\` op het invoerveld. Hierdoor is de tekst alleen beschikbaar voor bezoekers die gebruik maken van hulpsoftware, in plaats van als zichtbare informatie voor iedereen. Gebruik in plaats daarvan een Form Field Description en koppel het met \`aria-describedby\` aan het invoerveld.`,
+        story: `De beschrijving staat in een \`aria-description\` op het invoerveld. Hierdoor is de tekst alleen beschikbaar voor bezoekers die gebruik maken van hulpsoftware, in plaats van als zichtbare informatie voor iedereen. Gebruik in plaats daarvan een Form Field Description en koppel het met \`aria-describedby\` aan het invoerveld.`,
       },
     },
     status: { type: [] },
@@ -392,7 +392,7 @@ export const FormFieldDescriptionWithUnorderedListWithoutBullets: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Fout: Er is een opsomming met drie items. De de items in de opsomming hebben geen lees leestekens aan het einde van de zin, waardoor de informatie als platte tekst niet zo duidelijk is als met de Unordered List. Een screenreader leest bijvoorbeeld 1 lange zin: "minimaal 8 tekens minimaal één hoofdletter minimaal één cijfer". Dat is onvoldoende, visueel is de informatie duidelijker. Gebruik leestekens zodat de items als aparte zinnen worden uitgesproken.`,
+        story: `Er is een opsomming met drie items. De de items in de opsomming hebben geen lees leestekens aan het einde van de zin, waardoor de informatie als platte tekst niet zo duidelijk is als met de Unordered List. Een screenreader leest bijvoorbeeld 1 lange zin: "minimaal 8 tekens minimaal één hoofdletter minimaal één cijfer". Dat is onvoldoende, visueel is de informatie duidelijker. Gebruik leestekens zodat de items als aparte zinnen worden uitgesproken.`,
       },
     },
     status: { type: [] },
@@ -427,7 +427,7 @@ export const FormFieldDescriptionANDAriaDescription: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Fout: De beschrijving staat zowel als zichtbare tekst in de Form Field Description als in een \`aria-description\` op het invoerveld. Als de zichtbare tekst later wordt aangepast maar de \`aria-description\` niet, horen bezoekers met een screenreader andere informatie dan wat er op het scherm staat. Verwijder de \`aria-description\` en gebruik alleen de Form Field Description gekoppeld via \`aria-describedby\`.`,
+        story: `De beschrijving staat zowel als zichtbare tekst in de Form Field Description als in een \`aria-description\` op het invoerveld. Als de zichtbare tekst later wordt aangepast maar de \`aria-description\` niet, horen bezoekers met een screenreader andere informatie dan wat er op het scherm staat. Verwijder de \`aria-description\` en gebruik alleen de Form Field Description gekoppeld via \`aria-describedby\`.`,
       },
     },
     status: { type: [] },

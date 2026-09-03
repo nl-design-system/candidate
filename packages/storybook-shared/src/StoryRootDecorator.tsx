@@ -1,8 +1,9 @@
 import type { Decorator } from '@storybook/react-vite';
 import { useEffect, type CSSProperties } from 'react';
+import './forced-colors-simulation.css';
 
 export const StoryRootDecorator: Decorator = (Story, context) => {
-  const { storyRootClassname, dir, lang, title, writingMode, zoom } = context.globals;
+  const { storyRootClassname, dir, lang, title, writingMode, zoom, forcedColors } = context.globals;
   const style: CSSProperties = zoom ? { zoom } : {};
 
   // In Storybook there are different view modes. When looking at all stories,
@@ -33,7 +34,14 @@ export const StoryRootDecorator: Decorator = (Story, context) => {
   }, [context.name]);
 
   return (
-    <div data-story-root className={storyRootClassname} lang={lang} dir={dir} style={style}>
+    <div
+      data-story-root
+      data-forced-colors={forcedColors}
+      className={storyRootClassname}
+      lang={lang}
+      dir={dir}
+      style={style}
+    >
       <Story />
     </div>
   );

@@ -2,6 +2,19 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { clsx } from 'clsx';
 import { forwardRef, Children, isValidElement } from 'react';
 
+// `command`/`commandfor` (the Invoker Commands API) aren't part of `@types/react`'s
+// `ButtonHTMLAttributes` yet. `Button` already forwards them to the native `<button>` via
+// `...restProps`, so this only fills in the missing types.
+declare module 'react' {
+  // The type parameter name must match `ButtonHTMLAttributes`'s original declaration for
+  // TypeScript to merge the two, even though it's unused here.
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  interface ButtonHTMLAttributes<T> {
+    command?: string;
+    commandfor?: string;
+  }
+}
+
 const enumGuard =
   <Type,>(values: readonly Type[]) =>
   <Type,>(x: unknown): x is Type =>
