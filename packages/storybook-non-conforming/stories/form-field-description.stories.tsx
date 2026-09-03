@@ -136,7 +136,7 @@ export const FormFieldDescriptionWithRole: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Form Field Description met een \`role\` attribuut. De semantiek is al geregeld via het \`aria-describedby\` attribuut op het invoerveld. Een extra \`role\` op de Form Field Description is overbodig en kan verwarring veroorzaken bij hulpsoftware.`,
+        story: `Een Form Field Description met een \`role\` attribuut. De semantiek is al geregeld via het \`aria-describedby\` attribuut op het invoerveld. Een extra \`role\` op de Form Field Description zorgt ervoor dat de beschrijving niet wordt voorgelezen door VoiceOver in Safari, in de [baseline van augustus 2026](https://nldesignsystem.nl/baseline/2026-08/).`,
       },
     },
     status: { type: [] },
