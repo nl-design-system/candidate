@@ -48,21 +48,21 @@ If you use SCSS:
 @use '@nl-design-system-candidate/form-field-error-message-css/forward.scss';
 ```
 
-## Available classes
+## CSS classes
 
-| name                                    | description                                                                            |
-| --------------------------------------- | -------------------------------------------------------------------------------------- |
-| `.nl-form-field-error-message`          | The main class, to be used on a `<div>` element, `<label>`, or `<span>` element        |
-| `.nl-form-field-error-message__icon`    | The icon container, to be used on a `<div>` element, `<label>`, or `<span>` element    |
-| `.nl-form-field-error-message__content` | The content container, to be used on a `<div>` element, `<label>`, or `<span>` element |
+| name                                    | description                                                                                       |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `.nl-form-field-error-message`          | The main class. Use it on a `<div>` element by default; a `<p>` or `<span>` element also works.   |
+| `.nl-form-field-error-message__icon`    | The icon container, to be used on a `<div>` element by default; a `<span>` element also works.    |
+| `.nl-form-field-error-message__content` | The content container, to be used on a `<div>` element by default; a `<span>` element also works. |
 
-## Available mixins
+## SCSS mixins
 
 | name                                   | description                             |
 | -------------------------------------- | --------------------------------------- |
 | `nl-form-field-error-message`          | Styles for the form field error message |
-| `nl-form-field-error-message__icon`    | Styles for the icon container           |
-| `nl-form-field-error-message__content` | Styles for the content container        |
+| `nl-form-field-error-message__icon`    | Styles for the icon                     |
+| `nl-form-field-error-message__content` | Styles for the content                  |
 
 ## Usage
 
@@ -70,22 +70,26 @@ Place the Form Field Error Message below the label and before the input field. G
 `id`, and link it to the input field via `aria-describedby`.
 
 ```html
-<label for="name">Name</label>
-<div class="nl-form-field-error-message">
-  <div id="name-error" role="alert" class="nl-form-field-error-message__content">The "Name" field is required.</div>
+<div>
+  <label for="name">Name</label>
 </div>
-<input id="name" aria-describedby="name-error" autocomplete="name" type="text" />
+<div class="nl-form-field-error-message">
+  <div id="name-error" class="nl-form-field-error-message__content"><p>The "Name" field is required.</p></div>
+</div>
+<div>
+  <input id="name" aria-describedby="name-error" autocomplete="name" type="text" />
+</div>
 ```
 
 ### With an icon
 
-Use `.nl-form-field-error-message__icon` for an optional, decorative icon before the content. Hide it from
+Use `nl-form-field-error-message__icon` for an optional, decorative icon before the content. Hide it from
 assistive technology, since the text of the error message already conveys the meaning.
 
 ```html
 <div class="nl-form-field-error-message">
-  <div class="nl-form-field-error-message__icon" aria-hidden="true"><!-- icon --></div>
-  <div id="name-error" role="alert" class="nl-form-field-error-message__content">The "Name" field is required.</div>
+  <div class="nl-form-field-error-message__icon"><!-- icon --></div>
+  <div id="name-error" class="nl-form-field-error-message__content"><p>The "Name" field is required.</p></div>
 </div>
 ```
 
