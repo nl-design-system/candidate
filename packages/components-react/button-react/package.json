@@ -46,21 +46,21 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@axe-core/playwright": "4.12.1",
+    "@axe-core/playwright": "4.13.0",
     "@babel/preset-env": "7.28.5",
     "@babel/preset-react": "7.28.5",
     "@babel/preset-typescript": "7.28.5",
     "@babel/runtime": "7.28.4",
     "@nl-design-system-candidate/playwright-config": "workspace:*",
     "@nl-design-system/rollup-config-react-component": "1.0.7",
-    "@playwright/experimental-ct-react": "1.61.1",
-    "@types/react": "19.2.7",
-    "es-toolkit": "1.50.0",
-    "react": "19.2.3",
-    "rimraf": "6.1.0",
-    "rollup": "4.62.2",
+    "@playwright/experimental-ct-react": "1.62.1",
+    "@types/react": "19.2.18",
+    "es-toolkit": "1.52.0",
+    "react": "19.2.8",
+    "rimraf": "6.1.3",
+    "rollup": "4.63.1",
     "typescript": "5.9.3",
-    "vitest": "4.1.8"
+    "vitest": "4.1.11"
   },
   "peerDependencies": {
     "@babel/runtime": "^7",
