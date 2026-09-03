@@ -52,7 +52,7 @@
     "rimraf": "6.1.0",
     "rollup": "4.62.2",
     "typescript": "5.9.3",
-    "vitest": "4.1.8"
+    "vitest": "4.1.11"
   },
   "peerDependencies": {
     "@babel/runtime": "^7",
