@@ -87,11 +87,13 @@ type Story = StoryObj<typeof meta>;
 export const FormFieldErrorMessageShort: Story = {
   name: 'Form Field Error Message met een korte foutmelding bij een niet-ingevuld veld',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000001';
+    const INPUT_ID = '12c0d13c-80f3-4744-8ba1-dbf1d0c003c0';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
@@ -115,11 +117,13 @@ export const FormFieldErrorMessageShort: Story = {
 export const FormFieldErrorMessageLong: Story = {
   name: 'Form Field Error Message met een lange foutmelding bij een niet-ingevuld veld',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000002';
+    const INPUT_ID = '9d61ec7c-71da-4087-8eaf-dd48eb08dd41';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           Er is een probleem opgetreden bij het verwerken van uw gegevens. Het veld Naam is verplicht en mag niet leeg
           blijven. Vul het veld Naam in met uw volledige voor- en achternaam (bijv. Jan de Vries). Controleer of er geen
@@ -145,11 +149,13 @@ export const FormFieldErrorMessageLong: Story = {
 export const FormFieldErrorMessageMultiple: Story = {
   name: 'Form Field Error Message met een foutmelding van meerdere paragrafen bij een niet-ingevuld veld',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000003';
+    const INPUT_ID = 'b52407e5-cab3-4a91-8f50-907ddf6f43dd';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           <p>
             Er is een probleem opgetreden bij het verwerken van uw gegevens. Het veld Naam is verplicht en mag niet leeg
@@ -181,15 +187,16 @@ export const FormFieldErrorMessageMultiple: Story = {
 export const FormFieldErrorMessageWithParagraphComponent: Story = {
   name: 'Form Field Error Message met een NL Paragraph-component',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000004';
+    const INPUT_ID = '835bd650-04bf-41e8-b1f6-0ad5d2d3bdfd';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Postcode</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           <Paragraph>
-            Het veld Postcode is niet ingevuld. Vul je postcode in. Een postcode bestaat uit 4 cijfers, een spatie en 2
-            letters.
+            Het veld Postcode is niet ingevuld. Vul je postcode in. Een postcode bestaat uit 4 cijfers en 2 letters.
           </Paragraph>
         </FormFieldErrorMessage>
         <div>
@@ -212,11 +219,13 @@ export const FormFieldErrorMessageWithParagraphComponent: Story = {
 export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
   name: 'Form Field Error Message met twee NL Paragraph-componenten',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000005';
+    const INPUT_ID = '80483e44-a765-4871-bba8-6c504afdf67f';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Postcode</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           <Paragraph>Het veld Postcode is niet ingevuld.</Paragraph>
           <Paragraph>Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.</Paragraph>
@@ -242,11 +251,13 @@ export const FormFieldErrorMessageLangLTR: Story = {
   name: 'Form Field Error Message in het Engels',
   globals: { dir: 'ltr', lang: 'en' },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000006';
+    const INPUT_ID = '2b86a101-cfd0-4542-8bff-c84f17718b08';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Postcode</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID} lang="en">
           The postal code is not valid. A valid postal code consists of four digits, a space and two letters, for
           example: 1234 AB.
@@ -272,15 +283,17 @@ export const FormFieldErrorMessageLangRTL: Story = {
   name: 'Form Field Error Message in het Arabisch',
   globals: { dir: 'ltr', lang: 'ar' },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000007';
+    const INPUT_ID = 'f8e978bc-c230-430c-80ea-9d86c6189a85';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Postcode</label>
+        <div lang="ar" dir="rtl">
+          <label htmlFor={INPUT_ID}>الرمز البريدي</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID} lang="ar" dir="rtl">
           حقل الرمز البريدي غير مملوء في هذا الحقل لا يمكن أن يكون فارغا.
         </FormFieldErrorMessage>
-        <div>
+        <div lang="ar" dir="rtl">
           <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
         </div>
       </>
@@ -299,14 +312,16 @@ export const FormFieldErrorMessageLangRTL: Story = {
 
 export const FormFieldErrorMessageVerticalText: Story = {
   name: 'Form Field Error Message in het Japans',
-  globals: { dir: 'ltr', lang: 'ja' },
+  globals: { dir: 'ltr', lang: 'ja', writingMode: 'vertical-rl' },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000008';
+    const INPUT_ID = 'df11119a-1b3d-4b64-b4fc-d36cf74c93db';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Postcode</label>
-        <FormFieldErrorMessage id={ERROR_ID} lang="ja" style={{ writingMode: 'vertical-rl' }}>
+        <div>
+          <label htmlFor={INPUT_ID}>郵便番号</label>
+        </div>
+        <FormFieldErrorMessage id={ERROR_ID} lang="ja">
           郵便番号フィールドは入力されていません。このフィールドは空にはなりません。
         </FormFieldErrorMessage>
         <div>
@@ -319,7 +334,46 @@ export const FormFieldErrorMessageVerticalText: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding staat in het Japans met verticale tekstrichting. De richting van de tekst past bij de de taal. De taal is aangegeven met het HTML-attribuut `lang`. De richting is aangegeven met de CSS-eigenschap `writingMode`, zodat de tekst van boven naar beneden wordt weergegeven.',
+          'De hele pagina staat in verticale tekstrichting, aangezet via de CSS-eigenschap `writingMode`. Het label, de foutmelding en het invoerveld passen zich allemaal aan de verticale richting aan. De taal is aangegeven met het HTML-attribuut `lang`.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldErrorMessageVerticalTextWithIcon: Story = {
+  name: 'Form Field Error Message in het Japans met een icoon',
+  globals: { dir: 'ltr', lang: 'ja', writingMode: 'vertical-rl' },
+  render: () => {
+    const INPUT_ID = '4a80808e-7b27-4f47-aeea-58bd430f06d3';
+    const ERROR_ID = `${INPUT_ID}-error`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>郵便番号</label>
+        </div>
+        <FormFieldErrorMessage
+          id={ERROR_ID}
+          lang="ja"
+          icon={
+            <Icon>
+              <IconAlertCircle />
+            </Icon>
+          }
+        >
+          郵便番号フィールドは入力されていません。このフィールドは空にはなりません。
+        </FormFieldErrorMessage>
+        <div>
+          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De hele pagina staat in verticale tekstrichting. Het icoon blijft correct gepositioneerd naast de tekst wanneer de foutmelding verticaal wordt weergegeven.',
       },
     },
     status: { type: [] },
@@ -329,12 +383,14 @@ export const FormFieldErrorMessageVerticalText: Story = {
 export const FormFieldErrorMessageLargeText: Story = {
   name: 'Form Field Error Message met 200% zoom',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000009';
+    const INPUT_ID = 'a6017b2a-3491-4c16-983f-e50f226c7624';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Postcode</label>
-        <FormFieldErrorMessage id={ERROR_ID} style={{ fontSize: '2rem' }}>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
+        <FormFieldErrorMessage id={ERROR_ID}>
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldErrorMessage>
         <div>
@@ -343,6 +399,7 @@ export const FormFieldErrorMessageLargeText: Story = {
       </>
     );
   },
+  globals: { zoom: 2 },
   parameters: {
     docs: {
       description: {
@@ -357,11 +414,13 @@ export const FormFieldErrorMessageLargeText: Story = {
 export const FormFieldErrorMessageAboveTextInput: Story = {
   name: 'Form Field Error Message boven het invoerveld in de Form Field',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000010';
+    const INPUT_ID = 'ddad9b21-b4c7-4a91-bfef-6d8a9e52a37f';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Postcode</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
         </FormFieldErrorMessage>
@@ -385,20 +444,20 @@ export const FormFieldErrorMessageAboveTextInput: Story = {
 export const FormFieldErrorMessageBelowTextInputViaStyling: Story = {
   name: 'Form Field Error Message door styling onder het invoerveld (niet aangeraden)',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000011';
+    const INPUT_ID = 'fe64277e-ad96-4bdb-ad91-a6fa8c284456';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
-      <>
-        <label htmlFor={INPUT_ID}>Postcode</label>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <FormFieldErrorMessage id={ERROR_ID} style={{ order: 2 }}>
-            Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
-          </FormFieldErrorMessage>
-          <div style={{ order: 1 }}>
-            <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
-          </div>
+      <div className="utrecht-form-field" style={{ display: 'flex', flexDirection: 'column' }}>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
         </div>
-      </>
+        <FormFieldErrorMessage id={ERROR_ID} style={{ order: 2 }}>
+          Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
+        </FormFieldErrorMessage>
+        <div style={{ order: 1 }}>
+          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </div>
     );
   },
   parameters: {
@@ -415,11 +474,13 @@ export const FormFieldErrorMessageBelowTextInputViaStyling: Story = {
 export const FormFieldErrorMessageWordBreak: Story = {
   name: 'Form Field Error Message met woorden die niet op 1 regel passen',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000012';
+    const INPUT_ID = 'f2e172a1-f073-49bd-98e0-d72ff5e8229d';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           De onvolledigheidscontrolemechanismevalidatieprocedure heeft geconstateerd dat het veld Naam niet is ingevuld.
           Dit resulteert in een onacceptabele gegevensverwerkingsfoutmelding binnen ons geïntegreerde
@@ -446,11 +507,13 @@ export const FormFieldErrorMessageSmallViewport: Story = {
   name: 'Form Field Error Message in een kleine viewport',
   globals: { viewport: { value: 'wcag400' } },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000013';
+    const INPUT_ID = 'a9f05006-7dad-4ceb-ac68-414fce9483b2';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           Er is een probleem opgetreden bij het verwerken van uw gegevens. Het veld Naam is verplicht en mag niet leeg
           blijven. Vul het veld Naam in met uw volledige voor- en achternaam (bijv. Jan de Vries). Controleer of er geen
@@ -476,11 +539,13 @@ export const FormFieldErrorMessageSmallViewport: Story = {
 export const FormFieldErrorMessageList: Story = {
   name: 'Form Field Error Message met een lijst met punten',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000014';
+    const INPUT_ID = 'd5345e10-9c05-41c7-9db7-abc5a8b6afac';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Wachtwoord</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Wachtwoord</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           Het ingevulde wachtwoord voldoet niet aan de eisen. Een wachtwoord moet voldoen aan de volgende eisen:
           <ul>
@@ -490,7 +555,13 @@ export const FormFieldErrorMessageList: Story = {
           </ul>
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="password" autoComplete="new-password" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            type="password"
+            autoComplete="new-password"
+            aria-required="true"
+          />
         </div>
       </>
     );
@@ -510,11 +581,13 @@ export const FormFieldErrorMessageForcedColorsMode: Story = {
   name: 'Form Field Error Message in Forced Colors mode',
   globals: { forcedColors: 'active' },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000016';
+    const INPUT_ID = 'd3b795be-4989-4c6c-b248-ff0543fb0ea4';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage
           id={ERROR_ID}
           icon={
@@ -546,11 +619,13 @@ export const FormFieldErrorMessageWithCode: Story = {
   name: 'Form Field Error Message met een code fragment',
   globals: { dir: 'ltr', lang: 'en' },
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000017';
+    const INPUT_ID = '0ff8ae30-03e1-46d8-a55c-864b730a66da';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>JSON invoer</label>
+        <div>
+          <label htmlFor={INPUT_ID}>JSON invoer</label>
+        </div>
         <FormFieldErrorMessage id={ERROR_ID}>
           <Paragraph>
             <Code>SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data</Code>
@@ -576,11 +651,13 @@ export const FormFieldErrorMessageWithCode: Story = {
 export const FormFieldErrorMessageWithIcon: Story = {
   name: 'Form Field Error Message met een icoon',
   render: () => {
-    const INPUT_ID = '1A2B3C4D-1001-1001-1001-000000000018';
+    const INPUT_ID = 'c53ddae8-5165-46e6-8e5c-868e5da59503';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Naam</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
         <FormFieldErrorMessage
           id={ERROR_ID}
           icon={
