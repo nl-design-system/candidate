@@ -102,12 +102,12 @@ technology by default, since the text of the error message already conveys the m
 
 ## Props
 
-| Prop       | Description                                                                                                           | Type        | Default |
-| ---------- | --------------------------------------------------------------------------------------------------------------------- | ----------- | ------- |
-| `id`       | Links the error message via `aria-describedby` to an input field. Applied to the content element. Always use an `id`. | `string`    | —       |
-| `children` | Content of the content element                                                                                        | `ReactNode` | —       |
-| `icon`     | Content of the optional icon element, shown before the content                                                        | `ReactNode` | —       |
-| `role`     | ARIA role, for example `"alert"` for realtime validation. Applied to the content element.                             | `string`    | —       |
+| Prop          | Description                                                                                                           | Type        | Default |
+| ------------- | --------------------------------------------------------------------------------------------------------------------- | ----------- | ------- |
+| `id`          | Links the error message via `aria-describedby` to an input field. Applied to the content element. Always use an `id`. | `string`    | —       |
+| `children`    | Content of the content element                                                                                        | `ReactNode` | —       |
+| `icon`        | Content of the optional icon element, shown before the content                                                        | `ReactNode` | —       |
+| `contentRole` | ARIA role, for example `"alert"` for realtime validation. Applied to the content element.                             | `string`    | —       |
 
 In addition to the props above, `FormFieldErrorMessage` accepts all standard HTML attributes of a `<div>`
 element, and forwards a `ref` to the underlying `<div>` element.
