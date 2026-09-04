@@ -37,14 +37,14 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 
 ### Alternatieve HTML
 
-- De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message` class op een `label` HTML-element.
 - De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message` class op een `div` HTML-element.
+- De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message` class op een `p` HTML-element.
 - De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message` class op een `span` HTML-element.
-- De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message__icon` class op een `label` HTML-element.
 - De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message__icon` class op een `div` HTML-element.
+- De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message__icon` class op een `p` HTML-element.
 - De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message__icon` class op een `span` HTML-element.
-- De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message__content` class op een `label` HTML-element.
 - De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message__content` class op een `div` HTML-element.
+- De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message__content` class op een `p` HTML-element.
 - De CSS ondersteunt een Form Field Error Message met de `nl-form-field-error-message__content` class op een `span` HTML-element.
 - De CSS ondersteunt een beknopte Form Field Error Message bestaande uit een enkel HTML element.
 
