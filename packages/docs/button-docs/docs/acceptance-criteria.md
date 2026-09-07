@@ -9,9 +9,9 @@ Dit zijn de acceptatiecriteria welke HTML elementen en HTML attributen het beste
 ### Welke HTML elementen het beste zijn voor deze component
 
 - De component is opgemaakt met een `<button>`-element.
-- De button kan een of meer iconen bevatten, die bestaan in de vorm van [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0).
+- De button kan een of meer iconen bevatten, die bestaan in de vorm van [phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content).
   - Een icon in de button is gewrapped in een in een `<span>`-element.
-- De button bevat inhoud die bestaat in de vorm van [phrasing content](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content-0).
+- De button bevat inhoud die bestaat in de vorm van [phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content).
   - De inhoud van de button is gewrapped in een `<span>`-element.
 
 ### Welke HTML attributen het beste zijn voor deze component
