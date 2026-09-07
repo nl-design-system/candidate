@@ -1,4 +1,5 @@
 @mixin nl-heading {
+  box-sizing: border-box;
   break-after: avoid;
   break-inside: avoid;
 }
