@@ -1,6 +1,7 @@
 @mixin nl-link {
   --_nl-link-forced-colors-color: LinkText;
 
+  box-sizing: border-box;
   color: var(--_nl-link-state-color, var(--nl-link-color, var(--_nl-link-forced-colors-color)));
   text-decoration-color: var(
     --_nl-link-state-text-decoration-color,

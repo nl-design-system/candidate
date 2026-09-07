@@ -7,6 +7,7 @@
    */
   background-color: var(--nl-code-block-background-color);
   border-radius: var(--nl-code-block-border-radius);
+  box-sizing: border-box;
   color: var(--nl-code-block-color);
   display: block;
   font-family: var(--nl-code-block-font-family, monospace), monospace;
