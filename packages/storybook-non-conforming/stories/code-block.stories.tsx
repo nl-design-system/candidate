@@ -11,6 +11,11 @@ const meta = {
   },
   component: CodeBlock,
   parameters: {
+    docs: {
+      source: {
+        type: 'dynamic',
+      },
+    },
     externalLinks: [
       {
         name: 'Open op NL Design System',

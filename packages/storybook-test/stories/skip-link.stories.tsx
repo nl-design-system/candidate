@@ -143,6 +143,9 @@ const meta = {
       description: {
         component: 'Component beschrijving',
       },
+      source: {
+        type: 'dynamic',
+      },
     },
     externalLinks: [
       {

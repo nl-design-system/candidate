@@ -29,7 +29,7 @@ You can import the CSS directly from a CDN
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@nl-design-system-candidate/new-component-css@1/dist/new-component.css"
+  href="https://cdn.jsdelivr.net/npm/@nl-design-system-candidate/new-component-css/dist/new-component.css"
 />
 ```
 

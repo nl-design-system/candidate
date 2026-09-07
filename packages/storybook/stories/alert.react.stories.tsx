@@ -3,6 +3,7 @@ import { merge } from 'lodash-es';
 import packageJSON from '../../components-react/alert-react/package.json';
 import type { AlertProps } from '@nl-design-system-candidate/alert-react';
 import alertMeta from '@nl-design-system-candidate/alert-docs/stories/alert.react.meta';
+// import * as Stories from '@nl-design-system-candidate/alert-docs/stories/alert.stories';
 import '../../components-css/alert-css/src/test.scss';
 import { getExternalLinks } from '../src/helpers/external-links';
 import description from '@nl-design-system-candidate/alert-docs/docs/description.md?raw';
@@ -21,10 +22,10 @@ const meta = {
       },
     },
   }),
-  title: 'React Componenten/Alert',
+  title: 'In Progress/React Componenten/Alert',
   id: 'alert',
 } satisfies Meta<AlertProps>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const Alert = Stories.Alert;

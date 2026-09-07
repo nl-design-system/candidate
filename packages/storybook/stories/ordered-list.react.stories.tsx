@@ -10,10 +10,10 @@ const externalLinks = getExternalLinks('https://nldesignsystem.nl/ordered-list',
 const meta = {
   ...orderedListMeta,
   ...externalLinks,
-  title: 'React Componenten/Ordered List',
+  title: 'In Progress/React Componenten/Ordered List',
   id: 'ordered-list',
 } satisfies Meta<typeof OrderedListComponent>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const OrderedList = Stories.OrderedList;

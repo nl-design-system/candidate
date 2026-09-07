@@ -4,6 +4,7 @@ import { FormFieldDescription } from '@nl-design-system-candidate/form-field-des
 const meta = {
   argTypes: {
     children: { control: 'text', table: { category: 'API' } },
+    disabled: { control: 'boolean', table: { category: 'API' } },
   },
   component: FormFieldDescription,
 } satisfies Meta<typeof FormFieldDescription>;

@@ -1,0 +1,6 @@
+.candidate-disable-css,
+.candidate-disable-css *,
+.candidate-disable-css *::before,
+.candidate-disable-css *::after {
+  all: revert !important;
+}

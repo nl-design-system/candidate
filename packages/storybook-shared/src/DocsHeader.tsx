@@ -6,7 +6,7 @@ export function DocsHeader() {
   const resolvedOf = useOf<'story'>('story');
   const { externalLinks } = resolvedOf.story.parameters;
 
-  if (!Array.isArray(externalLinks || externalLinks.length === 0)) {
+  if (!Array.isArray(externalLinks) || externalLinks.length === 0) {
     return null;
   }
 

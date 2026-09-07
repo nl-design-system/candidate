@@ -76,13 +76,6 @@ Slot
 - Section
 - Footer
 
-### Mis je een variant?
-
-Laat het in deze Discussion weten als er uit gebruikersonderzoek naar voren is gekomen dat deze design beslissing een hele verbetering zou zijn.
-
-**💡 Tip**
-Je kunt [varianten ook als extensie toevoegen](https://www.nldesignsystem.nl/handboek/componenten-vinden/#ik-mis-een-functionaliteit-binnen-een-candidate-of-hall-of-fame-component-wat-nu) aan een component.
-
 ## Acceptatiecriteria toegankelijkheid van de component
 
 - Tekst in de Note blijft leesbaar wanneer de tekstafstand vergroot wordt.

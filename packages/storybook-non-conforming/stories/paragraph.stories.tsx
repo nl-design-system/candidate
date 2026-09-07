@@ -20,6 +20,9 @@ const meta = {
       description: {
         component: '',
       },
+      source: {
+        type: 'dynamic',
+      },
     },
     externalLinks: [
       {

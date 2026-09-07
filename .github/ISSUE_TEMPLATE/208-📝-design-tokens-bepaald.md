@@ -18,6 +18,7 @@ type: Task
 - [ ] Bepaal welke tokens algemeen nuttig zijn
 - [ ] Bepaal de logische common tokens voor alle component-tokens
 - [ ] Documenteer besluit in de GitHub Discussion
+- [ ] Documenteer besluit in dit GitHub Issue
 - [ ] Documenteer besluit in de Candidate repository
 - [ ] Zet de checkpoint in het GitHub projectbord op de juiste status
 
@@ -86,7 +87,7 @@ Component tokens zijn gekoppeld aan logische Common (basis) tokens.
 
 ### Documenteer besluit in de GitHub Discussion
 
-Leg vast welke design tokens varianten wel en niet worden meegenomen voor de Candidate implementatie en waarom. Dat kan met dit bericht.
+Leg vast welke design tokens wel en niet worden meegenomen voor de Candidate implementatie en waarom. Dat kan met dit bericht.
 
 ```md
 ## Candidate voorbereidingsfase: Design tokens bepaald
@@ -107,6 +108,12 @@ Laat het in deze Discussion weten als er uit gebruikersonderzoek naar voren is g
 **💡 Tip**
 Je kunt [design tokens ook als extensie toevoegen](https://www.nldesignsystem.nl/handboek/componenten-vinden/#ik-mis-een-functionaliteit-binnen-een-candidate-of-hall-of-fame-component-wat-nu) aan een component.
 ```
+
+### Documenteer besluit in dit GitHub Issue
+
+- Leg vast welke design tokens wel en niet worden meegenomen voor de Candidate implementatie.
+- Neem belangrijke afwegingen over uit het Slack Canvas.
+- Noteer afwijkingen van de standaard die nuttig zijn om te weten tijdens de ontwikkelfase. Denk daarbij aan een design token voor `border-width` die als `box-shadow` geïmplementeerd moet worden.
 
 ### Documenteer besluit in de Candidate repository
 

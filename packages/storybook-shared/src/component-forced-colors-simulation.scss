@@ -1,0 +1,14 @@
+/* stylelint-disable scss/comment-no-empty */
+// Storybook-only. Mirrors each component's `@media (forced-colors: active)` rule as a
+// `[data-forced-colors='active']` selector, for the Forced Colors toolbar simulation (see this
+// package's README). Shared across Storybook packages (storybook-test, storybook-non-conforming)
+// so a component's simulation is only maintained once. Never imported by a component's own
+// .scss, and never shipped in a component's published dist/ output.
+//
+// Add one block per component that has its own `@media (forced-colors: active)` rule in its
+// `_mixin.scss`, using `!important` so the simulation always wins over the component's normal,
+// non-forced color.
+//
+// [data-forced-colors='active'] .nl-my-component {
+//   color: currentColor !important;
+// }

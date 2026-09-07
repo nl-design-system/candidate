@@ -10,10 +10,10 @@ const externalLinks = getExternalLinks('https://nldesignsystem.nl/ordered-list',
 
 const meta = {
   ...mergeCssMeta(orderedListMeta, externalLinks),
-  title: 'CSS Componenten/Ordered List',
+  title: 'In Progress/CSS Componenten/Ordered List',
   id: 'css-ordered-list',
 } satisfies Meta<typeof OrderedListComponent>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const OrderedList = Stories.OrderedList;

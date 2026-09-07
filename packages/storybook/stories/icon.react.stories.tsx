@@ -10,7 +10,7 @@ const externalLinks = getExternalLinks('https://nldesignsystem.nl/icon', package
 const meta = {
   ...iconMeta,
   ...externalLinks,
-  title: 'React Componenten/Icon',
+  title: 'In Progress/React Componenten/Icon',
   id: 'icon',
 } satisfies Meta<typeof IconComponent>;
 

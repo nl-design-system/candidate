@@ -93,6 +93,9 @@ const meta = {
     dir: 'ltr',
   },
   parameters: {
+    source: {
+      type: 'dynamic',
+    },
     externalLinks: [
       {
         name: 'Open op NL Design System',
