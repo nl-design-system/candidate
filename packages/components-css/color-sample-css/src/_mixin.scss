@@ -1,8 +1,7 @@
 @mixin nl-color-sample {
-  background-image: repeating-conic-gradient(
-    var(--nl-color-sample-background-color, hsl(0 0% 90%)) 0% 25%,
-    #fff 0% 50%
-  );
+  background-image:
+    linear-gradient(var(--nl-color-sample-value, transparent), var(--nl-color-sample-value, transparent)),
+    repeating-conic-gradient(var(--nl-color-sample-background-color, hsl(0 0% 90%)) 0% 25%, #fff 0% 50%);
   background-size: 0.5rem 0.5rem;
   block-size: var(--nl-color-sample-block-size);
   border-color: var(--nl-color-sample-border-color);
