@@ -1,0 +1,5 @@
+@use "mixin";
+
+.nl-note {
+  @include mixin.nl-note;
+}

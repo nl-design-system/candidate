@@ -47,6 +47,8 @@
     "@nl-design-system-candidate/link-docs": "workspace:*",
     "@nl-design-system-candidate/link-react": "workspace:*",
     "@nl-design-system-candidate/mark-docs": "workspace:*",
+    "@nl-design-system-candidate/note-docs": "workspace:*",
+    "@nl-design-system-candidate/note-react": "workspace:*",
     "@nl-design-system-candidate/number-badge-docs": "workspace:*",
     "@nl-design-system-candidate/ordered-list-docs": "workspace:*",
     "@nl-design-system-candidate/ordered-list-react": "workspace:*",
