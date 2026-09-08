@@ -1,3 +1,85 @@
 <!-- @license CC0-1.0 -->
 
 # Acceptatiecriteria voor het maken van de Note component
+
+## Varianten
+
+### Deze varianten worden ondersteund
+
+- Varianten die standaard in HTML beschikbaar zijn, worden in TypeScript gedefinieerd door de attributen van het standaard HTMLElement te gebruiken.
+- Varianten die niet standaard in HTML beschikbaar zijn, worden als uitgebreiding toegevoegd.
+- Deze varianten worden gedocumenteerd op de website, in de README en in de standaard Storybook.
+- Deze varianten worden beschikbaar gemaakt in Figma.
+
+#### Purpose
+
+Enum
+
+- Default (default)
+- Error
+- Success
+- Warning
+- Accent-1
+- Accent-2
+- Accent-3
+
+#### Show Icon
+
+Boolean
+
+- True (default)
+- False
+
+#### Icon
+
+Slot
+
+#### Show Header
+
+Boolean. Alleen nodig wanneer het niet mogelijk is automatisch te herkennen dat de Header slot leeg is.
+
+- True (default)
+- False
+
+#### Header
+
+Slot
+
+Heading (default)
+
+#### Body
+
+Slot
+
+Paragraph (default)
+
+#### Show Footer
+
+Boolean. Alleen nodig wanneer het niet mogelijk is automatisch te herkennen dat de Footer slot leeg is.
+
+- True
+- False (default)
+
+#### Footer
+
+Slot
+
+- Action Group
+- Button
+- Link
+
+#### Element - enum
+
+- Div (default)
+- Article
+- Aside
+- Section
+- Footer
+
+## Acceptatiecriteria toegankelijkheid van de component
+
+- Tekst in de Note blijft leesbaar wanneer de tekstafstand vergroot wordt.
+- De Note is standaard niet bereikbaar en bedienbaar met het toetsenbord.
+- De Note komt standaard niet voor in de normale focusvolgorde op de pagina.
+
+[Meer informatie over deze acceptatiecriteria lees je op de componentpagina op de website van NL Design System.](https://nldesignsystem.nl/note/)
