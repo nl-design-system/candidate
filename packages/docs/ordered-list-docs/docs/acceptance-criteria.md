@@ -163,7 +163,7 @@ De volgende props worden expliciet ondersteund:
 | ------------------- | --------------------------------- | ------- | --------- | ---------------------------------------------------------------------------------------------- |
 | `children`          | `ReactNode`                       | -       | nee       | De inhoud van de component.                                                                    |
 | `inlineMarker`      | `ReactNode`                       | -       | nee       | De inhoud van de inline marker slot, weergegeven in een `span.nl-ordered-list__inline-marker`. |
-| `inlineMarkerLabel` | `ReactNode`                          | -       | nee\*     | Toegankelijke naam voor de inline marker. Verplicht wanneer `inlineMarker` is opgegeven.       |
+| `inlineMarkerLabel` | `ReactNode`                       | -       | nee\*     | Toegankelijke naam voor de inline marker. Verplicht wanneer `inlineMarker` is opgegeven.       |
 | `className`         | `string`                          | -       | nee       | Extra CSS classes naast `nl-ordered-list__item`.                                               |
 | `ref`               | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                                  |
 | `restProps`         | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element.    |
