@@ -68,10 +68,17 @@ describe('FormFieldErrorMessage', () => {
 
       expect(element).toHaveAttribute('lang', 'en');
     });
-    it('can set an HTML-attribute `role`', () => {
-      render(<FormFieldErrorMessage role="alert">{content}</FormFieldErrorMessage>);
-      const formFieldErrorMessageContent = screen.getByRole('alert');
-      expect(formFieldErrorMessageContent).toBeInTheDocument();
+    it('can set an HTML-attribute `role` on the root element', () => {
+      const { container } = render(<FormFieldErrorMessage role="alert">{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message');
+
+      expect(element).toHaveAttribute('role', 'alert');
+    });
+    it('can set an HTML-attribute `id` on the root element', () => {
+      const { container } = render(<FormFieldErrorMessage id="root-id">{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message');
+
+      expect(element).toHaveAttribute('id', 'root-id');
     });
   });
   describe('CSS API', () => {
@@ -157,17 +164,17 @@ describe('FormFieldErrorMessage', () => {
     });
   });
   describe('accessibility', () => {
-    it('has an HTML-attribute `id`', () => {
+    it('has an HTML-attribute `id` on the content element via `contentId`', () => {
       const { container } = render(
-        <FormFieldErrorMessage id="form-field-error-message-id">{content}</FormFieldErrorMessage>,
+        <FormFieldErrorMessage contentId="form-field-error-message-id">{content}</FormFieldErrorMessage>,
       );
       const element = container.querySelector('.nl-form-field-error-message__content');
 
       expect(element).toHaveAttribute('id', 'form-field-error-message-id');
     });
-    it('can contain an HTML-attribute `role` with value `alert`', () => {
+    it('can contain an HTML-attribute `role` with value `alert` on the content element via `contentRole`', () => {
       render(
-        <FormFieldErrorMessage id="form-field-error-message-id" role="alert">
+        <FormFieldErrorMessage contentId="form-field-error-message-id" contentRole="alert">
           {content}
         </FormFieldErrorMessage>,
       );
@@ -179,7 +186,7 @@ describe('FormFieldErrorMessage', () => {
       const { rerender, container } = render(
         <div>
           <label htmlFor="email">Email</label>
-          <FormFieldErrorMessage id="email-error" role="alert">
+          <FormFieldErrorMessage contentId="email-error" contentRole="alert">
             Email is required
           </FormFieldErrorMessage>
 
@@ -199,7 +206,7 @@ describe('FormFieldErrorMessage', () => {
           <label htmlFor="email">Email</label>
           <input id="email" name="email" aria-describedby="email-error" aria-invalid="true" value="invalid" readOnly />
 
-          <FormFieldErrorMessage id="email-error" role="alert">
+          <FormFieldErrorMessage contentId="email-error" contentRole="alert">
             Please enter a valid email address
           </FormFieldErrorMessage>
         </div>,

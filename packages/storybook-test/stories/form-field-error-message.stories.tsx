@@ -94,7 +94,7 @@ export const FormFieldErrorMessageShort: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
@@ -124,7 +124,7 @@ export const FormFieldErrorMessageLong: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           Er is een probleem opgetreden bij het verwerken van uw gegevens. Het veld Naam is verplicht en mag niet leeg
           blijven. Vul het veld Naam in met uw volledige voor- en achternaam (bijv. Jan de Vries). Controleer of er geen
           onbedoelde spaties of leestekens in het veld staan.
@@ -156,7 +156,7 @@ export const FormFieldErrorMessageMultiple: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           <p>
             Er is een probleem opgetreden bij het verwerken van uw gegevens. Het veld Naam is verplicht en mag niet leeg
             blijven. Dit veld wordt gebruikt om uw identiteit te verifiëren.
@@ -194,7 +194,7 @@ export const FormFieldErrorMessageWithParagraphComponent: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Postcode</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           <Paragraph>
             Het veld Postcode is niet ingevuld. Vul je postcode in. Een postcode bestaat uit 4 cijfers en 2 letters.
           </Paragraph>
@@ -226,7 +226,7 @@ export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Postcode</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           <Paragraph>Het veld Postcode is niet ingevuld.</Paragraph>
           <Paragraph>Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.</Paragraph>
         </FormFieldErrorMessage>
@@ -258,7 +258,7 @@ export const FormFieldErrorMessageLangLTR: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Postcode</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID} lang="en">
+        <FormFieldErrorMessage contentId={ERROR_ID} lang="en">
           The postal code is not valid. A valid postal code consists of four digits, a space and two letters, for
           example: 1234 AB.
         </FormFieldErrorMessage>
@@ -290,7 +290,7 @@ export const FormFieldErrorMessageLangRTL: Story = {
         <div lang="ar" dir="rtl">
           <label htmlFor={INPUT_ID}>الرمز البريدي</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID} lang="ar" dir="rtl">
+        <FormFieldErrorMessage contentId={ERROR_ID} lang="ar" dir="rtl">
           حقل الرمز البريدي غير مملوء في هذا الحقل لا يمكن أن يكون فارغا.
         </FormFieldErrorMessage>
         <div lang="ar" dir="rtl">
@@ -321,7 +321,7 @@ export const FormFieldErrorMessageVerticalText: Story = {
         <div>
           <label htmlFor={INPUT_ID}>郵便番号</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID} lang="ja">
+        <FormFieldErrorMessage contentId={ERROR_ID} lang="ja">
           郵便番号フィールドは入力されていません。このフィールドは空にはなりません。
         </FormFieldErrorMessage>
         <div>
@@ -353,7 +353,7 @@ export const FormFieldErrorMessageVerticalTextWithIcon: Story = {
           <label htmlFor={INPUT_ID}>郵便番号</label>
         </div>
         <FormFieldErrorMessage
-          id={ERROR_ID}
+          contentId={ERROR_ID}
           lang="ja"
           icon={
             <Icon>
@@ -390,7 +390,7 @@ export const FormFieldErrorMessageLargeText: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Postcode</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldErrorMessage>
         <div>
@@ -421,7 +421,7 @@ export const FormFieldErrorMessageAboveTextInput: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Postcode</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
         </FormFieldErrorMessage>
         <div>
@@ -451,7 +451,7 @@ export const FormFieldErrorMessageBelowTextInputViaStyling: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Postcode</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID} style={{ order: 2 }}>
+        <FormFieldErrorMessage contentId={ERROR_ID} style={{ order: 2 }}>
           Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
         </FormFieldErrorMessage>
         <div style={{ order: 1 }}>
@@ -481,7 +481,7 @@ export const FormFieldErrorMessageWordBreak: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           De onvolledigheidscontrolemechanismevalidatieprocedure heeft geconstateerd dat het veld Naam niet is ingevuld.
           Dit resulteert in een onacceptabele gegevensverwerkingsfoutmelding binnen ons geïntegreerde
           automatiseringsplatform voor klantgegevensbeheer.
@@ -514,7 +514,7 @@ export const FormFieldErrorMessageSmallViewport: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           Er is een probleem opgetreden bij het verwerken van uw gegevens. Het veld Naam is verplicht en mag niet leeg
           blijven. Vul het veld Naam in met uw volledige voor- en achternaam (bijv. Jan de Vries). Controleer of er geen
           onbedoelde spaties of leestekens in het veld staan.
@@ -546,7 +546,7 @@ export const FormFieldErrorMessageList: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Wachtwoord</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           Het ingevulde wachtwoord voldoet niet aan de eisen. Een wachtwoord moet voldoen aan de volgende eisen:
           <ul>
             <li>Minimaal 8 karakters.</li>
@@ -589,7 +589,7 @@ export const FormFieldErrorMessageForcedColorsMode: Story = {
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
         <FormFieldErrorMessage
-          id={ERROR_ID}
+          contentId={ERROR_ID}
           icon={
             <Icon>
               <IconAlertCircle />
@@ -626,7 +626,7 @@ export const FormFieldErrorMessageWithCode: Story = {
         <div>
           <label htmlFor={INPUT_ID}>JSON invoer</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           <Paragraph>
             <Code>SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data</Code>
           </Paragraph>
@@ -659,7 +659,7 @@ export const FormFieldErrorMessageWithIcon: Story = {
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
         <FormFieldErrorMessage
-          id={ERROR_ID}
+          contentId={ERROR_ID}
           icon={
             <Icon>
               <IconAlertCircle />

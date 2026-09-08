@@ -31,7 +31,7 @@ With built-in CSS:
 ```jsx
 import { FormFieldErrorMessage } from '@nl-design-system-candidate/form-field-error-message-react/css';
 
-<FormFieldErrorMessage id="name-error">The "Name" field is required.</FormFieldErrorMessage>;
+<FormFieldErrorMessage contentId="name-error">The "Name" field is required.</FormFieldErrorMessage>;
 ```
 
 Only the React component. You still need to import the CSS separately:
@@ -39,29 +39,31 @@ Only the React component. You still need to import the CSS separately:
 ```jsx
 import { FormFieldErrorMessage } from '@nl-design-system-candidate/form-field-error-message-react';
 
-<FormFieldErrorMessage id="name-error">The "Name" field is required.</FormFieldErrorMessage>;
+<FormFieldErrorMessage contentId="name-error">The "Name" field is required.</FormFieldErrorMessage>;
 ```
 
 ### Linking to an input field via `aria-describedby`
 
-Always give the `FormFieldErrorMessage` an `id` and link it via `aria-describedby` to the associated input
-field. This allows screen readers to read out the error message when the input field receives focus.
+Always give the `FormFieldErrorMessage` a `contentId` and link it via `aria-describedby` to the associated
+input field. This allows screen readers to read out the error message when the input field receives
+focus. Use `contentId` rather than `id`: `id` sets the `id` attribute of the outer wrapper element, while
+`contentId` places it specifically on the content element that holds the error text.
 
 ```jsx
 <div>
   <label htmlFor="name">Name</label>
-  <FormFieldErrorMessage id="name-error">The "Name" field is required.</FormFieldErrorMessage>
+  <FormFieldErrorMessage contentId="name-error">The "Name" field is required.</FormFieldErrorMessage>
   <input id="name" aria-describedby="name-error" type="text" />
 </div>
 ```
 
-### Realtime validation with `role="alert"`
+### Realtime validation with `contentRole="alert"`
 
 When the error message is added or updated at the client side, for example after realtime validation, use
-`role="alert"` so it's announced immediately.
+`contentRole="alert"` so it's announced immediately.
 
 ```jsx
-<FormFieldErrorMessage id="name-error" role="alert">
+<FormFieldErrorMessage contentId="name-error" contentRole="alert">
   The "Name" field is required.
 </FormFieldErrorMessage>
 ```
@@ -77,7 +79,7 @@ element or inline elements such as `<strong>` and `<em>`. Do not use interactive
 buttons) as `children`.
 
 ```jsx
-<FormFieldErrorMessage id="name-error">
+<FormFieldErrorMessage contentId="name-error">
   <p>The "Name" field is required.</p>
 </FormFieldErrorMessage>
 ```
@@ -89,7 +91,7 @@ technology by default, since the text of the error message already conveys the m
 
 ```jsx
 <FormFieldErrorMessage
-  id="name-error"
+  contentId="name-error"
   icon={
     <Icon>
       <IconAlertCircle />
@@ -102,15 +104,16 @@ technology by default, since the text of the error message already conveys the m
 
 ## Props
 
-| Prop          | Description                                                                                                           | Type        | Default |
-| ------------- | --------------------------------------------------------------------------------------------------------------------- | ----------- | ------- |
-| `id`          | Links the error message via `aria-describedby` to an input field. Applied to the content element. Always use an `id`. | `string`    | —       |
-| `children`    | Content of the content element                                                                                        | `ReactNode` | —       |
-| `icon`        | Content of the optional icon element, shown before the content                                                        | `ReactNode` | —       |
-| `contentRole` | ARIA role, for example `"alert"` for realtime validation. Applied to the content element.                             | `string`    | —       |
+| Prop          | Description                                                                                                                      | Type        | Default |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------- |
+| `contentId`   | Links the error message via `aria-describedby` to an input field. Applied to the content element, not the root. Always set this. | `string`    | —       |
+| `contentRole` | ARIA role, for example `"alert"` for realtime validation. Applied to the content element, not the root.                          | `string`    | —       |
+| `children`    | Content of the content element                                                                                                   | `ReactNode` | —       |
+| `icon`        | Content of the optional icon element, shown before the content                                                                   | `ReactNode` | —       |
 
 In addition to the props above, `FormFieldErrorMessage` accepts all standard HTML attributes of a `<div>`
-element, and forwards a `ref` to the underlying `<div>` element.
+element (including `id` and `role`, applied to the root element, not the content element), and forwards a
+`ref` to the underlying root `<div>` element.
 
 ## Design Tokens
 

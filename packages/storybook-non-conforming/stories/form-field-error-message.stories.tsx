@@ -50,7 +50,7 @@ export const FormFieldErrorMessageWithInteractiveContent: Story = {
           <input id={INPUT_ID} aria-describedby={ERROR_ID} type="checkbox" />
           <label htmlFor={INPUT_ID}>Voorwaarden</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           Het veld Voorwaarden is niet aangevinkt. Dit is een verplicht veld.{' '}
           <a href="/voorwaarden">Lees de voorwaarden.</a>
         </FormFieldErrorMessage>
@@ -115,7 +115,7 @@ export const FormFieldErrorMessageAsStatus: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Uw idee</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID} role="alert">
+        <FormFieldErrorMessage contentId={ERROR_ID} contentRole="alert">
           Nog 250 karakters over.
         </FormFieldErrorMessage>
         <div>
@@ -151,7 +151,7 @@ export const FormFieldErrorMessageAboveTextInputViaVisualOrder: Story = {
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
-          <FormFieldErrorMessage id={ERROR_ID} style={{ order: -1 }}>
+          <FormFieldErrorMessage contentId={ERROR_ID} style={{ order: -1 }}>
             Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
           </FormFieldErrorMessage>
         </div>
@@ -186,7 +186,7 @@ export const FormFieldErrorMessageBelowTextInput: Story = {
         <div>
           <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
         </FormFieldErrorMessage>
       </>
@@ -217,7 +217,7 @@ export const FormFieldErrorMessageWithDetailsAndSummary: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           <details>
             <summary>Foutmelding</summary>
             Het veld Naam is niet ingevuld. Dit is een verplicht veld.
@@ -255,7 +255,7 @@ export const FormFieldErrorMessageLate: Story = {
         <div>
           <label htmlFor={NAME_INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage id={NAME_ERROR_ID} role="alert">
+        <FormFieldErrorMessage contentId={NAME_ERROR_ID} contentRole="alert">
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
@@ -298,7 +298,7 @@ export const FormFieldErrorMessageWithAlertComponent: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID} role="alert">
+        <FormFieldErrorMessage contentId={ERROR_ID} contentRole="alert">
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
@@ -332,7 +332,7 @@ export const FormFieldErrorMessageTable: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Wachtwoord</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           <table>
             <thead>
               <tr>
@@ -385,7 +385,7 @@ export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Wachtwoord</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           Het ingevulde wachtwoord voldoet niet aan de eisen. Een wachtwoord moet voldoen aan de volgende eisen:
           <ul>
             <li>Minimaal 8 karakters</li>
@@ -424,7 +424,7 @@ export const FormFieldErrorMessageWithRedundantRole: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID} role="status" aria-live="polite">
+        <FormFieldErrorMessage contentId={ERROR_ID} contentRole="status" aria-live="polite">
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
@@ -455,7 +455,7 @@ export const FormFieldErrorMessageProgrammaticFocus: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage id={ERROR_ID} tabIndex={-1}>
+        <FormFieldErrorMessage contentId={ERROR_ID} tabIndex={-1}>
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
