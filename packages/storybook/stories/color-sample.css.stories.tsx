@@ -81,3 +81,104 @@ export const CssOnlySvgRond: Story = {
     </svg>
   ),
 };
+
+export const CssOnlyMetWaarde: Story = {
+  name: 'Color Sample zonder React, met een ondoorzichtige kleur',
+  args: { value: 'deeppink' },
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    docs: {
+      description: {
+        story:
+          'Zonder React kan de Color Sample ook met alleen CSS gebruikt worden: geef een willekeurig element de class `nl-color-sample` en stel de custom property `--nl-color-sample-value` in op de gewenste kleur. Een ondoorzichtige waarde bedekt het checkerboard-patroon volledig.',
+      },
+    },
+  },
+  render: () => (
+    <div
+      className="nl-color-sample"
+      style={{ ...cssOnlySizeStyle, '--nl-color-sample-value': 'deeppink' } as CSSProperties}
+    />
+  ),
+};
+
+export const CssOnlyMetSemiTransparanteWaarde: Story = {
+  name: 'Color Sample zonder React, met een semi-transparante kleur',
+  args: { value: '#ff14937f' },
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    docs: {
+      description: {
+        story:
+          'Een semi-transparante waarde (`--nl-color-sample-value: #ff14937f`) mengt met het checkerboard-patroon eronder, op dezelfde manier als bij de React-implementatie.',
+      },
+    },
+  },
+  render: () => (
+    <div
+      className="nl-color-sample"
+      style={{ ...cssOnlySizeStyle, '--nl-color-sample-value': '#ff14937f' } as CSSProperties}
+    />
+  ),
+};
+
+export const CssOnlyMetVolledigTransparanteWaarde: Story = {
+  name: 'Color Sample zonder React, met een 100% transparante kleur',
+  args: { value: '#ffffff00' },
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    docs: {
+      description: {
+        story:
+          'Een volledig transparante waarde (`--nl-color-sample-value: #ffffff00`) laat alleen het checkerboard-patroon zien, zonder kleur ervan bovenop.',
+      },
+    },
+  },
+  render: () => (
+    <div
+      className="nl-color-sample"
+      style={{ ...cssOnlySizeStyle, '--nl-color-sample-value': '#ffffff00' } as CSSProperties}
+    />
+  ),
+};
+
+export const CssOnlyZonderWaarde: Story = {
+  name: 'Color Sample zonder React, zonder ingestelde waarde',
+  args: { value: 'transparent' },
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    docs: {
+      description: {
+        story:
+          'Zonder `--nl-color-sample-value` toont het element alleen het neutrale checkerboard-patroon (optioneel te tinten via `--nl-color-sample-background-color`), als "geen waarde gekozen"-status.',
+      },
+    },
+  },
+  render: () => <div className="nl-color-sample" style={cssOnlySizeStyle} />,
+};
+
+export const CssOnlyRond: Story = {
+  name: 'Color Sample zonder React, met een ronde vorm',
+  args: { value: 'deeppink' },
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    docs: {
+      description: {
+        story:
+          'De vorm van de Color Sample is aan te passen via de custom property `--nl-color-sample-border-radius`. Met een waarde van `50%` wordt het element rond.',
+      },
+    },
+  },
+  render: () => (
+    <div
+      className="nl-color-sample"
+      style={
+        {
+          ...cssOnlySizeStyle,
+          '--nl-color-sample-value': 'deeppink',
+          '--nl-color-sample-border-radius': '50%',
+        } as CSSProperties
+      }
+    />
+  ),
+};
