@@ -51,8 +51,8 @@ importers:
         specifier: 10.4.1
         version: 10.4.1
       '@testing-library/jest-dom':
-        specifier: 6.9.1
-        version: 6.9.1
+        specifier: 7.0.1
+        version: 7.0.1(@testing-library/dom@10.4.1)(vitest@4.1.8)
       '@testing-library/react':
         specifier: 16.3.0
         version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@18.3.7(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -124,7 +124,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-css/alert-css:
     devDependencies:
@@ -347,7 +347,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/button-react:
     dependencies:
@@ -402,7 +402,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/code-block-react:
     dependencies:
@@ -445,7 +445,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/code-react:
     dependencies:
@@ -485,7 +485,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/color-sample-react:
     dependencies:
@@ -525,7 +525,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/data-badge-react:
     dependencies:
@@ -565,7 +565,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/form-field-description-react:
     dependencies:
@@ -608,7 +608,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/form-field-error-message-react:
     dependencies:
@@ -651,7 +651,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/form-field-label-react:
     dependencies:
@@ -694,7 +694,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/heading-react:
     dependencies:
@@ -734,7 +734,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/icon-react:
     dependencies:
@@ -777,7 +777,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/link-react:
     dependencies:
@@ -820,7 +820,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/mark-react:
     dependencies:
@@ -860,7 +860,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/note-react:
     dependencies:
@@ -903,7 +903,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/number-badge-react:
     dependencies:
@@ -943,7 +943,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/ordered-list-react:
     dependencies:
@@ -986,7 +986,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/paragraph-react:
     dependencies:
@@ -1029,7 +1029,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/skip-link-react:
     dependencies:
@@ -1072,7 +1072,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/text-input-react:
     dependencies:
@@ -1115,7 +1115,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/components-react/unordered-list-react:
     dependencies:
@@ -1158,7 +1158,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/docs/alert-docs:
     devDependencies:
@@ -1642,7 +1642,7 @@ importers:
         version: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/storybook-non-conforming:
     devDependencies:
@@ -1720,7 +1720,7 @@ importers:
         version: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/storybook-shared:
     devDependencies:
@@ -1843,7 +1843,7 @@ importers:
         version: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   packages/tokens/alert-tokens: {}
 
@@ -3810,6 +3810,16 @@ packages:
   '@testing-library/jest-dom@6.9.1':
     resolution: {integrity: sha512-zIcONa+hVtVSSep9UT3jZ5rizo2BsxgyDYU7WFD5eICBE7no3881HGeb/QkGfsJs6JTkY1aQhT7rIPC7e+0nnA==}
     engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
+
+  '@testing-library/jest-dom@7.0.1':
+    resolution: {integrity: sha512-oMDTC3oA+6CXSO2JZnvOI7CA6oVub6kij5ggk9ohwye5slmkwxYDXcPOVxgMw/RQlticjtO0C1RZkR97HgrWMw==}
+    engines: {node: '>=22', npm: '>=6', yarn: '>=1'}
+    peerDependencies:
+      '@testing-library/dom': '>=10 <11'
+      vitest: '>= 0.32'
+    peerDependenciesMeta:
+      vitest:
+        optional: true
 
   '@testing-library/react@16.3.0':
     resolution: {integrity: sha512-kFSyxiEDwv1WLl2fgsq6pPBbw5aWKrsY2/noi1Id0TK0UParSF62oFQFGHXIyaG4pp2tEub/Zlel+fjjZILDsw==}
@@ -7287,7 +7297,6 @@ packages:
       '@vitest/ui': 4.1.8
       happy-dom: '*'
       jsdom: '*'
-      vite: ^7.3.5
     peerDependenciesMeta:
       '@edge-runtime/vm':
         optional: true
@@ -9516,6 +9525,18 @@ snapshots:
       picocolors: 1.1.1
       redent: 3.0.0
 
+  '@testing-library/jest-dom@7.0.1(@testing-library/dom@10.4.1)(vitest@4.1.8)':
+    dependencies:
+      '@adobe/css-tools': 4.4.0
+      '@testing-library/dom': 10.4.1
+      aria-query: 5.3.0
+      css.escape: 1.5.1
+      dom-accessibility-api: 0.6.3
+      picocolors: 1.1.1
+      redent: 3.0.0
+    optionalDependencies:
+      vitest: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+
   '@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@18.3.7(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@babel/runtime': 7.28.4
@@ -9758,7 +9779,7 @@ snapshots:
       obug: 2.1.1
       std-env: 4.1.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      vitest: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
   '@vitest/expect@3.2.4':
     dependencies:
@@ -13465,7 +13486,7 @@ snapshots:
       sass: 1.94.1
       yaml: 2.9.0
 
-  vitest@4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)):
+  vitest@4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0):
     dependencies:
       '@vitest/expect': 4.1.8
       '@vitest/mocker': 4.1.8(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
@@ -13492,7 +13513,17 @@ snapshots:
       '@vitest/coverage-v8': 4.1.8(vitest@4.1.8)
       jsdom: 27.2.0(supports-color@10.2.2)
     transitivePeerDependencies:
+      - jiti
+      - less
+      - lightningcss
       - msw
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - terser
+      - tsx
+      - yaml
 
   w3c-xmlserializer@5.0.0:
     dependencies:
