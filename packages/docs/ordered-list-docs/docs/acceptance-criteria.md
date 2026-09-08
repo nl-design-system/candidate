@@ -21,13 +21,20 @@ Enum
 - 2
 - 3
 
-##### Marker Text
+##### Marker (design)
 
-String (design)
+Enum
 
-##### Content
+- Default
+- Inline Marker
 
-String (code) / Text - string (design)
+##### Marker Text (design)
+
+String
+
+##### Children
+
+HTML (code) / Text - string (design)
 
 ## Semantiek
 
