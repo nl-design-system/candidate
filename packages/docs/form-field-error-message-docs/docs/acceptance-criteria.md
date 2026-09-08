@@ -91,9 +91,11 @@ Alle props uit `HTMLAttributes<HTMLDivElement>` worden doorgestuurd naar het ond
 
 De volgende props worden expliciet ondersteund:
 
-| Prop        | Type                  | Verplicht | Omschrijving                                                                                                                 |
-| ----------- | --------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `children`  | `ReactNode`           | nee       | Inhoud van de content-slot in de vorm van een `p` HTML-element of phrasing content met uitzondering van interactive content. |
-| `icon`      | `ReactNode`           | nee       | Inhoud van de icon-slot in de vorm van een `p` HTML-element of phrasing content met uitzondering van interactive content.    |
-| `className` | `string`              | nee       | Extra CSS classes naast `nl-form-field-error-message`.                                                                       |
-| `ref`       | `Ref<HTMLDivElement>` | nee       | Ref naar het onderliggende `div` HTML-element.                                                                               |
+| Prop          | Type                  | Verplicht | Omschrijving                                                                                                                 |
+| ------------- | --------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `children`    | `ReactNode`           | nee       | Inhoud van de content-slot in de vorm van een `p` HTML-element of phrasing content met uitzondering van interactive content. |
+| `icon`        | `ReactNode`           | nee       | Inhoud van de icon-slot in de vorm van een `p` HTML-element of phrasing content met uitzondering van interactive content.    |
+| `contentId`   | `string`              | nee       | `id` HTML-attribuut van de content-slot, zodat het met `aria-describedby` aan het input-element gekoppeld kan worden.        |
+| `contentRole` | `string`              | nee       | `role` HTML-attribuut van de content-slot, bijvoorbeeld `"alert"` bij client-side validatie.                                 |
+| `className`   | `string`              | nee       | Extra CSS classes naast `nl-form-field-error-message`.                                                                       |
+| `ref`         | `Ref<HTMLDivElement>` | nee       | Ref naar het onderliggende `div` HTML-element.                                                                               |
