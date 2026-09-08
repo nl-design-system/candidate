@@ -27,10 +27,7 @@ yarn add @nl-design-system-candidate/note-css
 You can import the CSS directly from a CDN
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@nl-design-system-candidate/note-css/dist/note.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nl-design-system-candidate/note-css/dist/note.css" />
 ```
 
 You can import the CSS directly from the `node_modules/`
