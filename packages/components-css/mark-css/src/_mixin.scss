@@ -1,5 +1,6 @@
 @mixin nl-mark {
   background-color: var(--nl-mark-background-color, revert);
+  box-sizing: border-box;
   color: var(--nl-mark-color, revert);
 
   @media (forced-colors: active) {

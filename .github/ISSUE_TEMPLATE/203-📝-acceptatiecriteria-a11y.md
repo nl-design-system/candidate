@@ -34,7 +34,9 @@ Stel aan de hand van de onderzoeksstappen de acceptatiecriteria van de component
 
 ### Stel acceptatiecriteria vast voor de component in context
 
-Stel aan de hand van de onderzoeksstappen nu de acceptatiecriteria vast van de component in context met omloggende componenten op een pagina. Verdeel deze criteria die wèl contextgerelateerd zijn onder in Developer, Designer, contentmaker
+Stel aan de hand van de onderzoeksstappen nu de acceptatiecriteria vast van de component in context met omloggende componenten op een pagina. Verdeel deze criteria die wèl contextgerelateerd zijn onder in Developer, Designer, contentmaker.
+
+Benoem de community componenten die als voorbeeld dienen voor de acceptatiecriteria en stuur de developer die verantwoordelijk is voor de ontwikkelfase een link naar je documentatie.
 
 ### Maak een PR in de documentatie repository
 

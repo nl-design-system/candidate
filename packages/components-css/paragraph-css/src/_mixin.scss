@@ -1,4 +1,5 @@
 @mixin nl-paragraph {
+  box-sizing: border-box;
   color: var(--nl-paragraph-color, inherit);
   font-family: var(--nl-paragraph-font-family, inherit);
   font-size: var(--nl-paragraph-font-size, inherit);
