@@ -19,6 +19,11 @@ Disables the candidate CSS (`all: revert !important` on `.candidate-disable-css`
 layout becomes visible. Used in `storybook-non-conforming`, for example to show the difference between a
 `<span>` (inline) and a `<div>` (block).
 
+### CandidateContentOutlineCssDecorator
+
+Adds an outline around every element directly rendered by the story (not nested descendants), so you can
+test the boundaries of its border box in visual regression tests.
+
 ### ExampleBodyTextDecorator
 
 Wraps a story in `<div class="example-body-text">`, for example body text around a component.
