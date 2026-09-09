@@ -1,0 +1,10 @@
+.candidate-content-outline {
+  padding-block: 1px;
+  padding-inline: 1px;
+}
+
+.candidate-content-outline > * {
+  outline-color: currentColor;
+  outline-style: dotted;
+  outline-width: 1px;
+}
