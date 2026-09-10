@@ -7,6 +7,7 @@
 
   // background-color: color-mix(in srgb, tomato 25%, transparent);
   block-size: var(--nl-icon-block-size, var(--_nl-icon-block-size));
+  box-sizing: border-box;
   color: var(--nl-icon-color, currentcolor);
   display: inline-flex;
   font-size: var(--nl-icon-font-size, 1em);
