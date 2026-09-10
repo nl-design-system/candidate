@@ -76,9 +76,21 @@ Voor de HTML component:
 
 Voor de HTML component:
 
-- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html` class met een HTML `label` element zonder component classes.
+- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html-all` class met een HTML `label` element zonder component classes.
 - De CSS ondersteunt een Form Field Label binnen een element met de `nl-html--form-field-label` class met een HTML `label` element zonder component classes.
 - De CSS ondersteunt een semantische HTML Label bestaande uit een HTML `label` element zonder component classes.
+
+#### Alternatieve HTML voor Form Field Label met `inherit`
+
+- De CSS ondersteunt een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--inherit` class op de HTML `label` element.
+- De CSS ondersteunt een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--inherit` class op de HTML `div` element.
+- De CSS ondersteunt een Form Field Label met de `nl-form-field-label` en `nl-form-field-label--inherit` class op de HTML `span` element.
+
+Voor de HTML component:
+
+- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html-all` class met een HTML `label` element binnen een HTML `h1`, `h2`, `h3`, `h4`, `h5` of `h6` element zonder component classes.
+- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html--form-field-label` class met een HTML `label` element binnen een HTML `h1`, `h2`, `h3`, `h4`, `h5` of `h6` element zonder component classes.
+- De CSS ondersteunt een semantische HTML Label bestaande uit een HTML `label` element binnen een HTML `h1`, `h2`, `h3`, `h4`, `h5` of `h6` element zonder component classes.
 
 ### Forced Colors modus
 
@@ -115,15 +127,15 @@ Voor de HTML component:
   - `nl-html--form-field-label`
 
   Automatische styling via de volgende selectors:
-  - `nl-field-label--option` via:
-    - `label:where([type="checkbox" i])` voor Switch en Checkbox
-    - `label:where([type="radio" i])`
+  - `nl-form-field-label--option` via:
+    - `label:has([type="checkbox" i])` voor Switch en Checkbox
+    - `label:has([type="radio" i])`
 
-  - `nl-field-label--disabled` via:
-    - `label:where([type="checkbox" i]:disabled)` voor Switch en Checkbox
-    - `label:where([type="radio" i]:disabled)`
+  - `nl-form-field-label--disabled` via:
+    - `label:has([type="checkbox" i]:disabled)` voor Switch en Checkbox
+    - `label:has([type="radio" i]:disabled)`
 
-  - `nl-field-label--inherit` via:
+  - `nl-form-field-label--inherit` via:
     - `:is(h1, h2, h3, h4, h5, h6) label`
 
 #### Geldige combinaties van CSS classes
