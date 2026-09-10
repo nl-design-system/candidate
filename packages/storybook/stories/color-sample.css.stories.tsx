@@ -7,6 +7,17 @@ import { mergeCssMeta } from '../src/helpers/merge-css-meta';
 import { getExternalLinks } from '../src/helpers/external-links';
 
 const externalLinks = getExternalLinks('https://nldesignsystem.nl/color-sample', packageJSON.homepage);
+const DemoSvg = ({ style }: { style?: CSSProperties }) => (
+  <svg
+    className="nl-color-sample"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    preserveAspectRatio="none"
+    style={style}
+  >
+    <path d="M0 0H32V32H0Z" fill="currentColor" />
+  </svg>
+);
 
 const meta = {
   ...mergeCssMeta(colorSampleMeta, externalLinks),
