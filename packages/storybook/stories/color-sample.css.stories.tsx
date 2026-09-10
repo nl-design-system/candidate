@@ -8,6 +8,17 @@ import { mergeCssMeta } from '../src/helpers/merge-css-meta';
 import { getExternalLinks } from '../src/helpers/external-links';
 
 const externalLinks = getExternalLinks('https://nldesignsystem.nl/color-sample', packageJSON.homepage);
+const DemoSvg = ({ style }: { style?: CSSProperties }) => (
+  <svg
+    className="nl-color-sample"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    preserveAspectRatio="none"
+    style={style}
+  >
+    <path d="M0 0H32V32H0Z" fill="currentColor" />
+  </svg>
+);
 
 const meta = {
   ...mergeCssMeta(colorSampleMeta, externalLinks),
@@ -24,7 +35,7 @@ export const ColorSample = Stories.ColorSample;
 const cssOnlySizeStyle: CSSProperties = {
   '--nl-color-sample-inline-size': '3rem',
   '--nl-color-sample-block-size': '3rem',
-} as CSSProperties;
+};
 
 export const CssOnlySvgMetAangepasteGrootte: Story = {
   name: 'Color Sample als losse SVG, met een aangepaste grootte',
@@ -39,15 +50,12 @@ export const CssOnlySvgMetAangepasteGrootte: Story = {
     },
   },
   render: () => (
-    <svg
-      className="nl-color-sample"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
-      preserveAspectRatio="none"
-      style={{ ...cssOnlySizeStyle, color: 'deepPink' } as CSSProperties}
-    >
-      <path d="M0 0H32V32H0Z" fill="currentColor" />
-    </svg>
+    <DemoSvg
+      style={{
+        ...cssOnlySizeStyle,
+        color: 'deepPink',
+      }}
+    />
   ),
 };
 
@@ -64,21 +72,13 @@ export const CssOnlySvgRond: Story = {
     },
   },
   render: () => (
-    <svg
-      className="nl-color-sample"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
-      preserveAspectRatio="none"
-      style={
-        {
-          ...cssOnlySizeStyle,
-          color: 'deeppink',
-          '--nl-color-sample-border-radius': '50%',
-        } as CSSProperties
-      }
-    >
-      <path d="M0 0H32V32H0Z" fill="currentColor" />
-    </svg>
+    <DemoSvg
+      style={{
+        ...cssOnlySizeStyle,
+        color: 'deeppink',
+        '--nl-color-sample-border-radius': '50%',
+      }}
+    />
   ),
 };
 
@@ -94,7 +94,7 @@ export const CssOnlyMetWaarde: Story = {
       },
     },
   },
-  render: () => <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: 'deeppink' } as CSSProperties} />,
+  render: () => <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: 'deeppink' }} />,
 };
 
 export const CssOnlyMetSemiTransparanteWaarde: Story = {
@@ -109,9 +109,7 @@ export const CssOnlyMetSemiTransparanteWaarde: Story = {
       },
     },
   },
-  render: () => (
-    <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: '#ff14937f' } as CSSProperties} />
-  ),
+  render: () => <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: '#ff14937f' }} />,
 };
 
 export const CssOnlyMetVolledigTransparanteWaarde: Story = {
@@ -126,9 +124,7 @@ export const CssOnlyMetVolledigTransparanteWaarde: Story = {
       },
     },
   },
-  render: () => (
-    <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: '#ffffff00' } as CSSProperties} />
-  ),
+  render: () => <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: '#ffffff00' }} />,
 };
 
 export const CssOnlyZonderWaarde: Story = {
@@ -161,13 +157,11 @@ export const CssOnlyRond: Story = {
   render: () => (
     <div
       className="nl-color-sample"
-      style={
-        {
-          ...cssOnlySizeStyle,
-          color: 'deeppink',
-          '--nl-color-sample-border-radius': '50%',
-        } as CSSProperties
-      }
+      style={{
+        ...cssOnlySizeStyle,
+        color: 'deeppink',
+        '--nl-color-sample-border-radius': '50%',
+      }}
     />
   ),
 };
