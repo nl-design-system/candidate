@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import type { CSSProperties } from 'react';
 import packageJSON from '../../components-css/color-sample-css/package.json';
-import { ColorSample as ColorSampleComponent } from '@nl-design-system-candidate/color-sample-react';
+import {
+  ColorSample as ColorSampleComponent,
+  type ColorSampleProps,
+} from '@nl-design-system-candidate/color-sample-react';
 import colorSampleMeta from '@nl-design-system-candidate/color-sample-docs/stories/color-sample.css.meta';
 import * as Stories from '@nl-design-system-candidate/color-sample-docs/stories/color-sample.stories';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta';
@@ -37,6 +40,10 @@ const cssOnlySizeStyle: CSSProperties = {
   '--nl-color-sample-block-size': '3rem',
 };
 
+// `render`'s `args` param is typed as `{}` because `mergeCssMeta` loses the component's precise prop
+// types, so the cast to `ColorSampleProps` has to happen somewhere; this centralizes it in one place.
+const getValue = (args: unknown): ColorSampleProps['value'] => (args as ColorSampleProps).value;
+
 export const CssOnlySvgMetAangepasteGrootte: Story = {
   name: 'Color Sample als losse SVG, met een aangepaste grootte',
   args: { value: 'deepPink' },
@@ -49,11 +56,11 @@ export const CssOnlySvgMetAangepasteGrootte: Story = {
       },
     },
   },
-  render: () => (
+  render: (args) => (
     <DemoSvg
       style={{
         ...cssOnlySizeStyle,
-        color: 'deepPink',
+        color: getValue(args),
       }}
     />
   ),
@@ -71,11 +78,11 @@ export const CssOnlySvgRond: Story = {
       },
     },
   },
-  render: () => (
+  render: (args) => (
     <DemoSvg
       style={{
         ...cssOnlySizeStyle,
-        color: 'deeppink',
+        color: getValue(args),
         '--nl-color-sample-border-radius': '50%',
       }}
     />
@@ -94,7 +101,7 @@ export const CssOnlyMetWaarde: Story = {
       },
     },
   },
-  render: () => <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: 'deeppink' }} />,
+  render: (args) => <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: getValue(args) }} />,
 };
 
 export const CssOnlyMetSemiTransparanteWaarde: Story = {
@@ -109,7 +116,7 @@ export const CssOnlyMetSemiTransparanteWaarde: Story = {
       },
     },
   },
-  render: () => <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: '#ff14937f' }} />,
+  render: (args) => <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: getValue(args) }} />,
 };
 
 export const CssOnlyMetVolledigTransparanteWaarde: Story = {
@@ -124,12 +131,16 @@ export const CssOnlyMetVolledigTransparanteWaarde: Story = {
       },
     },
   },
-  render: () => <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: '#ffffff00' }} />,
+  render: (args) => <div className="nl-color-sample" style={{ ...cssOnlySizeStyle, color: getValue(args) }} />,
 };
 
 export const CssOnlyZonderWaarde: Story = {
   name: 'Color Sample zonder React, zonder ingestelde kleur',
   args: { value: 'transparent' },
+  argTypes: {
+    // Deze story laat juist zien wat er gebeurt als `color` niet zelf is ingesteld, dus de control heeft hier geen effect.
+    value: { control: false },
+  },
   parameters: {
     chromatic: { disableSnapshot: false },
     docs: {
@@ -154,12 +165,12 @@ export const CssOnlyRond: Story = {
       },
     },
   },
-  render: () => (
+  render: (args) => (
     <div
       className="nl-color-sample"
       style={{
         ...cssOnlySizeStyle,
-        color: 'deeppink',
+        color: getValue(args),
         '--nl-color-sample-border-radius': '50%',
       }}
     />
