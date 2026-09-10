@@ -1,6 +1,9 @@
 import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-css/color-sample-css/package.json';
-import { ColorSample as ColorSampleComponent } from '@nl-design-system-candidate/color-sample-react';
+import {
+  ColorSample as ColorSampleComponent,
+  type ColorSampleProps,
+} from '@nl-design-system-candidate/color-sample-react';
 import colorSampleMeta from '@nl-design-system-candidate/color-sample-docs/stories/color-sample.css.meta';
 import * as Stories from '@nl-design-system-candidate/color-sample-docs/stories/color-sample.stories';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta';
