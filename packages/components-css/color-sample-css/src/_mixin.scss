@@ -14,6 +14,16 @@
   forced-color-adjust: none; // [1]
   inline-size: var(--nl-color-sample-inline-size);
   pointer-events: none;
+
+  // [2]: on the React SVG implementation, `.nl-color-sample` is the <svg> itself and its own
+  // `fill="currentColor"` <path> already paints the value; this layer only applies to a plain
+  // element (e.g. a <div>) used without that SVG, so the color is picked up from the ordinary
+  // CSS `color` property instead of a component-specific custom property.
+  &:not(svg) {
+    background-image:
+      linear-gradient(currentColor, currentColor),
+      repeating-conic-gradient(var(--nl-color-sample-background-color, hsl(0 0% 90%)) 0% 25%, #fff 0% 50%);
+  }
 }
 
 // [1]: the purpose of this component is to display an exact color sample, we don't ever want the browser to interfere
