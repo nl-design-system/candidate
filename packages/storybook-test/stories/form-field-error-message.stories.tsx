@@ -496,7 +496,7 @@ export const FormFieldErrorMessageBelowTextInputViaStyling: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding staat visueel onder het invoerveld, terwijl deze in de code boven het veld staat. Voor schermlezergebruikers kan dat verwarrend zijn omdat de melding niet in de logische volgorde wordt gelezen. De oplossing is om de foutmelding in de juiste plaats in de DOM te houden en niet alleen door styling te verschuiven.',
+          'De foutmelding staat visueel onder het invoerveld, terwijl deze in de code boven het veld staat. Voor screenreadergebruikers kan dat verwarrend zijn omdat de melding niet in de logische volgorde wordt gelezen. De oplossing is om de foutmelding in de juiste plaats in de DOM te houden en niet alleen door styling te verschuiven.',
       },
     },
     status: { type: [] },
@@ -710,7 +710,7 @@ export const FormFieldErrorMessageWithIcon: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding heeft een icoon naast de tekst. Het icoon is decoratief en wordt niet voorgelezen voor schermlezergebruikers, omdat de tekst zelf al de volledige boodschap overbrengt. De icoon is verborgen middels de WAI-ARIA-attribuut `aria-hidden="true"`.',
+          'De foutmelding heeft een icoon naast de tekst. Het icoon is decoratief en wordt niet voorgelezen voor screenreadergebruikers, omdat de tekst zelf al de volledige boodschap overbrengt. De icoon is verborgen middels het WAI-ARIA-attribuut `aria-hidden="true"`.',
       },
     },
     status: { type: [] },
@@ -740,7 +740,7 @@ export const FormFieldErrorMessageCompact: Story = {
     docs: {
       description: {
         story:
-          'De kleur en typografie van de component komen overeen met het design van de Form Field Error Message. De foutmelding is een beknopte versie van de Form Field Error Message-component en is opgebouwd uit een enkele HTML-element `<p>`. De kleur, typografie en de witruimte boven en onder de Form Field Error Message is niet anders, dan wanneer het HTML-element div wordt gebruikt.',
+          'De kleur en typografie van de component komen overeen met het design van de Form Field Error Message. De foutmelding is een beknopte versie van de Form Field Error Message-component en is opgebouwd uit een enkele HTML-element `p`. De kleur, typografie en de witruimte boven en onder de Form Field Error Message is niet anders, dan wanneer het HTML-element `div` wordt gebruikt.',
       },
     },
     status: { type: [] },
@@ -748,7 +748,7 @@ export const FormFieldErrorMessageCompact: Story = {
 };
 
 export const FormFieldErrorMessageParagraphElements: Story = {
-  name: 'Form Field Error Message bestaande uit de HTML-elementen `<p>` zonder dat de style kapot gaat',
+  name: 'Form Field Error Message bestaande uit de HTML-elementen `p` zonder dat de style kapot gaat',
   render: () => {
     const INPUT_ID = 'c53ddae8-5165-46e6-8e5c-868e5da59505';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -778,7 +778,7 @@ export const FormFieldErrorMessageParagraphElements: Story = {
     docs: {
       description: {
         story:
-          'De kleur en typografie van de component komen overeen met het design van de Form Field Error Message. De foutmelding is opgebouwd uit enkel de HTML-elementen `<p>`. De kleur, typografie en de witruimte boven en onder de Form Field Error Message is niet anders, dan wanneer het HTML-element div wordt gebruikt.',
+          'De kleur en typografie van de component komen overeen met het design van de Form Field Error Message. De foutmelding is opgebouwd uit enkel de HTML-elementen `p`. De kleur, typografie en de witruimte boven en onder de Form Field Error Message is niet anders, dan wanneer het HTML-element `div` wordt gebruikt.',
       },
     },
     status: { type: [] },
@@ -786,7 +786,7 @@ export const FormFieldErrorMessageParagraphElements: Story = {
 };
 
 export const FormFieldErrorMessageSpanElements: Story = {
-  name: 'Form Field Error Message bestaande uit de HTML-elementen `<span>` zonder dat de style kapot gaat',
+  name: 'Form Field Error Message bestaande uit de HTML-elementen `span` zonder dat de style kapot gaat',
   render: () => {
     const INPUT_ID = 'c53ddae8-5165-46e6-8e5c-868e5da59506';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -816,7 +816,7 @@ export const FormFieldErrorMessageSpanElements: Story = {
     docs: {
       description: {
         story:
-          'De kleur en typografie van de component komen overeen met het design van de Form Field Error Message. De foutmelding is opgebouwd uit enkel de HTML-elementen `<span>`. De kleur, typografie en de witruimte boven en onder de Form Field Error Message is niet anders, dan wanneer het HTML-element div wordt gebruikt.',
+          'De kleur en typografie van de component komen overeen met het design van de Form Field Error Message. De foutmelding is opgebouwd uit enkel de HTML-elementen `span`. De kleur, typografie en de witruimte boven en onder de Form Field Error Message is niet anders, dan wanneer het HTML-element `div` wordt gebruikt.',
       },
     },
     status: { type: [] },
