@@ -474,3 +474,64 @@ export const FormFieldErrorMessageProgrammaticFocus: Story = {
     status: { type: [] },
   },
 };
+
+export const FormFieldErrorMessageWithoutRelationWithInput: Story = {
+  name: 'Fout: Form Field Error Message niet gekoppeld aan het invoerveld',
+  globals: { dir: 'ltr', lang: 'nl' },
+  render: () => {
+    const INPUT_ID = 'f9456de1-9202-420e-a18b-ebcbd85d1fa3';
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
+        <FormFieldErrorMessage tabIndex={-1}>
+          Het veld Naam is niet ingevuld. Dit is een verplicht veld.
+        </FormFieldErrorMessage>
+        <div>
+          <input id={INPUT_ID} type="text" autoComplete="name" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een Form Field Error Message is niet gekoppeld aan het bijbehorende invoerveld met het WAI-ARIA-attribuut `aria-describedby`. De Form Field Error Message wordt daardoor niet voorgelezen door een schermlezer bij focus op het invoerveld.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldErrorMessageAriaLabelledBy: Story = {
+  name: 'Fout: Form Field Error Message gekoppeld met aria-labelledby',
+  globals: { dir: 'ltr', lang: 'nl' },
+  render: () => {
+    const INPUT_ID = 'f9456de1-9202-420e-a18b-ebcbd85d1fa4';
+    const ERROR_ID = `${INPUT_ID}-error`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
+        <FormFieldErrorMessage contentId={ERROR_ID} tabIndex={-1}>
+          Het veld Naam is niet ingevuld. Dit is een verplicht veld.
+        </FormFieldErrorMessage>
+        <div>
+          <input id={INPUT_ID} aria-labelledby={ERROR_ID} type="text" autoComplete="name" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een Form Field Error Message die is gekoppeld aan het bijbehorende invoerveld met `aria-labelledby` in plaats van `aria-describedby`. Hierdoor komt de toegankelijke naam van het invoerveld niet meer van het Form Field Label maar van de Form Field Error Message. Gebruik in plaats daarvan `aria-describedby`.',
+      },
+    },
+    status: { type: [] },
+  },
+};
