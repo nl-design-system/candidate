@@ -20,23 +20,27 @@ afterEach(() => {
   cleanup();
 });
 
-describe('FormFieldErrorMessage', () => {
-  describe('React API', () => {
-    it(`has displayName "${displayName}"`, () => {
-      expect(FormFieldErrorMessage.displayName).toBe(displayName);
+describe('Form Field Error Message', () => {
+  describe('CSS API', () => {
+    it('has BEM class name `nl-form-field-error-message`', () => {
+      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message');
+
+      expect(element).toHaveClass('nl-form-field-error-message');
     });
+    it('displays as CSS block element', () => {
+      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message');
+
+      expect(element).toHaveStyle({ display: 'block' });
+    });
+  });
+
+  describe('Component API', () => {
     it('accepts an extra class name ${extraClassName}', () => {
       const { container } = render(<FormFieldErrorMessage className={extraClassName}>{content}</FormFieldErrorMessage>);
       const element = container.querySelector(':only-child');
       expect(element).toHaveClass('nl-form-field-error-message', extraClassName);
-    });
-    it('forwards React refs to the HTMLDivElement', () => {
-      const ref = createRef<HTMLDivElement>();
-      const { container } = render(<FormFieldErrorMessage ref={ref}>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector('.nl-form-field-error-message');
-
-      expect(ref.current).toBe(element);
-      expect(element).toBeInstanceOf(HTMLDivElement);
     });
     it('renders children', () => {
       const { container } = render(
@@ -48,8 +52,6 @@ describe('FormFieldErrorMessage', () => {
       expect(formFieldErrorMessage).toContainElement(container.querySelector('p'));
       expect(formFieldErrorMessage).toHaveTextContent(content);
     });
-  });
-  describe('HTML', () => {
     it('renders an HTML-element `div`', () => {
       const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
       const element = container.querySelector(':only-child');
@@ -79,108 +81,6 @@ describe('FormFieldErrorMessage', () => {
       const element = container.querySelector('.nl-form-field-error-message');
 
       expect(element).toHaveAttribute('id', 'root-id');
-    });
-  });
-  describe('CSS API', () => {
-    it('has BEM class name `nl-form-field-error-message`', () => {
-      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector(':only-child');
-
-      expect(element).toHaveClass('nl-form-field-error-message');
-    });
-    it('icon slot has BEM class name `nl-form-field-error-message__icon`', () => {
-      const { container } = render(<FormFieldErrorMessage icon={<Icon />}>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector('.nl-form-field-error-message__icon');
-
-      expect(element).toBeInTheDocument();
-    });
-    it('content slot has BEM class name `nl-form-field-error-message__content`', () => {
-      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector('.nl-form-field-error-message__content');
-
-      expect(element).toBeInTheDocument();
-    });
-  });
-  describe('Icon', () => {
-    it('renders an HTML-element `div` ', () => {
-      const { container } = render(<FormFieldErrorMessage icon={<div>Icon</div>}>{content}</FormFieldErrorMessage>);
-      const formFieldErrorMessageIcon = container.querySelector('.nl-form-field-error-message__icon');
-
-      expect(formFieldErrorMessageIcon).toBeInstanceOf(HTMLDivElement);
-    });
-    it('icon slot renders children', () => {
-      const { container } = render(<FormFieldErrorMessage icon={<Icon />}>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector('.nl-form-field-error-message__icon');
-      expect(element).toContainElement(container.querySelector('svg'));
-    });
-    it('can contain an HTML-element `p` ', () => {
-      const { container } = render(<FormFieldErrorMessage icon={<p>Icon</p>}>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector('.nl-form-field-error-message__icon');
-
-      expect(element).toContainElement(container.querySelector('p'));
-    });
-    it('icon slot can contain phrasing content', () => {
-      const { container } = render(<FormFieldErrorMessage icon={<span>Icon</span>}>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector('.nl-form-field-error-message__icon');
-
-      expect(element).toContainElement(container.querySelector('span'));
-    });
-  });
-  describe('Content', () => {
-    it('renders an HTML-element `div`', () => {
-      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
-      const formFieldErrorMessageContent = container.querySelector('.nl-form-field-error-message__content');
-      expect(formFieldErrorMessageContent).toBeInstanceOf(HTMLDivElement);
-    });
-    it('content slot renders children', () => {
-      const { container } = render(
-        <FormFieldErrorMessage>
-          <p>{content}</p>
-        </FormFieldErrorMessage>,
-      );
-      const element = container.querySelector('.nl-form-field-error-message__content');
-      expect(element).toContainElement(container.querySelector('p'));
-      expect(element).toHaveTextContent(content);
-    });
-    it('can contain an HTML-element `p`', () => {
-      const { container } = render(
-        <FormFieldErrorMessage>
-          <p>{content}</p>
-        </FormFieldErrorMessage>,
-      );
-      const element = container.querySelector('.nl-form-field-error-message__content');
-      expect(element).toContainElement(container.querySelector('p'));
-      expect(element).toHaveTextContent(content);
-    });
-    it('can contain an HTML-element `span`', () => {
-      const { container } = render(
-        <FormFieldErrorMessage>
-          <span>{content}</span>
-        </FormFieldErrorMessage>,
-      );
-      const element = container.querySelector('.nl-form-field-error-message__content');
-      expect(element).toContainElement(container.querySelector('span'));
-      expect(element).toHaveTextContent(content);
-    });
-  });
-  describe('accessibility', () => {
-    it('has an HTML-attribute `id` on the content element via `contentId`', () => {
-      const { container } = render(
-        <FormFieldErrorMessage contentId="form-field-error-message-id">{content}</FormFieldErrorMessage>,
-      );
-      const element = container.querySelector('.nl-form-field-error-message__content');
-
-      expect(element).toHaveAttribute('id', 'form-field-error-message-id');
-    });
-    it('can contain an HTML-attribute `role` with value `alert` on the content element via `contentRole`', () => {
-      render(
-        <FormFieldErrorMessage contentId="form-field-error-message-id" contentRole="alert">
-          {content}
-        </FormFieldErrorMessage>,
-      );
-      const formFieldErrorMessageContent = screen.getByRole('alert');
-      expect(formFieldErrorMessageContent).toHaveAttribute('id', 'form-field-error-message-id');
-      expect(formFieldErrorMessageContent).toBeInTheDocument();
     });
     it('remains in the DOM during realtime validation', () => {
       const { rerender, container } = render(
@@ -216,12 +116,133 @@ describe('FormFieldErrorMessage', () => {
       expect(screen.getByText('Please enter a valid email address')).toBeInTheDocument();
     });
   });
-  describe('HTML elementen', () => {
+
+  describe('React API', () => {
+    it(`has displayName "${displayName}"`, () => {
+      expect(FormFieldErrorMessage.displayName).toBe(displayName);
+    });
+    it('forwards React refs to the HTMLDivElement', () => {
+      const ref = createRef<HTMLDivElement>();
+      const { container } = render(<FormFieldErrorMessage ref={ref}>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message');
+
+      expect(ref.current).toBe(element);
+      expect(element).toBeInstanceOf(HTMLDivElement);
+    });
+  });
+});
+
+describe('Form Field Error Message Icon', () => {
+  describe('CSS API', () => {
+    it('has BEM class name `nl-form-field-error-message__icon`', () => {
+      const { container } = render(<FormFieldErrorMessage icon={<Icon />}>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message__icon');
+
+      expect(element).toBeInTheDocument();
+    });
     it('displays as CSS block element', () => {
       const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
       const element = container.querySelector(':only-child');
 
       expect(element).toHaveStyle({ display: 'block' });
+    });
+  });
+  describe('Component API', () => {
+    it('renders an HTML-element `div` ', () => {
+      const { container } = render(<FormFieldErrorMessage icon={<div>Icon</div>}>{content}</FormFieldErrorMessage>);
+      const formFieldErrorMessageIcon = container.querySelector('.nl-form-field-error-message__icon');
+
+      expect(formFieldErrorMessageIcon).toBeInstanceOf(HTMLDivElement);
+    });
+    it('renders children', () => {
+      const { container } = render(<FormFieldErrorMessage icon={<Icon />}>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message__icon');
+      expect(element).toContainElement(container.querySelector('svg'));
+    });
+    it('can contain an HTML-element `p` ', () => {
+      const { container } = render(<FormFieldErrorMessage icon={<p>Icon</p>}>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message__icon');
+
+      expect(element).toContainElement(container.querySelector('p'));
+    });
+    it('can contain phrasing content', () => {
+      const { container } = render(<FormFieldErrorMessage icon={<span>Icon</span>}>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message__icon');
+
+      expect(element).toContainElement(container.querySelector('span'));
+    });
+  });
+});
+
+describe('Form Field Error Message Content', () => {
+  describe('CSS API', () => {
+    it('has BEM class name `nl-form-field-error-message__content`', () => {
+      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message__content');
+
+      expect(element).toBeInTheDocument();
+    });
+    it('displays as CSS block element', () => {
+      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message__content');
+
+      expect(element).toHaveStyle({ display: 'block' });
+    });
+  });
+
+  describe('Component API', () => {
+    it('renders an HTML-element `div`', () => {
+      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
+      const formFieldErrorMessageContent = container.querySelector('.nl-form-field-error-message__content');
+      expect(formFieldErrorMessageContent).toBeInstanceOf(HTMLDivElement);
+    });
+    it('renders children', () => {
+      const { container } = render(
+        <FormFieldErrorMessage>
+          <p>{content}</p>
+        </FormFieldErrorMessage>,
+      );
+      const element = container.querySelector('.nl-form-field-error-message__content');
+      expect(element).toContainElement(container.querySelector('p'));
+      expect(element).toHaveTextContent(content);
+    });
+    it('can contain an HTML-element `p`', () => {
+      const { container } = render(
+        <FormFieldErrorMessage>
+          <p>{content}</p>
+        </FormFieldErrorMessage>,
+      );
+      const element = container.querySelector('.nl-form-field-error-message__content');
+      expect(element).toContainElement(container.querySelector('p'));
+      expect(element).toHaveTextContent(content);
+    });
+    it('can contain an HTML-element `span`', () => {
+      const { container } = render(
+        <FormFieldErrorMessage>
+          <span>{content}</span>
+        </FormFieldErrorMessage>,
+      );
+      const element = container.querySelector('.nl-form-field-error-message__content');
+      expect(element).toContainElement(container.querySelector('span'));
+      expect(element).toHaveTextContent(content);
+    });
+    it('has an HTML-attribute `id` on the content element via `contentId`', () => {
+      const { container } = render(
+        <FormFieldErrorMessage contentId="form-field-error-message-id">{content}</FormFieldErrorMessage>,
+      );
+      const element = container.querySelector('.nl-form-field-error-message__content');
+
+      expect(element).toHaveAttribute('id', 'form-field-error-message-id');
+    });
+    it('can contain an HTML-attribute `role` with value `alert` on the content element via `contentRole`', () => {
+      render(
+        <FormFieldErrorMessage contentId="form-field-error-message-id" contentRole="alert">
+          {content}
+        </FormFieldErrorMessage>,
+      );
+      const formFieldErrorMessageContent = screen.getByRole('alert');
+      expect(formFieldErrorMessageContent).toHaveAttribute('id', 'form-field-error-message-id');
+      expect(formFieldErrorMessageContent).toBeInTheDocument();
     });
   });
 });
