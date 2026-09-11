@@ -684,3 +684,33 @@ export const FormFieldErrorMessageWithIcon: Story = {
     status: { type: [] },
   },
 };
+
+export const FormFieldErrorMessageCompact: Story = {
+  name: 'Beknopte Form Field Error Message bestaande uit een paragraaf',
+  render: () => {
+    const INPUT_ID = 'c53ddae8-5165-46e6-8e5c-868e5da59504';
+    const ERROR_ID = `${INPUT_ID}-error`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
+        <p id={ERROR_ID} className="form-field-error-message__content">
+          Het veld Naam is niet ingevuld. Dit is een verplicht veld.
+        </p>
+        <div>
+          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De foutmelding is een beknopte versie van de Form Field Error Message-component. De foutmelding bestaat uit een enkele paragraaf en is gekoppeld aan het invoerveld via het WAI-ARIA-attribuut `aria-describedby`. Een screenreader leest de foutmelding voor bij focus op het invoerveld.',
+      },
+    },
+    status: { type: [] },
+  },
+};
