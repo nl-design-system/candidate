@@ -11,7 +11,39 @@ import { FormFieldErrorMessage } from '../../components-react/form-field-error-m
 import { Icon } from '../../components-react/icon-react/src/icon';
 import componentMarkdown from '../../docs/form-field-error-message-docs/docs/component.md?raw';
 import tokens from '../../tokens/form-field-error-message-tokens/tokens.json';
+import type { PropsWithChildren } from 'react';
 // import { } from '../src/WcagTests'; // Vul aan door toegankelijkheidsexpert
+
+const AlternativeHTMLFormFieldErrorMessageCompact = ({
+  Component = 'div',
+  children,
+  contentId,
+  contentRole,
+}: PropsWithChildren<{ Component: keyof JSX.IntrinsicElements; contentId?: string; contentRole?: React.AriaRole }>) => (
+  <Component id={contentId} role={contentRole} className="nl-form-field-error-message__content">
+    {children}
+  </Component>
+);
+
+const AlternativeHTMLFormFieldErrorMessage = ({
+  Component = 'div',
+  icon,
+  children,
+  contentId,
+  contentRole,
+}: PropsWithChildren<{
+  Component: keyof JSX.IntrinsicElements;
+  icon?: React.ReactNode;
+  contentId?: string;
+  contentRole?: React.AriaRole;
+}>) => (
+  <Component className="nl-form-field-error-message">
+    {icon && <Component className="nl-form-field-error-message__icon">{icon}</Component>}
+    <Component id={contentId} role={contentRole} className="nl-form-field-error-message__content">
+      {children}
+    </Component>
+  </Component>
+);
 
 const meta = {
   argTypes: {
@@ -695,9 +727,9 @@ export const FormFieldErrorMessageCompact: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <p id={ERROR_ID} className="form-field-error-message__content">
+        <AlternativeHTMLFormFieldErrorMessageCompact Component="p" contentId={ERROR_ID}>
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
-        </p>
+        </AlternativeHTMLFormFieldErrorMessageCompact>
         <div>
           <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
         </div>
@@ -708,7 +740,83 @@ export const FormFieldErrorMessageCompact: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding is een beknopte versie van de Form Field Error Message-component. De foutmelding bestaat uit een enkele paragraaf en is gekoppeld aan het invoerveld via het WAI-ARIA-attribuut `aria-describedby`. Een screenreader leest de foutmelding voor bij focus op het invoerveld.',
+          'De kleur en typografie van de component komen overeen met het design van de Form Field Error Message. De foutmelding is een beknopte versie van de Form Field Error Message-component en is opgebouwd uit een enkele HTML-element `<p>`. De kleur, typografie en de witruimte boven en onder de Form Field Error Message is niet anders, dan wanneer het HTML-element div wordt gebruikt.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldErrorMessageParagraphElements: Story = {
+  name: 'Form Field Error Message bestaande uit de HTML-elementen `<p>` zonder dat de style kapot gaat',
+  render: () => {
+    const INPUT_ID = 'c53ddae8-5165-46e6-8e5c-868e5da59505';
+    const ERROR_ID = `${INPUT_ID}-error`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
+        <AlternativeHTMLFormFieldErrorMessage
+          Component="p"
+          contentId={ERROR_ID}
+          icon={
+            <Icon>
+              <IconAlertCircle />
+            </Icon>
+          }
+        >
+          Het veld Naam is niet ingevuld. Dit is een verplicht veld.
+        </AlternativeHTMLFormFieldErrorMessage>
+        <div>
+          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De kleur en typografie van de component komen overeen met het design van de Form Field Error Message. De foutmelding is opgebouwd uit enkel de HTML-elementen `<p>`. De kleur, typografie en de witruimte boven en onder de Form Field Error Message is niet anders, dan wanneer het HTML-element div wordt gebruikt.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldErrorMessageSpanElements: Story = {
+  name: 'Form Field Error Message bestaande uit de HTML-elementen `<span>` zonder dat de style kapot gaat',
+  render: () => {
+    const INPUT_ID = 'c53ddae8-5165-46e6-8e5c-868e5da59506';
+    const ERROR_ID = `${INPUT_ID}-error`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
+        <AlternativeHTMLFormFieldErrorMessage
+          Component="span"
+          contentId={ERROR_ID}
+          icon={
+            <Icon>
+              <IconAlertCircle />
+            </Icon>
+          }
+        >
+          Het veld Naam is niet ingevuld. Dit is een verplicht veld.
+        </AlternativeHTMLFormFieldErrorMessage>
+        <div>
+          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De kleur en typografie van de component komen overeen met het design van de Form Field Error Message. De foutmelding is opgebouwd uit enkel de HTML-elementen `<span>`. De kleur, typografie en de witruimte boven en onder de Form Field Error Message is niet anders, dan wanneer het HTML-element div wordt gebruikt.',
       },
     },
     status: { type: [] },
