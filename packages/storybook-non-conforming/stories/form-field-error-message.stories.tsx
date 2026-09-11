@@ -61,7 +61,7 @@ export const FormFieldErrorMessageWithInteractiveContent: Story = {
     docs: {
       description: {
         story:
-          'De bezoeker krijgt een foutmelding met een link, terwijl een foutmelding alleen bedoeld is om informatie over een fout bij het invoerveld te geven. Interactieve inhoud in een foutmelding kan de bezoeker afleiden van het herstellen van de fout. Dit is vooral onduidelijk voor schermlezergebruikers, omdat de foutmelding niet alleen informatie bevat maar ook een actie aanbiedt. Plaats interactieve inhoud daarom buiten de foutmelding.',
+          'De bezoeker krijgt een foutmelding met een link, terwijl een foutmelding alleen bedoeld is om informatie over een fout bij het invoerveld te geven. Interactieve inhoud in een foutmelding kan de bezoeker afleiden van het herstellen van de fout. Dit is vooral onduidelijk voor screenreadergebruikers, omdat de foutmelding niet alleen informatie bevat maar ook een actie aanbiedt. Plaats interactieve inhoud daarom buiten de foutmelding.',
       },
     },
     status: { type: [] },
@@ -128,7 +128,7 @@ export const FormFieldErrorMessageAsStatus: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding wordt gebruikt als statusmelding voor een tekenrestant. Een foutmelding onderbreekt een schermlezergebruiker om de melding voor te lezen. Gebruik in plaats daarvan een statusmelding.',
+          'De foutmelding wordt gebruikt als statusmelding voor een tekenrestant. Een foutmelding onderbreekt een screenreadergebruiker om de melding voor te lezen. Gebruik in plaats daarvan een statusmelding.',
       },
     },
     status: { type: [] },
@@ -162,7 +162,7 @@ export const FormFieldErrorMessageAboveTextInputViaVisualOrder: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding staat visueel boven het invoerveld, maar in de documentvolgorde staat deze eronder. Voor schermlezergebruikers klinkt de melding op een onlogische plek in de pagina, omdat de tekst niet in de juiste volgorde verschijnt. De melding is met CSS verplaatst via de visuele volgorde, terwijl het invoerveld eerst in de DOM staat. Plaats de foutmelding tussen het label en het invoerveld in de juiste documentvolgorde.',
+          'De foutmelding staat visueel boven het invoerveld, maar in de documentvolgorde staat deze eronder. Voor screenreadergebruikers klinkt de melding op een onlogische plek in de pagina, omdat de tekst niet in de juiste volgorde verschijnt. De melding is met CSS verplaatst via de visuele volgorde, terwijl het invoerveld eerst in de DOM staat. Plaats de foutmelding tussen het label en het invoerveld in de juiste documentvolgorde.',
       },
     },
     status: { type: [] },
@@ -233,7 +233,7 @@ export const FormFieldErrorMessageWithDetailsAndSummary: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding is verborgen achter een `details`-`summary` HTML-element combinatie. Voor schermlezergebruikers wordt de tekst niet op een duidelijke manier voorgelezen bij het bijbehorende invoerveld. Gebruik een foutmelding zonder inklapbare content.',
+          'De foutmelding is verborgen achter een `details`-`summary` HTML-element combinatie. Voor screenreadergebruikers wordt de tekst niet op een duidelijke manier voorgelezen bij het bijbehorende invoerveld. Gebruik een foutmelding zonder inklapbare content.',
       },
     },
     status: { type: [] },
@@ -274,7 +274,7 @@ export const FormFieldErrorMessageLate: Story = {
     docs: {
       description: {
         story:
-          'De Form Field Error Message is gekoppeld aan het eerste invoerveld, maar het tweede invoerveld heeft geen foutmelding. In een dynamisch formulier kan deze opzet ertoe leiden dat de foutmelding te laat wordt voorgelezen, pas wanneer de schermlezergebruiker de focus verplaatst naar het volgende invoerveld.',
+          'De Form Field Error Message is gekoppeld aan het eerste invoerveld, maar het tweede invoerveld heeft geen foutmelding. In een dynamisch formulier kan deze opzet ertoe leiden dat de foutmelding te laat wordt voorgelezen, pas wanneer de screenreadergebruiker de focus verplaatst naar het volgende invoerveld.',
       },
     },
     status: { type: [] },
@@ -364,7 +364,7 @@ export const FormFieldErrorMessageTable: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding bevat een tabel met alle eisen. Voor schermlezergebruikers wordt die informatie volledig voorgelezen, waardoor de boodschap niet meer als één duidelijke waarschuwing werkt. De melding is opgebouwd uit een HTML-element `table` in plaats van normale tekst of een lijst. Gebruik tekst of een eenvoudige lijst, zodat de foutmelding beter te volgen is.',
+          'De foutmelding bevat een tabel met alle eisen. Voor screenreadergebruikers wordt die informatie volledig voorgelezen, waardoor de boodschap niet meer als één duidelijke waarschuwing werkt. De melding is opgebouwd uit een HTML-element `table` in plaats van normale tekst of een lijst. Gebruik tekst of een eenvoudige lijst, zodat de foutmelding beter te volgen is.',
       },
     },
     status: { type: [] },
@@ -403,7 +403,7 @@ export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
     docs: {
       description: {
         story:
-          'De lijstitems in de foutmelding eindigen niet met een punt. Voor schermlezergebruikers worden deze items achter elkaar als één lange zin voorgelezen, wat de foutmelding minder duidelijk maakt. Laat elk item eindigen met een punt zodat de items als aparte zinnen worden uitgesproken.',
+          'De lijstitems in de foutmelding eindigen niet met een punt. Voor screenreadergebruikers worden deze items achter elkaar als één lange zin voorgelezen, wat de foutmelding minder duidelijk maakt. Laat elk item eindigen met een punt zodat de items als aparte zinnen worden uitgesproken.',
       },
     },
     status: { type: [] },
@@ -468,7 +468,7 @@ export const FormFieldErrorMessageProgrammaticFocus: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding komt in de focus-volgorde voor, hoewel deze alleen informatief is en niet interactief. Gebruikers die met het toetsenbord navigeren, kunnen hierdoor onnodig op de melding terechtkomen. De oplossing is om de foutmelding niet via focus in de tabvolgorde te zetten en deze in plaats daarvan alleen aan het invoerveld te koppelen. Maak geen gebruik van het HTML-attribuut `tabindex` op de foutmelding, zodat deze niet in de tabvolgorde voorkomt. Maak gebruik van de WAI-ARIA-attribuut `aria-describedby` op het invoerveld, zodat de foutmelding wordt voorgelezen bij focus op het veld.',
+          'De foutmelding komt in de focus-volgorde voor, hoewel deze alleen informatief is en niet interactief. Bezoekers die met het toetsenbord navigeren, kunnen hierdoor onnodig op de melding terechtkomen. De oplossing is om de foutmelding niet via focus in de tabvolgorde te zetten en deze in plaats daarvan alleen aan het invoerveld te koppelen. Maak geen gebruik van het HTML-attribuut `tabindex` op de foutmelding, zodat deze niet in de tabvolgorde voorkomt. Maak gebruik van het WAI-ARIA-attribuut `aria-describedby` op het invoerveld, zodat de foutmelding wordt voorgelezen bij focus op het veld.',
       },
     },
     status: { type: [] },
@@ -498,7 +498,7 @@ export const FormFieldErrorMessageWithoutRelationWithInput: Story = {
     docs: {
       description: {
         story:
-          'Een Form Field Error Message is niet gekoppeld aan het bijbehorende invoerveld met het WAI-ARIA-attribuut `aria-describedby`. De Form Field Error Message wordt daardoor niet voorgelezen door een schermlezer bij focus op het invoerveld.',
+          'Een Form Field Error Message is niet gekoppeld aan het bijbehorende invoerveld met het WAI-ARIA-attribuut `aria-describedby`. De Form Field Error Message wordt daardoor niet voorgelezen door een screenreader bij focus op het invoerveld.',
       },
     },
     status: { type: [] },
