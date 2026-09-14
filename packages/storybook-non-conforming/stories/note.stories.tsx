@@ -49,6 +49,8 @@ export const SomeStory: Story = {
     children: 'Note',
   },
   parameters: {
+    // TODO: When component is implemented, enable Chromatic
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story: `Some Description`,
