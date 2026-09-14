@@ -2,7 +2,9 @@ import { forwardRef, type ReactNode, type HTMLAttributes } from 'react';
 import clsx from 'clsx';
 
 export interface FormFieldErrorMessageProps extends HTMLAttributes<HTMLDivElement> {
+  /** Children to display within the error message. */
   children?: ReactNode;
+  /** Icon to display before the error message. */
   icon?: ReactNode;
   /** `id` for the content element, so it can be linked via `aria-describedby`. */
   contentId?: string;
