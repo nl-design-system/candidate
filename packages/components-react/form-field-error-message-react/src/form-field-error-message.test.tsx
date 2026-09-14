@@ -39,7 +39,7 @@ describe('Form Field Error Message', () => {
   describe('Component API', () => {
     it('accepts an extra class name ${extraClassName}', () => {
       const { container } = render(<FormFieldErrorMessage className={extraClassName}>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector(':only-child');
+      const element = container.querySelector('.nl-form-field-error-message');
       expect(element).toHaveClass('nl-form-field-error-message', extraClassName);
     });
     it('renders children', () => {
@@ -48,13 +48,13 @@ describe('Form Field Error Message', () => {
           <p>{content}</p>
         </FormFieldErrorMessage>,
       );
-      const formFieldErrorMessage = container.querySelector(':only-child');
+      const formFieldErrorMessage = container.querySelector('.nl-form-field-error-message');
       expect(formFieldErrorMessage).toContainElement(container.querySelector('p'));
       expect(formFieldErrorMessage).toHaveTextContent(content);
     });
     it('renders an HTML-element `div`', () => {
       const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector(':only-child');
+      const element = container.querySelector('.nl-form-field-error-message');
 
       expect(element).toBeInstanceOf(HTMLDivElement);
     });
@@ -141,8 +141,8 @@ describe('Form Field Error Message Icon', () => {
       expect(element).toBeInTheDocument();
     });
     it('displays as CSS block element', () => {
-      const { container } = render(<FormFieldErrorMessage>{content}</FormFieldErrorMessage>);
-      const element = container.querySelector(':only-child');
+      const { container } = render(<FormFieldErrorMessage icon={<Icon />}>{content}</FormFieldErrorMessage>);
+      const element = container.querySelector('.nl-form-field-error-message__icon');
 
       expect(element).toHaveStyle({ display: 'block' });
     });
