@@ -1,9 +1,32 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import componentMarkdown from '../../docs/form-field-error-message-docs/docs/component.md?raw';
+import { IconAlertCircle } from '@tabler/icons-react';
 import '../../components-css/form-field-error-message-css/src/form-field-error-message.scss';
 import packageJSON from '../../components-react/form-field-error-message-react/package.json';
 import { FormFieldErrorMessage } from '../../components-react/form-field-error-message-react/src/form-field-error-message';
 import { CandidateDisableCssDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateDisableCssDecorator';
+import { Icon } from '../../components-react/icon-react/src/icon';
+import type { PropsWithChildren } from 'react';
+
+const AlternativeHTMLFormFieldErrorMessage = ({
+  Component = 'div',
+  icon,
+  children,
+  contentId,
+  contentRole,
+}: PropsWithChildren<{
+  Component: keyof JSX.IntrinsicElements;
+  icon?: React.ReactNode;
+  contentId?: string;
+  contentRole?: React.AriaRole;
+}>) => (
+  <Component className="nl-form-field-error-message">
+    {icon && <Component className="nl-form-field-error-message__icon">{icon}</Component>}
+    <Component id={contentId} role={contentRole} className="nl-form-field-error-message__content">
+      {children}
+    </Component>
+  </Component>
+);
 
 const meta = {
   argTypes: {},
@@ -68,24 +91,69 @@ export const FormFieldErrorMessageWithInteractiveContent: Story = {
   },
 };
 
-export const FormFieldErrorMessageAsSpan: Story = {
-  name: 'Fout: Form Field Error Message als HTML-element span',
+export const FormFieldErrorMessageAsParagraphs: Story = {
+  name: 'Fout: Form Field Error Message bestaande uit de HTML-elementen p',
   globals: {
     dir: 'ltr',
     lang: 'nl',
   },
   decorators: CandidateDisableCssDecorator,
   render: () => {
-    const INPUT_ID = 'b4a76e12-9e01-4c70-a472-05fcf9066668';
+    const INPUT_ID = 'FormFieldErrorMessageAsParagraphs';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
         <label htmlFor={INPUT_ID}>Probleem</label>
-        <span id={ERROR_ID} className="nl-form-field-error-message">
-          <span className="nl-form-field-error-message__content">
-            Het veld Probleem is niet ingevuld. Dit is een verplicht veld.
-          </span>
-        </span>
+        <AlternativeHTMLFormFieldErrorMessage
+          Component="p"
+          contentId={ERROR_ID}
+          icon={
+            <Icon>
+              <IconAlertCircle />
+            </Icon>
+          }
+        >
+          Het veld Probleem is niet ingevuld. Dit is een verplicht veld.
+        </AlternativeHTMLFormFieldErrorMessage>
+        <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De component behoudt zijn styling wanneer de foutmelding wordt opgebouwd uit de HTML-elementen `p`. Dit is echter semantisch onjuist, omdat een HTML-element `p` geen ander HTML-element `p` mag bevatten. Hierdoor kan de HTML-structuur ongeldig en onvoorspelbaar worden, wat de werking van de pagina voor gebruikers van hulptechnologie kan beïnvloeden. Gebruik een HTML-element dat geschikt is voor de foutmelding en dat zonder problemen binnen verschillende componenten kan worden gebruikt. Doe dit bijvoorbeeld door de foutmelding op te bouwen uit een HTML-element `div` met alleen een HTML-element `p` voor de inhoud.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldErrorMessageAsSpans: Story = {
+  name: 'Fout: Form Field Error Message bestaande uit de HTML-elementen span',
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  decorators: CandidateDisableCssDecorator,
+  render: () => {
+    const INPUT_ID = 'FormFieldErrorMessageAsSpans';
+    const ERROR_ID = `${INPUT_ID}-error`;
+    return (
+      <>
+        <label htmlFor={INPUT_ID}>Probleem</label>
+        <AlternativeHTMLFormFieldErrorMessage
+          Component="span"
+          contentId={ERROR_ID}
+          icon={
+            <Icon>
+              <IconAlertCircle />
+            </Icon>
+          }
+        >
+          Het veld Probleem is niet ingevuld. Dit is een verplicht veld.
+        </AlternativeHTMLFormFieldErrorMessage>
         <textarea id={INPUT_ID} aria-describedby={ERROR_ID} />
       </>
     );
@@ -94,7 +162,7 @@ export const FormFieldErrorMessageAsSpan: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding wordt zonder de bijbehorende opmaak direct naast andere content weergegeven. Daardoor is de melding minder duidelijk herkenbaar als foutmelding bij het invoerveld. Dit gebeurt wanneer de CSS niet wordt ingeladen: het HTML-element `span` wordt standaard als inline-element weergegeven, waardoor de foutmelding niet op een eigen regel staat. Gebruik een blokelement voor de foutmelding, zodat deze ook zonder CSS als afzonderlijke tekst wordt weergegeven.',
+          'De component behoudt zijn styling wanneer de foutmelding wordt opgebouwd uit de HTML-elementen `span`. Echter wanneer de CSS niet wordt ingeladen, verschijnt de foutmelding direct achter de andere content op dezelfde regel. Hierdoor is voor gebruikers minder duidelijk dat de tekst een foutmelding bij het invoerveld is. Zorg ervoor dat de foutmelding ook zonder CSS op een eigen regel wordt weergegeven, zodat deze duidelijk herkenbaar blijft als foutmelding bij het invoerveld. Maak hiervoor gebruik van een HTML block-level element, zoals een HTML-element `p` of `div`.',
       },
     },
     status: { type: [] },
