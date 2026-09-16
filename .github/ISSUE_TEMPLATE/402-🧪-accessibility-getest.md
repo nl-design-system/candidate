@@ -15,13 +15,7 @@ Test de acceptatiecriteria voor toegankelijkheid
 
 1. Test de stories die gemaakt zijn om op de acceptatiecriteria voor toegankelijkheid te testen
 2. Testresultaten opslaan in story bij story.parameters.testResult.pass (of feedback geven aan Developer tot het slaagt)
-3. Testen of de component werkt zonder CSS. De simpele manier: handmatige test, bijvoorbeeld door in Developer tools CSS uit te zetten, of in Firefox "View ➝ Page Style ➝ No Style". In een ideale wereld is de component zonder CSS ook een Story, maar dat is makkelijker gezegd dan gedaan
-
-```css
-.disable-css \* {
-  all: revert !important;
-}
-```
+3. Testen of de component werkt zonder CSS. De simpele manier: handmatige test, bijvoorbeeld door in Developer tools CSS uit te zetten, of in Firefox "View ➝ Page Style ➝ No Style". In een ideale wereld is de component zonder CSS ook een Story, maar dat is makkelijker gezegd dan gedaan. Gebruik hiervoor de `candidate-disable-css` class (zie `packages/storybook-shared/src/candidate-disable-css.css`).
 
 🚩 Checkpoint
 🧪 A11y getest
