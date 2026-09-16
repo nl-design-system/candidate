@@ -76,7 +76,7 @@ Voor de HTML component:
 
 Voor de HTML component:
 
-- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html-all` class met een HTML `label` element zonder component classes.
+- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html--all` class met een HTML `label` element zonder component classes.
 - De CSS ondersteunt een Form Field Label binnen een element met de `nl-html--form-field-label` class met een HTML `label` element zonder component classes.
 - De CSS ondersteunt een semantische HTML Label bestaande uit een HTML `label` element zonder component classes.
 
@@ -88,7 +88,7 @@ Voor de HTML component:
 
 Voor de HTML component:
 
-- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html-all` class met een HTML `label` element binnen een HTML `h1`, `h2`, `h3`, `h4`, `h5` of `h6` element zonder component classes.
+- De CSS ondersteunt een Form Field Label binnen een element met de `nl-html--all` class met een HTML `label` element binnen een HTML `h1`, `h2`, `h3`, `h4`, `h5` of `h6` element zonder component classes.
 - De CSS ondersteunt een Form Field Label binnen een element met de `nl-html--form-field-label` class met een HTML `label` element binnen een HTML `h1`, `h2`, `h3`, `h4`, `h5` of `h6` element zonder component classes.
 - De CSS ondersteunt een semantische HTML Label bestaande uit een HTML `label` element binnen een HTML `h1`, `h2`, `h3`, `h4`, `h5` of `h6` element zonder component classes.
 
