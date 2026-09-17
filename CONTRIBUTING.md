@@ -34,6 +34,10 @@ Omdat je **geen rechten hebt om direct naar deze repository te pushen**, volg je
 
 Deze Storybook bevat beknopte documentatie van de publieke API van elke component.
 
+Het is de bedoeling deze informatie op de NL Design System website te publiceren. De informatie is dan beter te vinden, en is dan onderdeel van een meer toegankelijke en gebruiksvriendelijke website. Deze Storybook zal de basis vormen voor de documentatie op de website.
+
+Op dit moment is het doel deze Storybook uitgebreid genoeg te maken, met documentatie alle publieke API's en voldoende informatie om met de component aan de slag te gaan.
+
 Er is documentatie voor de volgende varianten:
 
 - Alle componenten hebben variant voor HTML met CSS class names met BEM naamgeving. Hier kun voorbeeldcode vinden voor de HTML-structuur. De broncode van de HTML-variant wordt gegenereerd op basis van de React-implementatie.
@@ -47,6 +51,106 @@ Er is documentatie voor de volgende varianten:
 - De diverse manieren waarop een component in de praktijk gebruikt wordt, of kan worden, moeten hier gedocumenteerd zijn als testscenario. Op deze manier kunnnen we nauwkeurig controleren dat nieuwe versies backwards compatible releases zijn.
 - De diverse manieren waarop een component toegankelijk gebruikt kan worden, moeten hier gedocumenteerd zijn. Op deze manier weet je snel of de manier waarop een component in de praktijk gebruikt wordt, compatible is met de NL Design System Baseline.
 - We testen of de CSS robuust genoeg is dat het ook op ongebruikelijke HTML-elementen toegepast kan worden, zoals `span` en `div`. Op die manier is de CSS ook compatible om toe te passen op custom elements.
+
+### Elke regel CSS testen
+
+Maak voldoende testscenario's dat een wijziging in de CSS wordt opgemerkt door testautomatisering. Voor CSS zijn visuele regressietests vaak het meest effectief, omdat de CSS meestal een visueel effect heeft.
+
+Bijvoorbeeld, de volgende CSS:
+
+````css
+.example-component:hover {
+  color: var(--example-component-hover-color, currentColor);
+}
+```
+
+- Test de `:hover` state door de hover state te simuleren in een Storybook story.
+- Test de design token door de component te testen met het Voorbeeld Thema.
+- Test de fallback waarde van de design token door te testen.
+
+### CSS met BEM class names
+
+We gebruiken BEM class names. Een nadeel van BEM class names is dat het `class` HTML-attribuut behoorlijk lang kan worden. Voor NL Design System zijn de voordelen belangrijker dan dit nadeel.
+
+Bijvoorbeeld, met de BEM methode ziet een button `class` er zo uit: `class="nl-button nl-button--primary"`. Zonder onze classname-conventie had het veel korter kunnen zijn: `class="btn primary"`.
+
+Voordelen van BEM class names:
+
+- de naamgeving bevat de volledige naam van de component, en daarmee is de documentatie voor de component makkelijk terug te vinden.
+- Code is makkelijker te begrijpen met minder afkortingen.
+- De component is makkelijk te herkennen in code bases, door te zoeken op een precieze tekst zoals `example-component`.
+
+Class names voor states volgen de [naamgeving van states](https://nldesignsystem.nl/handboek/developer/state-conventie/). Bijvoorbeeld:
+
+- `example-component--active`
+- `example-component--hover`
+- `example-component--focus-visible`
+- `example-component--pressed`
+- `example-component--selected`
+
+Wanneer er geen naam voor een state is, die het omgekeerde doet van een bestaande staat, gebruik dan `not`, in plaats van een nieuwe naam verzinnen.
+
+- `example-component--not-expanded`
+- niet: `example-component--collapsed`
+- niet: `example-component--closed`
+
+#### BEM class names voor testomgevingen
+
+Sommige componenten hebben speciale CSS om bepaald gedrag te simuleren in een testomgeving.
+
+`test.css` bevat de CSS voor testomgevingen. De CSS staat in een apart bestand, zodat de CSS voor productieomgevingen niet onnodig groot wordt en de laad-performance optimaal is.
+
+Bijvoorbeeld:
+
+```scss
+@import './mixin';
+
+.example-component--small {
+  @include example-component--small;
+}
+
+.example-component--forced-colors {
+  @include example-component--forced-colors;
+}
+````
+
+Sommige class names CSS voor testomgevingen wordt wel geïmplementeerd in `component.css`, als het alleen een extra CSS selector is voor een bestaande feature.
+
+Bijvoorbeeld, de `.example-component--focus-visible` is voor testomgevingen.
+
+```css
+.example-component:focus-visible,
+.example-component--focus-visible {
+  @include example-component--focus-visible;
+}
+```
+
+### CSS herbruikbaar maken met mixins
+
+Zorg dat er mixins zijn voor de verschillende variaties van een component, zodat dezelfde CSS gebruikt kan worden om de variant op een alternatieve manier te implementeren.
+
+Bijvoorbeeld, een smalle variant van een component kan met een CSS container query geïmplementeerd worden, of met een media query. De volgende mixin maakt de CSS beschikbaar voor beide opties:
+
+```scss
+@mixin example-component--small-inline-container {
+  /* ... */
+}
+```
+
+Zorg dat er mixins zijn voor states, zodat die met een class name gesimuleerd kunnen worden in een testomgeving:
+
+```scss
+@mixin example-component--focus-visible {
+  color: HighlightText;
+}
+
+.example-component:focus-visible,
+.example-component--focus-visible {
+  @include example-component--focus-visible;
+}
+```
+
+In principe moet er geen CSS implementatie staan in `component.css`, alle CSS wordt toegepast via SCSS mixins. Plaats een code comment met uitlegt wanneer er een uitzondering wordt gemaakt.
 
 ### CSS robuust voor alternatieve HTML-elementen
 
@@ -164,10 +268,12 @@ Wanneer een component varianten heeft die in forced colors mode verschillen, dan
 - Wanneer de parent component een link is
 - Wanneer de parent component een button is
 - Standaard
+- Active
 - Focus
 - Disabled
 - Read only
 - Selected
+- Disabled + Focus
 - Disabled + Selected
 - Pressed
 
