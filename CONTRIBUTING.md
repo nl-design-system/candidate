@@ -32,17 +32,44 @@ Omdat je **geen rechten hebt om direct naar deze repository te pushen**, volg je
 
 ## `storybook`
 
-Deze Storybook bevat beknopte documentatie van de publieke API van elke component.
+Deze Storybook bevat volledige documentatie van de publieke API van elke component. De documentatie moet effectief zijn voor developers om aan de slag te gaan met de component.
 
-Het is de bedoeling deze informatie op de NL Design System website te publiceren. De informatie is dan beter te vinden, en is dan onderdeel van een meer toegankelijke en gebruiksvriendelijke website. Deze Storybook zal de basis vormen voor de documentatie op de website.
+Het is de bedoeling deze informatie op de NL Design System website te publiceren. Daar zal de informatie beter te vinden zijn, en is daar onderdeel van een meer toegankelijke en gebruiksvriendelijke website. Deze Storybook zal in de toekomst de basis vormen voor de documentatie op de website.
 
-Op dit moment is het doel deze Storybook uitgebreid genoeg te maken, met documentatie alle publieke API's en voldoende informatie om met de component aan de slag te gaan.
+Er zijn 3 soorten componenten, en voor elke soort implementatie moet er documentatie zijn:
 
-Er is documentatie voor de volgende varianten:
+- **HTML en CSS component:** alle componenten hebben variant voor HTML met CSS class names met BEM naamgeving. Hier kun voorbeeldcode vinden voor de HTML-structuur. De broncode van de HTML-variant wordt gegenereerd op basis van de React-implementatie.
+- **React component:** alle componenten hebben een React implementatie.
+- **Vanilla HTML component:** sommige componenten hebben een vanilla HTML implementatie.
 
-- Alle componenten hebben variant voor HTML met CSS class names met BEM naamgeving. Hier kun voorbeeldcode vinden voor de HTML-structuur. De broncode van de HTML-variant wordt gegenereerd op basis van de React-implementatie.
-- Alle componenten hebben een React implementatie.
-- Sommige componenten hebben een vanilla HTML implementatie.
+### CSS componenten in `storybook`
+
+De documentatie bevat in elk geval:
+
+- Informatie over elke CSS class name die beschikbaar is.
+- README met:
+  - Informatie over de npm package waar de CSS gepubliceerd wordt.
+  - Informatie over hoe je de CSS gebruikt in een prototype (`<link>` voor een CDN)
+  - Informatie over hoe je de CSS gebruikt in JavaScript frameworks (`import "@example/component/dist/component.css";`)
+
+### React componenten in `storybook`
+
+De documentatie bevat in elk geval:
+
+- Informatie over elke React property die beschikbaar is.
+- Informatie over elke React component die beschikbaar is. Vaak is dat er maar 1, soms zijn er meerdere.
+- Informatie over elke HTML attribuut die essentieel is om de component goed te gebruiken, bijvoorbeeld `aria-` attributen voor toegankelijkheid.
+
+### Vanilla HTML componenten in `storybook`
+
+De documentatie voor vanilla HTML componenten bevat in elk geval:
+
+- Informatie over elk HTML-element en elke HTML-structuur waarop de CSS van de component wordt toegepast.
+- README met:
+  - Informatie over de npm package waar de CSS gepubliceerd wordt.
+  - Informatie over hoe je de CSS gebruikt in een prototype (`<link>` voor een CDN)
+  - Informatie over hoe je de CSS gebruikt in JavaScript frameworks (`import "@example/component/dist/component.css";`)
+  - Informatie over hoe je de CSS gebruikt met een wrapper class name (`class="nl-html nl-html--all"` of `class="nl-html nl-html--component"`)
 
 ## `storybook-test`
 
@@ -58,7 +85,7 @@ Maak voldoende testscenario's dat een wijziging in de CSS wordt opgemerkt door t
 
 Bijvoorbeeld, de volgende CSS:
 
-````css
+```css
 .example-component:hover {
   color: var(--example-component-hover-color, currentColor);
 }
@@ -112,7 +139,7 @@ Bijvoorbeeld:
 .example-component--forced-colors {
   @include example-component--forced-colors;
 }
-````
+```
 
 Sommige class names CSS voor testomgevingen wordt wel geïmplementeerd in `component.css`, als het alleen een extra CSS selector is voor een bestaande feature.
 
