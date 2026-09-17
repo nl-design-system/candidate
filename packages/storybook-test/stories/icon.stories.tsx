@@ -2,6 +2,7 @@ import { Heading } from '@nl-design-system-candidate/heading-react/css';
 import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
+import { CandidateContentOutlineCssDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateContentOutlineCssDecorator';
 import { IconCalendarEvent, IconChevronRight, IconExternalLink, IconSquareChevronRight } from '@tabler/icons-react';
 import type { CSSProperties } from 'react';
 import '../../components-css/icon-css/src/icon.scss';
@@ -1685,9 +1686,9 @@ export const CustomSizeIcon: Story = {
     style: {
       '--nl-icon-block-size': '5rem',
       '--nl-icon-inline-size': '5rem',
-      border: '1px dashed',
     } as CSSProperties,
   },
+  decorators: [CandidateContentOutlineCssDecorator],
   parameters: {
     docs: {
       description: {
@@ -1719,9 +1720,9 @@ export const CustomSizeIconWide: Story = {
     style: {
       '--nl-icon-block-size': '2.5rem',
       '--nl-icon-inline-size': '5rem',
-      border: '1px dashed',
     } as CSSProperties,
   },
+  decorators: [CandidateContentOutlineCssDecorator],
   parameters: {
     docs: {
       description: {
@@ -1753,9 +1754,9 @@ export const CustomSizeIconTall: Story = {
     style: {
       '--nl-icon-block-size': '5rem',
       '--nl-icon-inline-size': '2.55rem',
-      border: '1px dashed',
     } as CSSProperties,
   },
+  decorators: [CandidateContentOutlineCssDecorator],
   parameters: {
     docs: {
       description: {

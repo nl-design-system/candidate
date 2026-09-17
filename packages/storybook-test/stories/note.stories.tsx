@@ -71,6 +71,8 @@ export const SomeStory: Story = {
   name: 'Some Story',
   args: {},
   parameters: {
+    // TODO: When component is implemented, enable Chromatic
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story: `Some Story`,
