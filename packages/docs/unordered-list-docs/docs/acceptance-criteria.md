@@ -26,7 +26,7 @@ Enum
 Enum
 
 - Default
-- Inline Marker
+- Custom
 
 ##### Children
 
@@ -42,7 +42,7 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 
 - De Unordered List is opgemaakt met het `ul` HTML-element.
 - De Unordered List bevat één of meer `li` HTML-elementen.
-- De Unordered List Inline Marker is verborgen voor hulptechnologieën met het `aria-hidden="true"` HTML-attribuut.
+- De Unordered List Custom Marker is verborgen voor hulptechnologieën met het `aria-hidden="true"` HTML-attribuut.
 
 #### Could Have elementen
 
@@ -50,8 +50,9 @@ Dit zijn de acceptatiecriteria welke HTML-elementen en HTML-attributen het beste
 - De Unordered List Item mag een inhoud bevatten in de vorm van [phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content).
 - De Unordered List Item mag een geneste Unordered List bevatten in de vorm van een `ul` HTML-element.
 - De Unordered List Item mag een geneste Ordered List bevatten in de vorm van een `ol` HTML-element.
-- De Unordered List Item mag een Unordered List Inline Marker bevatten in de vorm van een `span` HTML-element.
-- De inhoud van de Unordered List Inline Marker volgt de acceptatiecriteria van de Icon component in de vorm van een informatieve Icon met een beschrijvende alternatieve tekst.
+- De Unordered List Item mag een Unordered List Custom Marker bevatten in de vorm van een `span` HTML-element.
+- De Unordered List Custom Marker mag een informatief label bevatten in de vorm van een `span` HTML-element met een tekstuele inhoud die visueel verborgen is maar beschikbaar blijft voor hulptechnologieën.
+- De inhoud van de Unordered List Custom Marker volgt de acceptatiecriteria van de Icon component in de vorm van een informatieve Icon met een beschrijvende alternatieve tekst.
 
 ### Welke HTML-attributen het beste zijn voor deze component
 
@@ -75,7 +76,7 @@ Voor de HTML component:
 ### Forced Colors modus
 
 - De Unordered List tekstkleur in Forced Colors modus is `currentColor`.
-- De Unordered List tekstkleur van de inline marker in Forced Colors modus is `currentColor`.
+- De Unordered List tekstkleur van de Custom Marker in Forced Colors modus is `currentColor`.
 
 ## Acceptatiecriteria toegankelijkheid van de component
 
@@ -95,13 +96,10 @@ Voor de HTML component:
 
 - Element classes:
   - `nl-unordered-list__item`
-  - `nl-unordered-list__inline-marker`
-
-- Pseudo-element classes:
-  - `nl-unordered-list__marker` voor `::marker`
+  - `nl-unordered-list__marker` voor `::marker` als mixin en voor Custom Marker als class
 
 - Modifier classes:
-  - geen
+  - `nl-unordered-list__marker--custom` voor Custom Marker
 
 - HTML classes:
   - `nl-html--all`
@@ -109,11 +107,12 @@ Voor de HTML component:
 
 #### Geldige combinaties van CSS classes
 
-| Configuratie                       | Geldig | Opmerking                                                       |
-| ---------------------------------- | :----: | --------------------------------------------------------------- |
-| `nl-unordered-list`                |   ✅   |                                                                 |
-| `nl-unordered-list__item`          |   ✅   | Gebruik als child van `nl-unordered-list`.                      |
-| `nl-unordered-list__inline-marker` |   ✅   | Gebruik een inline marker binnen een `nl-unordered-list__item`. |
+| Configuratie                                                        | Geldig | Opmerking                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------------------- | :----: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `nl-unordered-list`                                                 |   ✅   |                                                                                                                                                                                                                                                                                                        |
+| `nl-unordered-list__item`                                           |   ✅   | Gebruik als child van `nl-unordered-list`.                                                                                                                                                                                                                                                             |
+| `nl-unordered-list__marker`                                         |   ❌   | Gebruik deze class niet zonder de modifier `nl-unordered-list__marker--custom`. Deze class voegt styling die wordt gedeeld door het pseudo-element `::marker` en de Custom Marker. De modifier `nl-unordered-list__marker--custom` voegt de aanvullende styling toe voor de Custom Marker. |
+| `nl-unordered-list__marker` met `nl-unordered-list__marker--custom` |   ✅   | Gebruik een Custom Marker binnen een `nl-unordered-list__item`.                                                                                                                                                                                                                                        |
 
 ## React API
 
@@ -148,19 +147,19 @@ Alle standaard HTML-attributen en events worden doorgestuurd naar het onderligge
 
 De volgende props worden expliciet ondersteund:
 
-| Prop                | Type                              | Default | Verplicht | Omschrijving                                                                                     |
-| ------------------- | --------------------------------- | ------- | --------- | ------------------------------------------------------------------------------------------------ |
-| `children`          | `ReactNode`                       | -       | nee       | De inhoud van de component.                                                                      |
-| `inlineMarker`      | `ReactNode`                       | -       | nee       | De inhoud van de inline marker slot, weergegeven in een `span.nl-unordered-list__inline-marker`. |
-| `inlineMarkerLabel` | `string`                          | -       | nee       | Toegankelijke naam voor de inline marker.                                                        |
-| `className`         | `string`                          | -       | nee       | Extra CSS classes naast `nl-unordered-list__item`.                                               |
-| `ref`               | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                                    |
-| `restProps`         | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element.      |
+| Prop          | Type                              | Default | Verplicht | Omschrijving                                                                                                                |
+| ------------- | --------------------------------- | ------- | --------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `children`    | `ReactNode`                       | -       | nee       | De inhoud van de component.                                                                                                 |
+| `marker`      | `ReactNode`                       | -       | nee       | De inhoud van de Custom Marker slot, weergegeven in een `span.nl-unordered-list__marker.nl-unordered-list__marker--custom`. |
+| `markerLabel` | `ReactNode`                       | -       | nee       | Toegankelijke naam voor de Custom Marker.                                                                                   |
+| `className`   | `string`                          | -       | nee       | Extra CSS classes naast `nl-unordered-list__item`.                                                                          |
+| `ref`         | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                                                               |
+| `restProps`   | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element.                                 |
 
 #### Geldige combinaties van React UnorderedListItem properties
 
-| Configuratie                                                                                         | Geldig | Opmerking                                                                                |
-| ---------------------------------------------------------------------------------------------------- | :----: | ---------------------------------------------------------------------------------------- |
-| `<UnorderedListItem inlineMarker={<Icon />}>Item</UnorderedListItem>`                                |   ✅   | Een inline marker mag zonder toegankelijke naam worden gebruikt.                         |
-| `<UnorderedListItem inlineMarker={<Icon />} inlineMarkerLabel="Afgecheckt">Item</UnorderedListItem>` |   ✅   | Een toegankelijke naam kan worden opgegeven wanneer de inline marker betekenis toevoegt. |
-| `<UnorderedListItem inlineMarkerLabel="Afgecheckt">Item</UnorderedListItem>`                         |   ❌   | `inlineMarkerLabel` heeft alleen betekenis wanneer ook `inlineMarker` is opgegeven.      |
+| Configuratie                                                                                   | Geldig | Opmerking                                                                                |
+| ---------------------------------------------------------------------------------------------- | :----: | ---------------------------------------------------------------------------------------- |
+| `<UnorderedListItem marker={<Icon />}>Item</UnorderedListItem>`                                |   ✅   | Een Custom Marker mag zonder toegankelijke naam worden gebruikt.                         |
+| `<UnorderedListItem marker={<Icon />} markerLabel="Afgecheckt">Item</UnorderedListItem>` |   ✅   | Een toegankelijke naam kan worden opgegeven wanneer de Custom Marker betekenis toevoegt. |
+| `<UnorderedListItem markerLabel="Afgecheckt">Item</UnorderedListItem>`                         |   ❌   | `markerLabel` heeft alleen betekenis wanneer ook `marker` is opgegeven.                  |
