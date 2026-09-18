@@ -3,3 +3,11 @@
 .nl-form-field-error-message {
   @include mixin.nl-form-field-error-message;
 }
+
+.nl-form-field-error-message__icon {
+  @include mixin.nl-form-field-error-message__icon;
+}
+
+.nl-form-field-error-message__content {
+  @include mixin.nl-form-field-error-message__content;
+}
