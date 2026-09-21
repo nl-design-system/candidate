@@ -1,7 +1,7 @@
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { useId } from 'react';
+import { CSSProperties, useId } from 'react';
 import '../../components-css/color-sample-css/src/color-sample.scss';
 import packageJSON from '../../components-react/color-sample-react/package.json';
 import { ColorSample } from '../../components-react/color-sample-react/src/color-sample';
@@ -64,6 +64,16 @@ import {
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
 } from '../src/WcagTests';
+
+const customSizeStyle: CSSProperties = {
+  '--nl-color-sample-inline-size': '3rem',
+  '--nl-color-sample-block-size': '3rem',
+};
+
+const aspectRatioStyle: CSSProperties = {
+  '--nl-color-sample-inline-size': '4rem',
+  '--nl-color-sample-block-size': '3rem',
+};
 
 const meta = {
   argTypes: {
@@ -508,4 +518,110 @@ export const Japanese: Story = {
       </Paragraph>
     );
   },
+};
+
+export const AangepasteGrootte: Story = {
+  name: 'Color Sample met een aangepaste grootte',
+  args: {
+    ['aria-label']: 'De kleur "deeppink".',
+    value: 'deeppink',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een kleurstaal met een grotere afmeting dan de standaardgrootte. De grootte is in te stellen via de custom properties `--nl-color-sample-inline-size` en `--nl-color-sample-block-size`.',
+      },
+    },
+    testResult: {
+      date: '2025-08-29',
+      notTested: [
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+    status: { type: [] },
+  },
+  render: (props) => <ColorSample {...props} style={customSizeStyle} />,
+};
+
+export const RondeVorm: Story = {
+  name: 'Color Sample met een ronde vorm',
+  args: {
+    ['aria-label']: 'De kleur "deeppink".',
+    value: 'deeppink',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een ronde kleurstaal, in plaats van de standaard rechthoekige vorm. De vorm is aan te passen via de custom property `--nl-color-sample-border-radius`; een waarde van `50%` maakt de kleurstaal rond.',
+      },
+    },
+    testResult: {
+      date: '2025-08-29',
+      notTested: [
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+    status: { type: [] },
+  },
+  render: (props) => (
+    <ColorSample
+      {...props}
+      style={
+        {
+          ...customSizeStyle,
+          '--nl-color-sample-border-radius': '50%',
+        } as CSSProperties
+      }
+    />
+  ),
+};
+
+export const AangepasteBreedteHoogteVerhouding: Story = {
+  name: 'Color Sample met een aangepaste breedte-hoogteverhouding',
+  args: {
+    ['aria-label']: 'De kleur "deeppink".',
+    value: 'deeppink',
+  },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een kleurstaal die breder is dan hoog, met een breedte-hoogteverhouding van 4:3 in plaats van vierkant. De custom properties `--nl-color-sample-inline-size` en `--nl-color-sample-block-size` zijn onafhankelijk van elkaar in te stellen om dit te bereiken.',
+      },
+    },
+    testResult: {
+      date: '2025-08-29',
+      notTested: [
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+      ],
+      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
+    },
+    status: { type: [] },
+  },
+  render: (props) => <ColorSample {...props} style={aspectRatioStyle} />,
 };
