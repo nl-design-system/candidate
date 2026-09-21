@@ -1,3 +1,6 @@
-@use "mixin";
+@use "../vanilla/mixin";
 
-@include mixin.nl-html--code-block;
+.nl-html--all,
+.nl-html--code-block {
+  @include mixin.nl-html--code-block;
+}

@@ -1,0 +1,7 @@
+@use "../mixin";
+
+@mixin nl-html--ordered-list {
+  ol {
+    @include mixin.nl-ordered-list;
+  }
+}

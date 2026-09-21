@@ -1,0 +1,7 @@
+@use "../mixin";
+
+@mixin nl-html--unordered-list {
+  ul {
+    @include mixin.nl-unordered-list;
+  }
+}
