@@ -1,4 +1,6 @@
-@use "mixin";
+@use "../vanilla/mixin";
 
-/* TODO: Change this to the appropriate element */
-@include mixin.nl-html--div;
+.nl-html--all,
+.nl-html--ordered-list {
+  @include mixin.nl-html--ordered-list;
+}
