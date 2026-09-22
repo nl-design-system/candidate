@@ -499,8 +499,7 @@ export const OrderedListHTMLParagraphsInListItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: `In deze lijst worden HTML paragrafen in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.`
-          `,
+        story: `In deze geordende lijst worden HTML paragrafen in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.`
       },
     },
   },
@@ -514,8 +513,7 @@ export const OrderedListNLParagraphsInListItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: `In deze lijst worden NL Paragraph componenten in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.`
-          `,
+        story: `In deze geordende lijst worden NL Paragraph componenten in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.`
       },
     },
   },
@@ -543,7 +541,7 @@ export const OrderedListLongItemAcrossColumns: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Deze lijst is verdeeld in meerdere kolommen. De tekst van een item loopt door in de volgende kolom. Het nummer van het item blijft in de eerste kolom blijft staan.`,
+        story: `Deze geordende lijst is verdeeld in meerdere kolommen. De tekst van een item loopt door in de volgende kolom. Het nummer van het item blijft in de eerste kolom blijft staan.`,
       },
     },
   },
@@ -571,14 +569,13 @@ export const OrderedListRichTextEditorParagraph: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Deze lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt het HTML-element \`p\`. De tekst blijft goed uitgelijnd.`
-        - Code Snippet voorbeeld:
-                <li>
-                foo
-                <p>bar</p>
-                </li>
-     - Code snippet verduidelijking: Rich Text Editors voegen meestal pas een paragraph toe zodra je enter hebt gedaan. Dit betekent dat je eerst een textnode hebt, en dan een paragraph element. Deze story laat zien dat de spacing dan nog steeds goed gaat.
-     `,
+        story: `Deze geordende lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt het HTML-element \`p\`. De tekst blijft goed uitgelijnd.`
+        // - Code Snippet voorbeeld:
+    //             <li>
+    //             foo
+    //             <p>bar</p>
+    //             </li>
+    //  - Code snippet verduidelijking: Rich Text Editors voegen meestal pas een paragraph toe zodra je enter hebt gedaan. Dit betekent dat je eerst een textnode hebt, en dan een paragraph element. Deze story laat zien dat de spacing dan nog steeds goed gaat.
       },
     },
   },
@@ -592,7 +589,7 @@ export const OrderedListRichTextEditorNLParagraph: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Deze lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt de NL Paragraph component. De tekst blijft goed uitgelijnd.`,
+        story: `Deze geordende lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt de NL Paragraph component. De tekst blijft goed uitgelijnd.`,
       },
     },
   },
@@ -718,7 +715,7 @@ export const OrderedListOneItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Deze lijst bestaat uit maar één item. Ook met maar één item wordt de lijst als lijst herkend door screenreaders, en krijgt het item het nummer 1.`,
+        story: `Deze geordende lijst bestaat uit maar één item. Ook met maar één item wordt de lijst als lijst herkend door screenreaders, en krijgt het item het nummer 1.`,
       },
     },
   },
@@ -732,7 +729,7 @@ export const OrderedListSoManyItems: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Deze lijst bestaat uit 30 items. Ook met heel veel items wordt de opmaak goed toegepast.`
+        story: `Deze geordende lijst bestaat uit 30 items. Ook met heel veel items wordt de opmaak goed toegepast.`
       },
     },
   },
@@ -746,7 +743,7 @@ export const OrderedListVeryLargeScreen: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een lijst, weergegeven op een heel breed scherm. Ook op een breed scherm wordt de opmaak goed toegepast.`,
+        story: `Een geordende lijst, weergegeven op een heel breed scherm. Ook op een breed scherm wordt de opmaak goed toegepast.`,
       },
     },
   },
@@ -760,7 +757,7 @@ export const OrderedListLinkInItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: `In deze lijst staat in ieder lijst-item een link.`,
+        story: `In deze geordende lijst staat in ieder lijst-item een link.`,
       },
     },
   },
@@ -774,7 +771,7 @@ export const OrderedListTableInItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: `In deze lijst staat in een van de lijst-items een tabel.`,
+        story: `In deze geordende lijst staat in een van de lijst-items een tabel.`,
       },
     },
   },
@@ -788,7 +785,7 @@ export const OrderedListReversedAndStart: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Deze lijst heeft een aflopende nummering en heeft een aangepast startnummer.`,
+        story: `Deze geordende lijst heeft een aflopende nummering en heeft een aangepast startnummer.`,
       },
     },
   },
@@ -802,7 +799,7 @@ export const OrderedListUpperCaseAlphabeticAndStart: Story = {
   parameters: {
     docs: {
       description: {
-        story: `In deze lijst worden de items geordend met hoofdletters. Omdat het startgetal 4 is, start de lijst met D.`,
+        story: `In deze geordende lijst worden de items geordend met hoofdletters. Omdat het startgetal 4 is, start de lijst met D.`,
       },
     },
   },
@@ -858,7 +855,7 @@ export const OrderedListInlineMarkerIconLabelOverride: Story = {
   parameters: {
     docs: {
       description: {
-        story: `In deze lijst begint ieder item met een icoon. De iconen hebben een verkeerde alternatieve tekst. De eigenschap \`inlineMarkerLabel\` overschrijft de verkeerde tekst,, zodat screenreadergebruikers alsnog de juiste betekenis van het icoon horen.`,
+        story: `In deze geordende lijst begint ieder item met een icoon. De iconen hebben een verkeerde alternatieve tekst. De eigenschap \`inlineMarkerLabel\` overschrijft de verkeerde tekst,, zodat screenreadergebruikers alsnog de juiste betekenis van het icoon horen.`,
       },
     },
   },
@@ -872,11 +869,10 @@ export const OrderedListCssReset: Story = {
   parameters: {
     docs: {
       description: {
-        story: `In deze lijst wordt de CSS niet toegepast. De uitlijning gaat nog steeds goed.`
-Ziet disabled er nog uit als disabled
-Gaat spacing nog goed
-Blijft minimum target size goed
-`,
+        story: `In deze geordende lijst wordt de CSS niet toegepast. De uitlijning gaat nog steeds goed.`
+// Ziet disabled er nog uit als disabled
+// Gaat spacing nog goed
+// Blijft minimum target size goed
       },
     },
   },
