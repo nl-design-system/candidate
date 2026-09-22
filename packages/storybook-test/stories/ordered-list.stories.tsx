@@ -353,7 +353,7 @@ export const OrderedListInlineMarkerLabel: Story = {
 //  </li>
 // </ol>
 // Original: Ordered List met een toegankelijke custom marker met toegankelijk label (niet perfecte maar toegankelijke oplossing)
-export const STORY_CONST: Story = {
+export const OrderedListCustomMarkerAriaLabelledby: Story = {
   name: 'Ordered List met een toegankelijke custom marker met toegankelijk label (niet perfecte maar toegankelijke oplossing)',
   args: {},
   parameters: {
