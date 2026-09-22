@@ -297,8 +297,8 @@ export const OrderedListTypeOverridesLanguage: Story = {
 
 // EXAMPLE CODE SNIPPET
 // <ol class="nl-ordered-list">
-//   <li class="nl-ordered-list--item">
-//     <span class="nl-ordered-list--inline-marker">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-hidden="true">
 //         <Icon />
 //       </span>
@@ -307,9 +307,9 @@ export const OrderedListTypeOverridesLanguage: Story = {
 //    Foo Bar
 //  </li>
 // </ol>
-// Original: Ordered List met inline marker en toegankelijke naam via inlineMarkerLabel (sr-only), met `aria-hidden="true"` op inline marker
-export const OrderedListInlineMarkerLabel: Story = {
-  name: 'Ordered List met inline marker en toegankelijke naam via inlineMarkerLabel (sr-only), met HTML-attribuut aria-hidden="true" op inline marker',
+// Original: Ordered List met custom marker en toegankelijke naam via markerLabel (sr-only), met `aria-hidden="true"` op custom marker
+export const OrderedListCustomMarkerLabel: Story = {
+  name: 'Ordered List met custom marker en toegankelijke naam via markerLabel (sr-only), met HTML-attribuut aria-hidden="true" op custom marker',
   args: {},
   parameters: {
     docs: {
@@ -323,8 +323,8 @@ export const OrderedListInlineMarkerLabel: Story = {
 
 // EXAMPLE CODE SNIPPET
 // <ol class="nl-ordered-list">
-//   <li class="nl-ordered-list--item">
-//     <span class="nl-ordered-list--inline-marker">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-labelledby="label-id">
 //         <Icon />
 //       </span>
@@ -783,9 +783,9 @@ export const OrderedListLangArabicReversed: Story = {
 };
 
 // EXAMPLE CODE SNIPPET
-// Original: Ordered List met Inline Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem inlineMarker={<Icon label="1." />} />
+// Original: Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<Icon label="1." />} />
 export const STORY_CONST: Story = {
-  name: 'Ordered List met Inline Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem inlineMarker={<Icon label="1." />} />',
+  name: 'Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<Icon label="1." />} />',
   args: {},
   parameters: {
     docs: {
@@ -797,9 +797,9 @@ export const STORY_CONST: Story = {
 };
 
 // EXAMPLE CODE SNIPPET
-// Original: Ordered List met Inline Marker met Informatieve Icon zonder alternatieve tekst en met Inline Marker Label. Voorbeeldcode: <OrderedListItem inlineMarker={<Icon />} inlineMarkerLabel="1." />
-export const OrderedListInLineMarkerLabel: Story = {
-  name: 'Ordered List met Inline Marker met Informatieve Icon zonder alternatieve tekst en met Inline Marker Label. Voorbeeldcode: <OrderedListItem inlineMarker={<Icon />} inlineMarkerLabel="1." />',
+// Original: Ordered List met Custom Marker met Informatieve Icon zonder alternatieve tekst en met Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<Icon />} markerLabel="1." />
+export const OrderedListCustomMarkerLabel: Story = {
+  name: 'Ordered List met Custom Marker met Informatieve Icon zonder alternatieve tekst en met Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<Icon />} markerLabel="1." />',
   args: {},
   parameters: {
     docs: {
@@ -811,15 +811,15 @@ export const OrderedListInLineMarkerLabel: Story = {
 };
 
 // EXAMPLE CODE SNIPPET
-// Original: Ordered List met Inline Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Inline Marker Label. Voorbeeldcode: <OrderedListItem inlineMarker={<svg><title>Number One Icon</title>...</svg>} inlineMarkerLabel="1." />
-export const OrderedListInlineMarkerIconLabelOverride: Story = {
-  name: 'Ordered List met Inline Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Inline Marker Label. Voorbeeldcode: <OrderedListItem inlineMarker={<svg><title>Number One Icon</title>...</svg>} inlineMarkerLabel="1." />',
+// Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />
+export const OrderedListCustomMarkerIconLabelOverride: Story = {
+  name: 'Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />',
   args: {},
   parameters: {
     docs: {
       description: {
         story:
-          'In deze geordende lijst begint ieder item met een icoon. De iconen hebben een verkeerde alternatieve tekst. De eigenschap \`inlineMarkerLabel\` overschrijft de verkeerde tekst,, zodat screenreadergebruikers alsnog de juiste betekenis van het icoon horen.',
+          'In deze geordende lijst begint ieder item met een icoon. De iconen hebben een verkeerde alternatieve tekst. De eigenschap \`markerLabel\` overschrijft de verkeerde tekst,, zodat screenreadergebruikers alsnog de juiste betekenis van het icoon horen.',
       },
     },
   },

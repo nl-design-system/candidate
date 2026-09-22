@@ -49,9 +49,9 @@ export const OrderedListNoRole: Story = {
 };
 
 // EXAMPLE CODE SNIPPET
-// Original: Ordered List met inline marker zonder `role="list"`
-export const OrderedListInlineMarkerNoRole: Story = {
-  name: 'Fout: Ordered List met inline marker zonder HTML-attribuut role="list"',
+// Original: Ordered List met custom marker zonder `role="list"`
+export const OrderedListCustomMarkerNoRole: Story = {
+  name: 'Fout: Ordered List met Custom Marker zonder HTML-attribuut role="list"',
   args: {},
   parameters: {
     docs: {
@@ -119,8 +119,8 @@ export const OrderedListAriaPosSetSize: Story = {
 };
 
 // <ol class="nl-ordered-list">
-//   <li class="nl-ordered-list--item">
-//     <span class="nl-ordered-list--inline-marker">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-hidden="true">
 //         ❤
 //       </span>
@@ -212,9 +212,9 @@ export const STORY_CONST: Story = {
 };
 
 // EXAMPLE CODE SNIPPET
-// Original: Ordered List met Inline Marker met Decoratieve Icon. Voorbeeldcode: <OrderedListItem inlineMarker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).
+// Original: Ordered List met Custom Marker met Decoratieve Icon. Voorbeeldcode: <OrderedListItem marker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).
 export const STORY_CONST: Story = {
-  name: 'Fout: Ordered List met Inline Marker met Decoratieve Icon. Voorbeeldcode: <OrderedListItem inlineMarker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).',
+  name: 'Fout: Ordered List met Custom Marker met Decoratieve Icon. Voorbeeldcode: <OrderedListItem marker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).',
   args: {},
   parameters: {
     docs: {
@@ -226,9 +226,9 @@ export const STORY_CONST: Story = {
 };
 
 // EXAMPLE CODE SNIPPET
-// Original: Ordered List met Inline Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <OrderedListItem inlineMarker={<svg><title>Number One Icon</title>...</svg>} />
+// Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} />
 export const STORY_CONST: Story = {
-  name: 'Fout: Ordered List met Inline Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <OrderedListItem inlineMarker={<svg><title>Number One Icon</title>...</svg>} />',
+  name: 'Fout: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} />',
   args: {},
   parameters: {
     docs: {

@@ -80,8 +80,8 @@ describe('Ordered List Item', () => {
 
 // Hint voor Ontwikkelfase developer, comment mag weg na ontwikkeling:
 // <ol class="nl-ordered-list">
-//   <li class="nl-ordered-list--item">
-//     <span class="nl-ordered-list--inline-marker">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-hidden="true">
 //        <Icon />
 //      </span>
@@ -90,33 +90,34 @@ describe('Ordered List Item', () => {
 //     Foo Bar
 //   </li>
 // </ol>
-describe('Ordered List Inline Marker when `inlineMarker` is not provided', () => {
+describe('Ordered List Custom Marker when `marker` is not provided', () => {
   describe('Component API', () => {
     it.todo('does not render the HTML-element `span`', () => {});
-    it.todo('does not render the the inline marker HTML-element `span`', () => {});
+    it.todo('does not render the the custom marker HTML-element `span`', () => {});
     it.todo('does not render the screenreader text HTML-element `span`', () => {});
   });
 });
 
-describe('Ordered List Inline Marker when `inlineMarker` is provided', () => {
-  describe('and when `inlineMarkerLabel` is not provided', () => {
+describe('Ordered List Custom Marker when `marker` is provided', () => {
+  describe('and when `markerLabel` is not provided', () => {
     it.todo('does not render the HTML-element `span`', () => {});
-    it.todo('does not render the the inline marker HTML-element `span`', () => {});
+    it.todo('does not render the the custom marker HTML-element `span`', () => {});
     it.todo('does not render the screenreader text HTML-element `span`', () => {});
   });
 
-  describe('and when `inlineMarkerLabel` is provided', () => {
+  describe('and when `markerLabel` is provided', () => {
     describe('CSS API', () => {
-      it.todo('adds the `nl-ordered-list__inline-marker` class by default', () => {});
+      it.todo('adds the `nl-ordered-list__marker` class by default', () => {});
+      it.todo('adds the `nl-ordered-list__marker--custom` class by default', () => {});
     });
 
     describe('Component API', () => {
       it.todo('renders the HTML-element `span`', () => {});
 
-      it.todo('renders the inline marker HTML-element `span`', () => {});
-      it.todo('has the HTML-attribute `aria-hidden="true"` on the inline marker HTML-element `span`', () => {});
-      it.todo('supports phrasing content in the inline marker HTML-element `span`', () => {});
-      it.todo('supports the HTML-element `p` in the inline marker HTML-element `span`', () => {});
+      it.todo('renders the custom marker HTML-element `span`', () => {});
+      it.todo('has the HTML-attribute `aria-hidden="true"` on the custom marker HTML-element `span`', () => {});
+      it.todo('supports phrasing content in the custom marker HTML-element `span`', () => {});
+      it.todo('supports the HTML-element `p` in the custom marker HTML-element `span`', () => {});
 
       it.todo('renders the screenreader text HTML-element `span`', () => {});
       it.todo('supports phrasing content in the screenreader text HTML-element `span`', () => {});
