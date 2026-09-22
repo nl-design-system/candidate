@@ -271,7 +271,7 @@ export const OrderedListArabicNum: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: 'Deze geordende lijst heeft de ingestelde taal Arabisch, bevat Arabische tekst en heeft Arabisch-Indische nummering in plaats van de standaard nummers.',
       },
     },
   },
