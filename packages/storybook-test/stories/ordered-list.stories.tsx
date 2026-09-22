@@ -198,7 +198,7 @@ export const OrderedListLowercaseLetters: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: 'Deze lijst gebruikt kleine letters (a, b, c) in plaats van nummers (1, 2, 3) om de items te ordenen.',
       },
     },
   },
