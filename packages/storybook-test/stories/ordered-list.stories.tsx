@@ -298,30 +298,6 @@ export const OrderedListTypeOverridesLanguage: Story = {
 //       <span aria-hidden="true">
 //         <Icon />
 //       </span>
-//     </span>
-//     Foo Bar
-//   </li>
-// </ol>
-// Original: Ordered List met decoratieve inline marker zonder inlineMarkerLabel en `aria-hidden="true"` op inline marker
-export const OrderedListInlineMarkerDecorative: Story = {
-  name: 'Ordered List met decoratieve inline marker zonder inlineMarkerLabel en HTML-attribuut aria-hidden="true" op inline marker',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: 'STORY_DESCRIPTION',
-      },
-    },
-  },
-};
-
-// EXAMPLE CODE SNIPPET
-// <ol class="nl-ordered-list">
-//   <li class="nl-ordered-list--item">
-//     <span class="nl-ordered-list--inline-marker">
-//       <span aria-hidden="true">
-//         <Icon />
-//       </span>
 //      <span class="sr-only">Informatieve label{" "}</span>
 //    </span>
 //    Foo Bar

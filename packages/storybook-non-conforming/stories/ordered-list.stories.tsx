@@ -118,7 +118,16 @@ export const OrderedListAriaPosSetSize: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol class="nl-ordered-list">
+//   <li class="nl-ordered-list--item">
+//     <span class="nl-ordered-list--inline-marker">
+//       <span aria-hidden="true">
+//         ❤
+//       </span>
+//     </span>
+//     Foo Bar
+//   </li>
+// </ol>
 // Original: Ordered List met custom marker (Unicode emoji) zonder toegankelijk alternatief
 export const OrderedListEmojiNoAlt: Story = {
   name: 'Fout: Ordered List met custom marker (Unicode emoji) zonder toegankelijk alternatief',
