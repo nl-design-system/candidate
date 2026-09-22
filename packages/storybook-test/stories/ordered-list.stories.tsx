@@ -216,7 +216,7 @@ export const OrderedListUppercaseLetters: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: 'Deze lijst gebruikt hoofdletters (A, B, C) in plaats van nummers (1, 2, 3) om de items te ordenen.',
       },
     },
   },
