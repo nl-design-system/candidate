@@ -153,7 +153,7 @@ export const OrderedListThreeLevelsNesting: Story = {
 //   <li>De Aardbeien van Jan en Brigitte</li>
 // </ol>
 // Original: Ordered List met startnummer anders dan 1
-export const STORY_CONST: Story = {
+export const OrderedListStart: Story = {
   name: 'Ordered List met startnummer anders dan 1',
   args: {},
   parameters: {
