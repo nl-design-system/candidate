@@ -234,7 +234,7 @@ export const OrderedListLowercaseRomanNum: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: 'Deze geordende lijst gebruikt Romeinse cijfers in kleine letters (i, ii, iii) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
       },
     },
   },
@@ -252,7 +252,7 @@ export const OrderedListUppercaseRomanNum: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: 'Deze geordende lijst gebruikt Romeinse cijfers hoofdletters (I, II, III) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
       },
     },
   },
