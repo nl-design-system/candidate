@@ -464,7 +464,7 @@ export const OrderedListNLHTMLOrderedList: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List opgebouwd met `div` elementen
 // Let op: role="list" en role="listitem" is nodig!
-export const STORY_CONST: Story = {
+export const OrderedListAlternativeHTMLDivs: Story = {
   name: 'Ordered List opgebouwd met `div` elementen',
   args: {},
   parameters: {
@@ -479,7 +479,7 @@ export const STORY_CONST: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List opgebouwd met `span` elementen
 // Let op: role="list" en role="listitem" is nodig!
-export const STORY_CONST: Story = {
+export const OrderedListAlternativeHTMLSpans: Story = {
   name: 'Ordered List opgebouwd met `span` elementen',
   args: {},
   parameters: {
@@ -514,10 +514,7 @@ export const OrderedListNLParagraphsInListItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: `
-  - bevat een korte NL Paragraph
-  - bevat een lange NL Paragraph die wrapped
-  - bevat twee NL Paragraphs waarbij de spacing correct blijft
+        story: `In deze lijst worden NL Paragraph componenten in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.`
           `,
       },
     },
@@ -526,13 +523,13 @@ export const OrderedListNLParagraphsInListItem: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List in een column layout
-export const STORY_CONST: Story = {
+export const OrderedListColumnLayout: Story = {
   name: 'Ordered List in een column layout',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Deze geordende lijst is verdeeld in meerdere kolommen. De items worden van boven naar beneden gevuld en gaan verder in de volgende kolom. De nummering blijft doorlopen: het eerste item van de tweede kolom krijgt niet opnieuw nummer 1, maar het nummer dat volgt op het laatste item van de eerste kolom.`,
       },
     },
   },
@@ -540,13 +537,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met een lang list item dat doorloopt naar een volgende kolom
-export const STORY_CONST: Story = {
+export const OrderedListLongItemAcrossColumns: Story = {
   name: 'Ordered List met een lang list item dat doorloopt naar een volgende kolom',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Deze lijst is verdeeld in meerdere kolommen. De tekst van een item loopt door in de volgende kolom. Het nummer van het item blijft in de eerste kolom blijft staan.`,
       },
     },
   },
@@ -560,7 +557,7 @@ export const STORY_CONST: Story = {
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `In deze geordende lijst staan items waarin als content een nieuwe lijst staat. De lijst wordt weergegeven op een klein scherm waarbij de lijst breder is dan de beschikbare ruimte. In plaats van dat de tekst noodgedwongen wordt afgebroken tot een paar letters per regel, kan de bezoeker de lijst horizontaal scrollen om de volledige breedte te bekijken.`,
       },
     },
   },
@@ -568,13 +565,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor
-export const STORY_CONST: Story = {
+export const OrderedListRichTextEditorParagraph: Story = {
   name: 'Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `
+        story: `Deze lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt het HTML-element \`p\`. De tekst blijft goed uitgelijnd.`
         - Code Snippet voorbeeld:
                 <li>
                 foo
@@ -589,13 +586,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Story voor Rich Text Editors met NL Paragraph - zelfde als bovenstaande maar dan met NL Paragraph component
-export const STORY_CONST: Story = {
+export const OrderedListRichTextEditorNLParagraph: Story = {
   name: 'Story voor Rich Text Editors met NL Paragraph - zelfde als bovenstaande maar dan met NL Paragraph component',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Deze lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt de NL Paragraph component. De tekst blijft goed uitgelijnd.`,
       },
     },
   },
@@ -617,13 +614,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Story voor het centreren van de Ordered List. Dit omdat dit beschikbaar is in community en we daar een oplossing voor moeten laten zien.
-export const STORY_CONST: Story = {
+export const OrderedListCentered: Story = {
   name: 'Story voor het centreren van de Ordered List. Dit omdat dit beschikbaar is in community en we daar een oplossing voor moeten laten zien.',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Een gecentreerde lijst. In plaats van links uitgelijnd, is de tekst in het midden uitgelijnd.`,
       },
     },
   },
@@ -631,13 +628,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met vergrote tekstafstand
-export const STORY_CONST: Story = {
+export const OrderedListIncreasedTextSpacing: Story = {
   name: 'Ordered List met vergrote tekstafstand',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Een lijst met vergrote tekstafstand (regelafstand, letterspatiëring en woordspatiëring), zoals bezoekers dit zelf kunnen instellen om tekst beter leesbaar te maken. De lijst en de nummering blijven ook met deze aangepaste afstanden goed leesbaar en er gaat geen content verloren.`,
       },
     },
   },
@@ -645,13 +642,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met tekst vergroot naar 200%
-export const STORY_CONST: Story = {
+export const OrderedList200PercentZoom: Story = {
   name: 'Ordered List met tekst vergroot naar 200%',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Een lijst waarvan de tekst 200% vergroot is. De lijst blijft ook op deze grotere tekstgrootte goed leesbaar: er gaat geen content verloren en er hoeft niet horizontaal gescrold te worden om de tekst te kunnen lezen.`,
       },
     },
   },
@@ -659,13 +656,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List in Forced Colors modus
-export const STORY_CONST: Story = {
+export const OrderedListForcedColors: Story = {
   name: 'Ordered List in Forced Colors modus',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Een lijst in forced colors modus. Forced colors is een instelling waarbij het besturingssysteem van de bezoeker een eigen kleurenschema afdwingt op alle content, bijvoorbeeld voor mensen met een visuele beperking die veel baat hebben bij hoog contrast. De nummers en tekst van de lijst blijven ook in dit kleurenschema goed zichtbaar en onderscheidend van elkaar.`,
       },
     },
   },
@@ -715,13 +712,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met 1 list item
-export const STORY_CONST: Story = {
+export const OrderedListOneItem: Story = {
   name: 'Ordered List met 1 list item',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Deze lijst bestaat uit maar één item. Ook met maar één item wordt de lijst als lijst herkend door screenreaders, en krijgt het item het nummer 1.`,
       },
     },
   },
@@ -729,13 +726,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met zeer veel list items (meer dan geadviseerde 3)
-export const STORY_CONST: Story = {
+export const OrderedListSoManyItems: Story = {
   name: 'Ordered List met zeer veel list items (meer dan geadviseerde 3)',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Deze lijst bestaat uit 30 items. Ook met heel veel items wordt de opmaak goed toegepast.`
       },
     },
   },
@@ -743,13 +740,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List op een breed scherm (in tegenstelling tot de mobiele test)
-export const STORY_CONST: Story = {
+export const OrderedListVeryLargeScreen: Story = {
   name: 'Ordered List op een breed scherm (in tegenstelling tot de mobiele test)',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Een lijst, weergegeven op een heel breed scherm. Ook op een breed scherm wordt de opmaak goed toegepast.`,
       },
     },
   },
@@ -757,13 +754,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met Link in list items (ie een soort Link List? is dat een goed idee? nav component icm andere componenten)
-export const STORY_CONST: Story = {
+export const OrderedListLinkInItem: Story = {
   name: 'Ordered List met Link in list items (ie een soort Link List? is dat een goed idee? nav component icm andere componenten)',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `In deze lijst staat in ieder lijst-item een link.`,
       },
     },
   },
@@ -771,13 +768,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met tabel in een list item (is dat een goed idee? nav component icm andere componenten / uitgebreide use cases)
-export const STORY_CONST: Story = {
+export const OrderedListTableInItem: Story = {
   name: 'Ordered List met tabel in een list item (is dat een goed idee? nav component icm andere componenten / uitgebreide use cases)',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `In deze lijst staat in een van de lijst-items een tabel.`,
       },
     },
   },
@@ -785,13 +782,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met reversed en start
-export const STORY_CONST: Story = {
+export const OrderedListReversedAndStart: Story = {
   name: 'Ordered List met reversed en start',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Deze lijst heeft een aflopende nummering en heeft een aangepast startnummer.`,
       },
     },
   },
@@ -799,13 +796,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met type="A" en start
-export const STORY_CONST: Story = {
+export const OrderedListUpperCaseAlphabeticAndStart: Story = {
   name: `Ordered List met type="A" en start`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `In deze lijst worden de items geordend met hoofdletters. Omdat het startgetal 4 is, start de lijst met D.`,
       },
     },
   },
@@ -813,13 +810,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met lang="ar" en reversed
-export const STORY_CONST: Story = {
+export const OrderedListLangArabicReversed: Story = {
   name: `Ordered List met lang="ar" en reversed`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Deze lijst is geordend met Arabisch-Indische cijfers en loopt af in plaats van op.`,
       },
     },
   },
@@ -841,7 +838,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met Inline Marker met Informatieve Icon zonder alternatieve tekst en met Inline Marker Label. Voorbeeldcode: <OrderedListItem inlineMarker={<Icon />} inlineMarkerLabel="1." />
-export const STORY_CONST: Story = {
+export const OrderedListInLineMarkerLabel: Story = {
   name: `Ordered List met Inline Marker met Informatieve Icon zonder alternatieve tekst en met Inline Marker Label. Voorbeeldcode: <OrderedListItem inlineMarker={<Icon />} inlineMarkerLabel="1." />`,
   args: {},
   parameters: {
@@ -855,13 +852,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met Inline Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Inline Marker Label. Voorbeeldcode: <OrderedListItem inlineMarker={<svg><title>Number One Icon</title>...</svg>} inlineMarkerLabel="1." />
-export const STORY_CONST: Story = {
+export const OrderedListInlineMarkerIconLabelOverride: Story = {
   name: `Ordered List met Inline Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Inline Marker Label. Voorbeeldcode: <OrderedListItem inlineMarker={<svg><title>Number One Icon</title>...</svg>} inlineMarkerLabel="1." />`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `In deze lijst begint ieder item met een icoon. De iconen hebben een verkeerde alternatieve tekst. De eigenschap \`inlineMarkerLabel\` overschrijft de verkeerde tekst,, zodat screenreadergebruikers alsnog de juiste betekenis van het icoon horen.`,
       },
     },
   },
@@ -869,13 +866,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Eentje met CSS reset voor de Component
-export const STORY_CONST: Story = {
+export const OrderedListCssReset: Story = {
   name: 'Eentje met CSS reset voor de Component',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `
+        story: `In deze lijst wordt de CSS niet toegepast. De uitlijning gaat nog steeds goed.`
 Ziet disabled er nog uit als disabled
 Gaat spacing nog goed
 Blijft minimum target size goed
@@ -887,7 +884,7 @@ Blijft minimum target size goed
 
 // EXAMPLE CODE SNIPPET
 // Original: Wel de component CSS maar niet de thema CSS.
-export const STORY_CONST: Story = {
+export const OrderedListComponentCssNoThemeCss: Story = {
   name: 'Wel de component CSS maar niet de thema CSS.',
   args: {},
   parameters: {
@@ -905,7 +902,7 @@ Blijft minimum target size goed
 
 // EXAMPLE CODE SNIPPET
 // Original: Eentje waar alle CSS naar een invalid value word gezet, wat betekent dat user-agent dan ook niet meer lekker gaat.
-export const STORY_CONST: Story = {
+export const OrderedListInvalidCssValues: Story = {
   name: 'Eentje waar alle CSS naar een invalid value word gezet, wat betekent dat user-agent dan ook niet meer lekker gaat.',
   args: {},
   parameters: {
