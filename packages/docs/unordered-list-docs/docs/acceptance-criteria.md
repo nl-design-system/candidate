@@ -71,7 +71,9 @@ Voor de HTML component:
 
 - De CSS ondersteunt een Unordered List binnen een element met de `nl-html--all` class met een `ul` HTML-element en onderliggende `li` HTML-elementen zonder component classes.
 - De CSS ondersteunt een Unordered List binnen een element met de `nl-html--unordered-list` class met een `ul` HTML-element en onderliggende `li` HTML-elementen zonder component classes.
-- De CSS ondersteunt een semantische HTML Unordered List bestaande uit `ul` en `li` HTML-elementen zonder component classes.
+- De CSS ondersteunt een Unordered List binnen een element met de `nl-html--all` class met een `ul` HTML-element en direct onderliggende `li` HTML-elementen zonder component classes.
+- De CSS ondersteunt een Unordered List binnen een element met de `nl-html--unordered-list` class met een `ul` HTML-element en direct onderliggende `li` HTML-elementen zonder component classes.
+- De CSS ondersteunt een vanilla HTML Unordered List bestaande uit een `ul` HTML-element en direct onderliggende `li` HTML-elementen zonder component classes.
 
 ### Forced Colors modus
 
