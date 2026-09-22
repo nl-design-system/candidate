@@ -673,20 +673,6 @@ export const OrderedListForcedColors: Story = {
 };
 
 // EXAMPLE CODE SNIPPET
-// Original: Ordered List met alfabetische nummering wordt goed voorgelezen
-export const STORY_CONST: Story = {
-  name: 'Ordered List met alfabetische nummering wordt goed voorgelezen',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: 'STORY_DESCRIPTION',
-      },
-    },
-  },
-};
-
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met Romeinse nummering wordt goed voorgelezen
 export const STORY_CONST: Story = {
   name: 'Ordered List met Romeinse nummering wordt goed voorgelezen',
