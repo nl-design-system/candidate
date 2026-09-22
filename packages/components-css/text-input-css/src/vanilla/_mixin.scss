@@ -1,0 +1,13 @@
+@use "../mixin";
+
+@mixin nl-html--text-input {
+  /* TODO: Change this to the appropriate element */
+  input[type="text" i],
+  input[type="email" i],
+  input[type="url" i],
+  input[type="tel" i],
+  input[type="search" i],
+  input[type="password" i] {
+    @include mixin.nl-text-input;
+  }
+}

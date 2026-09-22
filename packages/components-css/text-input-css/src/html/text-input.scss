@@ -1,4 +1,6 @@
-@use "mixin";
+@use "../vanilla/mixin";
 
-/* TODO: Change this to the appropriate element */
-@include mixin.div;
+.nl-html--all,
+.nl-html--text-input {
+  @include mixin.nl-html--text-input;
+}
