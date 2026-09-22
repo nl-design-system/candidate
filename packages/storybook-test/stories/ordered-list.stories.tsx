@@ -555,7 +555,7 @@ export const OrderedListLongItemAcrossColumns: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met horizontaal scrollen op een klein scherm (mock mobiel) - hier zijn meerdere geneste niveaus nodig om te laten zien dat scrollen dan beter is dan wrappen omdat er anders maar een paar letters per regel blijven staan
-export const STORY_CONST: Story = {
+export const OrderedListHorizontalScrollMobile: Story = {
   name: 'Ordered List met horizontaal scrollen op een klein scherm (mock mobiel) - hier zijn meerdere geneste niveaus nodig om te laten zien dat scrollen dan beter is dan wrappen omdat er anders maar een paar letters per regel blijven staan',
   args: {},
   parameters: {
