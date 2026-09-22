@@ -328,7 +328,7 @@ export const OrderedListInlineMarkerDecorative: Story = {
 //  </li>
 // </ol>
 // Original: Ordered List met inline marker en toegankelijke naam via inlineMarkerLabel (sr-only), met `aria-hidden="true"` op inline marker
-export const STORY_CONST: Story = {
+export const OrderedListInlineMarkerLabel: Story = {
   name: 'Ordered List met inline marker en toegankelijke naam via inlineMarkerLabel (sr-only), met HTML-attribuut aria-hidden="true" op inline marker',
   args: {},
   parameters: {
