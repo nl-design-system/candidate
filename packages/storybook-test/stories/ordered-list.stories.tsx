@@ -234,7 +234,8 @@ export const OrderedListLowercaseRomanNum: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze geordende lijst gebruikt Romeinse cijfers in kleine letters (i, ii, iii) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
+        story:
+          'Deze geordende lijst gebruikt Romeinse cijfers in kleine letters (i, ii, iii) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
       },
     },
   },
@@ -252,7 +253,8 @@ export const OrderedListUppercaseRomanNum: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze geordende lijst gebruikt Romeinse cijfers hoofdletters (I, II, III) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
+        story:
+          'Deze geordende lijst gebruikt Romeinse cijfers hoofdletters (I, II, III) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
       },
     },
   },
@@ -271,7 +273,8 @@ export const OrderedListArabicNum: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze geordende lijst heeft de ingestelde taal Arabisch, bevat Arabische tekst en heeft Arabisch-Indische nummering in plaats van de standaard nummers.',
+        story:
+          'Deze geordende lijst heeft de ingestelde taal Arabisch, bevat Arabische tekst en heeft Arabisch-Indische nummering in plaats van de standaard nummers.',
       },
     },
   },
@@ -285,7 +288,8 @@ export const OrderedListTypeOverridesLanguage: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'Deze geordende lijst heeft de ingestelde taal Arabisch en het ingesteld type Romeinse cijfers. Het type krijgt voorrang op de taal: In dit geval worden dus kleine Romeinse cijfers (i, ii, iii) getoond in plaats van Arabisch-Indische nummers.',
       },
     },
   },
@@ -310,7 +314,8 @@ export const OrderedListInlineMarkerLabel: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'In deze geordende lijst begint ieder item met een icoon. Het icoon zelf is verborgen voor hulpsoftware, maar de betekenis ervan wordt in plaats daarvan als tekst voorgelezen. Deze tekst is visueel verborgen, maar wel beschikbaar voor screenreadergebruikers.',
       },
     },
   },
@@ -335,7 +340,8 @@ export const OrderedListCustomMarkerAriaLabelledby: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'In deze geordende lijst begint ieder item met een icoon. De betekenis van het icoon wordt aan SCREENREADERGEBRUIKERS doorgegeven via het WAI-ARIA-attribuut `aria-labelledby` dat verwijst naar een onzichtbare tekst. De tekst zelf is verborgen voor hulpsoftware.',
       },
     },
   },
@@ -349,7 +355,8 @@ export const OrderedListHidden: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'Deze geordende lijst is niet zichtbaar voor bezoekers en wordt ook niet voorgelezen door screenreaders.',
       },
     },
   },
@@ -363,7 +370,8 @@ export const OrderedListLangRTL: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'Deze geordende lijst heeft de ingestelde taal Arabisch en bevat Arabische tekst, dit is een taal die van rechts naar links wordt gelezen.',
       },
     },
   },
@@ -391,7 +399,8 @@ export const OrderedListDirRTL: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'Deze geordende lijst heeft de ingesteld richting rechts-naar-links en wordt van rechts naar links weergegeven: de nummers staan aan de rechterkant en de tekst loopt van rechts naar links.',
       },
     },
   },
@@ -405,7 +414,8 @@ export const OrderedListDirParentOnly: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'De Arabische tekst in deze geordende lijst wordt rechts naar links weergegeven en laat zien wat er gebeurt wanneer het HTML-attribuut `dir` alleen op de lijst als geheel wordt gezet, en niet apart op elk item.',
       },
     },
   },
@@ -450,7 +460,8 @@ export const OrderedListAlternativeHTMLDivs: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'Deze lijst is opgemaakt met meerdere HTML-elementen `div`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, als wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -465,7 +476,8 @@ export const OrderedListAlternativeHTMLSpans: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'Deze lijst is opgemaakt met meerdere HTML-elementen `span`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, als wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -479,7 +491,8 @@ export const OrderedListHTMLParagraphsInListItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'In deze geordende lijst worden HTML paragrafen in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed',
+        story:
+          'In deze geordende lijst worden HTML paragrafen in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed',
       },
     },
   },
@@ -493,7 +506,8 @@ export const OrderedListNLParagraphsInListItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'In deze geordende lijst worden NL Paragraph componenten in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed',
+        story:
+          'In deze geordende lijst worden NL Paragraph componenten in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed',
       },
     },
   },
@@ -552,13 +566,14 @@ export const OrderedListRichTextEditorParagraph: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze geordende lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt het HTML-element \`p\`. De tekst blijft goed uitgelijnd',
+        story:
+          'Deze geordende lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt het HTML-element \`p\`. De tekst blijft goed uitgelijnd',
         // - Code Snippet voorbeeld:
-    //             <li>
-    //             foo
-    //             <p>bar</p>
-    //             </li>
-    //  - Code snippet verduidelijking: Rich Text Editors voegen meestal pas een paragraph toe zodra je enter hebt gedaan. Dit betekent dat je eerst een textnode hebt, en dan een paragraph element. Deze story laat zien dat de spacing dan nog steeds goed gaat.
+        //             <li>
+        //             foo
+        //             <p>bar</p>
+        //             </li>
+        //  - Code snippet verduidelijking: Rich Text Editors voegen meestal pas een paragraph toe zodra je enter hebt gedaan. Dit betekent dat je eerst een textnode hebt, en dan een paragraph element. Deze story laat zien dat de spacing dan nog steeds goed gaat.
       },
     },
   },
@@ -572,7 +587,8 @@ export const OrderedListRichTextEditorNLParagraph: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze geordende lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt de NL Paragraph component. De tekst blijft goed uitgelijnd.',
+        story:
+          'Deze geordende lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt de NL Paragraph component. De tekst blijft goed uitgelijnd.',
       },
     },
   },
@@ -614,7 +630,8 @@ export const OrderedListIncreasedTextSpacing: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een lijst met vergrote tekstafstand (regelafstand, letterspatiëring en woordspatiëring), zoals bezoekers dit zelf kunnen instellen om tekst beter leesbaar te maken. De lijst en de nummering blijven ook met deze aangepaste afstanden goed leesbaar en er gaat geen content verloren.',
+        story:
+          'Een lijst met vergrote tekstafstand (regelafstand, letterspatiëring en woordspatiëring), zoals bezoekers dit zelf kunnen instellen om tekst beter leesbaar te maken. De lijst en de nummering blijven ook met deze aangepaste afstanden goed leesbaar en er gaat geen content verloren.',
       },
     },
   },
@@ -628,7 +645,8 @@ export const OrderedList200PercentZoom: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een lijst waarvan de tekst 200% vergroot is. De lijst blijft ook op deze grotere tekstgrootte goed leesbaar: er gaat geen content verloren en er hoeft niet horizontaal gescrold te worden om de tekst te kunnen lezen.',
+        story:
+          'Een lijst waarvan de tekst 200% vergroot is. De lijst blijft ook op deze grotere tekstgrootte goed leesbaar: er gaat geen content verloren en er hoeft niet horizontaal gescrold te worden om de tekst te kunnen lezen.',
       },
     },
   },
@@ -642,7 +660,8 @@ export const OrderedListForcedColors: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een lijst in forced colors modus. Forced colors is een instelling waarbij het besturingssysteem van de bezoeker een eigen kleurenschema afdwingt op alle content, bijvoorbeeld voor mensen met een visuele beperking die veel baat hebben bij hoog contrast. De nummers en tekst van de lijst blijven ook in dit kleurenschema goed zichtbaar en onderscheidend van elkaar.',
+        story:
+          'Een lijst in forced colors modus. Forced colors is een instelling waarbij het besturingssysteem van de bezoeker een eigen kleurenschema afdwingt op alle content, bijvoorbeeld voor mensen met een visuele beperking die veel baat hebben bij hoog contrast. De nummers en tekst van de lijst blijven ook in dit kleurenschema goed zichtbaar en onderscheidend van elkaar.',
       },
     },
   },
@@ -656,7 +675,8 @@ export const OrderedListOneItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze geordende lijst bestaat uit maar één item. Ook met maar één item wordt de lijst als lijst herkend door screenreaders, en krijgt het item het nummer 1.',
+        story:
+          'Deze geordende lijst bestaat uit maar één item. Ook met maar één item wordt de lijst als lijst herkend door screenreaders, en krijgt het item het nummer 1.',
       },
     },
   },
