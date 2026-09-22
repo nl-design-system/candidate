@@ -367,7 +367,7 @@ export const OrderedListCustomMarkerAriaLabelledby: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met HTML `hidden` attribuut
-export const STORY_CONST: Story = {
+export const OrderedListHidden: Story = {
   name: 'Ordered List met HTML-attribuut hidden',
   args: {},
   parameters: {
