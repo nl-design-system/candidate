@@ -228,7 +228,7 @@ export const OrderedListUppercaseLetters: Story = {
 //   <li>Beëindiging</li>
 // </ol>
 // Original: Ordered List met kleine Romeinse cijfers (`type="i"`)
-export const STORY_CONST: Story = {
+export const OrderedListLowercaseRomanNum: Story = {
   name: 'Ordered List met kleine Romeinse cijfers (\`type="i"\`)',
   args: {},
   parameters: {
