@@ -395,7 +395,7 @@ export const OrderedListLangRTL: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
-export const OrderedListLangAr: Story = {
+export const OrderedListLangArabic: Story = {
   name: 'Ordered List met HTML-attribuut lang="ar" - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten',
   args: {},
   parameters: {
