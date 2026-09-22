@@ -37,12 +37,12 @@ export default meta;
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List zonder `role="list"`
 export const OrderedListNoRole: Story = {
-  name: `Fout: Ordered List zonder \`role="list"\``,
+  name: 'Fout: Ordered List zonder HTML-attribuut role="list"',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -51,12 +51,12 @@ export const OrderedListNoRole: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met inline marker zonder `role="list"`
 export const OrderedListInlineMarkerNoRole: Story = {
-  name: `Fout: Ordered List met inline marker zonder \`role="list"\``,
+  name: 'Fout: Ordered List met inline marker zonder HTML-attribuut role="list"',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -65,12 +65,12 @@ export const OrderedListInlineMarkerNoRole: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met `tabindex`
 export const OrderedListTabIndex: Story = {
-  name: 'Fout: Ordered List met `tabindex`',
+  name: 'Fout: Ordered List met HTML-attribuut tabindex',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -84,7 +84,7 @@ export const OrderedListListStyleNoneNoRole: Story = {
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -93,12 +93,12 @@ export const OrderedListListStyleNoneNoRole: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List zonder lijststyling met alleen `role="list"` (lijstsemantiek terug, maar ordening ontbreekt)
 export const OrderedListListStyleNoneWithRole: Story = {
-  name: `Fout: Ordered List zonder lijststyling met alleen \`role="list"\` (lijstsemantiek terug, maar ordening ontbreekt)`,
+  name: 'Fout: Ordered List zonder lijststyling met alleen HTML-attribuut role="list" (lijstsemantiek terug, maar ordening ontbreekt)',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -107,12 +107,12 @@ export const OrderedListListStyleNoneWithRole: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met `aria-posinset` en `aria-setsize`
 export const OrderedListAriaPosSetSize: Story = {
-  name: 'Fout: Ordered List met `aria-posinset` en `aria-setsize`',
+  name: 'Fout: Ordered List met HTML-attributen aria-posinset en aria-setsize',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -126,7 +126,7 @@ export const OrderedListEmojiNoAlt: Story = {
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -135,12 +135,12 @@ export const OrderedListEmojiNoAlt: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met custom marker (Unicode emoji) via CSS `content`
 export const OrderedListEmojiAltInCssContent: Story = {
-  name: 'Fout: Ordered List met custom marker (Unicode emoji) via CSS `content`',
+  name: 'Fout: Ordered List met custom marker (Unicode emoji) via CSS-eigenschap content',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -154,7 +154,7 @@ export const STORY_CONST: Story = {
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -163,12 +163,12 @@ export const STORY_CONST: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met custom markers via `counter-reset` / `counter-increment` in CSS `content`
 export const STORY_CONST: Story = {
-  name: 'Fout: Ordered List met custom markers via `counter-reset` / `counter-increment` in CSS `content`',
+  name: 'Fout: Ordered List met custom markers via CSS-eigenschappen counter-reset / counter-increment in CSS0-eigenschap content',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -177,12 +177,12 @@ export const STORY_CONST: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met custom markers via `counter-reset` / `counter-increment` in een `span`
 export const STORY_CONST: Story = {
-  name: 'Fout: Ordered List met custom markers via `counter-reset` / `counter-increment` in een `span`',
+  name: 'Fout: Ordered List met custom markers via CSS-eigenschappen counter-reset / counter-increment in een HTML-element span',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -196,7 +196,7 @@ export const STORY_CONST: Story = {
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -210,7 +210,7 @@ export const STORY_CONST: Story = {
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
@@ -224,7 +224,7 @@ export const STORY_CONST: Story = {
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: 'STORY_DESCRIPTION',
       },
     },
   },
