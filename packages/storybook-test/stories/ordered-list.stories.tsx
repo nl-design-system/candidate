@@ -50,51 +50,89 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list">
+//   <li>Paspoortfoto, niet ouder dan 6 maanden</li>
+//   <li>Je oude paspoort</li>
+//   <li>Je afspraakbevestiging</li>
+// </ol>
 // Original: Ordered List
-export const STORY_CONST: Story = {
+export const OrderedListDefault: Story = {
   name: 'Ordered List',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Een standaard genummerde lijst. Elk item krijgt automatisch een oplopend nummer, beginnend bij 1.`,
       },
     },
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list">
+//   <li>
+//     Verzamel de benodigde documenten
+//     <ol role="list">
+//       <li>Geldig identiteitsbewijs</li>
+//       <li>Bewijs van inschrijving</li>
+//     </ol>
+//   </li>
+//   <li>Dien de aanvraag in</li>
+// </ol>
+
 // Original: Ordered List met geneste Ordered List
-export const STORY_CONST: Story = {
+export const OrderedListNestedOrderedList: Story = {
   name: 'Ordered List met geneste Ordered List',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Een geordende lijst met een geordende lijst in een van de items. De sublijst begint opnieuw bij 1, los van de nummering van de hoofdlijst. Visueel is de sublijst ingesprongen vergeleken met het item daarboven.`,
       },
     },
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list">
+//   <li>
+//     Geef je keuze aan voor de afspraak. Je kunt kiezen uit:
+//     <ul role="list">
+//       <li>Online</li>
+//       <li>Bij de balie</li>
+//     </ul>
+//   </li>
+//   <li>Kies een datum en tijd</li>
+// </ol>
 // Original: Ordered List met geneste Unordered List
-export const STORY_CONST: Story = {
+export const OrderedListNestedUnorderedList: Story = {
   name: 'Ordered List met geneste Unordered List',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Een geordende lijst met een ongeordende lijst in een van de items. De sublijst krijgt bolletjes in plaats van cijfers en is visueel ingesprongen vergeleken met het item daarboven.`,
       },
     },
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list">
+//   <li>
+//     Fase 1: Voorbereiding
+//     <ol role="list">
+//       <li>
+//         Verzamel documenten
+//         <ol role="list">
+//           <li>Identiteitsbewijs</li>
+//           <li>Bewijs van inschrijving</li>
+//         </ol>
+//       </li>
+//       <li>Plan een afspraak</li>
+//     </ol>
+//   </li>
+//   <li>Fase 2: Uitvoering</li>
+// </ol>
 // Original: Ordered List met minimaal drie niveaus nesting, met documentatie over hoe en wat
-export const STORY_CONST: Story = {
+export const OrderedListThreeLevelsNesting: Story = {
   name: 'Ordered List met minimaal drie niveaus nesting, met documentatie over hoe en wat',
   args: {},
   parameters: {
@@ -106,7 +144,12 @@ export const STORY_CONST: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <p>Rotondekunstprijs eervolle vermeldingen:</p>
+// <ol role="list" start="4">
+//   <li>Vangrails Looping</li>
+//   <li>Many sites</li>
+//   <li>De Aardbeien van Jan en Brigitte</li>
+// </ol>
 // Original: Ordered List met startnummer anders dan 1
 export const STORY_CONST: Story = {
   name: 'Ordered List met startnummer anders dan 1',
@@ -114,30 +157,39 @@ export const STORY_CONST: Story = {
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Deze lijst is wel geordend, maar de content zorgt ervoor dat het niet logisch is om bij 1 te starten. De nummering loopt vanaf het startnummer door zoals normaal.`,
       },
     },
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <p>Rotondekunstprijs prijswinnaars:</p>
+// <ol role="list" reversed>
+//   <li>Vis op wielen</li>
+//   <li>Licht Piramide</li>
+//   <li>Berm</li>
+// </ol>
 // Original: Ordered List met omgekeerde nummering (`reversed`)
-export const STORY_CONST: Story = {
+export const OrderedListReversed: Story = {
   name: 'Ordered List met omgekeerde nummering (`reversed`)',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `STORY_DESCRIPTION`,
+        story: `Deze lijst is wel geordend, maar de content zorgt ervoor dat het niet logisch is om oplopend te nummeren. Daarom is de nummering omgedraaid.`,
       },
     },
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list" type="a">
+//   <li>Amsterdam</li>
+//   <li>Rotterdam</li>
+//   <li>Den Haag</li>
+// </ol>
 // Original: Ordered List met kleine letters (`type="a"`)
-export const STORY_CONST: Story = {
-  name: `Ordered List met kleine letters (\`type="a"\`)`,
+export const OrderedListLowercaseLetters: Story = {
+  name: `Ordered List met kleine letters (type="a")`,
   args: {},
   parameters: {
     docs: {
@@ -148,9 +200,13 @@ export const STORY_CONST: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol  role="list" type="A">
+//   <li>Aanvraag indienen</li>
+//   <li>Documenten uploaden</li>
+//   <li>Bevestiging afwachten</li>
+// </ol>
 // Original: Ordered List met hoofdletters (`type="A"`)
-export const STORY_CONST: Story = {
+export const OrderedListUppercaseLetters: Story = {
   name: `Ordered List met hoofdletters (\`type="A"\`)`,
   args: {},
   parameters: {
@@ -162,7 +218,11 @@ export const STORY_CONST: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list" type="i">
+//   <li>Algemene bepalingen</li>
+//   <li>Duur van de overeenkomst</li>
+//   <li>Beëindiging</li>
+// </ol>
 // Original: Ordered List met kleine Romeinse cijfers (`type="i"`)
 export const STORY_CONST: Story = {
   name: `Ordered List met kleine Romeinse cijfers (\`type="i"\`)`,
@@ -176,9 +236,13 @@ export const STORY_CONST: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list" type="I">
+//   <li>Inleiding</li>
+//   <li>Doelstellingen</li>
+//   <li>Conclusie</li>
+// </ol>
 // Original: Ordered List met hoofdletters Romeinse cijfers (`type="I"`)
-export const STORY_CONST: Story = {
+export const OrderedListUppercaseRomanNum: Story = {
   name: `Ordered List met hoofdletters Romeinse cijfers (\`type="I"\`)`,
   args: {},
   parameters: {
@@ -190,9 +254,14 @@ export const STORY_CONST: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// Let op: CSS moet nog toegepast worden voor juiste nummering
+// <ol role="list" lang="ar">
+//   <li>تحميل المستندات</li>
+//   <li>تقديم الطلب</li>
+//   <li>انتظار التأكيد</li>
+// </ol>
 // Original: Ordered List met Arabische nummering (`lang="ar"`)
-export const STORY_CONST: Story = {
+export const OrderedListArabicNum: Story = {
   name: `Ordered List met Arabische nummering (\`lang="ar"\`)`,
   args: {},
   parameters: {
@@ -206,7 +275,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)
-export const STORY_CONST: Story = {
+export const OrderedListTypeOverridesLanguage: Story = {
   name: 'Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)',
   args: {},
   parameters: {
@@ -230,7 +299,7 @@ export const STORY_CONST: Story = {
 //   </li>
 // </ol>
 // Original: Ordered List met decoratieve inline marker zonder inlineMarkerLabel en `aria-hidden="true"` op inline marker
-export const STORY_CONST: Story = {
+export const OrderedListInlineMarkerDecorative: Story = {
   name: `Ordered List met decoratieve inline marker zonder inlineMarkerLabel en \`aria-hidden="true"\` op inline marker`,
   args: {},
   parameters: {
@@ -308,7 +377,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met HTML `lang` attribuut (right-to-left tekst)
-export const STORY_CONST: Story = {
+export const OrderedListLangRTL: Story = {
   name: 'Ordered List met HTML `lang` attribuut (right-to-left tekst)',
   args: {},
   parameters: {
@@ -322,7 +391,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
-export const STORY_CONST: Story = {
+export const OrderedListLangAr: Story = {
   name: 'Ordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten',
   args: {},
   parameters: {
@@ -336,7 +405,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met HTML `dir` attribuut
-export const STORY_CONST: Story = {
+export const OrderedListDirRTL: Story = {
   name: 'Ordered List met HTML `dir` attribuut',
   args: {},
   parameters: {
@@ -350,7 +419,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat
-export const STORY_CONST: Story = {
+export const OrderedListDirParentOnly: Story = {
   name: 'Ordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat',
   args: {},
   parameters: {
@@ -365,7 +434,7 @@ export const STORY_CONST: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List binnen `nl-html--all`
 // Let op: role="list" en role="listitem" is nodig!
-export const STORY_CONST: Story = {
+export const OrderedListNLHTMLAll: Story = {
   name: 'Ordered List binnen `nl-html--all`',
   args: {},
   parameters: {
@@ -380,7 +449,7 @@ export const STORY_CONST: Story = {
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List binnen `nl-html--ordered-list`
 // Let op: role="list" en role="listitem" is nodig!
-export const STORY_CONST: Story = {
+export const OrderedListNLHTMLOrderedList: Story = {
   name: 'Ordered List binnen `nl-html--ordered-list`',
   args: {},
   parameters: {
@@ -424,16 +493,13 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met paragraphs (`p`) in list items
-export const STORY_CONST: Story = {
+export const OrderedListHTMLParagraphsInListItem: Story = {
   name: 'Ordered List met paragraphs (`p`) in list items',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `
-  - bevat een korte paragraph
-  - bevat een lange paragraph die wrapped
-  - bevat twee paragraphs waarbij de spacing correct blijft
+        story: `In deze lijst worden HTML paragrafen in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.`
           `,
       },
     },
@@ -442,7 +508,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met NL Paragraph in list item
-export const STORY_CONST: Story = {
+export const OrderedListNLParagraphsInListItem: Story = {
   name: 'Ordered List met NL Paragraph in list item',
   args: {},
   parameters: {

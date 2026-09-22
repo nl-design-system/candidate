@@ -36,7 +36,7 @@ export default meta;
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List zonder `role="list"`
-export const STORY_CONST: Story = {
+export const OrderedListNoRole: Story = {
   name: `Fout: Ordered List zonder \`role="list"\``,
   args: {},
   parameters: {
@@ -50,7 +50,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met inline marker zonder `role="list"`
-export const STORY_CONST: Story = {
+export const OrderedListInlineMarkerNoRole: Story = {
   name: `Fout: Ordered List met inline marker zonder \`role="list"\``,
   args: {},
   parameters: {
@@ -64,7 +64,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met `tabindex`
-export const STORY_CONST: Story = {
+export const OrderedListTabIndex: Story = {
   name: 'Fout: Ordered List met `tabindex`',
   args: {},
   parameters: {
@@ -78,7 +78,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List zonder lijststyling (`list-style: none`) waardoor de ordening verloren gaat
-export const STORY_CONST: Story = {
+export const OrderedListListStyleNoneNoRole: Story = {
   name: 'Fout: Ordered List zonder lijststyling (`list-style: none`) waardoor de ordening verloren gaat',
   args: {},
   parameters: {
@@ -92,7 +92,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List zonder lijststyling met alleen `role="list"` (lijstsemantiek terug, maar ordening ontbreekt)
-export const STORY_CONST: Story = {
+export const OrderedListListStyleNoneWithRole: Story = {
   name: `Fout: Ordered List zonder lijststyling met alleen \`role="list"\` (lijstsemantiek terug, maar ordening ontbreekt)`,
   args: {},
   parameters: {
@@ -106,7 +106,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met `aria-posinset` en `aria-setsize`
-export const STORY_CONST: Story = {
+export const OrderedListAriaPosSetSize: Story = {
   name: 'Fout: Ordered List met `aria-posinset` en `aria-setsize`',
   args: {},
   parameters: {
@@ -120,7 +120,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met custom marker (Unicode emoji) zonder toegankelijk alternatief
-export const STORY_CONST: Story = {
+export const OrderedListEmojiNoAlt: Story = {
   name: 'Fout: Ordered List met custom marker (Unicode emoji) zonder toegankelijk alternatief',
   args: {},
   parameters: {
@@ -134,7 +134,7 @@ export const STORY_CONST: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met custom marker (Unicode emoji) via CSS `content`
-export const STORY_CONST: Story = {
+export const OrderedListEmojiAltInCssContent: Story = {
   name: 'Fout: Ordered List met custom marker (Unicode emoji) via CSS `content`',
   args: {},
   parameters: {
