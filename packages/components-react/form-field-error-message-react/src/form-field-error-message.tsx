@@ -16,8 +16,8 @@ export const FormFieldErrorMessage = forwardRef<HTMLDivElement, FormFieldErrorMe
   ({ className, children, icon, contentId, contentRole, ...restProps }, ref) => {
     return (
       <div ref={ref} className={clsx('nl-form-field-error-message', className)} {...restProps}>
-        {icon && <div className={clsx('nl-form-field-error-message__icon')}>{icon}</div>}
-        <div id={contentId} role={contentRole} className={clsx('nl-form-field-error-message__content')}>
+        {icon && <div className="nl-form-field-error-message__icon">{icon}</div>}
+        <div id={contentId} role={contentRole} className="nl-form-field-error-message__content">
           {children}
         </div>
       </div>

@@ -4,11 +4,6 @@
 // so a component's simulation is only maintained once. Never imported by a component's own
 // .scss, and never shipped in a component's published dist/ output.
 
-[data-forced-colors="active"] .nl-form-field-error-message,
-[data-forced-colors="active"] .nl-form-field-error-message__icon {
-  color: currentColor !important;
-}
-
-[data-forced-colors="active"] .nl-form-field-error-message .nl-paragraph {
-  --nl-paragraph-color: currentColor;
+[data-forced-colors="active"] .nl-form-field-error-message {
+  --nl-form-field-error-message-color: currentColor;
 }

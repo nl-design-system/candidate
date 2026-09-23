@@ -50,11 +50,11 @@ If you use SCSS:
 
 ## CSS classes
 
-| name                                    | description                                                                                       |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `.nl-form-field-error-message`          | The main class. Use it on a `<div>` element by default; a `<p>` or `<span>` element also works.   |
-| `.nl-form-field-error-message__icon`    | The icon container, to be used on a `<div>` element by default; a `<span>` element also works.    |
-| `.nl-form-field-error-message__content` | The content container, to be used on a `<div>` element by default; a `<span>` element also works. |
+| name                                    | description                                             |
+| --------------------------------------- | ------------------------------------------------------- |
+| `.nl-form-field-error-message`          | The main class. Use it on a `<div>` element.            |
+| `.nl-form-field-error-message__icon`    | The icon container, to be used on a `<div>` element.    |
+| `.nl-form-field-error-message__content` | The content container, to be used on a `<div>` element. |
 
 ## SCSS mixins
 
@@ -66,15 +66,17 @@ If you use SCSS:
 
 ## Usage
 
-Place the Form Field Error Message below the label and before the input field. Give the content element an
-`id`, and link it to the input field via `aria-describedby`.
+Place the Form Field Error Message below the Form Field Label and before the form control. Give the content element an
+`id`, and link it to the form control via `aria-describedby`.
 
 ```html
 <div>
   <label for="name">Name</label>
 </div>
 <div class="nl-form-field-error-message">
-  <div id="name-error" class="nl-form-field-error-message__content"><p>The "Name" field is required.</p></div>
+  <div id="name-error" class="nl-form-field-error-message__content">
+    <p>The "Name" field is required.</p>
+  </div>
 </div>
 <div>
   <input id="name" aria-describedby="name-error" autocomplete="name" type="text" />
@@ -88,8 +90,14 @@ assistive technology, since the text of the error message already conveys the me
 
 ```html
 <div class="nl-form-field-error-message">
-  <div class="nl-form-field-error-message__icon"><!-- icon --></div>
-  <div id="name-error" class="nl-form-field-error-message__content"><p>The "Name" field is required.</p></div>
+  <div class="nl-form-field-error-message__icon">
+    <span class="example-icon" aria-hidden="true">
+      <!-- icon -->
+    </span>
+  </div>
+  <div id="name-error" class="nl-form-field-error-message__content">
+    <p>The "Name" field is required.</p>
+  </div>
 </div>
 ```
 
