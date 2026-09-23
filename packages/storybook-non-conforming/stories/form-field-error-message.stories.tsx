@@ -6,25 +6,29 @@ import packageJSON from '../../components-react/form-field-error-message-react/p
 import { FormFieldErrorMessage } from '../../components-react/form-field-error-message-react/src/form-field-error-message';
 import { CandidateDisableCssDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateDisableCssDecorator';
 import { Icon } from '../../components-react/icon-react/src/icon';
-import type { PropsWithChildren } from 'react';
+import type { AriaRole, PropsWithChildren, ReactNode } from 'react';
 
 const AlternativeHTMLFormFieldErrorMessage = ({
   Component = 'div',
+  IconComponent = 'div',
+  ContentComponent = 'div',
   icon,
   children,
   contentId,
   contentRole,
 }: PropsWithChildren<{
-  Component: keyof JSX.IntrinsicElements;
-  icon?: React.ReactNode;
+  Component?: keyof JSX.IntrinsicElements;
+  IconComponent?: keyof JSX.IntrinsicElements;
+  ContentComponent?: keyof JSX.IntrinsicElements;
+  icon?: ReactNode;
   contentId?: string;
-  contentRole?: React.AriaRole;
+  contentRole?: AriaRole;
 }>) => (
   <Component className="nl-form-field-error-message">
-    {icon && <Component className="nl-form-field-error-message__icon">{icon}</Component>}
-    <Component id={contentId} role={contentRole} className="nl-form-field-error-message__content">
+    {icon && <IconComponent className="nl-form-field-error-message__icon">{icon}</IconComponent>}
+    <ContentComponent id={contentId} role={contentRole} className="nl-form-field-error-message__content">
       {children}
-    </Component>
+    </ContentComponent>
   </Component>
 );
 

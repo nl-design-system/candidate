@@ -657,18 +657,20 @@ export const FormFieldErrorMessageForcedColorsMode: Story = {
 
 export const FormFieldErrorMessageWithCode: Story = {
   name: 'Form Field Error Message met een code fragment',
-  globals: { dir: 'ltr', lang: 'en' },
+  globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = '0ff8ae30-03e1-46d8-a55c-864b730a66da';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
         <div>
-          <label htmlFor={INPUT_ID}>JSON invoer</label>
+          <label htmlFor={INPUT_ID}>Design Tokens JSON</label>
         </div>
         <FormFieldErrorMessage contentId={ERROR_ID}>
           <Paragraph>
-            <Code>SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data</Code>
+            <Code lang="en" dir="ltr">
+              SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+            </Code>
           </Paragraph>
         </FormFieldErrorMessage>
         <div>
@@ -681,7 +683,7 @@ export const FormFieldErrorMessageWithCode: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding bevat een code fragment binnen een paragraaf. De tekst kan wrappen over meerdere regels en de regelafstand is voldoende. De foutmelding bevat een HTML-element `code` binnen een HTML-element `p` in de tekst.',
+          'De foutmelding bevat Code binnen een Paragraph. De tekst wordt verspreid over meerdere regels en de regelafstand is voldoende. De foutmelding bevat een HTML-element `code` binnen een HTML-element `p` in de tekst.',
       },
     },
     status: { type: [] },
