@@ -1,3 +1,6 @@
-@use "./mixin";
+@use "../vanilla/mixin";
 
-@include mixin.nl-html--mark;
+.nl-html--all,
+.nl-html--mark {
+  @include mixin.nl-html--mark;
+}
