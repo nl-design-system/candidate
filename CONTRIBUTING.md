@@ -68,7 +68,7 @@ De documentatie voor vanilla HTML componenten bevat in elk geval:
 - README met:
   - Informatie over de npm package waar de CSS gepubliceerd wordt.
   - Informatie over hoe je de CSS gebruikt in een prototype (`<link>` voor een CDN)
-  - Informatie over hoe je de CSS gebruikt in JavaScript frameworks (`import "@example/component/dist/component.css";`)
+  - Informatie over hoe je de CSS gebruikt in JavaScript frameworks (`import "@example/component/dist/vanilla.css";`)
   - Informatie over hoe je de CSS gebruikt met een wrapper class name (`class="nl-html nl-html--all"` of `class="nl-html nl-html--component"`)
 
 ## `storybook-test`
