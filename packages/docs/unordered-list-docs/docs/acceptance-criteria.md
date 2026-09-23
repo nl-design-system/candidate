@@ -109,12 +109,12 @@ Voor de HTML component:
 
 #### Geldige combinaties van CSS classes
 
-| Configuratie                                                        | Geldig | Opmerking                                                                                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------- | :----: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `nl-unordered-list`                                                 |   ✅   |                                                                                                                                                                                                                                                                                                        |
-| `nl-unordered-list__item`                                           |   ✅   | Gebruik als child van `nl-unordered-list`.                                                                                                                                                                                                                                                             |
+| Configuratie                                                        | Geldig | Opmerking                                                                                                                                                                                                                                                                                  |
+| ------------------------------------------------------------------- | :----: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `nl-unordered-list`                                                 |   ✅   |                                                                                                                                                                                                                                                                                            |
+| `nl-unordered-list__item`                                           |   ✅   | Gebruik als child van `nl-unordered-list`.                                                                                                                                                                                                                                                 |
 | `nl-unordered-list__marker`                                         |   ❌   | Gebruik deze class niet zonder de modifier `nl-unordered-list__marker--custom`. Deze class voegt styling die wordt gedeeld door het pseudo-element `::marker` en de Custom Marker. De modifier `nl-unordered-list__marker--custom` voegt de aanvullende styling toe voor de Custom Marker. |
-| `nl-unordered-list__marker` met `nl-unordered-list__marker--custom` |   ✅   | Gebruik een Custom Marker binnen een `nl-unordered-list__item`.                                                                                                                                                                                                                                        |
+| `nl-unordered-list__marker` met `nl-unordered-list__marker--custom` |   ✅   | Gebruik een Custom Marker binnen een `nl-unordered-list__item`.                                                                                                                                                                                                                            |
 
 ## React API
 
@@ -160,8 +160,8 @@ De volgende props worden expliciet ondersteund:
 
 #### Geldige combinaties van React UnorderedListItem properties
 
-| Configuratie                                                                                   | Geldig | Opmerking                                                                                |
-| ---------------------------------------------------------------------------------------------- | :----: | ---------------------------------------------------------------------------------------- |
-| `<UnorderedListItem marker={<Icon />}>Item</UnorderedListItem>`                                |   ✅   | Een Custom Marker mag zonder toegankelijke naam worden gebruikt.                         |
+| Configuratie                                                                             | Geldig | Opmerking                                                                                |
+| ---------------------------------------------------------------------------------------- | :----: | ---------------------------------------------------------------------------------------- |
+| `<UnorderedListItem marker={<Icon />}>Item</UnorderedListItem>`                          |   ✅   | Een Custom Marker mag zonder toegankelijke naam worden gebruikt.                         |
 | `<UnorderedListItem marker={<Icon />} markerLabel="Afgecheckt">Item</UnorderedListItem>` |   ✅   | Een toegankelijke naam kan worden opgegeven wanneer de Custom Marker betekenis toevoegt. |
-| `<UnorderedListItem markerLabel="Afgecheckt">Item</UnorderedListItem>`                         |   ❌   | `markerLabel` heeft alleen betekenis wanneer ook `marker` is opgegeven.                  |
+| `<UnorderedListItem markerLabel="Afgecheckt">Item</UnorderedListItem>`                   |   ❌   | `markerLabel` heeft alleen betekenis wanneer ook `marker` is opgegeven.                  |
