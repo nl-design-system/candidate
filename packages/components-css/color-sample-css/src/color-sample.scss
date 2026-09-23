@@ -3,3 +3,7 @@
 .nl-color-sample {
   @include mixin.nl-color-sample;
 }
+
+.nl-color-sample:where(svg) {
+  @include mixin.nl-color-sample--svg;
+}
