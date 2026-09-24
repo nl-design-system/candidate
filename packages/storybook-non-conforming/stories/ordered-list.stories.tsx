@@ -100,9 +100,9 @@ export const OrderedListTabIndex: Story = {
   },
 };
 
-// Original: Ordered List zonder lijststyling (`list-style: none`) waardoor de ordening verloren gaat
+// Original: Ordered List zonder lijststyling (`list-style: none`) waardoor de lijstsemantiek en ordening verloren gaat
 export const OrderedListListStyleNoneNoRole: Story = {
-  name: 'Fout: Ordered List zonder lijststyling (`list-style: none`) zonder role="list" waardoor de lijstsemantiek en ordening verloren gaat',
+  name: 'Fout: Ordered List zonder lijststyling zonder role="list"',
   args: {},
   parameters: {
     docs: {
@@ -115,7 +115,7 @@ export const OrderedListListStyleNoneNoRole: Story = {
 
 // Original: Ordered List zonder lijststyling met alleen `role="list"` (lijstsemantiek terug, maar ordening ontbreekt)
 export const OrderedListListStyleNoneWithRole: Story = {
-  name: 'Fout: Ordered List zonder lijststyling met alleen HTML-attribuut role="list" (lijstsemantiek terug, maar ordening ontbreekt)',
+  name: 'Fout: Ordered List zonder lijststyling met alleen HTML-attribuut role="list"',
   args: {},
   parameters: {
     docs: {
@@ -159,7 +159,7 @@ export const OrderedListAriaPosSetSize: Story = {
 // </ol>
 // Original: Ordered List met custom marker (Unicode emoji) zonder toegankelijk alternatief
 export const OrderedListEmojiNoAlt: Story = {
-  name: 'Fout: Ordered List met custom marker (Unicode emoji) zonder toegankelijk alternatief',
+  name: 'Fout: Ordered List met Unicode emoji Custom Marker zonder toegankelijk alternatief',
   args: {},
   parameters: {
     docs: {
@@ -172,7 +172,7 @@ export const OrderedListEmojiNoAlt: Story = {
 
 // Original: Ordered List met custom marker (Unicode emoji) via CSS `content`
 export const OrderedListEmojiAltInCssContent: Story = {
-  name: 'Fout: Ordered List met custom marker (Unicode emoji) via CSS-eigenschap content',
+  name: 'Fout: Ordered List met Unicode emoji Custom Marker via CSS-eigenschap content',
   args: {},
   parameters: {
     docs: {
@@ -185,7 +185,7 @@ export const OrderedListEmojiAltInCssContent: Story = {
 
 // Original: Ordered List met custom marker via `list-style-image` gecombineerd met `::marker`
 export const OrderedListListStyleImage: Story = {
-  name: 'Fout: Ordered List met custom marker via `list-style-image` gecombineerd met `::marker`',
+  name: 'Fout: Ordered List met Custom Marker via CSS-eigenschap list-style-image en pseudo-element marker',
   args: {},
   parameters: {
     docs: {
@@ -198,7 +198,7 @@ export const OrderedListListStyleImage: Story = {
 
 // Original: Ordered List met custom markers via `counter-reset` / `counter-increment` in CSS `content`
 export const OrderedListCounterContent: Story = {
-  name: 'Fout: Ordered List met custom markers via CSS-eigenschappen counter-reset / counter-increment in CSS0-eigenschap content',
+  name: 'Fout: Ordered List met Custom Marker via CSS-eigenschappen counter-reset en counter-increment in CSS-eigenschap content',
   args: {},
   parameters: {
     docs: {
@@ -211,7 +211,7 @@ export const OrderedListCounterContent: Story = {
 
 // Original: Ordered List met custom markers via `counter-reset` / `counter-increment` in een `span`
 export const OrderedListCounterSpan: Story = {
-  name: 'Fout: Ordered List met custom markers via CSS-eigenschappen counter-reset / counter-increment in een HTML-element span',
+  name: 'Fout: Ordered List met Custom Marker via CSS-eigenschappen counter-reset en counter-increment in een HTML-element span',
   args: {},
   parameters: {
     docs: {
@@ -242,7 +242,7 @@ export const OrderedListCounterSpan: Story = {
 // </ol>
 // Original: Ordered List met SVG's als bullets zonder toegankelijke implementatie
 export const OrderedListSVGNotAccessible: Story = {
-  name: "Fout: Ordered List met SVG's als bullets zonder toegankelijke implementatie",
+  name: "Fout: Ordered List met SVG's als leestekens zonder toegankelijke implementatie",
   args: {},
   parameters: {
     docs: {
@@ -281,7 +281,7 @@ export const OrderedListSVGNotAccessible: Story = {
 // </ol>
 // Original: Ordered List met Custom Marker met Decoratieve Icon. Voorbeeldcode: <OrderedListItem marker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).
 export const OrderedListDecorativeIcon: Story = {
-  name: 'Fout: Ordered List met Custom Marker met Decoratieve Icon. Voorbeeldcode: <OrderedListItem marker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).',
+  name: 'Fout: Ordered List met Custom Marker met Decoratieve Icon',
   args: {},
   parameters: {
     docs: {
@@ -321,7 +321,7 @@ export const OrderedListDecorativeIcon: Story = {
 // </ol>
 // Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} />
 export const OrderedListInformativeIconBadAlt: Story = {
-  name: 'Fout: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} />',
+  name: 'Fout: Ordered List met Custom Marker met Informatieve Icon met ontoegankelijke tekst',
   args: {},
   parameters: {
     docs: {
