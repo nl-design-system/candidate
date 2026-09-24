@@ -562,7 +562,7 @@ export const OrderedListHTMLParagraphsInListItem: Story = {
     docs: {
       description: {
         story:
-          'In deze geordende lijst worden HTML paragrafen in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed',
+          `In deze geordende lijst worden alinea's in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.`,
       },
     },
   },
@@ -643,7 +643,7 @@ export const OrderedListRichTextEditorParagraph: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt het HTML-element \`p\`. De tekst blijft goed uitgelijnd. Code snippet verduidelijking: Rich Text Editors voegen meestal pas een paragraph toe zodra je enter hebt gedaan. Dit betekent dat je eerst een textnode hebt, en dan een paragraph element. Deze story laat zien dat de spacing dan nog steeds goed gaat.',
+          'Deze geordende lijst laat de structuur van een lijst met een alinea zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt het HTML-element \`p\`. De tekst blijft goed uitgelijnd. Code snippet verduidelijking: Rich Text Editors voegen meestal pas een paragraph toe zodra je enter hebt gedaan. Dit betekent dat je eerst een textnode hebt, en dan een paragraph element. Deze story laat zien dat de spacing dan nog steeds goed gaat.',
       },
     },
   },
@@ -657,7 +657,7 @@ export const OrderedListRichTextEditorNLParagraph: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt de NL Paragraph component. De tekst blijft goed uitgelijnd.',
+          'Deze geordende lijst laat de structuur van een lijst met een alinea zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt de NL Paragraph component. De tekst blijft goed uitgelijnd.',
       },
     },
   },
