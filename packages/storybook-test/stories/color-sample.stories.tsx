@@ -212,15 +212,12 @@ De Color Sample en de tekst staan in dezelfde Paragraph, dus het is duidelijk da
 
 export const SoloColorSample: Story = {
   name: 'Color Sample als zelfstandige afbeelding met toegankelijke naam',
-  args: {
-    ['aria-label']: 'De kleur "#154273".',
-    value: '#154273',
-  },
+  args: { value: '#154273' },
   decorators: [
     (Story, context) => (
       <>
         <Paragraph>{Story()}</Paragraph>
-        <Paragraph> {context.args['aria-label']}</Paragraph>
+        <Paragraph> {context.parameters['ariaLabelledBy']}</Paragraph>
       </>
     ),
     ...meta.decorators,
@@ -231,6 +228,7 @@ export const SoloColorSample: Story = {
     title: 'De kleur "#154273".',
   },
   parameters: {
+    ariaLabelledBy: 'De kleur "#154273".',
     docs: {
       description: {
         story:
@@ -248,6 +246,15 @@ export const SoloColorSample: Story = {
       pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
     status: { type: [] },
+  },
+  render(props, context) {
+    const id = useId();
+
+    return (
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
+    );
   },
 };
 
@@ -334,6 +341,7 @@ export const CssColorCode: Story = {
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'De kleur "#ff1493".',
   },
   parameters: {
     ariaLabelledBy: 'De kleur "#ff1493".',
@@ -371,6 +379,7 @@ export const TransparentColorSample: Story = {
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'De 100% transparante kleur "#ffffff00".',
   },
   parameters: {
     ariaLabelledBy: 'De 100% transparante kleur "#ffffff00".',
@@ -409,6 +418,7 @@ export const SemiTransparentColorSample: Story = {
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'De semi-transparante kleur "#ff14937f".',
   },
   parameters: {
     ariaLabelledBy: 'De semi-transparante kleur "#ff14937f".',
@@ -522,106 +532,99 @@ export const Japanese: Story = {
 
 export const AangepasteGrootte: Story = {
   name: 'Color Sample met een aangepaste grootte',
-  args: {
-    ['aria-label']: 'De kleur "deeppink".',
-    value: 'deeppink',
-  },
+  args: { value: 'deeppink' },
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'De kleur "deeppink".',
   },
   parameters: {
+    ariaLabelledBy: 'De kleur "deeppink".',
     docs: {
       description: {
         story:
           'Een kleurstaal met een grotere afmeting dan de standaardgrootte. De grootte is in te stellen via de custom properties `--nl-color-sample-inline-size` en `--nl-color-sample-block-size`.',
       },
     },
-    testResult: {
-      date: '2025-08-29',
-      notTested: [
-        WCAG22_132_MEANINGFUL_SEQUENCE,
-        WCAG22_141_USE_OF_COLOR,
-        WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_1411_NON_TEXT_CONTRAST,
-      ],
-      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
-    },
     status: { type: [] },
   },
-  render: (props) => <ColorSample {...props} style={customSizeStyle} />,
+  render(props, context) {
+    const id = useId();
+
+    return (
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} style={customSizeStyle} />{' '}
+        <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
+    );
+  },
 };
 
 export const RondeVorm: Story = {
   name: 'Color Sample met een ronde vorm',
-  args: {
-    ['aria-label']: 'De kleur "deeppink".',
-    value: 'deeppink',
-  },
+  args: { value: 'deeppink' },
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'De kleur "deeppink".',
   },
   parameters: {
+    ariaLabelledBy: 'De kleur "deeppink".',
     docs: {
       description: {
         story:
-          'Een ronde kleurstaal, in plaats van de standaard rechthoekige vorm. De vorm is aan te passen via de custom property `--nl-color-sample-border-radius`; een waarde van `50%` maakt de kleurstaal rond.',
+          'Een ronde kleurstaal, in plaats van de standaard rechthoekige vorm. De vorm is aan te passen via de custom property `--nl-color-sample-border-radius;` een waarde van `50%` maakt de kleurstaal rond.',
       },
-    },
-    testResult: {
-      date: '2025-08-29',
-      notTested: [
-        WCAG22_132_MEANINGFUL_SEQUENCE,
-        WCAG22_141_USE_OF_COLOR,
-        WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_1411_NON_TEXT_CONTRAST,
-      ],
-      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
     status: { type: [] },
   },
-  render: (props) => (
-    <ColorSample
-      {...props}
-      style={
-        {
-          ...customSizeStyle,
-          '--nl-color-sample-border-radius': '50%',
-        } as CSSProperties
-      }
-    />
-  ),
+  render(props, context) {
+    const id = useId();
+
+    return (
+      <Paragraph>
+        <ColorSample
+          {...props}
+          aria-labelledby={id}
+          style={
+            {
+              ...customSizeStyle,
+              '--nl-color-sample-border-radius': '50%',
+            } as CSSProperties
+          }
+        />{' '}
+        <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
+    );
+  },
 };
 
 export const AangepasteBreedteHoogteVerhouding: Story = {
   name: 'Color Sample met een aangepaste breedte-hoogteverhouding',
-  args: {
-    ['aria-label']: 'De kleur "deeppink".',
-    value: 'deeppink',
-  },
+  args: { value: 'deeppink' },
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'De kleur "deeppink".',
   },
   parameters: {
+    ariaLabelledBy: 'De kleur "deeppink".',
     docs: {
       description: {
         story:
           'Een kleurstaal die breder is dan hoog, met een breedte-hoogteverhouding van 4:3 in plaats van vierkant. De custom properties `--nl-color-sample-inline-size` en `--nl-color-sample-block-size` zijn onafhankelijk van elkaar in te stellen om dit te bereiken.',
       },
     },
-    testResult: {
-      date: '2025-08-29',
-      notTested: [
-        WCAG22_132_MEANINGFUL_SEQUENCE,
-        WCAG22_141_USE_OF_COLOR,
-        WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_1411_NON_TEXT_CONTRAST,
-      ],
-      pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
-    },
     status: { type: [] },
   },
-  render: (props) => <ColorSample {...props} style={aspectRatioStyle} />,
+  render(props, context) {
+    const id = useId();
+
+    return (
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} style={aspectRatioStyle} />{' '}
+        <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
+    );
+  },
 };
