@@ -266,6 +266,7 @@ export const OrderedListUppercaseRomanNum: Story = {
 //   <li class="nl-ordered-list__item">انتظار التأكيد</li>
 // </ol>
 // Original: Ordered List met Arabische nummering (`lang="ar"`)
+// Original: Ordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
 export const OrderedListArabicNum: Story = {
   name: 'Ordered List met Arabische nummering via HTML-attribuut lang="ar"',
   args: {},
@@ -286,7 +287,7 @@ export const OrderedListArabicNum: Story = {
 // </ol>
 // Original: Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)
 export const OrderedListTypeOverridesLanguage: Story = {
-  name: 'TODO_Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)',
+  name: 'Ordered List waarbij type de taal overschrijft',
   args: {},
   parameters: {
     docs: {
@@ -410,24 +411,6 @@ export const OrderedListLangRTL: Story = {
       description: {
         story:
           'Deze geordende lijst heeft de ingestelde taal Arabisch en bevat Arabische tekst, dit is een taal die van rechts naar links wordt gelezen.',
-      },
-    },
-  },
-};
-
-// <ol class="nl-ordered-list" role="list" lang="ar">
-//   <li class="nl-ordered-list__item">تحميل المستندات</li>
-//   <li class="nl-ordered-list__item">تقديم الطلب</li>
-//   <li class="nl-ordered-list__item">انتظار التأكيد</li>
-// </ol>
-// Original: Ordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
-export const OrderedListLangArabic: Story = {
-  name: 'Ordered List met custom ingestelde nummering voor de Arabische taal',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: 'STORY_DESCRIPTION',
       },
     },
   },
