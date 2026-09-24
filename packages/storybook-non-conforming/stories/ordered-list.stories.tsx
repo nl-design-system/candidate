@@ -184,7 +184,7 @@ export const OrderedListEmojiAltInCssContent: Story = {
 };
 
 // Original: Ordered List met custom marker via `list-style-image` gecombineerd met `::marker`
-export const STORY_CONST: Story = {
+export const OrderedListListStyleImage: Story = {
   name: 'Fout: Ordered List met custom marker via `list-style-image` gecombineerd met `::marker`',
   args: {},
   parameters: {
@@ -197,7 +197,7 @@ export const STORY_CONST: Story = {
 };
 
 // Original: Ordered List met custom markers via `counter-reset` / `counter-increment` in CSS `content`
-export const STORY_CONST: Story = {
+export const OrderedListCounterContent: Story = {
   name: 'Fout: Ordered List met custom markers via CSS-eigenschappen counter-reset / counter-increment in CSS0-eigenschap content',
   args: {},
   parameters: {
@@ -210,7 +210,7 @@ export const STORY_CONST: Story = {
 };
 
 // Original: Ordered List met custom markers via `counter-reset` / `counter-increment` in een `span`
-export const STORY_CONST: Story = {
+export const OrderedListCounterSpan: Story = {
   name: 'Fout: Ordered List met custom markers via CSS-eigenschappen counter-reset / counter-increment in een HTML-element span',
   args: {},
   parameters: {
@@ -241,7 +241,7 @@ export const STORY_CONST: Story = {
 //    </li>
 // </ol>
 // Original: Ordered List met SVG's als bullets zonder toegankelijke implementatie
-export const STORY_CONST: Story = {
+export const OrderedListSVGNotAccessible: Story = {
   name: "Fout: Ordered List met SVG's als bullets zonder toegankelijke implementatie",
   args: {},
   parameters: {
@@ -280,7 +280,7 @@ export const STORY_CONST: Story = {
 //    </li>
 // </ol>
 // Original: Ordered List met Custom Marker met Decoratieve Icon. Voorbeeldcode: <OrderedListItem marker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).
-export const STORY_CONST: Story = {
+export const OrderedListDecorativeIcon: Story = {
   name: 'Fout: Ordered List met Custom Marker met Decoratieve Icon. Voorbeeldcode: <OrderedListItem marker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).',
   args: {},
   parameters: {
@@ -320,7 +320,7 @@ export const STORY_CONST: Story = {
 //    </li>
 // </ol>
 // Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} />
-export const STORY_CONST: Story = {
+export const OrderedListInformativeIconBadAlt: Story = {
   name: 'Fout: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} />',
   args: {},
   parameters: {

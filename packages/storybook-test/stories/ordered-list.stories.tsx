@@ -596,7 +596,7 @@ export const OrderedListRichTextEditorNLParagraph: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Stories voor Rich Text Editors: textnode met nested lijst, textnode met link, etc (voorafgaand aan stories schrijven even bepalen welke combinaties we hierin willen meenemen)
-export const STORY_CONST: Story = {
+export const OrderedListRichTextEditorNested: Story = {
   name: 'Stories voor Rich Text Editors: textnode met nested lijst, textnode met link, etc (voorafgaand aan stories schrijven even bepalen welke combinaties we hierin willen meenemen)',
   args: {},
   parameters: {
@@ -784,7 +784,7 @@ export const OrderedListLangArabicReversed: Story = {
 
 // EXAMPLE CODE SNIPPET
 // Original: Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<Icon label="1." />} />
-export const STORY_CONST: Story = {
+export const OrderedListInformativeIconAccessible: Story = {
   name: 'Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<Icon label="1." />} />',
   args: {},
   parameters: {
