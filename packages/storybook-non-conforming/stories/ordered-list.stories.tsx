@@ -321,7 +321,7 @@ export const OrderedListDecorativeIcon: Story = {
 // </ol>
 // Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} />
 export const OrderedListInformativeIconBadAlt: Story = {
-  name: 'Fout: Ordered List met Custom Marker met Informatieve Icon met ontoegankelijke tekst',
+  name: 'Fout: Ordered List met Custom Marker met informatieve icoon met ontoegankelijke tekst',
   args: {},
   parameters: {
     docs: {

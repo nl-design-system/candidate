@@ -134,7 +134,7 @@ export const OrderedListNestedUnorderedList: Story = {
 // </ol>
 // Original: Ordered List met minimaal drie niveaus nesting, met documentatie over hoe en wat
 export const OrderedListThreeLevelsNesting: Story = {
-  name: 'Ordered List van minimaal drie niveaus',
+  name: 'Ordered List van drie niveaus',
   args: {},
   parameters: {
     docs: {
@@ -303,16 +303,25 @@ export const OrderedListTypeOverridesLanguage: Story = {
 //   <li class="nl-ordered-list__item">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-hidden="true">
-//         <Icon />
+//         <IconOne />
 //       </span>
-//      <span class="sr-only">Informatieve label{" "}</span>
-//    </span>
-//    Foo Bar
-//  </li>
+//      <span class="sr-only">Stap 1.{" "}</span>
+//     </span>
+//     Verzamel documenten
+//   </li>
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//       <span aria-hidden="true">
+//         <IconTwo />
+//       </span>
+//      <span class="sr-only">Stap 2.{" "}</span>
+//     </span>
+//     Maak een afspraak.
+//    </li>
 // </ol>
 // Original: Ordered List met custom marker en toegankelijke naam via markerLabel (sr-only), met `aria-hidden="true"` op custom marker
 export const OrderedListCustomMarkerLabel: Story = {
-  name: 'Ordered List met Custom Marker en toegankelijke naam via Marker Label',
+  name: 'Ordered List met Custom Marker en toegankelijke tekst die visueel verborgen is',
   args: {},
   parameters: {
     docs: {
@@ -327,17 +336,26 @@ export const OrderedListCustomMarkerLabel: Story = {
 // <ol class="nl-ordered-list" role="list">
 //   <li class="nl-ordered-list__item">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
-//       <span aria-labelledby="label-id">
-//         <Icon />
+//       <span aria-labelledby="label-id-1">
+//         <IconOne />
 //       </span>
-//      <span aria-hidden="true" id="label-id">Informatieve label</span>
-//    </span>
-//    Foo Bar
-//  </li>
+//      <span aria-hidden="true" id="label-id-1">Stap 1.{" "}</span>
+//     </span>
+//     Verzamel documenten
+//   </li>
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//       <span aria-labelledby="label-id-2">
+//         <IconTwo />
+//       </span>
+//      <span aria-hidden="true" id="label-id-2">Stap 2.{" "}</span>
+//     </span>
+//     Maak een afspraak.
+//    </li>
 // </ol>
 // Original: Ordered List met een toegankelijke custom marker met toegankelijk label (niet perfecte maar toegankelijke oplossing)
 export const OrderedListCustomMarkerAriaLabelledby: Story = {
-  name: 'Ordered List met Custom Marker met toegankelijk label via HTML-attribuut aria-labelledby',
+  name: 'Ordered List met Custom Marker en toegankelijk tekst via HTML-attribuut aria-labelledby',
   args: {},
   parameters: {
     docs: {
