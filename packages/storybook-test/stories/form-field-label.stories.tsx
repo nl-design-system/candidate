@@ -557,25 +557,25 @@ export const FormFieldLabelRedundantAriaLabelledBy: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithTextInputDefaultPattern Story = {
   name: `Patroon: Text Input met toegankelijke naam via Form Field Label`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een Text Input krijgt een toegankelijke naam van een goed gekoppeld label. Screenreadergebruikers horen de toegankelijke naam als ze het invoerveld activeren met het toetsenbord of de muis. `,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithTextInputNoPlaceholderPattern: Story = {
   name: `Patroon: Text Input zonder placeholder maar met Form Field Label`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een Text Input met een label. De Text Input heeft geen placeholder, omdat een placeholder vaak slecht leesbaar is en geen informatie mag bevatten die niet ook al in het label of in een extra beschrijving staat.`,
       },
     },
   },
