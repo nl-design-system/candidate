@@ -296,7 +296,7 @@ export const OrderedListDecorativeIcon: Story = {
 //   <li class="nl-ordered-list__item">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span>
-//         <svg><title>Number One Icon</title>...</svg>
+//         <svg><title>Nummer Eén Icoon</title>...</svg>
 //       </span>
 //     </span>
 //     Verzamel documenten
@@ -304,7 +304,7 @@ export const OrderedListDecorativeIcon: Story = {
 //   <li class="nl-ordered-list__item">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-hidden="true">
-//         <IconTwo title="Number Two Icon" />
+//         <IconTwo title="Nummer Twee Icoon" />
 //       </span>
 //     </span>
 //     Maak een afspraak.
@@ -314,7 +314,7 @@ export const OrderedListDecorativeIcon: Story = {
 //       <span aria-hidden="true">
 //         <IconTwo />
 //       </span>
-//      <span class="sr-only">Number Three Icon.{" "}</span>
+//      <span class="sr-only">Nummer Drie Icoon.{" "}</span>
 //     </span>
 //     Haal uw nieuwe paspoort op.
 //    </li>

@@ -628,8 +628,8 @@ export const OrderedListHorizontalScrollMobile: Story = {
 //   <ol role="list">
 //     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
 //     <li role="listitem">
-//       Je oude paspoort
-//       <p>TODO_GOEDE_EXTRA_DUMMY_CONTENT</p>
+//       Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
+//       <p>Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</p>
 //     </li>
 //     <li role="listitem">Je afspraakbevestiging</li>
 //   </ol>
@@ -733,7 +733,7 @@ export const OrderedListForcedColors: Story = {
 };
 
 // <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">TODO_DUMMY_CONTENT</li>
+//   <li class="nl-ordered-list__item">Doet u uw aanvraag op een werkdag voor 14.00 uur? U kunt uw paspoort of ID-kaart de werkdag na uw aanvraag ophalen vanaf 12.00 uur.</li>
 // </ol>
 // Original: Ordered List met 1 list item
 export const OrderedListOneItem: Story = {
