@@ -79,7 +79,7 @@ describe('Ordered List Item', () => {
 });
 
 // Hint voor Ontwikkelfase developer, comment mag weg na ontwikkeling:
-// <ol class="nl-ordered-list">
+// <ol class="nl-ordered-list" role="list">
 //   <li class="nl-ordered-list__item">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-hidden="true">

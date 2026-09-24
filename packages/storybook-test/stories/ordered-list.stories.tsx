@@ -296,7 +296,7 @@ export const OrderedListTypeOverridesLanguage: Story = {
 };
 
 // EXAMPLE CODE SNIPPET
-// <ol class="nl-ordered-list">
+// <ol class="nl-ordered-list" role="list">
 //   <li class="nl-ordered-list__item">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-hidden="true">
@@ -322,7 +322,7 @@ export const OrderedListCustomMarkerLabel: Story = {
 };
 
 // EXAMPLE CODE SNIPPET
-// <ol class="nl-ordered-list">
+// <ol class="nl-ordered-list" role="list">
 //   <li class="nl-ordered-list__item">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-labelledby="label-id">
