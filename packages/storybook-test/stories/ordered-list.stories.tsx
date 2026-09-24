@@ -78,7 +78,6 @@ export const OrderedListDefault: Story = {
 //   </li>
 //   <li>Dien de aanvraag in</li>
 // </ol>
-
 // Original: Ordered List met geneste Ordered List
 export const OrderedListNestedOrderedList: Story = {
   name: 'Ordered List met geneste Ordered List',
@@ -204,7 +203,7 @@ export const OrderedListLowercaseLetters: Story = {
   },
 };
 
-// <ol  role="list" type="A">
+// <ol role="list" type="A">
 //   <li>Aanvraag indienen</li>
 //   <li>Documenten uploaden</li>
 //   <li>Bevestiging afwachten</li>
@@ -260,7 +259,7 @@ export const OrderedListUppercaseRomanNum: Story = {
   },
 };
 
-// Let op: CSS moet nog toegepast worden voor juiste nummering
+// Let op: CSS moet nog toegepast worden voor juiste nummering, dat doen we enkel voor arabic-indic, dat selecteert op lang="ar"
 // <ol role="list" lang="ar">
 //   <li>تحميل المستندات</li>
 //   <li>تقديم الطلب</li>
@@ -280,7 +279,11 @@ export const OrderedListArabicNum: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list" lang="ar">
+//   <li>تحميل المستندات</li>
+//   <li>تقديم الطلب</li>
+//   <li>انتظار التأكيد</li>
+// </ol>
 // Original: Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)
 export const OrderedListTypeOverridesLanguage: Story = {
   name: 'Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)',
@@ -295,7 +298,6 @@ export const OrderedListTypeOverridesLanguage: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // <ol class="nl-ordered-list" role="list">
 //   <li class="nl-ordered-list__item">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
@@ -321,7 +323,6 @@ export const OrderedListCustomMarkerLabel: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // <ol class="nl-ordered-list" role="list">
 //   <li class="nl-ordered-list__item">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
@@ -347,7 +348,6 @@ export const OrderedListCustomMarkerAriaLabelledby: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met HTML `hidden` attribuut
 export const OrderedListHidden: Story = {
   name: 'Ordered List met HTML-attribuut hidden',
@@ -362,7 +362,11 @@ export const OrderedListHidden: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list" lang="ar">
+//   <li>تحميل المستندات</li>
+//   <li>تقديم الطلب</li>
+//   <li>انتظار التأكيد</li>
+// </ol>
 // Original: Ordered List met HTML `lang` attribuut (right-to-left tekst)
 export const OrderedListLangRTL: Story = {
   name: 'Ordered List met HTML-attribuut lang (right-to-left tekst)',
@@ -377,7 +381,11 @@ export const OrderedListLangRTL: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list" lang="ar">
+//   <li>تحميل المستندات</li>
+//   <li>تقديم الطلب</li>
+//   <li>انتظار التأكيد</li>
+// </ol>
 // Original: Ordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
 export const OrderedListLangArabic: Story = {
   name: 'Ordered List met HTML-attribuut lang="ar" - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten',
@@ -391,7 +399,11 @@ export const OrderedListLangArabic: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list" dir="rtl">
+//   <li>Paspoortfoto, niet ouder dan 6 maanden</li>
+//   <li>Je oude paspoort</li>
+//   <li>Je afspraakbevestiging</li>
+// </ol>
 // Original: Ordered List met HTML `dir` attribuut
 export const OrderedListDirRTL: Story = {
   name: 'Ordered List met HTML-attribuut dir',
@@ -406,7 +418,11 @@ export const OrderedListDirRTL: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list" lang="ar" dir="rtl">
+//  <li>تحميل المستندات</li>
+//  <li>تقديم الطلب</li>
+//  <li>انتظار التأكيد</li>
+// </ol>
 // Original: Ordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat
 export const OrderedListDirParentOnly: Story = {
   name: 'Ordered List met Arabische tekst waarbij HTML-attribuut dir alleen op HTML-element ol staat',
@@ -421,7 +437,13 @@ export const OrderedListDirParentOnly: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <div class="nl-html--all">
+//   <ol role="list">
+//     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
+//     <li role="listitem">Je oude paspoort</li>
+//     <li role="listitem">Je afspraakbevestiging</li>
+//   </ol>
+// </div>
 // Original: Ordered List binnen `nl-html--all`
 // Let op: role="list" en role="listitem" is nodig!
 export const OrderedListNLHTMLAll: Story = {
@@ -436,7 +458,13 @@ export const OrderedListNLHTMLAll: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <div class="nl-html--ordered-list">
+//   <ol role="list">
+//     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
+//     <li role="listitem">Je oude paspoort</li>
+//     <li role="listitem">Je afspraakbevestiging</li>
+//   </ol>
+// </div>
 // Original: Ordered List binnen `nl-html--ordered-list`
 // Let op: role="list" en role="listitem" is nodig!
 export const OrderedListNLHTMLOrderedList: Story = {
@@ -451,7 +479,11 @@ export const OrderedListNLHTMLOrderedList: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <div class="nl-ordered-list" role="list">
+//   <div class="nl-ordered-list__item" role="listitem">Paspoortfoto, niet ouder dan 6 maanden</div>
+//   <div class="nl-ordered-list__item" role="listitem">Je oude paspoort</div>
+//   <div class="nl-ordered-list__item" role="listitem">Je afspraakbevestiging</div>
+// </div>
 // Original: Ordered List opgebouwd met `div` elementen
 // Let op: role="list" en role="listitem" is nodig!
 export const OrderedListAlternativeHTMLDivs: Story = {
@@ -467,7 +499,11 @@ export const OrderedListAlternativeHTMLDivs: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <span class="nl-ordered-list" role="list">
+//   <span class="nl-ordered-list__item" role="listitem">Paspoortfoto, niet ouder dan 6 maanden</span>
+//   <span class="nl-ordered-list__item" role="listitem">Je oude paspoort</span>
+//   <span class="nl-ordered-list__item" role="listitem">Je afspraakbevestiging</span>
+// </span>
 // Original: Ordered List opgebouwd met `span` elementen
 // Let op: role="list" en role="listitem" is nodig!
 export const OrderedListAlternativeHTMLSpans: Story = {
@@ -483,7 +519,6 @@ export const OrderedListAlternativeHTMLSpans: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met paragraphs (`p`) in list items
 export const OrderedListHTMLParagraphsInListItem: Story = {
   name: 'Ordered List met paragraphs (`p`) in list items',
@@ -498,7 +533,6 @@ export const OrderedListHTMLParagraphsInListItem: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met NL Paragraph in list item
 export const OrderedListNLParagraphsInListItem: Story = {
   name: 'Ordered List met NL Paragraph in list item',
@@ -513,7 +547,7 @@ export const OrderedListNLParagraphsInListItem: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// TODO_EXAMPLE CODE SNIPPET
 // Original: Ordered List in een column layout
 export const OrderedListColumnLayout: Story = {
   name: 'Ordered List in een column layout',
@@ -528,7 +562,6 @@ export const OrderedListColumnLayout: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met een lang list item dat doorloopt naar een volgende kolom
 export const OrderedListLongItemAcrossColumns: Story = {
   name: 'Ordered List met een lang list item dat doorloopt naar een volgende kolom',
@@ -543,7 +576,6 @@ export const OrderedListLongItemAcrossColumns: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met horizontaal scrollen op een klein scherm (mock mobiel) - hier zijn meerdere geneste niveaus nodig om te laten zien dat scrollen dan beter is dan wrappen omdat er anders maar een paar letters per regel blijven staan
 export const OrderedListHorizontalScrollMobile: Story = {
   name: 'Ordered List met horizontaal scrollen op een klein scherm (mock mobiel) - hier zijn meerdere geneste niveaus nodig om te laten zien dat scrollen dan beter is dan wrappen omdat er anders maar een paar letters per regel blijven staan',
@@ -558,7 +590,16 @@ export const OrderedListHorizontalScrollMobile: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <div class="nl-html--all">
+//   <ol role="list">
+//     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
+//     <li role="listitem">
+//       Je oude paspoort
+//       <p>TODO_GOEDE_EXTRA_DUMMY_CONTENT</p>
+//     </li>
+//     <li role="listitem">Je afspraakbevestiging</li>
+//   </ol>
+// </div>
 // Original: Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor
 export const OrderedListRichTextEditorParagraph: Story = {
   name: 'Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor',
@@ -567,19 +608,12 @@ export const OrderedListRichTextEditorParagraph: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt het HTML-element \`p\`. De tekst blijft goed uitgelijnd',
-        // - Code Snippet voorbeeld:
-        //             <li>
-        //             foo
-        //             <p>bar</p>
-        //             </li>
-        //  - Code snippet verduidelijking: Rich Text Editors voegen meestal pas een paragraph toe zodra je enter hebt gedaan. Dit betekent dat je eerst een textnode hebt, en dan een paragraph element. Deze story laat zien dat de spacing dan nog steeds goed gaat.
+          'Deze geordende lijst laat de structuur van een lijst met een paragraaf zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt het HTML-element \`p\`. De tekst blijft goed uitgelijnd. Code snippet verduidelijking: Rich Text Editors voegen meestal pas een paragraph toe zodra je enter hebt gedaan. Dit betekent dat je eerst een textnode hebt, en dan een paragraph element. Deze story laat zien dat de spacing dan nog steeds goed gaat.',
       },
     },
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Story voor Rich Text Editors met NL Paragraph - zelfde als bovenstaande maar dan met NL Paragraph component
 export const OrderedListRichTextEditorNLParagraph: Story = {
   name: 'Story voor Rich Text Editors met NL Paragraph - zelfde als bovenstaande maar dan met NL Paragraph component',
@@ -594,7 +628,7 @@ export const OrderedListRichTextEditorNLParagraph: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// TODO_EXAMPLE CODE SNIPPET
 // Original: Stories voor Rich Text Editors: textnode met nested lijst, textnode met link, etc (voorafgaand aan stories schrijven even bepalen welke combinaties we hierin willen meenemen)
 export const OrderedListRichTextEditorNested: Story = {
   name: 'Stories voor Rich Text Editors: textnode met nested lijst, textnode met link, etc (voorafgaand aan stories schrijven even bepalen welke combinaties we hierin willen meenemen)',
@@ -608,7 +642,7 @@ export const OrderedListRichTextEditorNested: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// NOTE: de CSS hiervoor is niet onderdeel van de CSS Component, het is een voorbeeld implementatie
 // Original: Story voor het centreren van de Ordered List. Dit omdat dit beschikbaar is in community en we daar een oplossing voor moeten laten zien.
 export const OrderedListCentered: Story = {
   name: 'Story voor het centreren van de Ordered List. Dit omdat dit beschikbaar is in community en we daar een oplossing voor moeten laten zien.',
@@ -622,7 +656,6 @@ export const OrderedListCentered: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met vergrote tekstafstand
 export const OrderedListIncreasedTextSpacing: Story = {
   name: 'Ordered List met vergrote tekstafstand',
@@ -637,7 +670,6 @@ export const OrderedListIncreasedTextSpacing: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met tekst vergroot naar 200%
 export const OrderedList200PercentZoom: Story = {
   name: 'Ordered List met tekst vergroot naar 200%',
@@ -652,7 +684,6 @@ export const OrderedList200PercentZoom: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List in Forced Colors modus
 export const OrderedListForcedColors: Story = {
   name: 'Ordered List in Forced Colors modus',
@@ -667,7 +698,9 @@ export const OrderedListForcedColors: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <ol role="list">
+//   <li>TODO_DUMMY_CONTENT</li>
+// </ol>
 // Original: Ordered List met 1 list item
 export const OrderedListOneItem: Story = {
   name: 'Ordered List met 1 list item',
@@ -682,7 +715,6 @@ export const OrderedListOneItem: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met zeer veel list items (meer dan geadviseerde 3)
 export const OrderedListSoManyItems: Story = {
   name: 'Ordered List met zeer veel list items (meer dan geadviseerde 3)',
@@ -696,7 +728,6 @@ export const OrderedListSoManyItems: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List op een breed scherm (in tegenstelling tot de mobiele test)
 export const OrderedListVeryLargeScreen: Story = {
   name: 'Ordered List op een breed scherm (in tegenstelling tot de mobiele test)',
@@ -711,7 +742,7 @@ export const OrderedListVeryLargeScreen: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// TODO_EXAMPLE CODE SNIPPET
 // Original: Ordered List met Link in list items (ie een soort Link List? is dat een goed idee? nav component icm andere componenten)
 export const OrderedListLinkInItem: Story = {
   name: 'Ordered List met Link in list items (ie een soort Link List? is dat een goed idee? nav component icm andere componenten)',
@@ -725,7 +756,7 @@ export const OrderedListLinkInItem: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// TODO_EXAMPLE CODE SNIPPET
 // Original: Ordered List met tabel in een list item (is dat een goed idee? nav component icm andere componenten / uitgebreide use cases)
 export const OrderedListTableInItem: Story = {
   name: 'Ordered List met tabel in een list item (is dat een goed idee? nav component icm andere componenten / uitgebreide use cases)',
@@ -739,7 +770,12 @@ export const OrderedListTableInItem: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
+// <p>Rotondekunstprijs prijswinnaars pagina 2 van 3:</p>
+// <ol role="list" reversed start="10">
+//   <li>Vis op wielen</li>
+//   <li>Licht Piramide</li>
+//   <li>Berm</li>
+// </ol>
 // Original: Ordered List met reversed en start
 export const OrderedListReversedAndStart: Story = {
   name: 'Ordered List met reversed en start',
@@ -753,7 +789,6 @@ export const OrderedListReversedAndStart: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met type="A" en start
 export const OrderedListUpperCaseAlphabeticAndStart: Story = {
   name: 'Ordered List met type="A" en start',
@@ -768,7 +803,6 @@ export const OrderedListUpperCaseAlphabeticAndStart: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Ordered List met lang="ar" en reversed
 export const OrderedListLangArabicReversed: Story = {
   name: 'Ordered List met lang="ar" en reversed',
@@ -782,8 +816,8 @@ export const OrderedListLangArabicReversed: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
-// Original: Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<Icon label="1." />} />
+// Dus dat je niet de sr-text class gebruikt, maar de title in de SVG / aan de Icon word meegegeven zoals bijv <OrderedListItem marker={<Icon label="1." />} />
+// Original: Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst
 export const OrderedListInformativeIconAccessible: Story = {
   name: 'Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<Icon label="1." />} />',
   args: {},
@@ -796,8 +830,9 @@ export const OrderedListInformativeIconAccessible: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
-// Original: Ordered List met Custom Marker met Informatieve Icon zonder alternatieve tekst en met Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<Icon />} markerLabel="1." />
+// TODO_DUPLICATE
+// Dus via onze API: <OrderedListItem marker={<Icon />} markerLabel="1." />
+// Original: Ordered List met Custom Marker met Informatieve Icon zonder alternatieve tekst en met Custom Marker Label
 export const OrderedListCustomMarkerLabel: Story = {
   name: 'Ordered List met Custom Marker met Informatieve Icon zonder alternatieve tekst en met Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<Icon />} markerLabel="1." />',
   args: {},
@@ -810,8 +845,8 @@ export const OrderedListCustomMarkerLabel: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
-// Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />
+// Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />
+// Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label.
 export const OrderedListCustomMarkerIconLabelOverride: Story = {
   name: 'Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />',
   args: {},
@@ -825,7 +860,6 @@ export const OrderedListCustomMarkerIconLabelOverride: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Eentje met CSS reset voor de Component
 export const OrderedListCssReset: Story = {
   name: 'Eentje met CSS reset voor de Component',
@@ -842,7 +876,6 @@ export const OrderedListCssReset: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Wel de component CSS maar niet de thema CSS.
 export const OrderedListComponentCssNoThemeCss: Story = {
   name: 'Wel de component CSS maar niet de thema CSS.',
@@ -859,7 +892,6 @@ export const OrderedListComponentCssNoThemeCss: Story = {
   },
 };
 
-// EXAMPLE CODE SNIPPET
 // Original: Eentje waar alle CSS naar een invalid value word gezet, wat betekent dat user-agent dan ook niet meer lekker gaat.
 export const OrderedListInvalidCssValues: Story = {
   name: 'Eentje waar alle CSS naar een invalid value word gezet, wat betekent dat user-agent dan ook niet meer lekker gaat.',
