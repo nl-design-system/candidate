@@ -111,7 +111,7 @@ export const xxxx: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label in de option-variant naast een switch. Een switch is, net als een radiobutton en een checkbox, een klein bedieningselement waar het label naast past.`,
       },
     },
   },
@@ -122,7 +122,7 @@ export const xxxx: Story = {
 //   <FormFieldLabel type="inherit" for="email">Email</FormFieldLabel>
 // </h1>
 
-export const FormFieldLabelHeading: Story = {
+export const FormFieldLabelHeadingTypeInherit: Story = {
   name: `Form Field Label binnen een heading (type="inherit")`,
   args: {},
   parameters: {
@@ -134,25 +134,25 @@ export const FormFieldLabelHeading: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithTypeOptionAndHtmlFor: Story = {
   name: `OPTION_ON_HOLD Form Field Label met type="option" en HTML for: dit is mogelijk, maar het is redundant om de for hier te zetten.`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label in de option-variant, waarbij het invoerveld genest is in het label en gekoppeld is met de HTML-attributen `for` en `id`.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelDisabled: Story = {
   name: `Form Field Label met disabled state`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label met disabled-opmaak: de tekst krijgt de kleur van een disabled label. Gebruik deze versie bij een disabled invoerveld.`,
       },
     },
   },
@@ -181,25 +181,25 @@ export const xxxx: Story = {
 //   aria-describedby="email-required"
 // />
 
-export const FormFieldLabelSuffix: Story = {
+export const FormFieldLabelWithSuffixOptionalPattern: Story = {
   name: "Form Field Label met Form Field Label Suffix",
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een \`FormFieldLabel\` component met een \`FormFieldLabelSuffix\` component, waarbij de suffix via de WAI-ARIA \`aria-describedby\` attribuut is gekoppeld aan het invoerveld. De \`FormFieldLabelSuffix\` component levert aanvullende informatie via WAI-ARIA \`aria-describedby\` attribuut zonder de toegankelijke naam van het invoerveld te wijzigen.`,
+        story: `Een label met een suffix. De suffix is met het aria-describedby-attribuut gekoppeld aan het invoerveld. Hierdoor past de suffix de toegankelijke naam van het invoerveld niet aan en blijft de toegankelijke naam kort en duidelijk voor screenreadergebruikers.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithSuffixRequiredPattern: Story = {
   name: `Patroon: Form Field Label met verplicht veld (Form Field Label Suffix)`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label met een 'verplicht' suffix. De suffix is met het aria-describedby-attribuut gekoppeld aan het invoerveld. Hierdoor past de suffix de toegankelijke naam van het invoerveld niet aan en blijft de toegankelijke naam kort en duidelijk voor screenreadergebruikers.`,
       },
     },
   },
@@ -231,18 +231,18 @@ export const xxxx: Story = {
 //   aria-describedby="email-required email-description"
 // />
 
-export const FormFieldLabelSuffixAndDescription: Story = {
-  name: "Form Field Label met Form Field Label Suffix en Form Field Description",
+export const FormFieldLabelSuffixAndDescriptionPattern: Story = {
+  name: "Patroon: Form Field Label met Form Field Label Suffix en Form Field Description",
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een \`FormFieldLabel\` component met zowel een \`FormFieldLabelSuffix\` component als een \`FormFieldDescription\` component, waarbij beide via de WAI-ARIA \`aria-describedby\` attribuut aan het invoerveld zijn gekoppeld. Beide leveren aanvullende informatie zonder de toegankelijke naam van het invoerveld te beïnvloeden.`,
+        story: `Een label met zowel een suffix als een extra beschrijving. Beiden zijn met het aria-describedby-attribuut aan het invoerveld gekoppeld en leveren zo aanvullende informatie, zonder de toegankelijke naam van het invoerveld te veranderen.`,
       },
     },
   },
 };
-export const xxxx: Story = {
+export const FormFieldLabelWithSuffixDifferentLineHeightPattern: Story = {
   name: `Patroon: Form Field Label met afwijkende line-height tussen Label en Suffix`,
   args: {},
   parameters: {
@@ -278,91 +278,91 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelHidden: Story = {
   name: `Form Field Label met HTML hidden attribuut`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een verborgen label. Het label verdwijnt niet alleen visueel, maar ook voor screenreader-gebruikers. Let op: Hierdoor heeft het invoerveld ook geen toegankelijke naam meer. `,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelLang: Story = {
   name: `Form Field Label met HTML lang attribuut`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label in een andere taal. Een screenreader spreekt de tekst hierdoor uit met de uitspraak die bij die taal hoort.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelDir Story = {
   name: `Form Field Label met HTML dir attribuut`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label in een andere schrijfrichting. Zo geef je de tekstrichting van de tekst in het label aan, bijvoorbeeld rechts-naar-links voor Arabisch.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelDefaultDiv: Story = {
   name: `Form Field Label (default) opgebouwd met div`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label gemaakt met het HTML-element div, in plaats van het HTML-element label. Om het label te koppelen aan het invoerveld gebruik je het aria-labelledby attribuut.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelDefaultSpan: Story = {
   name: `Form Field Label (default) opgebouwd met span`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Het label is gemaakt met het HTML-element span, in plaats van het HTML-element label. Om het label te koppelen aan het invoerveld gebruik je het aria-labelledby attribuut.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelOptionDiv: Story = {
   name: `OPTION_ON_HOLD Form Field Label (option) opgebouwd met div`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label van de option-variant die is gemaakt met het HTML-element div, in plaats van het HTML-element label. Om het label te koppelen aan het invoerveld gebruik je het aria-labelledby attribuut.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelOptionSpan: Story = {
   name: `OPTION_ON_HOLD Form Field Label (option) opgebouwd met span`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label van de option-variant die is gemaakt met het HTML-element span, in plaats van het HTML-element label. Om het label te koppelen aan het invoerveld gebruik je het aria-labelledby attribuut.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelNlHtmlAll: Story = {
   name: `Form Field Label binnen nl-html--all`,
   args: {},
   parameters: {
@@ -374,7 +374,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelNlHtmlFormFieldLabel: Story = {
   name: `Form Field Label binnen nl-html--form-field-label`,
   args: {},
   parameters: {
@@ -386,109 +386,109 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
-  name: `Form Field Label met type="inherit" gecombineerd met disabled: dit ondersteunen we niet uit onszelf, maar de story laat zien welke CSS je kan toepassen om het zelf te ondersteunen, ie h1:has(.nl-form-field-label--disabled)`,
+export const FormFieldLabelTypeInheritDisabled Story = {
+  name: `Form Field Label met type="inherit" gecombineerd met disabled`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label van de variant inherit, met disabled-opmaak. Deze variant neemt de disabled-opmaak over van een omliggend element, zodat je die niet los op het label hoeft te zetten. Dit kun je doen met bijvoorbeeld has(.nl-form-field-label--disabled).`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelTypeInheritWithInput: Story = {
   name: `OPTION_ON_HOLD Form Field Label met type="inherit" gecombineerd met input: dit ondersteunen we niet uit onszelf, maar de story laat zien welke CSS je kan toepassen om het zelf te ondersteunen, ie h1:has(.nl-form-field-label--option)`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label van de inherit-variant, gecombineerd met een invoerveld. Dit kun je bijvoorbeeld doen met has(.nl-form-field-label--option).`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelIncreasedTextSpacing: Story = {
   name: `Form Field Label met vergrote tekstafstand`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label met vergrote tekstafstand (letter-, woord- en regelafstand), volgens [WCAG Succescriterium 1.4.12 Tekstafstand](https://nldesignsystem.nl/wcag/1.4.12/). De tekst blijft goed leesbaar en wordt niet afgekapt of overlapt.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelText200Percent: Story = {
   name: `Form Field Label met tekst vergroot naar 200%`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label waarvan de tekst 200% is vergroot, volgens [WCAG Succescriterium 1.4.4 Herschalen van tekst](https://nldesignsystem.nl/wcag/1.4.4/). De tekst blijft goed leesbaar en wordt niet afgekapt of overlapt.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelForcedColors: Story = {
   name: `Form Field Label in Forced Colors modus`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label in Forced Colors modus (zoals in Windows Contrast Thema's). Het label blijft goed leesbaar en onderscheidbaar wanneer kleuren door het besturingssysteem worden overschreven.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelShortText: Story = {
   name: `Form Field Label met zeer korte tekst`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label met een hele korte tekst. De opmaak en ruimte eromheen blijven ook bij minimale inhoud goed werken.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelTextWrap: Story = {
   name: `Form Field Label met zeer lange tekst die wrapped`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label met een hele lange inhoud, die over meerdere regels wordt weergegeven. De opmaak en uitlijning blijven ook dan goed werken, zodat de tekst op een klein scherm of bij inzoomen niet buiten het zichtbare venster valt.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelSmallScreen: Story = {
   name: `Form Field Label op een klein scherm`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een voorbeeldweergave van een label op een klein scherm. Het label blijft goed leesbaar en de tekst valt niet buiten het zichtbare venster.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWideScreen: Story = {
   name: `Form Field Label op een breed scherm`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een voorbeeldweergave van een label op een breed scherm. De opmaak blijft gelijk met de weergave op kleinere schermen.`,
       },
     },
   },
@@ -526,7 +526,7 @@ export const FormFieldLabelLineHeight: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelTypeOptionDisabled: Story = {
   name: `Form Field Label met type="option" en disabled`,
   args: {},
   parameters: {
