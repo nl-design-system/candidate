@@ -33,7 +33,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const xxxx: Story = {
+export const FormFieldLabelNotLinked: Story = {
   name: `Fout: Form Field Label zonder koppeling aan een invoerveld`,
   args: {},
   parameters: {
@@ -45,19 +45,19 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithTabindex: Story = {
   name: `Fout: Form Field Label met tabindex`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Het label krijgt hier focus wanneer je met Tab door de pagina navigeert. Dat moet niet: een label is geen interactief element en hoort niet in de focusvolgorde voor te komen. De focus moet naar het gekoppelde formulierveld gaan.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithInteractiveContent: Story = {
   name: `Fout: Form Field Label met interactieve content`,
   args: {},
   parameters: {
@@ -69,7 +69,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithToggletip: Story = {
   name: `Fout: Form Field Label met Toggletip`,
   args: {},
   parameters: {
@@ -81,7 +81,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelAsDisplayBlock: Story = {
   name: `Fout: Form Field Label als display: block waardoor een te groot klikgebied ontstaat`,
   args: {},
   parameters: {
@@ -93,7 +93,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithRequiredOptionalTextInLabel: Story = {
   name: `Fout: Form Field Label met required/optional tekst in de label in plaats van Form Field Label Suffix`,
   args: {},
   parameters: {
@@ -105,7 +105,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithAsteriskForOptional: Story = {
   name: `Fout: Form Field Label met optioneel aangeduid door middel van een asterisk`,
   args: {},
   parameters: {
@@ -117,7 +117,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelOverriddenByAriaLabelledby: Story = {
   name: `Fout: Form Field Label waarbij aria-labelledby het HTML label overschrijft`,
   args: {},
   parameters: {
@@ -129,7 +129,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithRedundantAriaLabelledby: Story = {
   name: `Fout: Form Field Label met aria-labelledby terwijl het HTML label al voldoende is`,
   args: {},
   parameters: {
@@ -141,7 +141,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithForAndMismatchedNestedInput: Story = {
   name: `Fout: Form Field Label met zowel HTML for als een niet-overeenkomende geneste input`,
   args: {},
   parameters: {
@@ -153,7 +153,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithInputGroupInInputSlot: Story = {
   name: `Fout: Form Field Label met Input Group in de input slot`,
   args: {},
   parameters: {
@@ -165,7 +165,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithTextInputInInputSlot: Story = {
   name: `Fout: Form Field Label met Text Input in de input slot`,
   args: {},
   parameters: {
@@ -177,7 +177,7 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithFileInputInInputSlot: Story = {
   name: `Fout: Form Field Label met File Input in de input slot`,
   args: {},
   parameters: {
@@ -189,157 +189,157 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithNumberInputInInputSlot: Story = {
   name: `Fout: Form Field Label met Number Input in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Number Input in het label genest, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor radio buttons en checkboxen omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en lange tekstuele labels verslechtert dit de bediening. Plaats het invoerveld in plaats daarvan onder het label.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithPasswordInputInInputSlot: Story = {
   name: `Fout: Form Field Label met Password Input in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Password Input in het label genest, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor radio buttons en checkboxen omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en lange tekstuele labels verslechtert dit de bediening. Plaats het invoerveld in plaats daarvan onder het label.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithTextAteaInInputSlot: Story = {
   name: `Fout: Form Field Label met Text Area in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Text Area in het label genest, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor radio buttons en checkboxen omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en lange tekstuele labels verslechtert dit de bediening. Plaats het invoerveld in plaats daarvan onder het label.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithDateInputInInputSlot: Story = {
   name: `Fout: Form Field Label met Date Input in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Date Input in het label genest, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor radio buttons en checkboxen omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en lange tekstuele labels verslechtert dit de bediening. Plaats het invoerveld in plaats daarvan onder het label.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithDateInputGroupInInputSlot: Story = {
   name: `Fout: Form Field Label met Date Input Group in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een label gebruikt als groepslabel voor een Date Input Group. Dat moet niet, want ieder invoerveld heeft een eigen label nodig, met een overkoepelende naam voor de Date Input Group. Dat kan bijvoorbeeld met een Fieldset.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithDatePickerInInputSlot: Story = {
   name: `Fout: Form Field Label met Date Picker in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Date Picker in het label genest, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor radio buttons en checkboxen omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en lange tekstuele labels verslechtert dit de bediening. Plaats het invoerveld in plaats daarvan onder het label.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithCheckboxGroupInInputSlot: Story = {
   name: `Fout: Form Field Label met Checkbox Group in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een label gebruikt als groepslabel voor een Checkbox Group. Dat moet niet, want ieder invoerveld heeft een eigen label nodig, met een overkoepelende naam voor de Checkbox Group. Dat kan bijvoorbeeld met een Fieldset.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithRadioGroupInInputSlot: Story = {
   name: `Fout: Form Field Label met Radio Group in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een label gebruikt als groepslabel voor een Radio Group. Dat moet niet, want ieder invoerveld heeft een eigen label nodig, met een overkoepelende naam voor de Radio Group. Dat kan bijvoorbeeld met een Fieldset.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithCalendarInInputSlot: Story = {
   name: `Fout: Form Field Label met Calendar in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Calendar in een label genest, waardoor de Form Field Label en de Calendar direct naast elkaar staan. Dit slot is bedoeld voor radio buttons en checkboxen omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en lange tekstuele labels verslechtert dit de bediening. Plaats de input in plaats daarvan onder het label, in een Date Picker.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithRangeInInputSlot: Story = {
   name: `Fout: Form Field Label met Range in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Range in een label genest, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor radio buttons en checkboxen omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en lange tekstuele labels verslechtert dit de bediening. Plaats het invoerveld in plaats daarvan onder het label.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithSelectInInputSlot: Story = {
   name: `Fout: Form Field Label met Select in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Select in een label genst,, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor radio buttons en checkboxen omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en lange tekstuele labels verslechtert dit de bediening. Plaats het invoerveld in plaats daarvan onder het label.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithSelectComboboxInInputSlot: Story = {
   name: `Fout: Form Field Label met Select Combobox in de input slot`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Select Combobox in een label genst,, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor radio buttons en checkboxen omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en lange tekstuele labels verslechtert dit de bediening. Plaats het invoerveld in plaats daarvan onder het label.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
-  name: `Fout: Form Field Label waar je de description tekst eigenlijk nu in de label aan het zetten bent`,
+export const FormFieldLabelContainsDescriptionText Story = {
+  name: `Fout: Form Field Label met description tekst in Form Field Label`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt toelichtingstekst in het label geplaatst. Dat moet niet, omdat het label kort en specifiek moet blijven. Gebruik de Form Field Description voor aanvullende uitleg.`,
       },
     },
   },

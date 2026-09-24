@@ -45,43 +45,43 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const xxxx: Story = {
+export const FormFieldLabelLinkedWithHtmlFor: Story = {
   name: `Form Field Label gekoppeld via HTML for`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een Form Field Label is gekoppeld aan het bijbehorende invoerveld met een for-attribuut dat verwijst naar het id van het invoerveld. Een screenreader leest het label voor zodra het invoerveld focus krijgt, en een bezoeker kan op het label klikken om het veld te focussen of te activeren.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithNestedInput: Story = {
   name: `OPTION_ON_HOLD Form Field Label met genest invoerveld`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier is het invoerveld genest in het label. Doordat het invoerveld binnen het label staat, krijgt het invoerveld de labeltekst als toegankelijke naam. Een screenreader leest het label voor zodra het invoerveld focus krijgt, en een bezoeker kan op het label klikken om het veld te focussen of te activeren.,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelWithPhrasingContent: Story = {
   name: `Form Field Label met phrasing content`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Het label bevat een span-element met tekst. De tekst krijgt dezelfde kleur en typografie en de koppeling met het invoerveld blijft werken.`,
       },
     },
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelTypeOptionRadio: Story = {
   name: `OPTION_ON_HOLD Form Field Label met type="option" (radio)`,
   args: {},
   parameters: {
@@ -93,13 +93,13 @@ export const xxxx: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelTypeOptionCheckbox: Story = {
   name: `OPTION_ON_HOLD Form Field Label met type="option" (checkbox)`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: Een label in de option-variant naast een checkbox. Zowel het label als de checkbox zijn klikbaar, en de tekst staat op één regel naast de checkbox.`,
       },
     },
   },
