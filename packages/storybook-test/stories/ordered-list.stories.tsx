@@ -348,6 +348,35 @@ export const OrderedListCustomMarkerAriaLabelledby: Story = {
   },
 };
 
+// Dus dat je niet de sr-text class gebruikt, maar de title in de SVG / aan de Icon word meegegeven zoals bijv <OrderedListItem marker={<Icon label="1." />} />
+// Original: Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst
+export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
+  name: 'Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<Icon label="1." />} />',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: 'STORY_DESCRIPTION',
+      },
+    },
+  },
+};
+
+// Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />
+// Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label.
+export const OrderedListCustomMarkerIconLabelOverride: Story = {
+  name: 'Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'In deze geordende lijst begint ieder item met een icoon. De iconen hebben een verkeerde alternatieve tekst. De eigenschap \`markerLabel\` overschrijft de verkeerde tekst,, zodat screenreadergebruikers alsnog de juiste betekenis van het icoon horen.',
+      },
+    },
+  },
+};
+
 // <ol class="nl-ordered-list" hidden>
 //   <li class="nl-ordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
 //   <li class="nl-ordered-list__item">Je oude paspoort</li>
@@ -816,50 +845,6 @@ export const OrderedListLangArabicReversed: Story = {
     docs: {
       description: {
         story: 'Deze lijst is geordend met Arabisch-Indische cijfers en loopt af in plaats van op.',
-      },
-    },
-  },
-};
-
-// Dus dat je niet de sr-text class gebruikt, maar de title in de SVG / aan de Icon word meegegeven zoals bijv <OrderedListItem marker={<Icon label="1." />} />
-// Original: Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst
-export const OrderedListInformativeIconAccessible: Story = {
-  name: 'Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<Icon label="1." />} />',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: 'STORY_DESCRIPTION',
-      },
-    },
-  },
-};
-
-// TODO_DUPLICATE
-// Dus via onze API: <OrderedListItem marker={<Icon />} markerLabel="1." />
-// Original: Ordered List met Custom Marker met Informatieve Icon zonder alternatieve tekst en met Custom Marker Label
-export const OrderedListCustomMarkerLabel: Story = {
-  name: 'Ordered List met Custom Marker met Informatieve Icon zonder alternatieve tekst en met Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<Icon />} markerLabel="1." />',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: 'STORY_DESCRIPTION',
-      },
-    },
-  },
-};
-
-// Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />
-// Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label.
-export const OrderedListCustomMarkerIconLabelOverride: Story = {
-  name: 'Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'In deze geordende lijst begint ieder item met een icoon. De iconen hebben een verkeerde alternatieve tekst. De eigenschap \`markerLabel\` overschrijft de verkeerde tekst,, zodat screenreadergebruikers alsnog de juiste betekenis van het icoon horen.',
       },
     },
   },
