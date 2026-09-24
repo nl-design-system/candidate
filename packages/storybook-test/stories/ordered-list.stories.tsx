@@ -62,7 +62,7 @@ export const OrderedListDefault: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een standaard genummerde lijst. Elk item krijgt automatisch een oplopend nummer, beginnend bij 1.',
+        story: 'Een standaard geordende lijst. Elk item krijgt automatisch een oplopend nummer, beginnend bij 1.',
       },
     },
   },
@@ -134,7 +134,7 @@ export const OrderedListNestedUnorderedList: Story = {
 // </ol>
 // Original: Ordered List met minimaal drie niveaus nesting, met documentatie over hoe en wat
 export const OrderedListThreeLevelsNesting: Story = {
-  name: 'Ordered List met minimaal drie niveaus nesting, met documentatie over hoe en wat',
+  name: 'Ordered List van minimaal drie niveaus',
   args: {},
   parameters: {
     docs: {
@@ -173,7 +173,7 @@ export const OrderedListStart: Story = {
 // </ol>
 // Original: Ordered List met omgekeerde nummering (`reversed`)
 export const OrderedListReversed: Story = {
-  name: 'Ordered List met omgekeerde nummering (`reversed`)',
+  name: 'Ordered List met omgekeerde nummering via HTML-attribuut reversed',
   args: {},
   parameters: {
     docs: {
@@ -192,7 +192,7 @@ export const OrderedListReversed: Story = {
 // </ol>
 // Original: Ordered List met kleine letters (`type="a"`)
 export const OrderedListLowercaseLetters: Story = {
-  name: 'Ordered List met kleine letters (type="a")',
+  name: 'Ordered List met kleine letters via HTML-attribuut type="a"',
   args: {},
   parameters: {
     docs: {
@@ -210,7 +210,7 @@ export const OrderedListLowercaseLetters: Story = {
 // </ol>
 // Original: Ordered List met hoofdletters (`type="A"`)
 export const OrderedListUppercaseLetters: Story = {
-  name: 'Ordered List met hoofdletters (\`type="A"\`)',
+  name: 'Ordered List met hoofdletters via HTML-attribuut type="A"',
   args: {},
   parameters: {
     docs: {
@@ -228,7 +228,7 @@ export const OrderedListUppercaseLetters: Story = {
 // </ol>
 // Original: Ordered List met kleine Romeinse cijfers (`type="i"`)
 export const OrderedListLowercaseRomanNum: Story = {
-  name: 'Ordered List met kleine Romeinse cijfers (\`type="i"\`)',
+  name: 'Ordered List met kleine Romeinse cijfers via HTML-attribuut type="i"',
   args: {},
   parameters: {
     docs: {
@@ -247,7 +247,7 @@ export const OrderedListLowercaseRomanNum: Story = {
 // </ol>
 // Original: Ordered List met hoofdletters Romeinse cijfers (`type="I"`)
 export const OrderedListUppercaseRomanNum: Story = {
-  name: 'Ordered List met hoofdletters Romeinse cijfers (\`type="I"\`)',
+  name: 'Ordered List met hoofdletters Romeinse cijfers via HTML-attribuut type="I"',
   args: {},
   parameters: {
     docs: {
@@ -267,7 +267,7 @@ export const OrderedListUppercaseRomanNum: Story = {
 // </ol>
 // Original: Ordered List met Arabische nummering (`lang="ar"`)
 export const OrderedListArabicNum: Story = {
-  name: 'Ordered List met Arabische nummering (\`lang="ar"\`)',
+  name: 'Ordered List met Arabische nummering via HTML-attribuut lang="ar"',
   args: {},
   parameters: {
     docs: {
@@ -286,7 +286,7 @@ export const OrderedListArabicNum: Story = {
 // </ol>
 // Original: Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)
 export const OrderedListTypeOverridesLanguage: Story = {
-  name: 'Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)',
+  name: 'TODO_Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)',
   args: {},
   parameters: {
     docs: {
@@ -311,7 +311,7 @@ export const OrderedListTypeOverridesLanguage: Story = {
 // </ol>
 // Original: Ordered List met custom marker en toegankelijke naam via markerLabel (sr-only), met `aria-hidden="true"` op custom marker
 export const OrderedListCustomMarkerLabel: Story = {
-  name: 'Ordered List met custom marker en toegankelijke naam via markerLabel (sr-only), met HTML-attribuut aria-hidden="true" op custom marker',
+  name: 'Ordered List met Custom Marker en toegankelijke naam via Marker Label',
   args: {},
   parameters: {
     docs: {
@@ -336,7 +336,7 @@ export const OrderedListCustomMarkerLabel: Story = {
 // </ol>
 // Original: Ordered List met een toegankelijke custom marker met toegankelijk label (niet perfecte maar toegankelijke oplossing)
 export const OrderedListCustomMarkerAriaLabelledby: Story = {
-  name: 'Ordered List met een toegankelijke custom marker met toegankelijk label (niet perfecte maar toegankelijke oplossing)',
+  name: 'Ordered List met Custom Marker met toegankelijk label via HTML-attribuut aria-labelledby',
   args: {},
   parameters: {
     docs: {
@@ -351,7 +351,7 @@ export const OrderedListCustomMarkerAriaLabelledby: Story = {
 // Dus dat je niet de sr-text class gebruikt, maar de title in de SVG / aan de Icon word meegegeven zoals bijv <OrderedListItem marker={<Icon label="1." />} />
 // Original: Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst
 export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
-  name: 'Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<Icon label="1." />} />',
+  name: 'Ordered List met Custom Marker met informatieve icoon met alternatieve tekst',
   args: {},
   parameters: {
     docs: {
@@ -365,7 +365,7 @@ export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
 // Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />
 // Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label.
 export const OrderedListCustomMarkerIconLabelOverride: Story = {
-  name: 'Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />',
+  name: 'Ordered List met Custom Marker met informatieve icoon met foutieve alternatieve tekst overschreven door Marker Label',
   args: {},
   parameters: {
     docs: {
@@ -384,7 +384,7 @@ export const OrderedListCustomMarkerIconLabelOverride: Story = {
 // </ol>
 // Original: Ordered List met HTML `hidden` attribuut
 export const OrderedListHidden: Story = {
-  name: 'Ordered List met HTML-attribuut hidden',
+  name: 'Ordered List verstopt via HTML-attribuut hidden',
   args: {},
   parameters: {
     docs: {
@@ -403,7 +403,7 @@ export const OrderedListHidden: Story = {
 // </ol>
 // Original: Ordered List met HTML `lang` attribuut (right-to-left tekst)
 export const OrderedListLangRTL: Story = {
-  name: 'Ordered List met HTML-attribuut lang (right-to-left tekst)',
+  name: 'Ordered List met rechts-naar-links schrijfrichting via Arabische taal via HTML-attribuut lang="ar"',
   args: {},
   parameters: {
     docs: {
@@ -422,7 +422,7 @@ export const OrderedListLangRTL: Story = {
 // </ol>
 // Original: Ordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
 export const OrderedListLangArabic: Story = {
-  name: 'Ordered List met HTML-attribuut lang="ar" - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten',
+  name: 'Ordered List met custom ingestelde nummering voor de Arabische taal',
   args: {},
   parameters: {
     docs: {
@@ -440,7 +440,7 @@ export const OrderedListLangArabic: Story = {
 // </ol>
 // Original: Ordered List met HTML `dir` attribuut
 export const OrderedListDirRTL: Story = {
-  name: 'Ordered List met HTML-attribuut dir',
+  name: 'Ordered List met schrijfrichting via HTML-attribuut dir="rtl"',
   args: {},
   parameters: {
     docs: {
@@ -555,7 +555,7 @@ export const OrderedListAlternativeHTMLSpans: Story = {
 
 // Original: Ordered List met paragraphs (`p`) in list items
 export const OrderedListHTMLParagraphsInListItem: Story = {
-  name: 'Ordered List met paragraphs (`p`) in list items',
+  name: 'Ordered List met HTML-elementen p',
   args: {},
   parameters: {
     docs: {
@@ -569,7 +569,7 @@ export const OrderedListHTMLParagraphsInListItem: Story = {
 
 // Original: Ordered List met NL Paragraph in list item
 export const OrderedListNLParagraphsInListItem: Story = {
-  name: 'Ordered List met NL Paragraph in list item',
+  name: 'Ordered List met NL Paragraph-componenten',
   args: {},
   parameters: {
     docs: {
@@ -584,7 +584,7 @@ export const OrderedListNLParagraphsInListItem: Story = {
 // TODO_EXAMPLE CODE SNIPPET
 // Original: Ordered List in een column layout
 export const OrderedListColumnLayout: Story = {
-  name: 'Ordered List in een column layout',
+  name: 'Ordered List in column layout',
   args: {},
   parameters: {
     docs: {
@@ -598,7 +598,7 @@ export const OrderedListColumnLayout: Story = {
 
 // Original: Ordered List met een lang list item dat doorloopt naar een volgende kolom
 export const OrderedListLongItemAcrossColumns: Story = {
-  name: 'Ordered List met een lang list item dat doorloopt naar een volgende kolom',
+  name: 'Ordered List met lange items welke doorlopen naar volgende kolom',
   args: {},
   parameters: {
     docs: {
@@ -612,7 +612,7 @@ export const OrderedListLongItemAcrossColumns: Story = {
 
 // Original: Ordered List met horizontaal scrollen op een klein scherm (mock mobiel) - hier zijn meerdere geneste niveaus nodig om te laten zien dat scrollen dan beter is dan wrappen omdat er anders maar een paar letters per regel blijven staan
 export const OrderedListHorizontalScrollMobile: Story = {
-  name: 'Ordered List met horizontaal scrollen op een klein scherm (mock mobiel) - hier zijn meerdere geneste niveaus nodig om te laten zien dat scrollen dan beter is dan wrappen omdat er anders maar een paar letters per regel blijven staan',
+  name: 'Ordered List met horizontaal scrollen op klein scherm',
   args: {},
   parameters: {
     docs: {
@@ -636,7 +636,7 @@ export const OrderedListHorizontalScrollMobile: Story = {
 // </div>
 // Original: Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor
 export const OrderedListRichTextEditorParagraph: Story = {
-  name: 'Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor',
+  name: 'Ordered List in Rich Text Editor met HTML-elementen p',
   args: {},
   parameters: {
     docs: {
@@ -650,7 +650,7 @@ export const OrderedListRichTextEditorParagraph: Story = {
 
 // Original: Story voor Rich Text Editors met NL Paragraph - zelfde als bovenstaande maar dan met NL Paragraph component
 export const OrderedListRichTextEditorNLParagraph: Story = {
-  name: 'Story voor Rich Text Editors met NL Paragraph - zelfde als bovenstaande maar dan met NL Paragraph component',
+  name: 'Ordered List in Rich Text Editor met NL Paragraph-componenten',
   args: {},
   parameters: {
     docs: {
@@ -665,7 +665,7 @@ export const OrderedListRichTextEditorNLParagraph: Story = {
 // TODO_EXAMPLE CODE SNIPPET
 // Original: Stories voor Rich Text Editors: textnode met nested lijst, textnode met link, etc (voorafgaand aan stories schrijven even bepalen welke combinaties we hierin willen meenemen)
 export const OrderedListRichTextEditorNested: Story = {
-  name: 'Stories voor Rich Text Editors: textnode met nested lijst, textnode met link, etc (voorafgaand aan stories schrijven even bepalen welke combinaties we hierin willen meenemen)',
+  name: 'Ordered List in Rich Text Editor met meerdere niveaus',
   args: {},
   parameters: {
     docs: {
@@ -679,7 +679,7 @@ export const OrderedListRichTextEditorNested: Story = {
 // NOTE: de CSS hiervoor is niet onderdeel van de CSS Component, het is een voorbeeld implementatie
 // Original: Story voor het centreren van de Ordered List. Dit omdat dit beschikbaar is in community en we daar een oplossing voor moeten laten zien.
 export const OrderedListCentered: Story = {
-  name: 'Story voor het centreren van de Ordered List. Dit omdat dit beschikbaar is in community en we daar een oplossing voor moeten laten zien.',
+  name: 'Ordered List gecentreerd',
   args: {},
   parameters: {
     docs: {
@@ -737,7 +737,7 @@ export const OrderedListForcedColors: Story = {
 // </ol>
 // Original: Ordered List met 1 list item
 export const OrderedListOneItem: Story = {
-  name: 'Ordered List met 1 list item',
+  name: 'Ordered List met één item',
   args: {},
   parameters: {
     docs: {
@@ -751,7 +751,7 @@ export const OrderedListOneItem: Story = {
 
 // Original: Ordered List met zeer veel list items (meer dan geadviseerde 3)
 export const OrderedListSoManyItems: Story = {
-  name: 'Ordered List met zeer veel list items (meer dan geadviseerde 3)',
+  name: 'Ordered List met zeer veel items',
   args: {},
   parameters: {
     docs: {
@@ -764,7 +764,7 @@ export const OrderedListSoManyItems: Story = {
 
 // Original: Ordered List op een breed scherm (in tegenstelling tot de mobiele test)
 export const OrderedListVeryLargeScreen: Story = {
-  name: 'Ordered List op een breed scherm (in tegenstelling tot de mobiele test)',
+  name: 'Ordered List op breed scherm',
   args: {},
   parameters: {
     docs: {
@@ -779,7 +779,7 @@ export const OrderedListVeryLargeScreen: Story = {
 // TODO_EXAMPLE CODE SNIPPET
 // Original: Ordered List met Link in list items (ie een soort Link List? is dat een goed idee? nav component icm andere componenten)
 export const OrderedListLinkInItem: Story = {
-  name: 'Ordered List met Link in list items (ie een soort Link List? is dat een goed idee? nav component icm andere componenten)',
+  name: 'Ordered List met NL Link-componenten',
   args: {},
   parameters: {
     docs: {
@@ -793,7 +793,7 @@ export const OrderedListLinkInItem: Story = {
 // TODO_EXAMPLE CODE SNIPPET
 // Original: Ordered List met tabel in een list item (is dat een goed idee? nav component icm andere componenten / uitgebreide use cases)
 export const OrderedListTableInItem: Story = {
-  name: 'Ordered List met tabel in een list item (is dat een goed idee? nav component icm andere componenten / uitgebreide use cases)',
+  name: 'Ordered List met tabel',
   args: {},
   parameters: {
     docs: {
@@ -812,7 +812,7 @@ export const OrderedListTableInItem: Story = {
 // </ol>
 // Original: Ordered List met reversed en start
 export const OrderedListReversedAndStart: Story = {
-  name: 'Ordered List met reversed en start',
+  name: 'Ordered List met HTML-attributen reversed en start',
   args: {},
   parameters: {
     docs: {
@@ -825,7 +825,7 @@ export const OrderedListReversedAndStart: Story = {
 
 // Original: Ordered List met type="A" en start
 export const OrderedListUpperCaseAlphabeticAndStart: Story = {
-  name: 'Ordered List met type="A" en start',
+  name: 'Ordered List met HTML-attributen type="A" en start',
   args: {},
   parameters: {
     docs: {
@@ -839,7 +839,7 @@ export const OrderedListUpperCaseAlphabeticAndStart: Story = {
 
 // Original: Ordered List met lang="ar" en reversed
 export const OrderedListLangArabicReversed: Story = {
-  name: 'Ordered List met lang="ar" en reversed',
+  name: 'Ordered List met HTML-attributen lang="ar" en reversed',
   args: {},
   parameters: {
     docs: {
@@ -852,7 +852,7 @@ export const OrderedListLangArabicReversed: Story = {
 
 // Original: Eentje met CSS reset voor de Component
 export const OrderedListCssReset: Story = {
-  name: 'Eentje met CSS reset voor de Component',
+  name: 'Ordered List met CSS reset op component',
   args: {},
   parameters: {
     docs: {
@@ -868,7 +868,7 @@ export const OrderedListCssReset: Story = {
 
 // Original: Wel de component CSS maar niet de thema CSS.
 export const OrderedListComponentCssNoThemeCss: Story = {
-  name: 'Wel de component CSS maar niet de thema CSS.',
+  name: 'Ordered List met CSS reset op thema',
   args: {},
   parameters: {
     docs: {
@@ -884,7 +884,7 @@ export const OrderedListComponentCssNoThemeCss: Story = {
 
 // Original: Eentje waar alle CSS naar een invalid value word gezet, wat betekent dat user-agent dan ook niet meer lekker gaat.
 export const OrderedListInvalidCssValues: Story = {
-  name: 'Eentje waar alle CSS naar een invalid value word gezet, wat betekent dat user-agent dan ook niet meer lekker gaat.',
+  name: 'Ordered List met ongeldige CSS voor alle properties',
   args: {},
   parameters: {
     docs: {
