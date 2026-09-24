@@ -8,7 +8,7 @@ const meta = {
     value: {
       control: 'color',
       type: { name: 'other', value: 'color', required: true },
-      table: { category: 'API', type: { summary: "CSSProperties['color']" } },
+      table: { category: 'API', type: { summary: 'Een CSS color, bijvoorbeeld: #007DAD of deeppink' } },
     },
     nlColorSample: {
       name: 'nl-color-sample',
