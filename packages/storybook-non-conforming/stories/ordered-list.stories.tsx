@@ -48,7 +48,8 @@ export const OrderedListNoRole: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers zien een lijst, maar screenreadergebruikers krijgen niet te horen dat dit een geordende lijst is. De items lijken op elkaar te volgen, maar zonder de juiste semantiek is de volgorde onduidelijk.
+        Het probleem ontstaat omdat het element geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
@@ -81,7 +82,11 @@ export const OrderedListCustomMarkerNoRole: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers zien een lijst, maar screenreadergebruikers krijgen niet te horen dat dit een geordende lijst is. De items lijken op elkaar te volgen, maar zonder de juiste semantiek is de volgorde onduidelijk.
+
+        De marker bevat toegankelijke tekst, maar dit is niet de oplossing voor het probleem voor screenreadergebruikers.
+
+        Het probleem ontstaat omdat het element geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
@@ -94,7 +99,9 @@ export const OrderedListTabIndex: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers die met het toetsenbord navigeren komen onbedoeld in de focusvolgorde van een lijst terecht, terwijl een lijst niet interactief is. Dat voelt onlogisch en verwart de navigatie.
+
+        Het probleem ontstaat omdat een niet-interactief element via het HTML-attribuut \`tabindex\` focusbaar is gemaakt. Verwijder het HTML-attribuut \`tabindex\`, zodat de lijst niet extra in de keyboardnavigatie verschijnt  en de focusvolgorde logisch blijft.`,
       },
     },
   },
@@ -102,12 +109,14 @@ export const OrderedListTabIndex: Story = {
 
 // Original: Ordered List zonder lijststyling (`list-style: none`) waardoor de lijstsemantiek en ordening verloren gaat
 export const OrderedListListStyleNoneNoRole: Story = {
-  name: 'Fout: Ordered List zonder lijststyling zonder role="list"',
+  name: 'Fout: Ordered List zonder lijststyling en zonder role="list"',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers zien tekst, maar zonder lijststijl en zonder lijstsemantiek is de volgorde voor bezoekers en screenreadergebruikers niet duidelijk. De informatie lijkt meer op losse tekst dan op een geordende lijst.
+
+        Het probleem ontstaat omdat de lijststijl is weggehaald en de semantiek ontbreekt. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` word gezet en voeg het HTML-attribuut \`role="list"\` toe, , zodat de lijst visueel en semantisch als geordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
@@ -115,12 +124,14 @@ export const OrderedListListStyleNoneNoRole: Story = {
 
 // Original: Ordered List zonder lijststyling met alleen `role="list"` (lijstsemantiek terug, maar ordening ontbreekt)
 export const OrderedListListStyleNoneWithRole: Story = {
-  name: 'Fout: Ordered List zonder lijststyling met alleen HTML-attribuut role="list"',
+  name: 'Fout: Ordered List zonder lijststyling en met HTML-attribuut role="list"',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers kunnen de items nog wel als een groep herkennen, maar de volgorde is niet meer zichtbaar. Dat maakt een lijst met stappen moeilijker te scannen en voor screenreadergebruikers is de logische reeks niet goed te volgen. De visuele nummering ontbreekt, waardoor de inhoud op losse onderdelen lijkt.
+
+        Het probleem ontstaat omdat alleen het HTML-attribuut \`role="list"\` is toegevoegd, maar de nummering is uitgezet via de lijststyling. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` word gezet, zodat de lijst visueel en semantisch als geordende lijst wordt herkend.`,
       },
     },
   },
@@ -133,7 +144,9 @@ export const OrderedListAriaPosSetSize: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers zien een lijst met duidelijke items, maar screenreadergebruikers krijgen geen betrouwbare informatie over de volgorde. De extra WAI-ARIA-attributen maken de structuur onduidelijk en vervangen de semantiek van de echte geordende lijst.
+
+        Het probleem ontstaat doordat de WAI-ARIA-attributen \`aria-posinset\` en \`aria-setsize\` worden gebruikt in plaats van de semantiek van de HTML-lijststructuur. Maak geen gebruik van deze WAI-ARIA-attributen, zodat de volgorde correct wordt voorgelezen.`,
       },
     },
   },
@@ -164,7 +177,9 @@ export const OrderedListEmojiNoAlt: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers zien een emoji als marker, maar screenreadergebruikers krijgen geen duidelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+
+        Het probleem ontstaat omdat de emoji als marker is gebruikt zonder toegankelijke tekst. Voeg een zichtbare of visueel verstopte alternatieve tekst toe of gebruik een standaard lijstmarker, zodat de boodschap voor iedereen duidelijk is.`,
       },
     },
   },
@@ -177,7 +192,9 @@ export const OrderedListEmojiAltInCssContent: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers zien een emoji als marker, maar screenreadergebruikers krijgen geen duidelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+
+        Het probleem ontstaat omdat de marker via de CSS-eigenschap \`content\` is toegevoegd in plaats van als toegankelijke marker in de HTML. Gebruik een standaard lijstmarker, of stel een toegankelijke alternatieve tekst beschikbaar, zodat de boodschap voor iedereen duidelijk is.`,
       },
     },
   },
@@ -190,7 +207,9 @@ export const OrderedListListStyleImage: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers zien een afbeelding als marker, maar screenreadergebruikers krijgen geen duidelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+
+        Het probleem ontstaat omdat de marker via de CSS-eigenschap \`list-style-image\` is toegevoegd in plaats van als toegankelijke marker in de HTML. Gebruik een standaard lijstmarker, of stel een toegankelijke alternatieve tekst beschikbaar, zodat de boodschap voor iedereen duidelijk is.`,
       },
     },
   },
@@ -203,20 +222,10 @@ export const OrderedListCounterContent: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
-      },
-    },
-  },
-};
+        story: `Bezoekers zien een tekst als marker, maar deze tekst word niet opgelezen voor screenreadergebruikers. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
 
-// Original: Ordered List met custom markers via `counter-reset` / `counter-increment` in een `span`
-export const OrderedListCounterSpan: Story = {
-  name: 'Fout: Ordered List met Custom Marker via CSS-eigenschappen counter-reset en counter-increment in een HTML-element span',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: 'STORY_DESCRIPTION',
+
+        Het probleem ontstaat omdat de tekst met de CSS-eigenschappen \`counter-reset\` en \`counter-increment\` via de CSS-eigenschap \`content\` zijn opgebouwd, in plaats van als toegankelijke tekst in de HTML. Gebruik een standaard lijstmarker, of stel een toegankelijke alternatieve tekst beschikbaar, zodat de boodschap voor iedereen duidelijk is.`,
       },
     },
   },
@@ -247,7 +256,11 @@ export const OrderedListSVGNotAccessible: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers zien een afbeelding als marker, maar deze bevat geen alternatieve tekst en word daardoor niet opgelezen voor screenreadergebruikers. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+
+        Het probleem ontstaat omdat de afbeeldingen, in dit geval een SVG, niet toegankelijk zijn opgebouwd en geen passende alternatieve tekst krijgen. Maak een toegankelijke alternatieve tekst beschikbaar, zodat de boodschap voor iedereen duidelijk is.
+
+       Dit kan via een zichtbare tekst, een visueel verstopte tekst of de WAI-ARIA-attribuut \`aria-labelledby\`.`,
       },
     },
   },
@@ -286,7 +299,10 @@ export const OrderedListDecorativeIcon: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers zien een lijst met bolletjes voor markers. Bolletjes zijn decoratief en hebben geen echte betekenis voor de stapvolgorde.
+
+        Als een lijst geen leestekens nodig heeft voor nummering, dan is het de bedoeling dat de ongeordende lijst wordt gebruikt in plaats van de geordende lijst.
+        Als een lijst wel leestekens nodig heeft voor nummering, dan is het de bedoeling om markers te gebruiken die de nummering aangeven. Doe dit bijvoorbeeld met de standaard lijstmarkers of met iconen die informatief zijn en gekoppeld zijn aan een toegankelijke alternatieve tekst. Zo blijft de volgorde helder.`,
       },
     },
   },
@@ -326,7 +342,11 @@ export const OrderedListInformativeIconBadAlt: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Bezoekers zien een informatieve icoon als marker, maar screenreadergebruikers krijgen een ontoegankelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+
+        Het probleem ontstaat omdat de alternatieve tekst van de marker de naam van de icoon bevat (bijvoorbeeld "Nummber Drie Icoon."), in plaats van de boodschap van de icoon (bijvoorbeeld "Stap 3.").
+
+        Gebruik een standaard lijstmarker, of stel een toegankelijke alternatieve tekst in welke de boodschap van de marker overbrengt, zodat de boodschap voor iedereen duidelijk is.`,
       },
     },
   },
