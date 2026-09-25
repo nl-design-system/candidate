@@ -63,7 +63,6 @@
     "react": "^18 || ^19"
   },
   "dependencies": {
-    "@nl-design-system-candidate/form-field-error-message-css": "workspace:*",
-    "clsx": "2.1.1"
+    "@nl-design-system-candidate/form-field-error-message-css": "workspace:*"
   }
 }

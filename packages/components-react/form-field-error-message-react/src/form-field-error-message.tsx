@@ -1,5 +1,6 @@
 import { forwardRef, type ReactNode, type HTMLAttributes } from 'react';
-import clsx from 'clsx';
+
+const cn = (...classes: Array<string | undefined | null>): string => classes.filter(Boolean).join(' ');
 
 export interface FormFieldErrorMessageProps extends HTMLAttributes<HTMLDivElement> {
   /** Children to display within the error message. */
@@ -15,7 +16,7 @@ export interface FormFieldErrorMessageProps extends HTMLAttributes<HTMLDivElemen
 export const FormFieldErrorMessage = forwardRef<HTMLDivElement, FormFieldErrorMessageProps>(
   ({ className, children, icon, contentId, contentRole, ...restProps }, ref) => {
     return (
-      <div ref={ref} className={clsx('nl-form-field-error-message', className)} {...restProps}>
+      <div ref={ref} className={cn('nl-form-field-error-message', className)} {...restProps}>
         {icon && <div className="nl-form-field-error-message__icon">{icon}</div>}
         <div id={contentId} role={contentRole} className="nl-form-field-error-message__content">
           {children}
