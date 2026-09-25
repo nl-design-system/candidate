@@ -87,7 +87,7 @@ export const OrderedListNestedOrderedList: Story = {
     docs: {
       description: {
         story:
-          'Een geordende lijst met een geordende geneste lijst in een van de items. De geneste lijst begint opnieuw bij 1 en is visueel ingesprongen vergeleken met het item daarboven, , zodat de verschillende niveaus goed te onderscheiden zijn.',
+          'Een geordende lijst met een geordende geneste lijst in een van de items. De geneste lijst begint opnieuw bij 1 en is visueel ingesprongen vergeleken met het item daarboven, zodat de verschillende niveaus goed te onderscheiden zijn.',
       },
     },
   },
@@ -283,7 +283,7 @@ export const OrderedListArabicNum: Story = {
 
         Dit wordt aangeboden vanuit de NL Ordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
 
-        Deze functionaliteit kan makkelijk uitgebreid worden voor andere talen middels dezelfde aanpak, via het HTML-attribuut \`lang\` en de CSS-eigenschap \`list-style-type\`.`,
+        Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels dezelfde aanpak, via het HTML-attribuut \`lang\` en de CSS-eigenschap \`list-style-type\`.`,
       },
     },
   },
@@ -303,7 +303,7 @@ export const OrderedListTypeOverridesLanguage: Story = {
       description: {
         story: `Een geordende lijst met Arabische tekst en Romeinse cijfers in kleine letters (i, ii, iii) voor de nummering.
 
-        De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De nummering van de lijst word ingesteld op Romeinse cijfers in kleine letters via het HTML-attribuut \`type="i"\`.
+        De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De nummering van de lijst wordt ingesteld op Romeinse cijfers in kleine letters via het HTML-attribuut \`type="i"\`.
 
         De NL Ordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic;\`.
 
@@ -376,7 +376,7 @@ export const OrderedListCustomMarkerAriaLabelledby: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een geordende lijst met een icoon als marker. Het icoon is verborgen voor hulpsoftware. De betekenis van de marker is aangeboden als tekst welke verborgen wordt voor alle bezoekers. De boodschap van de icoon is toegankelijk gemaakt voor screenreadergebruikers via het het WAI-ARIA-attribuut \`aria-labelledby\` gekoppeld aan de marker. De boodschap van de icoon is toegankelijk voor alle bezoekers.`,
+        story: `Een geordende lijst met een icoon als marker. Het icoon is verborgen voor hulpsoftware. De betekenis van de marker is aangeboden als tekst welke verborgen wordt voor alle bezoekers. De boodschap van de icoon is toegankelijk gemaakt voor screenreadergebruikers via het WAI-ARIA-attribuut \`aria-labelledby\` gekoppeld aan de marker. De boodschap van de icoon is toegankelijk voor alle bezoekers.`,
       },
     },
   },
@@ -391,7 +391,7 @@ export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
     docs: {
       description: {
         story:
-          'Een geordende lijst met een icoon als marker. Het icoon is zichtbaar voor hulpsoftware en bevat zelf de tekst die de betekenis van de marker beschrijft. Deze tekst wordt door hulpsoftware gebruikt als alternatieve tekst van het icoon. De boodschap van de icoon is toegankelijk voor alle bezoekers.',
+          'Een geordende lijst met een icoon als marker. Het icoon is zichtbaar voor hulpsoftware en bevat zelf de tekst die de betekenis van de marker beschrijft. Deze tekst wordt door hulpsoftware gebruikt als alternatieve tekst van het icoon. De boodschap van het icoon is toegankelijk voor alle bezoekers.',
       },
     },
   },
@@ -416,7 +416,7 @@ export const OrderedListCustomMarkerIconLabelOverride: Story = {
     docs: {
       description: {
         story:
-          'Een geordende lijst met een icoon als marker. Het icoon is zichtbaar voor hulpsoftware en bevat zelf de tekst die de betekenis van de marker beschrijft, echter deze tekst is ontoegankelijk. Deze ontoegankelijke tekst word overschrijven door een visueel verborgen tekst, die wel toegankelijk is en in plaats van de ontoegankelijke tekst word gelezen voor screenreadergebruikers.',
+          'Een geordende lijst met een icoon als marker. Het icoon is zichtbaar voor hulpsoftware en bevat zelf de tekst die de betekenis van de marker beschrijft, echter deze tekst is ontoegankelijk. Deze ontoegankelijke tekst wordt overschreven door een visueel verborgen tekst, die wel toegankelijk is en in plaats van de ontoegankelijke tekst wordt gelezen voor screenreadergebruikers.',
       },
     },
   },
@@ -514,8 +514,8 @@ export const OrderedListNLHTMLAll: Story = {
     docs: {
       description: {
         story: `Een geordende lijst zonder classes binnen een NL HTML-component.
-        De styling word behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-element en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
-        De semantiek word behouden door de HTML-attributen \`role="list"\ en \`role="listitem"\`.`,
+        De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
+        De semantiek wordt behouden door de HTML-attributen \`role="list"\ en \`role="listitem"\`.`,
       },
     },
   },
@@ -537,8 +537,8 @@ export const OrderedListNLHTMLOrderedList: Story = {
     docs: {
       description: {
         story: `Een geordende lijst zonder classes binnen een NL HTML-component.
-        De styling word behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-element en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--ordered-list\` class.
-        De semantiek word behouden door de HTML-attributen \`role="list"\ en \`role="listitem"\`.`,
+        De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--ordered-list\` class.
+        De semantiek wordt behouden door de HTML-attributen \`role="list"\ en \`role="listitem"\`.`,
       },
     },
   },
@@ -558,7 +558,7 @@ export const OrderedListAlternativeHTMLDivs: Story = {
     docs: {
       description: {
         story:
-          'Een geordende lijst opgemaakt met meerdere HTML-elementen `div`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, als wanneer de standaard HTML-elementen worden gebruikt.',
+          'Een geordende lijst opgemaakt met meerdere HTML-elementen `div`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -578,7 +578,7 @@ export const OrderedListAlternativeHTMLSpans: Story = {
     docs: {
       description: {
         story:
-          'Een geordende lijst is opgemaakt met meerdere HTML-elementen `span`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, als wanneer de standaard HTML-elementen worden gebruikt.',
+          'Een geordende lijst is opgemaakt met meerdere HTML-elementen `span`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -605,7 +605,7 @@ export const OrderedListNLParagraphsInListItem: Story = {
     docs: {
       description: {
         story:
-          'In deze geordende lijst worden NL Paragraph componenten in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed',
+          'In deze geordende lijst worden NL Paragraph-componenten in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.',
       },
     },
   },
@@ -634,7 +634,7 @@ export const OrderedListLongItemAcrossColumns: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst is verdeeld in meerdere kolommen. De tekst van een item loopt door in de volgende kolom. Het nummer van het item blijft in de eerste kolom blijft staan.',
+          'Deze geordende lijst is verdeeld in meerdere kolommen. De tekst van een item loopt door in de volgende kolom. Het nummer van het item blijft staan in de eerste kolom.',
       },
     },
   },
@@ -787,7 +787,7 @@ export const OrderedListSoManyItems: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze geordende lijst bestaat uit 30 items. Ook met heel veel items wordt de opmaak goed toegepast',
+        story: 'Deze geordende lijst bestaat uit 30 items. Ook met heel veel items wordt de opmaak goed toegepast.',
       },
     },
   },
@@ -815,7 +815,7 @@ export const OrderedListLinkInItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'In deze geordende lijst staat in ieder lijst-item een link.',
+        story: 'In deze geordende lijst staat in elk lijst-item een link.',
       },
     },
   },
@@ -889,7 +889,7 @@ export const OrderedListCssReset: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'In deze geordende lijst wordt de CSS niet toegepast. De uitlijning gaat nog steeds goed',
+        story: 'In deze geordende lijst wordt de CSS niet toegepast. De uitlijning gaat nog steeds goed.'
         // Ziet disabled er nog uit als disabled
         // Gaat spacing nog goed
         // Blijft minimum target size goed
