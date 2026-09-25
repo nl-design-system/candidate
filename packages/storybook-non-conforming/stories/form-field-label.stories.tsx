@@ -63,7 +63,8 @@ export const FormFieldLabelWithInteractiveContent: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label bevat een link. Dat moet niet: een klik op het label activeert namelijk ook het gekoppelde veld, waardoor de link niet meer apart te bedienen is.`,
+        // suggestie:     story: 'Fout: Het label krijgt focus tijdens het navigeren met de Tab-toets doordat er handmatig een tab-volgorde (`tabindex`) is ingesteld. Een label is informatief, niet interactief, en hoort niet focusbaar te zijn. Alleen het gekoppelde invoerveld moet focus krijgen.',
       },
     },
   },
@@ -75,7 +76,7 @@ export const FormFieldLabelWithToggletip: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Het label bevat een Toggletip. Dat moet niet: een klik op het label activeert namelijk ook het gekoppelde veld, waardoor de Toggletip niet meer apart te bedienen is.`,
       },
     },
   },
@@ -83,6 +84,7 @@ export const FormFieldLabelWithToggletip: Story = {
 
 export const FormFieldLabelAsDisplayBlock: Story = {
   name: `Fout: Form Field Label als display: block waardoor een te groot klikgebied ontstaat`,
+  // peter: Dit vind ik gek. Een display: block is niet de (enige) reden van het formaat van het element. Wat ik denk dat je wil beschrijven is dat het klikgebied niet te groot moet zijn. De focus op display: block leid daar vanaf
   args: {},
   parameters: {
     docs: {
@@ -94,12 +96,13 @@ export const FormFieldLabelAsDisplayBlock: Story = {
 };
 
 export const FormFieldLabelWithRequiredOptionalTextInLabel: Story = {
-  name: `Fout: Form Field Label met required/optional tekst in de label in plaats van Form Field Label Suffix`,
+  name: `Fout: Form Field Label met 'verplicht' tekst in de label in plaats van in Form Field Label Suffix`,
   args: {},
   parameters: {
     docs: {
       description: {
         story: `...`,
+        // Jeff: Moeten we deze Story uitbreiden/dupliceren met een variant voor 'niet verplicht'?
       },
     },
   },
@@ -111,31 +114,41 @@ export const FormFieldLabelWithAsteriskForOptional: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een asterisk (*) wordt gebruikt om aan te geven dat een veld optioneel is. Dit zorgt voor verwarring, omdat een asterisk algemeen bekendstaat als "verplicht". Gebruik voor een optioneel veld de Form Field Label Suffix met de tekst "optioneel".`,
+        // suggestie:     story: 'Fout: Een asterisk (*) wordt gebruikt om aan te geven dat een veld optioneel is. Dit zorgt voor verwarring, omdat een asterisk algemeen bekendstaat als "verplicht". Gebruik voor een optioneel veld de Form Field Label Suffix met de tekst "optioneel".',
+        // jeff: Moeten we deze Story uitbreiden/dupliceren met een variant waarin de asterisk (*) juist wordt ingezet voor 'verplicht'? Om daarbij de fout/waarschuwing te geven dat een asterisk überhaupt een slech idee is?
+        // roos: Bij de eerste zin dacht ik even dat we zeggen dat een asterisk wordt gebruikt voor optionele velden, terwijl ik een asterisk juist ken als aanduiding voor verplichte velden. Uit de tweede zin wordt pas duidelijk dat het om de foutieve toepassing gaat. Kunnen we dit in de eerste zin al duidelijker maken?
+      },
+    },
+  },
+};
+
+// Voorbeeld uitwerking
+// <FormFieldLabel for="email">Email</FormFieldLabel>
+// <p id="other-text">Voer je e-mailadres in.</p>
+// <input
+//   id="email"
+//   aria-labelledby="other-text"
+// />
+export const FormFieldLabelInvalidAriaLabelledBy: Story = {
+  name: 'Fout: Form Field Label overschreven door aria-labelledby naar ander element',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een invoerveld waarvan het WAI-ARIA \`aria-labelledby\` attribuut verwijst naar een ander element dan het gekoppelde HTML \`label\` element in de \`FormFieldLabel\` component. Hierdoor wordt de toegankelijke naam bepaald door het verkeerde element en wordt de \`FormFieldLabel\` component genegeerd. Gebruik het WAI-ARIA \`aria-labelledby\` attribuut voor aanvullende informatie.`,
       },
     },
   },
 };
 
 export const FormFieldLabelOverriddenByAriaLabelledby: Story = {
-  name: `Fout: Form Field Label waarbij aria-labelledby het HTML label overschrijft`,
+  name: `Fout: Form Field Label waarbij aria-labelledby naar een HTML span linked en het HTML label overschrijft`,
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `...`,
-      },
-    },
-  },
-};
-
-export const FormFieldLabelWithRedundantAriaLabelledby: Story = {
-  name: `Fout: Form Field Label met aria-labelledby terwijl het HTML label al voldoende is`,
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `...`,
+        story: `Hier wordt de toegankelijke naam van het invoerveld overschreven met een \`aria-labelledby\`-attribuut. Dat moet niet: het zichtbare label is dan niet meer de bron van de toegankelijke naam. Dit is verwarrend voor bezoekers die het zichtbare label wél zien én een screenreader gebruiken, omdat wat ze horen dan afwijkt van wat ze lezen.`,
       },
     },
   },
@@ -171,7 +184,7 @@ export const FormFieldLabelWithTextInputInInputSlot: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Text Input in het label genest, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor Radio Buttons, Checkboxes en Switches omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en bij lange tekstuele labels verslechtert dit de bediening. Plaats het invoerveld in plaats daarvan onder het label.`,
       },
     },
   },
@@ -183,7 +196,7 @@ export const FormFieldLabelWithFileInputInInputSlot: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een File Input in het label genest, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor Radio Buttons, Checkboxes en Switches omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en lange tekstuele labels verslechtert dit de bediening. Plaats het invoerveld in plaats daarvan onder het label.`,
       },
     },
   },
@@ -333,7 +346,7 @@ export const FormFieldLabelWithSelectComboboxInInputSlot: Story = {
   },
 };
 
-export const FormFieldLabelContainsDescriptionText Story = {
+export const FormFieldLabelContainsDescriptionText: Story = {
   name: `Fout: Form Field Label met description tekst in Form Field Label`,
   args: {},
   parameters: {

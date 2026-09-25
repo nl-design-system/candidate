@@ -63,7 +63,7 @@ export const FormFieldLabelWithNestedInput: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Hier is het invoerveld genest in het label. Doordat het invoerveld binnen het label staat, krijgt het invoerveld de labeltekst als toegankelijke naam. Een screenreader leest het label voor zodra het invoerveld focus krijgt, en een bezoeker kan op het label klikken om het veld te focussen of te activeren.,
+        story: `Hier is het invoerveld genest in het label. Doordat het invoerveld binnen het label staat, krijgt het invoerveld de labeltekst als toegankelijke naam. Een screenreader leest het label voor zodra het invoerveld focus krijgt, en een bezoeker kan op het label klikken om het veld te focussen of te activeren.`,
       },
     },
   },
@@ -87,7 +87,7 @@ export const FormFieldLabelTypeOptionRadio: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label in de option-variant naast een radiobutton. Zowel het label als de radiobutton zijn klikbaar, en de tekst staat naast de radiobutton. Form Field Label als tekst naast een Radio Button. Zowel de tekst als de Radio Button zijn klikbaar`,
       },
     },
   },
@@ -99,7 +99,7 @@ export const FormFieldLabelTypeOptionCheckbox: Story = {
   parameters: {
     docs: {
       description: {
-        story: Een label in de option-variant naast een checkbox. Zowel het label als de checkbox zijn klikbaar, en de tekst staat op één regel naast de checkbox.`,
+        story: `Een label in de option-variant naast een checkbox. Zowel het label als de checkbox zijn klikbaar, en de tekst staat op één regel naast de checkbox.`,
       },
     },
   },
@@ -128,7 +128,7 @@ export const FormFieldLabelHeadingTypeInherit: Story = {
   parameters: {
     docs: {
       description: {
-        story: `De \`Form Field Label\` component correct functioneert wanneer het onderdeel is van een heading, bijvoorbeeld in een meerstappenformulier. De semantiek van zowel de heading als het gekoppelde formulier-element moet behouden blijven. De styling van het heading-element word overgenomen op de \`Form Field Label\` component.`,
+        story: `Het label staat hier in een kop, bijvoorbeeld bovenaan een stap in een meerstappenformulier. Een screenreader kondigt de tekst als kop en als label voor het invoerveld aan. Visueel neemt het label de opmaak van de kop over.`,
       },
     },
   },
@@ -140,7 +140,7 @@ export const FormFieldLabelWithTypeOptionAndHtmlFor: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een label in de option-variant, waarbij het invoerveld genest is in het label en gekoppeld is met de HTML-attributen `for` en `id`.`,
+        story: `Een label in de option-variant, waarbij het invoerveld genest is in het label en gekoppeld is met de HTML-attributen \`for\` en \`id\`.`,
       },
     },
   },
@@ -158,18 +158,6 @@ export const FormFieldLabelDisabled: Story = {
   },
 };
 
-export const xxxx: Story = {
-  name: `Form Field Label Suffix`,
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `...`,
-      },
-    },
-  },
-};
-
 // Voorbeeld uitwerking
 // <FormFieldLabel for="email">Email</FormFieldLabel>
 // <FormFieldLabelSuffix id="email-required">Dit veld is verplicht.</FormFieldLabelSuffix>
@@ -182,7 +170,7 @@ export const xxxx: Story = {
 // />
 
 export const FormFieldLabelWithSuffixOptionalPattern: Story = {
-  name: "Form Field Label met Form Field Label Suffix",
+  name: 'Patroon: Form Field Label met Form Field Label Suffix',
   args: {},
   parameters: {
     docs: {
@@ -232,7 +220,7 @@ export const xxxx: Story = {
 // />
 
 export const FormFieldLabelSuffixAndDescriptionPattern: Story = {
-  name: "Patroon: Form Field Label met Form Field Label Suffix en Form Field Description",
+  name: 'Patroon: Form Field Label met Form Field Label Suffix en Form Field Description',
   args: {},
   parameters: {
     docs: {
@@ -244,30 +232,6 @@ export const FormFieldLabelSuffixAndDescriptionPattern: Story = {
 };
 export const FormFieldLabelWithSuffixDifferentLineHeightPattern: Story = {
   name: `Patroon: Form Field Label met afwijkende line-height tussen Label en Suffix`,
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Een label met een suffix. Omdat dit twee losse componenten zijn, kan de suffix een eigen regelafstand krijgen, onafhankelijk van het label.`,
-      },
-    },
-  },
-};
-
-export const xxxx: Story = {
-  name: `Form Field Label met HTML for attribuut`,
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `...`,
-      },
-    },
-  },
-};
-
-export const xxxx: Story = {
-  name: `Form Field Label zonder HTML for attribuut maar met geneste input`,
   args: {},
   parameters: {
     docs: {
@@ -302,7 +266,7 @@ export const FormFieldLabelLang: Story = {
   },
 };
 
-export const FormFieldLabelDir Story = {
+export const FormFieldLabelDir: Story = {
   name: `Form Field Label met HTML dir attribuut`,
   args: {},
   parameters: {
@@ -362,6 +326,7 @@ export const FormFieldLabelOptionSpan: Story = {
   },
 };
 
+// Het label krijgt de styling via een so genoemde element selector in plaats van een eigen class attribute.
 export const FormFieldLabelNlHtmlAll: Story = {
   name: `Form Field Label binnen nl-html--all`,
   args: {},
@@ -386,7 +351,7 @@ export const FormFieldLabelNlHtmlFormFieldLabel: Story = {
   },
 };
 
-export const FormFieldLabelTypeInheritDisabled Story = {
+export const FormFieldLabelTypeInheritDisabled: Story = {
   name: `Form Field Label met type="inherit" gecombineerd met disabled`,
   args: {},
   parameters: {
@@ -494,38 +459,6 @@ export const FormFieldLabelWideScreen: Story = {
   },
 };
 
-// Voorbeeld uitwerking
-// <FormFieldLabel for="email">Email</FormFieldLabel>
-// <p id="other-text">Voer je e-mailadres in.</p>
-// <input
-//   id="email"
-//   aria-labelledby="other-text"
-// />
-
-export const FormFieldLabelInvalidAriaLabelledBy: Story = {
-  name: "Form Field Label overschreven door aria-labelledby",
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Fout: Een invoerveld waarvan het WAI-ARIA \`aria-labelledby\` attribuut verwijst naar een ander element dan het gekoppelde HTML \`label\` element in de \`FormFieldLabel\` component. Hierdoor wordt de toegankelijke naam bepaald door het verkeerde element en wordt de \`FormFieldLabel\` component genegeerd. Gebruik het WAI-ARIA \`aria-labelledby\` attribuut voor aanvullende informatie.`,
-      },
-    },
-  },
-};
-
-export const FormFieldLabelLineHeight: Story = {
-  name: "Form Field Label met afwijkende line-height voor Suffix",
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Test dat een Form Field Label correct wordt weergegeven wanneer de Form Field Label Suffix een afwijkende line-height heeft. Controleer dat de tekst visueel goed uitgelijnd blijft en dat de spacing tussen label en suffix niet ongewenst verandert.`,
-      },
-    },
-  },
-};
-
 export const FormFieldLabelTypeOptionDisabled: Story = {
   name: `Form Field Label met type="option" en disabled`,
   args: {},
@@ -551,13 +484,14 @@ export const FormFieldLabelRedundantAriaLabelledBy: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een invoerveld waarvan WAI-ARIA `aria-labelledby` attribuut verwijst naar het gekoppelde `FormFieldLabel`. Hoewel dit functioneel werkt, is het attribuut overbodig omdat de HTML `label` element al middels de HTML `for` attribuut de toegankelijke naam bepaalt.`,
+                // story: `Er wordt hier onnodig een aria-labelledby-attribuut op het invoerveld toegevoegd, terwijl het label al goed gekoppeld is aan het invoerveld. Dat moet niet: hierdoor ontstaat het risico dat de toegankelijke naam en de zichtbare labeltekst uit elkaar gaan lopen zodra één van beide wordt aangepast, wat verwarrend is voor screenreadergebruikers en bezoekers die gebruik maken van spraakgestuurde navigatie.`,
+        story: `Een invoerveld waarvan WAI-ARIA \`aria-labelledby\` attribuut verwijst naar het gekoppelde \`FormFieldLabel\`. Hoewel dit functioneel werkt, is het attribuut overbodig omdat de HTML \`label\` element al middels de HTML \`for\` attribuut de toegankelijke naam bepaalt.`,
       },
     },
   },
 };
 
-export const FormFieldLabelWithTextInputDefaultPattern Story = {
+export const FormFieldLabelWithTextInputDefaultPattern: Story = {
   name: `Patroon: Text Input met toegankelijke naam via Form Field Label`,
   args: {},
   parameters: {
