@@ -62,7 +62,8 @@ export const OrderedListDefault: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een standaard geordende lijst. Elk item krijgt automatisch een oplopend nummer, beginnend bij 1.',
+        story:
+          'Een geordende lijst met drie items. Elk item krijgt automatisch een oplopend nummer, beginnend bij 1. De lijst is visueel herkenbaar als een geordende lijst en screenreadergebruikers horen de items in de juiste volgorde voorgelezen.',
       },
     },
   },
@@ -86,7 +87,7 @@ export const OrderedListNestedOrderedList: Story = {
     docs: {
       description: {
         story:
-          'Een geordende lijst met een geordende lijst in een van de items. De sublijst begint opnieuw bij 1, los van de nummering van de hoofdlijst. Visueel is de sublijst ingesprongen vergeleken met het item daarboven.',
+          'Een geordende lijst met een geordende geneste lijst in een van de items. De geneste lijst begint opnieuw bij 1 en is visueel ingesprongen vergeleken met het item daarboven, , zodat de verschillende niveaus goed te onderscheiden zijn.',
       },
     },
   },
@@ -110,7 +111,7 @@ export const OrderedListNestedUnorderedList: Story = {
     docs: {
       description: {
         story:
-          'Een geordende lijst met een ongeordende lijst in een van de items. De sublijst krijgt bolletjes in plaats van cijfers en is visueel ingesprongen vergeleken met het item daarboven.',
+          'Een geordende lijst met een ongeordende geneste lijst in een van de items. De ongeordende lijst krijgt bolletjes in plaats van nummers als markers en is visueel ingesprongen vergeleken met het item daarboven, zodat de verschillende niveaus goed te onderscheiden zijn.',
       },
     },
   },
@@ -139,7 +140,8 @@ export const OrderedListThreeLevelsNesting: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'Een geordende lijst met drie niveaus. Het eerste niveau gebruikt de hoofdnummers, de geneste lijst begint opnieuw bij 1 en is visueel ingesprongen vergeleken met het item daarboven, zodat de verschillende niveaus goed te onderscheiden zijn.',
       },
     },
   },
@@ -159,7 +161,7 @@ export const OrderedListStart: Story = {
     docs: {
       description: {
         story:
-          'Deze lijst is wel geordend, maar de content zorgt ervoor dat het niet logisch is om bij 1 te starten. De nummering loopt vanaf het startnummer door zoals normaal.',
+          'Een geordende lijst met een aangepast startnummer. De nummering begint niet bij 1, maar bij het opgegeven getal, zodat de volgorde past bij de context van de inhoud.',
       },
     },
   },
@@ -179,7 +181,7 @@ export const OrderedListReversed: Story = {
     docs: {
       description: {
         story:
-          'Deze lijst is wel geordend, maar de content zorgt ervoor dat het niet logisch is om oplopend te nummeren. Daarom is de nummering omgedraaid.',
+          'Een geordende lijst met een aflopende nummering. De items worden van hoog naar laag genummerd, zodat de volgorde past bij de context van de inhoud.',
       },
     },
   },
@@ -197,7 +199,8 @@ export const OrderedListLowercaseLetters: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze lijst gebruikt kleine letters (a, b, c) in plaats van nummers (1, 2, 3) om de items te ordenen.',
+        story:
+          'Een geordende lijst met kleine letters (a, b, c) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
       },
     },
   },
@@ -215,7 +218,8 @@ export const OrderedListUppercaseLetters: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze lijst gebruikt hoofdletters (A, B, C) in plaats van nummers (1, 2, 3) om de items te ordenen.',
+        story:
+          'Een geordende lijst met hoofdletters (A, B, C) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
       },
     },
   },
@@ -234,7 +238,7 @@ export const OrderedListLowercaseRomanNum: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst gebruikt Romeinse cijfers in kleine letters (i, ii, iii) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
+          'Een geordende lijst met Romeinse cijfers in kleine letters (i, ii, iii) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
       },
     },
   },
@@ -253,7 +257,7 @@ export const OrderedListUppercaseRomanNum: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst gebruikt Romeinse cijfers hoofdletters (I, II, III) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
+          'Een geordende lijst met Romeinse cijfers hoofdletters (I, II, III) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
       },
     },
   },
@@ -273,14 +277,19 @@ export const OrderedListArabicNum: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'Deze geordende lijst heeft de ingestelde taal Arabisch, bevat Arabische tekst en heeft Arabisch-Indische nummering in plaats van de standaard nummers.',
+        story: `Een geordende lijst met Arabische tekst en Arabisch-Indische nummering.
+
+        De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De NL Ordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic;\`.
+
+        Dit wordt aangeboden vanuit de NL Ordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
+
+        Deze functionaliteit kan makkelijk uitgebreid worden voor andere talen middels dezelfde aanpak, via het HTML-attribuut \`lang\` en de CSS-eigenschap \`list-style-type\`.`,
       },
     },
   },
 };
 
-// <ol class="nl-ordered-list" role="list" lang="ar">
+// <ol class="nl-ordered-list" role="list" lang="ar" type="i">
 //   <li class="nl-ordered-list__item">تحميل المستندات</li>
 //   <li class="nl-ordered-list__item">تقديم الطلب</li>
 //   <li class="nl-ordered-list__item">انتظار التأكيد</li>
@@ -292,8 +301,16 @@ export const OrderedListTypeOverridesLanguage: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'Deze geordende lijst heeft de ingestelde taal Arabisch en het ingesteld type Romeinse cijfers. Het type krijgt voorrang op de taal: In dit geval worden dus kleine Romeinse cijfers (i, ii, iii) getoond in plaats van Arabisch-Indische nummers.',
+        story: `Een geordende lijst met Arabische tekst en Romeinse cijfers in kleine letters (i, ii, iii) voor de nummering.
+
+        De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De nummering van de lijst word ingesteld op Romeinse cijfers in kleine letters via het HTML-attribuut \`type="i"\`.
+
+        De NL Ordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic;\`.
+
+        Dit wordt aangeboden vanuit de NL Ordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
+
+        Het type krijgt voorrang op de taal, in dit geval worden dus kleine Romeinse cijfers getoond in plaats van de Arabisch-Indische nummers.
+        `,
       },
     },
   },
@@ -326,8 +343,7 @@ export const OrderedListCustomMarkerLabel: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'In deze geordende lijst begint ieder item met een icoon. Het icoon zelf is verborgen voor hulpsoftware, maar de betekenis ervan wordt in plaats daarvan als tekst voorgelezen. Deze tekst is visueel verborgen, maar wel beschikbaar voor screenreadergebruikers.',
+        story: `Een geordende lijst met een icoon als marker. Het icoon is verborgen voor hulpsoftware. De betekenis van de marker wordt aangeboden als visueel verborgen tekst welke wordt opgelezen voor screenreadergebruikers. De boodschap van de icoon is toegankelijk voor alle bezoekers.`,
       },
     },
   },
@@ -360,8 +376,7 @@ export const OrderedListCustomMarkerAriaLabelledby: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'In deze geordende lijst begint ieder item met een icoon. De betekenis van het icoon wordt aan SCREENREADERGEBRUIKERS doorgegeven via het WAI-ARIA-attribuut `aria-labelledby` dat verwijst naar een onzichtbare tekst. De tekst zelf is verborgen voor hulpsoftware.',
+        story: `Een geordende lijst met een icoon als marker. Het icoon is verborgen voor hulpsoftware. De betekenis van de marker is aangeboden als tekst welke verborgen wordt voor alle bezoekers. De boodschap van de icoon is toegankelijk gemaakt voor screenreadergebruikers via het het WAI-ARIA-attribuut \`aria-labelledby\` gekoppeld aan de marker. De boodschap van de icoon is toegankelijk voor alle bezoekers.`,
       },
     },
   },
@@ -375,13 +390,24 @@ export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'Een geordende lijst met een icoon als marker. Het icoon is zichtbaar voor hulpsoftware en bevat zelf de tekst die de betekenis van de marker beschrijft. Deze tekst wordt door hulpsoftware gebruikt als alternatieve tekst van het icoon. De boodschap van de icoon is toegankelijk voor alle bezoekers.',
       },
     },
   },
 };
 
-// Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} markerLabel="1." />
+// <ol class="nl-ordered-list" role="list">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//       <span aria-labelledby="label-id-1">
+//         <svg><title>Number One Icon</title>...</svg>
+//       </span>
+//      <span aria-hidden="true" id="label-id-1">Stap 1.{" "}</span>
+//     </span>
+//     Verzamel documenten
+//   </li>
+// </ol>
 // Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label.
 export const OrderedListCustomMarkerIconLabelOverride: Story = {
   name: 'Ordered List met Custom Marker met informatieve icoon met foutieve alternatieve tekst overschreven door Marker Label',
@@ -390,7 +416,7 @@ export const OrderedListCustomMarkerIconLabelOverride: Story = {
     docs: {
       description: {
         story:
-          'In deze geordende lijst begint ieder item met een icoon. De iconen hebben een verkeerde alternatieve tekst. De eigenschap \`markerLabel\` overschrijft de verkeerde tekst,, zodat screenreadergebruikers alsnog de juiste betekenis van het icoon horen.',
+          'Een geordende lijst met een icoon als marker. Het icoon is zichtbaar voor hulpsoftware en bevat zelf de tekst die de betekenis van de marker beschrijft, echter deze tekst is ontoegankelijk. Deze ontoegankelijke tekst word overschrijven door een visueel verborgen tekst, die wel toegankelijk is en in plaats van de ontoegankelijke tekst word gelezen voor screenreadergebruikers.',
       },
     },
   },
@@ -409,7 +435,7 @@ export const OrderedListHidden: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst is niet zichtbaar voor bezoekers en wordt ook niet voorgelezen door screenreaders.',
+          'Een geordende lijst die verborgen is voor bezoekers en voor screenreadergebruikers. De inhoud is aanwezig in de code, maar niet zichtbaar en niet voorleesbaar.',
       },
     },
   },
@@ -428,7 +454,7 @@ export const OrderedListLangRTL: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst heeft de ingestelde taal Arabisch en bevat Arabische tekst, dit is een taal die van rechts naar links wordt gelezen.',
+          'Een geordende lijst met Arabische tekst, dit is een taal die van rechts naar links wordt gelezen. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`.',
       },
     },
   },
@@ -447,7 +473,7 @@ export const OrderedListDirRTL: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst heeft de ingesteld richting rechts-naar-links en wordt van rechts naar links weergegeven: de nummers staan aan de rechterkant en de tekst loopt van rechts naar links.',
+          'Een geordende lijst die rechts-naar-links wordt weergegeven. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`. De nummering staat aan de rechterkant en de tekst loopt van rechts naar links.',
       },
     },
   },
@@ -466,13 +492,13 @@ export const OrderedListDirParentOnly: Story = {
     docs: {
       description: {
         story:
-          'De Arabische tekst in deze geordende lijst wordt rechts naar links weergegeven en laat zien wat er gebeurt wanneer het HTML-attribuut `dir` alleen op de lijst als geheel wordt gezet, en niet apart op elk item.',
+          'Een geordende lijst met Arabische tekst, de nummering start aan de rechterkant en de tekst loopt van rechts naar links. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`.',
       },
     },
   },
 };
 
-// <div class="nl-html--all">
+// <div class="nl-html nl-html--all">
 //   <ol role="list">
 //     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
 //     <li role="listitem">Je oude paspoort</li>
@@ -487,13 +513,15 @@ export const OrderedListNLHTMLAll: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Een geordende lijst zonder classes binnen een NL HTML-component.
+        De styling word behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-element en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
+        De semantiek word behouden door de HTML-attributen \`role="list"\ en \`role="listitem"\`.`,
       },
     },
   },
 };
 
-// <div class="nl-html--ordered-list">
+// <div class="nl-html nl-html--ordered-list">
 //   <ol role="list">
 //     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
 //     <li role="listitem">Je oude paspoort</li>
@@ -508,7 +536,9 @@ export const OrderedListNLHTMLOrderedList: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story: `Een geordende lijst zonder classes binnen een NL HTML-component.
+        De styling word behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-element en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--ordered-list\` class.
+        De semantiek word behouden door de HTML-attributen \`role="list"\ en \`role="listitem"\`.`,
       },
     },
   },
@@ -528,7 +558,7 @@ export const OrderedListAlternativeHTMLDivs: Story = {
     docs: {
       description: {
         story:
-          'Deze lijst is opgemaakt met meerdere HTML-elementen `div`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, als wanneer de standaard HTML-elementen worden gebruikt.',
+          'Een geordende lijst opgemaakt met meerdere HTML-elementen `div`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, als wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -548,7 +578,7 @@ export const OrderedListAlternativeHTMLSpans: Story = {
     docs: {
       description: {
         story:
-          'Deze lijst is opgemaakt met meerdere HTML-elementen `span`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, als wanneer de standaard HTML-elementen worden gebruikt.',
+          'Een geordende lijst is opgemaakt met meerdere HTML-elementen `span`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, als wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -561,8 +591,7 @@ export const OrderedListHTMLParagraphsInListItem: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          `In deze geordende lijst worden alinea's in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.`,
+        story: `In deze geordende lijst worden alinea's in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.`,
       },
     },
   },
@@ -625,7 +654,7 @@ export const OrderedListHorizontalScrollMobile: Story = {
   },
 };
 
-// <div class="nl-html--all">
+// <div class="nl-html nl-html--all">
 //   <ol role="list">
 //     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
 //     <li role="listitem">
@@ -671,7 +700,8 @@ export const OrderedListRichTextEditorNested: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'STORY_DESCRIPTION',
+        story:
+          'Een geordende lijst in een Rich Text Editor met meerdere niveaus. De inhoud blijft goed uitgelijnd en de nesting blijft zichtbaar, zodat bezoekers de hiërarchie in de lijst gemakkelijk kunnen volgen.',
       },
     },
   },
@@ -845,7 +875,8 @@ export const OrderedListLangArabicReversed: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze lijst is geordend met Arabisch-Indische cijfers en loopt af in plaats van op.',
+        story:
+          'Een geordende lijst met Arabische tekst, is geordend met Arabisch-Indische cijfers en loopt af in plaats van op. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`. De richting van de ordening wordt omgedraaid met het HTML-attribuut `reversed`.',
       },
     },
   },
@@ -874,7 +905,8 @@ export const OrderedListComponentCssNoThemeCss: Story = {
   parameters: {
     docs: {
       description: {
-        story: '',
+        story:
+          'Een geordende lijst met de stijl van het thema toegepast, maar zonder de component-CSS. De lijst blijft leesbaar en de hoofdlijnen van de opmaak blijven behouden, zodat het effect van de thema-styling zichtbaar is.',
         // Ziet disabled er nog uit als disabled
         // Gaat spacing nog goed
         // Blijft minimum target size goed
@@ -890,7 +922,8 @@ export const OrderedListInvalidCssValues: Story = {
   parameters: {
     docs: {
       description: {
-        story: '...',
+        story:
+          'Een geordende lijst met ongeldige CSS-waarden voor de stijleigenschappen. De visuele weergave is bewust verstoord, zodat zichtbaar is hoe de component reageert wanneer de browser geen geldige stijl meer kan toepassen. Ondanks de ongeldige CSS-waarden blijft de component visueel bruikbaar en toegankelijk.',
       },
     },
   },
