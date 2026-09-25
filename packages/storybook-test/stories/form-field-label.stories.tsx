@@ -105,7 +105,7 @@ export const FormFieldLabelTypeOptionCheckbox: Story = {
   },
 };
 
-export const xxxx: Story = {
+export const FormFieldLabelTypeOptionSwitch: Story = {
   name: `OPTION_ON_HOLD Form Field Label met type="option" (switch)`,
   args: {},
   parameters: {
@@ -248,7 +248,7 @@ export const FormFieldLabelWithSuffixDifferentLineHeightPattern: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label met een suffix. Omdat dit twee losse componenten zijn, kan de suffix een eigen regelafstand krijgen, onafhankelijk van het label.`,
       },
     },
   },
@@ -532,7 +532,7 @@ export const FormFieldLabelTypeOptionDisabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Een label van de option-variant, met disabled-opmaak: de tekst krijgt de kleur van een disabled label. Gebruik deze variant bij disabled Radio Buttons, Checkboxes en Switches.`,
       },
     },
   },
