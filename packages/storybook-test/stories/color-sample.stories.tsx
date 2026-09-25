@@ -1,7 +1,7 @@
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { useId } from 'react';
+import { HTMLAttributes, useId } from 'react';
 import '../../components-css/color-sample-css/src/color-sample.scss';
 import packageJSON from '../../components-react/color-sample-react/package.json';
 import { ColorSample } from '../../components-react/color-sample-react/src/color-sample';
@@ -510,10 +510,10 @@ export const Japanese: Story = {
   },
 };
 
-const useColorSample = ({ value: string }): HTMLAttributes<HTMLElement> => ({
+const useColorSample = ({ id, value }: { id?: string; value: string }): HTMLAttributes<HTMLElement> => ({
   className: 'nl-color-sample',
   role: 'img',
-  ariaLabelledby: id,
+  'aria-labelledby': id,
   style: { color: value },
 });
 
@@ -551,7 +551,7 @@ export const ColorSampleSpan: Story = {
 
     return (
       <Paragraph>
-        <span className="nl-color-sample" role="img" aria-labelledby={id} style={{ color: value }}></span>{' '}
+        <span {...useColorSample({ value })}></span>
         <span id={id}>{context.parameters['ariaLabelledBy']}</span>
       </Paragraph>
     );
@@ -579,7 +579,7 @@ export const ColorSampleSpaOpacity: Story = {
 
     return (
       <Paragraph>
-        <span className="nl-color-sample" role="img" aria-labelledby={id} style={{ color: value }}></span>{' '}
+        <span {...useColorSample({ value })}></span>
         <span id={id}>{context.parameters['ariaLabelledBy']}</span>
       </Paragraph>
     );
@@ -607,7 +607,7 @@ export const ColorSampleSpanSemiTransparent: Story = {
 
     return (
       <Paragraph>
-        <span className="nl-color-sample" role="img" aria-labelledby={id} style={{ color: value }}></span>{' '}
+        <span {...useColorSample({ value })}></span>
         <span id={id}>{context.parameters['ariaLabelledBy']}</span>
       </Paragraph>
     );
