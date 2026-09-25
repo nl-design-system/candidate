@@ -143,22 +143,12 @@ const meta = {
         WCAG22_324_CONSISTENT_IDENTIFICATION,
         WCAG22_326_CONSISTENT_HELP,
         WCAG22_331_ERROR_IDENTIFICATION,
-        WCAG22_332_LABELS_OR_INSTRUCTIONS,
         WCAG22_333_ERROR_SUGGESTION,
         WCAG22_334_ERROR_PREVENTION_LEGAL_FINANCIAL_DATA,
         WCAG22_337_REDUNDANT_ENTRY,
         WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
         WCAG22_412_NAME_ROLE_VALUE,
         WCAG22_413_STATUS_MESSAGES,
-      ],
-      notTested: [
-        WCAG22_132_MEANINGFUL_SEQUENCE,
-        WCAG22_133_SENSORY_CHARACTERISTICS,
-        WCAG22_141_USE_OF_COLOR,
-        WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_1410_REFLOW,
-        WCAG22_312_LANGUAGE_OF_PARTS,
       ],
     },
     tokens,
@@ -205,7 +195,11 @@ export const FormFieldDescriptionWithParagraphElement: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -213,8 +207,8 @@ export const FormFieldDescriptionWithParagraphElement: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -256,7 +250,11 @@ export const FormFieldDescriptionWithMultipleParagraphElements: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -264,8 +262,8 @@ export const FormFieldDescriptionWithMultipleParagraphElements: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -306,7 +304,11 @@ export const FormFieldDescriptionWithParagraphComponent: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -314,8 +316,8 @@ export const FormFieldDescriptionWithParagraphComponent: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -357,7 +359,11 @@ export const FormFieldDescriptionWithMultipleParagraphComponents: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -365,8 +371,8 @@ export const FormFieldDescriptionWithMultipleParagraphComponents: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -407,7 +413,11 @@ export const FormFieldDescriptionWithPhrasingContent: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -415,8 +425,8 @@ export const FormFieldDescriptionWithPhrasingContent: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -457,7 +467,11 @@ export const FormFieldDescriptionRelationWithInput: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -465,8 +479,8 @@ export const FormFieldDescriptionRelationWithInput: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -502,7 +516,11 @@ export const FormFieldDescriptionAsParagraph: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -510,8 +528,8 @@ export const FormFieldDescriptionAsParagraph: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -552,7 +570,11 @@ export const FormFieldDescriptionAboveTextInput: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -560,8 +582,8 @@ export const FormFieldDescriptionAboveTextInput: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -603,7 +625,11 @@ export const FormFieldDescriptionBelowTextInputViaStyling: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -611,8 +637,8 @@ export const FormFieldDescriptionBelowTextInputViaStyling: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -659,7 +685,11 @@ export const FormFieldDescriptionWithUnorderedList: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -667,8 +697,8 @@ export const FormFieldDescriptionWithUnorderedList: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -716,7 +746,11 @@ export const FormFieldDescriptionWithParagraphAndUnorderedList: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -724,8 +758,8 @@ export const FormFieldDescriptionWithParagraphAndUnorderedList: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -760,7 +794,11 @@ export const FormFieldDescriptionDisabled: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -768,8 +806,8 @@ export const FormFieldDescriptionDisabled: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -804,7 +842,11 @@ export const FormFieldDescriptionDisabledWithParagraphElement: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -812,8 +854,8 @@ export const FormFieldDescriptionDisabledWithParagraphElement: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -849,7 +891,11 @@ export const FormFieldDescriptionDisabledWithParagraphComponent: Story = {
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -857,8 +903,8 @@ export const FormFieldDescriptionDisabledWithParagraphComponent: Story = {
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
@@ -901,7 +947,11 @@ De tekstafstand is vergroot volgens [WCAG Succescriterium 1.4.12 Tekstafstand](h
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
-      notTested: [
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
         WCAG22_132_MEANINGFUL_SEQUENCE,
         WCAG22_133_SENSORY_CHARACTERISTICS,
         WCAG22_141_USE_OF_COLOR,
@@ -909,8 +959,8 @@ De tekstafstand is vergroot volgens [WCAG Succescriterium 1.4.12 Tekstafstand](h
         WCAG22_144_RESIZE_TEXT,
         WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
-      pass: [WCAG22_131_INFO_AND_RELATIONSHIPS, WCAG22_1412_TEXT_SPACING, WCAG22_211_KEYBOARD, WCAG22_243_FOCUS_ORDER],
     },
   },
 };
