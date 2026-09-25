@@ -279,11 +279,11 @@ export const OrderedListArabicNum: Story = {
       description: {
         story: `Een geordende lijst met Arabische tekst en Arabisch-Indische nummering.
 
-        De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De NL Ordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic;\`.
+De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De NL Ordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic\`.
 
-        Dit wordt aangeboden vanuit de NL Ordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
+Dit wordt aangeboden vanuit de NL Ordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
 
-        Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels dezelfde aanpak, via het HTML-attribuut \`lang\` en de CSS-eigenschap \`list-style-type\`.`,
+Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels dezelfde aanpak, via het HTML-attribuut \`lang\` en de CSS-eigenschap \`list-style-type\`.`,
       },
     },
   },
@@ -303,14 +303,13 @@ export const OrderedListTypeOverridesLanguage: Story = {
       description: {
         story: `Een geordende lijst met Arabische tekst en Romeinse cijfers in kleine letters (i, ii, iii) voor de nummering.
 
-        De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De nummering van de lijst wordt ingesteld op Romeinse cijfers in kleine letters via het HTML-attribuut \`type="i"\`.
+De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De nummering van de lijst wordt ingesteld op Romeinse cijfers in kleine letters via het HTML-attribuut \`type="i"\`.
 
-        De NL Ordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic;\`.
+De NL Ordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic\`.
 
-        Dit wordt aangeboden vanuit de NL Ordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
+Dit wordt aangeboden vanuit de NL Ordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
 
-        Het type krijgt voorrang op de taal, in dit geval worden dus kleine Romeinse cijfers getoond in plaats van de Arabisch-Indische nummers.
-        `,
+Het type krijgt voorrang op de taal, in dit geval worden dus kleine Romeinse cijfers getoond in plaats van de Arabisch-Indische nummers.`,
       },
     },
   },
@@ -514,8 +513,10 @@ export const OrderedListNLHTMLAll: Story = {
     docs: {
       description: {
         story: `Een geordende lijst zonder classes binnen een NL HTML-component.
-        De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
-        De semantiek wordt behouden door de HTML-attributen \`role="list"\ en \`role="listitem"\`.`,
+
+De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
+
+De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="listitem"\`.`,
       },
     },
   },
@@ -537,8 +538,10 @@ export const OrderedListNLHTMLOrderedList: Story = {
     docs: {
       description: {
         story: `Een geordende lijst zonder classes binnen een NL HTML-component.
-        De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--ordered-list\` class.
-        De semantiek wordt behouden door de HTML-attributen \`role="list"\ en \`role="listitem"\`.`,
+
+De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--ordered-list\` class.
+
+De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="listitem"\`.`,
       },
     },
   },
