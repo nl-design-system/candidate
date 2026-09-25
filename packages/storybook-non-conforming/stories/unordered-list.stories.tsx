@@ -36,11 +36,11 @@ export default meta;
 
 type Story = StoryObj<UnorderedListProps>;
 
-// <ol class="nl-unordered-list">
-//   <li class="nl-unordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
-//   <li class="nl-unordered-list__item">Je oude paspoort</li>
-//   <li class="nl-unordered-list__item">Je afspraakbevestiging</li>
-// </ol>
+// <ul class="nl-unordered-list">
+//   <li class="nl-unordered-list__item">Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.</li>
+//   <li class="nl-unordered-list__item">Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.</li>
+//   <li class="nl-unordered-list__item">Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</li>
+// </ul>
 // Original: Unordered List zonder `role="list"`
 export const UnorderedListNoRole: Story = {
   name: 'Fout: Unordered List zonder HTML-attribuut role="list"',
@@ -48,34 +48,32 @@ export const UnorderedListNoRole: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een lijst, maar screenreadergebruikers krijgen niet te horen dat dit een geordende lijst is. De items lijken op elkaar te volgen, maar zonder de juiste semantiek is de volgorde onduidelijk.
+        story: `Bezoekers zien een lijst, maar screenreadergebruikers krijgen niet te horen dat dit een ongeordende lijst is. De items lijken als een groep bij elkaar te horen, maar zonder de juiste semantiek is niet duidelijk dat het om een ongeordende lijst gaat.
 
-Het probleem ontstaat omdat het HTML-element \`ol\` geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.`,
+Het probleem ontstaat omdat het HTML-element \`ul\` geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als ongeordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
 };
 
-// <ol class="nl-unordered-list">
+// <ul class="nl-unordered-list">
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-hidden="true">
-//         <IconOne />
+//         <IconBullet />
 //       </span>
-//      <span class="sr-only">Stap 1.{" "}</span>
 //     </span>
-//     Verzamel documenten
+//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
 //   </li>
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-hidden="true">
-//         <IconTwo />
+//         <IconBullet />
 //       </span>
-//      <span class="sr-only">Stap 2.{" "}</span>
 //     </span>
-//     Maak een afspraak.
+//     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //    </li>
-// </ol>
+// </ul>
 // Original: Unordered List met custom marker zonder `role="list"`
 export const UnorderedListCustomMarkerNoRole: Story = {
   name: 'Fout: Unordered List met Custom Marker zonder HTML-attribuut role="list"',
@@ -83,11 +81,11 @@ export const UnorderedListCustomMarkerNoRole: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een lijst, maar screenreadergebruikers krijgen niet te horen dat dit een geordende lijst is. De items lijken op elkaar te volgen, maar zonder de juiste semantiek is de volgorde onduidelijk.
+        story: `Bezoekers zien een lijst, maar screenreadergebruikers krijgen niet te horen dat dit een ongeordende lijst is. De items lijken als een groep bij elkaar te horen, maar zonder de juiste semantiek is niet duidelijk dat het om een ongeordende lijst gaat.
 
 De marker bevat toegankelijke tekst, maar dit is niet de oplossing voor het probleem voor screenreadergebruikers.
 
-Het probleem ontstaat omdat het HTML-element \`ol\` geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.`,
+Het probleem ontstaat omdat het HTML-element \`ul\` geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als ongeordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
@@ -115,9 +113,9 @@ export const UnorderedListListStyleNoneNoRole: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien tekst, maar zonder lijststijl en zonder lijstsemantiek is de volgorde voor bezoekers en screenreadergebruikers niet duidelijk. De informatie lijkt meer op losse tekst dan op een geordende lijst.
+        story: `Bezoekers zien tekst, maar zonder lijststijl en zonder lijstsemantiek is de relatie tussen de items voor bezoekers en screenreadergebruikers niet duidelijk. De informatie lijkt meer op losse tekst dan op een ongeordende lijst.
 
-Het probleem ontstaat omdat de lijststijl is weggehaald en de semantiek ontbreekt. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet en voeg het HTML-attribuut \`role="list"\` toe, waardoor de lijst visueel en semantisch als geordende lijst wordt herkend en correct wordt voorgelezen.`,
+Het probleem ontstaat omdat de lijststijl is weggehaald en de semantiek ontbreekt. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet en voeg het HTML-attribuut \`role="list"\` toe, waardoor de lijst visueel en semantisch als ongeordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
@@ -130,47 +128,32 @@ export const UnorderedListListStyleNoneWithRole: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers kunnen de items nog wel als een groep herkennen, maar de volgorde is niet meer zichtbaar. Dat maakt een lijst met stappen moeilijker te scannen en voor screenreadergebruikers is de logische reeks niet goed te volgen. De visuele nummering ontbreekt, waardoor de inhoud op losse onderdelen lijkt.
+        story: `Bezoekers kunnen de items nog wel als een groep herkennen, maar de relatie tussen de items is niet meer zichtbaar. Dat maakt een lijst met losse items moeilijker te scannen en voor screenreadergebruikers is de logische groep niet goed te volgen. De visuele marker ontbreekt, waardoor de inhoud op losse onderdelen lijkt.
 
-Het probleem ontstaat omdat alleen het HTML-attribuut \`role="list"\` is toegevoegd, maar de nummering is uitgezet via de lijststyling. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet, waardoor de lijst visueel en semantisch als geordende lijst wordt herkend.`,
+      Het probleem ontstaat omdat alleen het HTML-attribuut \`role="list"\` is toegevoegd, maar de leestekens zijn uitgezet via de lijststyling. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet, waardoor de lijst visueel en semantisch als ongeordende lijst wordt herkend.`,
       },
     },
   },
 };
 
-// Original: Unordered List met `aria-posinset` en `aria-setsize`
-export const UnorderedListAriaPosSetSize: Story = {
-  name: 'Fout: Unordered List met HTML-attributen aria-posinset en aria-setsize',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Bezoekers zien een lijst met duidelijke items, maar screenreadergebruikers krijgen geen betrouwbare informatie over de volgorde. De extra WAI-ARIA-attributen maken de structuur onduidelijk en vervangen de semantiek van de echte geordende lijst.
-
-Het probleem ontstaat doordat de WAI-ARIA-attributen \`aria-posinset\` en \`aria-setsize\` worden gebruikt in plaats van de semantiek van de HTML-lijststructuur. Maak geen gebruik van deze WAI-ARIA-attributen, zodat de volgorde correct wordt voorgelezen.`,
-      },
-    },
-  },
-};
-
-// <ol class="nl-unordered-list" role="list">
+// <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-hidden="true">
-//         1️⃣
+//         👁️‍🗨️
 //       </span>
 //     </span>
-//     Verzamel documenten
+//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
 //   </li>
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-hidden="true">
-//         2️⃣
+//         👁️‍🗨️
 //       </span>
 //     </span>
-//     Plan een afspraak
+//     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //   </li>
-// </ol>
+// </ul>
 // Original: Unordered List met custom marker (Unicode emoji) zonder toegankelijk alternatief
 export const UnorderedListEmojiNoAlt: Story = {
   name: 'Fout: Unordered List met Unicode emoji Custom Marker zonder toegankelijk alternatief',
@@ -178,7 +161,7 @@ export const UnorderedListEmojiNoAlt: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een emoji als marker, maar screenreadergebruikers krijgen geen duidelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+        story: `Bezoekers zien een emoji als marker, maar screenreadergebruikers krijgen geen duidelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de items moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
 
 Het probleem ontstaat omdat de emoji als marker is gebruikt zonder toegankelijke tekst. Voeg een zichtbare of visueel verstopte alternatieve tekst toe of gebruik een standaard lijstmarker, zodat de boodschap voor iedereen duidelijk is.`,
       },
@@ -193,7 +176,7 @@ export const UnorderedListEmojiAltInCssContent: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een emoji als marker, maar screenreadergebruikers krijgen geen duidelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+        story: `Bezoekers zien een emoji als marker, maar screenreadergebruikers krijgen geen duidelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de items moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
 
 Het probleem ontstaat omdat de marker via de CSS-eigenschap \`content\` is toegevoegd in plaats van als toegankelijke marker in de HTML. Gebruik een standaard lijstmarker, of stel een toegankelijke alternatieve tekst beschikbaar, zodat de boodschap voor iedereen duidelijk is.`,
       },
@@ -208,7 +191,7 @@ export const UnorderedListListStyleImage: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een afbeelding als marker, maar screenreadergebruikers krijgen geen duidelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+        story: `Bezoekers zien een afbeelding als marker, maar screenreadergebruikers krijgen geen duidelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de items moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
 
 Het probleem ontstaat omdat de marker via de CSS-eigenschap \`list-style-image\` is toegevoegd in plaats van als toegankelijke marker in de HTML. Gebruik een standaard lijstmarker, of stel een toegankelijke alternatieve tekst beschikbaar, zodat de boodschap voor iedereen duidelijk is.`,
       },
@@ -223,7 +206,7 @@ export const UnorderedListCounterContent: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een tekst als marker, maar deze tekst word niet opgelezen voor screenreadergebruikers. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+        story: `Bezoekers zien een tekst als marker, maar deze tekst wordt niet voorgelezen voor screenreadergebruikers. Hierdoor voelt de lijst minder logisch en kunnen de items moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
 
 Het probleem ontstaat omdat de tekst met de CSS-eigenschappen \`counter-reset\` en \`counter-increment\` via de CSS-eigenschap \`content\` is opgebouwd, in plaats van als toegankelijke tekst in de HTML. Gebruik een standaard lijstmarker, of stel een toegankelijke alternatieve tekst beschikbaar, zodat de boodschap voor iedereen duidelijk is.`,
       },
@@ -231,42 +214,7 @@ Het probleem ontstaat omdat de tekst met de CSS-eigenschappen \`counter-reset\` 
   },
 };
 
-// <ol class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
-//       <span aria-hidden="true">
-//         <IconOne />
-//       </span>
-//     </span>
-//     Verzamel documenten
-//   </li>
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
-//       <span aria-hidden="true">
-//         <IconTwo />
-//       </span>
-//     </span>
-//     Maak een afspraak.
-//    </li>
-// </ol>
-// Original: Unordered List met SVG's als bullets zonder toegankelijke implementatie
-export const UnorderedListSVGNotAccessible: Story = {
-  name: "Fout: Unordered List met SVG's als leestekens zonder toegankelijke implementatie",
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Bezoekers zien een afbeelding als marker, maar deze bevat geen alternatieve tekst en wordt daardoor niet voorgelezen voor screenreadergebruikers. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
-
-Het probleem ontstaat omdat de afbeeldingen, in dit geval een SVG, niet toegankelijk zijn opgebouwd en geen passende alternatieve tekst krijgen. Maak een toegankelijke alternatieve tekst beschikbaar, zodat de boodschap voor iedereen duidelijk is.
-
-Dit kan via een zichtbare tekst, een visueel verstopte tekst of het WAI-ARIA-attribuut \`aria-labelledby\`.`,
-      },
-    },
-  },
-};
-
-// <ol class="nl-unordered-list" role="list">
+// <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-hidden="true">
@@ -283,58 +231,51 @@ Dit kan via een zichtbare tekst, een visueel verstopte tekst of het WAI-ARIA-att
 //     </span>
 //     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //    </li>
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
-//       <span aria-hidden="true">
-//         <IconBullet />
-//       </span>
-//     </span>
-//     Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.
-//    </li>
-// </ol>
-// Original: Unordered List met Custom Marker met Decoratieve Icon. Voorbeeldcode: <UnorderedListItem marker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).
-export const UnorderedListDecorativeIcon: Story = {
-  name: 'Fout: Unordered List met decoratief icoon als Custom Marker',
+// </ul>
+// Original: Unordered List met SVG's als bullets zonder toegankelijke implementatie
+export const UnorderedListSVGNotAccessible: Story = {
+  name: "Fout: Unordered List met SVG's als leestekens zonder toegankelijke implementatie",
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een lijst met bolletjes voor markers. Bolletjes zijn decoratief en hebben geen echte betekenis voor de stapvolgorde. Dit is niet de bedoeling, omdat een geordende lijst een lijst is waarin de stapvolgorde een betekenis heeft.
+        story: `Bezoekers zien een afbeelding als marker, maar deze bevat geen alternatieve tekst en wordt daardoor niet voorgelezen voor screenreadergebruikers. Hierdoor voelt de lijst minder logisch en kunnen de items moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
 
-Als een lijst geen leestekens nodig heeft voor nummering, dan is het de bedoeling dat de ongeordende lijst wordt gebruikt in plaats van de geordende lijst.
-Als een lijst wel leestekens nodig heeft voor nummering, dan is het de bedoeling om markers te gebruiken die de nummering aangeven. Doe dit bijvoorbeeld met de standaard lijstmarkers of met iconen die informatief zijn en gekoppeld zijn aan een toegankelijke alternatieve tekst. Zo blijft de volgorde helder.`,
+Het probleem ontstaat omdat de afbeeldingen, in dit geval een SVG, niet toegankelijk zijn opgebouwd en geen passende alternatieve tekst krijgen. Maak een toegankelijke alternatieve tekst beschikbaar, zodat de boodschap voor iedereen duidelijk is.
+
+Dit kan via een zichtbare tekst, een visueel verstopte tekst of het WAI-ARIA-attribuut \`aria-labelledby\`.`,
       },
     },
   },
 };
 
-// <ol class="nl-unordered-list" role="list">
+// <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span>
-//         <svg><title>Nummer Eén Icoon</title>...</svg>
+//         <svg><title>Check Icoon</title>...</svg>
 //       </span>
 //     </span>
-//     Verzamel documenten
+//     Minimaal 10 karakters lang.
 //   </li>
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-hidden="true">
-//         <IconTwo title="Nummer Twee Icoon" />
+//         <IconCheck title="Check Icoon" />
 //       </span>
 //     </span>
-//     Maak een afspraak.
+//     Minimaal één cijfer.
 //    </li>
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-hidden="true">
-//         <IconTwo />
+//         <IconCross />
 //       </span>
-//      <span class="sr-only">Nummer Drie Icoon.{" "}</span>
+//      <span class="sr-only">Kruis Icoon.{" "}</span>
 //     </span>
-//     Haal uw nieuwe paspoort op.
+//     Minimaal één speciaal karakter.
 //    </li>
-// </ol>
+// </ul>
 // Original: Unordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <UnorderedListItem marker={<svg><title>Number One Icon</title>...</svg>} />
 export const UnorderedListInformativeIconBadAlt: Story = {
   name: 'Fout: Unordered List met Custom Marker met informatieve icoon met ontoegankelijke tekst',
@@ -342,9 +283,9 @@ export const UnorderedListInformativeIconBadAlt: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een informatieve icoon als marker, maar screenreadergebruikers krijgen een ontoegankelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+        story: `Bezoekers zien een informatieve icoon als marker, maar screenreadergebruikers krijgen een ontoegankelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de items moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
 
-Het probleem ontstaat omdat de alternatieve tekst van de marker de naam van de icoon bevat (bijvoorbeeld "Nummer Drie Icoon."), in plaats van de boodschap van de icoon (bijvoorbeeld "Stap 3.").
+Het probleem ontstaat omdat de alternatieve tekst van de marker de naam van de icoon bevat (bijvoorbeeld "Check Icoon."), in plaats van de boodschap van de icoon (bijvoorbeeld "Voltooid.").
 
 Gebruik een standaard lijstmarker, of stel een toegankelijke alternatieve tekst in die de boodschap van de marker overbrengt, zodat de boodschap voor iedereen duidelijk is.`,
       },
