@@ -258,25 +258,26 @@ export const FormFieldLabelSuffixDifferentLineHeight: Story = {
 };
 
 export const FormFieldLabelHidden: Story = {
-  name: 'Form Field Label met HTML-attribuut hidden',
+  name: 'Form Field Label verstopt via HTML-attribuut hidden',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een verborgen label. Het label verdwijnt niet alleen visueel, maar ook voor screenreader-gebruikers. Let op: Hierdoor heeft het invoerveld ook geen toegankelijke naam meer. `,
+        story:
+          'Een label die verborgen is voor bezoekers en voor screenreadergebruikers. De inhoud is aanwezig in de code, maar niet zichtbaar en niet voorleesbaar. Let op: Hierdoor heeft het invoerveld ook geen toegankelijke naam meer.',
       },
     },
   },
 };
 
-// TODO:
 export const FormFieldLabelLang: Story = {
   name: 'Form Field Label met HTML-attribuut lang',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een label in een andere taal. Een screenreader spreekt de tekst hierdoor uit met de uitspraak die bij die taal hoort.`,
+        story:
+          'Een label met Arabische tekst, dit is een taal die van rechts naar links wordt gelezen. De taal van het label wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`. Een screenreader spreekt de tekst hierdoor uit met de uitspraak die bij die taal hoort.',
       },
     },
   },
@@ -295,27 +296,91 @@ export const FormFieldLabelDir: Story = {
   },
 };
 
-// TODO:
-export const FormFieldLabelAlternativeHTMLDiv: Story = {
-  name: 'Form Field Label (default) opgebouwd met div',
+export const FormFieldLabelDirRTL: Story = {
+  name: 'Form Field Label met schrijfrichting via HTML-attribuut dir="rtl"',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een label gemaakt met het HTML-element div, in plaats van het HTML-element label. Om het label te koppelen aan het invoerveld gebruik je het aria-labelledby attribuut.`,
+        story:
+          'Een label die rechts-naar-links wordt weergegeven. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`. De tekst loopt van rechts naar links.',
       },
     },
   },
 };
 
-// TODO:
-export const FormFieldLabelAlternativeHTMLSpan: Story = {
-  name: 'Form Field Label (default) opgebouwd met span',
+// <div class="nl-html nl-html--all">
+//   <label>Email</label>
+// </div>
+// Original: Form Field Label binnen `nl-html--all`
+export const FormFieldLabelNLHTMLAll: Story = {
+  name: 'Form Field Label binnen `nl-html--all`',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Het label is gemaakt met het HTML-element span, in plaats van het HTML-element label. Om het label te koppelen aan het invoerveld gebruik je het aria-labelledby attribuut.`,
+        story: `Een label zonder classes binnen een NL HTML-component.
+
+De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Form Field Label-component toe op alle \`label\` HTML-elementen binnen een element met de \`nl-html--all\` class.
+
+De semantiek wordt behouden door de HTML-element \`label\`.`,
+      },
+    },
+  },
+};
+
+// <div class="nl-html nl-html--form-field-label">
+//   <label>Email</label>
+// </div>
+export const FormFieldLabelNLHTMLFormFieldLabel: Story = {
+  name: 'Form Field Label binnen `nl-html--form-field-label`',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een label zonder classes binnen een NL HTML-component.
+
+De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Form Field Label-component toe op alle \`label\` HTML-elementen binnen een element met de \`nl-html--ordered-list\` class.
+
+De semantiek wordt behouden door de HTML-element \`label\`.`,
+      },
+    },
+  },
+};
+
+// <div id="email-label" class="nl-form-field-label">Email</div>
+// <input
+//   id="email"
+//   aria-labelledby="email-label"
+// />
+// Let op: aria-labelledby op de invoerelement, en id op de div nodig.
+export const FormFieldLabelAlternativeHTMLDiv: Story = {
+  name: 'Form Field Label opgebouwd met HTML-elementen div',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een label opgemaakt met het HTML-element `div`. Om het label te koppelen aan het invoerveld gebruik je het WAI-ARIA-attribuut `aria-labelledby`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
+      },
+    },
+  },
+};
+
+// <span id="email-label" class="nl-form-field-label">Email</span>
+// <input
+//   id="email"
+//   aria-labelledby="email-label"
+// />
+// Let op: aria-labelledby op de invoerelement, en id op de span nodig.
+export const FormFieldLabelAlternativeHTMLSpan: Story = {
+  name: 'Form Field Label opgebouwd met HTML-element span',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een label opgemaakt met het HTML-element `span`. Om het label te koppelen aan het invoerveld gebruik je het WAI-ARIA-attribuut `aria-labelledby`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -323,7 +388,7 @@ export const FormFieldLabelAlternativeHTMLSpan: Story = {
 
 // TODO:
 export const FormFieldLabelAlternativeHTMLOptionDiv: Story = {
-  name: 'TODO:OPTION_ON_HOLD Form Field Label (option) opgebouwd met div',
+  name: 'TODO:OPTION_ON_HOLD Form Field Label met nested input opgebouwd met HTML-element div',
   args: {},
   parameters: {
     docs: {
@@ -336,7 +401,7 @@ export const FormFieldLabelAlternativeHTMLOptionDiv: Story = {
 
 // TODO:
 export const FormFieldLabelAlternativeHTMLOptionSpan: Story = {
-  name: 'TODO:OPTION_ON_HOLD Form Field Label (option) opgebouwd met span',
+  name: 'TODO:OPTION_ON_HOLD Form Field Label met nested input opgebouwd met HTML-element span',
   args: {},
   parameters: {
     docs: {
@@ -347,36 +412,8 @@ export const FormFieldLabelAlternativeHTMLOptionSpan: Story = {
   },
 };
 
-// Het label krijgt de styling via een so genoemde element selector in plaats van een eigen class attribute.
-// TODO:
-export const FormFieldLabelNlHtmlAll: Story = {
-  name: 'Form Field Label binnen nl-html--all',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `...`,
-      },
-    },
-  },
-};
-
-// TODO:
-export const FormFieldLabelNlHtmlFormFieldLabel: Story = {
-  name: 'Form Field Label binnen nl-html--form-field-label',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `...`,
-      },
-    },
-  },
-};
-
-// TODO:
 export const FormFieldLabelTypeInheritDisabled: Story = {
-  name: 'Form Field Label met type="inherit" gecombineerd met disabled',
+  name: 'Form Field Label met type="inherit" en disabled',
   args: {},
   parameters: {
     docs: {
@@ -387,53 +424,55 @@ export const FormFieldLabelTypeInheritDisabled: Story = {
   },
 };
 
-// TODO:
+// Ontwikkelfase notitie: dit is CSS die je in de test scss zet, aan de hand van
+// dit ondersteunen we niet uit onszelf, maar de story laat zien welke CSS je kan toepassen om het zelf te ondersteunen, ie h1:has(.nl-form-field-label--option)'
 export const FormFieldLabelTypeInheritInput: Story = {
-  name: 'TODO:OPTION_ON_HOLD Form Field Label met type="inherit" gecombineerd met input: dit ondersteunen we niet uit onszelf, maar de story laat zien welke CSS je kan toepassen om het zelf te ondersteunen, ie h1:has(.nl-form-field-label--option)',
+  name: 'TODO:OPTION_ON_HOLD Form Field Label met type="inherit" en nested input',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een label van de inherit-variant, gecombineerd met een invoerveld. Dit kun je bijvoorbeeld doen met has(.nl-form-field-label--option).`,
+        story:
+          'Een label van de inherit-variant, met een nested invoerveld. Dit is een Community implementatie, in deze story is te zien hoe dit geïmplementeerd kan worden in de NL Form Field Label component.',
       },
     },
   },
 };
 
-// TODO:
 export const FormFieldLabelIncreasedTextSpacing: Story = {
   name: 'Form Field Label met vergrote tekstafstand',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een label met vergrote tekstafstand (letter-, woord- en regelafstand), volgens [WCAG Succescriterium 1.4.12 Tekstafstand](https://nldesignsystem.nl/wcag/1.4.12/). De tekst blijft goed leesbaar en wordt niet afgekapt of overlapt.`,
+        story:
+          'Een label met vergrote tekstafstand (regelafstand, letterspatiëring en woordspatiëring), volgens [WCAG Succescriterium 1.4.12 Tekstafstand](https://nldesignsystem.nl/wcag/1.4.12/). Bezoekers kunnen dit zelf instellen om tekst beter leesbaar te maken. De tekst blijft goed leesbaar en wordt niet afgekapt of overlapt.',
       },
     },
   },
 };
 
-// TODO:
-export const FormFieldLabelText200Percent: Story = {
+export const FormFieldLabel200PercentZoom: Story = {
   name: 'Form Field Label met tekst vergroot naar 200%',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een label waarvan de tekst 200% is vergroot, volgens [WCAG Succescriterium 1.4.4 Herschalen van tekst](https://nldesignsystem.nl/wcag/1.4.4/). De tekst blijft goed leesbaar en wordt niet afgekapt of overlapt.`,
+        story:
+          'Een label waarvan de tekst 200% is vergroot, volgens [WCAG Succescriterium 1.4.4 Herschalen van tekst](https://nldesignsystem.nl/wcag/1.4.4/). De tekst blijft goed leesbaar en wordt niet afgekapt of overlapt.',
       },
     },
   },
 };
 
-// TODO:
 export const FormFieldLabelForcedColors: Story = {
   name: 'Form Field Label in Forced Colors modus',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een label in Forced Colors modus (zoals in Windows Contrast Thema's). Het label blijft goed leesbaar en onderscheidbaar wanneer kleuren door het besturingssysteem worden overschreven.`,
+        story:
+          'Een label in forced colors modus. Forced colors is een instelling waarbij het besturingssysteem van de bezoeker een eigen kleurenschema afdwingt op alle content, bijvoorbeeld voor mensen met een visuele beperking die veel baat hebben bij hoog contrast. De nummers en tekst van de lijst blijven ook in dit kleurenschema goed zichtbaar en onderscheidend van elkaar.',
       },
     },
   },
@@ -465,7 +504,6 @@ export const FormFieldLabelTextWrap: Story = {
   },
 };
 
-// TODO:
 export const FormFieldLabelSmallScreen: Story = {
   name: 'Form Field Label op een klein scherm',
   args: {},
@@ -478,9 +516,8 @@ export const FormFieldLabelSmallScreen: Story = {
   },
 };
 
-// TODO:
-export const FormFieldLabelWideScreen: Story = {
-  name: 'Form Field Label op een breed scherm',
+export const FormFieldLabelVeryLargeScreen: Story = {
+  name: 'Form Field Label op breed scherm',
   args: {},
   parameters: {
     docs: {
@@ -504,22 +541,20 @@ export const FormFieldLabelTypeOptionDisabled: Story = {
   },
 };
 
-// Voorbeeld uitwerking
 // <FormFieldLabel id="email-label" for="email">Email</FormFieldLabel>
 // <input
 //   id="email"
 //   aria-labelledby="email-label"
 // />
-
-// TODO:
 export const FormFieldLabelRedundantAriaLabelledBy: Story = {
   name: 'Form Field Label met redundant aria-labelledby',
   args: {},
   parameters: {
     docs: {
       description: {
-        // story: `Er wordt hier onnodig een aria-labelledby-attribuut op het invoerveld toegevoegd, terwijl het label al goed gekoppeld is aan het invoerveld. Dat moet niet: hierdoor ontstaat het risico dat de toegankelijke naam en de zichtbare labeltekst uit elkaar gaan lopen zodra één van beide wordt aangepast, wat verwarrend is voor screenreadergebruikers en bezoekers die gebruik maken van spraakgestuurde navigatie.`,
-        story: `Een invoerveld waarvan WAI-ARIA \`aria-labelledby\` attribuut verwijst naar het gekoppelde \`FormFieldLabel\`. Hoewel dit functioneel werkt, is het attribuut overbodig omdat de HTML \`label\` element al middels de HTML \`for\` attribuut de toegankelijke naam bepaalt.`,
+        story: `Een invoerveld waarvan het WAI-ARIA-attribuut \`aria-labelledby\` verwijst naar het gekoppelde label. Hoewel dit functioneel werkt, is het attribuut overbodig omdat de HTML \`label\` element al middels de HTML \`for\` attribuut de toegankelijke naam bepaalt.
+
+Dit is niet de bedoeling: hierdoor ontstaat het risico dat de toegankelijke naam en de zichtbare labeltekst uit elkaar gaan lopen zodra één van beide wordt aangepast. Dit is verwarrend voor screenreadergebruikers en bezoekers die gebruik maken van spraakgestuurde navigatie.`,
       },
     },
   },
@@ -546,6 +581,58 @@ export const FormFieldLabelTextInputNoPlaceholder: Story = {
     docs: {
       description: {
         story: `Een Text Input met een label. De Text Input heeft geen placeholder, omdat een placeholder vaak slecht leesbaar is en geen informatie mag bevatten die niet ook al in het label of in een extra beschrijving staat.`,
+      },
+    },
+  },
+};
+
+export const FormFieldLabelCssResetFull: Story = {
+  name: 'Form Field Label met CSS reset op component',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een label waarin de styling de component en het thema niet worden toegepast. De combinatie van de HTML en de browser styling houdt de label visueel bruikbaar en toegankelijk.',
+      },
+    },
+  },
+};
+
+export const FormFieldLabelCssResetComponent: Story = {
+  name: 'Form Field Label met CSS reset op component',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een label waarin de styling van de component niet wordt toegepast, maar de styling van het thema wel. De combinatie van de HTML, de browser styling en de thema styling houdt de label visueel bruikbaar en toegankelijk.',
+      },
+    },
+  },
+};
+
+export const FormFieldLabelCssResetTheme: Story = {
+  name: 'Form Field Label met CSS reset op thema',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een label waarin de styling van de component wel wordt toegepast, maar de styling van het thema niet. De combinatie van de HTML, de browser styling en de component styling houdt de label visueel bruikbaar en toegankelijk.',
+      },
+    },
+  },
+};
+
+export const FormFieldLabelInvalidCssValues: Story = {
+  name: 'Form Field Label met ongeldige CSS voor alle properties',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een label met ongeldige CSS-waarden voor de stijleigenschappen. De visuele weergave is bewust verstoord, zodat zichtbaar is hoe de component reageert wanneer de browser geen geldige stijl meer kan toepassen. Ondanks de ongeldige CSS-waarden blijft de component visueel bruikbaar en toegankelijk.',
       },
     },
   },
