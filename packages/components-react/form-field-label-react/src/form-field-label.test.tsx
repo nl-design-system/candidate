@@ -61,7 +61,7 @@ describe('Form Field Label', () => {
     });
   });
 
-  describe('Slot `input`', () => {
+  describe('slot `input`', () => {
     describe('when `type` is not `option`', () => {
       describe('Component API', () => {
         it.todo('does not render children', () => {});
