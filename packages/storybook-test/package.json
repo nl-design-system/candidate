@@ -22,7 +22,7 @@
     "@fontsource/noto-sans": "5.2.10",
     "@fontsource/noto-sans-mono": "5.2.10",
     "@fontsource/noto-serif": "5.2.9",
-    "@nl-design-system-candidate/button-react": "1.1.0",
+    "@nl-design-system-candidate/button-react": "1.1.1",
     "@nl-design-system-candidate/heading-react": "workspace:*",
     "@nl-design-system-candidate/link-react": "workspace:*",
     "@nl-design-system-candidate/paragraph-react": "workspace:*",

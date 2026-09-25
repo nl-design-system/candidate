@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/color-sample-css
 
+## 1.0.6
+
+### Patch Changes
+
+- 59ad93e: Add `box-sizing: border-box` to color sample component
+
 ## 1.0.5
 
 ### Patch Changes
