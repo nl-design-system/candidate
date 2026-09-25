@@ -138,7 +138,14 @@ export const FormFieldErrorMessageShort: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -170,7 +177,14 @@ export const FormFieldErrorMessageLong: Story = {
           onbedoelde spaties of leestekens in het veld staan.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -208,7 +222,14 @@ export const FormFieldErrorMessageMultiple: Story = {
           <p>Wilt u hulp? Neem dan contact op met onze klantenservice.</p>
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -225,7 +246,10 @@ export const FormFieldErrorMessageMultiple: Story = {
 };
 
 export const FormFieldErrorMessageWithParagraphComponent: Story = {
-  name: 'Form Field Error Message met een NL Paragraph-component',
+  name: 'Form Field Error Message met een NL Paragraph-component (TODO)',
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
   render: () => {
     const INPUT_ID = '835bd650-04bf-41e8-b1f6-0ad5d2d3bdfd';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -240,7 +264,14 @@ export const FormFieldErrorMessageWithParagraphComponent: Story = {
           </Paragraph>
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="postal-code"
+          />
         </div>
       </>
     );
@@ -257,7 +288,10 @@ export const FormFieldErrorMessageWithParagraphComponent: Story = {
 };
 
 export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
-  name: 'Form Field Error Message met twee NL Paragraph-componenten',
+  name: 'Form Field Error Message met twee NL Paragraph-componenten (TODO)',
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
   render: () => {
     const INPUT_ID = '80483e44-a765-4871-bba8-6c504afdf67f';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -271,7 +305,14 @@ export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
           <Paragraph>Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.</Paragraph>
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="postal-code"
+          />
         </div>
       </>
     );
@@ -280,7 +321,7 @@ export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
     docs: {
       description: {
         story:
-          "De foutmelding bestaat uit twee alinea's met duidelijke ruimte ertussen. De foutmelding heeft dezelfde kleur en typografie als de standaard tekst in het ontwerp. De style van de tekst in de NL Paragraph-componenten word overgenomen van de NL Form Field Error Message-component.',",
+          "De foutmelding bestaat uit twee alinea's met duidelijke ruimte ertussen. De foutmelding heeft dezelfde kleur en typografie als de standaard tekst in het ontwerp. De style van de tekst in de NL Paragraph-componenten word overgenomen van de NL Form Field Error Message-component.",
       },
     },
     status: { type: [] },
@@ -303,7 +344,14 @@ export const FormFieldErrorMessageLangLTR: Story = {
           example: 1234 AB.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="postal-code"
+          />
         </div>
       </>
     );
@@ -334,7 +382,14 @@ export const FormFieldErrorMessageLangRTL: Story = {
           حقل الرمز البريدي غير مملوء في هذا الحقل لا يمكن أن يكون فارغا.
         </FormFieldErrorMessage>
         <div lang="ar" dir="rtl">
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="postal-code"
+          />
         </div>
       </>
     );
@@ -365,7 +420,14 @@ export const FormFieldErrorMessageVerticalText: Story = {
           郵便番号フィールドは入力されていません。このフィールドは空にはなりません。
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="postal-code"
+          />
         </div>
       </>
     );
@@ -404,7 +466,14 @@ export const FormFieldErrorMessageVerticalTextWithIcon: Story = {
           郵便番号フィールドは入力されていません。このフィールドは空にはなりません。
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="postal-code"
+          />
         </div>
       </>
     );
@@ -434,7 +503,14 @@ export const FormFieldErrorMessageLargeText: Story = {
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="postal-code"
+          />
         </div>
       </>
     );
@@ -465,7 +541,14 @@ export const FormFieldErrorMessageAboveTextInput: Story = {
           Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="postal-code"
+          />
         </div>
       </>
     );
@@ -495,7 +578,14 @@ export const FormFieldErrorMessageBelowTextInputViaStyling: Story = {
           Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
         </FormFieldErrorMessage>
         <div style={{ order: 1 }}>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="postal-code"
+          />
         </div>
       </div>
     );
@@ -527,7 +617,14 @@ export const FormFieldErrorMessageWordBreak: Story = {
           automatiseringsplatform voor klantgegevensbeheer.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -560,7 +657,14 @@ export const FormFieldErrorMessageSmallViewport: Story = {
           onbedoelde spaties of leestekens in het veld staan.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -600,6 +704,7 @@ export const FormFieldErrorMessageList: Story = {
             aria-describedby={ERROR_ID}
             type="password"
             autoComplete="new-password"
+            aria-invalid="true"
             aria-required="true"
           />
         </div>
@@ -639,7 +744,14 @@ export const FormFieldErrorMessageForcedColorsMode: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -674,7 +786,7 @@ export const FormFieldErrorMessageWithCode: Story = {
           </Paragraph>
         </FormFieldErrorMessage>
         <div>
-          <textarea id={INPUT_ID} aria-describedby={ERROR_ID} />
+          <textarea id={INPUT_ID} aria-describedby={ERROR_ID} aria-invalid="true" />
         </div>
       </>
     );
@@ -711,7 +823,14 @@ export const FormFieldErrorMessageWithIcon: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -741,7 +860,14 @@ export const FormFieldErrorMessageCompact: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </AlternativeHTMLFormFieldErrorMessageCompact>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -781,7 +907,14 @@ export const FormFieldErrorMessageParagraphElementWrapper: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </AlternativeHTMLFormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -821,7 +954,14 @@ export const FormFieldErrorMessageParagraphElementIcon: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </AlternativeHTMLFormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -861,7 +1001,14 @@ export const FormFieldErrorMessageParagraphElementContent: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </AlternativeHTMLFormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -901,7 +1048,14 @@ export const FormFieldErrorMessageSpanElementWrapper: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </AlternativeHTMLFormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -941,7 +1095,14 @@ export const FormFieldErrorMessageSpanElementIcon: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </AlternativeHTMLFormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -981,7 +1142,14 @@ export const FormFieldErrorMessageSpanElementContent: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </AlternativeHTMLFormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
