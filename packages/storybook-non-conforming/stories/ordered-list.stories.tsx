@@ -50,7 +50,7 @@ export const OrderedListNoRole: Story = {
       description: {
         story: `Bezoekers zien een lijst, maar screenreadergebruikers krijgen niet te horen dat dit een geordende lijst is. De items lijken op elkaar te volgen, maar zonder de juiste semantiek is de volgorde onduidelijk.
 
-Het probleem ontstaat omdat het element geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.`,
+Het probleem ontstaat omdat het HTML-element \`ol\` geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
@@ -87,7 +87,7 @@ export const OrderedListCustomMarkerNoRole: Story = {
 
 De marker bevat toegankelijke tekst, maar dit is niet de oplossing voor het probleem voor screenreadergebruikers.
 
-Het probleem ontstaat omdat het element geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.`,
+Het probleem ontstaat omdat het HTML-element \`ol\` geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
@@ -117,7 +117,7 @@ export const OrderedListListStyleNoneNoRole: Story = {
       description: {
         story: `Bezoekers zien tekst, maar zonder lijststijl en zonder lijstsemantiek is de volgorde voor bezoekers en screenreadergebruikers niet duidelijk. De informatie lijkt meer op losse tekst dan op een geordende lijst.
 
-Het probleem ontstaat omdat de lijststijl is weggehaald en de semantiek ontbreekt. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet en voeg het HTML-attribuut \`role="list"\` toe, zodat de lijst visueel en semantisch als geordende lijst wordt herkend en correct wordt voorgelezen.`,
+Het probleem ontstaat omdat de lijststijl is weggehaald en de semantiek ontbreekt. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet en voeg het HTML-attribuut \`role="list"\` toe, waardoor de lijst visueel en semantisch als geordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
@@ -132,7 +132,7 @@ export const OrderedListListStyleNoneWithRole: Story = {
       description: {
         story: `Bezoekers kunnen de items nog wel als een groep herkennen, maar de volgorde is niet meer zichtbaar. Dat maakt een lijst met stappen moeilijker te scannen en voor screenreadergebruikers is de logische reeks niet goed te volgen. De visuele nummering ontbreekt, waardoor de inhoud op losse onderdelen lijkt.
 
-Het probleem ontstaat omdat alleen het HTML-attribuut \`role="list"\` is toegevoegd, maar de nummering is uitgezet via de lijststyling. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet, zodat de lijst visueel en semantisch als geordende lijst wordt herkend.`,
+Het probleem ontstaat omdat alleen het HTML-attribuut \`role="list"\` is toegevoegd, maar de nummering is uitgezet via de lijststyling. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet, waardoor de lijst visueel en semantisch als geordende lijst wordt herkend.`,
       },
     },
   },
@@ -294,12 +294,12 @@ Dit kan via een zichtbare tekst, een visueel verstopte tekst of het WAI-ARIA-att
 // </ol>
 // Original: Ordered List met Custom Marker met Decoratieve Icon. Voorbeeldcode: <OrderedListItem marker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).
 export const OrderedListDecorativeIcon: Story = {
-  name: 'Fout: Ordered List met Custom Marker met Decoratieve Icon',
+  name: 'Fout: Ordered List met decoratief icoon als Custom Marker',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een lijst met bolletjes voor markers. Bolletjes zijn decoratief en hebben geen echte betekenis voor de stapvolgorde.
+        story: `Bezoekers zien een lijst met bolletjes voor markers. Bolletjes zijn decoratief en hebben geen echte betekenis voor de stapvolgorde. Dit is niet de bedoeling, omdat een geordende lijst een lijst is waarin de stapvolgorde een betekenis heeft.
 
 Als een lijst geen leestekens nodig heeft voor nummering, dan is het de bedoeling dat de ongeordende lijst wordt gebruikt in plaats van de geordende lijst.
 Als een lijst wel leestekens nodig heeft voor nummering, dan is het de bedoeling om markers te gebruiken die de nummering aangeven. Doe dit bijvoorbeeld met de standaard lijstmarkers of met iconen die informatief zijn en gekoppeld zijn aan een toegankelijke alternatieve tekst. Zo blijft de volgorde helder.`,
