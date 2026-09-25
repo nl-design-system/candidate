@@ -50,11 +50,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-// <ol class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
-//   <li class="nl-unordered-list__item">Je oude paspoort</li>
-//   <li class="nl-unordered-list__item">Je afspraakbevestiging</li>
-// </ol>
+// <ul class="nl-unordered-list" role="list">
+//   <li class="nl-unordered-list__item">Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.</li>
+//   <li class="nl-unordered-list__item">Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.</li>
+//   <li class="nl-unordered-list__item">Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</li>
+// </ul>
 // Original: Unordered List
 export const UnorderedListDefault: Story = {
   name: 'Unordered List',
@@ -63,46 +63,22 @@ export const UnorderedListDefault: Story = {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst met drie items. Elk item krijgt automatisch een oplopend nummer, beginnend bij 1. De lijst is visueel herkenbaar als een ongeordende lijst en screenreadergebruikers horen de items in de juiste volgorde voorgelezen.',
+          'Een ongeordende lijst met drie items. De lijst is visueel herkenbaar als een ongeordende lijst en screenreadergebruikers horen de items in de juiste volgorde voorgelezen.',
       },
     },
   },
 };
 
-// <ol class="nl-unordered-list" role="list">
+// <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
 //     Verzamel de benodigde documenten
-//     <ol class="nl-unordered-list" role="list">
+//     <ul class="nl-unordered-list" role="list">
 //       <li class="nl-unordered-list__item">Geldig identiteitsbewijs</li>
 //       <li class="nl-unordered-list__item">Bewijs van inschrijving</li>
-//     </ol>
-//   </li>
-//   <li class="nl-unordered-list__item">Dien de aanvraag in</li>
-// </ol>
-// Original: Unordered List met geneste Unordered List
-export const UnorderedListNestedUnorderedList: Story = {
-  name: 'Unordered List met geneste Unordered List',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst met een ongeordende geneste lijst in een van de items. De geneste lijst begint opnieuw bij 1 en is visueel ingesprongen vergeleken met het item daarboven, zodat de verschillende niveaus goed te onderscheiden zijn.',
-      },
-    },
-  },
-};
-
-// <ol class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item">
-//     Geef je keuze aan voor de afspraak. Je kunt kiezen uit:
-//     <ul class="nl-unordered-list" role="list">
-//       <li class="nl-unordered-list__item">Online</li>
-//       <li class="nl-unordered-list__item">Bij de balie</li>
 //     </ul>
 //   </li>
-//   <li class="nl-unordered-list__item">Kies een datum en tijd</li>
-// </ol>
+//   <li class="nl-unordered-list__item">Dien de aanvraag in</li>
+// </ul>
 // Original: Unordered List met geneste Unordered List
 export const UnorderedListNestedUnorderedList: Story = {
   name: 'Unordered List met geneste Unordered List',
@@ -111,28 +87,52 @@ export const UnorderedListNestedUnorderedList: Story = {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst met een ongeordende geneste lijst in een van de items. De ongeordende lijst krijgt bolletjes in plaats van nummers als markers en is visueel ingesprongen vergeleken met het item daarboven, zodat de verschillende niveaus goed te onderscheiden zijn.',
+          'Een ongeordende lijst met een ongeordende geneste lijst in een van de items. De geneste lijst heeft een marker visueel te onderscheiden met de marker daarboven en is visueel ingesprongen vergeleken met het item daarboven, zodat de verschillende niveaus goed te onderscheiden zijn.',
       },
     },
   },
 };
 
-// <ol class="nl-unordered-list" role="list">
+// <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
-//     Fase 1: Voorbereiding
+//     Wilt u het document op kantoor ophalen? Maak dan een afspraak:
 //     <ol class="nl-unordered-list" role="list">
-//       <li class="nl-unordered-list__item">
-//         Verzamel documenten
-//         <ol role="list">
-//           <li class="nl-unordered-list__item">Identiteitsbewijs</li>
-//           <li class="nl-unordered-list__item">Bewijs van inschrijving</li>
-//         </ol>
-//       </li>
-//       <li class="nl-unordered-list__item">Plan een afspraak</li>
+//       <li class="nl-unordered-list__item">Geef je keuze aan voor de afspraak.</li>
+//       <li class="nl-unordered-list__item">Kies een datum en tijd</li>
 //     </ol>
 //   </li>
-//   <li class="nl-unordered-list__item">Fase 2: Uitvoering</li>
-// </ol>
+//   <li class="nl-unordered-list__item">U kunt het document ook laten bezorgen. Is uw paspoort of ID-kaart gestolen? Dan kan het ophalen langer duren.</li>
+// </ul>
+// Original: Unordered List met geneste Unordered List
+export const UnorderedListNestedOrderedList: Story = {
+  name: 'Unordered List met geneste Ordered List',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een ongeordende lijst met een geordende geneste lijst in een van de items. De geordende lijst krijgt nummers in plaats van bollets als markers en is visueel ingesprongen vergeleken met het item daarboven, zodat de verschillende niveaus goed te onderscheiden zijn.',
+      },
+    },
+  },
+};
+
+// <ul class="nl-unordered-list" role="list">
+//   <li class="nl-unordered-list__item">
+//     Dit neemt u mee naar de afspraak:
+//     <ul class="nl-unordered-list" role="list">
+//       <li class="nl-unordered-list__item">
+//         Alle reisdocumenten die u nu hebt, ook als ze zijn verlopen.
+//         <ul role="list">
+//           <li class="nl-unordered-list__item">Paspoort.</li>
+//           <li class="nl-unordered-list__item">ID-kaart.</li>
+//         </ul>
+//       </li>
+//       <li class="nl-unordered-list__item">Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.</li>
+//       <li class="nl-unordered-list__item">Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.</li>
+//     </ul>
+//   </li>
+// </ul>
 // Original: Unordered List met minimaal drie niveaus nesting, met documentatie over hoe en wat
 export const UnorderedListThreeLevelsNesting: Story = {
   name: 'Unordered List van drie niveaus',
@@ -141,60 +141,83 @@ export const UnorderedListThreeLevelsNesting: Story = {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst met drie niveaus. Het eerste niveau gebruikt de hoofdnummers, de geneste lijst begint opnieuw bij 1 en is visueel ingesprongen vergeleken met het item daarboven, zodat de verschillende niveaus goed te onderscheiden zijn.',
+          'Een ongeordende lijst met drie niveaus. Elk niveau heeft een ander leesteken als marker en is visueel ingesprongen vergeleken met het item daarboven, zodat de verschillende niveaus goed te onderscheiden zijn.',
       },
     },
   },
 };
 
-// Let op: CSS moet nog toegepast worden voor juiste nummering, dat doen we enkel voor arabic-indic, dat selecteert op lang="ar"
-// <ol class="nl-unordered-list" role="list" lang="ar">
+// <ul class="nl-unordered-list" role="list" lang="ar">
 //   <li class="nl-unordered-list__item">تحميل المستندات</li>
 //   <li class="nl-unordered-list__item">تقديم الطلب</li>
 //   <li class="nl-unordered-list__item">انتظار التأكيد</li>
-// </ol>
-// Original: Unordered List met Arabische nummering (`lang="ar"`)
-// Original: Unordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
+// </ul>
+// Original: Unordered List met taal ingesteld lang (`lang="ar"`)
 export const UnorderedListArabicNum: Story = {
   name: 'Unordered List met taal ingesteld via HTML-attribuut lang="ar"',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een ongeordende lijst met Arabische tekst en Arabisch-Indische nummering.
+        story: `Een ongeordende lijst met Arabische tekst.
 
-De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De NL Unordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic\`.
-
-Dit wordt aangeboden vanuit de NL Unordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
-
-Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels dezelfde aanpak, via het HTML-attribuut \`lang\` en de CSS-eigenschap \`list-style-type\`.`,
+De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`.`,
       },
     },
   },
 };
 
-// TODO: Unordered List met Custom Marker zonder toegankelijke tekst
-
-// <ol class="nl-unordered-list" role="list">
+// <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-hidden="true">
-//         <IconOne />
+//         <IconMark />
 //       </span>
-//      <span class="sr-only">Stap 1.{" "}</span>
 //     </span>
-//     Verzamel documenten
+//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
 //   </li>
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-hidden="true">
-//         <IconTwo />
+//         <IconMark />
 //       </span>
-//      <span class="sr-only">Stap 2.{" "}</span>
 //     </span>
-//     Maak een afspraak.
+//     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //    </li>
-// </ol>
+// </ul>
+// Original: Unordered List met Custom Marker zonder toegankelijke tekst
+export const UnorderedListCustomMarkerNoLabel: Story = {
+  name: 'Unordered List met Custom Marker zonder toegankelijke tekst die visueel verborgen is',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een ongeordende lijst met een icoon als marker. Het icoon is verborgen voor hulpsoftware. De icoon is decoratief, dus de betekenis van de marker wordt niet aangeboden voor screenreadergebruikers.`,
+      },
+    },
+  },
+};
+
+// <ul class="nl-unordered-list" role="list">
+//   <li class="nl-unordered-list__item">
+//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
+//       <span aria-hidden="true">
+//         <IconMark />
+//       </span>
+//      <span class="sr-only">Let op.{" "}</span>
+//     </span>
+//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
+//   </li>
+//   <li class="nl-unordered-list__item">
+//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
+//       <span aria-hidden="true">
+//         <IconMark />
+//       </span>
+//      <span class="sr-only">Let op.{" "}</span>
+//     </span>
+//     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
+//    </li>
+// </ul>
 // Original: Unordered List met custom marker en toegankelijke naam via markerLabel (sr-only), met `aria-hidden="true"` op custom marker
 export const UnorderedListCustomMarkerLabel: Story = {
   name: 'Unordered List met Custom Marker en toegankelijke tekst die visueel verborgen is',
@@ -208,26 +231,26 @@ export const UnorderedListCustomMarkerLabel: Story = {
   },
 };
 
-// <ol class="nl-unordered-list" role="list">
+// <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-labelledby="label-id-1">
-//         <IconOne />
+//         <IconMark />
 //       </span>
-//      <span aria-hidden="true" id="label-id-1">Stap 1.{" "}</span>
+//      <span aria-hidden="true" id="label-id-1">Let op.{" "}</span>
 //     </span>
-//     Verzamel documenten
+//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
 //   </li>
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-labelledby="label-id-2">
-//         <IconTwo />
+//         <IconMark />
 //       </span>
-//      <span aria-hidden="true" id="label-id-2">Stap 2.{" "}</span>
+//      <span aria-hidden="true" id="label-id-2">Let op.{" "}</span>
 //     </span>
-//     Maak een afspraak.
+//     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //    </li>
-// </ol>
+// </ul>
 // Original: Unordered List met een toegankelijke custom marker met toegankelijk label (niet perfecte maar toegankelijke oplossing)
 export const UnorderedListCustomMarkerAriaLabelledby: Story = {
   name: 'Unordered List met Custom Marker en toegankelijk tekst via HTML-attribuut aria-labelledby',
@@ -256,17 +279,17 @@ export const UnorderedListCustomMarkerInformativeIconAccessible: Story = {
   },
 };
 
-// <ol class="nl-unordered-list" role="list">
+// <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-labelledby="label-id-1">
-//         <svg><title>Number One Icon</title>...</svg>
+//         <svg><title>Mark Icon</title>...</svg>
 //       </span>
-//      <span aria-hidden="true" id="label-id-1">Stap 1.{" "}</span>
+//      <span aria-hidden="true" id="label-id-1">Let op.{" "}</span>
 //     </span>
-//     Verzamel documenten
+//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
 //   </li>
-// </ol>
+// </ul>
 // Original: Unordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label.
 export const UnorderedListCustomMarkerIconLabelOverride: Story = {
   name: 'Unordered List met Custom Marker met informatieve icoon met foutieve alternatieve tekst overschreven door Marker Label',
@@ -281,11 +304,11 @@ export const UnorderedListCustomMarkerIconLabelOverride: Story = {
   },
 };
 
-// <ol class="nl-unordered-list" hidden>
+// <ul class="nl-unordered-list" hidden>
 //   <li class="nl-unordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
 //   <li class="nl-unordered-list__item">Je oude paspoort</li>
 //   <li class="nl-unordered-list__item">Je afspraakbevestiging</li>
-// </ol>
+// </ul>
 // Original: Unordered List met HTML `hidden` attribuut
 export const UnorderedListHidden: Story = {
   name: 'Unordered List verstopt via HTML-attribuut hidden',
@@ -300,11 +323,11 @@ export const UnorderedListHidden: Story = {
   },
 };
 
-// <ol class="nl-unordered-list" role="list" lang="ar">
+// <ul class="nl-unordered-list" role="list" lang="ar">
 //   <li class="nl-unordered-list__item">تحميل المستندات</li>
 //   <li class="nl-unordered-list__item">تقديم الطلب</li>
 //   <li class="nl-unordered-list__item">انتظار التأكيد</li>
-// </ol>
+// </ul>
 // Original: Unordered List met HTML `lang` attribuut (right-to-left tekst)
 export const UnorderedListLangRTL: Story = {
   name: 'Unordered List met rechts-naar-links schrijfrichting via Arabische taal via HTML-attribuut lang="ar"',
@@ -319,11 +342,11 @@ export const UnorderedListLangRTL: Story = {
   },
 };
 
-// <ol class="nl-unordered-list" role="list" dir="rtl">
+// <ul class="nl-unordered-list" role="list" dir="rtl">
 //   <li class="nl-unordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
 //   <li class="nl-unordered-list__item">Je oude paspoort</li>
 //   <li class="nl-unordered-list__item">Je afspraakbevestiging</li>
-// </ol>
+// </ul>
 // Original: Unordered List met HTML `dir` attribuut
 export const UnorderedListDirRTL: Story = {
   name: 'Unordered List met schrijfrichting via HTML-attribuut dir="rtl"',
@@ -332,17 +355,17 @@ export const UnorderedListDirRTL: Story = {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst die rechts-naar-links wordt weergegeven. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`. De nummering staat aan de rechterkant en de tekst loopt van rechts naar links.',
+          'Een ongeordende lijst die rechts-naar-links wordt weergegeven. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`. De markers staan aan de rechterkant en de tekst loopt van rechts naar links.',
       },
     },
   },
 };
 
-// <ol class="nl-unordered-list" role="list" lang="ar" dir="rtl">
+// <ul class="nl-unordered-list" role="list" lang="ar" dir="rtl">
 //  <li class="nl-unordered-list__item">تحميل المستندات</li>
 //  <li class="nl-unordered-list__item">تقديم الطلب</li>
 //  <li class="nl-unordered-list__item">انتظار التأكيد</li>
-// </ol>
+// </ul>
 // Original: Unordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat
 export const UnorderedListDirParentOnly: Story = {
   name: 'Unordered List met Arabische tekst waarbij HTML-attribuut dir alleen op HTML-element ol staat',
@@ -351,18 +374,18 @@ export const UnorderedListDirParentOnly: Story = {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst met Arabische tekst, de nummering start aan de rechterkant en de tekst loopt van rechts naar links. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`.',
+          'Een ongeordende lijst met Arabische tekst, de markers start aan de rechterkant en de tekst loopt van rechts naar links. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`.',
       },
     },
   },
 };
 
 // <div class="nl-html nl-html--all">
-//   <ol role="list">
+//   <ul role="list">
 //     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
 //     <li role="listitem">Je oude paspoort</li>
 //     <li role="listitem">Je afspraakbevestiging</li>
-//   </ol>
+//   </ul>
 // </div>
 // Original: Unordered List binnen `nl-html--all`
 // Let op: role="list" en role="listitem" is nodig!
@@ -374,7 +397,7 @@ export const UnorderedListNLHTMLAll: Story = {
       description: {
         story: `Een ongeordende lijst zonder classes binnen een NL HTML-component.
 
-De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
+De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ul\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
 
 De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="listitem"\`.`,
       },
@@ -383,11 +406,11 @@ De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="l
 };
 
 // <div class="nl-html nl-html--unordered-list">
-//   <ol role="list">
+//   <ul role="list">
 //     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
 //     <li role="listitem">Je oude paspoort</li>
 //     <li role="listitem">Je afspraakbevestiging</li>
-//   </ol>
+//   </ul>
 // </div>
 // Original: Unordered List binnen `nl-html--unordered-list`
 // Let op: role="list" en role="listitem" is nodig!
@@ -399,7 +422,7 @@ export const UnorderedListNLHTMLUnorderedList: Story = {
       description: {
         story: `Een ongeordende lijst zonder classes binnen een NL HTML-component.
 
-De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--unordered-list\` class.
+De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ul\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--unordered-list\` class.
 
 De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="listitem"\`.`,
       },
@@ -482,7 +505,7 @@ export const UnorderedListColumnLayout: Story = {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst verdeeld over meerdere kolommen. De items worden van boven naar beneden gevuld en gaan door in de volgende kolom. De nummering blijft doorlopen: het eerste item van de tweede kolom krijgt niet opnieuw nummer 1, maar het nummer dat volgt op het laatste item van de eerste kolom.',
+          'Een ongeordende lijst verdeeld over meerdere kolommen. De items worden van boven naar beneden gevuld en gaan door in de volgende kolom. De logische volgorde van de items blijft onveranderd.',
       },
     },
   },
@@ -496,7 +519,7 @@ export const UnorderedListLongItemAcrossColumns: Story = {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst verdeeld over meerdere kolommen. De tekst van een item loopt door in de volgende kolom. Het nummer van het item blijft in de eerste kolom staan.',
+          'Een ongeordende lijst verdeeld over meerdere kolommen. De tekst van een item loopt door in de volgende kolom. De marker van het item blijft in de eerste kolom staan.',
       },
     },
   },
@@ -517,14 +540,14 @@ export const UnorderedListHorizontalScrollMobile: Story = {
 };
 
 // <div class="nl-html nl-html--all">
-//   <ol role="list">
+//   <ul role="list">
 //     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
 //     <li role="listitem">
 //       Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //       <p>Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</p>
 //     </li>
 //     <li role="listitem">Je afspraakbevestiging</li>
-//   </ol>
+//   </ul>
 // </div>
 // Original: Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor
 export const UnorderedListRichTextEditorParagraph: Story = {
@@ -624,9 +647,9 @@ export const UnorderedListForcedColors: Story = {
   },
 };
 
-// <ol class="nl-unordered-list" role="list">
+// <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">Doet u uw aanvraag op een werkdag voor 14.00 uur? U kunt uw paspoort of ID-kaart de werkdag na uw aanvraag ophalen vanaf 12.00 uur.</li>
-// </ol>
+// </ul>
 // Original: Unordered List met 1 list item
 export const UnorderedListOneItem: Story = {
   name: 'Unordered List met één item',
@@ -635,7 +658,7 @@ export const UnorderedListOneItem: Story = {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst bestaande uit één item. Ook met één item wordt de lijst als lijst herkend door screenreaders en krijgt het item het nummer 1.',
+          'Een ongeordende lijst bestaande uit één item. Ook met één item wordt de lijst als lijst herkend door screenreaders en krijgt het item een marker.',
       },
     },
   },
@@ -750,4 +773,17 @@ export const UnorderedListInvalidCssValues: Story = {
   },
 };
 
-// TODO:  Unordered List zonder markers (community implementatie)
+// Ontwikkelfase notitie: dit is CSS die je in de test scss zet, aan de hand van
+// Original: Unordered List zonder markers (community implementatie)
+export const UnorderedListNoMarkers: Story = {
+  name: 'Unordered List zonder markers',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een ongeordende lijst zonder markers, welke nog steeds opgelezen toegankelijk is screenreadergebruikers. Dit is een Community implementatie, in deze story is te zien hoe dit geïmplementeerd kan worden in de NL Unordered List component.',
+      },
+    },
+  },
+};
