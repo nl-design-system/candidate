@@ -557,8 +557,7 @@ export const OrderedListAlternativeHTMLDivs: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'Een geordende lijst opgemaakt met meerdere HTML-elementen `div`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
+        story: 'Een geordende lijst opgemaakt met meerdere HTML-elementen `div`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -577,8 +576,7 @@ export const OrderedListAlternativeHTMLSpans: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'Een geordende lijst is opgemaakt met meerdere HTML-elementen `span`. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
+        story: 'Een geordende lijst opgemaakt met meerdere HTML-elementen `span`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -591,7 +589,7 @@ export const OrderedListHTMLParagraphsInListItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: `In deze geordende lijst worden alinea's in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.`,
+        story: `Een geordende lijst met meerdere alinea's in een enkele item. De eerste alinea is kort, de tweede alinea is langer. De tekst blijft goed leesbaar en de opmaak blijft consistent.`,
       },
     },
   },
@@ -605,7 +603,7 @@ export const OrderedListNLParagraphsInListItem: Story = {
     docs: {
       description: {
         story:
-          'In deze geordende lijst worden NL Paragraph-componenten in een lijst-item gebruikt. De eerste alinea is erg kort, de tweede alinea is heel lang. De tekst blijft goed leesbaar en de opmaak blijft goed.',
+          'Een geordende lijst met NL Paragraph-componenten in een enkele item. De eerste alinea is kort, de tweede alinea is langer. De tekst blijft goed leesbaar en de opmaak blijft consistent.',
       },
     },
   },
@@ -620,7 +618,7 @@ export const OrderedListColumnLayout: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst is verdeeld in meerdere kolommen. De items worden van boven naar beneden gevuld en gaan verder in de volgende kolom. De nummering blijft doorlopen: het eerste item van de tweede kolom krijgt niet opnieuw nummer 1, maar het nummer dat volgt op het laatste item van de eerste kolom.',
+          'Een geordende lijst verdeeld over meerdere kolommen. De items worden van boven naar beneden gevuld en gaan door in de volgende kolom. De nummering blijft doorlopen: het eerste item van de tweede kolom krijgt niet opnieuw nummer 1, maar het nummer dat volgt op het laatste item van de eerste kolom.',
       },
     },
   },
@@ -634,7 +632,7 @@ export const OrderedListLongItemAcrossColumns: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst is verdeeld in meerdere kolommen. De tekst van een item loopt door in de volgende kolom. Het nummer van het item blijft staan in de eerste kolom.',
+          'Een geordende lijst verdeeld over meerdere kolommen. De tekst van een item loopt door in de volgende kolom. Het nummer van het item blijft in de eerste kolom staan.',
       },
     },
   },
@@ -648,7 +646,7 @@ export const OrderedListHorizontalScrollMobile: Story = {
     docs: {
       description: {
         story:
-          'In deze geordende lijst staan items waarin als content een nieuwe lijst staat. De lijst wordt weergegeven op een klein scherm waarbij de lijst breder is dan de beschikbare ruimte. In plaats van dat de tekst noodgedwongen wordt afgebroken tot een paar letters per regel, kan de bezoeker de lijst horizontaal scrollen om de volledige breedte te bekijken.',
+          'Een geordende lijst met items die zelf weer een lijst bevatten. De lijst wordt weergegeven op een klein scherm, waarbij de inhoud breder is dan de beschikbare ruimte. In plaats van dat de tekst gedwongen wordt afgebroken tot een paar letters per regel, kan de bezoeker de lijst horizontaal scrollen om de volledige breedte te bekijken.',
       },
     },
   },
@@ -672,7 +670,7 @@ export const OrderedListRichTextEditorParagraph: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst laat de structuur van een lijst met een alinea zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt het HTML-element \`p\`. De tekst blijft goed uitgelijnd. Code snippet verduidelijking: Rich Text Editors voegen meestal pas een paragraph toe zodra je enter hebt gedaan. Dit betekent dat je eerst een textnode hebt, en dan een paragraph element. Deze story laat zien dat de spacing dan nog steeds goed gaat.',
+          'Een geordende lijst die de structuur van een lijst met een alinea in een Rich Text Editor laat zien. Het begin van de inhoud van het item bestaat uit platte tekst, en pas na het indrukken van Enter in de Rich Text Editor volgt het HTML-element `p`. De tekst blijft goed uitgelijnd. Rich Text Editors voegen meestal pas een alinea toe zodra Enter is ingedrukt. Deze story laat zien dat de witruimte ook dan nog goed gaat.',
       },
     },
   },
@@ -686,13 +684,12 @@ export const OrderedListRichTextEditorNLParagraph: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst laat de structuur van een lijst met een alinea zien in een Rich Text Editor: eerst bestaat de inhoud van het item uit platte tekst, en pas na het indrukken van enter volgt de NL Paragraph component. De tekst blijft goed uitgelijnd.',
+          'Een geordende lijst die de structuur van een lijst met een alinea in een Rich Text Editor laat zien. Het begin van de inhoud van het item bestaat uit platte tekst, en pas na het indrukken van Enter in de Rich Text Editor volgt het NL Paragraph-component. De tekst blijft goed uitgelijnd. Rich Text Editors voegen meestal pas een alinea toe zodra Enter is ingedrukt. Deze story laat zien dat de witruimte ook dan nog goed gaat.',
       },
     },
   },
 };
 
-// TODO_EXAMPLE CODE SNIPPET
 // Original: Stories voor Rich Text Editors: textnode met nested lijst, textnode met link, etc (voorafgaand aan stories schrijven even bepalen welke combinaties we hierin willen meenemen)
 export const OrderedListRichTextEditorNested: Story = {
   name: 'Ordered List in Rich Text Editor met meerdere niveaus',
@@ -729,7 +726,7 @@ export const OrderedListIncreasedTextSpacing: Story = {
     docs: {
       description: {
         story:
-          'Een lijst met vergrote tekstafstand (regelafstand, letterspatiëring en woordspatiëring), zoals bezoekers dit zelf kunnen instellen om tekst beter leesbaar te maken. De lijst en de nummering blijven ook met deze aangepaste afstanden goed leesbaar en er gaat geen content verloren.',
+          'Een geordende lijst met vergrote tekstafstand (regelafstand, letterspatiëring en woordspatiëring), zoals bezoekers dit zelf kunnen instellen om tekst beter leesbaar te maken. De lijst en de nummering blijven ook met deze aangepaste afstanden goed leesbaar en er gaat geen content verloren.',
       },
     },
   },
@@ -743,7 +740,7 @@ export const OrderedList200PercentZoom: Story = {
     docs: {
       description: {
         story:
-          'Een lijst waarvan de tekst 200% vergroot is. De lijst blijft ook op deze grotere tekstgrootte goed leesbaar: er gaat geen content verloren en er hoeft niet horizontaal gescrold te worden om de tekst te kunnen lezen.',
+          'Een geordende lijst waarvan de tekst 200% vergroot is. De lijst blijft ook op deze grotere tekstgrootte goed leesbaar: er gaat geen content verloren en er hoeft niet horizontaal gescrold te worden om de tekst te kunnen lezen.',
       },
     },
   },
@@ -757,7 +754,7 @@ export const OrderedListForcedColors: Story = {
     docs: {
       description: {
         story:
-          'Een lijst in forced colors modus. Forced colors is een instelling waarbij het besturingssysteem van de bezoeker een eigen kleurenschema afdwingt op alle content, bijvoorbeeld voor mensen met een visuele beperking die veel baat hebben bij hoog contrast. De nummers en tekst van de lijst blijven ook in dit kleurenschema goed zichtbaar en onderscheidend van elkaar.',
+          'Een geordende lijst in forced colors modus. Forced colors is een instelling waarbij het besturingssysteem van de bezoeker een eigen kleurenschema afdwingt op alle content, bijvoorbeeld voor mensen met een visuele beperking die veel baat hebben bij hoog contrast. De nummers en tekst van de lijst blijven ook in dit kleurenschema goed zichtbaar en onderscheidend van elkaar.',
       },
     },
   },
@@ -774,7 +771,7 @@ export const OrderedListOneItem: Story = {
     docs: {
       description: {
         story:
-          'Deze geordende lijst bestaat uit maar één item. Ook met maar één item wordt de lijst als lijst herkend door screenreaders, en krijgt het item het nummer 1.',
+          'Een geordende lijst bestaande uit één item. Ook met één item wordt de lijst als lijst herkend door screenreaders en krijgt het item het nummer 1.',
       },
     },
   },
@@ -787,7 +784,7 @@ export const OrderedListSoManyItems: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze geordende lijst bestaat uit 30 items. Ook met heel veel items wordt de opmaak goed toegepast.',
+        story: 'Een geordende lijst bestaande uit 30 items. Ook met heel veel items blijft de opmaak goed toegepast.',
       },
     },
   },
@@ -815,13 +812,12 @@ export const OrderedListLinkInItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'In deze geordende lijst staat in elk lijst-item een link.',
+        story: 'Een geordende lijst waarin elke item een link bevat.',
       },
     },
   },
 };
 
-// TODO_EXAMPLE CODE SNIPPET
 // Original: Ordered List met tabel in een list item (is dat een goed idee? nav component icm andere componenten / uitgebreide use cases)
 export const OrderedListTableInItem: Story = {
   name: 'Ordered List met tabel',
@@ -829,7 +825,7 @@ export const OrderedListTableInItem: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'In deze geordende lijst staat in een van de lijst-items een tabel.',
+        story: 'Een geordende lijst waarin een van de items een tabel bevat.',
       },
     },
   },
@@ -848,7 +844,7 @@ export const OrderedListReversedAndStart: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Deze geordende lijst heeft een aflopende nummering en heeft een aangepast startnummer.',
+        story: 'Een geordende lijst met een aflopende nummering en een aangepast startnummer.',
       },
     },
   },
@@ -861,8 +857,7 @@ export const OrderedListUpperCaseAlphabeticAndStart: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'In deze geordende lijst worden de items geordend met hoofdletters. Omdat het startgetal 4 is, start de lijst met D.',
+        story: 'Een geordende lijst met hoofdletters als nummering. Omdat het startgetal 4 is, begint de lijst met D.',
       },
     },
   },
@@ -882,34 +877,43 @@ export const OrderedListLangArabicReversed: Story = {
   },
 };
 
-// Original: Eentje met CSS reset voor de Component
-export const OrderedListCssReset: Story = {
+// Original: Eentje met CSS reset voor alles
+export const OrderedListCssResetFull: Story = {
   name: 'Ordered List met CSS reset op component',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: 'In deze geordende lijst wordt de CSS niet toegepast. De uitlijning gaat nog steeds goed.'
-        // Ziet disabled er nog uit als disabled
-        // Gaat spacing nog goed
-        // Blijft minimum target size goed
+        story:
+          'Een geordende lijst waarin de styling de component en het thema niet worden toegepast. De combinatie van de HTML en de browser styling houdt de lijst visueel bruikbaar en toegankelijk.',
+      },
+    },
+  },
+};
+
+// Original: Eentje met CSS reset voor de Component
+export const OrderedListCssResetComponent: Story = {
+  name: 'Ordered List met CSS reset op component',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een geordende lijst waarin de styling van de component niet wordt toegepast, maar de styling van het thema wel. De combinatie van de HTML, de browser styling en de thema styling houdt de lijst visueel bruikbaar en toegankelijk.',
       },
     },
   },
 };
 
 // Original: Wel de component CSS maar niet de thema CSS.
-export const OrderedListComponentCssNoThemeCss: Story = {
+export const OrderedListCssResetTheme: Story = {
   name: 'Ordered List met CSS reset op thema',
   args: {},
   parameters: {
     docs: {
       description: {
         story:
-          'Een geordende lijst met de stijl van het thema toegepast, maar zonder de component-CSS. De lijst blijft leesbaar en de hoofdlijnen van de opmaak blijven behouden, zodat het effect van de thema-styling zichtbaar is.',
-        // Ziet disabled er nog uit als disabled
-        // Gaat spacing nog goed
-        // Blijft minimum target size goed
+          'Een geordende lijst waarin de styling van de component wel wordt toegepast, maar de styling van het thema niet. De combinatie van de HTML, de browser styling en de component styling houdt de lijst visueel bruikbaar en toegankelijk.',
       },
     },
   },

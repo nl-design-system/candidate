@@ -116,7 +116,7 @@ export const OrderedListListStyleNoneNoRole: Story = {
       description: {
         story: `Bezoekers zien tekst, maar zonder lijststijl en zonder lijstsemantiek is de volgorde voor bezoekers en screenreadergebruikers niet duidelijk. De informatie lijkt meer op losse tekst dan op een geordende lijst.
 
-        Het probleem ontstaat omdat de lijststijl is weggehaald en de semantiek ontbreekt. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` word gezet en voeg het HTML-attribuut \`role="list"\` toe, , zodat de lijst visueel en semantisch als geordende lijst wordt herkend en correct wordt voorgelezen.`,
+        Het probleem ontstaat omdat de lijststijl is weggehaald en de semantiek ontbreekt. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` word gezet en voeg het HTML-attribuut \`role="list"\` toe, zodat de lijst visueel en semantisch als geordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
