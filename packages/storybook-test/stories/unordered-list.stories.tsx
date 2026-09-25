@@ -56,7 +56,7 @@ type Story = StoryObj<typeof meta>;
 //   <li class="nl-unordered-list__item">Je afspraakbevestiging</li>
 // </ol>
 // Original: Unordered List
-export const OrderedListDefault: Story = {
+export const UnorderedListDefault: Story = {
   name: 'Unordered List',
   args: {},
   parameters: {
@@ -80,7 +80,7 @@ export const OrderedListDefault: Story = {
 //   <li class="nl-unordered-list__item">Dien de aanvraag in</li>
 // </ol>
 // Original: Unordered List met geneste Unordered List
-export const OrderedListNestedOrderedList: Story = {
+export const UnorderedListNestedUnorderedList: Story = {
   name: 'Unordered List met geneste Unordered List',
   args: {},
   parameters: {
@@ -104,7 +104,7 @@ export const OrderedListNestedOrderedList: Story = {
 //   <li class="nl-unordered-list__item">Kies een datum en tijd</li>
 // </ol>
 // Original: Unordered List met geneste Unordered List
-export const OrderedListNestedUnorderedList: Story = {
+export const UnorderedListNestedUnorderedList: Story = {
   name: 'Unordered List met geneste Unordered List',
   args: {},
   parameters: {
@@ -134,7 +134,7 @@ export const OrderedListNestedUnorderedList: Story = {
 //   <li class="nl-unordered-list__item">Fase 2: Uitvoering</li>
 // </ol>
 // Original: Unordered List met minimaal drie niveaus nesting, met documentatie over hoe en wat
-export const OrderedListThreeLevelsNesting: Story = {
+export const UnorderedListThreeLevelsNesting: Story = {
   name: 'Unordered List van drie niveaus',
   args: {},
   parameters: {
@@ -154,7 +154,7 @@ export const OrderedListThreeLevelsNesting: Story = {
 //   <li class="nl-unordered-list__item">De Aardbeien van Jan en Brigitte</li>
 // </ol>
 // Original: Unordered List met startnummer anders dan 1
-export const OrderedListStart: Story = {
+export const UnorderedListStart: Story = {
   name: 'Unordered List met startnummer anders dan 1',
   args: {},
   parameters: {
@@ -174,7 +174,7 @@ export const OrderedListStart: Story = {
 //   <li class="nl-unordered-list__item">Berm</li>
 // </ol>
 // Original: Unordered List met omgekeerde nummering (`reversed`)
-export const OrderedListReversed: Story = {
+export const UnorderedListReversed: Story = {
   name: 'Unordered List met omgekeerde nummering via HTML-attribuut reversed',
   args: {},
   parameters: {
@@ -193,7 +193,7 @@ export const OrderedListReversed: Story = {
 //   <li class="nl-unordered-list__item">Den Haag</li>
 // </ol>
 // Original: Unordered List met kleine letters (`type="a"`)
-export const OrderedListLowercaseLetters: Story = {
+export const UnorderedListLowercaseLetters: Story = {
   name: 'Unordered List met kleine letters via HTML-attribuut type="a"',
   args: {},
   parameters: {
@@ -212,7 +212,7 @@ export const OrderedListLowercaseLetters: Story = {
 //   <li class="nl-unordered-list__item">Bevestiging afwachten</li>
 // </ol>
 // Original: Unordered List met hoofdletters (`type="A"`)
-export const OrderedListUppercaseLetters: Story = {
+export const UnorderedListUppercaseLetters: Story = {
   name: 'Unordered List met hoofdletters via HTML-attribuut type="A"',
   args: {},
   parameters: {
@@ -231,7 +231,7 @@ export const OrderedListUppercaseLetters: Story = {
 //   <li class="nl-unordered-list__item">Beëindiging</li>
 // </ol>
 // Original: Unordered List met kleine Romeinse cijfers (`type="i"`)
-export const OrderedListLowercaseRomanNum: Story = {
+export const UnorderedListLowercaseRomanNum: Story = {
   name: 'Unordered List met kleine Romeinse cijfers via HTML-attribuut type="i"',
   args: {},
   parameters: {
@@ -250,7 +250,7 @@ export const OrderedListLowercaseRomanNum: Story = {
 //   <li class="nl-unordered-list__item">Conclusie</li>
 // </ol>
 // Original: Unordered List met hoofdletters Romeinse cijfers (`type="I"`)
-export const OrderedListUppercaseRomanNum: Story = {
+export const UnorderedListUppercaseRomanNum: Story = {
   name: 'Unordered List met hoofdletters Romeinse cijfers via HTML-attribuut type="I"',
   args: {},
   parameters: {
@@ -271,7 +271,7 @@ export const OrderedListUppercaseRomanNum: Story = {
 // </ol>
 // Original: Unordered List met Arabische nummering (`lang="ar"`)
 // Original: Unordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
-export const OrderedListArabicNum: Story = {
+export const UnorderedListArabicNum: Story = {
   name: 'Unordered List met Arabische nummering via HTML-attribuut lang="ar"',
   args: {},
   parameters: {
@@ -295,7 +295,7 @@ Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels
 //   <li class="nl-unordered-list__item">انتظار التأكيد</li>
 // </ol>
 // Original: Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)
-export const OrderedListTypeOverridesLanguage: Story = {
+export const UnorderedListTypeOverridesLanguage: Story = {
   name: 'Unordered List waarbij type de taal overschrijft',
   args: {},
   parameters: {
@@ -336,7 +336,7 @@ Het type krijgt voorrang op de taal, in dit geval worden dus kleine Romeinse cij
 //    </li>
 // </ol>
 // Original: Unordered List met custom marker en toegankelijke naam via markerLabel (sr-only), met `aria-hidden="true"` op custom marker
-export const OrderedListCustomMarkerLabel: Story = {
+export const UnorderedListCustomMarkerLabel: Story = {
   name: 'Unordered List met Custom Marker en toegankelijke tekst die visueel verborgen is',
   args: {},
   parameters: {
@@ -369,7 +369,7 @@ export const OrderedListCustomMarkerLabel: Story = {
 //    </li>
 // </ol>
 // Original: Unordered List met een toegankelijke custom marker met toegankelijk label (niet perfecte maar toegankelijke oplossing)
-export const OrderedListCustomMarkerAriaLabelledby: Story = {
+export const UnorderedListCustomMarkerAriaLabelledby: Story = {
   name: 'Unordered List met Custom Marker en toegankelijk tekst via HTML-attribuut aria-labelledby',
   args: {},
   parameters: {
@@ -381,9 +381,9 @@ export const OrderedListCustomMarkerAriaLabelledby: Story = {
   },
 };
 
-// Dus dat je niet de sr-text class gebruikt, maar de title in de SVG / aan de Icon word meegegeven zoals bijv <OrderedListItem marker={<Icon label="1." />} />
+// Dus dat je niet de sr-text class gebruikt, maar de title in de SVG / aan de Icon word meegegeven zoals bijv <UnorderedListItem marker={<Icon label="1." />} />
 // Original: Unordered List met Custom Marker met Informatieve Icon met alternatieve tekst
-export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
+export const UnorderedListCustomMarkerInformativeIconAccessible: Story = {
   name: 'Unordered List met Custom Marker met informatieve icoon met alternatieve tekst',
   args: {},
   parameters: {
@@ -408,7 +408,7 @@ export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
 //   </li>
 // </ol>
 // Original: Unordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label.
-export const OrderedListCustomMarkerIconLabelOverride: Story = {
+export const UnorderedListCustomMarkerIconLabelOverride: Story = {
   name: 'Unordered List met Custom Marker met informatieve icoon met foutieve alternatieve tekst overschreven door Marker Label',
   args: {},
   parameters: {
@@ -427,7 +427,7 @@ export const OrderedListCustomMarkerIconLabelOverride: Story = {
 //   <li class="nl-unordered-list__item">Je afspraakbevestiging</li>
 // </ol>
 // Original: Unordered List met HTML `hidden` attribuut
-export const OrderedListHidden: Story = {
+export const UnorderedListHidden: Story = {
   name: 'Unordered List verstopt via HTML-attribuut hidden',
   args: {},
   parameters: {
@@ -446,7 +446,7 @@ export const OrderedListHidden: Story = {
 //   <li class="nl-unordered-list__item">انتظار التأكيد</li>
 // </ol>
 // Original: Unordered List met HTML `lang` attribuut (right-to-left tekst)
-export const OrderedListLangRTL: Story = {
+export const UnorderedListLangRTL: Story = {
   name: 'Unordered List met rechts-naar-links schrijfrichting via Arabische taal via HTML-attribuut lang="ar"',
   args: {},
   parameters: {
@@ -465,7 +465,7 @@ export const OrderedListLangRTL: Story = {
 //   <li class="nl-unordered-list__item">Je afspraakbevestiging</li>
 // </ol>
 // Original: Unordered List met HTML `dir` attribuut
-export const OrderedListDirRTL: Story = {
+export const UnorderedListDirRTL: Story = {
   name: 'Unordered List met schrijfrichting via HTML-attribuut dir="rtl"',
   args: {},
   parameters: {
@@ -484,7 +484,7 @@ export const OrderedListDirRTL: Story = {
 //  <li class="nl-unordered-list__item">انتظار التأكيد</li>
 // </ol>
 // Original: Unordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat
-export const OrderedListDirParentOnly: Story = {
+export const UnorderedListDirParentOnly: Story = {
   name: 'Unordered List met Arabische tekst waarbij HTML-attribuut dir alleen op HTML-element ol staat',
   args: {},
   parameters: {
@@ -506,7 +506,7 @@ export const OrderedListDirParentOnly: Story = {
 // </div>
 // Original: Unordered List binnen `nl-html--all`
 // Let op: role="list" en role="listitem" is nodig!
-export const OrderedListNLHTMLAll: Story = {
+export const UnorderedListNLHTMLAll: Story = {
   name: 'Unordered List binnen `nl-html--all`',
   args: {},
   parameters: {
@@ -531,7 +531,7 @@ De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="l
 // </div>
 // Original: Unordered List binnen `nl-html--unordered-list`
 // Let op: role="list" en role="listitem" is nodig!
-export const OrderedListNLHTMLOrderedList: Story = {
+export const UnorderedListNLHTMLUnorderedList: Story = {
   name: 'Unordered List binnen `nl-html--unordered-list`',
   args: {},
   parameters: {
@@ -554,7 +554,7 @@ De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="l
 // </div>
 // Original: Unordered List opgebouwd met `div` elementen
 // Let op: role="list" en role="listitem" is nodig!
-export const OrderedListAlternativeHTMLDivs: Story = {
+export const UnorderedListAlternativeHTMLDivs: Story = {
   name: 'Unordered List opgebouwd met HTML-elementen div',
   args: {},
   parameters: {
@@ -574,7 +574,7 @@ export const OrderedListAlternativeHTMLDivs: Story = {
 // </span>
 // Original: Unordered List opgebouwd met `span` elementen
 // Let op: role="list" en role="listitem" is nodig!
-export const OrderedListAlternativeHTMLSpans: Story = {
+export const UnorderedListAlternativeHTMLSpans: Story = {
   name: 'Unordered List opgebouwd met HTML-elementen span',
   args: {},
   parameters: {
@@ -588,7 +588,7 @@ export const OrderedListAlternativeHTMLSpans: Story = {
 };
 
 // Original: Unordered List met paragraphs (`p`) in list items
-export const OrderedListHTMLParagraphsInListItem: Story = {
+export const UnorderedListHTMLParagraphsInListItem: Story = {
   name: 'Unordered List met HTML-elementen p',
   args: {},
   parameters: {
@@ -601,7 +601,7 @@ export const OrderedListHTMLParagraphsInListItem: Story = {
 };
 
 // Original: Unordered List met NL Paragraph in list item
-export const OrderedListNLParagraphsInListItem: Story = {
+export const UnorderedListNLParagraphsInListItem: Story = {
   name: 'Unordered List met NL Paragraph-componenten',
   args: {},
   parameters: {
@@ -615,7 +615,7 @@ export const OrderedListNLParagraphsInListItem: Story = {
 };
 
 // Original: Unordered List in een column layout
-export const OrderedListColumnLayout: Story = {
+export const UnorderedListColumnLayout: Story = {
   name: 'Unordered List in column layout',
   args: {},
   parameters: {
@@ -629,7 +629,7 @@ export const OrderedListColumnLayout: Story = {
 };
 
 // Original: Unordered List met een lang list item dat doorloopt naar een volgende kolom
-export const OrderedListLongItemAcrossColumns: Story = {
+export const UnorderedListLongItemAcrossColumns: Story = {
   name: 'Unordered List met lange items welke doorlopen naar volgende kolom',
   args: {},
   parameters: {
@@ -643,7 +643,7 @@ export const OrderedListLongItemAcrossColumns: Story = {
 };
 
 // Original: Unordered List met horizontaal scrollen op een klein scherm (mock mobiel) - hier zijn meerdere geneste niveaus nodig om te laten zien dat scrollen dan beter is dan wrappen omdat er anders maar een paar letters per regel blijven staan
-export const OrderedListHorizontalScrollMobile: Story = {
+export const UnorderedListHorizontalScrollMobile: Story = {
   name: 'Unordered List met horizontaal scrollen op klein scherm',
   args: {},
   parameters: {
@@ -667,7 +667,7 @@ export const OrderedListHorizontalScrollMobile: Story = {
 //   </ol>
 // </div>
 // Original: Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor
-export const OrderedListRichTextEditorParagraph: Story = {
+export const UnorderedListRichTextEditorParagraph: Story = {
   name: 'Unordered List in Rich Text Editor met HTML-elementen p',
   args: {},
   parameters: {
@@ -681,7 +681,7 @@ export const OrderedListRichTextEditorParagraph: Story = {
 };
 
 // Original: Story voor Rich Text Editors met NL Paragraph - zelfde als bovenstaande maar dan met NL Paragraph component
-export const OrderedListRichTextEditorNLParagraph: Story = {
+export const UnorderedListRichTextEditorNLParagraph: Story = {
   name: 'Unordered List in Rich Text Editor met NL Paragraph-componenten',
   args: {},
   parameters: {
@@ -695,7 +695,7 @@ export const OrderedListRichTextEditorNLParagraph: Story = {
 };
 
 // Original: Stories voor Rich Text Editors: textnode met nested lijst, textnode met link, etc (voorafgaand aan stories schrijven even bepalen welke combinaties we hierin willen meenemen)
-export const OrderedListRichTextEditorNested: Story = {
+export const UnorderedListRichTextEditorNested: Story = {
   name: 'Unordered List in Rich Text Editor met meerdere niveaus',
   args: {},
   parameters: {
@@ -710,7 +710,7 @@ export const OrderedListRichTextEditorNested: Story = {
 
 // NOTE: de CSS hiervoor is niet onderdeel van de CSS Component, het is een voorbeeld implementatie
 // Original: Story voor het centreren van de Unordered List. Dit omdat dit beschikbaar is in community en we daar een oplossing voor moeten laten zien.
-export const OrderedListCentered: Story = {
+export const UnorderedListCentered: Story = {
   name: 'Unordered List gecentreerd',
   args: {},
   parameters: {
@@ -723,7 +723,7 @@ export const OrderedListCentered: Story = {
 };
 
 // Original: Unordered List met vergrote tekstafstand
-export const OrderedListIncreasedTextSpacing: Story = {
+export const UnorderedListIncreasedTextSpacing: Story = {
   name: 'Unordered List met vergrote tekstafstand',
   args: {},
   parameters: {
@@ -737,7 +737,7 @@ export const OrderedListIncreasedTextSpacing: Story = {
 };
 
 // Original: Unordered List met tekst vergroot naar 200%
-export const OrderedList200PercentZoom: Story = {
+export const UnorderedList200PercentZoom: Story = {
   name: 'Unordered List met tekst vergroot naar 200%',
   args: {},
   parameters: {
@@ -751,7 +751,7 @@ export const OrderedList200PercentZoom: Story = {
 };
 
 // Original: Unordered List in Forced Colors modus
-export const OrderedListForcedColors: Story = {
+export const UnorderedListForcedColors: Story = {
   name: 'Unordered List in Forced Colors modus',
   args: {},
   parameters: {
@@ -768,7 +768,7 @@ export const OrderedListForcedColors: Story = {
 //   <li class="nl-unordered-list__item">Doet u uw aanvraag op een werkdag voor 14.00 uur? U kunt uw paspoort of ID-kaart de werkdag na uw aanvraag ophalen vanaf 12.00 uur.</li>
 // </ol>
 // Original: Unordered List met 1 list item
-export const OrderedListOneItem: Story = {
+export const UnorderedListOneItem: Story = {
   name: 'Unordered List met één item',
   args: {},
   parameters: {
@@ -782,7 +782,7 @@ export const OrderedListOneItem: Story = {
 };
 
 // Original: Unordered List met zeer veel list items (meer dan geadviseerde 3)
-export const OrderedListSoManyItems: Story = {
+export const UnorderedListSoManyItems: Story = {
   name: 'Unordered List met zeer veel items',
   args: {},
   parameters: {
@@ -795,7 +795,7 @@ export const OrderedListSoManyItems: Story = {
 };
 
 // Original: Unordered List op een breed scherm (in tegenstelling tot de mobiele test)
-export const OrderedListVeryLargeScreen: Story = {
+export const UnorderedListVeryLargeScreen: Story = {
   name: 'Unordered List op breed scherm',
   args: {},
   parameters: {
@@ -809,7 +809,7 @@ export const OrderedListVeryLargeScreen: Story = {
 };
 
 // Original: Unordered List met Link in list items (ie een soort Link List? is dat een goed idee? nav component icm andere componenten)
-export const OrderedListLinkInItem: Story = {
+export const UnorderedListLinkInItem: Story = {
   name: 'Unordered List met NL Link-componenten',
   args: {},
   parameters: {
@@ -822,7 +822,7 @@ export const OrderedListLinkInItem: Story = {
 };
 
 // Original: Unordered List met tabel in een list item (is dat een goed idee? nav component icm andere componenten / uitgebreide use cases)
-export const OrderedListTableInItem: Story = {
+export const UnorderedListTableInItem: Story = {
   name: 'Unordered List met tabel',
   args: {},
   parameters: {
@@ -841,7 +841,7 @@ export const OrderedListTableInItem: Story = {
 //   <li class="nl-unordered-list__item">Berm</li>
 // </ol>
 // Original: Unordered List met reversed en start
-export const OrderedListReversedAndStart: Story = {
+export const UnorderedListReversedAndStart: Story = {
   name: 'Unordered List met HTML-attributen reversed en start',
   args: {},
   parameters: {
@@ -854,20 +854,21 @@ export const OrderedListReversedAndStart: Story = {
 };
 
 // Original: Unordered List met type="A" en start
-export const OrderedListUpperCaseAlphabeticAndStart: Story = {
+export const UnorderedListUpperCaseAlphabeticAndStart: Story = {
   name: 'Unordered List met HTML-attributen type="A" en start',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: 'Een ongeordende lijst met hoofdletters als nummering. Omdat het startgetal 4 is, begint de lijst met D.',
+        story:
+          'Een ongeordende lijst met hoofdletters als nummering. Omdat het startgetal 4 is, begint de lijst met D.',
       },
     },
   },
 };
 
 // Original: Unordered List met lang="ar" en reversed
-export const OrderedListLangArabicReversed: Story = {
+export const UnorderedListLangArabicReversed: Story = {
   name: 'Unordered List met HTML-attributen lang="ar" en reversed',
   args: {},
   parameters: {
@@ -881,7 +882,7 @@ export const OrderedListLangArabicReversed: Story = {
 };
 
 // Original: Eentje met CSS reset voor alles
-export const OrderedListCssResetFull: Story = {
+export const UnorderedListCssResetFull: Story = {
   name: 'Unordered List met CSS reset op component',
   args: {},
   parameters: {
@@ -895,7 +896,7 @@ export const OrderedListCssResetFull: Story = {
 };
 
 // Original: Eentje met CSS reset voor de Component
-export const OrderedListCssResetComponent: Story = {
+export const UnorderedListCssResetComponent: Story = {
   name: 'Unordered List met CSS reset op component',
   args: {},
   parameters: {
@@ -909,7 +910,7 @@ export const OrderedListCssResetComponent: Story = {
 };
 
 // Original: Wel de component CSS maar niet de thema CSS.
-export const OrderedListCssResetTheme: Story = {
+export const UnorderedListCssResetTheme: Story = {
   name: 'Unordered List met CSS reset op thema',
   args: {},
   parameters: {
@@ -923,7 +924,7 @@ export const OrderedListCssResetTheme: Story = {
 };
 
 // Original: Eentje waar alle CSS naar een invalid value word gezet, wat betekent dat user-agent dan ook niet meer lekker gaat.
-export const OrderedListInvalidCssValues: Story = {
+export const UnorderedListInvalidCssValues: Story = {
   name: 'Unordered List met ongeldige CSS voor alle properties',
   args: {},
   parameters: {
