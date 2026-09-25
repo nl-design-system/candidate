@@ -147,122 +147,6 @@ export const UnorderedListThreeLevelsNesting: Story = {
   },
 };
 
-// <p>Rotondekunstprijs eervolle vermeldingen:</p>
-// <ol class="unordered-list" role="list" start="4">
-//   <li class="nl-unordered-list__item">Vangrails Looping</li>
-//   <li class="nl-unordered-list__item">Many sites</li>
-//   <li class="nl-unordered-list__item">De Aardbeien van Jan en Brigitte</li>
-// </ol>
-// Original: Unordered List met startnummer anders dan 1
-export const UnorderedListStart: Story = {
-  name: 'Unordered List met startnummer anders dan 1',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst met een aangepast startnummer. De nummering begint niet bij 1, maar bij het opgegeven getal, zodat de volgorde past bij de context van de inhoud.',
-      },
-    },
-  },
-};
-
-// <p>Rotondekunstprijs prijswinnaars:</p>
-// <ol class="nl-unordered-list" role="list" reversed>
-//   <li class="nl-unordered-list__item">Vis op wielen</li>
-//   <li class="nl-unordered-list__item">Licht Piramide</li>
-//   <li class="nl-unordered-list__item">Berm</li>
-// </ol>
-// Original: Unordered List met omgekeerde nummering (`reversed`)
-export const UnorderedListReversed: Story = {
-  name: 'Unordered List met omgekeerde nummering via HTML-attribuut reversed',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst met een aflopende nummering. De items worden van hoog naar laag genummerd, zodat de volgorde past bij de context van de inhoud.',
-      },
-    },
-  },
-};
-
-// <ol class="nl-unordered-list" role="list" type="a">
-//   <li class="nl-unordered-list__item">Amsterdam</li>
-//   <li class="nl-unordered-list__item">Rotterdam</li>
-//   <li class="nl-unordered-list__item">Den Haag</li>
-// </ol>
-// Original: Unordered List met kleine letters (`type="a"`)
-export const UnorderedListLowercaseLetters: Story = {
-  name: 'Unordered List met kleine letters via HTML-attribuut type="a"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst met kleine letters (a, b, c) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
-      },
-    },
-  },
-};
-
-// <ol class="nl-unordered-list" role="list" type="A">
-//   <li class="nl-unordered-list__item">Aanvraag indienen</li>
-//   <li class="nl-unordered-list__item">Documenten uploaden</li>
-//   <li class="nl-unordered-list__item">Bevestiging afwachten</li>
-// </ol>
-// Original: Unordered List met hoofdletters (`type="A"`)
-export const UnorderedListUppercaseLetters: Story = {
-  name: 'Unordered List met hoofdletters via HTML-attribuut type="A"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst met hoofdletters (A, B, C) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
-      },
-    },
-  },
-};
-
-// <ol class="nl-unordered-list" role="list" type="i">
-//   <li class="nl-unordered-list__item">Algemene bepalingen</li>
-//   <li class="nl-unordered-list__item">Duur van de overeenkomst</li>
-//   <li class="nl-unordered-list__item">Beëindiging</li>
-// </ol>
-// Original: Unordered List met kleine Romeinse cijfers (`type="i"`)
-export const UnorderedListLowercaseRomanNum: Story = {
-  name: 'Unordered List met kleine Romeinse cijfers via HTML-attribuut type="i"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst met Romeinse cijfers in kleine letters (i, ii, iii) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
-      },
-    },
-  },
-};
-
-// <ol class="nl-unordered-list" role="list" type="I">
-//   <li class="nl-unordered-list__item">Inleiding</li>
-//   <li class="nl-unordered-list__item">Doelstellingen</li>
-//   <li class="nl-unordered-list__item">Conclusie</li>
-// </ol>
-// Original: Unordered List met hoofdletters Romeinse cijfers (`type="I"`)
-export const UnorderedListUppercaseRomanNum: Story = {
-  name: 'Unordered List met hoofdletters Romeinse cijfers via HTML-attribuut type="I"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst met Romeinse cijfers hoofdletters (I, II, III) in plaats van de standaard nummers (1, 2, 3) om de items te ordenen.',
-      },
-    },
-  },
-};
-
 // Let op: CSS moet nog toegepast worden voor juiste nummering, dat doen we enkel voor arabic-indic, dat selecteert op lang="ar"
 // <ol class="nl-unordered-list" role="list" lang="ar">
 //   <li class="nl-unordered-list__item">تحميل المستندات</li>
@@ -272,7 +156,7 @@ export const UnorderedListUppercaseRomanNum: Story = {
 // Original: Unordered List met Arabische nummering (`lang="ar"`)
 // Original: Unordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
 export const UnorderedListArabicNum: Story = {
-  name: 'Unordered List met Arabische nummering via HTML-attribuut lang="ar"',
+  name: 'Unordered List met taal ingesteld via HTML-attribuut lang="ar"',
   args: {},
   parameters: {
     docs: {
@@ -289,31 +173,7 @@ Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels
   },
 };
 
-// <ol class="nl-unordered-list" role="list" lang="ar" type="i">
-//   <li class="nl-unordered-list__item">تحميل المستندات</li>
-//   <li class="nl-unordered-list__item">تقديم الطلب</li>
-//   <li class="nl-unordered-list__item">انتظار التأكيد</li>
-// </ol>
-// Original: Type overschrijft Language (bouwnotitie: dit kan mogelijk met een not has type selector)
-export const UnorderedListTypeOverridesLanguage: Story = {
-  name: 'Unordered List waarbij type de taal overschrijft',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Een ongeordende lijst met Arabische tekst en Romeinse cijfers in kleine letters (i, ii, iii) voor de nummering.
-
-De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De nummering van de lijst wordt ingesteld op Romeinse cijfers in kleine letters via het HTML-attribuut \`type="i"\`.
-
-De NL Unordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic\`.
-
-Dit wordt aangeboden vanuit de NL Unordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
-
-Het type krijgt voorrang op de taal, in dit geval worden dus kleine Romeinse cijfers getoond in plaats van de Arabisch-Indische nummers.`,
-      },
-    },
-  },
-};
+// TODO: Unordered List met Custom Marker zonder toegankelijke tekst
 
 // <ol class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
@@ -834,53 +694,6 @@ export const UnorderedListTableInItem: Story = {
   },
 };
 
-// <p>Rotondekunstprijs prijswinnaars pagina 2 van 3:</p>
-// <ol class="nl-unordered-list" role="list" reversed start="10">
-//   <li class="nl-unordered-list__item">Vis op wielen</li>
-//   <li class="nl-unordered-list__item">Licht Piramide</li>
-//   <li class="nl-unordered-list__item">Berm</li>
-// </ol>
-// Original: Unordered List met reversed en start
-export const UnorderedListReversedAndStart: Story = {
-  name: 'Unordered List met HTML-attributen reversed en start',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: 'Een ongeordende lijst met een aflopende nummering en een aangepast startnummer.',
-      },
-    },
-  },
-};
-
-// Original: Unordered List met type="A" en start
-export const UnorderedListUpperCaseAlphabeticAndStart: Story = {
-  name: 'Unordered List met HTML-attributen type="A" en start',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst met hoofdletters als nummering. Omdat het startgetal 4 is, begint de lijst met D.',
-      },
-    },
-  },
-};
-
-// Original: Unordered List met lang="ar" en reversed
-export const UnorderedListLangArabicReversed: Story = {
-  name: 'Unordered List met HTML-attributen lang="ar" en reversed',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst met Arabische tekst, is geordend met Arabisch-Indische cijfers en loopt af in plaats van op. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`. De richting van de ordening wordt omgedraaid met het HTML-attribuut `reversed`.',
-      },
-    },
-  },
-};
-
 // Original: Eentje met CSS reset voor alles
 export const UnorderedListCssResetFull: Story = {
   name: 'Unordered List met CSS reset op component',
@@ -936,3 +749,5 @@ export const UnorderedListInvalidCssValues: Story = {
     },
   },
 };
+
+// TODO:  Unordered List zonder markers (community implementatie)
