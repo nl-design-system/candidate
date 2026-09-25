@@ -103,6 +103,11 @@ export function TestReport() {
       href: 'https://nldesignsystem.nl/baseline/2025-12/',
       text: 'NL Design System Baseline: december 2025',
     },
+    {
+      date: '2026-09-06',
+      href: 'https://nldesignsystem.nl/baseline/2026-09/',
+      text: 'NL Design System Baseline: september 2026',
+    },
   ];
 
   const createTestResult = (parameters: object & Partial<TestResult>) => {
