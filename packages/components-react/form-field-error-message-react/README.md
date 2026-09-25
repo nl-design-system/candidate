@@ -59,7 +59,7 @@ focus. Use `contentId` rather than `id`: `id` sets the `id` attribute of the out
 
 ### Realtime validation with `contentRole="alert"`
 
-When the error message is added or updated at the client side, for example after realtime validation, use
+When a single error message needs to be displayed instead of an Alert error message summary, you can use 'contentRole="alert"' to make screenreaders announce the error message immediately.
 `contentRole="alert"` so it's announced immediately.
 
 ```jsx
