@@ -23,28 +23,6 @@ describe('Unordered List', () => {
     it.todo('supports forwarding the HTML-attribute `dir` to the underlying HTML-element `ul`', () => {});
     it.todo('supports forwarding the HTML-attribute `role` to the underlying HTML-element `ul`', () => {});
     it.todo('supports forwarding the HTML-attribute `reversed` to the underlying HTML-element `ul`', () => {});
-    it.todo('supports forwarding the HTML-attribute `start` to the underlying HTML-element `ul`', () => {});
-    it.todo('supports forwarding the HTML-attribute `type` to the underlying HTML-element `ul`', () => {});
-    it.todo(
-      'supports forwarding the HTML-attribute `type` with value `1` to the underlying HTML-element `ul`',
-      () => {},
-    );
-    it.todo(
-      'supports forwarding the HTML-attribute `type` with value `a` to the underlying HTML-element `ul`',
-      () => {},
-    );
-    it.todo(
-      'supports forwarding the HTML-attribute `type` with value `A` to the underlying HTML-element `ul`',
-      () => {},
-    );
-    it.todo(
-      'supports forwarding the HTML-attribute `type` with value `i` to the underlying HTML-element `ul`',
-      () => {},
-    );
-    it.todo(
-      'supports forwarding the HTML-attribute `type` with value `I` to the underlying HTML-element `ul`',
-      () => {},
-    );
   });
 
   describe('React API', () => {
@@ -79,7 +57,17 @@ describe('Unordered List Item', () => {
 });
 
 // Hint voor Ontwikkelfase developer, comment mag weg na ontwikkeling:
-// <ol class="nl-unordered-list" role="list">
+// <ul class="nl-unordered-list" role="list">
+//   <li class="nl-unordered-list__item">
+//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
+//       <span aria-hidden="true">
+//         <Icon />
+//       </span>
+//     </span>
+//     Foo Bar
+//   </li>
+// </ul>
+// <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
 //       <span aria-hidden="true">
@@ -89,39 +77,33 @@ describe('Unordered List Item', () => {
 //     </span>
 //     Foo Bar
 //   </li>
-// </ol>
+// </ul>
 describe('Unordered List Custom Marker when `marker` is not provided', () => {
   describe('Component API', () => {
     it.todo('does not render the HTML-element `span`', () => {});
-    it.todo('does not render the the custom marker HTML-element `span`', () => {});
+    it.todo('does not render the custom marker HTML-element `span`', () => {});
     it.todo('does not render the screenreader text HTML-element `span`', () => {});
   });
 });
 
 describe('Unordered List Custom Marker when `marker` is provided', () => {
-  describe('and when `markerLabel` is not provided', () => {
-    it.todo('does not render the HTML-element `span`', () => {});
-    it.todo('does not render the the custom marker HTML-element `span`', () => {});
-    it.todo('does not render the screenreader text HTML-element `span`', () => {});
+  describe('CSS API', () => {
+    it.todo('adds the `nl-unordered-list__marker` class by default', () => {});
+    it.todo('adds the `nl-unordered-list__marker--custom` class by default', () => {});
   });
 
-  describe('and when `markerLabel` is provided', () => {
-    describe('CSS API', () => {
-      it.todo('adds the `nl-unordered-list__marker` class by default', () => {});
-      it.todo('adds the `nl-unordered-list__marker--custom` class by default', () => {});
-    });
+  describe('Component API', () => {
+    it.todo('renders the HTML-element `span`', () => {});
 
-    describe('Component API', () => {
-      it.todo('renders the HTML-element `span`', () => {});
+    it.todo('renders the custom marker HTML-element `span`', () => {});
+    it.todo('has the HTML-attribute `aria-hidden="true"` on the custom marker HTML-element `span`', () => {});
+    it.todo('supports phrasing content in the custom marker HTML-element `span`', () => {});
+    it.todo('supports the HTML-element `p` in the custom marker HTML-element `span`', () => {});
 
-      it.todo('renders the custom marker HTML-element `span`', () => {});
-      it.todo('has the HTML-attribute `aria-hidden="true"` on the custom marker HTML-element `span`', () => {});
-      it.todo('supports phrasing content in the custom marker HTML-element `span`', () => {});
-      it.todo('supports the HTML-element `p` in the custom marker HTML-element `span`', () => {});
+    it.todo('does not render the screenreader text HTML-element `span` when `markerLabel` is not provided', () => {});
 
-      it.todo('renders the screenreader text HTML-element `span`', () => {});
-      it.todo('supports phrasing content in the screenreader text HTML-element `span`', () => {});
-      it.todo('has the `sr-only` class on the screenreader text HTML-element `span`', () => {});
-    });
+    it.todo('renders the screenreader text HTML-element `span` when `markerLabel` is provided', () => {});
+    it.todo('supports phrasing content in the screenreader text HTML-element `span`', () => {});
+    it.todo('has the `sr-only` class on the screenreader text HTML-element `span`', () => {});
   });
 });
