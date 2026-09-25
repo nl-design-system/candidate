@@ -557,7 +557,8 @@ export const OrderedListAlternativeHTMLDivs: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een geordende lijst opgemaakt met meerdere HTML-elementen `div`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
+        story:
+          'Een geordende lijst opgemaakt met meerdere HTML-elementen `div`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -576,7 +577,8 @@ export const OrderedListAlternativeHTMLSpans: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Een geordende lijst opgemaakt met meerdere HTML-elementen `span`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
+        story:
+          'Een geordende lijst opgemaakt met meerdere HTML-elementen `span`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
       },
     },
   },
@@ -609,7 +611,6 @@ export const OrderedListNLParagraphsInListItem: Story = {
   },
 };
 
-// TODO_EXAMPLE CODE SNIPPET
 // Original: Ordered List in een column layout
 export const OrderedListColumnLayout: Story = {
   name: 'Ordered List in column layout',
@@ -804,7 +805,6 @@ export const OrderedListVeryLargeScreen: Story = {
   },
 };
 
-// TODO_EXAMPLE CODE SNIPPET
 // Original: Ordered List met Link in list items (ie een soort Link List? is dat een goed idee? nav component icm andere componenten)
 export const OrderedListLinkInItem: Story = {
   name: 'Ordered List met NL Link-componenten',
