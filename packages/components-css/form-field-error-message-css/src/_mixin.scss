@@ -19,8 +19,10 @@
   flex-shrink: 0;
   font-size: var(--nl-form-field-error-message-icon-size);
   line-height: 0;
+  margin-block: 0;
 }
 
 @mixin nl-form-field-error-message__content {
   flex: 1;
+  margin-block: 0;
 }
