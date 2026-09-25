@@ -153,7 +153,7 @@ export const UnorderedListThreeLevelsNesting: Story = {
 //   <li class="nl-unordered-list__item">انتظار التأكيد</li>
 // </ul>
 // Original: Unordered List met taal ingesteld lang (`lang="ar"`)
-export const UnorderedListArabicNum: Story = {
+export const UnorderedListLang: Story = {
   name: 'Unordered List met taal ingesteld via HTML-attribuut lang="ar"',
   args: {},
   parameters: {
@@ -366,9 +366,9 @@ export const UnorderedListDirRTL: Story = {
 //  <li class="nl-unordered-list__item">تقديم الطلب</li>
 //  <li class="nl-unordered-list__item">انتظار التأكيد</li>
 // </ul>
-// Original: Unordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat
+// Original: Unordered List met Arabische tekst waarbij `dir` alleen op de `ul` staat
 export const UnorderedListDirParentOnly: Story = {
-  name: 'Unordered List met Arabische tekst waarbij HTML-attribuut dir alleen op HTML-element ol staat',
+  name: 'Unordered List met Arabische tekst waarbij HTML-attribuut dir alleen op HTML-element ul staat',
   args: {},
   parameters: {
     docs: {
@@ -613,7 +613,7 @@ export const UnorderedListIncreasedTextSpacing: Story = {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst met vergrote tekstafstand (regelafstand, letterspatiëring en woordspatiëring), zoals bezoekers dit zelf kunnen instellen om tekst beter leesbaar te maken. De lijst en de nummering blijven ook met deze aangepaste afstanden goed leesbaar en er gaat geen content verloren.',
+          'Een ongeordende lijst met vergrote tekstafstand (regelafstand, letterspatiëring en woordspatiëring), zoals bezoekers dit zelf kunnen instellen om tekst beter leesbaar te maken. De lijst en de markers blijven ook met deze aangepaste afstanden goed leesbaar en er gaat geen content verloren.',
       },
     },
   },
@@ -641,7 +641,7 @@ export const UnorderedListForcedColors: Story = {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst in forced colors modus. Forced colors is een instelling waarbij het besturingssysteem van de bezoeker een eigen kleurenschema afdwingt op alle content, bijvoorbeeld voor mensen met een visuele beperking die veel baat hebben bij hoog contrast. De nummers en tekst van de lijst blijven ook in dit kleurenschema goed zichtbaar en onderscheidend van elkaar.',
+          'Een ongeordende lijst in forced colors modus. Forced colors is een instelling waarbij het besturingssysteem van de bezoeker een eigen kleurenschema afdwingt op alle content, bijvoorbeeld voor mensen met een visuele beperking die veel baat hebben bij hoog contrast. De markers en tekst van de lijst blijven ook in dit kleurenschema goed zichtbaar en onderscheidend van elkaar.',
       },
     },
   },
