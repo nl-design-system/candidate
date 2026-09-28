@@ -108,36 +108,6 @@ Het probleem ontstaat omdat een niet-interactief element via het HTML-attribuut 
   },
 };
 
-// Original: Ordered List zonder lijststyling (`list-style: none`) waardoor de lijstsemantiek en ordening verloren gaat
-export const OrderedListListStyleNoneNoRole: Story = {
-  name: 'Fout: Ordered List zonder lijststyling en zonder role="list"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Bezoekers zien tekst, maar zonder lijststijl en zonder lijstsemantiek is de volgorde voor bezoekers en screenreadergebruikers niet duidelijk. De informatie lijkt meer op losse tekst dan op een geordende lijst.
-
-Het probleem ontstaat omdat de lijststijl is weggehaald en de semantiek ontbreekt. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet en voeg het HTML-attribuut \`role="list"\` toe, waardoor de lijst visueel en semantisch als geordende lijst wordt herkend en correct wordt voorgelezen.`,
-      },
-    },
-  },
-};
-
-// Original: Ordered List zonder lijststyling met alleen `role="list"` (lijstsemantiek terug, maar ordening ontbreekt)
-export const OrderedListListStyleNoneWithRole: Story = {
-  name: 'Fout: Ordered List zonder lijststyling en met HTML-attribuut role="list"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Bezoekers kunnen de items nog wel als een groep herkennen, maar de volgorde is niet meer zichtbaar. Dat maakt een lijst met stappen moeilijker te scannen en voor screenreadergebruikers is de logische reeks niet goed te volgen. De visuele nummering ontbreekt, waardoor de inhoud op losse onderdelen lijkt.
-
-Het probleem ontstaat omdat alleen het HTML-attribuut \`role="list"\` is toegevoegd, maar de nummering is uitgezet via de lijststyling. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet, waardoor de lijst visueel en semantisch als geordende lijst wordt herkend.`,
-      },
-    },
-  },
-};
-
 // Original: Ordered List met `aria-posinset` en `aria-setsize`
 export const OrderedListAriaPosSetSize: Story = {
   name: 'Fout: Ordered List met HTML-attributen aria-posinset en aria-setsize',
