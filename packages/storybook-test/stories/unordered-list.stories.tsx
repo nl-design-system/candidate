@@ -323,39 +323,21 @@ export const UnorderedListHidden: Story = {
   },
 };
 
-// <ul class="nl-unordered-list" role="list" lang="ar">
+// <ul class="nl-unordered-list" role="list" lang="ar" dir="rtl">
 //   <li class="nl-unordered-list__item">تحميل المستندات</li>
 //   <li class="nl-unordered-list__item">تقديم الطلب</li>
 //   <li class="nl-unordered-list__item">انتظار التأكيد</li>
 // </ul>
 // Original: Unordered List met HTML `lang` attribuut (right-to-left tekst)
-export const UnorderedListLangRTL: Story = {
+// Combined with Unordered List met HTML `dir` attribuut based on feedback https://github.com/nl-design-system/candidate/pull/1411#discussion_r4106782830
+export const UnorderedListLangRTLDirRTL: Story = {
   name: 'Unordered List met rechts-naar-links schrijfrichting via Arabische taal via HTML-attribuut lang="ar"',
   args: {},
   parameters: {
     docs: {
       description: {
         story:
-          'Een ongeordende lijst met Arabische tekst, dit is een taal die van rechts naar links wordt gelezen. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`.',
-      },
-    },
-  },
-};
-
-// <ul class="nl-unordered-list" role="list" dir="rtl">
-//   <li class="nl-unordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
-//   <li class="nl-unordered-list__item">Je oude paspoort</li>
-//   <li class="nl-unordered-list__item">Je afspraakbevestiging</li>
-// </ul>
-// Original: Unordered List met HTML `dir` attribuut
-export const UnorderedListDirRTL: Story = {
-  name: 'Unordered List met schrijfrichting via HTML-attribuut dir="rtl"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst die rechts-naar-links wordt weergegeven. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`. De markers staan aan de rechterkant en de tekst loopt van rechts naar links.',
+          'Een ongeordende lijst die rechts-naar-links wordt weergegeven met Arabische tekst, dit is een taal die van rechts naar links wordt gelezen. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`. De markers staan aan de rechterkant en de tekst loopt van rechts naar links.',
       },
     },
   },
