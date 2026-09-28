@@ -231,39 +231,6 @@ export const UnorderedListCustomMarkerLabel: Story = {
   },
 };
 
-// <ul class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
-//       <span aria-labelledby="label-id-1">
-//         <IconMark />
-//       </span>
-//      <span aria-hidden="true" id="label-id-1">Let op.{" "}</span>
-//     </span>
-//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
-//   </li>
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
-//       <span aria-labelledby="label-id-2">
-//         <IconMark />
-//       </span>
-//      <span aria-hidden="true" id="label-id-2">Let op.{" "}</span>
-//     </span>
-//     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
-//    </li>
-// </ul>
-// Original: Unordered List met een toegankelijke custom marker met toegankelijk label (niet perfecte maar toegankelijke oplossing)
-export const UnorderedListCustomMarkerAriaLabelledby: Story = {
-  name: 'Unordered List met Custom Marker en toegankelijk tekst via HTML-attribuut aria-labelledby',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Een ongeordende lijst met een icoon als marker. Het icoon is verborgen voor hulpsoftware. De betekenis van de marker is aangeboden als tekst welke verborgen wordt voor alle bezoekers. De boodschap van de icoon is toegankelijk gemaakt voor screenreadergebruikers via het WAI-ARIA-attribuut \`aria-labelledby\` gekoppeld aan de marker. De boodschap van de icoon is toegankelijk voor alle bezoekers.`,
-      },
-    },
-  },
-};
-
 // Dus dat je niet de sr-text class gebruikt, maar de title in de SVG / aan de Icon word meegegeven zoals bijv <UnorderedListItem marker={<Icon label="1." />} />
 // Original: Unordered List met Custom Marker met Informatieve Icon met alternatieve tekst
 export const UnorderedListCustomMarkerInformativeIconAccessible: Story = {
