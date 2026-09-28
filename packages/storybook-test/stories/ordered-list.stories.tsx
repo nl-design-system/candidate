@@ -274,20 +274,23 @@ export const OrderedListUppercaseRomanNum: Story = {
 };
 
 // Let op: CSS moet nog toegepast worden voor juiste nummering, dat doen we enkel voor arabic-indic, dat selecteert op lang="ar"
-// <ol class="nl-ordered-list" role="list" lang="ar">
+// <ol class="nl-ordered-list" role="list" lang="ar" dir="rtl">
 //   <li class="nl-ordered-list__item">تحميل المستندات</li>
 //   <li class="nl-ordered-list__item">تقديم الطلب</li>
 //   <li class="nl-ordered-list__item">انتظار التأكيد</li>
 // </ol>
 // Original: Ordered List met Arabische nummering (`lang="ar"`)
 // Original: Ordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
-export const OrderedListArabicNum: Story = {
-  name: 'Ordered List met Arabische nummering via HTML-attribuut lang="ar"',
+// Combined with "Ordered List met HTML `dir` attribuut" due to feedback https://github.com/nl-design-system/candidate/pull/1411#discussion_r4106782830
+export const OrderedListArabicNumDirRTL: Story = {
+  name: 'Ordered List met Arabische nummering via HTML-attribuut lang="ar" en schrijfrichting via HTML-attribuut dir="rtl"',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een geordende lijst met Arabische tekst en Arabisch-Indische nummering.
+        story: `Een geordende lijst die rechts-naar-links wordt weergegeven met Arabische tekst en Arabisch-Indische nummering.
+
+De schrijfrichting is ingesteld via het HTML-attribuut \`dir="rtl"\`. De nummering staat aan de rechterkant en de tekst loopt van rechts naar links.',
 
 De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`. De NL Ordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic\`.
 
@@ -464,25 +467,6 @@ export const OrderedListLangRTL: Story = {
       description: {
         story:
           'Een geordende lijst met Arabische tekst, dit is een taal die van rechts naar links wordt gelezen. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`.',
-      },
-    },
-  },
-};
-
-// <ol class="nl-ordered-list" role="list" dir="rtl">
-//   <li class="nl-ordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
-//   <li class="nl-ordered-list__item">Je oude paspoort</li>
-//   <li class="nl-ordered-list__item">Je afspraakbevestiging</li>
-// </ol>
-// Original: Ordered List met HTML `dir` attribuut
-export const OrderedListDirRTL: Story = {
-  name: 'Ordered List met schrijfrichting via HTML-attribuut dir="rtl"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een geordende lijst die rechts-naar-links wordt weergegeven. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`. De nummering staat aan de rechterkant en de tekst loopt van rechts naar links.',
       },
     },
   },
