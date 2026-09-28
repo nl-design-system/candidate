@@ -21,7 +21,6 @@ describe('Unordered List', () => {
     it.todo('supports forwarding the HTML-attribute `hidden` to the underlying HTML-element `ul`', () => {});
     it.todo('supports forwarding the HTML-attribute `lang` to the underlying HTML-element `ul`', () => {});
     it.todo('supports forwarding the HTML-attribute `dir` to the underlying HTML-element `ul`', () => {});
-    it.todo('supports forwarding the HTML-attribute `role` to the underlying HTML-element `ul`', () => {});
     it.todo('supports forwarding the HTML-attribute `reversed` to the underlying HTML-element `ul`', () => {});
   });
 
