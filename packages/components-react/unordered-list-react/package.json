@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "React implementation of the NL Design System Unordered List component",
   "license": "EUPL-1.2",
-  "homepage": "https://nldesignsystem.nl/unordered-list",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/unordered-list-react#readme",
   "bugs": {
     "url": "https://github.com/nl-design-system/candidate/issues",
     "email": "info@nldesignsystem.nl"
