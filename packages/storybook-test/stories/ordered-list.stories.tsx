@@ -435,13 +435,12 @@ export const OrderedListDirParentOnly: Story = {
 
 // <div class="nl-html nl-html--all">
 //   <ol role="list">
-//     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
-//     <li role="listitem">Je oude paspoort</li>
-//     <li role="listitem">Je afspraakbevestiging</li>
+//     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
+//     <li>Je oude paspoort</li>
+//     <li>Je afspraakbevestiging</li>
 //   </ol>
 // </div>
 // Original: Ordered List binnen `nl-html--all`
-// Let op: role="list" en role="listitem" is nodig!
 export const OrderedListNLHTMLAll: Story = {
   name: 'Ordered List binnen `nl-html--all`',
   args: {},
@@ -452,7 +451,7 @@ export const OrderedListNLHTMLAll: Story = {
 
 De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
 
-De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="listitem"\`.`,
+De semantiek wordt behouden door de HTML-attribuut \`role="list"\`.`,
       },
     },
   },
@@ -460,13 +459,13 @@ De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="l
 
 // <div class="nl-html nl-html--ordered-list">
 //   <ol role="list">
-//     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
-//     <li role="listitem">Je oude paspoort</li>
-//     <li role="listitem">Je afspraakbevestiging</li>
+//     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
+//     <li>Je oude paspoort</li>
+//     <li>Je afspraakbevestiging</li>
 //   </ol>
 // </div>
 // Original: Ordered List binnen `nl-html--ordered-list`
-// Let op: role="list" en role="listitem" is nodig!
+// Let op: role="list" is nodig!
 export const OrderedListNLHTMLOrderedList: Story = {
   name: 'Ordered List binnen `nl-html--ordered-list`',
   args: {},
@@ -477,7 +476,7 @@ export const OrderedListNLHTMLOrderedList: Story = {
 
 De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--ordered-list\` class.
 
-De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="listitem"\`.`,
+De semantiek wordt behouden door de HTML-attribuut \`role="list"\`.`,
       },
     },
   },
@@ -594,12 +593,12 @@ export const OrderedListHorizontalScrollMobile: Story = {
 
 // <div class="nl-html nl-html--all">
 //   <ol role="list">
-//     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
-//     <li role="listitem">
+//     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
+//     <li>
 //       Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //       <p>Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</p>
 //     </li>
-//     <li role="listitem">Je afspraakbevestiging</li>
+//     <li>Je afspraakbevestiging</li>
 //   </ol>
 // </div>
 // Original: Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor
