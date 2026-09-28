@@ -218,7 +218,7 @@ export const UnorderedListCustomMarkerNoLabel: Story = {
 //     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //    </li>
 // </ul>
-// Original: Unordered List met custom marker en toegankelijke naam via markerLabel (sr-only), met `aria-hidden="true"` op custom marker
+// Original: Unordered List met custom marker en toegankelijke naam via markerLabel (nl-unordered-list__marker-label), met `aria-hidden="true"` op custom marker
 export const UnorderedListCustomMarkerLabel: Story = {
   name: 'Unordered List met Custom Marker en toegankelijke tekst die visueel verborgen is',
   args: {},

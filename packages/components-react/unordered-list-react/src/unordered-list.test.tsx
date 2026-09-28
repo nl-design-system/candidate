@@ -89,6 +89,7 @@ describe('Unordered List Custom Marker when `marker` is provided', () => {
   describe('CSS API', () => {
     it.todo('adds the `nl-unordered-list__marker` class by default', () => {});
     it.todo('adds the `nl-unordered-list__marker--custom` class by default', () => {});
+    it.todo('adds the `nl-unordered-list__marker-label` class by default', () => {});
   });
 
   describe('Component API', () => {
@@ -103,6 +104,5 @@ describe('Unordered List Custom Marker when `marker` is provided', () => {
 
     it.todo('renders the screenreader text HTML-element `span` when `markerLabel` is provided', () => {});
     it.todo('supports phrasing content in the screenreader text HTML-element `span`', () => {});
-    it.todo('has the `sr-only` class on the screenreader text HTML-element `span`', () => {});
   });
 });
