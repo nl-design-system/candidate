@@ -246,31 +246,6 @@ export const UnorderedListCustomMarkerInformativeIconAccessible: Story = {
   },
 };
 
-// <ul class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
-//       <span aria-labelledby="label-id-1">
-//         <svg><title>Mark Icon</title>...</svg>
-//       </span>
-//      <span aria-hidden="true" id="label-id-1">Let op.{" "}</span>
-//     </span>
-//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
-//   </li>
-// </ul>
-// Original: Unordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst maar overschreven door Custom Marker Label.
-export const UnorderedListCustomMarkerIconLabelOverride: Story = {
-  name: 'Unordered List met Custom Marker met informatieve icoon met foutieve alternatieve tekst overschreven door Marker Label',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst met een icoon als marker. Het icoon is zichtbaar voor hulpsoftware en bevat zelf de tekst die de betekenis van de marker beschrijft, echter deze tekst is ontoegankelijk. Deze ontoegankelijke tekst wordt overschreven door een visueel verborgen tekst, die wel toegankelijk is en in plaats van de ontoegankelijke tekst wordt gelezen voor screenreadergebruikers.',
-      },
-    },
-  },
-};
-
 // <ul class="nl-unordered-list" hidden>
 //   <li class="nl-unordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
 //   <li class="nl-unordered-list__item">Je oude paspoort</li>
