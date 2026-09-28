@@ -335,7 +335,7 @@ Het type krijgt voorrang op de taal, in dit geval worden dus kleine Romeinse cij
 //     Maak een afspraak.
 //    </li>
 // </ol>
-// Original: Ordered List met custom marker en toegankelijke naam via markerLabel (sr-only), met `aria-hidden="true"` op custom marker
+// Original: Ordered List met custom marker en toegankelijke naam via markerLabel (nl-ordered-list__marker-label), met `aria-hidden="true"` op custom marker
 export const OrderedListCustomMarkerLabel: Story = {
   name: 'Ordered List met Custom Marker en toegankelijke tekst die visueel verborgen is',
   args: {},
