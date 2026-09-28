@@ -106,36 +106,6 @@ Het probleem ontstaat omdat een niet-interactief element via het HTML-attribuut 
   },
 };
 
-// Original: Unordered List zonder lijststyling (`list-style: none`) waardoor de lijstsemantiek en ordening verloren gaat
-export const UnorderedListListStyleNoneNoRole: Story = {
-  name: 'Fout: Unordered List zonder lijststyling en zonder role="list"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Bezoekers zien tekst, maar zonder lijststijl en zonder lijstsemantiek is de relatie tussen de items voor bezoekers en screenreadergebruikers niet duidelijk. De informatie lijkt meer op losse tekst dan op een ongeordende lijst.
-
-Het probleem ontstaat omdat de lijststijl is weggehaald en de semantiek ontbreekt. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet en voeg het HTML-attribuut \`role="list"\` toe, waardoor de lijst visueel en semantisch als ongeordende lijst wordt herkend en correct wordt voorgelezen.`,
-      },
-    },
-  },
-};
-
-// Original: Unordered List zonder lijststyling met alleen `role="list"` (lijstsemantiek terug, maar ordening ontbreekt)
-export const UnorderedListListStyleNoneWithRole: Story = {
-  name: 'Fout: Unordered List zonder lijststyling en met HTML-attribuut role="list"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Bezoekers kunnen de items nog wel als een groep herkennen, maar de relatie tussen de items is niet meer zichtbaar. Dat maakt een lijst met losse items moeilijker te scannen en voor screenreadergebruikers is de logische groep niet goed te volgen. De visuele marker ontbreekt, waardoor de inhoud op losse onderdelen lijkt.
-
-      Het probleem ontstaat omdat alleen het HTML-attribuut \`role="list"\` is toegevoegd, maar de leestekens zijn uitgezet via de lijststyling. Behoud de CSS-eigenschap \`list-style\` zodat deze niet op \`none\` wordt gezet, waardoor de lijst visueel en semantisch als ongeordende lijst wordt herkend.`,
-      },
-    },
-  },
-};
-
 // <ul class="nl-unordered-list" role="list">
 //   <li class="nl-unordered-list__item">
 //     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
