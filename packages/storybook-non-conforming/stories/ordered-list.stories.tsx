@@ -62,7 +62,7 @@ Het probleem ontstaat omdat het HTML-element \`ol\` geen juiste lijstsemantiek h
 //       <span aria-hidden="true">
 //         <IconOne />
 //       </span>
-//      <span class="sr-only">Stap 1.{" "}</span>
+//      <span class="nl-ordered-list__marker-label">Stap 1.{" "}</span>
 //     </span>
 //     Verzamel documenten
 //   </li>
@@ -71,7 +71,7 @@ Het probleem ontstaat omdat het HTML-element \`ol\` geen juiste lijstsemantiek h
 //       <span aria-hidden="true">
 //         <IconTwo />
 //       </span>
-//      <span class="sr-only">Stap 2.{" "}</span>
+//      <span class="nl-ordered-list__marker-label">Stap 2.{" "}</span>
 //     </span>
 //     Maak een afspraak.
 //    </li>
@@ -330,7 +330,7 @@ Als een lijst wel leestekens nodig heeft voor nummering, dan is het de bedoeling
 //       <span aria-hidden="true">
 //         <IconTwo />
 //       </span>
-//      <span class="sr-only">Nummer Drie Icoon.{" "}</span>
+//      <span class="nl-ordered-list__marker-label">Nummer Drie Icoon.{" "}</span>
 //     </span>
 //     Haal uw nieuwe paspoort op.
 //    </li>

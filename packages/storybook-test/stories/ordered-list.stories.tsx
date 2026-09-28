@@ -321,7 +321,7 @@ Het type krijgt voorrang op de taal, in dit geval worden dus kleine Romeinse cij
 //       <span aria-hidden="true">
 //         <IconOne />
 //       </span>
-//      <span class="sr-only">Stap 1.{" "}</span>
+//      <span class="nl-ordered-list__marker-label">Stap 1.{" "}</span>
 //     </span>
 //     Verzamel documenten
 //   </li>
@@ -330,7 +330,7 @@ Het type krijgt voorrang op de taal, in dit geval worden dus kleine Romeinse cij
 //       <span aria-hidden="true">
 //         <IconTwo />
 //       </span>
-//      <span class="sr-only">Stap 2.{" "}</span>
+//      <span class="nl-ordered-list__marker-label">Stap 2.{" "}</span>
 //     </span>
 //     Maak een afspraak.
 //    </li>
