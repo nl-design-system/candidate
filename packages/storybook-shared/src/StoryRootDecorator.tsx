@@ -3,7 +3,7 @@ import { useEffect, type CSSProperties } from 'react';
 import './forced-colors-simulation.css';
 
 export const StoryRootDecorator: Decorator = (Story, context) => {
-  const { storyRootClassname, dir, lang, title, writingMode, zoom, forcedColors } = context.globals;
+  const { storyRootClassname, dir, lang, title, writingMode, fontSize, zoom, forcedColors } = context.globals;
   const style: CSSProperties = zoom ? { zoom } : {};
 
   // In Storybook there are different view modes. When looking at all stories,
@@ -24,12 +24,14 @@ export const StoryRootDecorator: Decorator = (Story, context) => {
       document.documentElement.lang = lang;
       document.documentElement.dir = dir || '';
       document.documentElement.style.writingMode = writingMode || '';
+      document.documentElement.style.fontSize = fontSize || '';
     } else if (viewMode === 'docs') {
       // Restore the title, dir and lang to sensible defaults
       document.title = context.title;
       document.documentElement.lang = 'nl';
       document.documentElement.dir = 'ltr';
       document.documentElement.style.writingMode = 'initial';
+      document.documentElement.style.fontSize = '';
     }
   }, [context.name]);
 
