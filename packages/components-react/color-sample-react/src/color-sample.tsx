@@ -29,4 +29,21 @@ export const ColorSample = forwardRef<SVGSVGElement, ColorSampleProps>(function 
   );
 });
 
+export const ColorSampleSpan = forwardRef<HTMLSpanElement, ColorSampleProps>(function ColorSample(props, forwardedRef) {
+  const { className, label, style, value, ...restProps } = props;
+  const hasLabel = typeof label === 'string' && label.trim() !== '';
+
+  return (
+    <span
+      {...restProps}
+      role="img"
+      className={cn('nl-color-sample', className)}
+      style={{ ...style, color: value }}
+      ref={forwardedRef}
+    >
+      {hasLabel && <title>{label}</title>}
+    </span>
+  );
+});
+
 ColorSample.displayName = 'ColorSample';
