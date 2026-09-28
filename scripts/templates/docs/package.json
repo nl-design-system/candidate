@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Documentation of the NL Design System New Component component",
   "license": "CC0-1.0",
-  "homepage": "https://nldesignsystem.nl/new-component",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/new-component-docs#readme",
   "bugs": {
     "url": "https://github.com/nl-design-system/candidate/issues",
     "email": "info@nldesignsystem.nl"
