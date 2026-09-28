@@ -6,7 +6,8 @@ import packageJSON from '../../components-react/form-field-error-message-react/p
 import { FormFieldErrorMessage } from '../../components-react/form-field-error-message-react/src/form-field-error-message';
 import { CandidateDisableCssDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateDisableCssDecorator';
 import { Icon } from '../../components-react/icon-react/src/icon';
-import type { AriaRole, PropsWithChildren, ReactNode } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import type { AriaRole, ChangeEvent, PropsWithChildren, ReactNode } from 'react';
 
 const AlternativeHTMLFormFieldErrorMessage = ({
   Component = 'div',
@@ -31,6 +32,7 @@ const AlternativeHTMLFormFieldErrorMessage = ({
     </ContentComponent>
   </Component>
 );
+AlternativeHTMLFormFieldErrorMessage.displayName = 'AlternativeHTMLFormFieldErrorMessage';
 
 const meta = {
   argTypes: {},
@@ -79,7 +81,7 @@ export const FormFieldErrorMessageWithInteractiveContent: Story = {
         </div>
         <FormFieldErrorMessage contentId={ERROR_ID}>
           Het veld Voorwaarden is niet aangevinkt. Dit is een verplicht veld.{' '}
-          <a href="/voorwaarden">Lees de voorwaarden.</a>
+          <a href="https://example.com/voorwaarden">Lees de voorwaarden.</a>
         </FormFieldErrorMessage>
       </>
     );
@@ -101,15 +103,18 @@ export const FormFieldErrorMessageAsParagraphs: Story = {
     dir: 'ltr',
     lang: 'nl',
   },
-  decorators: CandidateDisableCssDecorator,
   render: () => {
     const INPUT_ID = 'FormFieldErrorMessageAsParagraphs';
     const ERROR_ID = `${INPUT_ID}-error`;
     return (
       <>
-        <label htmlFor={INPUT_ID}>Probleem</label>
+        <div>
+          <label htmlFor={INPUT_ID}>Probleem</label>
+        </div>
         <AlternativeHTMLFormFieldErrorMessage
           Component="p"
+          IconComponent="span"
+          ContentComponent="p"
           contentId={ERROR_ID}
           icon={
             <Icon>
@@ -119,7 +124,9 @@ export const FormFieldErrorMessageAsParagraphs: Story = {
         >
           Het veld Probleem is niet ingevuld. Dit is een verplicht veld.
         </AlternativeHTMLFormFieldErrorMessage>
-        <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+        <div>
+          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+        </div>
       </>
     );
   },
@@ -149,6 +156,8 @@ export const FormFieldErrorMessageAsSpans: Story = {
         <label htmlFor={INPUT_ID}>Probleem</label>
         <AlternativeHTMLFormFieldErrorMessage
           Component="span"
+          IconComponent="span"
+          ContentComponent="span"
           contentId={ERROR_ID}
           icon={
             <Icon>
@@ -158,7 +167,9 @@ export const FormFieldErrorMessageAsSpans: Story = {
         >
           Het veld Probleem is niet ingevuld. Dit is een verplicht veld.
         </AlternativeHTMLFormFieldErrorMessage>
-        <textarea id={INPUT_ID} aria-describedby={ERROR_ID} />
+        <div>
+          <textarea id={INPUT_ID} aria-describedby={ERROR_ID} aria-invalid="true" aria-required="true" />
+        </div>
       </>
     );
   },
@@ -180,18 +191,31 @@ export const FormFieldErrorMessageAsStatus: Story = {
     lang: 'nl',
   },
   render: () => {
+    const MAX_LENGTH = 250;
     const INPUT_ID = 'f7a0b878-8414-4d62-91ea-7dc894d222eb';
     const ERROR_ID = `${INPUT_ID}-error`;
+    const [length, setLength] = useState(0);
+    const over = length - MAX_LENGTH;
+
     return (
       <>
         <div>
           <label htmlFor={INPUT_ID}>Uw idee</label>
         </div>
         <FormFieldErrorMessage contentId={ERROR_ID} contentRole="alert">
-          Nog 250 karakters over.
+          {over > 0
+            ? `Het bericht is te lang. Maak het bericht ${over} tekens korter.`
+            : `Nog ${MAX_LENGTH - length} tekens over.`}
         </FormFieldErrorMessage>
         <div>
-          <textarea id={INPUT_ID} aria-describedby={ERROR_ID} rows={4} cols={50} />
+          <textarea
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            rows={4}
+            cols={50}
+            aria-invalid={over > 0 ? 'true' : 'false'}
+            onChange={(event: ChangeEvent<HTMLTextAreaElement>) => setLength(event.target.value.length)}
+          />
         </div>
       </>
     );
@@ -200,7 +224,7 @@ export const FormFieldErrorMessageAsStatus: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding wordt gebruikt als statusmelding voor een tekenrestant. Een foutmelding onderbreekt een screenreadergebruiker om de melding voor te lezen. Gebruik in plaats daarvan een statusmelding.',
+          'De foutmelding wordt gebruikt als statusmelding voor een tekenrestant, en werkt mee terwijl je typt. Een foutmelding onderbreekt een screenreadergebruiker om de melding voor te lezen: bij elke toetsaanslag wordt de volledige melding opnieuw voorgelezen. Gebruik in plaats daarvan een statusmelding met `aria-live="polite"`, die pas voorleest zodra je stopt met typen.',
       },
     },
     status: { type: [] },
@@ -222,7 +246,14 @@ export const FormFieldErrorMessageAboveTextInputViaVisualOrder: Story = {
           <label htmlFor={INPUT_ID}>Postcode</label>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            type="text"
+            aria-invalid="true"
+            aria-required="true"
+            autoComplete="postal-code"
+          />
           <FormFieldErrorMessage contentId={ERROR_ID} style={{ order: -1 }}>
             Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
           </FormFieldErrorMessage>
@@ -256,7 +287,14 @@ export const FormFieldErrorMessageBelowTextInput: Story = {
           <label htmlFor={INPUT_ID}>Postcode</label>
         </div>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-required="true"
+            aria-invalid="true"
+            type="text"
+            autoComplete="postal-code"
+          />
         </div>
         <FormFieldErrorMessage contentId={ERROR_ID}>
           Het veld Postcode is niet ingevuld. Dit veld mag niet leeg zijn.
@@ -296,7 +334,14 @@ export const FormFieldErrorMessageWithDetailsAndSummary: Story = {
           </details>
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -306,47 +351,6 @@ export const FormFieldErrorMessageWithDetailsAndSummary: Story = {
       description: {
         story:
           'De foutmelding is verborgen achter een `details`-`summary` HTML-element combinatie. Voor screenreadergebruikers wordt de tekst niet op een duidelijke manier voorgelezen bij het bijbehorende invoerveld. Gebruik een foutmelding zonder inklapbare content.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const FormFieldErrorMessageLate: Story = {
-  name: 'Fout: Form Field Error Message verschijnt te laat',
-  globals: {
-    dir: 'ltr',
-    lang: 'nl',
-  },
-  render: () => {
-    const NAME_INPUT_ID = 'd7c0f997-3dd2-4ea3-b346-3d326dc4e9af';
-    const NAME_ERROR_ID = `${NAME_INPUT_ID}-error`;
-    const POSTCODE_INPUT_ID = 'dacc4838-d81f-410b-bf9c-7087d38326bd';
-    return (
-      <>
-        <div>
-          <label htmlFor={NAME_INPUT_ID}>Naam</label>
-        </div>
-        <FormFieldErrorMessage contentId={NAME_ERROR_ID} contentRole="alert">
-          Het veld Naam is niet ingevuld. Dit is een verplicht veld.
-        </FormFieldErrorMessage>
-        <div>
-          <input id={NAME_INPUT_ID} aria-describedby={NAME_ERROR_ID} type="text" autoComplete="name" />
-        </div>
-        <div>
-          <label htmlFor={POSTCODE_INPUT_ID}>Postcode</label>
-        </div>
-        <div>
-          <input id={POSTCODE_INPUT_ID} type="text" autoComplete="postal-code" />
-        </div>
-      </>
-    );
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'De Form Field Error Message is gekoppeld aan het eerste invoerveld, maar het tweede invoerveld heeft geen foutmelding. In een dynamisch formulier kan deze opzet ertoe leiden dat de foutmelding te laat wordt voorgelezen, pas wanneer de screenreadergebruiker de focus verplaatst naar het volgende invoerveld.',
       },
     },
     status: { type: [] },
@@ -374,7 +378,14 @@ export const FormFieldErrorMessageWithAlertComponent: Story = {
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            type="text"
+            aria-invalid="true"
+            aria-required="true"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -405,29 +416,43 @@ export const FormFieldErrorMessageTable: Story = {
           <label htmlFor={INPUT_ID}>Wachtwoord</label>
         </div>
         <FormFieldErrorMessage contentId={ERROR_ID}>
+          <p>Het wachtwoord voldoet niet aan alle eisen:</p>
           <table>
             <thead>
               <tr>
-                <th colSpan={1}>
-                  Het ingevulde wachtwoord voldoet niet aan de eisen. Een wachtwoord moet voldoen aan de volgende eisen:
-                </th>
+                <th scope="col">Eis</th>
+                <th scope="col">Aantal</th>
+                <th scope="col">Voldoet</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Minimaal 8 karakters.</td>
+                <td>Minimaal aantal karakters</td>
+                <td>8</td>
+                <td>Nee</td>
               </tr>
               <tr>
-                <td>Minimaal 1 hoofdletter.</td>
+                <td>Minimaal aantal hoofdletters</td>
+                <td>1</td>
+                <td>Nee</td>
               </tr>
               <tr>
-                <td>Minimaal 1 nummer.</td>
+                <td>Minimaal aantal cijfers</td>
+                <td>1</td>
+                <td>Nee</td>
               </tr>
             </tbody>
           </table>
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="password" autoComplete="new-password" />
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="password"
+            autoComplete="new-password"
+          />
         </div>
       </>
     );
@@ -436,7 +461,7 @@ export const FormFieldErrorMessageTable: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding bevat een tabel met alle eisen. Voor screenreadergebruikers wordt die informatie volledig voorgelezen, waardoor de boodschap niet meer als één duidelijke waarschuwing werkt. De melding is opgebouwd uit een HTML-element `table` in plaats van normale tekst of een lijst. Gebruik tekst of een eenvoudige lijst, zodat de foutmelding beter te volgen is.',
+          'De foutmelding bevat een tabel met de eisen waaraan het wachtwoord moet voldoen. Omdat de tabel via aria-describedby aan het invoerveld is gekoppeld, gaat de tabelstructuur verloren: een screenreader leest alleen de platte tekst van alle cellen achter elkaar voor, bijvoorbeeld "Eis Aantal Voldoet Minimaal aantal karakters 8 Nee Minimaal aantal hoofdletters 1 Nee Minimaal aantal cijfers 1 Nee". Hierdoor is niet meer te herleiden welk aantal en welke status bij welke eis hoort. Gebruik voor een opsomming van wachtwoordvereisten bij voorkeur tekst of een lijst in plaats van een tabel.',
       },
     },
     status: { type: [] },
@@ -466,7 +491,14 @@ export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
           </ul>
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="password" autoComplete="new-password" />
+          <input
+            id={INPUT_ID}
+            aria-invalid="true"
+            aria-required="true"
+            aria-describedby={ERROR_ID}
+            type="password"
+            autoComplete="new-password"
+          />
         </div>
       </>
     );
@@ -483,7 +515,7 @@ export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
 };
 
 export const FormFieldErrorMessageWithRedundantRole: Story = {
-  name: 'Fout: Form Field Error Message met overbodige HTML-elementen role en aria-live',
+  name: 'Fout: Form Field Error Message met overbodig HTML-attribuut role',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -496,11 +528,18 @@ export const FormFieldErrorMessageWithRedundantRole: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage contentId={ERROR_ID} contentRole="status" aria-live="polite">
+        <FormFieldErrorMessage contentId={ERROR_ID} contentRole="status">
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-invalid="true"
+            aria-required="true"
+            aria-describedby={ERROR_ID}
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
@@ -509,15 +548,56 @@ export const FormFieldErrorMessageWithRedundantRole: Story = {
     docs: {
       description: {
         story:
-          'De Form Field Error Message heeft zowel een HTML-attribuut `role` als WAI-ARIA-attribuut `aria-live="polite"`, terwijl de melding alleen informatieve tekst is die via WAI-ARIA-attribuut `aria-describedby` aan het invoerveld is gekoppeld. Dit is onnodig en voegt geen waarde toe. Voeg geen live region of role toe wanneer de foutmelding niet dynamisch wordt bijgewerkt.',
+          'De Form Field Error Message heeft een HTML-attribuut `role` met de waarde `status`, terwijl de melding alleen informatieve tekst is die via WAI-ARIA-attribuut `aria-describedby` aan het invoerveld is gekoppeld. Dit is onnodig en voegt geen waarde toe. Voeg geen role toe wanneer de foutmelding niet dynamisch wordt bijgewerkt.',
       },
     },
     status: { type: [] },
   },
 };
 
-export const FormFieldErrorMessageProgrammaticFocus: Story = {
-  name: 'Fout: Form Field Error Message met tabindex="-1" voor programmatische focus',
+export const FormFieldErrorMessageWithRedundantAriaLive: Story = {
+  name: 'Fout: Form Field Error Message met overbodig WAI-ARIA-attribuut aria-live',
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  render: () => {
+    const INPUT_ID = 'a1e29f3c-6b47-4e2a-9c31-7d5f2b8e4a10';
+    const ERROR_ID = `${INPUT_ID}-error`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
+        <FormFieldErrorMessage contentId={ERROR_ID} aria-live="polite">
+          Het veld Naam is niet ingevuld. Dit is een verplicht veld.
+        </FormFieldErrorMessage>
+        <div>
+          <input
+            id={INPUT_ID}
+            aria-invalid="true"
+            aria-required="true"
+            aria-describedby={ERROR_ID}
+            type="text"
+            autoComplete="name"
+          />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De Form Field Error Message heeft het WAI-ARIA-attribuut `aria-live="polite"`, terwijl de melding alleen informatieve tekst is die via WAI-ARIA-attribuut `aria-describedby` aan het invoerveld is gekoppeld. Dit is onnodig en voegt geen waarde toe. Voeg geen live region toe wanneer de foutmelding niet dynamisch wordt bijgewerkt.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldErrorMessageFocusable: Story = {
+  name: 'Fout: Form Field Error Message met tabindex="0"',
   globals: { dir: 'ltr', lang: 'nl' },
   render: () => {
     const INPUT_ID = 'f9456de1-9202-420e-a18b-ebcbd85d1fa2';
@@ -527,11 +607,11 @@ export const FormFieldErrorMessageProgrammaticFocus: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage contentId={ERROR_ID} tabIndex={-1}>
+        <FormFieldErrorMessage contentId={ERROR_ID} tabIndex={0}>
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="name" />
+          <input id={INPUT_ID} aria-invalid="true" aria-required="true" type="text" autoComplete="name" />
         </div>
       </>
     );
@@ -540,7 +620,75 @@ export const FormFieldErrorMessageProgrammaticFocus: Story = {
     docs: {
       description: {
         story:
-          'De foutmelding komt in de focus-volgorde voor, hoewel deze alleen informatief is en niet interactief. Bezoekers die met het toetsenbord navigeren, kunnen hierdoor onnodig op de melding terechtkomen. De oplossing is om de foutmelding niet via focus in de tabvolgorde te zetten en deze in plaats daarvan alleen aan het invoerveld te koppelen. Maak geen gebruik van het HTML-attribuut `tabindex` op de foutmelding, zodat deze niet in de tabvolgorde voorkomt. Maak gebruik van het WAI-ARIA-attribuut `aria-describedby` op het invoerveld, zodat de foutmelding wordt voorgelezen bij focus op het veld.',
+          'De foutmelding krijgt met `tabindex="0"` een plek in de tabvolgorde, in de veronderstelling dat een screenreadergebruiker de melding zo te horen krijgt. Dit lost het probleem niet op: het invoerveld zelf is niet gekoppeld aan de foutmelding, dus bij focus op het invoerveld wordt er niets voorgelezen. Bovendien komt de foutmelding hierdoor onnodig in de tabvolgorde terecht voor toetsenbordgebruikers, terwijl deze alleen informatief is en niet interactief. Maak geen gebruik van het HTML-attribuut `tabindex` op de foutmelding. Koppel de foutmelding in plaats daarvan met het WAI-ARIA-attribuut `aria-describedby` aan het invoerveld, zodat deze wordt voorgelezen zodra het invoerveld focus krijgt.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldErrorMessageProgrammaticFocus: Story = {
+  name: 'Fout: Form Field Error Message krijgt programmatisch focus na validatie',
+  globals: { dir: 'ltr', lang: 'nl' },
+  render: () => {
+    const INPUT_ID = 'a3f6c8e2-9d14-4b7a-8e2f-1c5d9a6b3f47';
+    const ERROR_ID = `${INPUT_ID}-error`;
+    const errorRef = useRef<HTMLDivElement>(null);
+    const [showError, setShowError] = useState(false);
+    const [submitCount, setSubmitCount] = useState(0);
+
+    const handleSubmit = () => {
+      setShowError(true);
+      setSubmitCount((count) => count + 1);
+    };
+
+    useEffect(() => {
+      if (submitCount === 0) {
+        return;
+      }
+      const error = errorRef.current;
+      if (!error) {
+        return;
+      }
+      if (document.activeElement === error) {
+        error.blur();
+      }
+      error.focus();
+    }, [submitCount]);
+
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
+        {showError && (
+          <FormFieldErrorMessage ref={errorRef} contentId={ERROR_ID} tabIndex={-1}>
+            Het veld Naam is niet ingevuld. Dit is een verplicht veld.
+          </FormFieldErrorMessage>
+        )}
+        <div>
+          <input
+            id={INPUT_ID}
+            aria-describedby={showError ? ERROR_ID : undefined}
+            aria-invalid={showError ? 'true' : 'false'}
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
+        </div>
+        <div>
+          <button type="button" onClick={handleSubmit}>
+            Verzenden
+          </button>
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Na het klikken op "Verzenden" verplaatst de focus zich programmatisch naar de foutmelding, met `tabindex="-1"`, om de ervaring van het focussen van een Alert-component na te bootsen. Dit wordt afgeraden: het is beter om het invoerveld zelf te focussen. Het invoerveld is via `aria-describedby` aan de foutmelding gekoppeld en heeft `aria-invalid="true"`, waardoor een screenreader bij focus zowel de foutmelding voorleest als het veld als ongeldig aankondigt. Door in plaats daarvan de foutmelding zelf te focussen, mist een screenreadergebruiker deze aankondiging van het invoerveld.',
       },
     },
     status: { type: [] },
@@ -557,11 +705,9 @@ export const FormFieldErrorMessageWithoutRelationWithInput: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage tabIndex={-1}>
-          Het veld Naam is niet ingevuld. Dit is een verplicht veld.
-        </FormFieldErrorMessage>
+        <FormFieldErrorMessage>Het veld Naam is niet ingevuld. Dit is een verplicht veld.</FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} type="text" autoComplete="name" />
+          <input id={INPUT_ID} aria-invalid="true" aria-required="true" type="text" autoComplete="name" />
         </div>
       </>
     );
@@ -588,11 +734,18 @@ export const FormFieldErrorMessageAriaLabelledBy: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <FormFieldErrorMessage contentId={ERROR_ID} tabIndex={-1}>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
         </FormFieldErrorMessage>
         <div>
-          <input id={INPUT_ID} aria-labelledby={ERROR_ID} type="text" autoComplete="name" />
+          <input
+            id={INPUT_ID}
+            aria-labelledby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="name"
+          />
         </div>
       </>
     );
