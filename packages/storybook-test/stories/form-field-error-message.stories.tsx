@@ -11,26 +11,11 @@ import { FormFieldErrorMessage } from '../../components-react/form-field-error-m
 import { Icon } from '../../components-react/icon-react/src/icon';
 import componentMarkdown from '../../docs/form-field-error-message-docs/docs/component.md?raw';
 import tokens from '../../tokens/form-field-error-message-tokens/tokens.json';
-import type { PropsWithChildren } from 'react';
+import type { AriaRole, PropsWithChildren, ReactNode } from 'react';
 // import { } from '../src/WcagTests'; // Vul aan door toegankelijkheidsexpert
 
-const AlternativeHTMLFormFieldErrorMessageCompact = ({
-  ContentComponent = 'div',
-  children,
-  contentId,
-  contentRole,
-}: PropsWithChildren<{
-  ContentComponent: keyof JSX.IntrinsicElements;
-  contentId?: string;
-  contentRole?: React.AriaRole;
-}>) => (
-  <ContentComponent id={contentId} role={contentRole} className="nl-form-field-error-message__content">
-    {children}
-  </ContentComponent>
-);
-
 const AlternativeHTMLFormFieldErrorMessage = ({
-  WrapperComponent = 'div',
+  Component = 'div',
   IconComponent = 'div',
   ContentComponent = 'div',
   icon,
@@ -38,20 +23,21 @@ const AlternativeHTMLFormFieldErrorMessage = ({
   contentId,
   contentRole,
 }: PropsWithChildren<{
-  WrapperComponent: keyof JSX.IntrinsicElements;
-  IconComponent: keyof JSX.IntrinsicElements;
-  ContentComponent: keyof JSX.IntrinsicElements;
-  icon?: React.ReactNode;
+  Component?: keyof JSX.IntrinsicElements;
+  IconComponent?: keyof JSX.IntrinsicElements;
+  ContentComponent?: keyof JSX.IntrinsicElements;
+  icon?: ReactNode;
   contentId?: string;
-  contentRole?: React.AriaRole;
+  contentRole?: AriaRole;
 }>) => (
-  <WrapperComponent className="nl-form-field-error-message">
+  <Component className="nl-form-field-error-message">
     {icon && <IconComponent className="nl-form-field-error-message__icon">{icon}</IconComponent>}
     <ContentComponent id={contentId} role={contentRole} className="nl-form-field-error-message__content">
       {children}
     </ContentComponent>
-  </WrapperComponent>
+  </Component>
 );
+AlternativeHTMLFormFieldErrorMessage.displayName = 'AlternativeHTMLFormFieldErrorMessage';
 
 const meta = {
   argTypes: {
@@ -490,7 +476,7 @@ export const FormFieldErrorMessageVerticalTextWithIcon: Story = {
 };
 
 export const FormFieldErrorMessageLargeText: Story = {
-  name: 'Form Field Error Message met 200% zoom',
+  name: 'Form Field Error Message met 200% pagina-zoom',
   render: () => {
     const INPUT_ID = 'a6017b2a-3491-4c16-983f-e50f226c7624';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -520,7 +506,45 @@ export const FormFieldErrorMessageLargeText: Story = {
     docs: {
       description: {
         story:
-          'De tekst is vergroot tot 200% zoom. De foutmelding blijft goed leesbaar en loopt niet buiten de ruimte van het element.',
+          'De pagina is gezoomd naar 200% via de browser (paginazoom), waardoor zowel de tekst als het invoerveld twee keer zo groot worden. De foutmelding blijft goed leesbaar en loopt niet buiten de ruimte van het element.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldErrorMessageTextZoom: Story = {
+  name: 'Form Field Error Message met 200% tekstgrootte',
+  render: () => {
+    const INPUT_ID = 'd1ac9f3b-2e6d-4a89-9d51-7b6a4e2c3f10';
+    const ERROR_ID = `${INPUT_ID}-error`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
+          Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
+        </FormFieldErrorMessage>
+        <div>
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            aria-invalid="true"
+            aria-required="true"
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
+      </>
+    );
+  },
+  globals: { fontSize: '32px' },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De standaard tekstgrootte van de pagina is vergroot van 16px naar 32px, zoals bij een gebruikersvoorkeur voor grotere tekst (WCAG-criterium 1.4.4, "Herschalen van tekst"). Alleen de tekst, die in `rem` is opgegeven, wordt hierdoor groter; het invoerveld schaalt niet automatisch mee. De foutmelding blijft goed leesbaar en loopt niet buiten de ruimte van het element. Deze story is alleen los te bekijken, niet op de documentatiepagina, omdat de tekstgrootte op paginaniveau wordt ingesteld.',
       },
     },
     status: { type: [] },
@@ -856,9 +880,9 @@ export const FormFieldErrorMessageCompact: Story = {
         <div>
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
-        <AlternativeHTMLFormFieldErrorMessageCompact ContentComponent="p" contentId={ERROR_ID}>
+        <p id={ERROR_ID} className="nl-form-field-error-message">
           Het veld Naam is niet ingevuld. Dit is een verplicht veld.
-        </AlternativeHTMLFormFieldErrorMessageCompact>
+        </p>
         <div>
           <input
             id={INPUT_ID}
@@ -894,7 +918,7 @@ export const FormFieldErrorMessageParagraphElementWrapper: Story = {
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
         <AlternativeHTMLFormFieldErrorMessage
-          WrapperComponent="p"
+          Component="p"
           IconComponent="span"
           ContentComponent="span"
           contentId={ERROR_ID}
@@ -941,7 +965,7 @@ export const FormFieldErrorMessageParagraphElementIcon: Story = {
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
         <AlternativeHTMLFormFieldErrorMessage
-          WrapperComponent="div"
+          Component="div"
           IconComponent="p"
           ContentComponent="div"
           contentId={ERROR_ID}
@@ -988,7 +1012,7 @@ export const FormFieldErrorMessageParagraphElementContent: Story = {
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
         <AlternativeHTMLFormFieldErrorMessage
-          WrapperComponent="div"
+          Component="div"
           IconComponent="div"
           ContentComponent="p"
           contentId={ERROR_ID}
@@ -1035,7 +1059,7 @@ export const FormFieldErrorMessageSpanElementWrapper: Story = {
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
         <AlternativeHTMLFormFieldErrorMessage
-          WrapperComponent="span"
+          Component="span"
           IconComponent="span"
           ContentComponent="span"
           contentId={ERROR_ID}
@@ -1082,7 +1106,7 @@ export const FormFieldErrorMessageSpanElementIcon: Story = {
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
         <AlternativeHTMLFormFieldErrorMessage
-          WrapperComponent="div"
+          Component="div"
           IconComponent="span"
           ContentComponent="div"
           contentId={ERROR_ID}
@@ -1129,7 +1153,7 @@ export const FormFieldErrorMessageSpanElementContent: Story = {
           <label htmlFor={INPUT_ID}>Naam</label>
         </div>
         <AlternativeHTMLFormFieldErrorMessage
-          WrapperComponent="div"
+          Component="div"
           IconComponent="div"
           ContentComponent="span"
           contentId={ERROR_ID}
