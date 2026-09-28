@@ -361,39 +361,6 @@ export const OrderedListCustomMarkerLabel: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
-//       <span aria-labelledby="label-id-1">
-//         <IconOne />
-//       </span>
-//      <span aria-hidden="true" id="label-id-1">Stap 1.{" "}</span>
-//     </span>
-//     Verzamel documenten
-//   </li>
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
-//       <span aria-labelledby="label-id-2">
-//         <IconTwo />
-//       </span>
-//      <span aria-hidden="true" id="label-id-2">Stap 2.{" "}</span>
-//     </span>
-//     Maak een afspraak.
-//    </li>
-// </ol>
-// Original: Ordered List met een toegankelijke custom marker met toegankelijk label (niet perfecte maar toegankelijke oplossing)
-export const OrderedListCustomMarkerAriaLabelledby: Story = {
-  name: 'Ordered List met Custom Marker en toegankelijk tekst via HTML-attribuut aria-labelledby',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story: `Een geordende lijst met een icoon als marker. Het icoon is verborgen voor hulpsoftware. De betekenis van de marker is aangeboden als tekst welke verborgen wordt voor alle bezoekers. De boodschap van de icoon is toegankelijk gemaakt voor screenreadergebruikers via het WAI-ARIA-attribuut \`aria-labelledby\` gekoppeld aan de marker. De boodschap van de icoon is toegankelijk voor alle bezoekers.`,
-      },
-    },
-  },
-};
-
 // Dus dat je niet de sr-text class gebruikt, maar de title in de SVG / aan de Icon word meegegeven zoals bijv <OrderedListItem marker={<Icon label="1." />} />
 // Original: Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst
 export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
