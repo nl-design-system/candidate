@@ -302,6 +302,37 @@ Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels
   },
 };
 
+// <html lang="ar" dir="rtl">
+// <ol class="nl-ordered-list" role="list">
+//  <li class="nl-ordered-list__item">تحميل المستندات</li>
+//  <li class="nl-ordered-list__item">تقديم الطلب</li>
+//  <li class="nl-ordered-list__item">انتظار التأكيد</li>
+// </ol>
+// </html>
+// Ontwikkelfase notitie: de html lang/dir is gezet via de globals in de story
+// Ontwikkelfase notitie: hiermee test je ook een extra feature van de :lang() selector
+// Original: Ordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat
+export const OrderedListLangDirOnHTML: Story = {
+  name: 'Ordered List met Arabische tekst waarbij HTML-attributen lang en dir alleen op HTML-element html staat',
+  globals: { lang: 'ar-iq', dir: 'rtl' },
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een geordende lijst die rechts-naar-links wordt weergegeven met Arabische tekst en Arabisch-Indische nummering.
+
+De schrijfrichting is ingesteld via het HTML-attribuut \`dir="rtl"\` op het HTML-element \`html\`. De nummering staat aan de rechterkant en de tekst loopt van rechts naar links.',
+
+De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\` op het HTML-element \`html\`. De NL Ordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic\`.
+
+Dit wordt aangeboden vanuit de NL Ordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
+
+Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels dezelfde aanpak, via het HTML-attribuut \`lang\` en de CSS-eigenschap \`list-style-type\`.`,
+      },
+    },
+  },
+};
+
 // <ol class="nl-ordered-list" role="list" lang="ar" type="i">
 //   <li class="nl-ordered-list__item">تحميل المستندات</li>
 //   <li class="nl-ordered-list__item">تقديم الطلب</li>
@@ -390,25 +421,6 @@ export const OrderedListHidden: Story = {
       description: {
         story:
           'Een geordende lijst die verborgen is voor bezoekers en voor screenreadergebruikers. De inhoud is aanwezig in de code, maar niet zichtbaar en niet voorleesbaar.',
-      },
-    },
-  },
-};
-
-// <ol class="nl-ordered-list" role="list" lang="ar">
-//   <li class="nl-ordered-list__item">تحميل المستندات</li>
-//   <li class="nl-ordered-list__item">تقديم الطلب</li>
-//   <li class="nl-ordered-list__item">انتظار التأكيد</li>
-// </ol>
-// Original: Ordered List met HTML `lang` attribuut (right-to-left tekst)
-export const OrderedListLangRTL: Story = {
-  name: 'Ordered List met rechts-naar-links schrijfrichting via Arabische taal via HTML-attribuut lang="ar"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een geordende lijst met Arabische tekst, dit is een taal die van rechts naar links wordt gelezen. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`.',
       },
     },
   },
