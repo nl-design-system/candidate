@@ -306,13 +306,13 @@ export const UnorderedListDirParentOnly: Story = {
 
 // <div class="nl-html nl-html--all">
 //   <ul role="list">
-//     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
-//     <li role="listitem">Je oude paspoort</li>
-//     <li role="listitem">Je afspraakbevestiging</li>
+//     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
+//     <li>Je oude paspoort</li>
+//     <li>Je afspraakbevestiging</li>
 //   </ul>
 // </div>
 // Original: Unordered List binnen `nl-html--all`
-// Let op: role="list" en role="listitem" is nodig!
+// Let op: role="list" is nodig!
 export const UnorderedListNLHTMLAll: Story = {
   name: 'Unordered List binnen `nl-html--all`',
   args: {},
@@ -323,7 +323,7 @@ export const UnorderedListNLHTMLAll: Story = {
 
 De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ul\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
 
-De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="listitem"\`.`,
+De semantiek wordt behouden door de HTML-attribuut \`role="list"\`.`,
       },
     },
   },
@@ -331,13 +331,13 @@ De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="l
 
 // <div class="nl-html nl-html--unordered-list">
 //   <ul role="list">
-//     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
-//     <li role="listitem">Je oude paspoort</li>
-//     <li role="listitem">Je afspraakbevestiging</li>
+//     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
+//     <li>Je oude paspoort</li>
+//     <li>Je afspraakbevestiging</li>
 //   </ul>
 // </div>
 // Original: Unordered List binnen `nl-html--unordered-list`
-// Let op: role="list" en role="listitem" is nodig!
+// Let op: role="list" is nodig!
 export const UnorderedListNLHTMLUnorderedList: Story = {
   name: 'Unordered List binnen `nl-html--unordered-list`',
   args: {},
@@ -348,7 +348,7 @@ export const UnorderedListNLHTMLUnorderedList: Story = {
 
 De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ul\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--unordered-list\` class.
 
-De semantiek wordt behouden door de HTML-attributen \`role="list"\` en \`role="listitem"\`.`,
+De semantiek wordt behouden door de HTML-attribuut \`role="list"\`.`,
       },
     },
   },
@@ -465,12 +465,12 @@ export const UnorderedListHorizontalScrollMobile: Story = {
 
 // <div class="nl-html nl-html--all">
 //   <ul role="list">
-//     <li role="listitem">Paspoortfoto, niet ouder dan 6 maanden</li>
-//     <li role="listitem">
+//     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
+//     <li>
 //       Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //       <p>Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</p>
 //     </li>
-//     <li role="listitem">Je afspraakbevestiging</li>
+//     <li>Je afspraakbevestiging</li>
 //   </ul>
 // </div>
 // Original: Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor
