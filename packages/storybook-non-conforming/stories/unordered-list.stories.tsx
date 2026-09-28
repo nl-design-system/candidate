@@ -50,7 +50,7 @@ export const UnorderedListNoRole: Story = {
       description: {
         story: `Bezoekers zien een lijst, maar screenreadergebruikers krijgen niet te horen dat dit een ongeordende lijst is. De items lijken als een groep bij elkaar te horen, maar zonder de juiste semantiek is niet duidelijk dat het om een ongeordende lijst gaat.
 
-Het probleem ontstaat omdat het HTML-element \`ul\` geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als ongeordende lijst wordt herkend en correct wordt voorgelezen.`,
+Het probleem ontstaat omdat het HTML-element \`ul\` niet als lijst wordt herkend in WebKit-browsers in combinatie met de CSS \`list-style: none\`. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als ongeordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
@@ -85,7 +85,7 @@ export const UnorderedListCustomMarkerNoRole: Story = {
 
 De marker bevat toegankelijke tekst, maar dit is niet de oplossing voor het probleem voor screenreadergebruikers.
 
-Het probleem ontstaat omdat het HTML-element \`ul\` geen juiste lijstsemantiek heeft. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als ongeordende lijst wordt herkend en correct wordt voorgelezen.`,
+Het probleem ontstaat omdat het HTML-element \`ul\` niet als lijst wordt herkend in WebKit-browsers in combinatie met de CSS \`list-style: none\`. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als ongeordende lijst wordt herkend en correct wordt voorgelezen.`,
       },
     },
   },
