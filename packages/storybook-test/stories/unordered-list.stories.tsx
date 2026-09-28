@@ -147,21 +147,49 @@ export const UnorderedListThreeLevelsNesting: Story = {
   },
 };
 
-// <ul class="nl-unordered-list" role="list" lang="ar">
+// <ul class="nl-unordered-list" role="list" lang="ar" dir="rtl">
 //   <li class="nl-unordered-list__item">تحميل المستندات</li>
 //   <li class="nl-unordered-list__item">تقديم الطلب</li>
 //   <li class="nl-unordered-list__item">انتظار التأكيد</li>
 // </ul>
-// Original: Unordered List met taal ingesteld lang (`lang="ar"`)
-export const UnorderedListLang: Story = {
-  name: 'Unordered List met taal ingesteld via HTML-attribuut lang="ar"',
+// Combined with "Unordered List met HTML `dir` attribuut" due to feedback https://github.com/nl-design-system/candidate/pull/1411#discussion_r4106782830
+export const UnorderedListLangDir: Story = {
+  name: 'Unordered List met taal ingesteld via HTML-attribuut lang="ar" en schrijfrichting via HTML-attribuut dir="rtl"',
   args: {},
   parameters: {
     docs: {
       description: {
-        story: `Een ongeordende lijst met Arabische tekst.
+        story: `Een ongeordende lijst die rechts-naar-links wordt weergegeven met Arabische tekst.
+
+De schrijfrichting is ingesteld via het HTML-attribuut \`dir="rtl"\`. De leestekens staan aan de rechterkant en de tekst loopt van rechts naar links.',
 
 De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\`.`,
+      },
+    },
+  },
+};
+
+// <html lang="ar" dir="rtl">
+// <ul class="nl-unordered-list" role="list">
+//  <li class="nl-unordered-list__item">تحميل المستندات</li>
+//  <li class="nl-unordered-list__item">تقديم الطلب</li>
+//  <li class="nl-unordered-list__item">انتظار التأكيد</li>
+// </ul>
+// </html>
+// Ontwikkelfase notitie: de html lang/dir is gezet via de globals in de story
+// Original: Unordered List met Arabische tekst waarbij `dir` alleen op de `ul` staat
+export const UnorderedListLangDirOnHTML: Story = {
+  name: 'Unordered List met Arabische tekst waarbij HTML-attributen lang en dir alleen op HTML-element html staat',
+  globals: { lang: 'ar-iq', dir: 'rtl' },
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story: `Een ongeordende lijst die rechts-naar-links wordt weergegeven met Arabische tekst en Arabisch-Indische nummering.
+
+De schrijfrichting is ingesteld via het HTML-attribuut \`dir="rtl"\` op het HTML-element \`html\`. De nummering staat aan de rechterkant en de tekst loopt van rechts naar links.',
+
+De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\` op het HTML-element \`html\`.`,
       },
     },
   },
@@ -260,26 +288,6 @@ export const UnorderedListHidden: Story = {
       description: {
         story:
           'Een ongeordende lijst die verborgen is voor bezoekers en voor screenreadergebruikers. De inhoud is aanwezig in de code, maar niet zichtbaar en niet voorleesbaar.',
-      },
-    },
-  },
-};
-
-// <ul class="nl-unordered-list" role="list" lang="ar" dir="rtl">
-//   <li class="nl-unordered-list__item">تحميل المستندات</li>
-//   <li class="nl-unordered-list__item">تقديم الطلب</li>
-//   <li class="nl-unordered-list__item">انتظار التأكيد</li>
-// </ul>
-// Original: Unordered List met HTML `lang` attribuut (right-to-left tekst)
-// Combined with Unordered List met HTML `dir` attribuut based on feedback https://github.com/nl-design-system/candidate/pull/1411#discussion_r4106782830
-export const UnorderedListLangRTLDirRTL: Story = {
-  name: 'Unordered List met rechts-naar-links schrijfrichting via Arabische taal via HTML-attribuut lang="ar"',
-  args: {},
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Een ongeordende lijst die rechts-naar-links wordt weergegeven met Arabische tekst, dit is een taal die van rechts naar links wordt gelezen. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`. De markers staan aan de rechterkant en de tekst loopt van rechts naar links.',
       },
     },
   },
