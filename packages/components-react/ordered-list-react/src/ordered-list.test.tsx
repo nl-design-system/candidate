@@ -21,7 +21,6 @@ describe('Ordered List', () => {
     it.todo('supports forwarding the HTML-attribute `hidden` to the underlying HTML-element `ol`', () => {});
     it.todo('supports forwarding the HTML-attribute `lang` to the underlying HTML-element `ol`', () => {});
     it.todo('supports forwarding the HTML-attribute `dir` to the underlying HTML-element `ol`', () => {});
-    it.todo('supports forwarding the HTML-attribute `role` to the underlying HTML-element `ol`', () => {});
     it.todo('supports forwarding the HTML-attribute `reversed` to the underlying HTML-element `ol`', () => {});
     it.todo('supports forwarding the HTML-attribute `start` to the underlying HTML-element `ol`', () => {});
     it.todo('supports forwarding the HTML-attribute `type` to the underlying HTML-element `ol`', () => {});
