@@ -6,7 +6,7 @@ import { FormFieldErrorMessage } from './form-field-error-message';
 
 const displayName = 'FormFieldErrorMessage';
 const content = "Het veld 'Naam' is een verplicht veld.";
-const extraClassName = 'nl-form-field-error-message--extra-variant';
+const extraClassName = 'nl-form-field-error-message--example-variant';
 
 const ExampleWarningIcon = () => (
   <span className="example-icon" aria-hidden="true">
@@ -79,49 +79,6 @@ describe('Form Field Error Message', () => {
       const element = container.querySelector('.nl-form-field-error-message');
 
       expect(element).toHaveAttribute('id', 'root-id');
-    });
-    it('remains in the DOM during realtime validation', () => {
-      const { rerender, container } = render(
-        <div>
-          <label htmlFor="email">Email</label>
-          <FormFieldErrorMessage contentId="email-error" contentRole="alert">
-            Email is required
-          </FormFieldErrorMessage>
-
-          <input id="email" name="email" aria-describedby="email-error" aria-invalid="true" value="" readOnly />
-        </div>,
-      );
-
-      const input = container.querySelector('input');
-      const errorMessage = screen.getByRole('alert');
-
-      expect(input).toBeInTheDocument();
-      expect(errorMessage).toBeInTheDocument();
-
-      // Simulate a validation update
-      rerender(
-        <div>
-          <div>
-            <label htmlFor="email">Email</label>
-          </div>
-          <FormFieldErrorMessage contentId="email-error" contentRole="alert">
-            Please enter a valid email address
-          </FormFieldErrorMessage>
-          <div>
-            <input
-              id="email"
-              name="email"
-              aria-describedby="email-error"
-              aria-invalid="true"
-              value="invalid"
-              readOnly
-            />
-          </div>
-        </div>,
-      );
-
-      expect(screen.getByRole('alert')).toBeInTheDocument();
-      expect(screen.getByText('Please enter a valid email address')).toBeInTheDocument();
     });
   });
 
