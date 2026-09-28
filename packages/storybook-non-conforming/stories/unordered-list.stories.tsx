@@ -271,7 +271,7 @@ Dit kan via een zichtbare tekst, een visueel verstopte tekst of het WAI-ARIA-att
 //       <span aria-hidden="true">
 //         <IconCross />
 //       </span>
-//      <span class="sr-only">Kruis Icoon.{" "}</span>
+//      <span class="nl-unordered-list__marker-label">Kruis Icoon.{" "}</span>
 //     </span>
 //     Minimaal één speciaal karakter.
 //    </li>

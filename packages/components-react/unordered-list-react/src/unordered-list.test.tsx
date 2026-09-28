@@ -72,7 +72,7 @@ describe('Unordered List Item', () => {
 //       <span aria-hidden="true">
 //        <Icon />
 //      </span>
-//      <span class="sr-only">Informatieve label{" "}</span>
+//      <span class="nl-unordered-list__marker-label">Informatieve label{" "}</span>
 //     </span>
 //     Foo Bar
 //   </li>

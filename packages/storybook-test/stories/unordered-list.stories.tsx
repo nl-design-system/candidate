@@ -204,7 +204,7 @@ export const UnorderedListCustomMarkerNoLabel: Story = {
 //       <span aria-hidden="true">
 //         <IconMark />
 //       </span>
-//      <span class="sr-only">Let op.{" "}</span>
+//      <span class="nl-unordered-list__marker-label">Let op.{" "}</span>
 //     </span>
 //     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
 //   </li>
@@ -213,7 +213,7 @@ export const UnorderedListCustomMarkerNoLabel: Story = {
 //       <span aria-hidden="true">
 //         <IconMark />
 //       </span>
-//      <span class="sr-only">Let op.{" "}</span>
+//      <span class="nl-unordered-list__marker-label">Let op.{" "}</span>
 //     </span>
 //     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //    </li>
