@@ -249,6 +249,16 @@ export const OrderedListLowercaseRomanNum: Story = {
 //   <li class="nl-ordered-list__item">Doelstellingen</li>
 //   <li class="nl-ordered-list__item">Conclusie</li>
 // </ol>
+// Tip voor Ontwikkelfase, van Robbert, via GitHub comment in PR https://github.com/nl-design-system/candidate/pull/1411#discussion_r4106677053 :
+// omdat de case sensitive selector `[type="A" s]` nog geen baseline support heeft, moet je in React misschien een extra class name zetten:
+//
+// ```jsx
+// const OrderedList = ({ type, ...restProps }) => <ol className={cl(
+//   'nl-ordered-list',
+//   type === 'A' && 'nl-ordered-list--upper-alpha`
+// )} type={type}>...</ol>;
+// ```
+// Ik zou `type` alsnog óók doorgeven
 // Original: Ordered List met hoofdletters Romeinse cijfers (`type="I"`)
 export const OrderedListUppercaseRomanNum: Story = {
   name: 'Ordered List met hoofdletters Romeinse cijfers via HTML-attribuut type="I"',
