@@ -2,6 +2,7 @@
   "extends": "@nl-design-system/tsconfig",
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "esnext",
     "moduleResolution": "bundler"
   }
