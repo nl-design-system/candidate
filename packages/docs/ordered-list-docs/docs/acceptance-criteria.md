@@ -111,6 +111,7 @@ Voor de HTML component:
 - Element classes:
   - `nl-ordered-list__item`
   - `nl-ordered-list__marker` voor `::marker` als mixin en voor Custom Marker als class
+  - `nl-ordered-list__marker-label`
 
 - Modifier classes:
   - `nl-ordered-list__marker--custom` voor Custom Marker
@@ -130,6 +131,7 @@ Voor de HTML component:
 | `nl-ordered-list__item`                                         |   ✅   | Gebruik als child van `nl-ordered-list`.                                                                                                                                                                                                                                               |
 | `nl-ordered-list__marker`                                       |   ❌   | Gebruik deze class niet zonder de modifier `nl-ordered-list__marker--custom`. Deze class voegt styling die wordt gedeeld door het pseudo-element `::marker` en de Custom Marker. De modifier `nl-ordered-list__marker--custom` voegt de aanvullende styling toe voor de Custom Marker. |
 | `nl-ordered-list__marker` met `nl-ordered-list__marker--custom` |   ✅   | Gebruik een Custom Marker binnen een `nl-ordered-list__item`.                                                                                                                                                                                                                          |
+| `nl-ordered-list__marker-label`                                 |   ✅   | Gebruik als child van `nl-ordered-list__marker`.                                                                                                                                                                                                                                       |
 
 ## React API
 

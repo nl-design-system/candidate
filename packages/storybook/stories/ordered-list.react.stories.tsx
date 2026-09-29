@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-react/ordered-list-react/package.json';
 import { OrderedList as OrderedListComponent } from '@nl-design-system-candidate/ordered-list-react';
 import orderedListMeta from '@nl-design-system-candidate/ordered-list-docs/stories/ordered-list.react.meta';
-// import * as Stories from '@nl-design-system-candidate/ordered-list-docs/stories/ordered-list.stories';
+import * as Stories from '@nl-design-system-candidate/ordered-list-docs/stories/ordered-list.stories';
 import { getExternalLinks } from '../src/helpers/external-links.js';
 
 const externalLinks = getExternalLinks('https://nldesignsystem.nl/ordered-list', packageJSON.homepage);
@@ -16,4 +16,4 @@ const meta = {
 
 export default meta;
 
-// export const OrderedList = Stories.OrderedList;
+export const OrderedList = Stories.OrderedList;
