@@ -377,6 +377,61 @@ export const FormFieldDescriptionWithMultipleParagraphComponents: Story = {
   },
 };
 
+export const FormFieldDescriptionWithMultipleParagraphComponentsLead: Story = {
+  name: 'Form Field Description met meerdere NL Paragraph componenten met Lead variant',
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  render: () => {
+    const POSTCODE_INPUT_ID = '38C1CAFA-554C-4670-918B-3E231F3F7BBE';
+    const POSTCODE_DESCRIPTION_ID = `${POSTCODE_INPUT_ID}-description`;
+    return (
+      <>
+        <label htmlFor={POSTCODE_INPUT_ID}>Postcode</label>
+        <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
+          <Paragraph purpose="lead">Een postcode bestaat uit 4 cijfers, een spatie en 2 letters.</Paragraph>
+          <Paragraph>Bijvoorbeeld: 1234 AB.</Paragraph>
+        </FormFieldDescription>
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De kleur en typografie van alle alinea’s in de NL Paragraph componenten komen overeen met het design van de Form Field Description.',
+      },
+    },
+    status: { type: [] },
+    testResult: {
+      date: '2026-09-25',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
+  },
+};
+
 export const FormFieldDescriptionWithPhrasingContent: Story = {
   name: 'Form Field Description met phrasing content',
   globals: {
