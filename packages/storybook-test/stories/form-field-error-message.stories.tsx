@@ -233,9 +233,6 @@ export const FormFieldErrorMessageMultiple: Story = {
 
 export const FormFieldErrorMessageWithParagraphComponent: Story = {
   name: 'Form Field Error Message met een NL Paragraph-component (TODO)',
-  parameters: {
-    chromatic: { disableSnapshot: true },
-  },
   render: () => {
     const INPUT_ID = '835bd650-04bf-41e8-b1f6-0ad5d2d3bdfd';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -270,14 +267,12 @@ export const FormFieldErrorMessageWithParagraphComponent: Story = {
       },
     },
     status: { type: [] },
+    chromatic: { disableSnapshot: true },
   },
 };
 
 export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
   name: 'Form Field Error Message met twee NL Paragraph-componenten (TODO)',
-  parameters: {
-    chromatic: { disableSnapshot: true },
-  },
   render: () => {
     const INPUT_ID = '80483e44-a765-4871-bba8-6c504afdf67f';
     const ERROR_ID = `${INPUT_ID}-error`;
@@ -311,6 +306,7 @@ export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
       },
     },
     status: { type: [] },
+    chromatic: { disableSnapshot: true },
   },
 };
 
