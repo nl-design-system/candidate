@@ -48,14 +48,14 @@ If you use SCSS:
 @use '@nl-design-system-candidate/form-field-description-css/forward.scss';
 ```
 
-## Available classes
+## CSS classes
 
-| name                                   | description                                     |
-| -------------------------------------- | ----------------------------------------------- |
-| `.nl-form-field-description`           | The main class, to be used on a `<div>` element |
-| `.nl-form-field-description--disabled` | For disabled form fields                        |
+| name                                   | description                                  |
+| -------------------------------------- | -------------------------------------------- |
+| `.nl-form-field-description`           | The main class. Use it on a `<div>` element. |
+| `.nl-form-field-description--disabled` | For disabled form fields                     |
 
-## Available mixins
+## SCSS mixins
 
 | name                                  | description                           |
 | ------------------------------------- | ------------------------------------- |
@@ -64,10 +64,19 @@ If you use SCSS:
 
 ## Usage
 
-Place the Form Field Description below the label and before the input field.
+Place the Form Field Description below the label and before the input field. Give the description element an `id`, and
+link it to the form control via `aria-describedby`.
 
 ```html
-<div class="nl-form-field-description">Enter your full name, as shown on your identity document.</div>
+<div>
+  <label for="name">Name</label>
+</div>
+<div id="name-description" class="nl-form-field-description">
+  Enter your full name, as shown on your identity document.
+</div>
+<div>
+  <input id="name" aria-describedby="name-description" aria-required="true" autocomplete="name" type="text" />
+</div>
 ```
 
 ### Disabled state
@@ -75,7 +84,15 @@ Place the Form Field Description below the label and before the input field.
 Use the modifier `.nl-form-field-description--disabled` when the associated form field is disabled.
 
 ```html
-<div class="nl-form-field-description nl-form-field-description--disabled">This field is currently unavailable.</div>
+<div>
+  <label for="name">Name</label>
+</div>
+<div id="name-description" class="nl-form-field-description nl-form-field-description--disabled">
+  This field is currently unavailable.
+</div>
+<div>
+  <input id="name" aria-describedby="name-description" autocomplete="name" type="text" disabled />
+</div>
 ```
 
 ### SCSS usage
