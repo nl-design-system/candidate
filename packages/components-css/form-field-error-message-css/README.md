@@ -79,7 +79,7 @@ Place the Form Field Error Message below the Form Field Label and before the for
   </div>
 </div>
 <div>
-  <input id="name" aria-describedby="name-error" autocomplete="name" type="text" />
+  <input id="name" aria-describedby="name-error" aria-invalid="true" autocomplete="name" type="text" />
 </div>
 ```
 
@@ -89,6 +89,9 @@ Use `nl-form-field-error-message__icon` for an optional, decorative icon before 
 assistive technology, since the text of the error message already conveys the meaning.
 
 ```html
+<div>
+  <label for="name">Name</label>
+</div>
 <div class="nl-form-field-error-message">
   <div class="nl-form-field-error-message__icon">
     <span class="example-icon" aria-hidden="true">
@@ -98,6 +101,9 @@ assistive technology, since the text of the error message already conveys the me
   <div id="name-error" class="nl-form-field-error-message__content">
     <p>The "Name" field is required.</p>
   </div>
+</div>
+<div>
+  <input id="name" aria-describedby="name-error" aria-invalid="true" autocomplete="name" type="text" />
 </div>
 ```
 
