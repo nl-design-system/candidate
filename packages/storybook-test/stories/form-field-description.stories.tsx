@@ -68,7 +68,7 @@ import {
   WCAG22_413_STATUS_MESSAGES,
 } from '../src/WcagTests';
 
-const FormFieldDescriptionWrapper = ({
+const AlternativeHTMLFormFieldDescription = ({
   children,
   Component = 'div',
   ...restProps
@@ -497,9 +497,9 @@ export const FormFieldDescriptionAsParagraph: Story = {
     return (
       <>
         <label htmlFor={INPUT_ID}>Postcode</label>
-        <FormFieldDescriptionWrapper Component="p" id={DESCRIPTION_ID}>
+        <AlternativeHTMLFormFieldDescription Component="p" id={DESCRIPTION_ID}>
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
-        </FormFieldDescriptionWrapper>
+        </AlternativeHTMLFormFieldDescription>
         <div>
           <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
         </div>

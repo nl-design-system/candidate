@@ -1,3 +1,28 @@
 @mixin nl-form-field-error-message {
-  /* TODO: Add styling */
+  align-items: baseline;
+  color: var(--nl-form-field-error-message-color);
+  column-gap: var(--nl-form-field-error-message-column-gap);
+  display: flex;
+  font-family: var(--nl-form-field-error-message-font-family);
+  font-size: var(--nl-form-field-error-message-font-size);
+  font-weight: var(--nl-form-field-error-message-font-weight);
+  line-height: var(--nl-form-field-error-message-line-height);
+  margin-block-end: var(--nl-form-field-error-message-margin-block-end);
+  margin-block-start: var(--nl-form-field-error-message-margin-block-start);
+}
+
+@mixin nl-form-field-error-message__icon {
+  --nl-icon-block-size: var(--nl-form-field-error-message-icon-size);
+  --nl-icon-inline-size: var(--nl-form-field-error-message-icon-size);
+
+  color: var(--nl-form-field-error-message-icon-color);
+  flex-shrink: 0;
+  font-size: var(--nl-form-field-error-message-icon-size);
+  line-height: 0;
+  margin-block: 0;
+}
+
+@mixin nl-form-field-error-message__content {
+  flex: 1;
+  margin-block: 0;
 }
