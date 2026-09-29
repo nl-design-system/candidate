@@ -51,15 +51,19 @@ focus. Use `contentId` rather than `id`: `id` sets the `id` attribute of the out
 
 ```jsx
 <div>
-  <label htmlFor="name">Name</label>
+  <div>
+    <label htmlFor="name">Name</label>
+  </div>
   <FormFieldErrorMessage contentId="name-error">The "Name" field is required.</FormFieldErrorMessage>
-  <input id="name" aria-describedby="name-error" type="text" />
+  <div>
+    <input id="name" aria-describedby="name-error" aria-invalid="true" type="text" />
+  </div>
 </div>
 ```
 
 ### Realtime validation with `contentRole="alert"`
 
-When a single error message needs to be displayed instead of an Alert error message summary, you can use 'contentRole="alert"' to make screenreaders announce the error message immediately.
+Use `contentRole="alert"` to make screen readers announce the error message immediately when it appears, without waiting for the input to receive focus. This is useful for inline validation that triggers while the user is still filling in the form.
 
 ```jsx
 <FormFieldErrorMessage contentId="name-error" contentRole="alert">
@@ -89,6 +93,9 @@ Use the `icon` prop for an optional, decorative icon before the content. Icons a
 technology by default, since the text of the error message already conveys the meaning.
 
 ```jsx
+import { Icon } from '@example/icon-react';
+import { IconAlertCircle } from '@example/icons';
+
 <FormFieldErrorMessage
   contentId="name-error"
   icon={
@@ -98,7 +105,7 @@ technology by default, since the text of the error message already conveys the m
   }
 >
   The "Name" field is required.
-</FormFieldErrorMessage>
+</FormFieldErrorMessage>;
 ```
 
 ## Props
