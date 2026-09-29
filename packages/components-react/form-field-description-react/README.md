@@ -6,19 +6,19 @@ Shows supporting text and provides extra context about the information to be fil
 
 ## Installation
 
-npm:
+Using npm
 
 ```shell
 npm install @nl-design-system-candidate/form-field-description-react
 ```
 
-pnpm:
+Using pnpm
 
 ```shell
 pnpm add @nl-design-system-candidate/form-field-description-react
 ```
 
-yarn:
+Using yarn
 
 ```shell
 yarn add @nl-design-system-candidate/form-field-description-react
@@ -48,15 +48,18 @@ import { FormFieldDescription } from '@nl-design-system-candidate/form-field-des
 
 ### Linking to an input field via `aria-describedby`
 
-Always give the `FormFieldDescription` an `id` and link it via `aria-describedby` to the associated input field. This allows screen readers to read out the description when the input field receives focus.
+Always give the `FormFieldDescription` an `id` and link it via `aria-describedby` to the associated input
+field. This allows screen readers to read out the description when the input field receives focus.
 
 ```jsx
 <div>
   <label htmlFor="name">Name</label>
-  <FormFieldDescription id="name-description">
-    Enter your full name, as shown on your identity document.
-  </FormFieldDescription>
-  <input id="name" aria-describedby="name-description" type="text" />
+</div>
+<FormFieldDescription id="name-description">
+  Enter your full name, as shown on your identity document.
+</FormFieldDescription>
+<div>
+  <input id="name" aria-describedby="name-description" aria-required="true" autocomplete="name" type="text" />
 </div>
 ```
 
@@ -65,20 +68,34 @@ Always give the `FormFieldDescription` an `id` and link it via `aria-describedby
 Use the `disabled` prop when the associated form field is disabled.
 
 ```jsx
+<div>
+  <label htmlFor="name">Name</label>
+</div>
 <FormFieldDescription id="name-description" disabled>
   Enter your full name, as shown on your identity document.
 </FormFieldDescription>
+<div>
+  <input id="name" aria-describedby="name-description" autocomplete="name" type="text" disabled />
+</div>
 ```
 
 ### Content of the Form Field Description
 
-The `FormFieldDescription` accepts plain text and phrasing content as `children`, for example a `<p>` element or inline elements such as `<strong>` and `<em>`. Do not use interactive content (such as links or buttons) as `children`.
+The `FormFieldDescription` accepts plain text and phrasing content as `children`, for example a `<p>`
+element or inline elements such as `<strong>` and `<em>`. Do not use interactive content (such as links or
+buttons) as `children`.
 
 ```jsx
 <FormFieldDescription id="name-description">
   <p>Enter your full name.</p>
 </FormFieldDescription>
 ```
+
+### Do not add `tabIndex`
+
+Do not add `tabIndex` to a `FormFieldDescription`. It is informative and should not become part of the
+page's tab order. The description is already announced from the associated input field through
+`aria-describedby` when the field receives focus.
 
 ## Props
 
@@ -88,13 +105,17 @@ The `FormFieldDescription` accepts plain text and phrasing content as `children`
 | `children` | Content of the form field description                                               | `ReactNode` | —       |
 | `disabled` | Indicates that the associated form field is disabled                                | `boolean`   | `false` |
 
-In addition to the props above, `FormFieldDescription` accepts all standard HTML attributes of a `<div>` element.
+In addition to the props above, `FormFieldDescription` accepts all standard HTML attributes of a `<div>`
+element, and forwards a `ref` to the underlying `<div>` element.
 
 ## Design Tokens
 
-All NL Design System components are white-label. Use the Form Field Description design tokens to adapt the style to your house style. For more information about design tokens, see [https://nldesignsystem.nl/handboek/huisstijl/design-tokens/](https://nldesignsystem.nl/handboek/huisstijl/design-tokens/).
+All NL Design System components are white-label. Use the Form Field Description design tokens to adapt the
+style to your house style. For more information about design tokens, see
+[https://nldesignsystem.nl/handboek/huisstijl/design-tokens/](https://nldesignsystem.nl/handboek/huisstijl/design-tokens/).
 
-The tokens for Form Field Description can be found in the tokens package [`@nl-design-system-candidate/form-field-description-tokens`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-description-tokens).
+The tokens for Form Field Description can be found in the tokens package
+[`@nl-design-system-candidate/form-field-description-tokens`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-description-tokens).
 
 ## Other implementations
 
