@@ -1,7 +1,7 @@
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { useId } from 'react';
+import { HTMLAttributes, useId } from 'react';
 import '../../components-css/color-sample-css/src/color-sample.scss';
 import packageJSON from '../../components-react/color-sample-react/package.json';
 import { ColorSample } from '../../components-react/color-sample-react/src/color-sample';
@@ -505,6 +505,110 @@ export const Japanese: Story = {
     return (
       <Paragraph>
         <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
+    );
+  },
+};
+
+const useColorSample = ({ id, value }: { id?: string; value: string }): HTMLAttributes<HTMLElement> => ({
+  className: 'nl-color-sample',
+  role: 'img',
+  'aria-labelledby': id,
+  style: { color: value },
+});
+
+export const ColorSampleSpan: Story = {
+  name: 'Color Sample als `span` als zelfstandige afbeelding met toegankelijke naam',
+  args: {
+    ['aria-label']: 'De kleur "#154273".',
+    value: '#154273',
+  },
+  decorators: [
+    (Story, context) => (
+      <>
+        <Paragraph>{Story()}</Paragraph>
+        <Paragraph> {context.args['aria-label']}</Paragraph>
+      </>
+    ),
+    ...meta.decorators,
+  ],
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'De kleur "#154273".',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een kleurstaal met expliciete beschrijving in een `aria-label` attribuut, die helemaal los staat in een element staat die bedoeld is om gerelateerde inhoud te groeperen, zoals een Paragraph, Table Cell of List Item. Deze vorm mag alleen gebruikt worden als de kleur elders in de context toegelicht is.',
+      },
+    },
+    status: { type: [] },
+  },
+  render({ value }, context) {
+    const id = useId();
+
+    return (
+      <Paragraph>
+        <span {...useColorSample({ value })}></span>
+        <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
+    );
+  },
+};
+
+export const ColorSampleSpaOpacity: Story = {
+  name: 'Color Sample als `span` met een 100% transparante kleur',
+  args: { value: '#ffffff00' },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    ariaLabelledBy: 'De 100% transparante kleur "#ffffff00".',
+    docs: {
+      description: {
+        story:
+          'Een kleurstaal met een 100% transparante kleur en beschrijving, voor een doelgroep die gewend is [alpha-transparantie](https://en.wikipedia.org/wiki/Alpha_compositing) te beoordelen met een checkerboard pattern. De 8-cijferige hexadecimale kleurcode maakt ook duidelijk dat er transparantie is.',
+      },
+    },
+  },
+  render({ value }, context) {
+    const id = useId();
+
+    return (
+      <Paragraph>
+        <span {...useColorSample({ value })}></span>
+        <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
+    );
+  },
+};
+
+export const ColorSampleSpanSemiTransparent: Story = {
+  name: 'Color Sample als `span` met semi-transparente "deep pink"',
+  args: { value: '#ff14937f' },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  parameters: {
+    ariaLabelledBy: 'De semi-transparante kleur "#ff14937f".',
+    docs: {
+      description: {
+        story:
+          'Een kleurstaal met een semitransparante kleur en beschrijving, voor een doelgroep die gewend is [alpha-transparantie](https://en.wikipedia.org/wiki/Alpha_compositing) te beoordelen met een checkerboard pattern. De 8-cijferige hexadecimale kleurcode maakt ook duidelijk dat er transparantie is.',
+      },
+    },
+  },
+  render({ value }, context) {
+    const id = useId();
+
+    return (
+      <Paragraph>
+        <span {...useColorSample({ value })}></span>
+        <span id={id}>{context.parameters['ariaLabelledBy']}</span>
       </Paragraph>
     );
   },

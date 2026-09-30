@@ -1,8 +1,10 @@
 @mixin nl-color-sample {
-  background-image: repeating-conic-gradient(
-    var(--nl-color-sample-background-color, hsl(0 0% 90%)) 0% 25%,
-    #fff 0% 50%
-  );
+  /* Displaying an accurate color sample is a justified excemption from
+   * the forced colors mode adjustments, using `forced-color-adjust: none`.
+   */
+  background-image:
+    repeating-conic-gradient(var(--nl-color-sample-background-color, hsl(0 0% 90%)) 0% 25%, hsl(0 0% 100%) 0% 50%),
+    linear-gradient(currentColor, currentColor);
   background-size: 0.5rem 0.5rem;
   block-size: var(--nl-color-sample-block-size);
   border-color: var(--nl-color-sample-border-color);
@@ -11,9 +13,22 @@
   border-width: var(--nl-color-sample-border-width);
   box-sizing: border-box;
   display: inline-block;
-  forced-color-adjust: none; // [1]
+  forced-color-adjust: none;
   inline-size: var(--nl-color-sample-inline-size);
   pointer-events: none;
 }
 
-// [1]: the purpose of this component is to display an exact color sample, we don't ever want the browser to interfere
+@mixin nl-color-sample--svg {
+  /**
+   * For the SVG Color Sample, prevent a double semi-transparent background color>
+   * The combined CSS `background-color` and the `fill` from SVG would result in two
+   * semi-tranparent layers that combined have half the transparency, resulting in
+   * an inaccurate representation.
+   *
+   * Avoid the `linear-gradient()` in the SVG version.
+   */
+  background-image: repeating-conic-gradient(
+    var(--nl-color-sample-background-color, hsl(0 0% 90%)) 0% 25%,
+    #fff 0% 50%
+  );
+}
