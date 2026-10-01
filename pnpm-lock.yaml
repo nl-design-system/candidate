@@ -963,9 +963,15 @@ importers:
       '@babel/runtime':
         specifier: 7.28.4
         version: 7.28.4
+      '@nl-design-system-candidate/icon-react':
+        specifier: workspace:*
+        version: link:../icon-react
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
+      '@tabler/icons-react':
+        specifier: 3.35.0
+        version: 3.35.0(react@19.2.3)
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
