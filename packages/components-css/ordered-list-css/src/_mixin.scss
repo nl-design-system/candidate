@@ -1,3 +1,70 @@
 @mixin nl-ordered-list {
-  /* TODO: Add styling */
+  box-sizing: border-box;
+  color: var(--nl-ordered-list-color);
+  font-family: var(--nl-ordered-list-font-family);
+  font-size: var(--nl-ordered-list-font-size);
+  line-height: var(--nl-ordered-list-line-height);
+  margin-block-end: var(--nl-ordered-list-margin-block-end);
+  margin-block-start: var(--nl-ordered-list-margin-block-start);
+  padding-inline-start: var(--nl-ordered-list-padding-inline-start);
+
+  @media (forced-colors: active) {
+    color: currentColor;
+  }
+
+  &:lang(ar) {
+    list-style-type: arabic-indic;
+  }
+}
+
+@mixin nl-ordered-list__item {
+  margin-block-end: var(--nl-ordered-list-item-margin-block-end);
+  margin-block-start: var(--nl-ordered-list-item-margin-block-start);
+  padding-inline-start: var(--nl-ordered-list-item-padding-inline-start);
+}
+
+@mixin nl-ordered-list__marker {
+  color: var(--nl-ordered-list-marker-color);
+
+  @media (forced-colors: active) {
+    color: currentColor;
+  }
+}
+
+// The custom marker hangs in the list's `padding-inline-start`, like a native `::marker`: the negative margin
+// cancels its own width, so the item text starts at the same position as items without a custom marker and
+// wrapped lines align with the text instead of with the marker. The item's `padding-inline-start` is added
+// between marker and text, as it is for a native marker.
+@mixin nl-ordered-list__marker--custom {
+  align-items: center;
+  block-size: 1lh;
+  display: inline-flex;
+  inline-size: var(--nl-ordered-list-padding-inline-start);
+  justify-content: center;
+  margin-inline-end: var(--nl-ordered-list-item-padding-inline-start);
+  margin-inline-start: calc(
+    -1 * (var(--nl-ordered-list-padding-inline-start) + var(--nl-ordered-list-item-padding-inline-start))
+  );
+  vertical-align: top;
+
+  // Without this, the wrapper around the icon gets a line box ("strut") taller than the marker, which pushes
+  // the icon off-centre. Not `line-height: 0`: the icon's default `1lh` size would collapse to nothing.
+  > * {
+    display: flex;
+  }
+}
+
+@mixin nl-ordered-list__marker-label {
+  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
+  block-size: 1px !important;
+  border-width: 0 !important;
+  clip-path: inset(50%) !important;
+  inline-size: 1px !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: -1px !important;
+  overflow: hidden !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
 }

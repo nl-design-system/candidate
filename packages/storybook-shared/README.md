@@ -24,6 +24,21 @@ layout becomes visible. Used in `storybook-non-conforming`, for example to show 
 Adds an outline around every element directly rendered by the story (not nested descendants), so you can
 test the boundaries of its border box in visual regression tests.
 
+### CandidateCenteredDecorator
+
+Centres the text of a story (`text-align: center`) and places list markers inside the list
+(`list-style-position: inside`, no `padding-inline-start`), so the numbers or bullets stay next to the centred
+text. This is an example implementation for centred content, not part of any component's CSS.
+
+### createCustomPropertiesDecorator
+
+Creates a decorator that sets CSS custom properties, for example design tokens, on an element around the story.
+Useful to test a component with specific token values, such as invalid values:
+
+```tsx
+decorators: [createCustomPropertiesDecorator({ '--nl-ordered-list-color': '10px' })];
+```
+
 ### ExampleBodyTextDecorator
 
 Wraps a story in `<div class="example-body-text">`, for example body text around a component.
@@ -129,6 +144,10 @@ browser enforces it in real Forced Colors mode.
 
 Temporary design tokens for components not yet in the candidate-theme tokens package. Can be removed once
 <https://github.com/nl-design-system/themes/pull/1248> is merged (see the file itself).
+
+### candidate-centered.css
+
+The CSS rules `CandidateCenteredDecorator` uses.
 
 ### candidate-disable-css.css
 

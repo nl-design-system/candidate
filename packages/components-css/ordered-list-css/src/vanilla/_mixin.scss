@@ -4,4 +4,12 @@
   ol {
     @include mixin.nl-ordered-list;
   }
+
+  ol > li {
+    @include mixin.nl-ordered-list__item;
+
+    &::marker {
+      @include mixin.nl-ordered-list__marker;
+    }
+  }
 }

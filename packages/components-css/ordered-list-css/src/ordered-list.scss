@@ -3,3 +3,28 @@
 .nl-ordered-list {
   @include mixin.nl-ordered-list;
 }
+
+.nl-ordered-list__item {
+  @include mixin.nl-ordered-list__item;
+}
+
+.nl-ordered-list__item::marker {
+  @include mixin.nl-ordered-list__marker;
+}
+
+.nl-ordered-list__marker {
+  @include mixin.nl-ordered-list__marker;
+}
+
+.nl-ordered-list__marker.nl-ordered-list__marker--custom {
+  @include mixin.nl-ordered-list__marker--custom;
+}
+
+.nl-ordered-list__item:has(> .nl-ordered-list__marker--custom),
+.nl-ordered-list__item--custom-marker {
+  list-style-type: none;
+}
+
+.nl-ordered-list__marker-label {
+  @include mixin.nl-ordered-list__marker-label;
+}
