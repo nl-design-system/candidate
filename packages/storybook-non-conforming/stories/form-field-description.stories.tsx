@@ -433,3 +433,59 @@ export const FormFieldDescriptionANDAriaDescription: Story = {
     status: { type: [] },
   },
 };
+
+export const FormFieldDescriptionTable: Story = {
+  name: 'Fout: Form Field Description met tabel',
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  render: () => {
+    const INPUT_ID = '02F7932E-F73A-4DCB-B903-F5CECFCC4F723';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Wachtwoord</label>
+        </div>
+        <FormFieldDescription id={DESCRIPTION_ID}>
+          <p>Het wachtwoord moet voldoen aan de volgende eisen:</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Eis</th>
+                <th scope="col">Aantal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Minimaal aantal karakters</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Minimaal aantal hoofdletters</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Minimaal aantal cijfers</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </FormFieldDescription>
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="password" autoComplete="new-password" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De foutmelding bevat een tabel met de eisen waaraan het wachtwoord moet voldoen. Omdat de tabel via aria-describedby aan het invoerveld is gekoppeld, gaat de tabelstructuur verloren: een screenreader leest alleen de platte tekst van alle cellen achter elkaar voor, bijvoorbeeld "Eis Aantal Voldoet Minimaal aantal karakters 8 Nee Minimaal aantal hoofdletters 1 Nee Minimaal aantal cijfers 1 Nee". Hierdoor is niet meer te herleiden welk aantal en welke status bij welke eis hoort. Gebruik voor een opsomming van wachtwoordvereisten bij voorkeur tekst of een lijst in plaats van een tabel.',
+      },
+    },
+    status: { type: [] },
+  },
+};

@@ -377,6 +377,61 @@ export const FormFieldDescriptionWithMultipleParagraphComponents: Story = {
   },
 };
 
+export const FormFieldDescriptionWithMultipleParagraphComponentsLead: Story = {
+  name: 'Form Field Description met meerdere NL Paragraph componenten met Lead variant',
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  render: () => {
+    const POSTCODE_INPUT_ID = '38C1CAFA-554C-4670-918B-3E231F3F7BBE';
+    const POSTCODE_DESCRIPTION_ID = `${POSTCODE_INPUT_ID}-description`;
+    return (
+      <>
+        <label htmlFor={POSTCODE_INPUT_ID}>Postcode</label>
+        <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
+          <Paragraph purpose="lead">Een postcode bestaat uit 4 cijfers, een spatie en 2 letters.</Paragraph>
+          <Paragraph>Bijvoorbeeld: 1234 AB.</Paragraph>
+        </FormFieldDescription>
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="text"
+            autoComplete="postal-code"
+          />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De kleur en typografie van alle alinea’s in de NL Paragraph componenten komen overeen met het design van de Form Field Description.',
+      },
+    },
+    status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
+  },
+};
+
 export const FormFieldDescriptionWithPhrasingContent: Story = {
   name: 'Form Field Description met phrasing content',
   globals: {
@@ -917,17 +972,17 @@ export const FormFieldDescriptionTextSpacing: Story = {
   },
   decorators: [LargeLetterSpacingDecorator, LargeWordSpacingDecorator, LargeLineHeightDecorator],
   render: () => {
-    const POSTCODE_INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D';
-    const POSTCODE_DESCRIPTION_ID = `${POSTCODE_INPUT_ID}-description`;
+    const INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D1';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
     return (
       <>
-        <label htmlFor={POSTCODE_INPUT_ID}>Probleem</label>
-        <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
+        <label htmlFor={INPUT_ID}>Probleem</label>
+        <FormFieldDescription id={DESCRIPTION_ID}>
           Beschrijf het probleem zo specifiek mogelijk. Vermeld in ieder geval de foutcode (indien bekend), wanneer het
           probleem voor het eerst optrad en welke stappen je al hebt ondernomen. (Max. 500 woorden).
         </FormFieldDescription>
         <div>
-          <textarea id={POSTCODE_INPUT_ID} aria-describedby={POSTCODE_DESCRIPTION_ID} />
+          <textarea id={INPUT_ID} aria-describedby={DESCRIPTION_ID} />
         </div>
       </>
     );
@@ -947,6 +1002,405 @@ De tekstafstand is vergroot volgens [WCAG Succescriterium 1.4.12 Tekstafstand](h
     status: { type: [] },
     testResult: {
       date: '2026-09-25',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
+  },
+};
+
+export const FormFieldDescriptionLangLTR: Story = {
+  name: 'Form Field Description in het Engels',
+  globals: {
+    dir: 'ltr',
+    lang: 'en',
+  },
+  render: () => {
+    const INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D2';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
+        <FormFieldDescription id={DESCRIPTION_ID} lang="en">
+          A postal code consists of 4 digits, a space, and 2 letters. For example: 1234 AB.
+        </FormFieldDescription>
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De ondersteunende tekst staat in het Engels, terwijl de rest van de pagina in het Nederlands is. De afwijkende taal is expliciet aangegeven, zodat de tekst correct wordt uitgesproken door een screenreader. De afwijkende taal is aangegeven met het HTML-attribuut `lang`.',
+      },
+    },
+    status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
+  },
+};
+
+export const FormFieldDescriptionLangRTL: Story = {
+  name: 'Form Field Description in het Arabisch',
+  globals: {
+    dir: 'ltr',
+    lang: 'ar',
+  },
+  render: () => {
+    const INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D109876543';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
+    return (
+      <>
+        <div lang="ar" dir="rtl">
+          <label htmlFor={INPUT_ID}>رمز بريدي</label>
+        </div>
+        <FormFieldDescription id={DESCRIPTION_ID} lang="ar" dir="rtl">
+          يتكون الرمز البريدي من 4 أرقام، ومسافة، وحرفين.
+        </FormFieldDescription>
+        <div lang="ar" dir="rtl">
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De ondersteunende tekst is in het Arabisch, een taal met een andere schrijf- en leesrichting. De richting van de tekst past bij de de taal. De taal is aangegeven met het HTML-attribuut `lang`. De richting is aangegeven met het HTML-attribuut `dir`, zodat de tekst van rechts naar links wordt weergegeven.',
+      },
+    },
+    status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
+  },
+};
+
+export const FormFieldDescriptionVerticalText: Story = {
+  name: 'Form Field Description in het Japans',
+  globals: {
+    dir: 'ltr',
+    lang: 'ja',
+    writingMode: 'vertical-rl',
+  },
+  render: () => {
+    const INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D10987654';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>郵便番号</label>
+        </div>
+        <FormFieldDescription id={DESCRIPTION_ID} lang="ja">
+          郵便番号は、4桁の数字、スペース、2文字のアルファベットで構成されています。例：1234 AB。
+        </FormFieldDescription>
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De hele pagina staat in verticale tekstrichting, aangezet via de CSS-eigenschap `writingMode`. Het label, de ondersteunende tekst en het invoerveld passen zich allemaal aan de verticale richting aan. De taal is aangegeven met het HTML-attribuut `lang`.',
+      },
+    },
+    status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
+  },
+};
+
+export const FormFieldDescriptionLargeText: Story = {
+  name: 'Form Field Description met 200% pagina-zoom',
+  render: () => {
+    const INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D109876';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
+        <FormFieldDescription id={DESCRIPTION_ID}>
+          Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
+        </FormFieldDescription>
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </>
+    );
+  },
+  globals: { zoom: 2 },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De pagina is gezoomd naar 200% via de browser (paginazoom), waardoor zowel de tekst als het invoerveld twee keer zo groot worden. De ondersteunende tekst blijft goed leesbaar en loopt niet buiten de ruimte van het element.',
+      },
+    },
+    status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
+  },
+};
+
+export const FormFieldDescriptionTextZoom: Story = {
+  name: 'Form Field Description met 200% tekstgrootte',
+  render: () => {
+    const INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D10987';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Postcode</label>
+        </div>
+        <FormFieldDescription id={DESCRIPTION_ID}>
+          Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
+        </FormFieldDescription>
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </>
+    );
+  },
+  globals: { fontSize: '32px' },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De standaard tekstgrootte van de pagina is vergroot van 16px naar 32px, zoals bij een gebruikersvoorkeur voor grotere tekst (WCAG-criterium 1.4.4, "Herschalen van tekst"). Alleen de tekst, die in `rem` is opgegeven, wordt hierdoor groter; het invoerveld schaalt niet automatisch mee. De ondersteunende tekst blijft goed leesbaar en loopt niet buiten de ruimte van het element. Deze story is alleen los te bekijken, niet op de documentatiepagina, omdat de tekstgrootte op paginaniveau wordt ingesteld.',
+      },
+    },
+    status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
+  },
+};
+
+export const FormFieldDescriptionWordBreak: Story = {
+  name: 'Form Field Description met woorden die niet op 1 regel passen',
+  render: () => {
+    const INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D1098';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
+        <FormFieldDescription id={DESCRIPTION_ID}>
+          Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB. De
+          onvolledigheidscontrolemechanismevalidatieprocedure kan constateren dat het veld Poostcode niet is ingevuld.
+          Dit resulteert dan in een onacceptabele gegevensverwerkingsfoutmelding binnen ons geïntegreerde
+          automatiseringsplatform voor klantgegevensbeheer.
+        </FormFieldDescription>
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De ondersteunende tekst bevat buitengewoon lange woorden. Woorden worden afgebroken aan het einde van de regel en vervolgd op de volgende regel.  Tekst valt niet buiten beeld.',
+      },
+    },
+    status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
+  },
+};
+
+export const FormFieldDescriptionSmallViewport: Story = {
+  name: 'Form Field Description in een kleine viewport',
+  globals: { viewport: { value: 'wcag400' } },
+  render: () => {
+    const INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D109';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
+        <FormFieldDescription id={DESCRIPTION_ID}>
+          Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB. Er is een probleem
+          opgetreden bij het verwerken van uw gegevens. Het veld Naam is verplicht en mag niet leeg blijven. Vul het
+          veld Naam in met uw volledige voor- en achternaam (bijv. Jan de Vries). Controleer of er geen onbedoelde
+          spaties of leestekens in het veld staan.
+        </FormFieldDescription>
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De lange foutmelding is in een kleine viewport te zien zonder dat er tekst buiten het beeld valt. De boodschap blijft leesbaar omdat deze over meerdere regels wordt verdeeld. De kleine viewport is vergelijkbaar met 400% zoom. Er valt geen tekst buiten beeld aan de rechterkant, en aan de onderkant is scrollen mogelijk.',
+      },
+    },
+    status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
+  },
+};
+
+export const FormFieldDescriptionForcedColorsMode: Story = {
+  name: 'Form Field Description in Forced Colors mode',
+  globals: { forcedColors: 'active' },
+  render: () => {
+    const INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D10';
+    const DESCRIPTION_ID = `${INPUT_ID}-description`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Naam</label>
+        </div>
+        <FormFieldDescription id={DESCRIPTION_ID}>
+          Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
+        </FormFieldDescription>
+        <div>
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De ondersteunende tekst blijft goed leesbaar in de modus voor hoge contrastkleurinstellingen. De tekstkleur past zich aan de systeemkleuren aan, zodat de boodschap ook in deze weergave duidelijk te zien is. Dit is een gesimuleerde weergave binnen Storybook (via de toolbar-knop "Forced Colors"), controleer voor definitieve verificatie ook de echte Forced Colors mode via de browser DevTools of het besturingssysteem.',
+      },
+    },
+    status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
       pass: [
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_1412_TEXT_SPACING,
