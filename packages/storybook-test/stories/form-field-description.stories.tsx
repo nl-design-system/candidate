@@ -412,6 +412,23 @@ export const FormFieldDescriptionWithMultipleParagraphComponentsLead: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
   },
 };
 
@@ -1034,6 +1051,23 @@ export const FormFieldDescriptionLangLTR: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
   },
 };
 
@@ -1068,6 +1102,23 @@ export const FormFieldDescriptionLangRTL: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
   },
 };
 
@@ -1103,6 +1154,23 @@ export const FormFieldDescriptionVerticalText: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
   },
 };
 
@@ -1134,6 +1202,23 @@ export const FormFieldDescriptionLargeText: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
   },
 };
 
@@ -1165,6 +1250,23 @@ export const FormFieldDescriptionTextZoom: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
   },
 };
 
@@ -1198,6 +1300,23 @@ export const FormFieldDescriptionWordBreak: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
   },
 };
 
@@ -1232,6 +1351,23 @@ export const FormFieldDescriptionSmallViewport: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
   },
 };
 
@@ -1263,5 +1399,22 @@ export const FormFieldDescriptionForcedColorsMode: Story = {
       },
     },
     status: { type: [] },
+    testResult: {
+      date: '2026-10-01',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_211_KEYBOARD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_132_MEANINGFUL_SEQUENCE,
+        WCAG22_133_SENSORY_CHARACTERISTICS,
+        WCAG22_141_USE_OF_COLOR,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+        WCAG22_332_LABELS_OR_INSTRUCTIONS,
+      ],
+    },
   },
 };
