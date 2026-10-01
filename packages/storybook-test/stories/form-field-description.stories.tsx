@@ -412,23 +412,6 @@ export const FormFieldDescriptionWithMultipleParagraphComponentsLead: Story = {
       },
     },
     status: { type: [] },
-    testResult: {
-      date: '2026-09-25',
-      pass: [
-        WCAG22_131_INFO_AND_RELATIONSHIPS,
-        WCAG22_1412_TEXT_SPACING,
-        WCAG22_211_KEYBOARD,
-        WCAG22_243_FOCUS_ORDER,
-        WCAG22_132_MEANINGFUL_SEQUENCE,
-        WCAG22_133_SENSORY_CHARACTERISTICS,
-        WCAG22_141_USE_OF_COLOR,
-        WCAG22_143_CONTRAST_MINIMUM,
-        WCAG22_144_RESIZE_TEXT,
-        WCAG22_1410_REFLOW,
-        WCAG22_312_LANGUAGE_OF_PARTS,
-        WCAG22_332_LABELS_OR_INSTRUCTIONS,
-      ],
-    },
   },
 };
 
@@ -1035,11 +1018,10 @@ export const FormFieldDescriptionLangLTR: Story = {
           <label htmlFor={INPUT_ID}>Postcode</label>
         </div>
         <FormFieldDescription id={DESCRIPTION_ID} lang="en">
-          The postal code is not valid. A valid postal code consists of four digits, a space and two letters, for
-          example: 1234 AB.
+          A postal code consists of 4 digits, a space, and 2 letters. For example: 1234 AB.
         </FormFieldDescription>
         <div>
-          <input id={INPUT_ID} aria-describedby={ERROR_ID} type="text" autoComplete="postal-code" />
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
         </div>
       </>
     );
@@ -1067,20 +1049,13 @@ export const FormFieldDescriptionLangRTL: Story = {
     return (
       <>
         <div lang="ar" dir="rtl">
-          <label htmlFor={INPUT_ID}>الرمز البريدي</label>
+          <label htmlFor={INPUT_ID}>رمز بريدي</label>
         </div>
         <FormFieldDescription id={DESCRIPTION_ID} lang="ar" dir="rtl">
-          حقل الرمز البريدي غير مملوء في هذا الحقل لا يمكن أن يكون فارغا.
+          يتكون الرمز البريدي من 4 أرقام، ومسافة، وحرفين.
         </FormFieldDescription>
         <div lang="ar" dir="rtl">
-          <input
-            id={INPUT_ID}
-            aria-describedby={ERROR_ID}
-            aria-invalid="true"
-            aria-required="true"
-            type="text"
-            autoComplete="postal-code"
-          />
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
         </div>
       </>
     );
@@ -1112,17 +1087,10 @@ export const FormFieldDescriptionVerticalText: Story = {
           <label htmlFor={INPUT_ID}>郵便番号</label>
         </div>
         <FormFieldDescription id={DESCRIPTION_ID} lang="ja">
-          郵便番号フィールドは入力されていません。このフィールドは空にはなりません。
+          郵便番号は、4桁の数字、スペース、2文字のアルファベットで構成されています。例：1234 AB。
         </FormFieldDescription>
         <div>
-          <input
-            id={INPUT_ID}
-            aria-describedby={ERROR_ID}
-            aria-invalid="true"
-            aria-required="true"
-            type="text"
-            autoComplete="postal-code"
-          />
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
         </div>
       </>
     );
@@ -1132,48 +1100,6 @@ export const FormFieldDescriptionVerticalText: Story = {
       description: {
         story:
           'De hele pagina staat in verticale tekstrichting, aangezet via de CSS-eigenschap `writingMode`. Het label, de ondersteunende tekst en het invoerveld passen zich allemaal aan de verticale richting aan. De taal is aangegeven met het HTML-attribuut `lang`.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const FormFieldDescriptionVerticalText: Story = {
-  name: 'Form Field Description in het Japans',
-  globals: {
-    dir: 'ltr',
-    lang: 'ja',
-    writingMode: 'vertical-rl',
-  },
-  render: () => {
-    const INPUT_ID = '18E35B1D-57D3-414C-9485-5C8542FC962D1098765';
-    const DESCRIPTION_ID = `${INPUT_ID}-description`;
-    return (
-      <>
-        <div>
-          <label htmlFor={INPUT_ID}>郵便番号</label>
-        </div>
-        <FormFieldDescription id={DESCRIPTION_ID} lang="ja">
-          郵便番号フィールドは入力されていません。このフィールドは空にはなりません。
-        </FormFieldDescription>
-        <div>
-          <input
-            id={INPUT_ID}
-            aria-describedby={ERROR_ID}
-            aria-invalid="true"
-            aria-required="true"
-            type="text"
-            autoComplete="postal-code"
-          />
-        </div>
-      </>
-    );
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'De hele pagina staat in verticale tekstrichting. Het icoon blijft correct gepositioneerd naast de tekst wanneer de ondersteunende tekst verticaal wordt weergegeven.',
       },
     },
     status: { type: [] },
@@ -1194,14 +1120,7 @@ export const FormFieldDescriptionLargeText: Story = {
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldDescription>
         <div>
-          <input
-            id={INPUT_ID}
-            aria-describedby={ERROR_ID}
-            aria-invalid="true"
-            aria-required="true"
-            type="text"
-            autoComplete="postal-code"
-          />
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
         </div>
       </>
     );
@@ -1232,14 +1151,7 @@ export const FormFieldDescriptionTextZoom: Story = {
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldDescription>
         <div>
-          <input
-            id={INPUT_ID}
-            aria-describedby={ERROR_ID}
-            aria-invalid="true"
-            aria-required="true"
-            type="text"
-            autoComplete="postal-code"
-          />
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
         </div>
       </>
     );
@@ -1268,17 +1180,12 @@ export const FormFieldDescriptionWordBreak: Story = {
         </div>
         <FormFieldDescription id={DESCRIPTION_ID}>
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB. De
-          onvolledigheidscontrolemechanismevalidatieprocedure heeft geconstateerd dat het veld Naam niet is ingevuld.
-          Dit resulteert in een onacceptabele gegevensverwerkingsfoutmelding binnen ons geïntegreerde
+          onvolledigheidscontrolemechanismevalidatieprocedure kan constateren dat het veld Poostcode niet is ingevuld.
+          Dit resulteert dan in een onacceptabele gegevensverwerkingsfoutmelding binnen ons geïntegreerde
           automatiseringsplatform voor klantgegevensbeheer.
         </FormFieldDescription>
         <div>
-          <input
-            id={POSTCODE_INPUT_ID}
-            aria-describedby={POSTCODE_DESCRIPTION_ID}
-            type="text"
-            autoComplete="postal-code"
-          />
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
         </div>
       </>
     );
@@ -1312,12 +1219,7 @@ export const FormFieldDescriptionSmallViewport: Story = {
           spaties of leestekens in het veld staan.
         </FormFieldDescription>
         <div>
-          <input
-            id={POSTCODE_INPUT_ID}
-            aria-describedby={POSTCODE_DESCRIPTION_ID}
-            type="text"
-            autoComplete="postal-code"
-          />
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
         </div>
       </>
     );
@@ -1348,12 +1250,7 @@ export const FormFieldDescriptionForcedColorsMode: Story = {
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldDescription>
         <div>
-          <input
-            id={POSTCODE_INPUT_ID}
-            aria-describedby={POSTCODE_DESCRIPTION_ID}
-            type="text"
-            autoComplete="postal-code"
-          />
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
         </div>
       </>
     );
