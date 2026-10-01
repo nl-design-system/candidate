@@ -1,7 +1,7 @@
 {
   "name": "@nl-design-system-candidate/form-field-error-message-react",
   "version": "0.0.0",
-  "description": "React implementation of the NL Design System Form Field Error Message component",
+  "description": "React implementatie voor de Form Field Error Message component",
   "license": "EUPL-1.2",
   "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/form-field-error-message-react#readme",
   "bugs": {
@@ -32,7 +32,6 @@
     "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/components-react/form-field-error-message-react"
   },
-  "private": true,
   "publishConfig": {
     "access": "public",
     "provenance": true
