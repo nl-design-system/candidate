@@ -50,11 +50,11 @@ If you use SCSS:
 
 ## CSS classes
 
-| name                                    | description                                             |
-| --------------------------------------- | ------------------------------------------------------- |
-| `.nl-form-field-error-message`          | The main class. Use it on a `<div>` element.            |
-| `.nl-form-field-error-message__icon`    | The icon container, to be used on a `<div>` element.    |
-| `.nl-form-field-error-message__content` | The content container, to be used on a `<div>` element. |
+| name                                    | description                                         |
+| --------------------------------------- | --------------------------------------------------- |
+| `.nl-form-field-error-message`          | The main class. Use it on a `<div>` element.        |
+| `.nl-form-field-error-message__icon`    | The icon container. Use it on a `<div>` element.    |
+| `.nl-form-field-error-message__content` | The content container. Use it on a `<div>` element. |
 
 ## SCSS mixins
 
