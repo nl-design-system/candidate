@@ -1,6 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# Form Field Description
+# Form Field Description CSS
 
 Shows supporting text and provides extra context about the information to be filled in.
 
@@ -114,3 +114,22 @@ Import the mixins via `forward` (Sass internally uses `_forward.scss`) and use t
 Depending on the tools used, it may be necessary to configure Sass with `loadPaths` so that
 `@nl-design-system-candidate/form-field-description-css` can be found in the `node_modules` folder.
 See [Configuring Sass with `loadPaths`](https://github.com/nl-design-system/candidate/tree/main/packages/components-css#configuring-sass-with-loadpaths) for more information.
+
+## Design Tokens
+
+All NL Design System components are white label. Use Form Field Description design tokens to ensure it matches your brand styles. For more information about design tokens, see
+[https://nldesignsystem.nl/handboek/huisstijl/design-tokens/](https://nldesignsystem.nl/handboek/huisstijl/design-tokens/).
+
+See [nldesignsystem.nl/form-field-description/#design-tokens](https://nldesignsystem.nl/form-field-description/#design-tokens) for a full overview of the Form Field Description tokens. These tokens can be found in the tokens package [`@nl-design-system-candidate/form-field-description-tokens`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-description-tokens).
+
+## Other implementations
+
+Want to use Form Field Description with React? Follow the instructions described in the React package
+[`@nl-design-system-candidate/form-field-description-react`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-description-react).
+
+Want to use Form Field Description with other frameworks or vanilla JavaScript? The React component is based on the CSS package
+[`@nl-design-system-candidate/form-field-description-css`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-description-css).
+
+## Figma, Storybook and more
+
+Read more about the Form Field Description in Dutch and find links to other resources like Figma and Storybook on [https://nldesignsystem.nl/form-field-description](https://nldesignsystem.nl/form-field-description).

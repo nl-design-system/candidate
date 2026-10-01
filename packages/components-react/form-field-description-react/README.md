@@ -1,6 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# Form Field Description
+# Form Field Description React
 
 Shows supporting text and provides extra context about the information to be filled in.
 
@@ -110,14 +110,16 @@ element, and forwards a `ref` to the underlying `<div>` element.
 
 ## Design Tokens
 
-All NL Design System components are white-label. Use the Form Field Description design tokens to adapt the
-style to your house style. For more information about design tokens, see
+All NL Design System components are white label. Use Form Field Description design tokens to ensure it matches your brand styles. For more information about design tokens, see
 [https://nldesignsystem.nl/handboek/huisstijl/design-tokens/](https://nldesignsystem.nl/handboek/huisstijl/design-tokens/).
 
-The tokens for Form Field Description can be found in the tokens package
-[`@nl-design-system-candidate/form-field-description-tokens`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-description-tokens).
+See [nldesignsystem.nl/form-field-description/#design-tokens](https://nldesignsystem.nl/form-field-description/#design-tokens) for a full overview of the Form Field Description tokens. These tokens can be found in the tokens package [`@nl-design-system-candidate/form-field-description-tokens`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-description-tokens).
 
 ## Other implementations
 
-Want to use Form Field Description without React? Use the CSS and HTML described in
+Want to use Form Field Description without React? Use the CSS and HTML described in the CSS package
 [`@nl-design-system-candidate/form-field-description-css`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-description-css).
+
+## Figma, Storybook and more
+
+Read more about the Form Field Description in Dutch and find links to other resources like Figma and Storybook on [https://nldesignsystem.nl/form-field-description](https://nldesignsystem.nl/form-field-description).

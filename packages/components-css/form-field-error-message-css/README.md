@@ -1,6 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# Form Field Error Message
+# Form Field Error Message CSS
 
 Displays an error message explaining what went wrong and how to resolve it.
 
@@ -130,3 +130,22 @@ Import the mixins via `forward` (Sass internally uses `_forward.scss`) and use t
 Depending on the tools used, it may be necessary to configure Sass with `loadPaths` so that
 `@nl-design-system-candidate/form-field-error-message-css` can be found in the `node_modules` folder.
 See [Configuring Sass with `loadPaths`](https://github.com/nl-design-system/candidate/tree/main/packages/components-css#configuring-sass-with-loadpaths) for more information.
+
+## Design Tokens
+
+All NL Design System components are white label. Use Form Field Error Message design tokens to ensure it matches your brand styles. For more information about design tokens, see
+[https://nldesignsystem.nl/handboek/huisstijl/design-tokens/](https://nldesignsystem.nl/handboek/huisstijl/design-tokens/).
+
+See [nldesignsystem.nl/form-field-error-message/#design-tokens](https://nldesignsystem.nl/form-field-error-message/#design-tokens) for a full overview of the Form Field Error Message tokens. These tokens can be found in the tokens package [`@nl-design-system-candidate/form-field-error-message-tokens`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-error-message-tokens).
+
+## Other implementations
+
+Want to use Form Field Error Message with React? Follow the instructions described in the React package
+[`@nl-design-system-candidate/form-field-error-message-react`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-error-message-react).
+
+Want to use Form Field Error Message with other frameworks or vanilla JavaScript? The React component is based on the CSS package
+[`@nl-design-system-candidate/form-field-error-message-css`](https://www.npmjs.com/package/@nl-design-system-candidate/form-field-error-message-css).
+
+## Figma, Storybook and more
+
+Read more about the Form Field Error Message in Dutch and find links to other resources like Figma and Storybook on [https://nldesignsystem.nl/form-field-error-message](https://nldesignsystem.nl/form-field-error-message).
