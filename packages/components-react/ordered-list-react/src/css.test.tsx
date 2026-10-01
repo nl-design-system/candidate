@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { OrderedList } from './css';
+import { OrderedList, OrderedListItem, OrderedListMarker } from './css';
 
 const text = 'Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen.';
 
@@ -15,5 +15,10 @@ describe('OrderedList (css import)', () => {
     const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
+  });
+
+  it('exports `OrderedListItem` and `OrderedListMarker`', () => {
+    expect(OrderedListItem).toBeDefined();
+    expect(OrderedListMarker).toBeDefined();
   });
 });

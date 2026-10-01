@@ -1,3 +1,68 @@
 @mixin nl-ordered-list {
-  /* TODO: Add styling */
+  box-sizing: border-box;
+  color: var(--nl-ordered-list-color);
+  font-family: var(--nl-ordered-list-font-family);
+  font-size: var(--nl-ordered-list-font-size);
+  line-height: var(--nl-ordered-list-line-height);
+  margin-block-end: var(--nl-ordered-list-margin-block-end);
+  margin-block-start: var(--nl-ordered-list-margin-block-start);
+  padding-inline-start: var(--nl-ordered-list-padding-inline-start);
+
+  @media (forced-colors: active) {
+    color: currentColor;
+  }
+}
+
+@mixin nl-ordered-list--lang-ar {
+  list-style-type: arabic-indic;
+}
+
+@mixin nl-ordered-list__item {
+  margin-block-end: var(--nl-ordered-list-item-margin-block-end);
+  margin-block-start: var(--nl-ordered-list-item-margin-block-start);
+  padding-inline-start: var(--nl-ordered-list-item-padding-inline-start);
+}
+
+@mixin nl-ordered-list__marker {
+  color: var(--nl-ordered-list-marker-color);
+
+  @media (forced-colors: active) {
+    color: currentColor;
+  }
+}
+
+// Aligns the custom marker with native ::marker behavior:
+// its negative margin offsets its own width, while item padding separates
+// the marker from the text and keeps wrapped lines aligned with the text.
+@mixin nl-ordered-list__marker--custom {
+  align-items: center;
+  block-size: 1lh; // Keep the marker's height consistent.
+  display: inline-flex;
+  inline-size: var(--nl-ordered-list-padding-inline-start);
+  justify-content: center;
+  margin-inline-end: var(--nl-ordered-list-item-padding-inline-start);
+  margin-inline-start: calc(
+    -1 * (var(--nl-ordered-list-padding-inline-start) + var(--nl-ordered-list-item-padding-inline-start))
+  );
+  vertical-align: top;
+
+  // Prevent the icon wrapper's line box from affecting vertical centering.
+  > * {
+    display: flex;
+  }
+}
+
+@mixin nl-ordered-list__marker-label {
+  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
+  block-size: 1px !important;
+  border-width: 0 !important;
+  clip-path: inset(50%) !important;
+  inline-size: 1px !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: -1px !important;
+  overflow: hidden !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
 }

@@ -3,3 +3,34 @@
 .nl-ordered-list {
   @include mixin.nl-ordered-list;
 }
+
+.nl-ordered-list:lang(ar) {
+  @include mixin.nl-ordered-list--lang-ar;
+}
+
+.nl-ordered-list__item {
+  @include mixin.nl-ordered-list__item;
+}
+
+.nl-ordered-list__item::marker {
+  @include mixin.nl-ordered-list__marker;
+}
+
+.nl-ordered-list__marker {
+  @include mixin.nl-ordered-list__marker;
+}
+
+.nl-ordered-list__marker.nl-ordered-list__marker--custom {
+  @include mixin.nl-ordered-list__marker--custom;
+}
+
+// An empty string hides the native marker like `none`, but WebKit only removes list semantics for `none`.
+// This keeps the list recognizable for assistive technology even when `role="list"` is missing.
+.nl-ordered-list__item:has(> .nl-ordered-list__marker--custom),
+.nl-ordered-list__item--custom-marker {
+  list-style-type: "";
+}
+
+.nl-ordered-list__marker-label {
+  @include mixin.nl-ordered-list__marker-label;
+}
