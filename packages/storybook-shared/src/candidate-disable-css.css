@@ -3,6 +3,7 @@
 .candidate-disable-css::after,
 .candidate-disable-css *:not(svg, svg *),
 .candidate-disable-css *:not(svg, svg *)::before,
-.candidate-disable-css *:not(svg, svg *)::after {
+.candidate-disable-css *:not(svg, svg *)::after,
+.candidate-disable-css *:not(svg, svg *)::marker {
   all: revert !important;
 }
