@@ -1,5 +1,15 @@
 # @nl-design-system-candidate/button-docs
 
+## 1.1.0
+
+### Minor Changes
+
+- ee18f2c: Verwijzingen naar meer uitleg over toegankelijkheidscriteria op de documentatie website toegevoegd.
+
+### Patch Changes
+
+- d1e4dfa: Verwijs naar documentatie van WHATWG in plaats van W3C in de linkjes over 'phrasing content'.
+
 ## 1.0.3
 
 ### Patch Changes
