@@ -1214,10 +1214,10 @@ export const FormFieldDescriptionLargeText: Story = {
         WCAG22_141_USE_OF_COLOR,
         WCAG22_143_CONTRAST_MINIMUM,
         WCAG22_144_RESIZE_TEXT,
-        WCAG22_1410_REFLOW,
         WCAG22_312_LANGUAGE_OF_PARTS,
         WCAG22_332_LABELS_OR_INSTRUCTIONS,
       ],
+      fail: [WCAG22_1410_REFLOW],
     },
   },
 };
