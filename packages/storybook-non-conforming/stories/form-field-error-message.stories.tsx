@@ -511,7 +511,7 @@ export const FormFieldErrorMessageList: Story = {
 };
 
 export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
-  name: 'Fout: Form Field Error Message met lijst zonder punten',
+  name: 'Fout: Form Field Error Message met lijst zonder leestekens',
   globals: {
     dir: 'ltr',
     lang: 'nl',
