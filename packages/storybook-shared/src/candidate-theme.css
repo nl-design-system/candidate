@@ -11,6 +11,8 @@ These component tokens can be removed once this pull request https://github.com/
   --nl-form-field-description-font-weight: var(--basis-text-font-weight-default);
   --nl-form-field-description-line-height: var(--basis-text-line-height-md);
   --nl-form-field-description-disabled-color: var(--basis-color-disabled-color-subtle);
+  --nl-form-field-description-margin-block-start: var(--basis-space-none);
+  --nl-form-field-description-margin-block-end: var(--basis-space-none);
   --nl-form-field-error-message-color: var(--basis-color-negative-color-default);
   --nl-form-field-error-message-column-gap: var(--basis-space-text-xs);
   --nl-form-field-error-message-font-family: var(--basis-text-font-family-default);
