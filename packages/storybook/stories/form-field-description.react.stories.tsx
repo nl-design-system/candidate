@@ -10,7 +10,7 @@ const externalLinks = getExternalLinks('https://nldesignsystem.nl/form-field-des
 const meta = {
   ...formFieldDescriptionMeta,
   ...externalLinks,
-  title: 'In Progress/React Componenten/Form Field Description',
+  title: 'React Componenten/Form Field Description',
   id: 'form-field-description',
 } satisfies Meta<typeof FormFieldDescriptionComponent>;
 
