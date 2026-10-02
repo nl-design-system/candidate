@@ -5,7 +5,5 @@ type Story = StoryObj<FormFieldLabelProps>;
 
 export const FormFieldLabel: Story = {
   name: 'Form Field Label',
-  args: {
-    children: `Form Field Label`,
-  },
+  args: {},
 };
