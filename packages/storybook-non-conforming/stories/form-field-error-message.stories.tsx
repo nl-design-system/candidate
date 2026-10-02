@@ -549,7 +549,7 @@ export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
     docs: {
       description: {
         story:
-          'De lijstitems in de foutmelding eindigen niet met een punt. Voor screenreadergebruikers worden deze items achter elkaar als één lange zin voorgelezen, wat de foutmelding minder duidelijk maakt. Laat elk item eindigen met een punt zodat de items als aparte zinnen worden uitgesproken. Omdat de combinatie van Safari met VoiceOver in de [baseline van september 2026](https://nldesignsystem.nl/baseline/2026-09/) een lijst bij focus op het invoerveld niet voorleest, raden we dit op dit moment af.',
+          'De lijstitems in de foutmelding eindigen niet met een punt. Voor screenreadergebruikers worden deze items achter elkaar als één lange zin voorgelezen, wat de foutmelding minder duidelijk maakt. Laat elk item eindigen met een punt zodat de items als aparte zinnen worden uitgesproken. Dit geldt voor de screenreaders die een lijst als onderdeel van de Form Field Error Message wel voorlezen. Omdat de combinatie van Safari met VoiceOver in de [baseline van september 2026](https://nldesignsystem.nl/baseline/2026-09/) een lijst bij focus op het invoerveld niet voorleest, raden we dit op dit moment af.',
       },
     },
     status: { type: [] },
