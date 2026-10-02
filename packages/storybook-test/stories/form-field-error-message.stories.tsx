@@ -705,6 +705,8 @@ export const FormFieldErrorMessageLargeText: Story = {
         </FormFieldErrorMessage>
         <div>
           <input
+            // Ensure the input shrinks with the available space at high zoom levels.
+            style={{ boxSizing: 'border-box', maxInlineSize: '100%' }}
             id={INPUT_ID}
             aria-describedby={ERROR_ID}
             aria-invalid="true"
