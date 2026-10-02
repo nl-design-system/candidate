@@ -1,5 +1,25 @@
 # @nl-design-system-candidate/code-css
 
+## 4.0.0
+
+### Major Changes
+
+- 52b06b1: This release contains potentially **breaking** changes: the HTML SCSS mixin names have been standardized to a `nl-html--*` naming convention.
+  
+  - code-block-css: `pre` → `nl-html--code-block`
+  - code-css: `code` → `nl-html--code`
+  - heading-css: `h1`–`h6` → `nl-html--h1`–`nl-html--h6`
+  - link-css: `nl-link--html-a` → `nl-html--link`
+  - mark-css: `mark` → `nl-html--mark`
+  - paragraph-css: `p` → `nl-html--paragraph`
+- d64859d: `dist/html/*.css` bevat nu een opt-in variant met de classes `.nl-html--all` en `.nl-html--{component}`, in plaats van
+  ongescopede selectors. De voorheen ongescopede, "vanilla" implementatie (zonder class name nodig) is verplaatst naar
+  `dist/vanilla/*.css` en `src/vanilla/`.
+
+### Patch Changes
+
+- a025f38: Fix component sizing by applying `box-sizing: border-box` to component elements.
+
 ## 3.0.0
 
 ### Major Changes

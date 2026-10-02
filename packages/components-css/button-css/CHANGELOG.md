@@ -1,5 +1,20 @@
 # @nl-design-system-candidate/button-css
 
+## 2.0.0
+
+### Major Changes
+
+- d64859d: `dist/html/*.css` bevat nu een opt-in variant met de classes `.nl-html--all` en `.nl-html--{component}`, in plaats van
+  ongescopede selectors. De voorheen ongescopede, "vanilla" implementatie (zonder class name nodig) is verplaatst naar
+  `dist/vanilla/*.css` en `src/vanilla/`.
+
+### Patch Changes
+
+- 5686d50: Add icon-only button documentation
+- 038c7f0: Prefer `border-width: 0` over `border: 0` to adhere to updated lint rules.
+- 5686d50: Update CDN link in README to not set version of package.
+- c0abbdc: Add `nl-button--forced-colors-test` class for testing the existing forced-colors styling in Storybook
+
 ## 1.1.0
 
 ### Minor Changes
