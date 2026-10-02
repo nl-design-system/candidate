@@ -1,4 +1,5 @@
 import { UnorderedList } from '../../components-react/unordered-list-react/src/unordered-list';
+import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import '../../components-css/unordered-list-css/src/unordered-list.scss';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import componentMarkdown from '../../docs/form-field-description-docs/docs/component.md?raw';
@@ -364,6 +365,48 @@ export const FormFieldDescriptionAriaDescription: Story = {
   },
 };
 
+export const FormFieldDescriptionWithUnorderedList: Story = {
+  name: 'Fout: Form Field Description met een lijst',
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  render: () => {
+    const POSTCODE_INPUT_ID = 'CD860B9E-5D14-4BBF-BF47-5FC95DA2E4C5';
+    const POSTCODE_DESCRIPTION_ID = `${POSTCODE_INPUT_ID}-description`;
+    return (
+      <>
+        <label htmlFor={POSTCODE_INPUT_ID}>Wachtwoord</label>
+        <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
+          <UnorderedList>
+            <ul>
+              <li>Minimaal 8 tekens.</li>
+              <li>Minimaal één hoofdletter.</li>
+              <li>Minimaal één cijfer.</li>
+            </ul>
+          </UnorderedList>
+        </FormFieldDescription>
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="password"
+            autoComplete="new-password"
+          />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een lijst als onderdeel van een Form Field Description wordt bij focus op het invoerveld niet voorgelezen als de beschrijving door de combinatie Safari met VoiceOver in de [baseline van september 2026](https://nldesignsystem.nl/baseline/2026-09/). Plaats de instructies daarom als zin, in plaats van als een opsomming.',
+      },
+    },
+  },
+};
+
 export const FormFieldDescriptionWithUnorderedListWithoutBullets: Story = {
   name: 'Fout: Form Field Description met een ongeordende lijst zonder leestekens',
   globals: {
@@ -392,7 +435,51 @@ export const FormFieldDescriptionWithUnorderedListWithoutBullets: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Er is een opsomming met drie items. De de items in de opsomming hebben geen lees leestekens aan het einde van de zin, waardoor de informatie als platte tekst niet zo duidelijk is als met de Unordered List. Een screenreader leest bijvoorbeeld 1 lange zin: "minimaal 8 tekens minimaal één hoofdletter minimaal één cijfer". Dat is onvoldoende, visueel is de informatie duidelijker. Gebruik leestekens zodat de items als aparte zinnen worden uitgesproken.`,
+        story: `Er is een opsomming met drie items. De de items in de opsomming hebben geen lees leestekens aan het einde van de zin, waardoor de informatie als platte tekst niet zo duidelijk is als met de Unordered List. Een screenreader leest bijvoorbeeld 1 lange zin: "minimaal 8 tekens minimaal één hoofdletter minimaal één cijfer". Dat is onvoldoende, visueel is de informatie duidelijker. Gebruik leestekens zodat de items als aparte zinnen worden uitgesproken. Dit geldt voor de screenreaders die een lijst als onderdeel van de Form Field Description wel voorlezen. Omdat de combinatie van Safari met VoiceOver in de [baseline van september 2026](https://nldesignsystem.nl/baseline/2026-09/) een lijst bij focus op het invoerveld niet voorleest, raden we dit op dit moment af.`,
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldDescriptionWithParagraphAndUnorderedList: Story = {
+  name: 'Fout: Form Field Description met een alinea en een ongeordende lijst',
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+  render: () => {
+    const POSTCODE_INPUT_ID = 'CB125EEC-271F-4036-8A32-D160C67D7A4D';
+    const POSTCODE_DESCRIPTION_ID = `${POSTCODE_INPUT_ID}-description`;
+    return (
+      <>
+        <label htmlFor={POSTCODE_INPUT_ID}>Wachtwoord</label>
+        <FormFieldDescription id={POSTCODE_DESCRIPTION_ID}>
+          <Paragraph>Uw wachtwoord moet voldoen aan de volgende eisen:</Paragraph>
+          <UnorderedList>
+            <ul>
+              <li>Minimaal 8 tekens.</li>
+              <li>Minimaal één hoofdletter.</li>
+              <li>Minimaal één cijfer.</li>
+            </ul>
+          </UnorderedList>
+        </FormFieldDescription>
+        <div>
+          <input
+            id={POSTCODE_INPUT_ID}
+            aria-describedby={POSTCODE_DESCRIPTION_ID}
+            type="password"
+            autoComplete="new-password"
+          />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Er is een alinea met 1 zin gevolgd door een opsomming met drie items. De alinea en de items in de opsomming hebben voldoende leestekens, waardoor de informatie als platte tekst even duidelijk is als met de Unordered List. Een screenreader leest bijvoorbeeld: "Uw wachtwoord moet voldoen aan de volgende eisen: Minimaal 8 tekens. Minimaal één hoofdletter. Minimaal één cijfer." Dat is voldoende, visueel is niet meer informatie beschikbaar. De opsomming is visueel herkenbaar als Unordered List. De Paragraph en de Unordered List hebben een design dat past bij de Form Field Description, wat betreft kleur en lettertype. Dit geldt voor de screenreaders die een lijst als onderdeel van de Form Field Description wel voorlezen. Omdat de combinatie van Safari met VoiceOver in de [baseline van september 2026](https://nldesignsystem.nl/baseline/2026-09/) een lijst bij focus op het invoerveld niet voorleest, raden we dit op dit moment af.',
       },
     },
     status: { type: [] },
