@@ -10,7 +10,7 @@ const externalLinks = getExternalLinks('https://nldesignsystem.nl/form-field-err
 const meta = {
   ...formFieldErrorMessageMeta,
   ...externalLinks,
-  title: 'In Progress/React Componenten/Form Field Error Message',
+  title: 'React Componenten/Form Field Error Message',
   id: 'form-field-error-message',
 } satisfies Meta<typeof FormFieldErrorMessageComponent>;
 
