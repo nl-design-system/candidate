@@ -507,7 +507,49 @@ export const FormFieldErrorMessageListItemWithoutPeriods: Story = {
     docs: {
       description: {
         story:
-          'De lijstitems in de foutmelding eindigen niet met een punt. Voor screenreadergebruikers worden deze items achter elkaar als één lange zin voorgelezen, wat de foutmelding minder duidelijk maakt. Laat elk item eindigen met een punt zodat de items als aparte zinnen worden uitgesproken.',
+          'De lijstitems in de foutmelding eindigen niet met een punt. Voor screenreadergebruikers worden deze items achter elkaar als één lange zin voorgelezen, wat de foutmelding minder duidelijk maakt. Laat elk item eindigen met een punt zodat de items als aparte zinnen worden uitgesproken. Omdat de combinatie van Safari met VoiceOver in de [baseline van september 2026](https://nldesignsystem.nl/baseline/2026-09/) een lijst bij focus op het invoerveld niet voorleest, raden we dit op dit moment af.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldErrorMessageList: Story = {
+  name: 'Fout: Form Field Error Message met een lijst',
+  render: () => {
+    const INPUT_ID = 'd5345e10-9c05-41c7-9db7-abc5a8b6afac';
+    const ERROR_ID = `${INPUT_ID}-error`;
+    return (
+      <>
+        <div>
+          <label htmlFor={INPUT_ID}>Wachtwoord</label>
+        </div>
+        <FormFieldErrorMessage contentId={ERROR_ID}>
+          Het ingevulde wachtwoord voldoet niet aan de eisen. Een wachtwoord moet voldoen aan de volgende eisen:
+          <ul>
+            <li>Minimaal 8 karakters.</li>
+            <li>Minimaal 1 hoofdletter.</li>
+            <li>Minimaal 1 nummer.</li>
+          </ul>
+        </FormFieldErrorMessage>
+        <div>
+          <input
+            id={INPUT_ID}
+            aria-describedby={ERROR_ID}
+            type="password"
+            autoComplete="new-password"
+            aria-invalid="true"
+            aria-required="true"
+          />
+        </div>
+      </>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De foutmelding bevat een lijst waarvan elke item eindigt met een punt. De foutmelding is gekoppeld aan het invoerveld via het WAI-ARIA-attribuut `aria-describedby`. De screenreader leest de foutmelding voor bij focus op het invoerveld en leest elk item als een aparte zin voor. Wanneer de items niet eindigen met een punt worden de items als een doorlopende zin voorgelezen, waardoor de boodschap minder duidelijk is. Dit geldt voor de screenreaders die een lijst als onderdeel van de Form Field Error Message wel voorlezen. Omdat de combinatie van Safari met VoiceOver in de [baseline van september 2026](https://nldesignsystem.nl/baseline/2026-09/) een lijst bij focus op het invoerveld niet voorleest, raden we dit op dit moment af.',
       },
     },
     status: { type: [] },

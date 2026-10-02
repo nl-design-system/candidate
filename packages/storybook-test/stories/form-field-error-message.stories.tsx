@@ -1027,49 +1027,6 @@ export const FormFieldErrorMessageSmallViewport: Story = {
   },
 };
 
-// moet naar evil ivm niet compatible met VoiceOver in Safari
-export const FormFieldErrorMessageList: Story = {
-  name: 'Form Field Error Message met een lijst met punten',
-  render: () => {
-    const INPUT_ID = 'd5345e10-9c05-41c7-9db7-abc5a8b6afac';
-    const ERROR_ID = `${INPUT_ID}-error`;
-    return (
-      <>
-        <div>
-          <label htmlFor={INPUT_ID}>Wachtwoord</label>
-        </div>
-        <FormFieldErrorMessage contentId={ERROR_ID}>
-          Het ingevulde wachtwoord voldoet niet aan de eisen. Een wachtwoord moet voldoen aan de volgende eisen:
-          <ul>
-            <li>Minimaal 8 karakters.</li>
-            <li>Minimaal 1 hoofdletter.</li>
-            <li>Minimaal 1 nummer.</li>
-          </ul>
-        </FormFieldErrorMessage>
-        <div>
-          <input
-            id={INPUT_ID}
-            aria-describedby={ERROR_ID}
-            type="password"
-            autoComplete="new-password"
-            aria-invalid="true"
-            aria-required="true"
-          />
-        </div>
-      </>
-    );
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'De foutmelding bevat een lijst waarvan elke item eindigt met een punt. De foutmelding is gekoppeld aan het invoerveld via het WAI-ARIA-attribuut `aria-describedby`. De screenreader leest de foutmelding voor bij focus op het invoerveld en leest elk item als een aparte zin voor. Wanneer de items niet eindigen met een punt worden de items als een doorlopende zin voorgelezen, waardoor de boodschap minder duidelijk is.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
 export const FormFieldErrorMessageForcedColorsMode: Story = {
   name: 'Form Field Error Message in Forced Colors mode',
   globals: { forcedColors: 'active' },
