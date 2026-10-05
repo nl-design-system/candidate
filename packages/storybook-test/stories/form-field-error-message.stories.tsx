@@ -1,6 +1,7 @@
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
-import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
+import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import { IconAlertCircle } from '@tabler/icons-react';
 import { Code } from '../../components-react/code-react/src/code';
 import '../../components-css/code-css/src/code.scss';
@@ -9,7 +10,9 @@ import '../../components-css/icon-css/src/icon.scss';
 import packageJSON from '../../components-react/form-field-error-message-react/package.json';
 import { FormFieldErrorMessage } from '../../components-react/form-field-error-message-react/src/form-field-error-message';
 import { Icon } from '../../components-react/icon-react/src/icon';
+import acceptanceCriteria from '../../docs/form-field-error-message-docs/docs/acceptance-criteria.md?raw';
 import componentMarkdown from '../../docs/form-field-error-message-docs/docs/component.md?raw';
+import reactMeta from '../../docs/form-field-error-message-docs/stories/form-field-error-message.react.meta';
 import tokens from '../../tokens/form-field-error-message-tokens/tokens.json';
 import type { AriaRole, PropsWithChildren, ReactNode } from 'react';
 import {
@@ -96,107 +99,85 @@ const AlternativeHTMLFormFieldErrorMessage = ({
 AlternativeHTMLFormFieldErrorMessage.displayName = 'AlternativeHTMLFormFieldErrorMessage';
 
 const meta = {
-  argTypes: {
-    id: {
-      control: { type: 'text' },
-      table: {
-        type: { summary: 'string' },
-      },
-      type: { name: 'string', required: false },
+  ...merge({
+    ...reactMeta,
+    decorators: ExampleBodyTextDecorator,
+    globals: {
+      dir: 'ltr',
+      lang: 'nl',
     },
-    children: {
-      control: { type: 'text' },
-      table: {
-        type: { summary: 'ReactNode' },
+    parameters: {
+      // TODO: When component is implemented, enable Chromatic
+      chromatic: { disableSnapshot: true },
+      acceptanceCriteria,
+      docs: {
+        description: {
+          component: componentMarkdown,
+        },
+        source: {
+          type: 'dynamic',
+        },
       },
-      type: { name: 'string', required: false },
-    },
-    icon: {
-      control: { type: 'text' },
-      table: {
-        type: { summary: 'ReactNode' },
-      },
-      type: { name: 'string', required: false },
-    },
-    role: {
-      control: { type: 'text' },
-      table: {
-        type: { summary: 'string' },
-      },
-      type: { name: 'string', required: false },
-    },
-  },
-  component: FormFieldErrorMessage,
-  decorators: ExampleBodyTextDecorator,
-  parameters: {
-    docs: {
-      description: {
-        component: componentMarkdown,
-      },
-      source: {
-        type: 'dynamic',
-      },
-    },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/form-field-error-message',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-    testResult: {
-      notApplicable: [
-        WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
-        WCAG22_122_CAPTIONS_PRERECORDED,
-        WCAG22_123_AUDIO_DESCRIPTION_OR_MEDIA_ALTERNATIVE_PRERECORDED,
-        WCAG22_124_CAPTIONS_LIVE,
-        WCAG22_125_AUDIO_DESCRIPTION_PRERECORDED,
-        WCAG22_134_ORIENTATION,
-        WCAG22_135_IDENTIFY_INPUT_PURPOSE,
-        WCAG22_142_AUDIO_CONTROL,
-        WCAG22_145_IMAGES_OF_TEXT,
-        WCAG22_1411_NON_TEXT_CONTRAST,
-        WCAG22_1413_CONTENT_ON_HOVER_OR_FOCUS,
-        WCAG22_212_NO_KEYBOARD_TRAP,
-        WCAG22_214_CHARACTER_KEY_SHORTCUTS,
-        WCAG22_221_TIMING_ADJUSTABLE,
-        WCAG22_222_PAUSE_STOP_HIDE,
-        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
-        WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
-        WCAG22_241_BYPASS_BLOCKS,
-        WCAG22_242_PAGE_TITLED,
-        WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
-        WCAG22_245_MULTIPLE_WAYS,
-        WCAG22_246_HEADINGS_AND_LABELS,
-        WCAG22_247_FOCUS_VISIBLE,
-        WCAG22_251_POINTER_GESTURES,
-        WCAG22_252_POINTER_CANCELLATION,
-        WCAG22_253_LABEL_IN_NAME,
-        WCAG22_254_MOTION_ACTUATION,
-        WCAG22_257_DRAGGING_MOVEMENTS,
-        WCAG22_258_TARGET_SIZE_MINIMUM,
-        WCAG22_311_LANGUAGE_OF_PAGE,
-        WCAG22_321_ON_FOCUS,
-        WCAG22_322_ON_INPUT,
-        WCAG22_323_CONSISTENT_NAVIGATION,
-        WCAG22_324_CONSISTENT_IDENTIFICATION,
-        WCAG22_326_CONSISTENT_HELP,
-        WCAG22_331_ERROR_IDENTIFICATION,
-        WCAG22_332_LABELS_OR_INSTRUCTIONS,
-        WCAG22_333_ERROR_SUGGESTION,
-        WCAG22_334_ERROR_PREVENTION_LEGAL_FINANCIAL_DATA,
-        WCAG22_337_REDUNDANT_ENTRY,
-        WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
-        WCAG22_412_NAME_ROLE_VALUE,
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/form-field-error-message',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
       ],
+      testResult: {
+        notApplicable: [
+          WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
+          WCAG22_122_CAPTIONS_PRERECORDED,
+          WCAG22_123_AUDIO_DESCRIPTION_OR_MEDIA_ALTERNATIVE_PRERECORDED,
+          WCAG22_124_CAPTIONS_LIVE,
+          WCAG22_125_AUDIO_DESCRIPTION_PRERECORDED,
+          WCAG22_134_ORIENTATION,
+          WCAG22_135_IDENTIFY_INPUT_PURPOSE,
+          WCAG22_142_AUDIO_CONTROL,
+          WCAG22_145_IMAGES_OF_TEXT,
+          WCAG22_1411_NON_TEXT_CONTRAST,
+          WCAG22_1413_CONTENT_ON_HOVER_OR_FOCUS,
+          WCAG22_212_NO_KEYBOARD_TRAP,
+          WCAG22_214_CHARACTER_KEY_SHORTCUTS,
+          WCAG22_221_TIMING_ADJUSTABLE,
+          WCAG22_222_PAUSE_STOP_HIDE,
+          WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+          WCAG22_2411_FOCUS_NOT_OBSCURED_MINIMUM,
+          WCAG22_241_BYPASS_BLOCKS,
+          WCAG22_242_PAGE_TITLED,
+          WCAG22_244_LINK_PURPOSE_IN_CONTEXT,
+          WCAG22_245_MULTIPLE_WAYS,
+          WCAG22_246_HEADINGS_AND_LABELS,
+          WCAG22_247_FOCUS_VISIBLE,
+          WCAG22_251_POINTER_GESTURES,
+          WCAG22_252_POINTER_CANCELLATION,
+          WCAG22_253_LABEL_IN_NAME,
+          WCAG22_254_MOTION_ACTUATION,
+          WCAG22_257_DRAGGING_MOVEMENTS,
+          WCAG22_258_TARGET_SIZE_MINIMUM,
+          WCAG22_311_LANGUAGE_OF_PAGE,
+          WCAG22_321_ON_FOCUS,
+          WCAG22_322_ON_INPUT,
+          WCAG22_323_CONSISTENT_NAVIGATION,
+          WCAG22_324_CONSISTENT_IDENTIFICATION,
+          WCAG22_326_CONSISTENT_HELP,
+          WCAG22_331_ERROR_IDENTIFICATION,
+          WCAG22_332_LABELS_OR_INSTRUCTIONS,
+          WCAG22_333_ERROR_SUGGESTION,
+          WCAG22_334_ERROR_PREVENTION_LEGAL_FINANCIAL_DATA,
+          WCAG22_337_REDUNDANT_ENTRY,
+          WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
+          WCAG22_412_NAME_ROLE_VALUE,
+        ],
+      },
+      tokens,
     },
-    tokens,
-  },
+  }),
   title: 'Componenten/Form Field Error Message',
-  globals: { dir: 'ltr', lang: 'nl' },
 } satisfies Meta<typeof FormFieldErrorMessage>;
 
 export default meta;
