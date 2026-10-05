@@ -1,5 +1,18 @@
 # @nl-design-system-candidate/mark-css
 
+## 2.0.0
+
+### Major Changes
+
+- 52b06b1: **Breaking change**, but only for the few users of the SCSS mixins for HTML: the HTML SCSS mixin has been renamed from `mark` to `nl-html--mark`.
+- d64859d: `dist/html/*.css` bevat nu een opt-in variant met de classes `.nl-html--all` en `.nl-html--mark`, in plaats van
+  ongescopede selectors. De voorheen ongescopede, "vanilla" implementatie (zonder class name nodig) is verplaatst naar
+  `dist/vanilla/*.css` en `src/vanilla/`.
+
+### Patch Changes
+
+- 7697f69: Fix component sizing by applying `box-sizing: border-box` to component elements.
+
 ## 1.0.5
 
 ### Patch Changes

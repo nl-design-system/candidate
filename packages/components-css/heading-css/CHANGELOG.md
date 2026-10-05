@@ -1,5 +1,25 @@
 # @nl-design-system-candidate/heading-css
 
+## 2.0.0
+
+### Major Changes
+
+- 52b06b1: **Breaking change**, but only for the few users of the SCSS mixins for HTML: the following HTML SCSS mixins have been renamed:
+  
+  - `h1` has been renamed to `nl-html--heading-level-1`
+  - `h2` has been renamed to `nl-html--heading-level-2`
+  - `h3` has been renamed to `nl-html--heading-level-3`
+  - `h4` has been renamed to `nl-html--heading-level-4`
+  - `h5` has been renamed to `nl-html--heading-level-5`
+  - `h6` has been renamed to `nl-html--heading-level-6`
+- d64859d: `dist/html/*.css` bevat nu een opt-in variant met de classes `.nl-html--all` en `.nl-html--heading`, in plaats van
+  ongescopede selectors. De voorheen ongescopede, "vanilla" implementatie (zonder class name nodig) is verplaatst naar
+  `dist/vanilla/*.css` en `src/vanilla/`.
+
+### Patch Changes
+
+- 7697f69: Fix component sizing by applying `box-sizing: border-box` to component elements.
+
 ## 1.1.3
 
 ### Patch Changes
