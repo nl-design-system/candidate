@@ -1,5 +1,5 @@
 ---
-'@nl-design-system-candidate/button-css': major
+'@nl-design-system-candidate/code-block-css': major
 ---
 
 `dist/html/*.css` bevat nu een opt-in variant met de classes `.nl-html--all` en `.nl-html--{component}`, in plaats van

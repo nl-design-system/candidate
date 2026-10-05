@@ -1,5 +1,5 @@
 ---
-'@nl-design-system-candidate/code-block-css': major
+'@nl-design-system-candidate/code-css': major
 ---
 
 This release contains potentially **breaking** changes: the HTML SCSS mixin names have been standardized to a `nl-html--*` naming convention.
