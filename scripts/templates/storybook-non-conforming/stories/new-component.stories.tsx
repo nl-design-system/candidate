@@ -2,16 +2,18 @@ import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/new-component-css/src/new-component.scss';
 import packageJSON from '../../components-react/new-component-react/package.json';
-import { NewComponent } from '../../components-react/new-component-react/src/new-component';
+import { NewComponent as NewComponentComponent } from '../../components-react/new-component-react/src/new-component';
 import componentMarkdown from '../../docs/new-component-docs/docs/component.md?raw';
 
 const meta = {
   argTypes: {
     // Vul aan door developer
   },
-  component: NewComponent,
+  component: NewComponentComponent,
   decorators: [ExampleBodyTextDecorator],
   parameters: {
+    // TODO: When component is implemented, enable Chromatic
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component: componentMarkdown,
@@ -32,14 +34,14 @@ const meta = {
     ],
   },
   title: 'Componenten/New Component',
-} satisfies Meta<typeof NewComponent>;
+} satisfies Meta<typeof NewComponentComponent>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SomeStory: Story = {
-  name: 'Some Story',
+export const NewComponent: Story = {
+  name: 'New Component',
   decorators: ExampleBodyTextDecorator,
   globals: {
     dir: 'ltr',
@@ -51,7 +53,7 @@ export const SomeStory: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Some Description`,
+        story: 'New Component',
       },
     },
     status: { type: [] },

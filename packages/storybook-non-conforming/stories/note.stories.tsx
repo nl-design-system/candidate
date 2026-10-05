@@ -2,16 +2,18 @@ import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/note-css/src/note.scss';
 import packageJSON from '../../components-react/note-react/package.json';
-import { Note } from '../../components-react/note-react/src/note';
+import { Note as NoteComponent } from '../../components-react/note-react/src/note';
 import componentMarkdown from '../../docs/note-docs/docs/component.md?raw';
 
 const meta = {
   argTypes: {
     // Vul aan door developer
   },
-  component: Note,
+  component: NoteComponent,
   decorators: [ExampleBodyTextDecorator],
   parameters: {
+    // TODO: When component is implemented, enable Chromatic
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component: componentMarkdown,
@@ -32,14 +34,14 @@ const meta = {
     ],
   },
   title: 'Componenten/Note',
-} satisfies Meta<typeof Note>;
+} satisfies Meta<typeof NoteComponent>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SomeStory: Story = {
-  name: 'Some Story',
+export const Note: Story = {
+  name: 'Note',
   decorators: ExampleBodyTextDecorator,
   globals: {
     dir: 'ltr',
@@ -49,11 +51,9 @@ export const SomeStory: Story = {
     children: 'Note',
   },
   parameters: {
-    // TODO: When component is implemented, enable Chromatic
-    chromatic: { disableSnapshot: true },
     docs: {
       description: {
-        story: `Some Description`,
+        story: 'Note',
       },
     },
     status: { type: [] },

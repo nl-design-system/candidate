@@ -1,7 +1,7 @@
 import type { Meta } from '@storybook/react-vite';
 import { merge } from 'lodash-es';
 import packageJSON from '../../components-react/new-component-react/package.json';
-import type { NewComponentProps } from '@nl-design-system-candidate/new-component-react';
+import { NewComponent as NewComponentComponent } from '@nl-design-system-candidate/new-component-react';
 import newComponentMeta from '@nl-design-system-candidate/new-component-docs/stories/new-component.react.meta';
 import '../../components-css/new-component-css/src/test.scss';
 import { getExternalLinks } from '../src/helpers/external-links';
@@ -23,8 +23,8 @@ const meta = {
   }),
   title: 'React Componenten/New Component',
   id: 'new-component',
-} satisfies Meta<NewComponentProps>;
+} satisfies Meta<typeof NewComponentComponent>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const NewComponent = Stories.NewComponent;

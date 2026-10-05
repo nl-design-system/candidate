@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-css/new-component-css/package.json';
-import { type NewComponentProps } from '@nl-design-system-candidate/new-component-react';
+import { NewComponent as NewComponentComponent } from '@nl-design-system-candidate/new-component-react';
 import newComponentMeta from '@nl-design-system-candidate/new-component-docs/stories/new-component.css.meta';
 import '../../components-css/new-component-css/src/test.scss';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta';
@@ -23,8 +23,8 @@ const meta = {
   }),
   title: 'CSS Componenten/New Component',
   id: 'css-new-component',
-} satisfies Meta<NewComponentProps>;
+} satisfies Meta<typeof NewComponentComponent>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const NewComponent = Stories.NewComponent;

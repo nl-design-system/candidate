@@ -2,16 +2,18 @@ import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/alert-css/src/alert.scss';
 import packageJSON from '../../components-react/alert-react/package.json';
-import { Alert } from '../../components-react/alert-react/src/alert';
+import { Alert as AlertComponent } from '../../components-react/alert-react/src/alert';
 import componentMarkdown from '../../docs/alert-docs/docs/component.md?raw';
 
 const meta = {
   argTypes: {
     // Vul aan door developer
   },
-  component: Alert,
+  component: AlertComponent,
   decorators: [ExampleBodyTextDecorator],
   parameters: {
+    // TODO: When component is implemented, enable Chromatic
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component: componentMarkdown,
@@ -32,14 +34,14 @@ const meta = {
     ],
   },
   title: 'Componenten/Alert',
-} satisfies Meta<typeof Alert>;
+} satisfies Meta<typeof AlertComponent>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SomeStory: Story = {
-  name: 'Some Story',
+export const Alert: Story = {
+  name: 'Alert',
   decorators: ExampleBodyTextDecorator,
   globals: {
     dir: 'ltr',
@@ -51,7 +53,7 @@ export const SomeStory: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Some Description`,
+        story: 'Alert',
       },
     },
     status: { type: [] },

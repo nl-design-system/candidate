@@ -8,12 +8,12 @@ type Story = StoryObj<typeof _meta>;
 export const Alert: Story = {
   name: 'Alert',
   args: {
-    children: `Alert`,
+    children: 'Alert',
   },
   parameters: {
     docs: {
       description: {
-        story: `Een standaard Alert`,
+        story: 'Een standaard Alert',
       },
     },
   },

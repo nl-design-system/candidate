@@ -6,6 +6,6 @@ type Story = StoryObj<TextInputProps>;
 export const TextInput: Story = {
   name: 'Text Input',
   args: {
-    children: `Text Input`,
+    children: 'Text Input',
   },
 };
