@@ -1,3 +1,4 @@
+import { merge } from 'lodash-es';
 import { UnorderedList } from '../../components-react/unordered-list-react/src/unordered-list';
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import '../../components-css/unordered-list-css/src/unordered-list.scss';
@@ -7,37 +8,36 @@ import '../../components-css/form-field-description-css/src/form-field-descripti
 import packageJSON from '../../components-react/form-field-description-react/package.json';
 import { FormFieldDescription } from '../../components-react/form-field-description-react/src/form-field-description';
 import { CandidateDisableCssDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateDisableCssDecorator';
+import reactMeta from '../../docs/form-field-description-docs/stories/form-field-description.react.meta';
 
 const POSTCODE_HELP_TEXT = 'Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.';
 
 const meta = {
-  argTypes: {
-    children: { control: 'text', table: { category: 'API' } },
-    disabled: { control: 'boolean', table: { category: 'API' } },
-  },
-  component: FormFieldDescription,
-  parameters: {
-    // TODO: When component is implemented, enable Chromatic
-    chromatic: { disableSnapshot: true },
-    docs: {
-      description: {
-        component: componentMarkdown,
+  ...merge({
+    ...reactMeta,
+    parameters: {
+      // TODO: When component is implemented, enable Chromatic
+      chromatic: { disableSnapshot: true },
+      docs: {
+        description: {
+          component: componentMarkdown,
+        },
+        source: {
+          type: 'dynamic',
+        },
       },
-      source: {
-        type: 'dynamic',
-      },
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/form-field-description',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
+      ],
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/form-field-description',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
+  }),
   title: 'Componenten/Form Field Description',
 } satisfies Meta<typeof FormFieldDescription>;
 

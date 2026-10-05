@@ -1,3 +1,4 @@
+import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import componentMarkdown from '../../docs/form-field-error-message-docs/docs/component.md?raw';
 import { IconAlertCircle } from '@tabler/icons-react';
@@ -6,6 +7,7 @@ import packageJSON from '../../components-react/form-field-error-message-react/p
 import { FormFieldErrorMessage } from '../../components-react/form-field-error-message-react/src/form-field-error-message';
 import { CandidateDisableCssDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateDisableCssDecorator';
 import { Icon } from '../../components-react/icon-react/src/icon';
+import reactMeta from '../../docs/form-field-error-message-docs/stories/form-field-error-message.react.meta';
 import { useEffect, useRef, useState } from 'react';
 import type { AriaRole, ChangeEvent, PropsWithChildren, ReactNode } from 'react';
 
@@ -35,30 +37,31 @@ const AlternativeHTMLFormFieldErrorMessage = ({
 AlternativeHTMLFormFieldErrorMessage.displayName = 'AlternativeHTMLFormFieldErrorMessage';
 
 const meta = {
-  argTypes: {},
-  component: FormFieldErrorMessage,
-  parameters: {
-    // TODO: When component is implemented, enable Chromatic
-    chromatic: { disableSnapshot: true },
-    docs: {
-      description: {
-        component: componentMarkdown,
+  ...merge({
+    ...reactMeta,
+    parameters: {
+      // TODO: When component is implemented, enable Chromatic
+      chromatic: { disableSnapshot: true },
+      docs: {
+        description: {
+          component: componentMarkdown,
+        },
+        source: {
+          type: 'dynamic',
+        },
       },
-      source: {
-        type: 'dynamic',
-      },
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/form-field-error-message',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
+      ],
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/form-field-error-message',
-      },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
+  }),
   title: 'Componenten/Form Field Error Message',
 } satisfies Meta<typeof FormFieldErrorMessage>;
 
