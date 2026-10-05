@@ -1,38 +1,47 @@
+import { merge } from 'lodash-es';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/note-css/src/note.scss';
 import packageJSON from '../../components-react/note-react/package.json';
 import { Note as NoteComponent } from '../../components-react/note-react/src/note';
 import componentMarkdown from '../../docs/note-docs/docs/component.md?raw';
+import reactMeta from '../../docs/note-docs/stories/note.react.meta';
 
 const meta = {
-  argTypes: {
-    // Vul aan door developer
-  },
-  component: NoteComponent,
-  decorators: [ExampleBodyTextDecorator],
-  parameters: {
-    // TODO: When component is implemented, enable Chromatic
-    chromatic: { disableSnapshot: true },
-    docs: {
-      description: {
-        component: componentMarkdown,
-      },
-      source: {
-        type: 'dynamic',
-      },
+  ...merge({
+    ...reactMeta,
+
+    args: {
+      // Vul aan door developer
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/note',
+    decorators: [ExampleBodyTextDecorator],
+    globals: {
+      dir: 'ltr',
+      lang: 'nl',
+    },
+    parameters: {
+      // TODO: When component is implemented, enable Chromatic
+      chromatic: { disableSnapshot: true },
+      docs: {
+        description: {
+          component: componentMarkdown,
+        },
+        source: {
+          type: 'dynamic',
+        },
       },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/note',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
+      ],
+    },
+  }),
   title: 'Componenten/Note',
 } satisfies Meta<typeof NoteComponent>;
 
@@ -42,11 +51,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Note: Story = {
   name: 'Note',
-  decorators: ExampleBodyTextDecorator,
-  globals: {
-    dir: 'ltr',
-    lang: 'nl',
-  },
   args: {
     children: 'Note',
   },
