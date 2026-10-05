@@ -1,9 +1,9 @@
 {
   "name": "@nl-design-system-candidate/form-field-description-react",
   "version": "0.0.0",
-  "description": "React implementation of the NL Design System Form Field Description component",
+  "description": "React implementatie voor de Form Field Description component",
   "license": "EUPL-1.2",
-  "homepage": "https://nldesignsystem.nl/form-field-description",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/form-field-description-react#readme",
   "bugs": {
     "url": "https://github.com/nl-design-system/candidate/issues",
     "email": "info@nldesignsystem.nl"
@@ -32,7 +32,6 @@
     "url": "git@github.com:nl-design-system/candidate.git",
     "directory": "packages/components-react/form-field-description-react"
   },
-  "private": true,
   "publishConfig": {
     "access": "public",
     "provenance": true

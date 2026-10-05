@@ -5,8 +5,8 @@
   font-size: var(--nl-form-field-description-font-size);
   font-weight: var(--nl-form-field-description-font-weight);
   line-height: var(--nl-form-field-description-line-height);
-  margin-block-end: 0;
-  margin-block-start: 0;
+  margin-block-end: var(--nl-form-field-description-margin-block-end);
+  margin-block-start: var(--nl-form-field-description-margin-block-start);
 }
 
 @mixin nl-form-field-description--disabled {
