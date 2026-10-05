@@ -10,7 +10,7 @@ const externalLinks = getExternalLinks('https://nldesignsystem.nl/form-field-des
 
 const meta = {
   ...mergeCssMeta(formFieldDescriptionMeta, externalLinks),
-  title: 'In Progress/CSS Componenten/Form Field Description',
+  title: 'CSS Componenten/Form Field Description',
   id: 'css-form-field-description',
 } satisfies Meta<typeof FormFieldDescriptionComponent>;
 
