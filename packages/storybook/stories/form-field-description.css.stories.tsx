@@ -5,11 +5,22 @@ import formFieldDescriptionMeta from '@nl-design-system-candidate/form-field-des
 import * as Stories from '@nl-design-system-candidate/form-field-description-docs/stories/form-field-description.stories';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta.js';
 import { getExternalLinks } from '../src/helpers/external-links.js';
+import description from '@nl-design-system-candidate/form-field-description-docs/docs/description.md?raw';
 
-const externalLinks = getExternalLinks('https://nldesignsystem.nl/form-field-description', packageJSON.homepage);
+const externalLinks = getExternalLinks(
+  'https://nldesignsystem.nl/form-field-description',
+  packageJSON.homepage,
+  'https://www.npmjs.com/package/@nl-design-system-candidate/form-field-description-css',
+);
 
 const meta = {
-  ...mergeCssMeta(formFieldDescriptionMeta, externalLinks),
+  ...mergeCssMeta(formFieldDescriptionMeta, externalLinks, {
+    parameters: {
+      docs: {
+        subtitle: description,
+      },
+    },
+  }),
   title: 'In Progress/CSS Componenten/Form Field Description',
   id: 'css-form-field-description',
 } satisfies Meta<typeof FormFieldDescriptionComponent>;
