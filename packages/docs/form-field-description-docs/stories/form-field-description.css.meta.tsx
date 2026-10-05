@@ -2,12 +2,14 @@ import type { Meta } from '@storybook/react-vite';
 import { FormFieldDescription } from '@nl-design-system-candidate/form-field-description-react/css';
 
 const CLASSES = 'classes';
+const ATTRIBUTES = 'attributes';
+const CHILDREN = 'children';
 
 const meta = {
   argTypes: {
     nlFormFieldDescription: {
       name: 'nl-form-field-description',
-      description: 'De basis class van dit component',
+      description: 'De basis class van de component.',
       control: false,
       type: { name: 'other', value: 'string', required: true },
       table: {
@@ -15,17 +17,33 @@ const meta = {
         type: { summary: undefined },
       },
     },
-    styleDisabled: {
+    nlFormFieldDescriptionDisabled: {
       name: 'nl-form-field-description--disabled',
-      description: 'Het formulierveld is uitgeschakeld en kan niet ingevuld worden',
+      description:
+        'Voegt de CSS class `nl-form-field-description--disabled` toe om aan te geven dat het gekoppelde formulierelement is uitgeschakeld.',
       control: 'boolean',
       table: {
         category: CLASSES,
         type: { summary: undefined },
       },
     },
+    disabled: {
+      description:
+        'Voegt de CSS class `nl-form-field-description--disabled` toe om aan te geven dat het gekoppelde formulierelement is uitgeschakeld.',
+      control: 'boolean',
+      table: {
+        category: ATTRIBUTES,
+        type: { summary: 'boolean' },
+      },
+    },
     children: {
-      table: { disable: true },
+      name: 'content',
+      description: 'De inhoud van de component.',
+      control: 'text',
+      table: {
+        category: CHILDREN,
+        type: { summary: undefined },
+      },
     },
   },
   component: (props) => <FormFieldDescription {...props} />,

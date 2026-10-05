@@ -5,12 +5,23 @@ import formFieldErrorMessageMeta from '@nl-design-system-candidate/form-field-er
 import * as Stories from '@nl-design-system-candidate/form-field-error-message-docs/stories/form-field-error-message.stories';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta.js';
 import { getExternalLinks } from '../src/helpers/external-links.js';
+import description from '@nl-design-system-candidate/form-field-error-message-docs/docs/description.md?raw';
 
-const externalLinks = getExternalLinks('https://nldesignsystem.nl/form-field-error-message', packageJSON.homepage);
+const externalLinks = getExternalLinks(
+  'https://nldesignsystem.nl/form-field-error-message',
+  packageJSON.homepage,
+  'https://www.npmjs.com/package/@nl-design-system-candidate/form-field-error-message-css',
+);
 
 const meta = {
-  ...mergeCssMeta(formFieldErrorMessageMeta, externalLinks),
-  title: 'In Progress/CSS Componenten/Form Field Error Message',
+  ...mergeCssMeta(formFieldErrorMessageMeta, externalLinks, {
+    parameters: {
+      docs: {
+        subtitle: description,
+      },
+    },
+  }),
+  title: 'CSS Componenten/Form Field Error Message',
   id: 'css-form-field-error-message',
 } satisfies Meta<typeof FormFieldErrorMessageComponent>;
 
