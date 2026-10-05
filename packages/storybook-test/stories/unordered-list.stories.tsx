@@ -14,6 +14,8 @@ const meta = {
   component: UnorderedList,
   decorators: ExampleBodyTextDecorator,
   parameters: {
+    // TODO: When component is implemented, enable Chromatic
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component: componentMarkdown,

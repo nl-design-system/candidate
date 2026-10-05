@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-css/alert-css/package.json';
-import { type AlertProps } from '@nl-design-system-candidate/alert-react';
+import { Alert as AlertComponent } from '@nl-design-system-candidate/alert-react';
 import alertMeta from '@nl-design-system-candidate/alert-docs/stories/alert.css.meta';
 // import * as Stories from '@nl-design-system-candidate/alert-docs/stories/alert.stories';
 import '../../components-css/alert-css/src/test.scss';
@@ -24,8 +24,8 @@ const meta = {
   }),
   title: 'In Progress/CSS Componenten/Alert',
   id: 'css-alert',
-} satisfies Meta<AlertProps>;
+} satisfies Meta<typeof AlertComponent>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const Alert = Stories.Alert;

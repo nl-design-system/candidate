@@ -8,12 +8,12 @@ type Story = StoryObj<typeof _meta>;
 export const Note: Story = {
   name: 'Note',
   args: {
-    children: `Note`,
+    children: 'Note',
   },
   parameters: {
     docs: {
       description: {
-        story: `Een standaard Note`,
+        story: 'Een standaard Note',
       },
     },
   },
