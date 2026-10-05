@@ -2,11 +2,11 @@
 '@nl-design-system-candidate/heading-css': major
 ---
 
-This release contains potentially **breaking** changes: the HTML SCSS mixin names have been standardized to a `nl-html--*` naming convention.
+**Breaking change**, but only for the few users of the SCSS mixins for HTML: the following HTML SCSS mixins have been renamed:
 
-- code-block-css: `pre` → `nl-html--code-block`
-- code-css: `code` → `nl-html--code`
-- heading-css: `h1`–`h6` → `nl-html--h1`–`nl-html--h6`
-- link-css: `nl-link--html-a` → `nl-html--link`
-- mark-css: `mark` → `nl-html--mark`
-- paragraph-css: `p` → `nl-html--paragraph`
+- `h1` has been renamed to `nl-html--heading-level-1`
+- `h2` has been renamed to `nl-html--heading-level-2`
+- `h3` has been renamed to `nl-html--heading-level-3`
+- `h4` has been renamed to `nl-html--heading-level-4`
+- `h5` has been renamed to `nl-html--heading-level-5`
+- `h6` has been renamed to `nl-html--heading-level-6`

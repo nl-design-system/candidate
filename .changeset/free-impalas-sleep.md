@@ -2,11 +2,4 @@
 '@nl-design-system-candidate/code-css': major
 ---
 
-This release contains potentially **breaking** changes: the HTML SCSS mixin names have been standardized to a `nl-html--*` naming convention.
-
-- code-block-css: `pre` → `nl-html--code-block`
-- code-css: `code` → `nl-html--code`
-- heading-css: `h1`–`h6` → `nl-html--h1`–`nl-html--h6`
-- link-css: `nl-link--html-a` → `nl-html--link`
-- mark-css: `mark` → `nl-html--mark`
-- paragraph-css: `p` → `nl-html--paragraph`
+**Breaking change**, but only for the few users of the SCSS mixins for HTML: the HTML SCSS mixin has been renamed from `code` to `nl-html--code`.
