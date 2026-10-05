@@ -1,1 +1,1 @@
-Toont een foutmelding die informeert wat er is fout gegaan en hoe dit is op te lossen.
+Foutmelding bij een invoerveld die informeert wat de fout is en wat de oplossing is.

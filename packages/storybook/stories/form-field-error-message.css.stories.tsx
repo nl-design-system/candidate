@@ -21,7 +21,7 @@ const meta = {
       },
     },
   }),
-  title: 'In Progress/CSS Componenten/Form Field Error Message',
+  title: 'CSS Componenten/Form Field Error Message',
   id: 'css-form-field-error-message',
 } satisfies Meta<typeof FormFieldErrorMessageComponent>;
 

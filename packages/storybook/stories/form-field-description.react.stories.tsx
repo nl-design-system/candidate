@@ -21,7 +21,7 @@ const meta = {
       },
     },
   }),
-  title: 'In Progress/React Componenten/Form Field Description',
+  title: 'React Componenten/Form Field Description',
   id: 'form-field-description',
 } satisfies Meta<typeof FormFieldDescriptionComponent>;
 
