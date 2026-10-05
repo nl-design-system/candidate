@@ -1,5 +1,19 @@
 # @nl-design-system-candidate/paragraph-css
 
+## 3.0.0
+
+### Major Changes
+
+- d64859d: `dist/html/*.css` bevat nu een opt-in variant met de classes `.nl-html--all` en `.nl-html--paragraph`, in plaats van
+  ongescopede selectors. De voorheen ongescopede, "vanilla" implementatie (zonder class name nodig) is verplaatst naar
+  `dist/vanilla/*.css` en `src/vanilla/`.
+- 52b06b1: **Breaking change**, but only for the few users of the SCSS mixins for HTML: the HTML SCSS mixin has been renamed from `paragraph` to `nl-html--paragraph`.
+
+### Patch Changes
+
+- 7697f69: Fix component sizing by applying `box-sizing: border-box` to component elements.
+- 01df7bb: Documentation improvements in README
+
 ## 2.1.3
 
 ### Patch Changes

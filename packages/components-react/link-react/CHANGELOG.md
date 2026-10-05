@@ -1,5 +1,15 @@
 # @nl-design-system-candidate/link-react
 
+## 1.1.9
+
+### Patch Changes
+
+- 7697f69: Upgrade rollup (fixes GHSA-mw96-cpmx-2vgc)
+- Updated dependencies [7697f69]
+- Updated dependencies [d64859d]
+- Updated dependencies [52b06b1]
+  - @nl-design-system-candidate/link-css@3.0.0
+
 ## 1.1.8
 
 ### Patch Changes

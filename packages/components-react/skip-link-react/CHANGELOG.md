@@ -1,5 +1,11 @@
 # @nl-design-system-candidate/skip-link-react
 
+## 1.1.8
+
+### Patch Changes
+
+- 7697f69: Upgrade rollup (fixes GHSA-mw96-cpmx-2vgc)
+
 ## 1.1.7
 
 ### Patch Changes

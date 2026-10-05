@@ -1,5 +1,16 @@
 # @nl-design-system-candidate/paragraph-react
 
+## 2.2.3
+
+### Patch Changes
+
+- 7697f69: Upgrade rollup (fixes GHSA-mw96-cpmx-2vgc)
+- Updated dependencies [7697f69]
+- Updated dependencies [d64859d]
+- Updated dependencies [01df7bb]
+- Updated dependencies [52b06b1]
+  - @nl-design-system-candidate/paragraph-css@3.0.0
+
 ## 2.2.2
 
 ### Patch Changes
