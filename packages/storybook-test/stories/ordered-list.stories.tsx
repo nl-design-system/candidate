@@ -744,7 +744,7 @@ export const OrderedListAlternativeHTMLDivs: Story = {
     docs: {
       description: {
         story:
-          'Een geordende lijst opgemaakt met meerdere HTML-elementen `div`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
+          'Een geordende lijst opgemaakt met meerdere HTML-elementen `div`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. Screenreadergebruikers krijgen daardoor de juiste informatie: een lijst met drie items. Visueel staan de items onder elkaar en krijgen ze de typografie en inspringing van de component, maar zonder nummers. Alleen de HTML-elementen `ol` en `li` krijgen nummers van de browser.',
       },
     },
   },
@@ -777,7 +777,7 @@ export const OrderedListAlternativeHTMLSpans: Story = {
     docs: {
       description: {
         story:
-          'Een geordende lijst opgemaakt met meerdere HTML-elementen `span`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. De opmaak wordt dan nog steeds goed toegepast op de component en screenreadergebruikers krijgen nog steeds de juiste informatie, zoals wanneer de standaard HTML-elementen worden gebruikt.',
+          'Een geordende lijst opgemaakt met meerdere HTML-elementen `span`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. Screenreadergebruikers krijgen daardoor de juiste informatie: een lijst met drie items. Visueel ziet het er niet uit als een lijst: de items lopen zonder nummers achter elkaar door als één doorlopende tekst, omdat het HTML-element `span` een inline element is. Alleen de HTML-elementen `ol` en `li` krijgen nummers van de browser.',
       },
     },
   },
