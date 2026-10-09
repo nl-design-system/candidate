@@ -1,0 +1,35 @@
+/* Foutieve voorbeeld-CSS voor de non-conforming Unordered List stories. Geen onderdeel van de Unordered List component:
+   de "example"-modifiers laten zien hoe je een Custom Marker níet moet maken. */
+
+/* Custom Marker met tekst via counter-reset, counter-increment en de CSS-eigenschap content */
+.nl-unordered-list--example-counter-marker {
+  counter-reset: punt;
+}
+
+.nl-unordered-list--example-counter-marker > li {
+  list-style-type: none;
+}
+
+.nl-unordered-list--example-counter-marker > li::before {
+  content: counter(punt, disc) " Let op: ";
+  counter-increment: punt;
+  font-weight: 700;
+}
+
+/* Custom Marker met een Unicode emoji via de CSS-eigenschap content */
+.nl-unordered-list--example-emoji-marker > li {
+  list-style-type: none;
+}
+
+.nl-unordered-list--example-emoji-marker > li::before {
+  content: "👁️‍🗨️ ";
+}
+
+/* Custom Marker met een afbeelding via de CSS-eigenschap list-style-image */
+.nl-unordered-list--example-image-marker > li:nth-child(-n + 2) {
+  list-style-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%2012l5%205l10%20-10%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.nl-unordered-list--example-image-marker > li:nth-child(3) {
+  list-style-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M18%206l-12%2012%22%2F%3E%3Cpath%20d%3D%22M6%206l12%2012%22%2F%3E%3C%2Fsvg%3E");
+}

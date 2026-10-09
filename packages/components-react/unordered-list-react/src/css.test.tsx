@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { UnorderedList } from './css';
+import { UnorderedList, UnorderedListItem, UnorderedListMarker } from './css';
 
 const text = 'Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen.';
 
@@ -15,5 +15,12 @@ describe('UnorderedList (css import)', () => {
     const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();
+  });
+
+  it('exports `UnorderedListItem`', () => {
+    expect(UnorderedListItem).toBeDefined();
+  });
+  it('exports `UnorderedListMarker`', () => {
+    expect(UnorderedListMarker).toBeDefined();
   });
 });

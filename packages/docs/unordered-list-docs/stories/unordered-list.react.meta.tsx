@@ -1,12 +1,11 @@
 import type { Meta } from '@storybook/react-vite';
-import { UnorderedList } from '@nl-design-system-candidate/unordered-list-react/css';
+import { UnorderedList, UnorderedListItem } from '@nl-design-system-candidate/unordered-list-react/css';
 
 const PROPS = 'Props';
 const API = 'API';
 
 const meta = {
   argTypes: {
-    // @ts-expect-error: The restProps are indeed not part of the accepted props, but included here for documentation purpose
     restProps: {
       name: '{...restProps}',
       control: false,
@@ -20,18 +19,18 @@ const meta = {
         },
       },
     },
-    // TODO: Ontwikkelfase: moet de children verstopt? Doe dan `children: { table: { disable: true } }`
     children: {
       control: false,
-      description: 'De content van de component.',
+      description: 'Eén of meer `UnorderedListItem` componenten.',
       table: {
         category: API,
         type: { summary: 'ReactNode' },
       },
+      type: { name: 'other', value: 'ReactNode', required: false },
     },
-    // TODO: Ontwikkelfase: aanvullen adhv acceptance-criteria
   },
   component: UnorderedList,
+  subcomponents: { UnorderedListItem },
 } satisfies Meta<typeof UnorderedList>;
 
 export default meta;

@@ -1,0 +1,12 @@
+/* Example implementation for centred content, not part of any component's CSS. */
+.candidate-centered {
+  text-align: center;
+}
+
+/* Keeps list markers next to the centred text instead of far away in the list indent.
+   `[role="list"]` raises specificity above component classes and `.nl-html--*` element selectors,
+   and also covers lists built from `div`/`span` elements. */
+.candidate-centered :is(ol, ul, [role="list"]) {
+  list-style-position: inside;
+  padding-inline-start: 0;
+}
