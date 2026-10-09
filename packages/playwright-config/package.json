@@ -12,6 +12,6 @@
     "typescript": "5.9.3"
   },
   "dependencies": {
-    "@playwright/experimental-ct-react": "1.61.1"
+    "@playwright/experimental-ct-react": "1.62.1"
   }
 }
