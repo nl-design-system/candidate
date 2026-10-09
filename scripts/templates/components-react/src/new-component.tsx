@@ -1,6 +1,7 @@
 import type { ReactNode, HTMLAttributes } from 'react';
-import { clsx } from 'clsx';
 import { forwardRef } from 'react';
+
+const cn = (...classes: Array<string | undefined | null>): string => classes.filter(Boolean).join(' ');
 
 export interface NewComponentProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode; // Needed in template file, feel free to remove
@@ -10,7 +11,7 @@ export const NewComponent = forwardRef<HTMLDivElement, NewComponentProps>(functi
   const { children, className, ...restProps } = props;
 
   return (
-    <div className={clsx('nl-new-component', className)} ref={forwardedRef} {...restProps}>
+    <div className={cn('nl-new-component', className)} ref={forwardedRef} {...restProps}>
       {children}
     </div>
   );

@@ -1,57 +1,63 @@
+import { merge } from 'lodash-es';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/alert-css/src/alert.scss';
 import packageJSON from '../../components-react/alert-react/package.json';
-import { Alert } from '../../components-react/alert-react/src/alert';
+import { Alert as AlertComponent } from '../../components-react/alert-react/src/alert';
 import componentMarkdown from '../../docs/alert-docs/docs/component.md?raw';
+import reactMeta from '../../docs/alert-docs/stories/alert.react.meta';
 
 const meta = {
-  argTypes: {
-    // Vul aan door developer
-  },
-  component: Alert,
-  decorators: [ExampleBodyTextDecorator],
-  parameters: {
-    docs: {
-      description: {
-        component: componentMarkdown,
-      },
-      source: {
-        type: 'dynamic',
-      },
+  ...merge({
+    ...reactMeta,
+
+    args: {
+      // Vul aan door developer
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/alert',
+    decorators: [ExampleBodyTextDecorator],
+    globals: {
+      dir: 'ltr',
+      lang: 'nl',
+    },
+    parameters: {
+      // TODO: When component is implemented, enable Chromatic
+      chromatic: { disableSnapshot: true },
+      docs: {
+        description: {
+          component: componentMarkdown,
+        },
+        source: {
+          type: 'dynamic',
+        },
       },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/alert',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
+      ],
+    },
+  }),
   title: 'Componenten/Alert',
-} satisfies Meta<typeof Alert>;
+} satisfies Meta<typeof AlertComponent>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SomeStory: Story = {
-  name: 'Some Story',
-  decorators: ExampleBodyTextDecorator,
-  globals: {
-    dir: 'ltr',
-    lang: 'nl',
-  },
+export const Alert: Story = {
+  name: 'Alert',
   args: {
     children: 'Alert',
   },
   parameters: {
     docs: {
       description: {
-        story: `Some Description`,
+        story: 'Alert',
       },
     },
     status: { type: [] },

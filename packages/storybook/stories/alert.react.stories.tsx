@@ -1,7 +1,7 @@
 import type { Meta } from '@storybook/react-vite';
 import { merge } from 'lodash-es';
 import packageJSON from '../../components-react/alert-react/package.json';
-import type { AlertProps } from '@nl-design-system-candidate/alert-react';
+import { Alert as AlertComponent } from '@nl-design-system-candidate/alert-react';
 import alertMeta from '@nl-design-system-candidate/alert-docs/stories/alert.react.meta';
 // import * as Stories from '@nl-design-system-candidate/alert-docs/stories/alert.stories';
 import '../../components-css/alert-css/src/test.scss';
@@ -24,7 +24,7 @@ const meta = {
   }),
   title: 'In Progress/React Componenten/Alert',
   id: 'alert',
-} satisfies Meta<AlertProps>;
+} satisfies Meta<typeof AlertComponent>;
 
 export default meta;
 
