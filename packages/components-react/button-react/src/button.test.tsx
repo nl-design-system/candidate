@@ -183,6 +183,18 @@ describe('Button', () => {
     expect(button).toHaveClass('nl-button--busy');
   });
 
+  it('keeps a busy toggle button interactive, so the action can still be undone', () => {
+    render(
+      <Button busy toggle>
+        {text}
+      </Button>,
+    );
+    const button = screen.getByRole('button');
+
+    expect(button).not.toHaveAttribute('aria-disabled');
+    expect(button).toHaveClass('nl-button--busy');
+  });
+
   it('can cancel a click by moving the pointer away', async () => {
     const user = userEvent.setup();
     const clickHandler = vi.fn();

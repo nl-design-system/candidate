@@ -109,6 +109,54 @@ test('is exposed as disabled to the real accessibility tree while remaining focu
   await expect(component).toMatchAriaSnapshot('- button "Klik mij" [disabled]');
 });
 
+test('is exposed as disabled to the real accessibility tree while busy, unless it is a toggle button', async ({
+  mount,
+  browserName,
+}) => {
+  // Safari does not support Tab key focus without system-level setting
+  test.skip(browserName === 'webkit', 'Tab key focus is not supported in WebKit without system preferences change');
+
+  const component = await mount(
+    <>
+      <Button busy>Verzenden</Button>
+      <Button busy toggle pressed>
+        Like
+      </Button>
+    </>,
+  );
+
+  const submitButton = component.getByRole('button', { name: 'Verzenden' });
+  const toggleButton = component.getByRole('button', { name: 'Like' });
+
+  await expect(submitButton).toMatchAriaSnapshot('- button "Verzenden" [disabled]');
+  await expect(toggleButton).toMatchAriaSnapshot('- button "Like" [pressed]');
+
+  // A busy toggle button must stay operable, so an accidental toggle can still be undone.
+  await toggleButton.focus();
+  await expect(toggleButton).toBeFocused();
+  await expect(toggleButton).toBeEnabled();
+});
+
+test('keeps a busy toggle button clickable, so an accidental toggle can be undone', async ({ mount }) => {
+  const clicks: boolean[] = [];
+  const component = await mount(
+    <Button
+      busy
+      toggle
+      pressed
+      onClick={() => {
+        clicks.push(true);
+      }}
+    >
+      Like
+    </Button>,
+  );
+
+  await component.click();
+
+  expect(clicks).toEqual([true]);
+});
+
 // Cartesian product: purpose × hint × state
 for (const [purpose, hint, state] of cartesianProduct(purposes, hints, states)) {
   // hint only applies when purpose is set, skip undefined hint + non-default state duplicates
