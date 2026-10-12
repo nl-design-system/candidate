@@ -109,7 +109,7 @@ are styled, so a nested `<ul>` keeps its own styling.
 Inside an element with the `nl-html--all` or `nl-html--ordered-list` class, using `html/ordered-list.css`:
 
 ```html
-<div class="nl-html--ordered-list">
+<div class="nl-html nl-html--ordered-list">
   <ol role="list">
     <li>Passport photo, no older than 6 months</li>
     <li>Your old passport</li>
