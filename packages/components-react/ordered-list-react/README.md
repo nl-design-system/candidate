@@ -32,9 +32,9 @@ With built-in CSS:
 import { OrderedList, OrderedListItem } from '@nl-design-system-candidate/ordered-list-react/css';
 
 <OrderedList role="list">
-  <OrderedListItem>Paspoortfoto, niet ouder dan 6 maanden</OrderedListItem>
-  <OrderedListItem>Je oude paspoort</OrderedListItem>
-  <OrderedListItem>Je afspraakbevestiging</OrderedListItem>
+  <OrderedListItem>Passport photo, no older than 6 months</OrderedListItem>
+  <OrderedListItem>Your old passport</OrderedListItem>
+  <OrderedListItem>Your appointment confirmation</OrderedListItem>
 </OrderedList>;
 ```
 
@@ -44,9 +44,9 @@ Only the React component. You still need to import the CSS separately:
 import { OrderedList, OrderedListItem } from '@nl-design-system-candidate/ordered-list-react';
 
 <OrderedList role="list">
-  <OrderedListItem>Paspoortfoto, niet ouder dan 6 maanden</OrderedListItem>
-  <OrderedListItem>Je oude paspoort</OrderedListItem>
-  <OrderedListItem>Je afspraakbevestiging</OrderedListItem>
+  <OrderedListItem>Passport photo, no older than 6 months</OrderedListItem>
+  <OrderedListItem>Your old passport</OrderedListItem>
+  <OrderedListItem>Your appointment confirmation</OrderedListItem>
 </OrderedList>;
 ```
 
@@ -72,9 +72,9 @@ import { IconNumber1, IconNumber2 } from '@example/icons';
         <IconNumber1 />
       </Icon>
     }
-    markerLabel="Stap 1."
+    markerLabel="Step 1."
   >
-    Verzamel documenten
+    Gather documents
   </OrderedListItem>
   <OrderedListItem
     marker={
@@ -82,9 +82,9 @@ import { IconNumber1, IconNumber2 } from '@example/icons';
         <IconNumber2 />
       </Icon>
     }
-    markerLabel="Stap 2."
+    markerLabel="Step 2."
   >
-    Maak een afspraak
+    Make an appointment
   </OrderedListItem>
 </OrderedList>;
 ```
@@ -105,13 +105,13 @@ list.
 ```jsx
 <OrderedList role="list">
   <OrderedListItem>
-    Verzamel de benodigde documenten
+    Gather the required documents
     <OrderedList role="list">
-      <OrderedListItem>Geldig identiteitsbewijs</OrderedListItem>
-      <OrderedListItem>Pasfoto, niet ouder dan 6 maanden</OrderedListItem>
+      <OrderedListItem>Valid identity document</OrderedListItem>
+      <OrderedListItem>Passport photo, no older than 6 months</OrderedListItem>
     </OrderedList>
   </OrderedListItem>
-  <OrderedListItem>Maak een afspraak</OrderedListItem>
+  <OrderedListItem>Make an appointment</OrderedListItem>
 </OrderedList>
 ```
 
@@ -130,13 +130,13 @@ including `reversed`, `start`, and `type`, and forwards a `ref` to the underlyin
 
 ### OrderedListItem
 
-| Prop          | Description                                                                                             | Type                 | Default |
-| ------------- | ------------------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| `children`    | Content of the list item                                                                                | `ReactNode`          | —       |
-| `marker`      | Custom marker visual, hidden from assistive technology automatically                                    | `ReactNode`          | —       |
-| `markerLabel` | Accessible label for the custom marker, rendered as visually hidden text. Required when using `marker`. | `ReactNode`          | —       |
-| `className`   | Additional CSS classes alongside `nl-ordered-list__item`                                                | `string`             | —       |
-| `ref`         | Ref forwarded to the underlying `<li>` element                                                          | `Ref<HTMLLIElement>` | —       |
+| Prop          | Description                                                                                                                                                                                         | Type                 | Default |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| `children`    | Content of the list item                                                                                                                                                                            | `ReactNode`          | —       |
+| `marker`      | Custom marker visual, hidden from assistive technology automatically                                                                                                                                | `ReactNode`          | —       |
+| `markerLabel` | Accessible label for the custom marker, rendered as visually hidden text. Required together with `marker`: TypeScript reports an error for `marker` without `markerLabel` and the other way around. | `ReactNode`          | —       |
+| `className`   | Additional CSS classes alongside `nl-ordered-list__item`                                                                                                                                            | `string`             | —       |
+| `ref`         | Ref forwarded to the underlying `<li>` element                                                                                                                                                      | `Ref<HTMLLIElement>` | —       |
 
 In addition to the props above, `OrderedListItem` accepts all standard HTML attributes of an `<li>`
 element and forwards a `ref` to the underlying `<li>` element.

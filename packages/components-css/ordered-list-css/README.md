@@ -75,9 +75,9 @@ is overridden via CSS; the `role="list"` attribute restores them.
 
 ```html
 <ol class="nl-ordered-list" role="list">
-  <li class="nl-ordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
-  <li class="nl-ordered-list__item">Je oude paspoort</li>
-  <li class="nl-ordered-list__item">Je afspraakbevestiging</li>
+  <li class="nl-ordered-list__item">Passport photo, no older than 6 months</li>
+  <li class="nl-ordered-list__item">Your old passport</li>
+  <li class="nl-ordered-list__item">Your appointment confirmation</li>
 </ol>
 ```
 
@@ -92,9 +92,9 @@ assistive technology with `aria-hidden="true"`. Provide the accessible label via
   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
       <span aria-hidden="true"><!-- icon --></span>
-      <span class="nl-ordered-list__marker-label">Stap 1. </span>
+      <span class="nl-ordered-list__marker-label">Step 1. </span>
     </span>
-    Verzamel documenten
+    Gather documents
   </li>
 </ol>
 ```
@@ -110,8 +110,8 @@ Inside an element with the `nl-html--all` or `nl-html--ordered-list` class, usin
 ```html
 <div class="nl-html--ordered-list">
   <ol role="list">
-    <li>Paspoortfoto, niet ouder dan 6 maanden</li>
-    <li>Je oude paspoort</li>
+    <li>Passport photo, no older than 6 months</li>
+    <li>Your old passport</li>
   </ol>
 </div>
 ```
