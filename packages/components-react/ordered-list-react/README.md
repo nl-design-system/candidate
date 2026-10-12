@@ -31,7 +31,7 @@ With built-in CSS:
 ```jsx
 import { OrderedList, OrderedListItem } from '@nl-design-system-candidate/ordered-list-react/css';
 
-<OrderedList role="list">
+<OrderedList>
   <OrderedListItem>Passport photo, no older than 6 months</OrderedListItem>
   <OrderedListItem>Your old passport</OrderedListItem>
   <OrderedListItem>Your appointment confirmation</OrderedListItem>
@@ -43,17 +43,12 @@ Only the React component. You still need to import the CSS separately:
 ```jsx
 import { OrderedList, OrderedListItem } from '@nl-design-system-candidate/ordered-list-react';
 
-<OrderedList role="list">
+<OrderedList>
   <OrderedListItem>Passport photo, no older than 6 months</OrderedListItem>
   <OrderedListItem>Your old passport</OrderedListItem>
   <OrderedListItem>Your appointment confirmation</OrderedListItem>
 </OrderedList>;
 ```
-
-### Always add `role="list"`
-
-Always add `role="list"` to the `OrderedList`. WebKit browsers remove list semantics when `list-style` is
-set to `none` via CSS; the `role="list"` attribute restores them.
 
 ### With a custom marker
 
@@ -65,7 +60,7 @@ text.
 import { Icon } from '@example/icon-react';
 import { IconNumber1, IconNumber2 } from '@example/icons';
 
-<OrderedList role="list">
+<OrderedList>
   <OrderedListItem
     marker={
       <Icon>
@@ -103,10 +98,10 @@ as `<strong>`, `<em>` and links. It can also contain `<p>` elements and a nested
 list.
 
 ```jsx
-<OrderedList role="list">
+<OrderedList>
   <OrderedListItem>
     Gather the required documents
-    <OrderedList role="list">
+    <OrderedList>
       <OrderedListItem>Valid identity document</OrderedListItem>
       <OrderedListItem>Passport photo, no older than 6 months</OrderedListItem>
     </OrderedList>

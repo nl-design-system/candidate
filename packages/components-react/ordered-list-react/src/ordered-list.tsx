@@ -1,7 +1,8 @@
 import { clsx } from 'clsx';
 import { forwardRef, type HTMLAttributes, type LiHTMLAttributes, type OlHTMLAttributes, type ReactNode } from 'react';
 
-export interface OrderedListProps extends OlHTMLAttributes<HTMLOListElement> {
+// `role` is not configurable: the component always sets `role="list"`.
+export interface OrderedListProps extends Omit<OlHTMLAttributes<HTMLOListElement>, 'role'> {
   children?: ReactNode;
 }
 
@@ -9,7 +10,7 @@ export const OrderedList = forwardRef<HTMLOListElement, OrderedListProps>((props
   const { children, className, ...restProps } = props;
 
   return (
-    <ol className={clsx('nl-ordered-list', className)} ref={forwardedRef} {...restProps}>
+    <ol className={clsx('nl-ordered-list', className)} ref={forwardedRef} {...restProps} role="list">
       {children}
     </ol>
   );

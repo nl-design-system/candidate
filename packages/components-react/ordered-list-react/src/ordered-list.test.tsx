@@ -56,10 +56,16 @@ describe('Ordered List', () => {
       const element = container.querySelector('ol');
       expect(element).toBeInTheDocument();
     });
-    it('supports forwarding the HTML-attribute `role` to the underlying HTML-element `ol`', () => {
-      const { getByRole } = renderList({ role: 'list' });
-      const element = getByRole('list');
-      expect(element).toBeInTheDocument();
+    it('always has the HTML-attribute `role="list"`', () => {
+      const { container } = renderList();
+      const element = container.querySelector('ol');
+      expect(element).toHaveAttribute('role', 'list');
+    });
+    it('does not allow overriding the HTML-attribute `role`', () => {
+      // @ts-expect-error: `role` is not configurable
+      const { container } = renderList({ role: 'presentation' });
+      const element = container.querySelector('ol');
+      expect(element).toHaveAttribute('role', 'list');
     });
     it('supports forwarding the HTML-attribute `hidden` to the underlying HTML-element `ol`', () => {
       const { container } = renderList({ hidden: true });

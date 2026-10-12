@@ -15,7 +15,7 @@ const meta = {
         category: PROPS,
         type: {
           summary: 'Examples',
-          detail: 'role="list"\nreversed\nstart={4}\ntype="A"\nlang="ar"',
+          detail: 'reversed\nstart={4}\ntype="A"\nlang="ar"',
         },
       },
     },

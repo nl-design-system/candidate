@@ -32,7 +32,6 @@ import {
 const meta = {
   ...merge({
     ...reactMeta,
-    args: { role: 'list' },
     component: OrderedList,
     subcomponents: { OrderedListItem },
     decorators: ExampleBodyTextDecorator,
@@ -117,7 +116,7 @@ export const OrderedListNestedOrderedList: Story = {
     <OrderedList {...args}>
       <OrderedListItem>
         Verzamel de benodigde documenten
-        <OrderedList role="list">
+        <OrderedList>
           <OrderedListItem>Geldig identiteitsbewijs</OrderedListItem>
           <OrderedListItem>Bewijs van inschrijving</OrderedListItem>
         </OrderedList>
@@ -195,10 +194,10 @@ export const OrderedListThreeLevelsNesting: Story = {
     <OrderedList {...args}>
       <OrderedListItem>
         Fase 1: Voorbereiding
-        <OrderedList role="list">
+        <OrderedList>
           <OrderedListItem>
             Verzamel documenten
-            <OrderedList role="list">
+            <OrderedList>
               <OrderedListItem>Identiteitsbewijs</OrderedListItem>
               <OrderedListItem>Bewijs van inschrijving</OrderedListItem>
             </OrderedList>
@@ -916,19 +915,19 @@ export const OrderedListHorizontalScrollMobile: Story = {
     <OrderedList {...args}>
       <OrderedListItem>
         Hoofdstuk Aanvraag van een reisdocument
-        <OrderedList role="list">
+        <OrderedList>
           <OrderedListItem>
             Afdeling Benodigde documenten
-            <OrderedList role="list">
+            <OrderedList>
               <OrderedListItem>
                 Paragraaf Identiteit van de aanvrager
-                <OrderedList role="list">
+                <OrderedList>
                   <OrderedListItem>
                     Artikel Geldig identiteitsbewijs
-                    <OrderedList role="list">
+                    <OrderedList>
                       <OrderedListItem>
                         Lid Het identiteitsbewijs is niet ouder dan 10 jaar
-                        <OrderedList role="list">
+                        <OrderedList>
                           <OrderedListItem>Onderdeel Paspoort of identiteitskaart</OrderedListItem>
                           <OrderedListItem>Onderdeel Rijbewijs</OrderedListItem>
                         </OrderedList>

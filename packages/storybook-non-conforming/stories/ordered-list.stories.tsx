@@ -16,7 +16,6 @@ const meta = {
   argTypes: {
     // Vul aan door developer
   },
-  args: { role: 'list' },
   component: OrderedList,
   parameters: {
     docs: {
@@ -53,20 +52,21 @@ type Story = StoryObj<OrderedListProps>;
 // Original: Ordered List zonder `role="list"`
 export const OrderedListNoRole: Story = {
   name: 'Fout: Ordered List zonder HTML-attribuut role="list"',
-  render: (args) => (
-    <OrderedList {...args}>
-      <OrderedListItem>Paspoortfoto, niet ouder dan 6 maanden.</OrderedListItem>
-      <OrderedListItem>Je oude paspoort.</OrderedListItem>
-      <OrderedListItem>Je afspraakbevestiging.</OrderedListItem>
-    </OrderedList>
+  render: () => (
+    <ol className="nl-ordered-list">
+      <li className="nl-ordered-list__item">Paspoortfoto, niet ouder dan 6 maanden.</li>
+      <li className="nl-ordered-list__item">Je oude paspoort.</li>
+      <li className="nl-ordered-list__item">Je afspraakbevestiging.</li>
+    </ol>
   ),
-  args: { role: undefined },
   parameters: {
     docs: {
       description: {
         story: `Bezoekers zien een genummerde lijst, maar niet alle screenreadergebruikers krijgen betrouwbaar te horen dat dit een geordende lijst is. Zonder de juiste semantiek is de volgorde van de items onduidelijk.
 
-Het probleem ontstaat omdat WebKit-browsers het HTML-element \`ol\` niet meer als lijst herkennen zodra de nummering met CSS wordt verborgen, bijvoorbeeld met \`list-style: none\` of een Custom Marker. Of dat gebeurt, hangt af van de CSS van de pagina en het thema. Voeg daarom altijd het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.`,
+Het probleem ontstaat omdat WebKit-browsers het HTML-element \`ol\` niet meer als lijst herkennen zodra de nummering met CSS wordt verborgen, bijvoorbeeld met \`list-style: none\` of een Custom Marker. Of dat gebeurt, hangt af van de CSS van de pagina en het thema. Voeg daarom altijd het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.
+
+De React-component zet \`role="list"\` automatisch; deze fout ontstaat alleen bij HTML met de CSS classes.`,
       },
     },
   },
@@ -91,31 +91,32 @@ Het probleem ontstaat omdat WebKit-browsers het HTML-element \`ol\` niet meer al
 // Original: Ordered List met custom marker zonder `role="list"`
 export const OrderedListCustomMarkerNoRole: Story = {
   name: 'Fout: Ordered List met Custom Marker zonder HTML-attribuut role="list"',
-  render: (args) => (
-    <OrderedList {...args}>
-      <OrderedListItem
-        marker={
-          <Icon>
-            <IconNumber1 />
-          </Icon>
-        }
-        markerLabel="Stap 1."
-      >
+  render: () => (
+    <ol className="nl-ordered-list">
+      <li className="nl-ordered-list__item nl-ordered-list__item--custom-marker">
+        <span className="nl-ordered-list__marker nl-ordered-list__marker--custom">
+          <span aria-hidden="true">
+            <Icon>
+              <IconNumber1 />
+            </Icon>
+          </span>
+          <span className="nl-ordered-list__marker-label">Stap 1.&nbsp;</span>
+        </span>
         Verzamel documenten.
-      </OrderedListItem>
-      <OrderedListItem
-        marker={
-          <Icon>
-            <IconNumber2 />
-          </Icon>
-        }
-        markerLabel="Stap 2."
-      >
+      </li>
+      <li className="nl-ordered-list__item nl-ordered-list__item--custom-marker">
+        <span className="nl-ordered-list__marker nl-ordered-list__marker--custom">
+          <span aria-hidden="true">
+            <Icon>
+              <IconNumber2 />
+            </Icon>
+          </span>
+          <span className="nl-ordered-list__marker-label">Stap 2.&nbsp;</span>
+        </span>
         Maak een afspraak.
-      </OrderedListItem>
-    </OrderedList>
+      </li>
+    </ol>
   ),
-  args: { role: undefined },
   parameters: {
     docs: {
       description: {
@@ -123,7 +124,9 @@ export const OrderedListCustomMarkerNoRole: Story = {
 
 De marker bevat toegankelijke tekst, maar dit is niet de oplossing voor het probleem voor screenreadergebruikers.
 
-Het probleem ontstaat omdat het HTML-element \`ol\` niet als lijst wordt herkend in WebKit-browsers in combinatie met de CSS \`list-style: none\`. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.`,
+Het probleem ontstaat omdat het HTML-element \`ol\` niet als lijst wordt herkend in WebKit-browsers in combinatie met de CSS \`list-style: none\`. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als geordende lijst wordt herkend en correct wordt voorgelezen.
+
+De React-component zet \`role="list"\` automatisch; deze fout ontstaat alleen bij HTML met de CSS classes.`,
       },
     },
   },
