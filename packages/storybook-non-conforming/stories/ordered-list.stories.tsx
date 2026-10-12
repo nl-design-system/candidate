@@ -202,7 +202,9 @@ export const OrderedListEmojiNoAlt: Story = {
   name: 'Fout: Ordered List met Unicode emoji Custom Marker zonder toegankelijk alternatief',
   render: (args) => (
     <OrderedList {...args}>
+      {/* @ts-expect-error Fout met opzet: Custom Marker zonder markerLabel */}
       <OrderedListItem marker="1️⃣">Verzamel documenten.</OrderedListItem>
+      {/* @ts-expect-error Fout met opzet: Custom Marker zonder markerLabel */}
       <OrderedListItem marker="2️⃣">Plan een afspraak.</OrderedListItem>
     </OrderedList>
   ),
@@ -325,6 +327,7 @@ export const OrderedListSVGNotAccessible: Story = {
   name: "Fout: Ordered List met SVG's als leestekens zonder toegankelijke implementatie",
   render: (args) => (
     <OrderedList {...args}>
+      {/* @ts-expect-error Fout met opzet: Custom Marker zonder markerLabel */}
       <OrderedListItem
         marker={
           <Icon>
@@ -334,6 +337,7 @@ export const OrderedListSVGNotAccessible: Story = {
       >
         Verzamel documenten.
       </OrderedListItem>
+      {/* @ts-expect-error Fout met opzet: Custom Marker zonder markerLabel */}
       <OrderedListItem
         marker={
           <Icon>
@@ -371,6 +375,7 @@ export const OrderedListDecorativeIcon: Story = {
   name: 'Fout: Ordered List met decoratief icoon als Custom Marker',
   render: (args) => (
     <OrderedList {...args}>
+      {/* @ts-expect-error Fout met opzet: Custom Marker zonder markerLabel */}
       <OrderedListItem
         marker={
           <Icon>
@@ -380,6 +385,7 @@ export const OrderedListDecorativeIcon: Story = {
       >
         Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
       </OrderedListItem>
+      {/* @ts-expect-error Fout met opzet: Custom Marker zonder markerLabel */}
       <OrderedListItem
         marker={
           <Icon>
@@ -389,6 +395,7 @@ export const OrderedListDecorativeIcon: Story = {
       >
         Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
       </OrderedListItem>
+      {/* @ts-expect-error Fout met opzet: Custom Marker zonder markerLabel */}
       <OrderedListItem
         marker={
           <Icon>

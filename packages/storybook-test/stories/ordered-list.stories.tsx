@@ -567,6 +567,7 @@ export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
   args: {},
   render: (args) => (
     <OrderedList {...args}>
+      {/* @ts-expect-error markerLabel ontbreekt bewust: de alternatieve tekst staat als aria-label op de Icon */}
       <OrderedListItem
         marker={
           <Icon role="img" aria-label="Stap 1.">
@@ -576,6 +577,7 @@ export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
       >
         Verzamel documenten
       </OrderedListItem>
+      {/* @ts-expect-error markerLabel ontbreekt bewust: de alternatieve tekst staat als aria-label op de Icon */}
       <OrderedListItem
         marker={
           <Icon role="img" aria-label="Stap 2.">

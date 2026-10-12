@@ -39,11 +39,14 @@ export const OrderedListMarker = forwardRef<HTMLSpanElement, OrderedListMarkerPr
 
 OrderedListMarker.displayName = 'OrderedListMarker';
 
-export interface OrderedListItemProps extends LiHTMLAttributes<HTMLLIElement> {
+// A custom marker always needs an accessible label, and a label is meaningless without a marker.
+type OrderedListItemMarkerProps =
+  | { marker?: undefined; markerLabel?: undefined }
+  | { marker: ReactNode; markerLabel: ReactNode };
+
+export type OrderedListItemProps = LiHTMLAttributes<HTMLLIElement> & {
   children?: ReactNode;
-  marker?: ReactNode;
-  markerLabel?: ReactNode;
-}
+} & OrderedListItemMarkerProps;
 
 export const OrderedListItem = forwardRef<HTMLLIElement, OrderedListItemProps>((props, forwardedRef) => {
   const { children, className, marker, markerLabel, ...restProps } = props;

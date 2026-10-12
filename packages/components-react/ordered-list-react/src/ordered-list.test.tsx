@@ -221,11 +221,13 @@ describe('Ordered List Custom Marker when `marker` is provided', () => {
   // document what the component currently renders in that case; they do not make it a supported configuration.
   describe('and when `markerLabel` is not provided', () => {
     it('renders the custom marker HTML-element `span`', () => {
+      // @ts-expect-error `markerLabel` is required with `marker`; this test documents what renders for that invalid combination
       const { container } = renderList({}, <OrderedListItem marker={markerIcon}>Item 1</OrderedListItem>);
       const element = container.querySelector('.nl-ordered-list__marker--custom');
       expect(element).toBeInTheDocument();
     });
     it('does not render the marker label HTML-element `span`', () => {
+      // @ts-expect-error `markerLabel` is required with `marker`; this test documents what renders for that invalid combination
       const { container } = renderList({}, <OrderedListItem marker={markerIcon}>Item 1</OrderedListItem>);
       const element = container.querySelector('.nl-ordered-list__marker-label');
       expect(element).not.toBeInTheDocument();
