@@ -6,7 +6,7 @@ export interface OrderedListProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode; // Needed in template file, feel free to remove
 }
 
-export const OrderedList = forwardRef<HTMLDivElement, OrderedListProps>(function OrderedList(props, forwardedRef) {
+export const OrderedList = forwardRef<HTMLDivElement, OrderedListProps>((props, forwardedRef) => {
   const { children, className, ...restProps } = props;
 
   return (

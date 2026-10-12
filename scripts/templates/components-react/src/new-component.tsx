@@ -7,7 +7,7 @@ export interface NewComponentProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode; // Needed in template file, feel free to remove
 }
 
-export const NewComponent = forwardRef<HTMLDivElement, NewComponentProps>(function NewComponent(props, forwardedRef) {
+export const NewComponent = forwardRef<HTMLDivElement, NewComponentProps>((props, forwardedRef) => {
   const { children, className, ...restProps } = props;
 
   return (
