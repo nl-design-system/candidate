@@ -110,7 +110,7 @@ Inside an element with the `nl-html--all` or `nl-html--ordered-list` class, usin
 
 ```html
 <div class="nl-html nl-html--ordered-list">
-  <ol role="list">
+  <ol>
     <li>Passport photo, no older than 6 months</li>
     <li>Your old passport</li>
   </ol>
