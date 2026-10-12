@@ -117,6 +117,8 @@ Inside an element with the `nl-html--all` or `nl-html--ordered-list` class, usin
 </div>
 ```
 
+For every `<ol>` on the page, with the appropriate `nl-html` container class names.
+
 ```js
 import '@nl-design-system-candidate/ordered-list-css/dist/html/ordered-list.css';
 ```
@@ -132,14 +134,14 @@ import '@nl-design-system-candidate/ordered-list-css/dist/vanilla/ordered-list.c
 Import the mixins via `forward` (Sass internally uses `_forward.scss`) and use them in your own SCSS:
 
 ```scss
-@use '@nl-design-system-candidate/ordered-list-css/forward.scss' as ordered-list;
+@use '@nl-design-system-candidate/ordered-list-css/forward.scss' as nl-ordered-list;
 
 .example-ordered-list {
-  @include ordered-list.nl-ordered-list;
+  @include nl-ordered-list.nl-ordered-list;
 }
 
 .example-ordered-list__item {
-  @include ordered-list.nl-ordered-list__item;
+  @include nl-ordered-list.nl-ordered-list__item;
 }
 ```
 
