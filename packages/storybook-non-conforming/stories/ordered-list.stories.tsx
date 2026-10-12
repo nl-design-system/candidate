@@ -76,14 +76,14 @@ Het probleem ontstaat omdat WebKit-browsers het HTML-element \`ol\` niet meer al
 //   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
-//       <span class="nl-ordered-list__marker-label">Stap 1. </span>
+//       <span class="nl-ordered-list__marker-label">Stap 1.&nbsp;</span>
 //     </span>
 //     Verzamel documenten.
 //   </li>
 //   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
-//       <span class="nl-ordered-list__marker-label">Stap 2. </span>
+//       <span class="nl-ordered-list__marker-label">Stap 2.&nbsp;</span>
 //     </span>
 //     Maak een afspraak.
 //   </li>
@@ -109,7 +109,7 @@ export const OrderedListCustomMarkerNoRole: Story = {
             <IconNumber2 />
           </Icon>
         }
-        markerLabel="Stap 2. "
+        markerLabel="Stap 2."
       >
         Maak een afspraak.
       </OrderedListItem>
@@ -423,7 +423,7 @@ Als een lijst wel leestekens nodig heeft voor nummering, dan is het de bedoeling
 //   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
 //     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
 //       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
-//       <span class="nl-ordered-list__marker-label">Nummer Eén Icoon. </span>
+//       <span class="nl-ordered-list__marker-label">Nummer Eén Icoon.&nbsp;</span>
 //     </span>
 //     Verzamel documenten.
 //   </li>
@@ -439,7 +439,7 @@ export const OrderedListInformativeIconBadAlt: Story = {
             <IconNumber1 />
           </Icon>
         }
-        markerLabel="Nummer Eén Icoon. "
+        markerLabel="Nummer Eén Icoon."
       >
         Verzamel documenten.
       </OrderedListItem>
@@ -449,7 +449,7 @@ export const OrderedListInformativeIconBadAlt: Story = {
             <IconNumber2 />
           </Icon>
         }
-        markerLabel="Nummer Twee Icoon. "
+        markerLabel="Nummer Twee Icoon."
       >
         Maak een afspraak.
       </OrderedListItem>
@@ -459,7 +459,7 @@ export const OrderedListInformativeIconBadAlt: Story = {
             <IconNumber3 />
           </Icon>
         }
-        markerLabel="Nummer Drie Icoon. "
+        markerLabel="Nummer Drie Icoon."
       >
         Haal uw nieuwe paspoort op.
       </OrderedListItem>

@@ -85,14 +85,15 @@ is overridden via CSS; the `role="list"` attribute restores them.
 
 Use a custom marker to replace the default counter with an icon or other visual. Hide the icon from
 assistive technology with `aria-hidden="true"`. Provide the accessible label via a visually hidden
-`<span class="nl-ordered-list__marker-label">`.
+`<span class="nl-ordered-list__marker-label">`. End the label with a non-breaking space (`&nbsp;`), so screen
+readers read the label and the item text as separate words.
 
 ```html
 <ol class="nl-ordered-list" role="list">
   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
       <span aria-hidden="true"><!-- icon --></span>
-      <span class="nl-ordered-list__marker-label">Step 1. </span>
+      <span class="nl-ordered-list__marker-label">Step 1.&nbsp;</span>
     </span>
     Gather documents
   </li>

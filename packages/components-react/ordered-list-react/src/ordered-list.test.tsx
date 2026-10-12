@@ -296,6 +296,13 @@ describe('Ordered List Custom Marker when `marker` is provided', () => {
         const label = container.querySelector('.nl-ordered-list__marker-label');
         expect(label).toHaveTextContent('Stap 1.');
       });
+
+      it('ends the marker label with a non-breaking space in the same text node', () => {
+        const { container } = renderWithMarker();
+        const label = container.querySelector('.nl-ordered-list__marker-label');
+        expect(label?.childNodes).toHaveLength(1);
+        expect(label?.textContent).toBe('Stap 1.\u{A0}');
+      });
     });
   });
 });

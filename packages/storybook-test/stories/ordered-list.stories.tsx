@@ -491,7 +491,7 @@ De CSS-eigenschap \`list-style-type: arabic-indic\` via de \`:lang(ar)\` selecto
 //       <span aria-hidden="true">
 //         <span class="nl-icon" aria-hidden="true"><svg class="tabler-icon tabler-icon-number-1">...</svg></span>
 //       </span>
-//       <span class="nl-ordered-list__marker-label">Stap 1. </span>
+//       <span class="nl-ordered-list__marker-label">Stap 1.&nbsp;</span>
 //     </span>
 //     Verzamel documenten
 //   </li>
@@ -500,7 +500,7 @@ De CSS-eigenschap \`list-style-type: arabic-indic\` via de \`:lang(ar)\` selecto
 //       <span aria-hidden="true">
 //         <span class="nl-icon" aria-hidden="true"><svg class="tabler-icon tabler-icon-number-2">...</svg></span>
 //       </span>
-//       <span class="nl-ordered-list__marker-label">Stap 2. </span>
+//       <span class="nl-ordered-list__marker-label">Stap 2.&nbsp;</span>
 //     </span>
 //     Maak een afspraak
 //   </li>

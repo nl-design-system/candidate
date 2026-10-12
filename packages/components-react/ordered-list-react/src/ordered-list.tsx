@@ -24,6 +24,16 @@ export interface OrderedListMarkerProps extends HTMLAttributes<HTMLSpanElement> 
 
 export const OrderedListMarker = forwardRef<HTMLSpanElement, OrderedListMarkerProps>((props, forwardedRef) => {
   const { children, className, label, ...restProps } = props;
+  // Non-breaking space in the same text node, so screen readers keep it (VoiceOver skips a separate one).
+  const labelWithSpace =
+    typeof label === 'string' ? (
+      `${label}\u{A0}`
+    ) : (
+      <>
+        {label}
+        {'\u{A0}'}
+      </>
+    );
 
   return (
     <span
@@ -32,7 +42,7 @@ export const OrderedListMarker = forwardRef<HTMLSpanElement, OrderedListMarkerPr
       {...restProps}
     >
       <span aria-hidden="true">{children}</span>
-      {label && <span className="nl-ordered-list__marker-label">{label}</span>}
+      {label && <span className="nl-ordered-list__marker-label">{labelWithSpace}</span>}
     </span>
   );
 });
