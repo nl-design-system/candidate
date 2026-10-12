@@ -19,6 +19,8 @@ describe('OrderedList (css import)', () => {
 
   it('exports `OrderedListItem` and `OrderedListMarker`', () => {
     expect(OrderedListItem).toBeDefined();
+  });
+  it('exports `OrderedListMarker`', () => {
     expect(OrderedListMarker).toBeDefined();
   });
 });
