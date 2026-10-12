@@ -1,53 +1,47 @@
 import type { Meta } from '@storybook/react-vite';
 import { OrderedList, OrderedListItem } from '@nl-design-system-candidate/ordered-list-react/css';
 
+const PROPS = 'Props';
+const API = 'API';
+
 const meta = {
   argTypes: {
+    restProps: {
+      name: '{...restProps}',
+      control: false,
+      description:
+        'Alle props en attributes die hier niet beschreven zijn worden direct op het HTML-element geplaatst. Dat betekent dat alle attributes van een HTML-element als prop geplaatst kunnen worden.',
+      table: {
+        category: PROPS,
+        type: {
+          summary: 'Examples',
+          detail: 'role="list"\nreversed\nstart={4}\ntype="A"\nlang="ar"',
+        },
+      },
+    },
     children: {
       control: false,
       description: 'Eén of meer `OrderedListItem` componenten.',
       table: {
-        category: 'API',
+        category: API,
         type: { summary: 'ReactNode' },
       },
-      type: { name: 'other', value: 'ReactNode', required: false },
     },
-    reversed: {
-      control: { type: 'boolean' },
-      description: 'Nummert de items in omgekeerde volgorde.',
+    className: {
+      control: 'text',
+      description: 'Optionele extra className voor het component.',
       table: {
-        category: 'API',
-        type: { summary: 'boolean' },
-      },
-      type: { name: 'boolean', required: false },
-    },
-    role: {
-      control: { type: 'text' },
-      description: 'Gebruik altijd `list`, zodat WebKit-browsers de lijst als lijst blijven herkennen.',
-      table: {
-        category: 'API',
+        category: PROPS,
         type: { summary: 'string' },
       },
-      type: { name: 'string', required: false },
     },
-    start: {
-      control: { type: 'number' },
-      description: 'Het nummer waarmee de lijst begint.',
+    ref: {
+      control: false,
+      description: 'Ref naar het `ol` HTML-element.',
       table: {
-        category: 'API',
-        type: { summary: 'number' },
+        category: PROPS,
+        type: { summary: 'Ref<HTMLOListElement>' },
       },
-      type: { name: 'number', required: false },
-    },
-    type: {
-      control: { type: 'select' },
-      description: 'Het soort nummering: cijfers, kleine of hoofdletters, of kleine of hoofdletters Romeinse cijfers.',
-      options: ['1', 'a', 'A', 'i', 'I'],
-      table: {
-        category: 'API',
-        type: { summary: "'1' | 'a' | 'A' | 'i' | 'I'" },
-      },
-      type: { name: 'string', required: false },
     },
   },
   component: OrderedList,
