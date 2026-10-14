@@ -112,7 +112,7 @@ list.
 
 ## Props
 
-### OrderedList
+### `OrderedList`
 
 | Prop        | Description                                                    | Type                    | Default |
 | ----------- | -------------------------------------------------------------- | ----------------------- | ------- |
@@ -123,7 +123,7 @@ list.
 In addition to the props above, `OrderedList` accepts all standard HTML attributes of an `<ol>` element,
 including `reversed`, `start`, and `type`, and forwards a `ref` to the underlying `<ol>` element.
 
-### OrderedListItem
+### `OrderedListItem`
 
 | Prop          | Description                                                                                                                                                                                         | Type                 | Default |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------- |
