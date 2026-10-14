@@ -4,7 +4,7 @@
   @include mixin.nl-ordered-list;
 }
 
-.nl-ordered-list:lang(ar) {
+.nl-ordered-list:where(:lang(ar)) {
   @include mixin.nl-ordered-list--lang-ar;
 }
 
@@ -20,7 +20,7 @@
   @include mixin.nl-ordered-list__marker;
 }
 
-.nl-ordered-list__marker.nl-ordered-list__marker--custom {
+.nl-ordered-list__marker--custom {
   @include mixin.nl-ordered-list__marker--custom;
 }
 
