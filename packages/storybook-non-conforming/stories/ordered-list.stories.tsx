@@ -1,6 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import componentMarkdown from '../../docs/ordered-list-docs/docs/component.md?raw';
-import { IconNumber1, IconNumber2, IconNumber3, IconPointFilled } from '@tabler/icons-react';
+import {
+  IconNumber1 as ExampleIconStep1,
+  IconNumber2 as ExampleIconStep2,
+  IconNumber3 as ExampleIconStep3,
+  IconPointFilled as ExampleIconPointFilled,
+} from '@tabler/icons-react';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/ordered-list-css/src/ordered-list.scss';
 import '../../components-css/ordered-list-css/src/test.scss';
@@ -97,7 +102,7 @@ export const OrderedListCustomMarkerNoRole: Story = {
         <span className="nl-ordered-list__marker">
           <span aria-hidden="true">
             <Icon>
-              <IconNumber1 />
+              <ExampleIconStep1 />
             </Icon>
           </span>
           <span className="nl-ordered-list__marker-label">Stap 1.&nbsp;</span>
@@ -108,7 +113,7 @@ export const OrderedListCustomMarkerNoRole: Story = {
         <span className="nl-ordered-list__marker">
           <span aria-hidden="true">
             <Icon>
-              <IconNumber2 />
+              <ExampleIconStep2 />
             </Icon>
           </span>
           <span className="nl-ordered-list__marker-label">Stap 2.&nbsp;</span>
@@ -331,7 +336,7 @@ export const OrderedListSVGNotAccessible: Story = {
       <OrderedListItem
         marker={
           <Icon>
-            <IconNumber1 />
+            <ExampleIconStep1 />
           </Icon>
         }
       >
@@ -341,7 +346,7 @@ export const OrderedListSVGNotAccessible: Story = {
       <OrderedListItem
         marker={
           <Icon>
-            <IconNumber2 />
+            <ExampleIconStep2 />
           </Icon>
         }
       >
@@ -379,7 +384,7 @@ export const OrderedListDecorativeIcon: Story = {
       <OrderedListItem
         marker={
           <Icon>
-            <IconPointFilled />
+            <ExampleIconPointFilled />
           </Icon>
         }
       >
@@ -389,7 +394,7 @@ export const OrderedListDecorativeIcon: Story = {
       <OrderedListItem
         marker={
           <Icon>
-            <IconPointFilled />
+            <ExampleIconPointFilled />
           </Icon>
         }
       >
@@ -399,7 +404,7 @@ export const OrderedListDecorativeIcon: Story = {
       <OrderedListItem
         marker={
           <Icon>
-            <IconPointFilled />
+            <ExampleIconPointFilled />
           </Icon>
         }
       >
@@ -436,7 +441,7 @@ export const OrderedListInformativeIconBadAlt: Story = {
       <OrderedListItem
         marker={
           <Icon>
-            <IconNumber1 />
+            <ExampleIconStep1 />
           </Icon>
         }
         markerLabel="Nummer Eén Icoon."
@@ -446,7 +451,7 @@ export const OrderedListInformativeIconBadAlt: Story = {
       <OrderedListItem
         marker={
           <Icon>
-            <IconNumber2 />
+            <ExampleIconStep2 />
           </Icon>
         }
         markerLabel="Nummer Twee Icoon."
@@ -456,7 +461,7 @@ export const OrderedListInformativeIconBadAlt: Story = {
       <OrderedListItem
         marker={
           <Icon>
-            <IconNumber3 />
+            <ExampleIconStep3 />
           </Icon>
         }
         markerLabel="Nummer Drie Icoon."

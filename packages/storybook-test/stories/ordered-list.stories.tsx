@@ -3,7 +3,7 @@ import { CandidateDisableCssDecorator } from '@nl-design-system-candidate/storyb
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { merge } from 'lodash-es';
-import { IconNumber1, IconNumber2 } from '@tabler/icons-react';
+import { IconNumber1 as ExampleIconStep1, IconNumber2 as ExampleIconStep2 } from '@tabler/icons-react';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/link-css/src/html/link.scss';
 import '../../components-css/link-css/src/link.scss';
@@ -513,7 +513,7 @@ export const OrderedListCustomMarkerLabel: Story = {
       <OrderedListItem
         marker={
           <Icon>
-            <IconNumber1 />
+            <ExampleIconStep1 />
           </Icon>
         }
         markerLabel="Stap 1."
@@ -523,7 +523,7 @@ export const OrderedListCustomMarkerLabel: Story = {
       <OrderedListItem
         marker={
           <Icon>
-            <IconNumber2 />
+            <ExampleIconStep2 />
           </Icon>
         }
         markerLabel="Stap 2."
@@ -570,7 +570,7 @@ export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
       <OrderedListItem
         marker={
           <Icon role="img" aria-label="Stap 1.">
-            <IconNumber1 />
+            <ExampleIconStep1 />
           </Icon>
         }
       >
@@ -580,7 +580,7 @@ export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
       <OrderedListItem
         marker={
           <Icon role="img" aria-label="Stap 2.">
-            <IconNumber2 />
+            <ExampleIconStep2 />
           </Icon>
         }
       >
@@ -663,7 +663,7 @@ export const OrderedListNLHTMLAll: Story = {
   name: 'Ordered List binnen `nl-html--all`',
   render: () => (
     <div className="nl-html nl-html--all">
-      <ol role="list">
+      <ol>
         <li>Paspoortfoto, niet ouder dan 6 maanden</li>
         <li>Je oude paspoort</li>
         <li>Je afspraakbevestiging</li>
@@ -676,9 +676,7 @@ export const OrderedListNLHTMLAll: Story = {
       description: {
         story: `Een geordende lijst zonder classes binnen een NL HTML-component.
 
-De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
-
-De semantiek wordt behouden door de HTML-attribuut \`role="list"\`.`,
+De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.`,
       },
     },
   },
@@ -697,7 +695,7 @@ export const OrderedListNLHTMLOrderedList: Story = {
   name: 'Ordered List binnen `nl-html--ordered-list`',
   render: () => (
     <div className="nl-html nl-html--ordered-list">
-      <ol role="list">
+      <ol>
         <li>Paspoortfoto, niet ouder dan 6 maanden</li>
         <li>Je oude paspoort</li>
         <li>Je afspraakbevestiging</li>
@@ -710,9 +708,7 @@ export const OrderedListNLHTMLOrderedList: Story = {
       description: {
         story: `Een geordende lijst zonder classes binnen een NL HTML-component.
 
-De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--ordered-list\` class.
-
-De semantiek wordt behouden door de HTML-attribuut \`role="list"\`.`,
+De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Ordered List-component toe op alle \`ol\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--ordered-list\` class.`,
       },
     },
   },
