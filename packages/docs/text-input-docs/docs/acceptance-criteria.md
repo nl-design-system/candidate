@@ -86,7 +86,7 @@ Boolean
 
 #### Required
 
-Boolean
+Boolean (code)
 
 - False (default)
 - True
