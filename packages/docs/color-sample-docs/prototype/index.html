@@ -1,0 +1,761 @@
+<!doctype html>
+<!-- @license CC0-1.0 -->
+<!--
+  This prototype was generated with AI (Claude Code). It is based on the acceptance criteria in
+  ../docs/acceptance-criteria.md and showcases the variants of the Color Sample component.
+  It is a prototype for discussion and review, not a reference implementation.
+-->
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Color Sample prototype</title>
+    <style>
+      /* ------------------------------------------------------------------
+         Component: .nl-color-sample (prototype van de CSS uit de acceptatiecriteria)
+         ------------------------------------------------------------------ */
+      :root {
+        --nl-color-sample-block-size: 1.5rem;
+        --nl-color-sample-inline-size: 1.5rem;
+        --nl-color-sample-border-color: hsl(0 0% 40%);
+        --nl-color-sample-border-radius: 0.25rem;
+        --nl-color-sample-border-width: 1px;
+        --nl-color-sample-background-color: hsl(0 0% 85%);
+        /* Geblokt patroon, zichtbaar achter kleurwaarden met transparantie */
+        --nl-color-sample-checkerboard: repeating-conic-gradient(
+          var(--nl-color-sample-background-color) 0% 25%,
+          #fff 0% 50%
+        );
+      }
+
+      .nl-color-sample {
+        /* HTML variant: de kleur komt uit `color`, getekend als laag boven het geblokte patroon */
+        background-image: linear-gradient(currentcolor, currentcolor), var(--nl-color-sample-checkerboard);
+        background-position: 0 0;
+        background-size:
+          100% 100%,
+          0.5rem 0.5rem;
+        block-size: var(--nl-color-sample-block-size);
+        border-color: var(--nl-color-sample-border-color);
+        border-radius: var(--nl-color-sample-border-radius);
+        border-style: solid;
+        border-width: var(--nl-color-sample-border-width);
+        box-sizing: border-box;
+        display: inline-block;
+        forced-color-adjust: none;
+        inline-size: var(--nl-color-sample-inline-size);
+        overflow: hidden;
+        pointer-events: none;
+        print-color-adjust: exact;
+        vertical-align: middle;
+      }
+
+      /* SVG variant: de kleur zit in `fill` op het `path`, alleen het patroon komt uit CSS */
+      svg.nl-color-sample {
+        background-image: var(--nl-color-sample-checkerboard);
+        background-size: 0.5rem 0.5rem;
+      }
+
+      .nl-color-sample:not(svg):not(:empty) {
+        outline: 3px dashed red; /* ❌ ongeldige configuratie markeren in het prototype */
+      }
+
+      @media (forced-colors: active) {
+        .nl-color-sample {
+          border-color: CanvasText;
+        }
+      }
+
+      /* CSP-vriendelijke kleuren via classes uit een stylesheet */
+      .kleur-rood {
+        color: #d52b1e;
+      }
+      .kleur-wit {
+        color: #ffffff;
+      }
+      .kleur-blauw {
+        color: #1e4b9b;
+      }
+      .kleur-oranje {
+        color: #ff7f00;
+      }
+
+      /* ------------------------------------------------------------------
+         Showcase-pagina
+         ------------------------------------------------------------------ */
+      :root {
+        --page-bg: #f7f7f8;
+        --surface: #ffffff;
+        --text: #1b1b1f;
+        --muted: #5b5b66;
+        --line: #dcdce2;
+        --code-bg: #f0f0f3;
+        --accent: #1e4b9b;
+        --ok: #1a7f37;
+        --bad: #c62828;
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --page-bg: #141417;
+          --surface: #1d1d22;
+          --text: #ececf1;
+          --muted: #a4a4b0;
+          --line: #34343c;
+          --code-bg: #26262d;
+          --accent: #8fb0ff;
+          --ok: #5bd17a;
+          --bad: #ff7a7a;
+          --nl-color-sample-border-color: hsl(0 0% 60%);
+        }
+      }
+      :root[data-theme="dark"] {
+        --page-bg: #141417;
+        --surface: #1d1d22;
+        --text: #ececf1;
+        --muted: #a4a4b0;
+        --line: #34343c;
+        --code-bg: #26262d;
+        --accent: #8fb0ff;
+        --ok: #5bd17a;
+        --bad: #ff7a7a;
+        --nl-color-sample-border-color: hsl(0 0% 60%);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: var(--page-bg);
+        color: var(--text);
+        font:
+          16px/1.5 system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        margin: 0;
+      }
+      header,
+      main {
+        margin-inline: auto;
+        max-inline-size: 72rem;
+        padding-inline: 16px;
+      }
+      header {
+        padding-block: 2.5rem 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+        margin: 0 0 0.25rem;
+      }
+      header p {
+        color: var(--muted);
+        margin: 0;
+        max-inline-size: 48rem;
+      }
+      .toolbar {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.25rem;
+        margin-block-start: 1.25rem;
+      }
+      .toolbar label {
+        align-items: center;
+        display: inline-flex;
+        gap: 0.4rem;
+      }
+      nav.toc {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-block-start: 1rem;
+      }
+      nav.toc a {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--accent);
+        font-size: 0.875rem;
+        padding: 0.15rem 0.7rem;
+        text-decoration: none;
+      }
+      section {
+        margin-block: 2.5rem;
+      }
+      section > h2 {
+        border-block-end: 1px solid var(--line);
+        font-size: 1.375rem;
+        margin: 0 0 0.25rem;
+        padding-block-end: 0.4rem;
+      }
+      section > p {
+        color: var(--muted);
+        margin-block: 0.5rem 1rem;
+        max-inline-size: 48rem;
+      }
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr));
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        min-inline-size: 0;
+      }
+      .card h3 {
+        align-items: center;
+        display: flex;
+        font-size: 1rem;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin: 0;
+        padding: 0.75rem 1rem 0;
+      }
+      .card .demo {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        min-block-size: 4.5rem;
+        padding: 1rem;
+      }
+      .card .note {
+        color: var(--muted);
+        font-size: 0.875rem;
+        margin: 0;
+        padding: 0 1rem 0.75rem;
+      }
+      .card pre {
+        background: var(--code-bg);
+        border-radius: 0 0 0.5rem 0.5rem;
+        border-block-start: 1px solid var(--line);
+        font:
+          0.75rem/1.5 ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          monospace;
+        margin: auto 0 0;
+        overflow-x: auto;
+        padding: 0.75rem 1rem;
+        white-space: pre;
+      }
+      .card h3 .tag {
+        margin-inline-start: auto;
+      }
+      .tag {
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.05rem 0.5rem;
+        white-space: nowrap;
+      }
+      .tag.ok {
+        background: color-mix(in srgb, var(--ok) 15%, transparent);
+        color: var(--ok);
+      }
+      .tag.bad {
+        background: color-mix(in srgb, var(--bad) 15%, transparent);
+        color: var(--bad);
+      }
+      .tag.info {
+        background: color-mix(in srgb, var(--accent) 15%, transparent);
+        color: var(--accent);
+      }
+      .swatch-row {
+        align-items: center;
+        display: inline-flex;
+        gap: 0.5rem;
+      }
+      .a11y {
+        color: var(--muted);
+        font-size: 0.8125rem;
+        margin: 0;
+        padding: 0 1rem 0.75rem;
+      }
+      .a11y code {
+        color: var(--text);
+      }
+      table {
+        border-collapse: collapse;
+        font-size: 0.875rem;
+        inline-size: 100%;
+      }
+      .table-wrap {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 0.5rem;
+        overflow-x: auto;
+      }
+      th,
+      td {
+        border-block-end: 1px solid var(--line);
+        padding: 0.5rem 0.75rem;
+        text-align: start;
+        vertical-align: middle;
+      }
+      tr:last-child td {
+        border-block-end: 0;
+      }
+      td code {
+        white-space: nowrap;
+      }
+      body.big .nl-color-sample {
+        --nl-color-sample-block-size: 3rem;
+        --nl-color-sample-inline-size: 3rem;
+      }
+      footer {
+        color: var(--muted);
+        font-size: 0.875rem;
+        margin-inline: auto;
+        max-inline-size: 72rem;
+        padding: 1rem 16px 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Color Sample</h1>
+      <p>
+        Prototype met alle varianten uit de acceptatiecriteria: SVG en HTML, transparantie,
+        toegankelijke naam en CSP. Elke kaart toont het voorbeeld en de bijbehorende markup.
+      </p>
+      <div class="toolbar">
+        <label><input type="checkbox" id="toggle-big" /> Grote samples</label>
+        <label>
+          Thema
+          <select id="theme">
+            <option value="">Systeem</option>
+            <option value="light">Licht</option>
+            <option value="dark">Donker</option>
+          </select>
+        </label>
+      </div>
+      <nav class="toc" aria-label="Inhoud">
+        <a href="#svg">SVG variant</a>
+        <a href="#html">HTML variant</a>
+        <a href="#transparantie">Transparantie</a>
+        <a href="#naam">Toegankelijke naam</a>
+        <a href="#csp">Content Security Policy</a>
+        <a href="#combinaties">Geldige combinaties</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ============================================================ -->
+      <section id="svg">
+        <h2>SVG variant</h2>
+        <p>
+          Een <code>svg</code> met een <code>path</code> dat het volledige vlak vult. De kleur staat in het
+          <code>fill</code>-attribuut, dus geen inline styles nodig. Blijft bruikbaar als losse afbeelding (opslaan,
+          afdrukken, slepen).
+        </p>
+        <div class="grid" data-examples>
+          <div class="card" data-example>
+            <h3>Eén kleur met <code>title</code> <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <svg
+                class="nl-color-sample"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 1 1"
+                preserveAspectRatio="none"
+              >
+                <title>Rood</title>
+                <path d="M0 0H1V1H0Z" fill="#d52b1e" />
+              </svg>
+              <span>Rood <code>#d52b1e</code></span>
+            </div>
+          </div>
+
+          <div class="card" data-example>
+            <h3>Eén kleur met <code>aria-label</code> <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <svg
+                class="nl-color-sample"
+                role="img"
+                aria-label="Blauw"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 1 1"
+                preserveAspectRatio="none"
+              >
+                <path d="M0 0H1V1H0Z" fill="#1e4b9b" />
+              </svg>
+              <span>Blauw <code>#1e4b9b</code></span>
+            </div>
+          </div>
+
+          <div class="card" data-example>
+            <h3>Named color <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <svg
+                class="nl-color-sample"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 1 1"
+                preserveAspectRatio="none"
+              >
+                <title>Deeppink</title>
+                <path d="M0 0H1V1H0Z" fill="deeppink" />
+              </svg>
+              <span>Deeppink <code>deeppink</code></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="html">
+        <h2>HTML variant</h2>
+        <p>
+          Een lege <code>span</code>, <code>div</code> of <code>data</code> die met CSS wordt vormgegeven. De kleur komt
+          uit de <code>color</code> CSS-property. Ziet er hetzelfde uit als de SVG variant.
+        </p>
+        <div class="grid" data-examples>
+          <div class="card" data-example>
+            <h3><code>span</code> <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <span class="nl-color-sample" role="img" aria-label="Rood" style="color: #d52b1e"></span>
+              <span>Rood <code>#d52b1e</code></span>
+            </div>
+          </div>
+
+          <div class="card" data-example>
+            <h3><code>div</code> <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <div class="nl-color-sample" role="img" aria-label="Blauw" style="color: #1e4b9b"></div>
+              <span>Blauw <code>#1e4b9b</code></span>
+            </div>
+          </div>
+
+          <div class="card" data-example>
+            <h3><code>data</code> <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <data class="nl-color-sample" value="#ff7f00" role="img" aria-label="Oranje" style="color: #ff7f00"></data>
+              <span>Oranje <code>#ff7f00</code></span>
+            </div>
+            <p class="note">Met machineleesbare kleurwaarde in het <code>value</code>-attribuut.</p>
+          </div>
+
+          <div class="card" data-example>
+            <h3>SVG en HTML naast elkaar <span class="tag info">Gelijk</span></h3>
+            <div class="demo">
+              <svg
+                class="nl-color-sample"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 1 1"
+                preserveAspectRatio="none"
+              >
+                <title>Rood (SVG)</title>
+                <path d="M0 0H1V1H0Z" fill="#d52b1e" />
+              </svg>
+              <span class="nl-color-sample" role="img" aria-label="Rood (HTML)" style="color: #d52b1e"></span>
+              <span>SVG · HTML</span>
+            </div>
+            <p class="note">Dezelfde kleurwaarde ziet er in beide varianten hetzelfde uit.</p>
+          </div>
+
+          <div class="card" data-example>
+            <h3>Met inhoud <span class="tag bad">Ongeldig</span></h3>
+            <div class="demo">
+              <span class="nl-color-sample" role="img" aria-label="Rood" style="color: #d52b1e">Rood</span>
+            </div>
+            <p class="note">De HTML variant heeft geen inhoud. Het prototype markeert dit met een rode stippellijn.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="transparantie">
+        <h2>Transparantie</h2>
+        <p>
+          Een kleurwaarde met transparantie is herkenbaar aan het geblokte patroon achter de kleur.
+        </p>
+        <div class="grid" data-examples>
+          <div class="card" data-example>
+            <h3>SVG: 50% dekking <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <svg
+                class="nl-color-sample"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 1 1"
+                preserveAspectRatio="none"
+              >
+                <title>Rood, 50% transparant</title>
+                <path d="M0 0H1V1H0Z" fill="rgb(213 43 30 / 50%)" />
+              </svg>
+              <span><code>rgb(213 43 30 / 50%)</code></span>
+            </div>
+          </div>
+
+          <div class="card" data-example>
+            <h3>HTML: 50% dekking <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <span
+                class="nl-color-sample"
+                role="img"
+                aria-label="Rood, 50% transparant"
+                style="color: rgb(213 43 30 / 50%)"
+              ></span>
+              <span><code>rgb(213 43 30 / 50%)</code></span>
+            </div>
+          </div>
+
+          <div class="card" data-example>
+            <h3>Volledig transparant <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <span class="nl-color-sample" role="img" aria-label="Transparant" style="color: transparent"></span>
+              <span><code>transparent</code></span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="naam">
+        <h2>Toegankelijke naam</h2>
+        <p>
+          Een informatieve Color Sample heeft <code>role="img"</code> en een naam die de kleur beschrijft. Een
+          decoratieve Color Sample is verborgen voor hulpsoftware. Nooit <code>tabindex</code>: de component is niet
+          interactief.
+        </p>
+        <div class="grid" data-examples>
+          <div class="card" data-example>
+            <h3><code>label</code> → <code>title</code> <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <svg
+                class="nl-color-sample"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 1 1"
+                preserveAspectRatio="none"
+              >
+                <title>Rood</title>
+                <path d="M0 0H1V1H0Z" fill="#d52b1e" />
+              </svg>
+            </div>
+            <p class="a11y">React: <code>&lt;ColorSample value="#d52b1e" label="Rood" /&gt;</code></p>
+          </div>
+
+          <div class="card" data-example>
+            <h3><code>aria-labelledby</code> <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <span class="swatch-row">
+                <svg
+                  class="nl-color-sample"
+                  role="img"
+                  aria-labelledby="kleur-naam"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 1 1"
+                  preserveAspectRatio="none"
+                >
+                  <path d="M0 0H1V1H0Z" fill="#d52b1e" />
+                </svg>
+                <span id="kleur-naam">Signaalrood</span>
+              </span>
+            </div>
+            <p class="a11y">De naam staat al in een ander element op de pagina.</p>
+          </div>
+
+          <div class="card" data-example>
+            <h3>Decoratief: <code>aria-hidden</code> <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <span class="swatch-row">
+                <svg
+                  class="nl-color-sample"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 1 1"
+                  preserveAspectRatio="none"
+                >
+                  <path d="M0 0H1V1H0Z" fill="#d52b1e" />
+                </svg>
+                <span>Rood <code>#d52b1e</code></span>
+              </span>
+            </div>
+            <p class="a11y">De naam van de kleur staat al in de tekst ernaast.</p>
+          </div>
+
+          <div class="card" data-example>
+            <h3>Geen toegankelijke naam <span class="tag bad">Ongeldig</span></h3>
+            <div class="demo">
+              <svg
+                class="nl-color-sample"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 1 1"
+                preserveAspectRatio="none"
+              >
+                <path d="M0 0H1V1H0Z" fill="#d52b1e" />
+              </svg>
+            </div>
+            <p class="a11y">Informatief maar zonder naam: hulpsoftware leest alleen "afbeelding" voor.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="csp">
+        <h2>Content Security Policy</h2>
+        <p>
+          De SVG variant werkt zonder inline styles, omdat de kleur in <code>fill</code> staat. De HTML variant krijgt
+          de kleur via een class uit een stylesheet.
+        </p>
+        <div class="grid" data-examples>
+          <div class="card" data-example>
+            <h3>HTML variant met classes <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <span class="nl-color-sample kleur-rood" role="img" aria-label="Rood"></span>
+              <span class="nl-color-sample kleur-wit" role="img" aria-label="Wit"></span>
+              <span class="nl-color-sample kleur-blauw" role="img" aria-label="Blauw"></span>
+              <span class="nl-color-sample kleur-oranje" role="img" aria-label="Oranje"></span>
+            </div>
+            <p class="note">Stylesheet: <code>.kleur-rood { color: #d52b1e; }</code></p>
+          </div>
+
+          <div class="card" data-example>
+            <h3>SVG variant zonder <code>style</code> <span class="tag ok">Geldig</span></h3>
+            <div class="demo">
+              <svg
+                class="nl-color-sample"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 1 1"
+                preserveAspectRatio="none"
+              >
+                <title>Oranje</title>
+                <path d="M0 0H1V1H0Z" fill="#ff7f00" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="combinaties">
+        <h2>Geldige combinaties React props</h2>
+        <p>Overzicht uit de acceptatiecriteria, met een render van wat de React component zou opleveren.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Configuratie</th>
+                <th scope="col">Voorbeeld</th>
+                <th scope="col">Geldig</th>
+                <th scope="col">Opmerking</th>
+              </tr>
+            </thead>
+            <tbody id="combinaties-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Test ook in Forced Colors modus (Windows Contrastthema of DevTools → Rendering → Emulate forced-colors) en in het
+      afdrukvoorbeeld met achtergronden uitgeschakeld: de opgegeven kleuren en de rand blijven zichtbaar.
+    </footer>
+
+    <script>
+      const SVG_NS = 'http://www.w3.org/2000/svg';
+      const BASE = 16;
+
+      // Bouwt de SVG variant zoals de React component dat zou doen
+      function createSvgSample(value, attrs = {}) {
+        const svg = document.createElementNS(SVG_NS, 'svg');
+        svg.setAttribute('class', 'nl-color-sample');
+        if (!attrs['aria-hidden']) svg.setAttribute('role', 'img');
+        svg.setAttribute('xmlns', SVG_NS);
+        svg.setAttribute('width', String(BASE));
+        svg.setAttribute('height', String(BASE));
+        svg.setAttribute('viewBox', '0 0 1 1');
+        svg.setAttribute('preserveAspectRatio', 'none');
+        for (const [k, v] of Object.entries(attrs)) if (k !== 'label') svg.setAttribute(k, v);
+        if (attrs.label) {
+          const title = document.createElementNS(SVG_NS, 'title');
+          title.textContent = attrs.label;
+          svg.append(title);
+        }
+        const path = document.createElementNS(SVG_NS, 'path');
+        path.setAttribute('d', 'M0 0H1V1H0Z');
+        path.setAttribute('fill', value);
+        svg.append(path);
+        return svg;
+      }
+
+      // Markup-snippet onder elk voorbeeld
+      function dedent(html) {
+        const lines = html.split('\n').filter((l) => l.trim());
+        const indent = Math.min(...lines.slice(1).map((l) => l.match(/^\s*/)[0].length));
+        return lines.map((l, i) => (i === 0 || !isFinite(indent) ? l : l.slice(Math.max(0, indent - 2)))).join('\n');
+      }
+      document.querySelectorAll('[data-example] .demo').forEach((demo) => {
+        const samples = demo.querySelectorAll('.nl-color-sample');
+        if (!samples.length) return;
+        const pre = document.createElement('pre');
+        pre.textContent = [...samples].map((s) => dedent(s.outerHTML)).join('\n\n');
+        demo.closest('.card').append(pre);
+      });
+
+      // Tabel met React-combinaties
+      const combinaties = [
+        ['<ColorSample value="#d52b1e" label="Rood" />', () => createSvgSample('#d52b1e', { label: 'Rood' }), true, 'Informatieve Color Sample met een toegankelijke naam.'],
+        ['<ColorSample value="#d52b1e" aria-labelledby="kleur-naam" />', () => createSvgSample('#d52b1e', { 'aria-labelledby': 'kleur-naam' }), true, 'De toegankelijke naam staat in een ander element op de pagina.'],
+        ['<ColorSample value="#d52b1e" aria-hidden="true" />', () => createSvgSample('#d52b1e', { 'aria-hidden': 'true' }), true, 'Decoratieve Color Sample, de naam van de kleur staat in de tekst ernaast.'],
+        ['<ColorSample value="#d52b1e" />', () => createSvgSample('#d52b1e'), false, 'Informatieve Color Sample zonder toegankelijke naam.'],
+        ['<ColorSample label="Rood" />', null, false, '`value` is verplicht.'],
+      ];
+      const tbody = document.getElementById('combinaties-body');
+      for (const [code, render, valid, note] of combinaties) {
+        const tr = document.createElement('tr');
+        const tdCode = document.createElement('td');
+        const c = document.createElement('code');
+        c.textContent = code;
+        tdCode.append(c);
+        const tdDemo = document.createElement('td');
+        tdDemo.append(render ? render() : document.createTextNode('—'));
+        const tdValid = document.createElement('td');
+        tdValid.innerHTML = valid ? '<span class="tag ok">Geldig</span>' : '<span class="tag bad">Ongeldig</span>';
+        const tdNote = document.createElement('td');
+        tdNote.textContent = note;
+        tr.append(tdCode, tdDemo, tdValid, tdNote);
+        tbody.append(tr);
+      }
+
+      // Toolbar
+      document.getElementById('toggle-big').addEventListener('change', (e) => {
+        document.body.classList.toggle('big', e.target.checked);
+      });
+      document.getElementById('theme').addEventListener('change', (e) => {
+        if (e.target.value) document.documentElement.dataset.theme = e.target.value;
+        else delete document.documentElement.dataset.theme;
+      });
+    </script>
+  </body>
+</html>
