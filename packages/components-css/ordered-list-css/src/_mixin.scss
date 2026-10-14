@@ -7,10 +7,6 @@
   margin-block-end: var(--nl-ordered-list-margin-block-end);
   margin-block-start: var(--nl-ordered-list-margin-block-start);
   padding-inline-start: var(--nl-ordered-list-padding-inline-start);
-
-  @media (forced-colors: active) {
-    color: currentColor;
-  }
 }
 
 @mixin nl-ordered-list--lang-ar {
@@ -25,10 +21,6 @@
 
 @mixin nl-ordered-list__marker {
   color: var(--nl-ordered-list-marker-color);
-
-  @media (forced-colors: active) {
-    color: currentColor;
-  }
 }
 
 // Aligns the custom marker with native ::marker behavior:

@@ -89,8 +89,8 @@ Voor de HTML component:
 
 ### Forced Colors modus
 
-- De Ordered List tekstkleur in Forced Colors modus is `currentColor`.
-- De Ordered List tekstkleur van de Custom Marker in Forced Colors modus is `currentColor`.
+- De Ordered List tekstkleur in Forced Colors modus is `currentColor` (standaard browsergedrag, geen eigen CSS nodig).
+- De Ordered List tekstkleur van de Custom Marker in Forced Colors modus is `currentColor` (standaard browsergedrag, geen eigen CSS nodig).
 
 ## Acceptatiecriteria toegankelijkheid van de component
 
