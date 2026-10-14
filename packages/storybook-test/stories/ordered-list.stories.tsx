@@ -1,4 +1,3 @@
-import { CandidateCenteredDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateCenteredDecorator';
 import { createCustomPropertiesDecorator } from '@nl-design-system-candidate/storybook-shared/src/CustomPropertiesDecorator';
 import { CandidateDisableCssDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateDisableCssDecorator';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
@@ -12,6 +11,7 @@ import '../../components-css/ordered-list-css/src/html/ordered-list.scss';
 import '../../components-css/ordered-list-css/src/ordered-list.scss';
 import '../../components-css/paragraph-css/src/html/paragraph.scss';
 import '../../components-css/paragraph-css/src/paragraph.scss';
+import '../../components-css/ordered-list-css/src/test.scss';
 import { Icon } from '../../components-react/icon-react/src/icon';
 import { Link } from '../../components-react/link-react/src/link';
 import packageJSON from '../../components-react/ordered-list-react/package.json';
@@ -1088,9 +1088,8 @@ export const OrderedListRichTextEditorNested: Story = {
 // Original: Story voor het centreren van de Ordered List. Dit omdat dit beschikbaar is in community en we daar een oplossing voor moeten laten zien.
 export const OrderedListCentered: Story = {
   name: 'Ordered List gecentreerd',
-  decorators: [CandidateCenteredDecorator],
   render: (args) => (
-    <OrderedList {...args}>
+    <OrderedList {...args} className="nl-ordered-list--example-center">
       <OrderedListItem>Paspoortfoto, niet ouder dan 6 maanden</OrderedListItem>
       <OrderedListItem>Je oude paspoort</OrderedListItem>
       <OrderedListItem>Je afspraakbevestiging</OrderedListItem>

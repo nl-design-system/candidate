@@ -1,5 +1,15 @@
-/* Foutieve voorbeeld-CSS voor de non-conforming Ordered List stories. Geen onderdeel van de Ordered List component:
-   de "example"-modifiers laten zien hoe je een Custom Marker níet moet maken. */
+/*
+ * Used for stories in Storybook
+ */
+
+/* Example of a centered list, not part of the component CSS. `inside` keeps the numbers next to the centered text. */
+.nl-ordered-list.nl-ordered-list--example-center {
+  list-style-position: inside;
+  padding-inline-start: 0;
+  text-align: center;
+}
+
+/* Incorrect Custom Marker examples for the non-conforming stories: they show how NOT to build a Custom Marker. */
 
 /* Custom Marker met tekst via counter-reset, counter-increment en de CSS-eigenschap content */
 .nl-ordered-list--example-counter-marker {

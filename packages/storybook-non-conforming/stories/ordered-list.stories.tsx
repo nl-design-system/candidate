@@ -3,6 +3,7 @@ import componentMarkdown from '../../docs/ordered-list-docs/docs/component.md?ra
 import { IconNumber1, IconNumber2, IconNumber3, IconPointFilled } from '@tabler/icons-react';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/ordered-list-css/src/ordered-list.scss';
+import '../../components-css/ordered-list-css/src/test.scss';
 import packageJSON from '../../components-react/ordered-list-react/package.json';
 import {
   OrderedList,
@@ -10,7 +11,6 @@ import {
   type OrderedListProps,
 } from '../../components-react/ordered-list-react/src/ordered-list';
 import { Icon } from '../../components-react/icon-react/src/icon';
-import { OrderedListExampleMarkersDecorator } from '../src/OrderedListExampleMarkersDecorator';
 
 const meta = {
   argTypes: {
@@ -234,7 +234,6 @@ Het probleem ontstaat omdat de emoji als marker is gebruikt zonder toegankelijke
 // Original: Ordered List met custom marker (Unicode emoji) via CSS `content`
 export const OrderedListEmojiAltInCssContent: Story = {
   name: 'Fout: Ordered List met Unicode emoji Custom Marker via CSS-eigenschap content',
-  decorators: [OrderedListExampleMarkersDecorator],
   render: (args) => (
     <OrderedList {...args} className="nl-ordered-list--example-emoji-marker">
       <OrderedListItem>Verzamel documenten.</OrderedListItem>
@@ -263,7 +262,6 @@ Het probleem ontstaat omdat de marker via de CSS-eigenschap \`content\` is toege
 // Original: Ordered List met custom marker via `list-style-image` gecombineerd met `::marker`
 export const OrderedListListStyleImage: Story = {
   name: 'Fout: Ordered List met Custom Marker via CSS-eigenschap list-style-image en pseudo-element marker',
-  decorators: [OrderedListExampleMarkersDecorator],
   render: (args) => (
     <OrderedList {...args} className="nl-ordered-list--example-image-marker">
       <OrderedListItem>Verzamel documenten.</OrderedListItem>
@@ -293,7 +291,6 @@ Het probleem ontstaat omdat de marker via de CSS-eigenschap \`list-style-image\`
 // Original: Ordered List met custom markers via `counter-reset` / `counter-increment` in CSS `content`
 export const OrderedListCounterContent: Story = {
   name: 'Fout: Ordered List met Custom Marker via CSS-eigenschappen counter-reset en counter-increment in CSS-eigenschap content',
-  decorators: [OrderedListExampleMarkersDecorator],
   render: (args) => (
     <OrderedList {...args} className="nl-ordered-list--example-counter-marker">
       <OrderedListItem>Verzamel documenten.</OrderedListItem>
