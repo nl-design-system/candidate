@@ -96,7 +96,7 @@
         color-scheme: light dark;
       }
       @media (prefers-color-scheme: dark) {
-        :root:not([data-theme="light"]) {
+        :root:not([data-theme='light']) {
           --page-bg: #141417;
           --surface: #1d1d22;
           --text: #ececf1;
@@ -109,7 +109,7 @@
           --nl-color-sample-border-color: hsl(0 0% 60%);
         }
       }
-      :root[data-theme="dark"] {
+      :root[data-theme='dark'] {
         --page-bg: #141417;
         --surface: #1d1d22;
         --text: #ececf1;
@@ -131,7 +131,7 @@
         font:
           16px/1.5 system-ui,
           -apple-system,
-          "Segoe UI",
+          'Segoe UI',
           sans-serif;
         margin: 0;
       }
@@ -320,8 +320,8 @@
     <header>
       <h1>Color Sample</h1>
       <p>
-        Prototype met alle varianten uit de acceptatiecriteria: SVG en HTML, transparantie,
-        toegankelijke naam en CSP. Elke kaart toont het voorbeeld en de bijbehorende markup.
+        Prototype met alle varianten uit de acceptatiecriteria: SVG en HTML, transparantie, toegankelijke naam en CSP.
+        Elke kaart toont het voorbeeld en de bijbehorende markup.
       </p>
       <div class="toolbar">
         <label><input type="checkbox" id="toggle-big" /> Grote samples</label>
@@ -440,7 +440,13 @@
           <div class="card" data-example>
             <h3><code>data</code> <span class="tag ok">Geldig</span></h3>
             <div class="demo">
-              <data class="nl-color-sample" value="#ff7f00" role="img" aria-label="Oranje" style="color: #ff7f00"></data>
+              <data
+                class="nl-color-sample"
+                value="#ff7f00"
+                role="img"
+                aria-label="Oranje"
+                style="color: #ff7f00"
+              ></data>
               <span>Oranje <code>#ff7f00</code></span>
             </div>
             <p class="note">Met machineleesbare kleurwaarde in het <code>value</code>-attribuut.</p>
@@ -480,9 +486,7 @@
       <!-- ============================================================ -->
       <section id="transparantie">
         <h2>Transparantie</h2>
-        <p>
-          Een kleurwaarde met transparantie is herkenbaar aan het geblokte patroon achter de kleur.
-        </p>
+        <p>Een kleurwaarde met transparantie is herkenbaar aan het geblokte patroon achter de kleur.</p>
         <div class="grid" data-examples>
           <div class="card" data-example>
             <h3>SVG: 50% dekking <span class="tag ok">Geldig</span></h3>
@@ -523,7 +527,6 @@
               <span><code>transparent</code></span>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -725,10 +728,30 @@
 
       // Tabel met React-combinaties
       const combinaties = [
-        ['<ColorSample value="#d52b1e" label="Rood" />', () => createSvgSample('#d52b1e', { label: 'Rood' }), true, 'Informatieve Color Sample met een toegankelijke naam.'],
-        ['<ColorSample value="#d52b1e" aria-labelledby="kleur-naam" />', () => createSvgSample('#d52b1e', { 'aria-labelledby': 'kleur-naam' }), true, 'De toegankelijke naam staat in een ander element op de pagina.'],
-        ['<ColorSample value="#d52b1e" aria-hidden="true" />', () => createSvgSample('#d52b1e', { 'aria-hidden': 'true' }), true, 'Decoratieve Color Sample, de naam van de kleur staat in de tekst ernaast.'],
-        ['<ColorSample value="#d52b1e" />', () => createSvgSample('#d52b1e'), false, 'Informatieve Color Sample zonder toegankelijke naam.'],
+        [
+          '<ColorSample value="#d52b1e" label="Rood" />',
+          () => createSvgSample('#d52b1e', { label: 'Rood' }),
+          true,
+          'Informatieve Color Sample met een toegankelijke naam.',
+        ],
+        [
+          '<ColorSample value="#d52b1e" aria-labelledby="kleur-naam" />',
+          () => createSvgSample('#d52b1e', { 'aria-labelledby': 'kleur-naam' }),
+          true,
+          'De toegankelijke naam staat in een ander element op de pagina.',
+        ],
+        [
+          '<ColorSample value="#d52b1e" aria-hidden="true" />',
+          () => createSvgSample('#d52b1e', { 'aria-hidden': 'true' }),
+          true,
+          'Decoratieve Color Sample, de naam van de kleur staat in de tekst ernaast.',
+        ],
+        [
+          '<ColorSample value="#d52b1e" />',
+          () => createSvgSample('#d52b1e'),
+          false,
+          'Informatieve Color Sample zonder toegankelijke naam.',
+        ],
         ['<ColorSample label="Rood" />', null, false, '`value` is verplicht.'],
       ];
       const tbody = document.getElementById('combinaties-body');
