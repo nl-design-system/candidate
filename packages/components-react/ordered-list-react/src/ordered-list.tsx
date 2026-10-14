@@ -2,15 +2,14 @@ import { clsx } from 'clsx';
 import { forwardRef, type HTMLAttributes, type LiHTMLAttributes, type OlHTMLAttributes, type ReactNode } from 'react';
 
 // `role` is not configurable: the component always sets `role="list"`.
-export interface OrderedListProps extends Omit<OlHTMLAttributes<HTMLOListElement>, 'role'> {
-  children?: ReactNode;
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export interface OrderedListProps extends Omit<OlHTMLAttributes<HTMLOListElement>, 'role'> {}
 
 export const OrderedList = forwardRef<HTMLOListElement, OrderedListProps>((props, forwardedRef) => {
   const { children, className, ...restProps } = props;
 
   return (
-    <ol className={clsx('nl-ordered-list', className)} ref={forwardedRef} {...restProps} role="list">
+    <ol className={clsx('nl-ordered-list', className)} role="list" ref={forwardedRef} {...restProps}>
       {children}
     </ol>
   );
@@ -19,7 +18,6 @@ export const OrderedList = forwardRef<HTMLOListElement, OrderedListProps>((props
 OrderedList.displayName = 'OrderedList';
 
 export interface OrderedListMarkerProps extends HTMLAttributes<HTMLSpanElement> {
-  children?: ReactNode;
   label?: ReactNode;
 }
 
@@ -51,9 +49,7 @@ type OrderedListItemMarkerProps =
   | { marker?: undefined; markerLabel?: undefined }
   | { marker: ReactNode; markerLabel: ReactNode };
 
-export type OrderedListItemProps = LiHTMLAttributes<HTMLLIElement> & {
-  children?: ReactNode;
-} & OrderedListItemMarkerProps;
+export type OrderedListItemProps = LiHTMLAttributes<HTMLLIElement> & {} & OrderedListItemMarkerProps;
 
 export const OrderedListItem = forwardRef<HTMLLIElement, OrderedListItemProps>((props, forwardedRef) => {
   const { children, className, marker, markerLabel, ...restProps } = props;
