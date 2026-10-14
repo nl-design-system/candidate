@@ -37,11 +37,7 @@ export const OrderedListMarker = forwardRef<HTMLSpanElement, OrderedListMarkerPr
     );
 
   return (
-    <span
-      className={clsx('nl-ordered-list__marker', 'nl-ordered-list__marker--custom', className)}
-      ref={forwardedRef}
-      {...restProps}
-    >
+    <span className={clsx('nl-ordered-list__marker', className)} ref={forwardedRef} {...restProps}>
       <span aria-hidden="true">{children}</span>
       {label && <span className="nl-ordered-list__marker-label">{labelWithSpace}</span>}
     </span>
@@ -63,11 +59,7 @@ export const OrderedListItem = forwardRef<HTMLLIElement, OrderedListItemProps>((
   const { children, className, marker, markerLabel, ...restProps } = props;
 
   return (
-    <li
-      className={clsx('nl-ordered-list__item', marker && 'nl-ordered-list__item--custom-marker', className)}
-      ref={forwardedRef}
-      {...restProps}
-    >
+    <li className={clsx('nl-ordered-list__item', className)} ref={forwardedRef} {...restProps}>
       {marker && <OrderedListMarker label={markerLabel}>{marker}</OrderedListMarker>}
       {children}
     </li>

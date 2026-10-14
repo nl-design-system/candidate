@@ -485,8 +485,8 @@ De CSS-eigenschap \`list-style-type: arabic-indic\` via de \`:lang(ar)\` selecto
 };
 
 // <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span aria-hidden="true">
 //         <span class="nl-icon" aria-hidden="true"><svg class="tabler-icon tabler-icon-number-1">...</svg></span>
 //       </span>
@@ -494,8 +494,8 @@ De CSS-eigenschap \`list-style-type: arabic-indic\` via de \`:lang(ar)\` selecto
 //     </span>
 //     Verzamel documenten
 //   </li>
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span aria-hidden="true">
 //         <span class="nl-icon" aria-hidden="true"><svg class="tabler-icon tabler-icon-number-2">...</svg></span>
 //       </span>
@@ -542,14 +542,14 @@ export const OrderedListCustomMarkerLabel: Story = {
 };
 
 // <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span class="nl-icon" role="img" aria-label="Stap 1."><svg class="tabler-icon tabler-icon-number-1">...</svg></span>
 //     </span>
 //     Verzamel documenten
 //   </li>
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span class="nl-icon" role="img" aria-label="Stap 2."><svg class="tabler-icon tabler-icon-number-2">...</svg></span>
 //     </span>
 //     Maak een afspraak

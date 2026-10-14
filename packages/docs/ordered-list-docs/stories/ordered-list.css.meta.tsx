@@ -26,19 +26,10 @@ const meta = {
         type: { summary: undefined },
       },
     },
-    nlOrderedListItemCustomMarker: {
-      name: 'nl-ordered-list__item--custom-marker',
-      description: 'Verbergt het standaard nummer van een item met een Custom Marker.',
-      control: false,
-      table: {
-        category: CLASSES,
-        type: { summary: undefined },
-      },
-    },
-    nlOrderedListMarkerCustom: {
-      name: 'nl-ordered-list__marker nl-ordered-list__marker--custom',
+    nlOrderedListMarker: {
+      name: 'nl-ordered-list__marker',
       description:
-        'De Custom Marker, op een HTML-element `span` in het item. Het icoon erin is verborgen voor hulpsoftware met het HTML-attribuut `aria-hidden="true"`.',
+        'De Custom Marker, op een HTML-element `span` als direct child van het item. Het item verbergt dan het standaard nummer. Het icoon erin is verborgen voor hulpsoftware met het HTML-attribuut `aria-hidden="true"`.',
       control: false,
       table: {
         category: CLASSES,

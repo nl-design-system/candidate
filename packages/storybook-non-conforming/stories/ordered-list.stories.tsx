@@ -73,15 +73,15 @@ De React-component zet \`role="list"\` automatisch; deze fout ontstaat alleen bi
 };
 
 // <ol class="nl-ordered-list">
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
 //       <span class="nl-ordered-list__marker-label">Stap 1.&nbsp;</span>
 //     </span>
 //     Verzamel documenten.
 //   </li>
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
 //       <span class="nl-ordered-list__marker-label">Stap 2.&nbsp;</span>
 //     </span>
@@ -93,8 +93,8 @@ export const OrderedListCustomMarkerNoRole: Story = {
   name: 'Fout: Ordered List met Custom Marker zonder HTML-attribuut role="list"',
   render: () => (
     <ol className="nl-ordered-list">
-      <li className="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-        <span className="nl-ordered-list__marker nl-ordered-list__marker--custom">
+      <li className="nl-ordered-list__item">
+        <span className="nl-ordered-list__marker">
           <span aria-hidden="true">
             <Icon>
               <IconNumber1 />
@@ -104,8 +104,8 @@ export const OrderedListCustomMarkerNoRole: Story = {
         </span>
         Verzamel documenten.
       </li>
-      <li className="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-        <span className="nl-ordered-list__marker nl-ordered-list__marker--custom">
+      <li className="nl-ordered-list__item">
+        <span className="nl-ordered-list__marker">
           <span aria-hidden="true">
             <Icon>
               <IconNumber2 />
@@ -187,14 +187,14 @@ Het probleem ontstaat doordat de WAI-ARIA-attributen \`aria-posinset\` en \`aria
 };
 
 // <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span aria-hidden="true">1️⃣</span>
 //     </span>
 //     Verzamel documenten.
 //   </li>
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span aria-hidden="true">2️⃣</span>
 //     </span>
 //     Plan een afspraak.
@@ -309,14 +309,14 @@ Het probleem ontstaat omdat de tekst met de CSS-eigenschappen \`counter-reset\` 
 };
 
 // <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
 //     </span>
 //     Verzamel documenten.
 //   </li>
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
 //     </span>
 //     Maak een afspraak.
@@ -363,8 +363,8 @@ Dit kan via een zichtbare tekst, een visueel verstopte tekst of het WAI-ARIA-att
 };
 
 // <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg><!-- bolletje --></svg></span></span>
 //     </span>
 //     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
@@ -420,8 +420,8 @@ Als een lijst wel leestekens nodig heeft voor nummering, dan is het de bedoeling
 };
 
 // <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-//     <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+//   <li class="nl-ordered-list__item">
+//     <span class="nl-ordered-list__marker">
 //       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
 //       <span class="nl-ordered-list__marker-label">Nummer Eén Icoon.&nbsp;</span>
 //     </span>

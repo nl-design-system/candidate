@@ -113,9 +113,6 @@ Voor de HTML component:
   - `nl-ordered-list__marker` voor `::marker` als mixin en voor Custom Marker als class
   - `nl-ordered-list__marker-label`
 
-- Modifier classes:
-  - `nl-ordered-list__marker--custom` voor Custom Marker
-
 - HTML classes:
   - `nl-html--all`
   - `nl-html--ordered-list`
@@ -125,13 +122,12 @@ Voor de HTML component:
 
 #### Geldige combinaties van CSS classes
 
-| Configuratie                                                    | Geldig | Opmerking                                                                                                                                                                                                                                                                              |
-| --------------------------------------------------------------- | :----: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `nl-ordered-list`                                               |   ✅   |                                                                                                                                                                                                                                                                                        |
-| `nl-ordered-list__item`                                         |   ✅   | Gebruik als child van `nl-ordered-list`.                                                                                                                                                                                                                                               |
-| `nl-ordered-list__marker`                                       |   ❌   | Gebruik deze class niet zonder de modifier `nl-ordered-list__marker--custom`. Deze class voegt styling die wordt gedeeld door het pseudo-element `::marker` en de Custom Marker. De modifier `nl-ordered-list__marker--custom` voegt de aanvullende styling toe voor de Custom Marker. |
-| `nl-ordered-list__marker` met `nl-ordered-list__marker--custom` |   ✅   | Gebruik een Custom Marker binnen een `nl-ordered-list__item`.                                                                                                                                                                                                                          |
-| `nl-ordered-list__marker-label`                                 |   ✅   | Gebruik als child van `nl-ordered-list__marker`.                                                                                                                                                                                                                                       |
+| Configuratie                    | Geldig | Opmerking                                                     |
+| ------------------------------- | :----: | ------------------------------------------------------------- |
+| `nl-ordered-list`               |   ✅   |                                                               |
+| `nl-ordered-list__item`         |   ✅   | Gebruik als child van `nl-ordered-list`.                      |
+| `nl-ordered-list__marker`       |   ✅   | Gebruik een Custom Marker binnen een `nl-ordered-list__item`. |
+| `nl-ordered-list__marker-label` |   ✅   | Gebruik als child van `nl-ordered-list__marker`.              |
 
 ## React API
 
@@ -166,14 +162,14 @@ Alle standaard HTML-attributen en events worden doorgestuurd naar het onderligge
 
 De volgende props worden expliciet ondersteund:
 
-| Prop          | Type                              | Default | Verplicht | Omschrijving                                                                                                            |
-| ------------- | --------------------------------- | ------- | --------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `children`    | `ReactNode`                       | -       | nee       | De inhoud van de component.                                                                                             |
-| `marker`      | `ReactNode`                       | -       | nee       | De inhoud van de Custom Marker slot, weergegeven in een `span.nl-ordered-list__marker.nl-ordered-list__marker--custom`. |
-| `markerLabel` | `ReactNode`                       | -       | nee\*     | Toegankelijke naam voor de Custom Marker. Verplicht wanneer `marker` is opgegeven.                                      |
-| `className`   | `string`                          | -       | nee       | Extra CSS classes naast `nl-ordered-list__item`.                                                                        |
-| `ref`         | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                                                           |
-| `restProps`   | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element.                             |
+| Prop          | Type                              | Default | Verplicht | Omschrijving                                                                                |
+| ------------- | --------------------------------- | ------- | --------- | ------------------------------------------------------------------------------------------- |
+| `children`    | `ReactNode`                       | -       | nee       | De inhoud van de component.                                                                 |
+| `marker`      | `ReactNode`                       | -       | nee       | De inhoud van de Custom Marker slot, weergegeven in een `span.nl-ordered-list__marker`.     |
+| `markerLabel` | `ReactNode`                       | -       | nee\*     | Toegankelijke naam voor de Custom Marker. Verplicht wanneer `marker` is opgegeven.          |
+| `className`   | `string`                          | -       | nee       | Extra CSS classes naast `nl-ordered-list__item`.                                            |
+| `ref`         | `Ref<HTMLLIElement>`              | -       | nee       | Ref naar het onderliggende `li` HTML-element.                                               |
+| `restProps`   | `LiHTMLAttributes<HTMLLIElement>` | -       | nee       | Overige standaard HTML-attributen en events worden doorgestuurd naar het `li` HTML-element. |
 
 #### Geldige combinaties van React OrderedListItem properties
 

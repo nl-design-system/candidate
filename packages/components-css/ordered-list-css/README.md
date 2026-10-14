@@ -47,26 +47,24 @@ If you use SCSS:
 
 ## CSS classes
 
-| name                                                       | description                                                                                                      |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `.nl-ordered-list`                                         | The main class. Use it on an `<ol>` element.                                                                     |
-| `.nl-ordered-list__item`                                   | The list item class. Use it on each `<li>` element.                                                              |
-| `.nl-ordered-list__item--custom-marker`                    | Suppresses the default counter on an item with a custom marker.                                                  |
-| `.nl-ordered-list__marker.nl-ordered-list__marker--custom` | The custom marker container. Use it on a `<span>` inside `.nl-ordered-list__item`.                               |
-| `.nl-ordered-list__marker-label`                           | Visually hidden label inside a custom marker. Use it on a `<span>` element.                                      |
-| `.nl-html--all`                                            | HTML context class (from `html/ordered-list.css`). Styles every `<ol>` and its direct `<li>` children inside it. |
-| `.nl-html--ordered-list`                                   | HTML context class (from `html/ordered-list.css`). Styles every `<ol>` and its direct `<li>` children inside it. |
+| name                             | description                                                                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `.nl-ordered-list`               | The main class. Use it on an `<ol>` element.                                                                                              |
+| `.nl-ordered-list__item`         | The list item class. Use it on each `<li>` element.                                                                                       |
+| `.nl-ordered-list__marker`       | The custom marker container. Use it on a `<span>` as a direct child of `.nl-ordered-list__item`; the item then hides its default counter. |
+| `.nl-ordered-list__marker-label` | Visually hidden label inside a custom marker. Use it on a `<span>` element.                                                               |
+| `.nl-html--all`                  | HTML context class (from `html/ordered-list.css`). Styles every `<ol>` and its direct `<li>` children inside it.                          |
+| `.nl-html--ordered-list`         | HTML context class (from `html/ordered-list.css`). Styles every `<ol>` and its direct `<li>` children inside it.                          |
 
 ## SCSS mixins
 
-| name                              | description                                                               |
-| --------------------------------- | ------------------------------------------------------------------------- |
-| `nl-ordered-list`                 | Styles for the ordered list container                                     |
-| `nl-ordered-list--lang-ar`        | Arabic-Indic numbering; include it in a `:lang(ar)` selector for the list |
-| `nl-ordered-list__item`           | Styles for each list item                                                 |
-| `nl-ordered-list__marker`         | Shared styles for the marker                                              |
-| `nl-ordered-list__marker--custom` | Additional layout styles for the custom marker                            |
-| `nl-ordered-list__marker-label`   | Visually hidden label styles                                              |
+| name                            | description                                                               |
+| ------------------------------- | ------------------------------------------------------------------------- |
+| `nl-ordered-list`               | Styles for the ordered list container                                     |
+| `nl-ordered-list--lang-ar`      | Arabic-Indic numbering; include it in a `:lang(ar)` selector for the list |
+| `nl-ordered-list__item`         | Styles for each list item                                                 |
+| `nl-ordered-list__marker`       | Shared styles for the marker                                              |
+| `nl-ordered-list__marker-label` | Visually hidden label styles                                              |
 
 ## Usage
 
@@ -90,8 +88,8 @@ readers read the label and the item text as separate words.
 
 ```html
 <ol class="nl-ordered-list" role="list">
-  <li class="nl-ordered-list__item nl-ordered-list__item--custom-marker">
-    <span class="nl-ordered-list__marker nl-ordered-list__marker--custom">
+  <li class="nl-ordered-list__item">
+    <span class="nl-ordered-list__marker">
       <span aria-hidden="true"><!-- icon --></span>
       <span class="nl-ordered-list__marker-label">Step 1.&nbsp;</span>
     </span>

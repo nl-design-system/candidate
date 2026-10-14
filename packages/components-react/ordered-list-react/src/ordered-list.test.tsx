@@ -137,11 +137,6 @@ describe('Ordered List Item', () => {
       const element = container.querySelector('li');
       expect(element).toHaveClass('nl-ordered-list__item', extraOrderedListItemClassName);
     });
-    it('does not add the `nl-ordered-list__item--custom-marker` class when `marker` is not provided', () => {
-      const { container } = renderList();
-      const element = container.querySelector('.nl-ordered-list__item--custom-marker');
-      expect(element).not.toBeInTheDocument();
-    });
   });
 
   describe('Component API', () => {
@@ -229,7 +224,7 @@ describe('Ordered List Custom Marker when `marker` is provided', () => {
     it('renders the custom marker HTML-element `span`', () => {
       // @ts-expect-error `markerLabel` is required with `marker`; this test documents what renders for that invalid combination
       const { container } = renderList({}, <OrderedListItem marker={markerIcon}>Item 1</OrderedListItem>);
-      const element = container.querySelector('.nl-ordered-list__marker--custom');
+      const element = container.querySelector('.nl-ordered-list__marker');
       expect(element).toBeInTheDocument();
     });
     it('does not render the marker label HTML-element `span`', () => {
@@ -244,30 +239,24 @@ describe('Ordered List Custom Marker when `marker` is provided', () => {
     describe('CSS API', () => {
       it.each([
         ['nl-ordered-list__marker', '.nl-ordered-list__marker'],
-        ['nl-ordered-list__marker--custom', '.nl-ordered-list__marker--custom'],
         ['nl-ordered-list__marker-label', '.nl-ordered-list__marker-label'],
       ])('adds the `%s` class by default', (_, selector) => {
         const { container } = renderWithMarker();
         expect(container.querySelector(selector)).toBeInTheDocument();
-      });
-      it('adds the `nl-ordered-list__item--custom-marker` class to the item', () => {
-        const { container } = renderWithMarker();
-        const element = container.querySelector('li');
-        expect(element).toHaveClass('nl-ordered-list__item', 'nl-ordered-list__item--custom-marker');
       });
     });
 
     describe('Component API', () => {
       it('renders the custom marker HTML-element `span`', () => {
         const { container } = renderWithMarker();
-        const element = container.querySelector('.nl-ordered-list__marker--custom');
+        const element = container.querySelector('.nl-ordered-list__marker');
         expect(element).toBeInTheDocument();
         expect(element?.tagName).toBe('SPAN');
       });
 
       it('has the HTML-attribute `aria-hidden="true"` on the icon wrapper `span`', () => {
         const { container } = renderWithMarker();
-        const marker = container.querySelector('.nl-ordered-list__marker--custom');
+        const marker = container.querySelector('.nl-ordered-list__marker');
         const iconWrapper = marker?.firstElementChild;
         expect(iconWrapper?.tagName).toBe('SPAN');
         expect(iconWrapper).toHaveAttribute('aria-hidden', 'true');
@@ -277,7 +266,7 @@ describe('Ordered List Custom Marker when `marker` is provided', () => {
 
       it('does not hide the marker label with the HTML-attribute `aria-hidden`', () => {
         const { container } = renderWithMarker();
-        const marker = container.querySelector('.nl-ordered-list__marker--custom');
+        const marker = container.querySelector('.nl-ordered-list__marker');
         const label = container.querySelector('.nl-ordered-list__marker-label');
         expect(marker).not.toHaveAttribute('aria-hidden');
         expect(label).not.toHaveAttribute('aria-hidden');
@@ -285,7 +274,7 @@ describe('Ordered List Custom Marker when `marker` is provided', () => {
 
       it('supports phrasing content in the custom marker', () => {
         const { container } = renderWithMarker(<strong>1</strong>);
-        const marker = container.querySelector('.nl-ordered-list__marker--custom');
+        const marker = container.querySelector('.nl-ordered-list__marker');
         const iconWrapper = marker?.firstElementChild;
         expect(iconWrapper).toContainHTML('<strong>1</strong>');
       });
