@@ -33,6 +33,13 @@ Enum
 - xl
 - stretch (100%)
 
+#### Show Value
+
+Boolean (design)
+
+- False (default)
+- True
+
 #### Value
 
 String (code) / Text - string (design)
