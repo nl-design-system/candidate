@@ -9,7 +9,7 @@ export const OrderedList = forwardRef<HTMLOListElement, OrderedListProps>((props
   const { children, className, ...restProps } = props;
 
   return (
-    <ol className={clsx('nl-ordered-list', className)} role="list" ref={forwardedRef} {...restProps}>
+    <ol className={clsx('nl-ordered-list', className)} ref={forwardedRef} {...restProps} role="list">
       {children}
     </ol>
   );
