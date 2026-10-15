@@ -56,6 +56,8 @@
     "@nl-design-system-candidate/paragraph-react": "workspace:*",
     "@nl-design-system-candidate/skip-link-docs": "workspace:*",
     "@nl-design-system-candidate/storybook-shared": "workspace:*",
+    "@nl-design-system-candidate/text-area-docs": "workspace:*",
+    "@nl-design-system-candidate/text-area-react": "workspace:*",
     "@nl-design-system-candidate/unordered-list-docs": "workspace:*",
     "@nl-design-system-candidate/unordered-list-react": "workspace:*",
     "@nl-design-system-unstable/voorbeeld-design-tokens": "7.4.1",
