@@ -36,7 +36,10 @@ You can import the CSS directly from a CDN
 You can import the CSS directly from the `node_modules/`
 
 ```html
-<link rel="stylesheet" href="node_modules/@nl-design-system-candidate/form-field-status-css/dist/form-field-status.css" />
+<link
+  rel="stylesheet"
+  href="node_modules/@nl-design-system-candidate/form-field-status-css/dist/form-field-status.css"
+/>
 ```
 
 You can import the CSS from JavaScript

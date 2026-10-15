@@ -1,9 +1,8 @@
 import type { Meta } from '@storybook/react-vite';
 import { FormFieldStatus as FormFieldStatusComponent } from '@nl-design-system-candidate/form-field-status-react/css';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const PROPS = 'Props';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 const API = 'API';
 
 const meta = {
