@@ -22,7 +22,7 @@ These component tokens can be removed once this pull request https://github.com/
   --nl-form-field-error-message-margin-block-start: var(--basis-space-none);
   --nl-form-field-error-message-margin-block-end: var(--basis-space-none);
   --nl-form-field-error-message-icon-size: var(--basis-size-icon-md);
-  --nl-unordered-list-color: var(--nl-ordered-list-color);
+  --nl-unordered-list-color: var(--basis-color-default-color-document);
   --nl-unordered-list-font-family: var(--basis-text-font-family-default);
   --nl-unordered-list-font-size: var(--basis-text-font-size-md);
   --nl-unordered-list-line-height: var(--basis-text-line-height-md);
@@ -32,5 +32,5 @@ These component tokens can be removed once this pull request https://github.com/
   --nl-unordered-list-item-margin-block-start: var(--basis-space-block-sm);
   --nl-unordered-list-item-margin-block-end: var(--basis-space-block-sm);
   --nl-unordered-list-item-padding-inline-start: var(--basis-space-inline-md);
-  --nl-unordered-list-marker-color: var(--nl-ordered-list-marker-color);
+  --nl-unordered-list-marker-color: var(--nl-unordered-list-color);
 }

@@ -7,10 +7,6 @@
   margin-block-end: var(--nl-unordered-list-margin-block-end);
   margin-block-start: var(--nl-unordered-list-margin-block-start);
   padding-inline-start: var(--nl-unordered-list-padding-inline-start);
-
-  @media (forced-colors: active) {
-    color: currentColor;
-  }
 }
 
 @mixin nl-unordered-list__item {
@@ -21,10 +17,6 @@
 
 @mixin nl-unordered-list__marker {
   color: var(--nl-unordered-list-marker-color);
-
-  @media (forced-colors: active) {
-    color: currentColor;
-  }
 }
 
 // Aligns the custom marker with native ::marker behavior:

@@ -9,9 +9,6 @@ type Story = StoryObj<UnorderedListProps>;
 
 export const UnorderedList: Story = {
   name: 'Unordered List',
-  args: {
-    role: 'list',
-  },
   render: (args) => (
     <UnorderedListComponent {...args}>
       <UnorderedListItem>

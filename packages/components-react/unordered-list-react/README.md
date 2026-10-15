@@ -31,10 +31,10 @@ With built-in CSS:
 ```jsx
 import { UnorderedList, UnorderedListItem } from '@nl-design-system-candidate/unordered-list-react/css';
 
-<UnorderedList role="list">
-  <UnorderedListItem>Paspoortfoto, niet ouder dan 6 maanden</UnorderedListItem>
-  <UnorderedListItem>Je oude paspoort</UnorderedListItem>
-  <UnorderedListItem>Je afspraakbevestiging</UnorderedListItem>
+<UnorderedList>
+  <UnorderedListItem>Passport photo, no older than 6 months</UnorderedListItem>
+  <UnorderedListItem>Your old passport</UnorderedListItem>
+  <UnorderedListItem>Your appointment confirmation</UnorderedListItem>
 </UnorderedList>;
 ```
 
@@ -43,17 +43,12 @@ Only the React component. You still need to import the CSS separately:
 ```jsx
 import { UnorderedList, UnorderedListItem } from '@nl-design-system-candidate/unordered-list-react';
 
-<UnorderedList role="list">
-  <UnorderedListItem>Paspoortfoto, niet ouder dan 6 maanden</UnorderedListItem>
-  <UnorderedListItem>Je oude paspoort</UnorderedListItem>
-  <UnorderedListItem>Je afspraakbevestiging</UnorderedListItem>
+<UnorderedList>
+  <UnorderedListItem>Passport photo, no older than 6 months</UnorderedListItem>
+  <UnorderedListItem>Your old passport</UnorderedListItem>
+  <UnorderedListItem>Your appointment confirmation</UnorderedListItem>
 </UnorderedList>;
 ```
-
-### Always add `role="list"`
-
-Always add `role="list"` to the `UnorderedList`. WebKit browsers remove list semantics when `list-style` is
-set to `none` via CSS, for example by a theme or a reset stylesheet; the `role="list"` attribute restores them.
 
 ### With a custom marker
 
@@ -65,16 +60,16 @@ text.
 import { Icon } from '@example/icon-react';
 import { IconPointFilled } from '@example/icons';
 
-<UnorderedList role="list">
+<UnorderedList>
   <UnorderedListItem
     marker={
       <Icon>
         <IconPointFilled />
       </Icon>
     }
-    markerLabel="Leesteken"
+    markerLabel="Bullet"
   >
-    Paspoortfoto, niet ouder dan 6 maanden
+    Passport photo, no older than 6 months
   </UnorderedListItem>
   <UnorderedListItem
     marker={
@@ -82,9 +77,9 @@ import { IconPointFilled } from '@example/icons';
         <IconPointFilled />
       </Icon>
     }
-    markerLabel="Leesteken"
+    markerLabel="Bullet"
   >
-    Je oude paspoort
+    Your old passport
   </UnorderedListItem>
 </UnorderedList>;
 ```
@@ -102,21 +97,21 @@ The `UnorderedListItem` accepts plain text and phrasing content as `children`, f
 as `<strong>`, `<em>` and links. It can also contain `<p>` elements and a nested `UnorderedList`.
 
 ```jsx
-<UnorderedList role="list">
+<UnorderedList>
   <UnorderedListItem>
-    Neem een geldig identiteitsbewijs mee
-    <UnorderedList role="list">
-      <UnorderedListItem>Paspoort</UnorderedListItem>
-      <UnorderedListItem>Identiteitskaart</UnorderedListItem>
+    Bring a valid identity document
+    <UnorderedList>
+      <UnorderedListItem>Passport</UnorderedListItem>
+      <UnorderedListItem>Identity card</UnorderedListItem>
     </UnorderedList>
   </UnorderedListItem>
-  <UnorderedListItem>Je afspraakbevestiging</UnorderedListItem>
+  <UnorderedListItem>Your appointment confirmation</UnorderedListItem>
 </UnorderedList>
 ```
 
 ## Props
 
-### UnorderedList
+### `UnorderedList`
 
 | Prop        | Description                                                      | Type                    | Default |
 | ----------- | ---------------------------------------------------------------- | ----------------------- | ------- |
@@ -127,15 +122,15 @@ as `<strong>`, `<em>` and links. It can also contain `<p>` elements and a nested
 In addition to the props above, `UnorderedList` accepts all standard HTML attributes of a `<ul>` element
 and forwards a `ref` to the underlying `<ul>` element.
 
-### UnorderedListItem
+### `UnorderedListItem`
 
-| Prop          | Description                                                                                                                                                                                  | Type                 | Default |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| `children`    | Content of the list item                                                                                                                                                                     | `ReactNode`          | —       |
-| `marker`      | Custom marker visual, hidden from assistive technology automatically                                                                                                                         | `ReactNode`          | —       |
-| `markerLabel` | Accessible label for the custom marker, rendered as visually hidden text. Use it when the marker adds meaning; leave it out for a decorative marker. Only has effect together with `marker`. | `ReactNode`          | —       |
-| `className`   | Additional CSS classes alongside `nl-unordered-list__item`                                                                                                                                   | `string`             | —       |
-| `ref`         | Ref forwarded to the underlying `<li>` element                                                                                                                                               | `Ref<HTMLLIElement>` | —       |
+| Prop          | Description                                                                                                                                                                                                          | Type                 | Default |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| `children`    | Content of the list item                                                                                                                                                                                             | `ReactNode`          | —       |
+| `marker`      | Custom marker visual, hidden from assistive technology automatically                                                                                                                                                 | `ReactNode`          | —       |
+| `markerLabel` | Accessible label for the custom marker, rendered as visually hidden text. Use it when the marker adds meaning; leave it out for a decorative marker. TypeScript reports an error for `markerLabel` without `marker`. | `ReactNode`          | —       |
+| `className`   | Additional CSS classes alongside `nl-unordered-list__item`                                                                                                                                                           | `string`             | —       |
+| `ref`         | Ref forwarded to the underlying `<li>` element                                                                                                                                                                       | `Ref<HTMLLIElement>` | —       |
 
 In addition to the props above, `UnorderedListItem` accepts all standard HTML attributes of an `<li>`
 element and forwards a `ref` to the underlying `<li>` element.

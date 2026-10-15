@@ -1,25 +1,47 @@
 import type { Meta } from '@storybook/react-vite';
 import { UnorderedList, UnorderedListItem } from '@nl-design-system-candidate/unordered-list-react/css';
 
+const PROPS = 'Props';
+const API = 'API';
+
 const meta = {
   argTypes: {
+    restProps: {
+      name: '{...restProps}',
+      control: false,
+      description:
+        'Alle props en attributes die hier niet beschreven zijn worden direct op het HTML-element geplaatst. Dat betekent dat alle attributes van een HTML-element als prop geplaatst kunnen worden.',
+      table: {
+        category: PROPS,
+        type: {
+          summary: 'Examples',
+          detail: 'lang="ar"\ndir="rtl"\nhidden',
+        },
+      },
+    },
     children: {
       control: false,
       description: 'Eén of meer `UnorderedListItem` componenten.',
       table: {
-        category: 'API',
+        category: API,
         type: { summary: 'ReactNode' },
       },
-      type: { name: 'other', value: 'ReactNode', required: false },
     },
-    role: {
-      control: { type: 'text' },
-      description: 'Gebruik altijd `list`, zodat WebKit-browsers de lijst als lijst blijven herkennen.',
+    className: {
+      control: 'text',
+      description: 'Optionele extra className voor het component.',
       table: {
-        category: 'API',
+        category: PROPS,
         type: { summary: 'string' },
       },
-      type: { name: 'string', required: false },
+    },
+    ref: {
+      control: false,
+      description: 'Ref naar het `ul` HTML-element.',
+      table: {
+        category: PROPS,
+        type: { summary: 'Ref<HTMLUListElement>' },
+      },
     },
   },
   component: UnorderedList,

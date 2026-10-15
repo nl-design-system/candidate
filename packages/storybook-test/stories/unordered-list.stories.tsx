@@ -1,10 +1,14 @@
-import { CandidateCenteredDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateCenteredDecorator';
 import { createCustomPropertiesDecorator } from '@nl-design-system-candidate/storybook-shared/src/CustomPropertiesDecorator';
 import { CandidateDisableCssDecorator } from '@nl-design-system-candidate/storybook-shared/src/CandidateDisableCssDecorator';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { merge } from 'lodash-es';
-import { IconAlertCircle, IconCheck, IconPointFilled, IconX } from '@tabler/icons-react';
+import {
+  IconAlertCircle as ExampleIconAlertCircle,
+  IconCheck as ExampleIconCheck,
+  IconPointFilled as ExampleIconPointFilled,
+  IconX as ExampleIconX,
+} from '@tabler/icons-react';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/link-css/src/html/link.scss';
 import '../../components-css/link-css/src/link.scss';
@@ -12,6 +16,7 @@ import '../../components-css/paragraph-css/src/html/paragraph.scss';
 import '../../components-css/paragraph-css/src/paragraph.scss';
 import '../../components-css/unordered-list-css/src/html/unordered-list.scss';
 import '../../components-css/unordered-list-css/src/unordered-list.scss';
+import '../../components-css/unordered-list-css/src/test.scss';
 import { Icon } from '../../components-react/icon-react/src/icon';
 import { Link } from '../../components-react/link-react/src/link';
 import { Paragraph } from '../../components-react/paragraph-react/src/paragraph';
@@ -32,7 +37,6 @@ import {
 const meta = {
   ...merge({
     ...reactMeta,
-    args: { role: 'list' },
     component: UnorderedList,
     subcomponents: { UnorderedListItem },
     decorators: ExampleBodyTextDecorator,
@@ -121,7 +125,7 @@ export const UnorderedListNestedUnorderedList: Story = {
     <UnorderedList {...args}>
       <UnorderedListItem>
         Verzamel de benodigde documenten
-        <UnorderedList role="list">
+        <UnorderedList>
           <UnorderedListItem>Geldig identiteitsbewijs</UnorderedListItem>
           <UnorderedListItem>Bewijs van inschrijving</UnorderedListItem>
         </UnorderedList>
@@ -201,10 +205,10 @@ export const UnorderedListThreeLevelsNesting: Story = {
     <UnorderedList {...args}>
       <UnorderedListItem>
         Dit neemt u mee naar de afspraak:
-        <UnorderedList role="list">
+        <UnorderedList>
           <UnorderedListItem>
             Alle reisdocumenten die u nu hebt, ook als ze zijn verlopen.
-            <UnorderedList role="list">
+            <UnorderedList>
               <UnorderedListItem>Paspoort.</UnorderedListItem>
               <UnorderedListItem>ID-kaart.</UnorderedListItem>
             </UnorderedList>
@@ -294,16 +298,16 @@ De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="
 };
 
 // <ul class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item nl-unordered-list__item--custom-marker">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
+//   <li class="nl-unordered-list__item">
+//     <span class="nl-unordered-list__marker">
 //       <span aria-hidden="true">
 //         <span class="nl-icon" aria-hidden="true"><svg class="tabler-icon tabler-icon-point-filled">...</svg></span>
 //       </span>
 //     </span>
 //     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
 //   </li>
-//   <li class="nl-unordered-list__item nl-unordered-list__item--custom-marker">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
+//   <li class="nl-unordered-list__item">
+//     <span class="nl-unordered-list__marker">
 //       <span aria-hidden="true">
 //         <span class="nl-icon" aria-hidden="true"><svg class="tabler-icon tabler-icon-point-filled">...</svg></span>
 //       </span>
@@ -320,7 +324,7 @@ export const UnorderedListCustomMarkerNoLabel: Story = {
       <UnorderedListItem
         marker={
           <Icon>
-            <IconPointFilled />
+            <ExampleIconPointFilled />
           </Icon>
         }
       >
@@ -329,7 +333,7 @@ export const UnorderedListCustomMarkerNoLabel: Story = {
       <UnorderedListItem
         marker={
           <Icon>
-            <IconPointFilled />
+            <ExampleIconPointFilled />
           </Icon>
         }
       >
@@ -347,21 +351,21 @@ export const UnorderedListCustomMarkerNoLabel: Story = {
 };
 
 // <ul class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item nl-unordered-list__item--custom-marker">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
+//   <li class="nl-unordered-list__item">
+//     <span class="nl-unordered-list__marker">
 //       <span aria-hidden="true">
 //         <span class="nl-icon" aria-hidden="true"><svg class="tabler-icon tabler-icon-alert-circle">...</svg></span>
 //       </span>
-//       <span class="nl-unordered-list__marker-label">Let op. </span>
+//       <span class="nl-unordered-list__marker-label">Let op.&nbsp;</span>
 //     </span>
 //     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
 //   </li>
-//   <li class="nl-unordered-list__item nl-unordered-list__item--custom-marker">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
+//   <li class="nl-unordered-list__item">
+//     <span class="nl-unordered-list__marker">
 //       <span aria-hidden="true">
 //         <span class="nl-icon" aria-hidden="true"><svg class="tabler-icon tabler-icon-alert-circle">...</svg></span>
 //       </span>
-//       <span class="nl-unordered-list__marker-label">Let op. </span>
+//       <span class="nl-unordered-list__marker-label">Let op.&nbsp;</span>
 //     </span>
 //     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
 //   </li>
@@ -375,7 +379,7 @@ export const UnorderedListCustomMarkerLabel: Story = {
       <UnorderedListItem
         marker={
           <Icon>
-            <IconAlertCircle />
+            <ExampleIconAlertCircle />
           </Icon>
         }
         markerLabel="Let op."
@@ -385,7 +389,7 @@ export const UnorderedListCustomMarkerLabel: Story = {
       <UnorderedListItem
         marker={
           <Icon>
-            <IconAlertCircle />
+            <ExampleIconAlertCircle />
           </Icon>
         }
         markerLabel="Let op."
@@ -404,14 +408,14 @@ export const UnorderedListCustomMarkerLabel: Story = {
 };
 
 // <ul class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item nl-unordered-list__item--custom-marker">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
+//   <li class="nl-unordered-list__item">
+//     <span class="nl-unordered-list__marker">
 //       <span class="nl-icon" role="img" aria-label="Voldaan."><svg class="tabler-icon tabler-icon-check">...</svg></span>
 //     </span>
 //     Minimaal 10 karakters lang.
 //   </li>
-//   <li class="nl-unordered-list__item nl-unordered-list__item--custom-marker">
-//     <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
+//   <li class="nl-unordered-list__item">
+//     <span class="nl-unordered-list__marker">
 //       <span class="nl-icon" role="img" aria-label="Niet voldaan."><svg class="tabler-icon tabler-icon-x">...</svg></span>
 //     </span>
 //     Minimaal één speciaal karakter.
@@ -431,7 +435,7 @@ export const UnorderedListCustomMarkerInformativeIconAccessible: Story = {
       <UnorderedListItem
         marker={
           <Icon role="img" aria-label="Voldaan.">
-            <IconCheck />
+            <ExampleIconCheck />
           </Icon>
         }
       >
@@ -440,7 +444,7 @@ export const UnorderedListCustomMarkerInformativeIconAccessible: Story = {
       <UnorderedListItem
         marker={
           <Icon role="img" aria-label="Niet voldaan.">
-            <IconX />
+            <ExampleIconX />
           </Icon>
         }
       >
@@ -511,19 +515,18 @@ export const UnorderedListDirParentOnly: Story = {
 };
 
 // <div class="nl-html nl-html--all">
-//   <ul role="list">
+//   <ul>
 //     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
 //     <li>Je oude paspoort</li>
 //     <li>Je afspraakbevestiging</li>
 //   </ul>
 // </div>
 // Original: Unordered List binnen `nl-html--all`
-// Let op: role="list" is nodig!
 export const UnorderedListNLHTMLAll: Story = {
   name: 'Unordered List binnen `nl-html--all`',
   render: () => (
     <div className="nl-html nl-html--all">
-      <ul role="list">
+      <ul>
         <li>Paspoortfoto, niet ouder dan 6 maanden</li>
         <li>Je oude paspoort</li>
         <li>Je afspraakbevestiging</li>
@@ -536,28 +539,25 @@ export const UnorderedListNLHTMLAll: Story = {
       description: {
         story: `Een ongeordende lijst zonder classes binnen een NL HTML-component.
 
-De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ul\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.
-
-De semantiek wordt behouden door de HTML-attribuut \`role="list"\`.`,
+De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ul\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.`,
       },
     },
   },
 };
 
 // <div class="nl-html nl-html--unordered-list">
-//   <ul role="list">
+//   <ul>
 //     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
 //     <li>Je oude paspoort</li>
 //     <li>Je afspraakbevestiging</li>
 //   </ul>
 // </div>
 // Original: Unordered List binnen `nl-html--unordered-list`
-// Let op: role="list" is nodig!
 export const UnorderedListNLHTMLUnorderedList: Story = {
   name: 'Unordered List binnen `nl-html--unordered-list`',
   render: () => (
     <div className="nl-html nl-html--unordered-list">
-      <ul role="list">
+      <ul>
         <li>Paspoortfoto, niet ouder dan 6 maanden</li>
         <li>Je oude paspoort</li>
         <li>Je afspraakbevestiging</li>
@@ -570,9 +570,7 @@ export const UnorderedListNLHTMLUnorderedList: Story = {
       description: {
         story: `Een ongeordende lijst zonder classes binnen een NL HTML-component.
 
-De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ul\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--unordered-list\` class.
-
-De semantiek wordt behouden door de HTML-attribuut \`role="list"\`.`,
+De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ul\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--unordered-list\` class.`,
       },
     },
   },
@@ -775,19 +773,19 @@ export const UnorderedListHorizontalScrollMobile: Story = {
     <UnorderedList {...args}>
       <UnorderedListItem>
         Reisdocumenten
-        <UnorderedList role="list">
+        <UnorderedList>
           <UnorderedListItem>
             Nederlandse reisdocumenten
-            <UnorderedList role="list">
+            <UnorderedList>
               <UnorderedListItem>
                 Paspoorten
-                <UnorderedList role="list">
+                <UnorderedList>
                   <UnorderedListItem>
                     Nationaal paspoort
-                    <UnorderedList role="list">
+                    <UnorderedList>
                       <UnorderedListItem>
                         Paspoort voor volwassenen
-                        <UnorderedList role="list">
+                        <UnorderedList>
                           <UnorderedListItem>Paspoort met 34 pagina&apos;s</UnorderedListItem>
                           <UnorderedListItem>Zakenpaspoort met 66 pagina&apos;s</UnorderedListItem>
                         </UnorderedList>
@@ -948,9 +946,8 @@ export const UnorderedListRichTextEditorNested: Story = {
 // Original: Story voor het centreren van de Unordered List. Dit omdat dit beschikbaar is in community en we daar een oplossing voor moeten laten zien.
 export const UnorderedListCentered: Story = {
   name: 'Unordered List gecentreerd',
-  decorators: [CandidateCenteredDecorator],
   render: (args) => (
-    <UnorderedList {...args}>
+    <UnorderedList {...args} className="nl-unordered-list--example-center">
       <UnorderedListItem>Paspoortfoto, niet ouder dan 6 maanden</UnorderedListItem>
       <UnorderedListItem>Je oude paspoort</UnorderedListItem>
       <UnorderedListItem>Je afspraakbevestiging</UnorderedListItem>
@@ -1329,14 +1326,6 @@ export const UnorderedListInvalidCssValues: Story = {
 // Original: Unordered List zonder markers (community implementatie)
 export const UnorderedListNoMarkers: Story = {
   name: 'Unordered List zonder markers',
-  decorators: [
-    (Story) => (
-      <>
-        <style>{'.nl-unordered-list--example-no-markers > .nl-unordered-list__item { list-style-type: ""; }'}</style>
-        <Story />
-      </>
-    ),
-  ],
   render: (args) => (
     <UnorderedList {...args} className="nl-unordered-list--example-no-markers">
       <UnorderedListItem>Paspoortfoto, niet ouder dan 6 maanden</UnorderedListItem>

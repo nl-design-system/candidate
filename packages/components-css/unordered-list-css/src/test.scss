@@ -1,5 +1,20 @@
-/* Foutieve voorbeeld-CSS voor de non-conforming Unordered List stories. Geen onderdeel van de Unordered List component:
-   de "example"-modifiers laten zien hoe je een Custom Marker níet moet maken. */
+/*
+ * Used for stories in Storybook
+ */
+
+/* Example of a centered list, not part of the component CSS. `inside` keeps the bullets next to the centered text. */
+.nl-unordered-list.nl-unordered-list--example-center {
+  list-style-position: inside;
+  padding-inline-start: 0;
+  text-align: center;
+}
+
+/* Example of a list without markers, not part of the component CSS. An empty string keeps the list semantics in WebKit. */
+.nl-unordered-list--example-no-markers > .nl-unordered-list__item {
+  list-style-type: "";
+}
+
+/* Incorrect Custom Marker examples for the non-conforming stories: they show how NOT to build a Custom Marker. */
 
 /* Custom Marker met tekst via counter-reset, counter-increment en de CSS-eigenschap content */
 .nl-unordered-list--example-counter-marker {

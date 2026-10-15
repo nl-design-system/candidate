@@ -47,25 +47,23 @@ If you use SCSS:
 
 ## CSS classes
 
-| name                                                           | description                                                                                                        |
-| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `.nl-unordered-list`                                           | The main class. Use it on a `<ul>` element.                                                                        |
-| `.nl-unordered-list__item`                                     | The list item class. Use it on each `<li>` element.                                                                |
-| `.nl-unordered-list__item--custom-marker`                      | Hides the default marker on an item with a custom marker.                                                          |
-| `.nl-unordered-list__marker.nl-unordered-list__marker--custom` | The custom marker container. Use it on a `<span>` inside `.nl-unordered-list__item`.                               |
-| `.nl-unordered-list__marker-label`                             | Visually hidden label inside a custom marker. Use it on a `<span>` element.                                        |
-| `.nl-html--all`                                                | HTML context class (from `html/unordered-list.css`). Styles every `<ul>` and its direct `<li>` children inside it. |
-| `.nl-html--unordered-list`                                     | HTML context class (from `html/unordered-list.css`). Styles every `<ul>` and its direct `<li>` children inside it. |
+| name                               | description                                                                                                                                |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `.nl-unordered-list`               | The main class. Use it on a `<ul>` element.                                                                                                |
+| `.nl-unordered-list__item`         | The list item class. Use it on each `<li>` element.                                                                                        |
+| `.nl-unordered-list__marker`       | The custom marker container. Use it on a `<span>` as a direct child of `.nl-unordered-list__item`; the item then hides its default marker. |
+| `.nl-unordered-list__marker-label` | Visually hidden label inside a custom marker. Use it on a `<span>` element.                                                                |
+| `.nl-html--all`                    | HTML context class (from `html/unordered-list.css`). Styles every `<ul>` and its direct `<li>` children inside it.                         |
+| `.nl-html--unordered-list`         | HTML context class (from `html/unordered-list.css`). Styles every `<ul>` and its direct `<li>` children inside it.                         |
 
 ## SCSS mixins
 
-| name                                | description                                    |
-| ----------------------------------- | ---------------------------------------------- |
-| `nl-unordered-list`                 | Styles for the unordered list container        |
-| `nl-unordered-list__item`           | Styles for each list item                      |
-| `nl-unordered-list__marker`         | Shared styles for the marker                   |
-| `nl-unordered-list__marker--custom` | Additional layout styles for the custom marker |
-| `nl-unordered-list__marker-label`   | Visually hidden label styles                   |
+| name                              | description                             |
+| --------------------------------- | --------------------------------------- |
+| `nl-unordered-list`               | Styles for the unordered list container |
+| `nl-unordered-list__item`         | Styles for each list item               |
+| `nl-unordered-list__marker`       | Shared styles for the marker            |
+| `nl-unordered-list__marker-label` | Visually hidden label styles            |
 
 ## Usage
 
@@ -74,9 +72,9 @@ is set to `none` via CSS, for example by a theme or a reset stylesheet; the `rol
 
 ```html
 <ul class="nl-unordered-list" role="list">
-  <li class="nl-unordered-list__item">Item 1</li>
-  <li class="nl-unordered-list__item">Item 2</li>
-  <li class="nl-unordered-list__item">Item 3</li>
+  <li class="nl-unordered-list__item">Passport photo, no older than 6 months</li>
+  <li class="nl-unordered-list__item">Your old passport</li>
+  <li class="nl-unordered-list__item">Your appointment confirmation</li>
 </ul>
 ```
 
@@ -84,16 +82,17 @@ is set to `none` via CSS, for example by a theme or a reset stylesheet; the `rol
 
 Use a custom marker to replace the default bullet with an icon or other visual. Hide the icon from
 assistive technology with `aria-hidden="true"`. Provide the accessible label via a visually hidden
-`<span class="nl-unordered-list__marker-label">`.
+`<span class="nl-unordered-list__marker-label">`. End the label with a non-breaking space (`&nbsp;`), so screen
+readers read the label and the item text as separate words.
 
 ```html
 <ul class="nl-unordered-list" role="list">
-  <li class="nl-unordered-list__item nl-unordered-list__item--custom-marker">
-    <span class="nl-unordered-list__marker nl-unordered-list__marker--custom">
+  <li class="nl-unordered-list__item">
+    <span class="nl-unordered-list__marker">
       <span aria-hidden="true"><!-- icon --></span>
-      <span class="nl-unordered-list__marker-label">Leesteken </span>
+      <span class="nl-unordered-list__marker-label">Note:&nbsp;</span>
     </span>
-    Paspoortfoto, niet ouder dan 6 maanden
+    Bring your old passport
   </li>
 </ul>
 ```
@@ -102,18 +101,20 @@ assistive technology with `aria-hidden="true"`. Provide the accessible label via
 
 Apply unordered list styles to plain `<ul>` and `<li>` elements, for example content from a rich text editor,
 without adding component classes to every element. Only `<li>` elements that are direct children of an `<ul>`
-are styled, so a nested `<ul>` keeps its own styling.
+are styled, so a nested `<ol>` keeps its own styling.
 
 Inside an element with the `nl-html--all` or `nl-html--unordered-list` class, using `html/unordered-list.css`:
 
 ```html
-<div class="nl-html--unordered-list">
-  <ul role="list">
-    <li>Paspoortfoto, niet ouder dan 6 maanden</li>
-    <li>Je oude paspoort</li>
+<div class="nl-html nl-html--unordered-list">
+  <ul>
+    <li>Passport photo, no older than 6 months</li>
+    <li>Your old passport</li>
   </ul>
 </div>
 ```
+
+For every `<ul>` on the page, with the appropriate `nl-html` container class names.
 
 ```js
 import '@nl-design-system-candidate/unordered-list-css/dist/html/unordered-list.css';
@@ -130,14 +131,14 @@ import '@nl-design-system-candidate/unordered-list-css/dist/vanilla/unordered-li
 Import the mixins via `forward` (Sass internally uses `_forward.scss`) and use them in your own SCSS:
 
 ```scss
-@use '@nl-design-system-candidate/unordered-list-css/forward.scss' as unordered-list;
+@use '@nl-design-system-candidate/unordered-list-css/forward.scss' as nl-unordered-list;
 
 .example-unordered-list {
-  @include unordered-list.nl-unordered-list;
+  @include nl-unordered-list.nl-unordered-list;
 }
 
 .example-unordered-list__item {
-  @include unordered-list.nl-unordered-list__item;
+  @include nl-unordered-list.nl-unordered-list__item;
 }
 ```
 
