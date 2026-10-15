@@ -1,0 +1,38 @@
+{
+  "name": "@nl-design-system-candidate/form-field-status-docs",
+  "version": "0.0.0",
+  "description": "Documentation of the NL Design System Form Field Status component",
+  "license": "CC0-1.0",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/docs/form-field-status-docs#readme",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
+  "scripts": {},
+  "keywords": [
+    "nl-design-system",
+    "docs",
+    "form-field-status",
+    "form-field-status-component"
+  ],
+  "files": [
+    "./docs/",
+    "./stories/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/docs/form-field-status-docs"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@nl-design-system-candidate/form-field-status-react": "workspace:*",
+    "@storybook/react-vite": "9.1.5",
+    "@types/react": "19.2.7",
+    "react": "19.2.3"
+  }
+}
