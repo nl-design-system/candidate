@@ -1,0 +1,43 @@
+{
+  "name": "@nl-design-system-candidate/form-field-status-css",
+  "version": "0.0.0",
+  "description": "CSS implementation of the NL Design System Form Field Status component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-css/form-field-status-css#readme",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
+  "files": [
+    "./dist/",
+    "./src/"
+  ],
+  "exports": {
+    "./*.css": "./dist/*.css",
+    "./*.scss": "./src/*.scss"
+  },
+  "keywords": [
+    "nl-design-system",
+    "css",
+    "form-field-status",
+    "form-field-status-component"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-css/form-field-status-css"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "sass --style=compressed ./src/:./dist/",
+    "clean": "rimraf ./dist/"
+  },
+  "devDependencies": {
+    "rimraf": "6.1.0",
+    "sass": "1.94.1"
+  }
+}
