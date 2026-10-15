@@ -335,8 +335,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -381,8 +381,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system-candidate/playwright-config':
         specifier: workspace:*
         version: link:../../playwright-config
@@ -433,8 +433,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -473,8 +473,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -513,8 +513,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -553,8 +553,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -596,8 +596,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -636,8 +636,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -679,8 +679,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.6
         version: 1.0.6(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -719,8 +719,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -762,8 +762,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -805,8 +805,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -845,8 +845,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -888,8 +888,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -928,8 +928,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -971,8 +971,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -1014,8 +1014,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -1057,8 +1057,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -1140,8 +1140,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -1183,8 +1183,8 @@ importers:
         specifier: 7.28.5
         version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime':
-        specifier: 7.28.4
-        version: 7.28.4
+        specifier: 8.0.5
+        version: 8.0.5
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.7
         version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.62.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
@@ -2564,6 +2564,9 @@ packages:
   '@babel/runtime@7.28.4':
     resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
     engines: {node: '>=6.9.0'}
+
+  '@babel/runtime@8.0.5':
+    resolution: {integrity: sha512-7NK+Lz3spQ52XsUGTxIEVU4jYN2/dIaX8sTxRFAUtYmttYZnVh3aehiihv+/Gb7+duMNHl2OrFcBQRyOHScxpg==}
 
   '@babel/template@7.27.2':
     resolution: {integrity: sha512-LPDZ85aEJyYSd18/DkjNh4/y1ntkE5KwUHWTiqgRxruuZL2F1yuHligVHLvcHY2vMHXttKFpJn6LwfI7cw7ODw==}
@@ -8316,6 +8319,8 @@ snapshots:
       regenerator-runtime: 0.14.0
 
   '@babel/runtime@7.28.4': {}
+
+  '@babel/runtime@8.0.5': {}
 
   '@babel/template@7.27.2':
     dependencies:
