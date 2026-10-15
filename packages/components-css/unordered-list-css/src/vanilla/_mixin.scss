@@ -4,4 +4,12 @@
   ul {
     @include mixin.nl-unordered-list;
   }
+
+  ul > li {
+    @include mixin.nl-unordered-list__item;
+  }
+
+  ul > li::marker {
+    @include mixin.nl-unordered-list__marker;
+  }
 }
