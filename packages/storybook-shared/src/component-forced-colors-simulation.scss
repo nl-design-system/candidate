@@ -7,3 +7,8 @@
 [data-forced-colors="active"] .nl-form-field-error-message {
   --nl-form-field-error-message-color: currentColor;
 }
+
+[data-forced-colors="active"] .nl-ordered-list {
+  --nl-ordered-list-color: currentColor;
+  --nl-ordered-list-marker-color: currentColor;
+}
