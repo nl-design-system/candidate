@@ -6,7 +6,7 @@ export interface NoteProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode; // Needed in template file, feel free to remove
 }
 
-export const Note = forwardRef<HTMLDivElement, NoteProps>(function Note(props, forwardedRef) {
+export const Note = forwardRef<HTMLDivElement, NoteProps>((props, forwardedRef) => {
   const { children, className, ...restProps } = props;
 
   return (

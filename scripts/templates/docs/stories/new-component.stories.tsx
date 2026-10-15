@@ -8,12 +8,12 @@ type Story = StoryObj<typeof _meta>;
 export const NewComponent: Story = {
   name: 'New Component',
   args: {
-    children: `New Component`,
+    children: 'New Component',
   },
   parameters: {
     docs: {
       description: {
-        story: `Een standaard New Component`,
+        story: 'Een standaard New Component',
       },
     },
   },

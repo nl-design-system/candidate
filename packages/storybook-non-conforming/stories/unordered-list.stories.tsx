@@ -1,34 +1,41 @@
+import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import componentMarkdown from '../../docs/unordered-list-docs/docs/component.md?raw';
 import '../../components-css/unordered-list-css/src/unordered-list.scss';
 import packageJSON from '../../components-react/unordered-list-react/package.json';
 import { UnorderedList, type UnorderedListProps } from '../../components-react/unordered-list-react/src/unordered-list';
+import reactMeta from '../../docs/unordered-list-docs/stories/unordered-list.react.meta';
 
 const meta = {
-  argTypes: {
-    // Vul aan door developer
-  },
-  component: UnorderedList,
-  parameters: {
-    docs: {
-      description: {
-        component: componentMarkdown,
-      },
-      source: {
-        type: 'dynamic',
-      },
+  ...merge({
+    ...reactMeta,
+
+    args: {
+      // Vul aan door developer
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/unordered-list',
+    parameters: {
+      // TODO: When component is implemented, enable Chromatic
+      chromatic: { disableSnapshot: true },
+      docs: {
+        description: {
+          component: componentMarkdown,
+        },
+        source: {
+          type: 'dynamic',
+        },
       },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/unordered-list',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
+      ],
+    },
+  }),
   title: 'Componenten/Unordered List',
 } satisfies Meta<typeof UnorderedList>;
 

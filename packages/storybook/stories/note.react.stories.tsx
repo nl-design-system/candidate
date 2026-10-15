@@ -1,7 +1,7 @@
 import type { Meta } from '@storybook/react-vite';
 import { merge } from 'lodash-es';
 import packageJSON from '../../components-react/note-react/package.json';
-import type { NoteProps } from '@nl-design-system-candidate/note-react';
+import { Note as NoteComponent } from '@nl-design-system-candidate/note-react';
 import noteMeta from '@nl-design-system-candidate/note-docs/stories/note.react.meta';
 import '../../components-css/note-css/src/test.scss';
 import { getExternalLinks } from '../src/helpers/external-links';
@@ -23,8 +23,8 @@ const meta = {
   }),
   title: 'React Componenten/Note',
   id: 'note',
-} satisfies Meta<NoteProps>;
+} satisfies Meta<typeof NoteComponent>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const Note = Stories.Note;
