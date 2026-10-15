@@ -1,0 +1,35 @@
+{
+  "name": "@nl-design-system-candidate/text-area-tokens",
+  "version": "0.0.0",
+  "description": "Design tokens of the NL Design System Text Area component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/text-area-tokens#readme",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
+  "main": "./tokens.json",
+  "exports": "./tokens.json",
+  "files": [
+    "./tokens.json"
+  ],
+  "keywords": [
+    "nl-design-system",
+    "design-tokens",
+    "text-area",
+    "text-area-component"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/tokens/text-area-tokens"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "generate-tokens": "../../../scripts/generate-tokens.sh text-area"
+  }
+}

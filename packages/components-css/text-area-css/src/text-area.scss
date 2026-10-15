@@ -1,0 +1,5 @@
+@use "mixin";
+
+.nl-text-area {
+  @include mixin.nl-text-area;
+}
