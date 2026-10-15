@@ -26,7 +26,22 @@ const meta = {
         category: API,
         type: { summary: 'ReactNode' },
       },
-      type: { name: 'other', value: 'ReactNode', required: false },
+    },
+    className: {
+      control: 'text',
+      description: 'Optionele extra className voor het component.',
+      table: {
+        category: PROPS,
+        type: { summary: 'string' },
+      },
+    },
+    ref: {
+      control: false,
+      description: 'Ref naar het `ul` HTML-element.',
+      table: {
+        category: PROPS,
+        type: { summary: 'Ref<HTMLUListElement>' },
+      },
     },
   },
   component: UnorderedList,

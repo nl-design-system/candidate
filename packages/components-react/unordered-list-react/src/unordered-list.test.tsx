@@ -4,7 +4,7 @@ import { IconPointFilled } from '@tabler/icons-react';
 import { cleanup, render } from '@testing-library/react';
 import { createRef, type ReactNode } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { UnorderedList, UnorderedListItem, UnorderedListProps } from './unordered-list';
+import { UnorderedList, UnorderedListItem, type UnorderedListProps } from './unordered-list';
 
 const extraUnorderedListClassName = 'nl-unordered-list--example-variant';
 const extraUnorderedListItemClassName = 'nl-unordered-list__item--example-variant';
@@ -59,10 +59,16 @@ describe('Unordered List', () => {
       const element = container.querySelector('ul');
       expect(element).toBeInTheDocument();
     });
-    it('supports forwarding the HTML-attribute `role` to the underlying HTML-element `ul`', () => {
-      const { getByRole } = renderList({ role: 'list' });
-      const element = getByRole('list');
-      expect(element).toBeInTheDocument();
+    it('always has the HTML-attribute `role="list"`', () => {
+      const { container } = renderList();
+      const element = container.querySelector('ul');
+      expect(element).toHaveAttribute('role', 'list');
+    });
+    it('does not allow overriding the HTML-attribute `role`', () => {
+      // @ts-expect-error: `role` is not configurable
+      const { container } = renderList({ role: 'presentation' });
+      const element = container.querySelector('ul');
+      expect(element).toHaveAttribute('role', 'list');
     });
     it('supports forwarding the HTML-attribute `hidden` to the underlying HTML-element `ul`', () => {
       const { container } = renderList({ hidden: true });
@@ -96,7 +102,7 @@ describe('Unordered List', () => {
       const element = container.querySelector('ul');
 
       expect(ref.current).toBe(element);
-      expect(element?.tagName).toBe('UL');
+      expect(element?.localName).toBe('ul');
     });
   });
 });
@@ -115,11 +121,6 @@ describe('Unordered List Item', () => {
       );
       const element = container.querySelector('li');
       expect(element).toHaveClass('nl-unordered-list__item', extraUnorderedListItemClassName);
-    });
-    it('does not add the `nl-unordered-list__item--custom-marker` class when `marker` is not provided', () => {
-      const { container } = renderList();
-      const element = container.querySelector('.nl-unordered-list__item--custom-marker');
-      expect(element).not.toBeInTheDocument();
     });
   });
 
@@ -182,7 +183,7 @@ describe('Unordered List Item', () => {
       const element = container.querySelector('li');
 
       expect(ref.current).toBe(element);
-      expect(element?.tagName).toBe('LI');
+      expect(element?.localName).toBe('li');
     });
   });
 });
@@ -205,7 +206,7 @@ describe('Unordered List Custom Marker when `marker` is provided', () => {
   describe('and when `markerLabel` is not provided', () => {
     it('renders the custom marker HTML-element `span`', () => {
       const { container } = renderList({}, <UnorderedListItem marker={markerIcon}>Item 1</UnorderedListItem>);
-      const element = container.querySelector('.nl-unordered-list__marker--custom');
+      const element = container.querySelector('.nl-unordered-list__marker');
       expect(element).toBeInTheDocument();
     });
     it('does not render the marker label HTML-element `span`', () => {
@@ -219,33 +220,27 @@ describe('Unordered List Custom Marker when `marker` is provided', () => {
     describe('CSS API', () => {
       it.each([
         ['nl-unordered-list__marker', '.nl-unordered-list__marker'],
-        ['nl-unordered-list__marker--custom', '.nl-unordered-list__marker--custom'],
         ['nl-unordered-list__marker-label', '.nl-unordered-list__marker-label'],
       ])('adds the `%s` class by default', (_, selector) => {
         const { container } = renderWithMarker();
 
         expect(container.querySelector(selector)).toBeInTheDocument();
       });
-      it('adds the `nl-unordered-list__item--custom-marker` class to the item', () => {
-        const { container } = renderWithMarker();
-        const element = container.querySelector('li');
-        expect(element).toHaveClass('nl-unordered-list__item', 'nl-unordered-list__item--custom-marker');
-      });
     });
 
     describe('Component API', () => {
       it('renders the custom marker HTML-element `span`', () => {
         const { container } = renderWithMarker();
-        const element = container.querySelector('.nl-unordered-list__marker--custom');
+        const element = container.querySelector('.nl-unordered-list__marker');
         expect(element).toBeInTheDocument();
-        expect(element?.tagName).toBe('SPAN');
+        expect(element?.localName).toBe('span');
       });
 
       it('has the HTML-attribute `aria-hidden="true"` on the icon wrapper `span`', () => {
         const { container } = renderWithMarker();
-        const marker = container.querySelector('.nl-unordered-list__marker--custom');
+        const marker = container.querySelector('.nl-unordered-list__marker');
         const iconWrapper = marker?.firstElementChild;
-        expect(iconWrapper?.tagName).toBe('SPAN');
+        expect(iconWrapper?.localName).toBe('span');
         expect(iconWrapper).toHaveAttribute('aria-hidden', 'true');
         const icon = iconWrapper?.querySelector('svg');
         expect(icon).toBeInTheDocument();
@@ -253,7 +248,7 @@ describe('Unordered List Custom Marker when `marker` is provided', () => {
 
       it('does not hide the marker label with the HTML-attribute `aria-hidden`', () => {
         const { container } = renderWithMarker();
-        const marker = container.querySelector('.nl-unordered-list__marker--custom');
+        const marker = container.querySelector('.nl-unordered-list__marker');
         const label = container.querySelector('.nl-unordered-list__marker-label');
         expect(marker).not.toHaveAttribute('aria-hidden');
         expect(label).not.toHaveAttribute('aria-hidden');
@@ -261,7 +256,7 @@ describe('Unordered List Custom Marker when `marker` is provided', () => {
 
       it('supports phrasing content in the custom marker', () => {
         const { container } = renderWithMarker(<strong>1</strong>);
-        const marker = container.querySelector('.nl-unordered-list__marker--custom');
+        const marker = container.querySelector('.nl-unordered-list__marker');
         const iconWrapper = marker?.firstElementChild;
         expect(iconWrapper).toContainHTML('<strong>1</strong>');
       });
@@ -270,13 +265,20 @@ describe('Unordered List Custom Marker when `marker` is provided', () => {
         const { container } = renderWithMarker();
         const label = container.querySelector('.nl-unordered-list__marker-label');
         expect(label).toBeInTheDocument();
-        expect(label?.tagName).toBe('SPAN');
+        expect(label?.localName).toBe('span');
       });
 
       it('supports phrasing content in the marker label', () => {
         const { container } = renderWithMarker();
         const label = container.querySelector('.nl-unordered-list__marker-label');
         expect(label).toHaveTextContent('Leesteken');
+      });
+
+      it('ends the marker label with a non-breaking space in the same text node', () => {
+        const { container } = renderWithMarker();
+        const label = container.querySelector('.nl-unordered-list__marker-label');
+        expect(label?.childNodes).toHaveLength(1);
+        expect(label?.textContent).toBe('Leesteken\u{A0}');
       });
     });
   });

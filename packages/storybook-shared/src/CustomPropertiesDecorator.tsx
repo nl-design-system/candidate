@@ -10,7 +10,7 @@ import type { CSSProperties } from 'react';
  * decorators: [createCustomPropertiesDecorator({ '--nl-ordered-list-color': '10px' })]
  */
 export const createCustomPropertiesDecorator =
-  (properties: Record<`--${string}`, string>): Decorator =>
+  (properties: CSSProperties): Decorator =>
   (Story) => (
     <div style={properties as CSSProperties}>
       <Story />
