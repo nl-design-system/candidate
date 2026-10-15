@@ -117,7 +117,7 @@ describe('Ordered List', () => {
       const element = container.querySelector('ol');
 
       expect(ref.current).toBe(element);
-      expect(element?.tagName).toBe('OL');
+      expect(element?.localName).toBe('ol');
     });
   });
 });
@@ -198,7 +198,7 @@ describe('Ordered List Item', () => {
       const element = container.querySelector('li');
 
       expect(ref.current).toBe(element);
-      expect(element?.tagName).toBe('LI');
+      expect(element?.localName).toBe('li');
     });
   });
 });
@@ -251,14 +251,14 @@ describe('Ordered List Custom Marker when `marker` is provided', () => {
         const { container } = renderWithMarker();
         const element = container.querySelector('.nl-ordered-list__marker');
         expect(element).toBeInTheDocument();
-        expect(element?.tagName).toBe('SPAN');
+        expect(element?.localName).toBe('span');
       });
 
       it('has the HTML-attribute `aria-hidden="true"` on the icon wrapper `span`', () => {
         const { container } = renderWithMarker();
         const marker = container.querySelector('.nl-ordered-list__marker');
         const iconWrapper = marker?.firstElementChild;
-        expect(iconWrapper?.tagName).toBe('SPAN');
+        expect(iconWrapper?.localName).toBe('span');
         expect(iconWrapper).toHaveAttribute('aria-hidden', 'true');
         const icon = iconWrapper?.querySelector('svg');
         expect(icon).toBeInTheDocument();
@@ -283,7 +283,7 @@ describe('Ordered List Custom Marker when `marker` is provided', () => {
         const { container } = renderWithMarker();
         const label = container.querySelector('.nl-ordered-list__marker-label');
         expect(label).toBeInTheDocument();
-        expect(label?.tagName).toBe('SPAN');
+        expect(label?.localName).toBe('span');
       });
 
       it('supports phrasing content in the marker label', () => {
