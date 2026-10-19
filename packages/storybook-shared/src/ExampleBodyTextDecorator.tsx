@@ -3,6 +3,7 @@ import './ExampleBodyText.css';
 
 export const ExampleBodyTextDecorator: Decorator = (Story) => (
   <div className="example-body-text">
+    <p>Test Render</p>
     <Story />
   </div>
 );

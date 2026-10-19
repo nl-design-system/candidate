@@ -2,6 +2,8 @@
  * https://en.wikipedia.org/wiki/Body_text
  */
 .example-body-text {
+  background-color: red;
+
   -webkit-hyphenate-limit-after: var(--example-body-text-hyphenate-limit-chars-after, auto);
   -webkit-hyphenate-limit-before: var(--example-body-text-hyphenate-limit-chars-before, auto);
   -webkit-hyphenate-limit-chars: var(--example-body-text-hyphenate-limit-chars-word, auto)
