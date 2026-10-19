@@ -89,8 +89,6 @@ const meta = {
       lang: 'nl',
     },
     parameters: {
-      // TODO: When component is implemented, enable Chromatic
-      chromatic: { disableSnapshot: true },
       acceptanceCriteria,
       docs: {
         description: {

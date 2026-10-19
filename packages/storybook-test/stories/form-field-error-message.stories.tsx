@@ -107,8 +107,6 @@ const meta = {
       lang: 'nl',
     },
     parameters: {
-      // TODO: When component is implemented, enable Chromatic
-      chromatic: { disableSnapshot: true },
       acceptanceCriteria,
       docs: {
         description: {
@@ -395,6 +393,7 @@ export const FormFieldErrorMessageWithParagraphComponent: Story = {
       },
     },
     status: { type: [] },
+    // TODO: Remove when story is no longer (TODO) because NL Component support is implemented
     chromatic: { disableSnapshot: true },
   },
 };
@@ -434,6 +433,7 @@ export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
       },
     },
     status: { type: [] },
+    // TODO: Remove when story is no longer (TODO) because NL Component support is implemented
     chromatic: { disableSnapshot: true },
   },
 };
