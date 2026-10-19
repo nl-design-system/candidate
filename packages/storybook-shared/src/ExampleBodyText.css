@@ -4,6 +4,11 @@
 .example-body-text {
   background-color: red;
 
+  --example-body-text-hyphenate-limit-chars-before: 8;
+  --example-body-text-hyphenate-limit-chars-after: 4;
+  --example-body-text-hyphenate-limit-chars-word: 12;
+  --example-body-text-hyphenate-limit-lines: 2;
+
   -webkit-hyphenate-limit-after: var(--example-body-text-hyphenate-limit-chars-after, auto);
   -webkit-hyphenate-limit-before: var(--example-body-text-hyphenate-limit-chars-before, auto);
   -webkit-hyphenate-limit-chars: var(--example-body-text-hyphenate-limit-chars-word, auto)
