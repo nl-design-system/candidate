@@ -1,5 +1,4 @@
 import { StoryRootDecorator } from '@nl-design-system-candidate/storybook-shared/src/StoryRootDecorator';
-import { sourceTransformPrettierHTML } from '@nl-design-system-candidate/storybook-shared/src/StorySourceTransformPrettierHTML';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
 import '@nl-design-system-candidate/storybook-shared/src/candidate-theme.css';
@@ -20,10 +19,6 @@ const preview: Preview = {
       codePanel: true,
       canvas: {
         sourceState: 'shown',
-      },
-      // always render the source as prettified HTML, even for React
-      source: {
-        transform: sourceTransformPrettierHTML,
       },
     },
     // @whitespace/storybook-addon-html
