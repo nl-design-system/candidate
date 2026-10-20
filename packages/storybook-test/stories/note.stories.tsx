@@ -27,9 +27,10 @@ const meta = {
     globals: {
       dir: 'ltr',
       lang: 'nl',
-      title: 'Note van de dag',
     },
     parameters: {
+      // TODO: When component is implemented, enable Chromatic
+      chromatic: { disableSnapshot: true },
       acceptanceCriteria,
       docs: {
         description: {
@@ -67,15 +68,13 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SomeStory: Story = {
-  name: 'Some Story',
+export const Note: Story = {
+  name: 'Note',
   args: {},
   parameters: {
-    // TODO: When component is implemented, enable Chromatic
-    chromatic: { disableSnapshot: true },
     docs: {
       description: {
-        story: `Some Story`,
+        story: 'Note',
       },
     },
     testResult: {

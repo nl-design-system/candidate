@@ -16,7 +16,7 @@ const meta = {
         category: PROPS,
         type: {
           summary: 'Examples',
-          detail: 'command="show-dialog"\ncommandFor="dialog-id"\n\'aria-labelledby\'="label-id"',
+          detail: 'id="my-element"\nlang="nl"\ndir="ltr"',
         },
       },
     },
