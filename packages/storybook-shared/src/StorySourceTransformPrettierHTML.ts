@@ -5,13 +5,13 @@ import * as ReactDOMServer from 'react-dom/server';
 import * as prettier from 'prettier/standalone';
 import * as prettierPluginHtml from 'prettier/plugins/html';
 
-export const sourceTransformPrettierHTML = (code: string, storyContext: StoryContext<any>): string => {
+export const sourceTransformPrettierHTML = (code: string, storyContext: StoryContext) => {
   const render = storyContext.component;
 
   if (render) {
     const element = React.isValidElement(render)
       ? render
-      : React.createElement(render as React.ComponentType<any>, storyContext.args);
+      : React.createElement(render as React.ComponentType, storyContext.args);
 
     const html = ReactDOMServer.renderToStaticMarkup(element);
 
