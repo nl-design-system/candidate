@@ -1,1 +1,1 @@
-Biedt de mogelijkheid om één regel aan tekens in te vullen.
+Invoerveld voor het bewerken van één regel tekst.

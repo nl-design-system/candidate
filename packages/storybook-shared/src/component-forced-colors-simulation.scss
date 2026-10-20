@@ -7,3 +7,8 @@
 [data-forced-colors="active"] .nl-form-field-error-message {
   --nl-form-field-error-message-color: currentColor;
 }
+
+[data-forced-colors="active"] .nl-form-field-description {
+  --nl-form-field-description-color: currentColor;
+  --nl-form-field-description-disabled-color: currentColor;
+}

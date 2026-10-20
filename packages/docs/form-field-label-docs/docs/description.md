@@ -1,1 +1,1 @@
-Toont een tekstlabel dat informeert over de in te vullen informatie.
+Tekst bij een invoerveld die vraagt om bepaalde informatie, of een korte omschrijving van een optie om te kiezen.

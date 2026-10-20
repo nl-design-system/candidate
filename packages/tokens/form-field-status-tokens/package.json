@@ -1,0 +1,35 @@
+{
+  "name": "@nl-design-system-candidate/form-field-status-tokens",
+  "version": "0.0.0",
+  "description": "Design tokens of the NL Design System Form Field Status component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/tokens/form-field-status-tokens#readme",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
+  "main": "./tokens.json",
+  "exports": "./tokens.json",
+  "files": [
+    "./tokens.json"
+  ],
+  "keywords": [
+    "nl-design-system",
+    "design-tokens",
+    "form-field-status",
+    "form-field-status-component"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/tokens/form-field-status-tokens"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "generate-tokens": "../../../scripts/generate-tokens.sh form-field-status"
+  }
+}
