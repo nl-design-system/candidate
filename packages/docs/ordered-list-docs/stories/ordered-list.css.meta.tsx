@@ -2,6 +2,8 @@ import type { Meta } from '@storybook/react-vite';
 import { OrderedList } from '@nl-design-system-candidate/ordered-list-react/css';
 
 const CLASSES = 'classes';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const ATTRIBUTES = 'attributes';
 const CHILDREN = 'children';
 
 const meta = {

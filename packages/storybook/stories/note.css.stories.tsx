@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react-vite';
 import packageJSON from '../../components-css/note-css/package.json';
-import { type NoteProps } from '@nl-design-system-candidate/note-react';
+import { Note as NoteComponent } from '@nl-design-system-candidate/note-react';
 import noteMeta from '@nl-design-system-candidate/note-docs/stories/note.css.meta';
 import '../../components-css/note-css/src/test.scss';
 import { mergeCssMeta } from '../src/helpers/merge-css-meta';
@@ -23,8 +23,8 @@ const meta = {
   }),
   title: 'CSS Componenten/Note',
   id: 'css-note',
-} satisfies Meta<NoteProps>;
+} satisfies Meta<typeof NoteComponent>;
 
 export default meta;
 
-// export const SomeStory = Stories.SomeStory;
+// export const Note = Stories.Note;

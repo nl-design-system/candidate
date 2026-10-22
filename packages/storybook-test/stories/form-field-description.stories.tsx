@@ -89,8 +89,6 @@ const meta = {
       lang: 'nl',
     },
     parameters: {
-      // TODO: When component is implemented, enable Chromatic
-      chromatic: { disableSnapshot: true },
       acceptanceCriteria,
       docs: {
         description: {
@@ -276,7 +274,7 @@ export const FormFieldDescriptionWithMultipleParagraphElements: Story = {
 };
 
 export const FormFieldDescriptionWithParagraphComponent: Story = {
-  name: 'Form Field Description met NL Paragraph component',
+  name: 'Form Field Description met NL Paragraph component (TODO)',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -302,6 +300,8 @@ export const FormFieldDescriptionWithParagraphComponent: Story = {
     );
   },
   parameters: {
+    // TODO: Remove when story is no longer (TODO) because NL Component support is implemented
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -330,7 +330,7 @@ export const FormFieldDescriptionWithParagraphComponent: Story = {
 };
 
 export const FormFieldDescriptionWithMultipleParagraphComponents: Story = {
-  name: 'Form Field Description met meerdere NL Paragraph componenten',
+  name: 'Form Field Description met meerdere NL Paragraph componenten (TODO)',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -357,6 +357,8 @@ export const FormFieldDescriptionWithMultipleParagraphComponents: Story = {
     );
   },
   parameters: {
+    // TODO: Remove when story is no longer (TODO) because NL Component support is implemented
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -385,7 +387,7 @@ export const FormFieldDescriptionWithMultipleParagraphComponents: Story = {
 };
 
 export const FormFieldDescriptionWithMultipleParagraphComponentsLead: Story = {
-  name: 'Form Field Description met meerdere NL Paragraph componenten met Lead variant',
+  name: 'Form Field Description met meerdere NL Paragraph componenten met Lead variant (TODO)',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -412,6 +414,8 @@ export const FormFieldDescriptionWithMultipleParagraphComponentsLead: Story = {
     );
   },
   parameters: {
+    // TODO: Remove when story is no longer (TODO) because NL Component support is implemented
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -802,7 +806,7 @@ export const FormFieldDescriptionDisabledWithParagraphElement: Story = {
 };
 
 export const FormFieldDescriptionDisabledWithParagraphComponent: Story = {
-  name: 'Form Field Description disabled met NL Paragraph component',
+  name: 'Form Field Description disabled met NL Paragraph component (TODO)',
   globals: {
     dir: 'ltr',
     lang: 'nl',
@@ -823,6 +827,8 @@ export const FormFieldDescriptionDisabledWithParagraphComponent: Story = {
     );
   },
   parameters: {
+    // TODO: Remove when story is no longer (TODO) because NL Component support is implemented
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:

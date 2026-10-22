@@ -6,6 +6,7 @@ const API = 'API';
 
 const meta = {
   argTypes: {
+    // @ts-expect-error: The restProps are indeed not part of the accepted props, but included here for documentation purpose
     restProps: {
       name: '{...restProps}',
       control: false,
@@ -15,7 +16,7 @@ const meta = {
         category: PROPS,
         type: {
           summary: 'Examples',
-          detail: 'reversed\nstart={4}\ntype="A"\nlang="ar"',
+          detail: 'id="my-element"\nlang="nl"\ndir="ltr"',
         },
       },
     },

@@ -6,7 +6,7 @@ export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode; // Needed in template file, feel free to remove
 }
 
-export const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(props, forwardedRef) {
+export const Alert = forwardRef<HTMLDivElement, AlertProps>((props, forwardedRef) => {
   const { children, className, ...restProps } = props;
 
   return (

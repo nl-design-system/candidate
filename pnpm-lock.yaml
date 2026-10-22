@@ -208,6 +208,15 @@ importers:
         specifier: 1.89.2
         version: 1.89.2
 
+  packages/components-css/form-field-status-css:
+    devDependencies:
+      rimraf:
+        specifier: 6.1.0
+        version: 6.1.0
+      sass:
+        specifier: 1.94.1
+        version: 1.94.1
+
   packages/components-css/heading-css:
     devDependencies:
       rimraf:
@@ -281,6 +290,15 @@ importers:
         version: 1.94.1
 
   packages/components-css/skip-link-css:
+    devDependencies:
+      rimraf:
+        specifier: 6.1.0
+        version: 6.1.0
+      sass:
+        specifier: 1.94.1
+        version: 1.94.1
+
+  packages/components-css/text-area-css:
     devDependencies:
       rimraf:
         specifier: 6.1.0
@@ -694,6 +712,46 @@ importers:
         specifier: 4.1.8
         version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
+  packages/components-react/form-field-status-react:
+    dependencies:
+      '@nl-design-system-candidate/form-field-status-css':
+        specifier: workspace:*
+        version: link:../../components-css/form-field-status-css
+    devDependencies:
+      '@babel/preset-env':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
+      '@babel/preset-react':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
+      '@babel/preset-typescript':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
+      '@babel/runtime':
+        specifier: 7.28.4
+        version: 7.28.4
+      '@nl-design-system/rollup-config-react-component':
+        specifier: 1.0.7
+        version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
+      '@types/react':
+        specifier: 19.2.7
+        version: 19.2.7
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+      rimraf:
+        specifier: 6.1.0
+        version: 6.1.0
+      rollup:
+        specifier: 4.53.2
+        version: 4.53.2
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: 4.1.8
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+
   packages/components-react/heading-react:
     dependencies:
       '@nl-design-system-candidate/heading-css':
@@ -1078,6 +1136,46 @@ importers:
         specifier: 4.1.8
         version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
 
+  packages/components-react/text-area-react:
+    dependencies:
+      '@nl-design-system-candidate/text-area-css':
+        specifier: workspace:*
+        version: link:../../components-css/text-area-css
+    devDependencies:
+      '@babel/preset-env':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
+      '@babel/preset-react':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
+      '@babel/preset-typescript':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2)
+      '@babel/runtime':
+        specifier: 7.28.4
+        version: 7.28.4
+      '@nl-design-system/rollup-config-react-component':
+        specifier: 1.0.7
+        version: 1.0.7(@types/babel__core@7.20.5)(postcss@8.5.6)(rollup@4.53.2)(supports-color@10.2.2)(tslib@2.6.3)(typescript@5.9.3)
+      '@types/react':
+        specifier: 19.2.7
+        version: 19.2.7
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+      rimraf:
+        specifier: 6.1.0
+        version: 6.1.0
+      rollup:
+        specifier: 4.53.2
+        version: 4.53.2
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: 4.1.8
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+
   packages/components-react/text-input-react:
     dependencies:
       '@nl-design-system-candidate/text-input-css':
@@ -1299,6 +1397,21 @@ importers:
         specifier: 19.2.3
         version: 19.2.3
 
+  packages/docs/form-field-status-docs:
+    devDependencies:
+      '@nl-design-system-candidate/form-field-status-react':
+        specifier: workspace:*
+        version: link:../../components-react/form-field-status-react
+      '@storybook/react-vite':
+        specifier: 9.1.5
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      '@types/react':
+        specifier: 19.2.7
+        version: 19.2.7
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+
   packages/docs/heading-docs:
     devDependencies:
       '@nl-design-system-candidate/heading-react':
@@ -1437,6 +1550,21 @@ importers:
         specifier: 19.2.3
         version: 19.2.3
 
+  packages/docs/text-area-docs:
+    devDependencies:
+      '@nl-design-system-candidate/text-area-react':
+        specifier: workspace:*
+        version: link:../../components-react/text-area-react
+      '@storybook/react-vite':
+        specifier: 9.1.5
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      '@types/react':
+        specifier: 19.2.7
+        version: 19.2.7
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+
   packages/docs/text-input-docs:
     devDependencies:
       '@nl-design-system-candidate/text-input-react':
@@ -1542,6 +1670,12 @@ importers:
       '@nl-design-system-candidate/form-field-label-react':
         specifier: workspace:*
         version: link:../components-react/form-field-label-react
+      '@nl-design-system-candidate/form-field-status-docs':
+        specifier: workspace:*
+        version: link:../docs/form-field-status-docs
+      '@nl-design-system-candidate/form-field-status-react':
+        specifier: workspace:*
+        version: link:../components-react/form-field-status-react
       '@nl-design-system-candidate/heading-docs':
         specifier: workspace:*
         version: link:../docs/heading-docs
@@ -1590,6 +1724,12 @@ importers:
       '@nl-design-system-candidate/storybook-shared':
         specifier: workspace:*
         version: link:../storybook-shared
+      '@nl-design-system-candidate/text-area-docs':
+        specifier: workspace:*
+        version: link:../docs/text-area-docs
+      '@nl-design-system-candidate/text-area-react':
+        specifier: workspace:*
+        version: link:../components-react/text-area-react
       '@nl-design-system-candidate/unordered-list-docs':
         specifier: workspace:*
         version: link:../docs/unordered-list-docs
@@ -1867,6 +2007,8 @@ importers:
 
   packages/tokens/form-field-label-tokens: {}
 
+  packages/tokens/form-field-status-tokens: {}
+
   packages/tokens/heading-tokens: {}
 
   packages/tokens/icon-tokens: {}
@@ -1884,6 +2026,8 @@ importers:
   packages/tokens/paragraph-tokens: {}
 
   packages/tokens/skip-link-tokens: {}
+
+  packages/tokens/text-area-tokens: {}
 
   packages/tokens/text-input-tokens: {}
 

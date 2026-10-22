@@ -1,0 +1,70 @@
+{
+  "name": "@nl-design-system-candidate/form-field-status-react",
+  "version": "0.0.0",
+  "description": "React implementation of the NL Design System Form Field Status component",
+  "license": "EUPL-1.2",
+  "homepage": "https://github.com/nl-design-system/candidate/tree/main/packages/components-react/form-field-status-react#readme",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/candidate/issues",
+    "email": "info@nldesignsystem.nl"
+  },
+  "type": "module",
+  "main": "./dist/form-field-status.js",
+  "files": [
+    "./dist/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/form-field-status.d.ts",
+      "import": "./dist/form-field-status.js"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.js"
+    }
+  },
+  "keywords": [
+    "nl-design-system",
+    "react",
+    "form-field-status",
+    "form-field-status-component"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/candidate.git",
+    "directory": "packages/components-react/form-field-status-react"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "rollup --config ./rollup.config.mjs",
+    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/ ./coverage/",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "7.28.5",
+    "@babel/preset-react": "7.28.5",
+    "@babel/preset-typescript": "7.28.5",
+    "@babel/runtime": "7.28.4",
+    "@nl-design-system/rollup-config-react-component": "1.0.7",
+    "@types/react": "19.2.7",
+    "react": "19.2.3",
+    "rimraf": "6.1.0",
+    "rollup": "4.53.2",
+    "typescript": "5.9.3",
+    "vitest": "4.1.8"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7",
+    "react": "^18 || ^19"
+  },
+  "dependencies": {
+    "@nl-design-system-candidate/form-field-status-css": "workspace:*"
+  }
+}

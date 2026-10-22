@@ -1,0 +1,5 @@
+@use "mixin";
+
+.nl-form-field-status {
+  @include mixin.nl-form-field-status;
+}

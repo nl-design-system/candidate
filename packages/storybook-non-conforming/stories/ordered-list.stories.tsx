@@ -1,3 +1,4 @@
+import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import componentMarkdown from '../../docs/ordered-list-docs/docs/component.md?raw';
 import {
@@ -16,32 +17,38 @@ import {
   type OrderedListProps,
 } from '../../components-react/ordered-list-react/src/ordered-list';
 import { Icon } from '../../components-react/icon-react/src/icon';
+import reactMeta from '../../docs/ordered-list-docs/stories/ordered-list.react.meta';
 
 const meta = {
-  argTypes: {
-    // Vul aan door developer
-  },
-  component: OrderedList,
-  parameters: {
-    docs: {
-      description: {
-        component: componentMarkdown,
-      },
-      source: {
-        type: 'dynamic',
-      },
+  ...merge({
+    ...reactMeta,
+
+    args: {
+      // Vul aan door developer
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/ordered-list',
+    parameters: {
+      // TODO: When component is implemented, enable Chromatic
+      chromatic: { disableSnapshot: true },
+      docs: {
+        description: {
+          component: componentMarkdown,
+        },
+        source: {
+          type: 'dynamic',
+        },
       },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/ordered-list',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
+      ],
+    },
+  }),
   title: 'Componenten/Ordered List',
 } satisfies Meta<typeof OrderedList>;
 

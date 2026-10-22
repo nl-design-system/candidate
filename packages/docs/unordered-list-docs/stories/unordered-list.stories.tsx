@@ -6,6 +6,6 @@ type Story = StoryObj<UnorderedListProps>;
 export const UnorderedList: Story = {
   name: 'Unordered List',
   args: {
-    children: `Unordered List`,
+    children: 'Unordered List',
   },
 };
