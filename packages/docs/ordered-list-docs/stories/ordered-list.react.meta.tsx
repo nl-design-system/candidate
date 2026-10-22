@@ -6,6 +6,7 @@ const API = 'API';
 
 const meta = {
   argTypes: {
+    // @ts-expect-error: The restProps are indeed not part of the accepted props, but included here for documentation purpose
     restProps: {
       name: '{...restProps}',
       control: false,
@@ -21,26 +22,10 @@ const meta = {
     },
     children: {
       control: false,
-      description: 'Eén of meer `OrderedListItem` componenten.',
+      description: 'De inhoud van de lijst, doorgaans één of meer `OrderedListItem` componenten.',
       table: {
         category: API,
         type: { summary: 'ReactNode' },
-      },
-    },
-    className: {
-      control: 'text',
-      description: 'Optionele extra className voor het component.',
-      table: {
-        category: PROPS,
-        type: { summary: 'string' },
-      },
-    },
-    ref: {
-      control: false,
-      description: 'Ref naar het `ol` HTML-element.',
-      table: {
-        category: PROPS,
-        type: { summary: 'Ref<HTMLOListElement>' },
       },
     },
   },
