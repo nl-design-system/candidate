@@ -12,3 +12,12 @@
   --nl-form-field-description-color: currentColor;
   --nl-form-field-description-disabled-color: currentColor;
 }
+
+[data-forced-colors="active"] .nl-text-input:where(:disabled, .nl-text-input--disabled) {
+  border-color: GrayText !important;
+  color: GrayText !important;
+}
+
+[data-forced-colors="active"] .nl-text-input {
+  border-width: var(--_nl-text-input-border-width) !important;
+}

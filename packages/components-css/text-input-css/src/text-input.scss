@@ -1,5 +1,87 @@
 @use "mixin";
 
+/* State selectors have the same specificity, keep this order: hover, focus-visible, invalid, read-only, disabled. */
+
 .nl-text-input {
   @include mixin.nl-text-input;
+}
+
+.nl-text-input::placeholder,
+.nl-text-input__placeholder {
+  @include mixin.nl-text-input__placeholder;
+}
+
+/* No hover style on fields that can't be changed. */
+.nl-text-input:where(
+  :hover:not(:disabled, [readonly], .nl-text-input--disabled, .nl-text-input--read-only),
+  .nl-text-input--hover
+) {
+  @include mixin.nl-text-input--hover;
+}
+
+.nl-text-input:where(:focus-visible, .nl-text-input--focus-visible) {
+  @include mixin.nl-text-input--focus-visible;
+}
+
+.nl-text-input--invalid {
+  @include mixin.nl-text-input--invalid;
+}
+
+.nl-text-input:where([readonly], .nl-text-input--read-only) {
+  @include mixin.nl-text-input--read-only;
+}
+
+.nl-text-input:where(:disabled, .nl-text-input--disabled) {
+  @include mixin.nl-text-input--disabled;
+}
+
+/* Browsers don't use `GrayText` for `<input disabled>` in Forced Colors mode. */
+@media screen and (forced-colors: active) {
+  .nl-text-input {
+    @include mixin.nl-text-input--forced-colors;
+  }
+
+  .nl-text-input:where(:disabled, .nl-text-input--disabled) {
+    @include mixin.nl-text-input--forced-colors-disabled;
+  }
+}
+
+.nl-text-input--xs {
+  @include mixin.nl-text-input--xs;
+}
+
+.nl-text-input--sm {
+  @include mixin.nl-text-input--sm;
+}
+
+.nl-text-input--md {
+  @include mixin.nl-text-input--md;
+}
+
+.nl-text-input--lg {
+  @include mixin.nl-text-input--lg;
+}
+
+.nl-text-input--xl {
+  @include mixin.nl-text-input--xl;
+}
+
+.nl-text-input--stretch {
+  @include mixin.nl-text-input--stretch;
+}
+
+.nl-text-input--numeric {
+  @include mixin.nl-text-input--numeric;
+}
+
+.nl-text-input--password {
+  @include mixin.nl-text-input--password;
+}
+
+.nl-text-input--password-visible {
+  @include mixin.nl-text-input--password-visible;
+}
+
+.nl-text-input--url {
+  @include mixin.nl-text-input--url;
 }
