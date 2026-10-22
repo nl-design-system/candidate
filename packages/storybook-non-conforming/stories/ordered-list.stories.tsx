@@ -56,12 +56,6 @@ export default meta;
 
 type Story = StoryObj<OrderedListProps>;
 
-// <ol class="nl-ordered-list">
-//   <li class="nl-ordered-list__item">Paspoortfoto, niet ouder dan 6 maanden.</li>
-//   <li class="nl-ordered-list__item">Je oude paspoort.</li>
-//   <li class="nl-ordered-list__item">Je afspraakbevestiging.</li>
-// </ol>
-// Original: Ordered List zonder `role="list"`
 export const OrderedListNoRole: Story = {
   name: 'Fout: Ordered List zonder HTML-attribuut role="list"',
   render: () => (
@@ -84,23 +78,6 @@ De React-component zet \`role="list"\` automatisch; deze fout ontstaat alleen bi
   },
 };
 
-// <ol class="nl-ordered-list">
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
-//       <span class="nl-ordered-list__marker-label">Stap 1.&nbsp;</span>
-//     </span>
-//     Verzamel documenten.
-//   </li>
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
-//       <span class="nl-ordered-list__marker-label">Stap 2.&nbsp;</span>
-//     </span>
-//     Maak een afspraak.
-//   </li>
-// </ol>
-// Original: Ordered List met custom marker zonder `role="list"`
 export const OrderedListCustomMarkerNoRole: Story = {
   name: 'Fout: Ordered List met Custom Marker zonder HTML-attribuut role="list"',
   render: () => (
@@ -144,12 +121,6 @@ De React-component zet \`role="list"\` automatisch; deze fout ontstaat alleen bi
   },
 };
 
-// <ol class="nl-ordered-list" role="list" tabindex="0">
-//   <li class="nl-ordered-list__item">Paspoortfoto, niet ouder dan 6 maanden.</li>
-//   <li class="nl-ordered-list__item">Je oude paspoort.</li>
-//   <li class="nl-ordered-list__item">Je afspraakbevestiging.</li>
-// </ol>
-// Original: Ordered List met `tabindex`
 export const OrderedListTabIndex: Story = {
   name: 'Fout: Ordered List met HTML-attribuut tabindex',
   render: (args) => (
@@ -170,11 +141,6 @@ Het probleem ontstaat omdat een niet-interactief element via het HTML-attribuut 
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item" aria-posinset="2" aria-setsize="5">Paspoortfoto, niet ouder dan 6 maanden.</li>
-//   <li class="nl-ordered-list__item" aria-posinset="4" aria-setsize="5">Je oude paspoort.</li>
-// </ol>
-// Original: Ordered List met `aria-posinset` en `aria-setsize`
 export const OrderedListAriaPosSetSize: Story = {
   name: 'Fout: Ordered List met HTML-attributen aria-posinset en aria-setsize',
   render: (args) => (
@@ -198,21 +164,6 @@ Het probleem ontstaat doordat de WAI-ARIA-attributen \`aria-posinset\` en \`aria
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span aria-hidden="true">1️⃣</span>
-//     </span>
-//     Verzamel documenten.
-//   </li>
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span aria-hidden="true">2️⃣</span>
-//     </span>
-//     Plan een afspraak.
-//   </li>
-// </ol>
-// Original: Ordered List met custom marker (Unicode emoji) zonder toegankelijk alternatief
 export const OrderedListEmojiNoAlt: Story = {
   name: 'Fout: Ordered List met Unicode emoji Custom Marker zonder toegankelijk alternatief',
   render: (args) => (
@@ -234,16 +185,6 @@ Het probleem ontstaat omdat de emoji als marker is gebruikt zonder toegankelijke
   },
 };
 
-// <style>
-//   .nl-ordered-list--example-emoji-marker > li { list-style-type: none; }
-//   .nl-ordered-list--example-emoji-marker > li:nth-child(1)::before { content: "1️⃣ "; }
-//   .nl-ordered-list--example-emoji-marker > li:nth-child(2)::before { content: "2️⃣ "; }
-// </style>
-// <ol class="nl-ordered-list nl-ordered-list--example-emoji-marker" role="list">
-//   <li class="nl-ordered-list__item">Verzamel documenten.</li>
-//   <li class="nl-ordered-list__item">Plan een afspraak.</li>
-// </ol>
-// Original: Ordered List met custom marker (Unicode emoji) via CSS `content`
 export const OrderedListEmojiAltInCssContent: Story = {
   name: 'Fout: Ordered List met Unicode emoji Custom Marker via CSS-eigenschap content',
   render: (args) => (
@@ -263,15 +204,6 @@ Het probleem ontstaat omdat de marker via de CSS-eigenschap \`content\` is toege
   },
 };
 
-// <style>
-//   .nl-ordered-list--example-image-marker > li:nth-child(1) { list-style-image: url("data:image/svg+xml,..."); }
-//   .nl-ordered-list--example-image-marker > li:nth-child(2) { list-style-image: url("data:image/svg+xml,..."); }
-// </style>
-// <ol class="nl-ordered-list nl-ordered-list--example-image-marker" role="list">
-//   <li class="nl-ordered-list__item">Verzamel documenten.</li>
-//   <li class="nl-ordered-list__item">Plan een afspraak.</li>
-// </ol>
-// Original: Ordered List met custom marker via `list-style-image` gecombineerd met `::marker`
 export const OrderedListListStyleImage: Story = {
   name: 'Fout: Ordered List met Custom Marker via CSS-eigenschap list-style-image en pseudo-element marker',
   render: (args) => (
@@ -291,16 +223,6 @@ Het probleem ontstaat omdat de marker via de CSS-eigenschap \`list-style-image\`
   },
 };
 
-// <style>
-//   .nl-ordered-list--example-counter-marker { counter-reset: stap; }
-//   .nl-ordered-list--example-counter-marker > li { list-style-type: none; }
-//   .nl-ordered-list--example-counter-marker > li::before { counter-increment: stap; content: "Stap " counter(stap) ". "; }
-// </style>
-// <ol class="nl-ordered-list nl-ordered-list--example-counter-marker" role="list">
-//   <li class="nl-ordered-list__item">Verzamel documenten.</li>
-//   <li class="nl-ordered-list__item">Plan een afspraak.</li>
-// </ol>
-// Original: Ordered List met custom markers via `counter-reset` / `counter-increment` in CSS `content`
 export const OrderedListCounterContent: Story = {
   name: 'Fout: Ordered List met Custom Marker via CSS-eigenschappen counter-reset en counter-increment in CSS-eigenschap content',
   render: (args) => (
@@ -320,21 +242,6 @@ Het probleem ontstaat omdat de tekst met de CSS-eigenschappen \`counter-reset\` 
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
-//     </span>
-//     Verzamel documenten.
-//   </li>
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
-//     </span>
-//     Maak een afspraak.
-//   </li>
-// </ol>
-// Original: Ordered List met SVG's als bullets zonder toegankelijke implementatie
 export const OrderedListSVGNotAccessible: Story = {
   name: "Fout: Ordered List met SVG's als leestekens zonder toegankelijke implementatie",
   render: (args) => (
@@ -374,15 +281,6 @@ Dit kan via een zichtbare tekst, een visueel verstopte tekst of het WAI-ARIA-att
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg><!-- bolletje --></svg></span></span>
-//     </span>
-//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
-//   </li>
-// </ol>
-// Original: Ordered List met Custom Marker met Decoratieve Icon. Voorbeeldcode: <OrderedListItem marker={<Icon />} /> waar de Icon bijvoorbeeld een bullet is (wat betekent dat je eigenlijk UnorderedList moet gebruiken).
 export const OrderedListDecorativeIcon: Story = {
   name: 'Fout: Ordered List met decoratief icoon als Custom Marker',
   render: (args) => (
@@ -431,16 +329,6 @@ Als een lijst wel leestekens nodig heeft voor nummering, dan is het de bedoeling
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg>...</svg></span></span>
-//       <span class="nl-ordered-list__marker-label">Nummer Eén Icoon.&nbsp;</span>
-//     </span>
-//     Verzamel documenten.
-//   </li>
-// </ol>
-// Original: Ordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <OrderedListItem marker={<svg><title>Number One Icon</title>...</svg>} />
 export const OrderedListInformativeIconBadAlt: Story = {
   name: 'Fout: Ordered List met Custom Marker met informatieve icoon met ontoegankelijke tekst',
   render: (args) => (
