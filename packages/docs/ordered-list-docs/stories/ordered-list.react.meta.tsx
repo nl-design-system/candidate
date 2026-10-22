@@ -6,7 +6,6 @@ const API = 'API';
 
 const meta = {
   argTypes: {
-    // @ts-expect-error: The restProps are indeed not part of the accepted props, but included here for documentation purpose
     restProps: {
       name: '{...restProps}',
       control: false,
