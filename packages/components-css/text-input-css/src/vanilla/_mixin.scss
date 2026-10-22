@@ -1,13 +1,65 @@
 @use "../mixin";
 
+/* `input` types for one line of text, including no `type`. `type="hidden"` is never visible. */
+$nl-text-input-types: ':not([type]), [type="text" i], [type="email" i], [type="url" i], [type="tel" i], [type="search" i], [type="password" i], [type="number" i], [type="date" i], [type="month" i], [type="week" i], [type="time" i], [type="datetime-local" i]' !default;
+
+/* State selectors have the same specificity, keep this order: hover, focus-visible, invalid, read-only, disabled. */
 @mixin nl-html--text-input {
-  /* TODO: Change this to the appropriate element */
-  input[type="text" i],
-  input[type="email" i],
-  input[type="url" i],
-  input[type="tel" i],
-  input[type="search" i],
-  input[type="password" i] {
+  input:where(#{$nl-text-input-types}) {
     @include mixin.nl-text-input;
+  }
+
+  input:where(#{$nl-text-input-types})::placeholder {
+    @include mixin.nl-text-input__placeholder;
+  }
+
+  input:where(#{$nl-text-input-types}):where(:hover:not(:disabled, [readonly])) {
+    @include mixin.nl-text-input--hover;
+  }
+
+  input:where(#{$nl-text-input-types}):where(:focus-visible) {
+    @include mixin.nl-text-input--focus-visible;
+  }
+
+  input:where(#{$nl-text-input-types}):where([aria-invalid="true" i]) {
+    @include mixin.nl-text-input--invalid;
+  }
+
+  input:where(#{$nl-text-input-types}):where([readonly]) {
+    @include mixin.nl-text-input--read-only;
+  }
+
+  input:where(#{$nl-text-input-types}):where(:disabled) {
+    @include mixin.nl-text-input--disabled;
+  }
+
+  @media screen and (forced-colors: active) {
+    input:where(#{$nl-text-input-types}) {
+      @include mixin.nl-text-input--forced-colors;
+    }
+
+    input:where(#{$nl-text-input-types}):where(:disabled) {
+      @include mixin.nl-text-input--forced-colors-disabled;
+    }
+  }
+
+  input:where([type="password" i]) {
+    @include mixin.nl-text-input--password;
+  }
+
+  input:where([type="url" i], [type="email" i], [inputmode="email" i], [inputmode="url" i]) {
+    @include mixin.nl-text-input--url;
+  }
+
+  input:where(#{$nl-text-input-types}):where(
+      [pattern="\\d*"],
+      [pattern="[0-9]*"],
+      [type="tel" i],
+      [type="number" i],
+      [inputmode="numeric" i],
+      [inputmode="decimal" i],
+      [inputmode="tel" i]
+    ) {
+    @include mixin.nl-text-input--numeric;
   }
 }
