@@ -4,7 +4,6 @@ import { NewComponent } from '@nl-design-system-candidate/new-component-react/cs
 const CLASSES = 'classes';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ATTRIBUTES = 'attributes';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CHILDREN = 'children';
 
 const meta = {

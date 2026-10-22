@@ -4,7 +4,6 @@ import { FormFieldLabel } from '@nl-design-system-candidate/form-field-label-rea
 const CLASSES = 'classes';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ATTRIBUTES = 'attributes';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CHILDREN = 'children';
 
 const meta = {
