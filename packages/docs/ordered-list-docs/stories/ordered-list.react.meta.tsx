@@ -1,9 +1,7 @@
 import type { Meta } from '@storybook/react-vite';
-import { OrderedList } from '@nl-design-system-candidate/ordered-list-react/css';
+import { OrderedList, OrderedListItem } from '@nl-design-system-candidate/ordered-list-react/css';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const PROPS = 'Props';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const API = 'API';
 
 const meta = {
@@ -22,18 +20,17 @@ const meta = {
         },
       },
     },
-    // TODO: Ontwikkelfase: moet de children verstopt? Doe dan `children: { table: { disable: true } }`
     children: {
       control: false,
-      description: 'De content van de component.',
+      description: 'De inhoud van de lijst, doorgaans één of meer `OrderedListItem` componenten.',
       table: {
         category: API,
         type: { summary: 'ReactNode' },
       },
     },
-    // TODO: Ontwikkelfase: aanvullen adhv acceptance-criteria
   },
   component: OrderedList,
+  subcomponents: { OrderedListItem },
 } satisfies Meta<typeof OrderedList>;
 
 export default meta;

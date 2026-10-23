@@ -4,7 +4,6 @@ import { OrderedList } from '@nl-design-system-candidate/ordered-list-react/css'
 const CLASSES = 'classes';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ATTRIBUTES = 'attributes';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CHILDREN = 'children';
 
 const meta = {
@@ -19,10 +18,45 @@ const meta = {
         type: { summary: undefined },
       },
     },
-    children: {
-      table: { disable: true },
+    nlOrderedListItem: {
+      name: 'nl-ordered-list__item',
+      description: 'De class voor elk item, op het HTML-element `li`.',
+      control: false,
+      type: { name: 'other', value: 'string', required: true },
+      table: {
+        category: CLASSES,
+        type: { summary: undefined },
+      },
     },
-    // TODO: Ontwikkelfase: aanvullen adhv acceptance-criteria
+    nlOrderedListMarker: {
+      name: 'nl-ordered-list__marker',
+      description:
+        'De Custom Marker, op een HTML-element `span` als direct child van het item. Het item verbergt dan het standaard nummer. Het icoon erin is verborgen voor hulpsoftware met het HTML-attribuut `aria-hidden="true"`.',
+      control: false,
+      table: {
+        category: CLASSES,
+        type: { summary: undefined },
+      },
+    },
+    nlOrderedListMarkerLabel: {
+      name: 'nl-ordered-list__marker-label',
+      description:
+        'De visueel verborgen tekst van de Custom Marker, op een HTML-element `span`. Verplicht bij een Custom Marker.',
+      control: false,
+      table: {
+        category: CLASSES,
+        type: { summary: undefined },
+      },
+    },
+    children: {
+      name: 'content',
+      description: 'Eén of meer HTML-elementen `li` met de class `nl-ordered-list__item`.',
+      control: false,
+      table: {
+        category: CHILDREN,
+        type: { summary: undefined },
+      },
+    },
   },
   component: (props) => <OrderedList {...props} />,
 } satisfies Meta;

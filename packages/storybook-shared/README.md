@@ -24,6 +24,15 @@ layout becomes visible. Used in `storybook-non-conforming`, for example to show 
 Adds an outline around every element directly rendered by the story (not nested descendants), so you can
 test the boundaries of its border box in visual regression tests.
 
+### createCustomPropertiesDecorator
+
+Creates a decorator that sets CSS custom properties, for example design tokens, on an element around the story.
+Useful to test a component with specific token values, such as invalid values:
+
+```tsx
+decorators: [createCustomPropertiesDecorator({ '--nl-ordered-list-color': '10px' })];
+```
+
 ### ExampleBodyTextDecorator
 
 Wraps a story in `<div class="example-body-text">`, for example body text around a component.

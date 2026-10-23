@@ -4,4 +4,16 @@
   ol {
     @include mixin.nl-ordered-list;
   }
+
+  ol:lang(ar) {
+    @include mixin.nl-ordered-list--lang-ar;
+  }
+
+  ol > li {
+    @include mixin.nl-ordered-list__item;
+  }
+
+  ol > li::marker {
+    @include mixin.nl-ordered-list__marker;
+  }
 }
