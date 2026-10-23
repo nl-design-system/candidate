@@ -391,7 +391,7 @@ export const OrderedListUppercaseRomanNum: Story = {
 // Combined with "Ordered List met HTML `dir` attribuut" due to feedback https://github.com/nl-design-system/candidate/pull/1411#discussion_r4106782830
 export const OrderedListArabicNumDirRTL: Story = {
   name: 'Ordered List met Arabische nummering via HTML-attribuut lang="ar" en schrijfrichting via HTML-attribuut dir="rtl"',
-  globals: { lang: 'ar-iq', dir: 'rtl' },
+  globals: { lang: 'ar', dir: 'rtl' },
   render: (args) => (
     <OrderedList {...args} lang="ar" dir="rtl">
       <OrderedListItem>تحميل المستندات</OrderedListItem>
@@ -428,7 +428,7 @@ Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels
 // Original: Ordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat
 export const OrderedListLangDirOnHTML: Story = {
   name: 'Ordered List met Arabische tekst waarbij HTML-attributen lang en dir alleen op HTML-element html staat',
-  globals: { lang: 'ar-iq', dir: 'rtl' },
+  globals: { lang: 'ar', dir: 'rtl' },
   args: {},
   render: (args) => (
     <OrderedList {...args}>
@@ -466,7 +466,7 @@ Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels
 // ingesteld. De story beschrijft daarom dat de taal de nummering bepaalt, niet het `type`-attribuut.
 export const OrderedListTypeOverridesLanguage: Story = {
   name: 'Ordered List waarbij lang de nummering bepaalt ondanks type-attribuut',
-  globals: { lang: 'ar-iq', dir: 'rtl' },
+  globals: { lang: 'ar', dir: 'rtl' },
   args: {},
   render: (args) => (
     <OrderedList {...args} lang="ar" type="i">
@@ -634,7 +634,7 @@ export const OrderedListHidden: Story = {
 // Original: Ordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat
 export const OrderedListDirParentOnly: Story = {
   name: 'Ordered List met Arabische tekst waarbij HTML-attribuut dir alleen op HTML-element ol staat',
-  globals: { lang: 'ar-iq', dir: 'rtl' },
+  globals: { lang: 'ar', dir: 'rtl' },
   render: (args) => (
     <OrderedList {...args} lang="ar" dir="rtl">
       <OrderedListItem>تحميل المستندات</OrderedListItem>
