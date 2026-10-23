@@ -537,7 +537,7 @@ export const OrderedListCustomMarkerLabel: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een geordende lijst met een icoon als marker. Het icoon is verborgen voor hulpsoftware. De betekenis van de marker wordt aangeboden als visueel verborgen tekst welke wordt opgelezen voor screenreadergebruikers. De boodschap van de icoon is toegankelijk voor alle bezoekers.`,
+        story: `Een geordende lijst met een icoon als marker. Het icoon is verborgen voor hulpsoftware. De betekenis van de marker wordt aangeboden als visueel verborgen tekst welke wordt opgelezen voor screenreadergebruikers. De boodschap van het icoon is toegankelijk voor alle bezoekers.`,
       },
     },
   },
@@ -564,7 +564,7 @@ export const OrderedListCustomMarkerLabel: Story = {
 // issues/ordered-list-marker-informative-icon-hidden.md.
 // Original: Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst
 export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
-  name: 'Ordered List met Custom Marker met informatieve icoon met alternatieve tekst',
+  name: 'Ordered List met Custom Marker met informatief icoon met alternatieve tekst',
   args: {},
   render: (args) => (
     <OrderedList {...args}>

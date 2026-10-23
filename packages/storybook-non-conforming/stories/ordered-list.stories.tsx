@@ -330,7 +330,7 @@ Als een lijst wel leestekens nodig heeft voor nummering, dan is het de bedoeling
 };
 
 export const OrderedListInformativeIconBadAlt: Story = {
-  name: 'Fout: Ordered List met Custom Marker met informatieve icoon met ontoegankelijke tekst',
+  name: 'Fout: Ordered List met Custom Marker met informatief icoon met ontoegankelijke tekst',
   render: (args) => (
     <OrderedList {...args}>
       <OrderedListItem
@@ -368,9 +368,9 @@ export const OrderedListInformativeIconBadAlt: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een informatieve icoon als marker, maar screenreadergebruikers krijgen een ontoegankelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+        story: `Bezoekers zien een informatief icoon als marker, maar screenreadergebruikers krijgen een ontoegankelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de stappen moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
 
-Het probleem ontstaat omdat de alternatieve tekst van de marker de naam van de icoon bevat (bijvoorbeeld "Nummer Drie Icoon."), in plaats van de boodschap van de icoon (bijvoorbeeld "Stap 3.").
+Het probleem ontstaat omdat de alternatieve tekst van de marker de naam van het icoon bevat (bijvoorbeeld "Nummer Drie Icoon."), in plaats van de boodschap van het icoon (bijvoorbeeld "Stap 3.").
 
 Gebruik een standaard lijstmarker, of stel een toegankelijke alternatieve tekst in die de boodschap van de marker overbrengt, zodat de boodschap voor iedereen duidelijk is.`,
       },
