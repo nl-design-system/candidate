@@ -1,9 +1,7 @@
 import type { Meta } from '@storybook/react-vite';
 import { NewComponent as NewComponentComponent } from '@nl-design-system-candidate/new-component-react/css';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const PROPS = 'Props';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const API = 'API';
 
 const meta = {

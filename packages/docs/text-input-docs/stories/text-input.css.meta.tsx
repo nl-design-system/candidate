@@ -4,7 +4,6 @@ import { TextInput } from '@nl-design-system-candidate/text-input-react/css';
 const CLASSES = 'classes';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ATTRIBUTES = 'attributes';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CHILDREN = 'children';
 
 const meta = {
