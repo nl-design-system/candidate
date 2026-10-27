@@ -58,3 +58,9 @@
   position: absolute !important;
   white-space: nowrap !important;
 }
+
+// An empty string hides the native marker like `none`, but WebKit only removes list semantics for `none`.
+// This keeps the list recognizable for assistive technology even when `role="list"` is missing.
+@mixin nl-ordered-list__item--custom-marker {
+  list-style-type: "";
+}

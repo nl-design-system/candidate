@@ -21,10 +21,8 @@
   @include mixin.nl-ordered-list__marker--custom;
 }
 
-// An empty string hides the native marker like `none`, but WebKit only removes list semantics for `none`.
-// This keeps the list recognizable for assistive technology even when `role="list"` is missing.
 .nl-ordered-list__item:where(:has(> .nl-ordered-list__marker)) {
-  list-style-type: "";
+  @include mixin.nl-ordered-list__item--custom-marker;
 }
 
 .nl-ordered-list__marker-label {
