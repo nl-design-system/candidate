@@ -3,7 +3,10 @@ import { CandidateDisableCssDecorator } from '@nl-design-system-candidate/storyb
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { merge } from 'lodash-es';
-import { IconNumber1 as ExampleIconStep1, IconNumber2 as ExampleIconStep2 } from '@tabler/icons-react';
+import {
+  IconCircleNumber1Filled as ExampleIconStep1,
+  IconCircleNumber2Filled as ExampleIconStep2,
+} from '@tabler/icons-react';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/link-css/src/html/link.scss';
 import '../../components-css/link-css/src/link.scss';
