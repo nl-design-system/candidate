@@ -1269,7 +1269,7 @@ importers:
         version: link:../../components-react/alert-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1284,7 +1284,7 @@ importers:
         version: link:../../components-react/button-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1299,7 +1299,7 @@ importers:
         version: link:../../components-react/code-block-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1314,7 +1314,7 @@ importers:
         version: link:../../components-react/code-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1329,7 +1329,7 @@ importers:
         version: link:../../components-react/color-sample-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1344,7 +1344,7 @@ importers:
         version: link:../../components-react/data-badge-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1359,7 +1359,7 @@ importers:
         version: link:../../components-react/form-field-description-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1374,7 +1374,7 @@ importers:
         version: link:../../components-react/form-field-error-message-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1389,7 +1389,7 @@ importers:
         version: link:../../components-react/form-field-label-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1404,7 +1404,7 @@ importers:
         version: link:../../components-react/form-field-status-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1422,7 +1422,7 @@ importers:
         version: link:../../components-react/paragraph-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1437,7 +1437,7 @@ importers:
         version: link:../../components-react/icon-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1452,7 +1452,7 @@ importers:
         version: link:../../components-react/link-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1467,7 +1467,7 @@ importers:
         version: link:../../components-react/mark-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1482,7 +1482,7 @@ importers:
         version: link:../../components-react/note-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1497,7 +1497,7 @@ importers:
         version: link:../../components-react/number-badge-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1512,7 +1512,7 @@ importers:
         version: link:../../components-react/ordered-list-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1527,7 +1527,7 @@ importers:
         version: link:../../components-react/paragraph-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1542,7 +1542,7 @@ importers:
         version: link:../../components-react/skip-link-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1557,7 +1557,7 @@ importers:
         version: link:../../components-react/text-area-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1572,7 +1572,7 @@ importers:
         version: link:../../components-react/text-input-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1587,7 +1587,7 @@ importers:
         version: link:../../components-react/unordered-list-react
       '@storybook/react-vite':
         specifier: 9.1.5
-        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1743,17 +1743,17 @@ importers:
         specifier: 1.1.1
         version: 1.1.1(supports-color@10.2.2)
       '@storybook/addon-a11y':
-        specifier: 9.1.16
-        version: 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        specifier: 9.1.21
+        version: 9.1.21(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@storybook/addon-docs':
-        specifier: 9.1.16
-        version: 9.1.16(@types/react@18.3.26)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        specifier: 9.1.21
+        version: 9.1.21(@types/react@18.3.26)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@storybook/react':
-        specifier: 9.1.16
-        version: 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
+        specifier: 9.1.21
+        version: 9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
       '@storybook/react-vite':
-        specifier: 9.1.16
-        version: 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        specifier: 9.1.21
+        version: 9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@tabler/icons-react':
         specifier: 3.35.0
         version: 3.35.0(react@19.2.3)
@@ -1765,7 +1765,7 @@ importers:
         version: 18.3.7(@types/react@18.3.26)
       '@whitespace/storybook-addon-html':
         specifier: 8.0.2
-        version: 8.0.2(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        version: 8.0.2(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       lodash-es:
         specifier: 4.18.1
         version: 4.18.1
@@ -1779,8 +1779,8 @@ importers:
         specifier: 19.2.3
         version: 19.2.3(react@19.2.3)
       storybook:
-        specifier: 9.1.16
-        version: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        specifier: 9.1.21
+        version: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       vite:
         specifier: 7.3.6
         version: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
@@ -1792,7 +1792,7 @@ importers:
     devDependencies:
       '@etchteam/storybook-addon-status':
         specifier: 7.0.1
-        version: 7.0.1(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        version: 7.0.1(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@fontsource/fira-code':
         specifier: 5.2.7
         version: 5.2.7
@@ -1810,22 +1810,22 @@ importers:
         version: 1.0.0(@babel/runtime@7.28.4)(react@19.2.3)
       '@nl-design-system-unstable/tokens-lib':
         specifier: 0.3.0
-        version: 0.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        version: 0.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@nl-design-system-unstable/voorbeeld-design-tokens':
         specifier: 7.4.1
         version: 7.4.1
       '@storybook/addon-a11y':
-        specifier: 9.1.16
-        version: 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        specifier: 9.1.21
+        version: 9.1.21(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@storybook/addon-docs':
-        specifier: 9.1.16
-        version: 9.1.16(@types/react@18.3.26)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        specifier: 9.1.21
+        version: 9.1.21(@types/react@18.3.26)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@storybook/react':
-        specifier: 9.1.16
-        version: 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
+        specifier: 9.1.21
+        version: 9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
       '@storybook/react-vite':
-        specifier: 9.1.16
-        version: 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        specifier: 9.1.21
+        version: 9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@tabler/icons-react':
         specifier: 3.35.0
         version: 3.35.0(react@19.2.3)
@@ -1840,7 +1840,7 @@ importers:
         version: 18.3.7(@types/react@18.3.26)
       '@whitespace/storybook-addon-html':
         specifier: 8.0.2
-        version: 8.0.2(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        version: 8.0.2(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1857,8 +1857,8 @@ importers:
         specifier: 19.2.3
         version: 19.2.3(react@19.2.3)
       storybook:
-        specifier: 9.1.16
-        version: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        specifier: 9.1.21
+        version: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       vite:
         specifier: 7.3.6
         version: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
@@ -1876,10 +1876,10 @@ importers:
         version: 1.0.5(typescript@5.9.3)
       '@storybook/addon-docs':
         specifier: 9.1.16
-        version: 9.1.16(@types/react@19.2.7)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        version: 9.1.16(@types/react@19.2.7)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@storybook/react-vite':
         specifier: 9.1.16
-        version: 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        version: 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -1891,7 +1891,7 @@ importers:
     devDependencies:
       '@etchteam/storybook-addon-status':
         specifier: 7.0.1
-        version: 7.0.1(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        version: 7.0.1(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@fontsource/fira-code':
         specifier: 5.2.7
         version: 5.2.7
@@ -1927,7 +1927,7 @@ importers:
         version: 1.0.0(@babel/runtime@7.28.4)(react@19.2.3)
       '@nl-design-system-unstable/tokens-lib':
         specifier: 0.3.0
-        version: 0.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        version: 0.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@nl-design-system-unstable/voorbeeld-design-tokens':
         specifier: 7.4.1
         version: 7.4.1
@@ -1935,14 +1935,14 @@ importers:
         specifier: 1.1.1
         version: 1.1.1(supports-color@10.2.2)
       '@storybook/addon-docs':
-        specifier: 9.1.16
-        version: 9.1.16(@types/react@18.3.26)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        specifier: 9.1.21
+        version: 9.1.21(@types/react@18.3.26)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@storybook/react':
-        specifier: 9.1.16
-        version: 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
+        specifier: 9.1.21
+        version: 9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
       '@storybook/react-vite':
-        specifier: 9.1.16
-        version: 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        specifier: 9.1.21
+        version: 9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@tabler/icons-react':
         specifier: 3.35.0
         version: 3.35.0(react@19.2.3)
@@ -1963,7 +1963,7 @@ importers:
         version: 3.0.1
       '@whitespace/storybook-addon-html':
         specifier: 8.0.2
-        version: 8.0.2(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+        version: 8.0.2(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1980,8 +1980,8 @@ importers:
         specifier: 19.2.3
         version: 19.2.3(react@19.2.3)
       storybook:
-        specifier: 9.1.16
-        version: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+        specifier: 9.1.21
+        version: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       vite:
         specifier: 7.3.6
         version: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
@@ -3818,15 +3818,20 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@storybook/addon-a11y@9.1.16':
-    resolution: {integrity: sha512-DpUqAMOgkC/K/DgB9osqbBYmiWWj7V444HeYLHcx7GdPtg2guq1jAcalsOnQeU3wXgUE+wNuyMm6qZKm7of11g==}
+  '@storybook/addon-a11y@9.1.21':
+    resolution: {integrity: sha512-g0y7B5NWVpPn4aJiDBW7P3GEslIsRQ6HEGuoiPleUjJqCykYTMBMeH6fO5/gjiMjMHcDgWPdgmHbIoHnOE5lEQ==}
     peerDependencies:
-      storybook: ^9.1.16
+      storybook: ^9.1.21
 
   '@storybook/addon-docs@9.1.16':
     resolution: {integrity: sha512-JfaUD6fC7ySLg5duRdaWZ0FUUXrgUvqbZe/agCbSyOaIHOtJdhGaPjOC3vuXTAcV8/8/wWmbu0iXFMD08iKvdw==}
     peerDependencies:
       storybook: ^9.1.16
+
+  '@storybook/addon-docs@9.1.21':
+    resolution: {integrity: sha512-wF7dVHS6nYlIyFG+22EKXhWi/fIFHqAlGLC2ge6WlpiFJv1Nd2ibUZSaNeciWij+ZSkwR0RFoQl+zAOVeacGJA==}
+    peerDependencies:
+      storybook: ^9.1.21
 
   '@storybook/blocks@8.2.7':
     resolution: {integrity: sha512-lZB4EzmY4ftgubkf7hmkALEhmfMhRkDRD5QjrgTZLRpdVXPzFUyljgLlTBhv34YTN+ZLYK618/4uSVJBpgoKeQ==}
@@ -3846,6 +3851,12 @@ packages:
       storybook: ^9.1.16
       vite: ^7.3.5
 
+  '@storybook/builder-vite@9.1.21':
+    resolution: {integrity: sha512-nmE149T4eoV+DQ/1atsSRRQv16oGpx0eZCZz8PE57z25i/3bNFec2ivda1mwl4+wahNa7O5pZroz1lkDTdkEuQ==}
+    peerDependencies:
+      storybook: ^9.1.21
+      vite: ^7.3.5
+
   '@storybook/builder-vite@9.1.5':
     resolution: {integrity: sha512-sgt/9+Yl/5O7Bj5hdbHfadN8e/e4CNiDZKDcbLOMpOjKKoqF8vm19I1QocWIAiKjTOhF+4E9v9LddjtAGnfqHQ==}
     peerDependencies:
@@ -3856,6 +3867,11 @@ packages:
     resolution: {integrity: sha512-GKlNNlmWeFBQxhQY5hZOSnFGbeKq69jal0dYNWoSImTjor28eYRHb9iQkDzRpijLPizBaB9MlxLsLrgFDp7adA==}
     peerDependencies:
       storybook: ^9.1.16
+
+  '@storybook/csf-plugin@9.1.21':
+    resolution: {integrity: sha512-bIeqN0WOdo75r9cNwNkeehSAWLKgS/p6gODMTkdccQ86LVL8E2iOjKAC6A8k2pYW604nfe+6ANqn2Rk4uOy7rQ==}
+    peerDependencies:
+      storybook: ^9.1.21
 
   '@storybook/csf-plugin@9.1.5':
     resolution: {integrity: sha512-PmHuF+j11Z7BxAI2/4wQYn0gH1d67gNvycyR+EWgp4P/AWam9wFbuI/T1R45CRQTV2/VrfGdts/tFrvo5kXWig==}
@@ -3882,6 +3898,13 @@ packages:
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       storybook: ^9.1.16
 
+  '@storybook/react-dom-shim@9.1.21':
+    resolution: {integrity: sha512-gAtaibNXeiWMujvE9cIvXkYRhGMqAvffz0ZaAbrrRhBzgY43Gg/9ueWLR+Yihv6B4YYLnhB7/LjkqEBnRbx3nQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      storybook: ^9.1.21
+
   '@storybook/react-dom-shim@9.1.5':
     resolution: {integrity: sha512-blSq9uzSYnfgEYPHYKgM5O14n8hbXNiXx2GiVJyDSg8QPNicbsBg+lCb1TC7/USfV26pNZr/lGNNKGkcCEN6Gw==}
     peerDependencies:
@@ -3896,6 +3919,15 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       storybook: ^9.1.16
+      vite: ^7.3.5
+
+  '@storybook/react-vite@9.1.21':
+    resolution: {integrity: sha512-9Vcs2IP4qItOXUJjm7e2d8YkQBJoESp/18xHv0CMUv7v/bifubWhsqve/OKhzRDUNtYf4p7GZMtae9tDyYGJaw==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      storybook: ^9.1.21
       vite: ^7.3.5
 
   '@storybook/react-vite@9.1.5':
@@ -3914,6 +3946,18 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       storybook: ^9.1.16
+      typescript: '>= 4.9.x'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@storybook/react@9.1.21':
+    resolution: {integrity: sha512-1WoDI1AlZikn9LC2xyjyScAG0vLO2yQHmQUPWQ1L86ufeZt5Gwr2sEM1DQRbDHGgMEYmeuHr8jqoPlGG4utBcw==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      storybook: ^9.1.21
       typescript: '>= 4.9.x'
     peerDependenciesMeta:
       typescript:
@@ -4344,10 +4388,6 @@ packages:
 
   axe-core@4.12.1:
     resolution: {integrity: sha512-s7iGf5GaVMxEG0ENN9x+xTr7GFZCb1ZP/1uATUpCEK2X78nDB3RwbtFCo9pGAf9ru+VwoQ464DkaLEeRM08wJA==}
-    engines: {node: '>=4'}
-
-  axe-core@4.7.2:
-    resolution: {integrity: sha512-zIURGIS1E1Q4pcrMjp+nnEh+16G56eG/MUllJH8yEvw7asDo7Ac9uhC9KIH5jzpITueEZolfYglnCGIuSBz39g==}
     engines: {node: '>=4'}
 
   babel-plugin-polyfill-corejs2@0.4.14:
@@ -6917,8 +6957,8 @@ packages:
   std-env@4.1.0:
     resolution: {integrity: sha512-Rq7ybcX2RuC55r9oaPVEW7/xu3tj8u4GeBYHBWCychFtzMIr86A7e3PPEBPT37sHStKX3+TiX/Fr/ACmJLVlLQ==}
 
-  storybook@9.1.16:
-    resolution: {integrity: sha512-339U14K6l46EFyRvaPS2ZlL7v7Pb+LlcXT8KAETrGPxq8v1sAjj2HAOB6zrlAK3M+0+ricssfAwsLCwt7Eg8TQ==}
+  storybook@9.1.21:
+    resolution: {integrity: sha512-ntKPfAlG6quovR5i40q3tOxgUq36o9mweZ1JA9YfNz/zpGvN5/Qw9IP3NUBFZ+KN3fps3FRa+X3YtY2+Wp3UcA==}
     hasBin: true
     peerDependencies:
       prettier: ^2 || ^3
@@ -8844,10 +8884,10 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@etchteam/storybook-addon-status@7.0.1(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+  '@etchteam/storybook-addon-status@7.0.1(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
     dependencies:
       lodash: 4.18.1
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   '@fontsource/fira-code@5.2.7': {}
 
@@ -8992,11 +9032,11 @@ snapshots:
       clsx: 2.1.1
       react: 19.2.3
 
-  '@nl-design-system-unstable/tokens-lib@0.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+  '@nl-design-system-unstable/tokens-lib@0.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
     dependencies:
       '@babel/runtime': 7.25.0
       '@gemeente-denhaag/process-steps': 0.1.0-alpha.230(react@19.2.3)
-      '@storybook/blocks': 8.2.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      '@storybook/blocks': 8.2.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@types/color': 3.0.6
       '@types/d3-color': 3.1.3
       '@types/lodash-es': 4.17.12
@@ -9454,39 +9494,39 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@storybook/addon-a11y@9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+  '@storybook/addon-a11y@9.1.21(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
     dependencies:
       '@storybook/global': 5.0.0
-      axe-core: 4.7.2
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      axe-core: 4.12.1
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
-  '@storybook/addon-docs@9.1.16(@types/react@18.3.26)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
-    dependencies:
-      '@mdx-js/react': 3.0.1(@types/react@18.3.26)(react@19.2.3)
-      '@storybook/csf-plugin': 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
-      '@storybook/icons': 1.4.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@storybook/react-dom-shim': 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
-      ts-dedent: 2.2.0
-    transitivePeerDependencies:
-      - '@types/react'
-
-  '@storybook/addon-docs@9.1.16(@types/react@19.2.7)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+  '@storybook/addon-docs@9.1.16(@types/react@19.2.7)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
     dependencies:
       '@mdx-js/react': 3.0.1(@types/react@19.2.7)(react@19.2.3)
-      '@storybook/csf-plugin': 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      '@storybook/csf-plugin': 9.1.16(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       '@storybook/icons': 1.4.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@storybook/react-dom-shim': 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      '@storybook/react-dom-shim': 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       ts-dedent: 2.2.0
     transitivePeerDependencies:
       - '@types/react'
 
-  '@storybook/blocks@8.2.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+  '@storybook/addon-docs@9.1.21(@types/react@18.3.26)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+    dependencies:
+      '@mdx-js/react': 3.0.1(@types/react@18.3.26)(react@19.2.3)
+      '@storybook/csf-plugin': 9.1.21(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      '@storybook/icons': 1.4.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@storybook/react-dom-shim': 9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      ts-dedent: 2.2.0
+    transitivePeerDependencies:
+      - '@types/react'
+
+  '@storybook/blocks@8.2.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
     dependencies:
       '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
@@ -9499,7 +9539,7 @@ snapshots:
       memoizerific: 1.11.3
       polished: 4.2.2
       react-colorful: 5.6.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       telejson: 7.2.0
       ts-dedent: 2.2.0
       util-deprecate: 1.0.2
@@ -9507,28 +9547,40 @@ snapshots:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 
-  '@storybook/builder-vite@9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
+  '@storybook/builder-vite@9.1.16(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
     dependencies:
-      '@storybook/csf-plugin': 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      '@storybook/csf-plugin': 9.1.16(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       ts-dedent: 2.2.0
       vite: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
 
-  '@storybook/builder-vite@9.1.5(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
+  '@storybook/builder-vite@9.1.21(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
     dependencies:
-      '@storybook/csf-plugin': 9.1.5(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      '@storybook/csf-plugin': 9.1.21(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       ts-dedent: 2.2.0
       vite: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
 
-  '@storybook/csf-plugin@9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+  '@storybook/builder-vite@9.1.5(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
     dependencies:
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      '@storybook/csf-plugin': 9.1.5(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      ts-dedent: 2.2.0
+      vite: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
+
+  '@storybook/csf-plugin@9.1.16(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+    dependencies:
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       unplugin: 1.5.1
 
-  '@storybook/csf-plugin@9.1.5(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+  '@storybook/csf-plugin@9.1.21(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
     dependencies:
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      unplugin: 1.5.1
+
+  '@storybook/csf-plugin@9.1.5(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+    dependencies:
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       unplugin: 1.5.1
 
   '@storybook/csf@0.1.11':
@@ -9542,31 +9594,37 @@ snapshots:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 
-  '@storybook/react-dom-shim@9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+  '@storybook/react-dom-shim@9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
     dependencies:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
-  '@storybook/react-dom-shim@9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+  '@storybook/react-dom-shim@9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
     dependencies:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
-  '@storybook/react-vite@9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
+  '@storybook/react-dom-shim@9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+    dependencies:
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+
+  '@storybook/react-vite@9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
     dependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.6.1(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@rollup/pluginutils': 5.1.2(rollup@4.62.2)
-      '@storybook/builder-vite': 9.1.16(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
-      '@storybook/react': 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
+      '@storybook/builder-vite': 9.1.16(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      '@storybook/react': 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
       find-up: 7.0.0
       magic-string: 0.30.21
       react: 19.2.3
       react-docgen: 8.0.1(supports-color@10.2.2)
       react-dom: 19.2.3(react@19.2.3)
       resolve: 1.22.10
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       tsconfig-paths: 4.2.0
       vite: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
     transitivePeerDependencies:
@@ -9574,19 +9632,19 @@ snapshots:
       - supports-color
       - typescript
 
-  '@storybook/react-vite@9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
+  '@storybook/react-vite@9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
     dependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.6.1(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       '@rollup/pluginutils': 5.1.2(rollup@4.62.2)
-      '@storybook/builder-vite': 9.1.5(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
-      '@storybook/react': 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
+      '@storybook/builder-vite': 9.1.21(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      '@storybook/react': 9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
       find-up: 7.0.0
       magic-string: 0.30.21
       react: 19.2.3
       react-docgen: 8.0.1(supports-color@10.2.2)
       react-dom: 19.2.3(react@19.2.3)
       resolve: 1.22.10
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
       tsconfig-paths: 4.2.0
       vite: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
     transitivePeerDependencies:
@@ -9594,23 +9652,53 @@ snapshots:
       - supports-color
       - typescript
 
-  '@storybook/react@9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)':
+  '@storybook/react-vite@9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.62.2)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(supports-color@10.2.2)(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
+    dependencies:
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.6.1(typescript@5.9.3)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      '@rollup/pluginutils': 5.1.2(rollup@4.62.2)
+      '@storybook/builder-vite': 9.1.5(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      '@storybook/react': 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)
+      find-up: 7.0.0
+      magic-string: 0.30.21
+      react: 19.2.3
+      react-docgen: 8.0.1(supports-color@10.2.2)
+      react-dom: 19.2.3(react@19.2.3)
+      resolve: 1.22.10
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      tsconfig-paths: 4.2.0
+      vite: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - typescript
+
+  '@storybook/react@9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)':
     dependencies:
       '@storybook/global': 5.0.0
-      '@storybook/react-dom-shim': 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      '@storybook/react-dom-shim': 9.1.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
     optionalDependencies:
       typescript: 5.9.3
 
-  '@storybook/react@9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)':
+  '@storybook/react@9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)':
     dependencies:
       '@storybook/global': 5.0.0
-      '@storybook/react-dom-shim': 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      '@storybook/react-dom-shim': 9.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+    optionalDependencies:
+      typescript: 5.9.3
+
+  '@storybook/react@9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))(typescript@5.9.3)':
+    dependencies:
+      '@storybook/global': 5.0.0
+      '@storybook/react-dom-shim': 9.1.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
     optionalDependencies:
       typescript: 5.9.3
 
@@ -9966,9 +10054,9 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.0
 
-  '@whitespace/storybook-addon-html@8.0.2(storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
+  '@whitespace/storybook-addon-html@8.0.2(storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)))':
     dependencies:
-      storybook: 9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
+      storybook: 9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -10114,8 +10202,6 @@ snapshots:
       possible-typed-array-names: 1.0.0
 
   axe-core@4.12.1: {}
-
-  axe-core@4.7.2: {}
 
   babel-plugin-polyfill-corejs2@0.4.14(@babel/core@7.28.5(supports-color@10.2.2))(supports-color@10.2.2):
     dependencies:
@@ -13073,7 +13159,7 @@ snapshots:
 
   std-env@4.1.0: {}
 
-  storybook@9.1.16(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)):
+  storybook@9.1.21(@testing-library/dom@10.4.1)(prettier@3.6.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)):
     dependencies:
       '@storybook/global': 5.0.0
       '@testing-library/jest-dom': 6.9.1
