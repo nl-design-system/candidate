@@ -2,9 +2,9 @@ import { merge } from 'lodash-es';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import componentMarkdown from '../../docs/ordered-list-docs/docs/component.md?raw';
 import {
-  IconNumber1 as ExampleIconStep1,
-  IconNumber2 as ExampleIconStep2,
-  IconNumber3 as ExampleIconStep3,
+  IconCircleNumber1Filled as ExampleIconStep1,
+  IconCircleNumber2Filled as ExampleIconStep2,
+  IconCircleNumber3Filled as ExampleIconStep3,
   IconPointFilled as ExampleIconPointFilled,
 } from '@tabler/icons-react';
 import '../../components-css/icon-css/src/icon.scss';

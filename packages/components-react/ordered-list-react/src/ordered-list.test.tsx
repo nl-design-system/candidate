@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/vitest';
 import { Icon } from '@nl-design-system-candidate/icon-react';
-import { IconNumber1 } from '@tabler/icons-react';
+import { IconCircleNumber1Filled as ExampleIconStep1 } from '@tabler/icons-react';
 import { cleanup, render } from '@testing-library/react';
 import { createRef, type ReactNode } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
@@ -20,7 +20,7 @@ const renderList = (props: OrderedListProps = {}, firstItem: ReactNode = <Ordere
 
 const markerIcon = (
   <Icon>
-    <IconNumber1 />
+    <ExampleIconStep1 />
   </Icon>
 );
 
