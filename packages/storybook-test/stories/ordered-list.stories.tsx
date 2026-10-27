@@ -358,8 +358,8 @@ Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels
   },
 };
 
-export const OrderedListListStyleTypeOverridesLanguage: Story = {
-  name: 'Ordered List waarbij HTML-attribuut lang middels CSS-eigenschap list-style-type de nummering bepaalt ondanks HTML-attribuut type',
+export const OrderedListTypeOverridesLanguage: Story = {
+  name: 'Ordered List waarbij HTML-attribuut type de nummering bepaalt ondanks HTML-attribuut lang',
   globals: { lang: 'ar', dir: 'rtl' },
   args: {},
   render: (args) => (
@@ -374,7 +374,11 @@ export const OrderedListListStyleTypeOverridesLanguage: Story = {
       description: {
         story: `Een geordende lijst met Arabische tekst waarbij zowel het HTML-attribuut \`lang="ar"\` als het HTML-attribuut \`type="i"\` zijn ingesteld.
 
-De CSS-eigenschap \`list-style-type: arabic-indic\` via de \`:lang(ar)\` selector heeft altijd voorrang op het HTML-attribuut \`type\`, omdat CSS altijd wint van presentatie-attributen. De lijst toont daardoor Arabisch-Indische nummering in plaats van kleine Romeinse cijfers.`,
+De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="ar"\` op het HTML-element \`html\`. De NL Ordered List-component stemt de nummering af op de Arabische taal via styling, middels de CSS-eigenschap \`list-style-type: arabic-indic\`.
+
+Dit wordt aangeboden vanuit de NL Ordered List-component naar aanleiding van gebruikersonderzoek op Gemeente Utrecht, waaruit naar voren is gekomen dat één procent van de bezoekers van de website de Arabische taal gebruikt.
+
+Echter de HTML-attribuut \`type="i"\` heeft voorrang op de nummering, waardoor de lijst wordt weergegeven met kleine Romeinse cijfers (i, ii, iii) in plaats van Arabisch-Indische cijfers.`,
       },
     },
   },

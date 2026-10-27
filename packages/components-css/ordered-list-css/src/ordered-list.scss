@@ -4,7 +4,7 @@
   @include mixin.nl-ordered-list;
 }
 
-.nl-ordered-list:where(:lang(ar)) {
+.nl-ordered-list:not([type]):where(:lang(ar)) {
   @include mixin.nl-ordered-list--lang-ar;
 }
 
