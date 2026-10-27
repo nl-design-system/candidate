@@ -5,7 +5,7 @@
     @include mixin.nl-ordered-list;
   }
 
-  ol:lang(ar) {
+  ol:not([type]):lang(ar) {
     @include mixin.nl-ordered-list--lang-ar;
   }
 
