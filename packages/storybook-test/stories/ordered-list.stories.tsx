@@ -358,8 +358,8 @@ Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels
   },
 };
 
-export const OrderedListTypeOverridesLanguage: Story = {
-  name: 'Ordered List waarbij lang de nummering bepaalt ondanks type-attribuut',
+export const OrderedListListStyleTypeOverridesLanguage: Story = {
+  name: 'Ordered List waarbij HTML-attribuut lang middels CSS-eigenschap list-style-type de nummering bepaalt ondanks HTML-attribuut type',
   globals: { lang: 'ar', dir: 'rtl' },
   args: {},
   render: (args) => (
