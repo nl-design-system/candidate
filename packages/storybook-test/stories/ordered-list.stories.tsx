@@ -75,12 +75,6 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
-//   <li class="nl-ordered-list__item">Je oude paspoort</li>
-//   <li class="nl-ordered-list__item">Je afspraakbevestiging</li>
-// </ol>
-// Original: Ordered List
 export const OrderedListDefault: Story = {
   name: 'Ordered List',
   render: (args) => (
@@ -100,17 +94,6 @@ export const OrderedListDefault: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">
-//     Verzamel de benodigde documenten
-//     <ol class="nl-ordered-list" role="list">
-//       <li class="nl-ordered-list__item">Geldig identiteitsbewijs</li>
-//       <li class="nl-ordered-list__item">Bewijs van inschrijving</li>
-//     </ol>
-//   </li>
-//   <li class="nl-ordered-list__item">Dien de aanvraag in</li>
-// </ol>
-// Original: Ordered List met geneste Ordered List
 export const OrderedListNestedOrderedList: Story = {
   name: 'Ordered List met geneste Ordered List',
   args: {},
@@ -136,17 +119,6 @@ export const OrderedListNestedOrderedList: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">
-//     Geef je keuze aan voor de afspraak. Je kunt kiezen uit:
-//     <ul class="nl-unordered-list" role="list">
-//       <li class="nl-unordered-list__item">Online</li>
-//       <li class="nl-unordered-list__item">Bij de balie</li>
-//     </ul>
-//   </li>
-//   <li class="nl-ordered-list__item">Kies een datum en tijd</li>
-// </ol>
-// Original: Ordered List met geneste Unordered List
 export const OrderedListNestedUnorderedList: Story = {
   name: 'Ordered List met geneste Unordered List',
   args: {},
@@ -172,23 +144,6 @@ export const OrderedListNestedUnorderedList: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">
-//     Fase 1: Voorbereiding
-//     <ol class="nl-ordered-list" role="list">
-//       <li class="nl-ordered-list__item">
-//         Verzamel documenten
-//         <ol role="list">
-//           <li class="nl-ordered-list__item">Identiteitsbewijs</li>
-//           <li class="nl-ordered-list__item">Bewijs van inschrijving</li>
-//         </ol>
-//       </li>
-//       <li class="nl-ordered-list__item">Plan een afspraak</li>
-//     </ol>
-//   </li>
-//   <li class="nl-ordered-list__item">Fase 2: Uitvoering</li>
-// </ol>
-// Original: Ordered List met minimaal drie niveaus nesting, met documentatie over hoe en wat
 export const OrderedListThreeLevelsNesting: Story = {
   name: 'Ordered List van drie niveaus',
   args: {},
@@ -220,22 +175,18 @@ export const OrderedListThreeLevelsNesting: Story = {
   },
 };
 
-// <p>Rotondekunstprijs eervolle vermeldingen:</p>
-// <ol class="ordered-list" role="list" start="4">
-//   <li class="nl-ordered-list__item">Vangrails Looping</li>
-//   <li class="nl-ordered-list__item">Many sites</li>
-//   <li class="nl-ordered-list__item">De Aardbeien van Jan en Brigitte</li>
-// </ol>
-// Original: Ordered List met startnummer anders dan 1
 export const OrderedListStart: Story = {
   name: 'Ordered List met startnummer anders dan 1',
   args: {},
   render: (args) => (
-    <OrderedList {...args} start={4}>
-      <OrderedListItem>Vangrails Looping</OrderedListItem>
-      <OrderedListItem>Many sites</OrderedListItem>
-      <OrderedListItem>De Aardbeien van Jan en Brigitte</OrderedListItem>
-    </OrderedList>
+    <>
+      <p>Rotondekunstprijs eervolle vermeldingen:</p>
+      <OrderedList {...args} start={4}>
+        <OrderedListItem>Vangrails Looping</OrderedListItem>
+        <OrderedListItem>Many sites</OrderedListItem>
+        <OrderedListItem>De Aardbeien van Jan en Brigitte</OrderedListItem>
+      </OrderedList>
+    </>
   ),
   parameters: {
     docs: {
@@ -247,22 +198,18 @@ export const OrderedListStart: Story = {
   },
 };
 
-// <p>Rotondekunstprijs prijswinnaars:</p>
-// <ol class="nl-ordered-list" role="list" reversed>
-//   <li class="nl-ordered-list__item">Vis op wielen</li>
-//   <li class="nl-ordered-list__item">Licht Piramide</li>
-//   <li class="nl-ordered-list__item">Berm</li>
-// </ol>
-// Original: Ordered List met omgekeerde nummering (`reversed`)
 export const OrderedListReversed: Story = {
   name: 'Ordered List met omgekeerde nummering via HTML-attribuut reversed',
   args: {},
   render: (args) => (
-    <OrderedList {...args} reversed>
-      <OrderedListItem>Vis op wielen</OrderedListItem>
-      <OrderedListItem>Licht Piramide</OrderedListItem>
-      <OrderedListItem>Berm</OrderedListItem>
-    </OrderedList>
+    <>
+      <p>Rotondekunstprijs prijswinnaars:</p>
+      <OrderedList {...args} reversed>
+        <OrderedListItem>Vis op wielen</OrderedListItem>
+        <OrderedListItem>Licht Piramide</OrderedListItem>
+        <OrderedListItem>Berm</OrderedListItem>
+      </OrderedList>
+    </>
   ),
   parameters: {
     docs: {
@@ -274,12 +221,6 @@ export const OrderedListReversed: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list" type="a">
-//   <li class="nl-ordered-list__item">Amsterdam</li>
-//   <li class="nl-ordered-list__item">Rotterdam</li>
-//   <li class="nl-ordered-list__item">Den Haag</li>
-// </ol>
-// Original: Ordered List met kleine letters (`type="a"`)
 export const OrderedListLowercaseLetters: Story = {
   name: 'Ordered List met kleine letters via HTML-attribuut type="a"',
   args: {},
@@ -300,15 +241,6 @@ export const OrderedListLowercaseLetters: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list" type="A">
-//   <li class="nl-ordered-list__item">Aanvraag indienen</li>
-//   <li class="nl-ordered-list__item">Documenten uploaden</li>
-//   <li class="nl-ordered-list__item">Bevestiging afwachten</li>
-// </ol>
-// Ontwikkelfase notitie: de CSS-component stelt geen `list-style-type` in, zodat de browser de waarde
-// rechtstreeks leest van het HTML-attribuut `type`. Daardoor werken `type="A"` en `type="a"` correct
-// zonder extra CSS-selectors of extra class names.
-// Original: Ordered List met hoofdletters (`type="A"`)
 export const OrderedListUppercaseLetters: Story = {
   name: 'Ordered List met hoofdletters via HTML-attribuut type="A"',
   args: {},
@@ -329,12 +261,6 @@ export const OrderedListUppercaseLetters: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list" type="i">
-//   <li class="nl-ordered-list__item">Algemene bepalingen</li>
-//   <li class="nl-ordered-list__item">Duur van de overeenkomst</li>
-//   <li class="nl-ordered-list__item">Beëindiging</li>
-// </ol>
-// Original: Ordered List met kleine Romeinse cijfers (`type="i"`)
 export const OrderedListLowercaseRomanNum: Story = {
   name: 'Ordered List met kleine Romeinse cijfers via HTML-attribuut type="i"',
   args: {},
@@ -355,12 +281,6 @@ export const OrderedListLowercaseRomanNum: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list" type="I">
-//   <li class="nl-ordered-list__item">Inleiding</li>
-//   <li class="nl-ordered-list__item">Doelstellingen</li>
-//   <li class="nl-ordered-list__item">Conclusie</li>
-// </ol>
-// Original: Ordered List met hoofdletters Romeinse cijfers (`type="I"`)
 export const OrderedListUppercaseRomanNum: Story = {
   name: 'Ordered List met hoofdletters Romeinse cijfers via HTML-attribuut type="I"',
   args: {},
@@ -381,17 +301,8 @@ export const OrderedListUppercaseRomanNum: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list" lang="ar" dir="rtl">
-//   <li class="nl-ordered-list__item">تحميل المستندات</li>
-//   <li class="nl-ordered-list__item">تقديم الطلب</li>
-//   <li class="nl-ordered-list__item">انتظار التأكيد</li>
-// </ol>
-// Original: Ordered List met Arabische nummering (`lang="ar"`)
-// Original: Ordered List met HTML `lang` attribuut met `ar` waarde - met omschrijving van hoe je dat kan uitbreiden met andere talen - en waarom we arabic supporten
-// Combined with "Ordered List met HTML `dir` attribuut" due to feedback https://github.com/nl-design-system/candidate/pull/1411#discussion_r4106782830
 export const OrderedListArabicNumDirRTL: Story = {
   name: 'Ordered List met Arabische nummering via HTML-attribuut lang="ar" en schrijfrichting via HTML-attribuut dir="rtl"',
-  globals: { lang: 'ar', dir: 'rtl' },
   render: (args) => (
     <OrderedList {...args} lang="ar" dir="rtl">
       <OrderedListItem>تحميل المستندات</OrderedListItem>
@@ -416,16 +327,6 @@ Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels
   },
 };
 
-// <html lang="ar" dir="rtl">
-// <ol class="nl-ordered-list" role="list">
-//  <li class="nl-ordered-list__item">تحميل المستندات</li>
-//  <li class="nl-ordered-list__item">تقديم الطلب</li>
-//  <li class="nl-ordered-list__item">انتظار التأكيد</li>
-// </ol>
-// </html>
-// Ontwikkelfase notitie: de html lang/dir is gezet via de globals in de story
-// Ontwikkelfase notitie: hiermee test je ook een extra feature van de :lang() selector
-// Original: Ordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat
 export const OrderedListLangDirOnHTML: Story = {
   name: 'Ordered List met Arabische tekst waarbij HTML-attributen lang en dir alleen op HTML-element html staat',
   globals: { lang: 'ar', dir: 'rtl' },
@@ -454,16 +355,6 @@ Deze functionaliteit kan gemakkelijk uitgebreid worden voor andere talen middels
   },
 };
 
-// <ol class="nl-ordered-list" role="list" lang="ar" type="i">
-//   <li class="nl-ordered-list__item">تحميل المستندات</li>
-//   <li class="nl-ordered-list__item">تقديم الطلب</li>
-//   <li class="nl-ordered-list__item">انتظار التأكيد</li>
-// </ol>
-// Original: Type overschrijft Language
-// Ontwikkelfase notitie: de CSS-eigenschap `list-style-type: arabic-indic` via `:lang(ar)` wint altijd
-// van het HTML-attribuut `type`, omdat CSS altijd voorrang heeft op presentatie-attributen. Het
-// HTML-attribuut `type` wordt alleen door de browser gelezen als er geen CSS `list-style-type` is
-// ingesteld. De story beschrijft daarom dat de taal de nummering bepaalt, niet het `type`-attribuut.
 export const OrderedListTypeOverridesLanguage: Story = {
   name: 'Ordered List waarbij lang de nummering bepaalt ondanks type-attribuut',
   globals: { lang: 'ar', dir: 'rtl' },
@@ -486,27 +377,6 @@ De CSS-eigenschap \`list-style-type: arabic-indic\` via de \`:lang(ar)\` selecto
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span aria-hidden="true">
-//         <span class="nl-icon" aria-hidden="true"><svg class="tabler-icon tabler-icon-number-1">...</svg></span>
-//       </span>
-//       <span class="nl-ordered-list__marker-label">Stap 1.&nbsp;</span>
-//     </span>
-//     Verzamel documenten
-//   </li>
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span aria-hidden="true">
-//         <span class="nl-icon" aria-hidden="true"><svg class="tabler-icon tabler-icon-number-2">...</svg></span>
-//       </span>
-//       <span class="nl-ordered-list__marker-label">Stap 2.&nbsp;</span>
-//     </span>
-//     Maak een afspraak
-//   </li>
-// </ol>
-// Original: Ordered List met custom marker en toegankelijke naam via markerLabel (nl-ordered-list__marker-label), met `aria-hidden="true"` op custom marker
 export const OrderedListCustomMarkerLabel: Story = {
   name: 'Ordered List met Custom Marker en toegankelijke tekst die visueel verborgen is',
   args: {},
@@ -543,26 +413,6 @@ export const OrderedListCustomMarkerLabel: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span class="nl-icon" role="img" aria-label="Stap 1."><svg class="tabler-icon tabler-icon-number-1">...</svg></span>
-//     </span>
-//     Verzamel documenten
-//   </li>
-//   <li class="nl-ordered-list__item">
-//     <span class="nl-ordered-list__marker">
-//       <span class="nl-icon" role="img" aria-label="Stap 2."><svg class="tabler-icon tabler-icon-number-2">...</svg></span>
-//     </span>
-//     Maak een afspraak
-//   </li>
-// </ol>
-// Ontwikkelfase notitie: geen visueel verborgen markerLabel, de alternatieve tekst staat op de Icon zelf via
-// `role="img"` en `aria-label`.
-// Ontwikkelfase notitie: OrderedListMarker verpakt de marker nu nog altijd in `aria-hidden="true"`, waardoor de
-// alternatieve tekst van de Icon niet bij hulpsoftware aankomt. Deze story beschrijft het verwachte gedrag, zie
-// issues/ordered-list-marker-informative-icon-hidden.md.
-// Original: Ordered List met Custom Marker met Informatieve Icon met alternatieve tekst
 export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
   name: 'Ordered List met Custom Marker met informatief icoon met alternatieve tekst',
   args: {},
@@ -600,12 +450,6 @@ export const OrderedListCustomMarkerInformativeIconAccessible: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" hidden>
-//   <li class="nl-ordered-list__item">Paspoortfoto, niet ouder dan 6 maanden</li>
-//   <li class="nl-ordered-list__item">Je oude paspoort</li>
-//   <li class="nl-ordered-list__item">Je afspraakbevestiging</li>
-// </ol>
-// Original: Ordered List met HTML `hidden` attribuut
 export const OrderedListHidden: Story = {
   name: 'Ordered List verstopt via HTML-attribuut hidden',
   args: {},
@@ -626,12 +470,6 @@ export const OrderedListHidden: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list" lang="ar" dir="rtl">
-//  <li class="nl-ordered-list__item">تحميل المستندات</li>
-//  <li class="nl-ordered-list__item">تقديم الطلب</li>
-//  <li class="nl-ordered-list__item">انتظار التأكيد</li>
-// </ol>
-// Original: Ordered List met Arabische tekst waarbij `dir` alleen op de `ol` staat
 export const OrderedListDirParentOnly: Story = {
   name: 'Ordered List met Arabische tekst waarbij HTML-attribuut dir alleen op HTML-element ol staat',
   globals: { lang: 'ar', dir: 'rtl' },
@@ -653,14 +491,6 @@ export const OrderedListDirParentOnly: Story = {
   },
 };
 
-// <div class="nl-html nl-html--all">
-//   <ol role="list">
-//     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
-//     <li>Je oude paspoort</li>
-//     <li>Je afspraakbevestiging</li>
-//   </ol>
-// </div>
-// Original: Ordered List binnen `nl-html--all`
 export const OrderedListNLHTMLAll: Story = {
   name: 'Ordered List binnen `nl-html--all`',
   render: () => (
@@ -684,15 +514,6 @@ De styling wordt behouden door de NL HTML-component, deze past de styling van de
   },
 };
 
-// <div class="nl-html nl-html--ordered-list">
-//   <ol role="list">
-//     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
-//     <li>Je oude paspoort</li>
-//     <li>Je afspraakbevestiging</li>
-//   </ol>
-// </div>
-// Original: Ordered List binnen `nl-html--ordered-list`
-// Let op: role="list" is nodig!
 export const OrderedListNLHTMLOrderedList: Story = {
   name: 'Ordered List binnen `nl-html--ordered-list`',
   render: () => (
@@ -716,13 +537,6 @@ De styling wordt behouden door de NL HTML-component, deze past de styling van de
   },
 };
 
-// <div class="nl-ordered-list" role="list">
-//   <div class="nl-ordered-list__item" role="listitem">Paspoortfoto, niet ouder dan 6 maanden</div>
-//   <div class="nl-ordered-list__item" role="listitem">Je oude paspoort</div>
-//   <div class="nl-ordered-list__item" role="listitem">Je afspraakbevestiging</div>
-// </div>
-// Original: Ordered List opgebouwd met `div` elementen
-// Let op: role="list" en role="listitem" is nodig!
 export const OrderedListAlternativeHTMLDivs: Story = {
   name: 'Ordered List opgebouwd met HTML-elementen div',
   render: () => (
@@ -749,13 +563,6 @@ export const OrderedListAlternativeHTMLDivs: Story = {
   },
 };
 
-// <span class="nl-ordered-list" role="list">
-//   <span class="nl-ordered-list__item" role="listitem">Paspoortfoto, niet ouder dan 6 maanden</span>
-//   <span class="nl-ordered-list__item" role="listitem">Je oude paspoort</span>
-//   <span class="nl-ordered-list__item" role="listitem">Je afspraakbevestiging</span>
-// </span>
-// Original: Ordered List opgebouwd met `span` elementen
-// Let op: role="list" en role="listitem" is nodig!
 export const OrderedListAlternativeHTMLSpans: Story = {
   name: 'Ordered List opgebouwd met HTML-elementen span',
   render: () => (
@@ -782,7 +589,6 @@ export const OrderedListAlternativeHTMLSpans: Story = {
   },
 };
 
-// Original: Ordered List met paragraphs (`p`) in list items
 export const OrderedListHTMLParagraphsInListItem: Story = {
   name: 'Ordered List met HTML-elementen p',
   render: (args) => (
@@ -808,7 +614,6 @@ export const OrderedListHTMLParagraphsInListItem: Story = {
   },
 };
 
-// Original: Ordered List met NL Paragraph in list item
 export const OrderedListNLParagraphsInListItem: Story = {
   name: 'Ordered List met NL Paragraph-componenten',
   render: (args) => (
@@ -835,7 +640,6 @@ export const OrderedListNLParagraphsInListItem: Story = {
   },
 };
 
-// Original: Ordered List in een column layout
 export const OrderedListColumnLayout: Story = {
   name: 'Ordered List in column layout',
   render: (args) => (
@@ -865,7 +669,6 @@ export const OrderedListColumnLayout: Story = {
   },
 };
 
-// Original: Ordered List met een lang list item dat doorloopt naar een volgende kolom
 export const OrderedListLongItemAcrossColumns: Story = {
   name: 'Ordered List met lange items welke doorlopen naar volgende kolom',
   render: (args) => (
@@ -891,7 +694,6 @@ export const OrderedListLongItemAcrossColumns: Story = {
   },
 };
 
-// Original: Ordered List met horizontaal scrollen op een klein scherm (mock mobiel) - hier zijn meerdere geneste niveaus nodig om te laten zien dat scrollen dan beter is dan wrappen omdat er anders maar een paar letters per regel blijven staan
 export const OrderedListHorizontalScrollMobile: Story = {
   name: 'Ordered List met horizontaal scrollen op klein scherm',
   decorators: [
@@ -954,17 +756,6 @@ Toetsenbordgebruikers kunnen het scrollgebied bereiken met de Tab-toets en daarn
   },
 };
 
-// <div class="nl-html nl-html--all">
-//   <ol role="list">
-//     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
-//     <li>
-//       Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
-//       <p>Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</p>
-//     </li>
-//     <li>Je afspraakbevestiging</li>
-//   </ol>
-// </div>
-// Original: Story voor Rich Text Editors met `p`: Multiline vanuit Rich Text Editor
 export const OrderedListRichTextEditorParagraph: Story = {
   name: 'Ordered List in Rich Text Editor met HTML-elementen p',
   render: () => (
@@ -990,17 +781,6 @@ export const OrderedListRichTextEditorParagraph: Story = {
   },
 };
 
-// <div class="nl-html nl-html--all">
-//   <ol role="list">
-//     <li>Paspoortfoto, niet ouder dan 6 maanden</li>
-//     <li>
-//       Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
-//       <p class="nl-paragraph">Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</p>
-//     </li>
-//     <li>Je afspraakbevestiging</li>
-//   </ol>
-// </div>
-// Original: Story voor Rich Text Editors met NL Paragraph - zelfde als bovenstaande maar dan met NL Paragraph component
 export const OrderedListRichTextEditorNLParagraph: Story = {
   name: 'Ordered List in Rich Text Editor met NL Paragraph-componenten',
   render: () => (
@@ -1026,26 +806,6 @@ export const OrderedListRichTextEditorNLParagraph: Story = {
   },
 };
 
-// <div class="nl-html nl-html--all">
-//   <ol role="list">
-//     <li>
-//       Verzamel de benodigde documenten
-//       <ol role="list">
-//         <li>Geldig identiteitsbewijs</li>
-//         <li>Pasfoto niet ouder dan 6 maanden</li>
-//       </ol>
-//     </li>
-//     <li>Maak een afspraak via <a href="https://example.com/afspraak">de afsprakenpagina</a></li>
-//     <li>
-//       Kies hoe je het document ophaalt
-//       <ul role="list">
-//         <li>Bij de balie</li>
-//         <li>Bij een afhaalpunt</li>
-//       </ul>
-//     </li>
-//   </ol>
-// </div>
-// Original: Stories voor Rich Text Editors: textnode met nested lijst, textnode met link, etc (voorafgaand aan stories schrijven even bepalen welke combinaties we hierin willen meenemen)
 export const OrderedListRichTextEditorNested: Story = {
   name: 'Ordered List in Rich Text Editor met meerdere niveaus',
   render: () => (
@@ -1082,8 +842,6 @@ export const OrderedListRichTextEditorNested: Story = {
   },
 };
 
-// NOTE: de CSS hiervoor is niet onderdeel van de CSS Component, het is een voorbeeld implementatie
-// Original: Story voor het centreren van de Ordered List. Dit omdat dit beschikbaar is in community en we daar een oplossing voor moeten laten zien.
 export const OrderedListCentered: Story = {
   name: 'Ordered List gecentreerd',
   render: (args) => (
@@ -1104,7 +862,6 @@ export const OrderedListCentered: Story = {
   },
 };
 
-// Original: Ordered List met vergrote tekstafstand
 export const OrderedListIncreasedTextSpacing: Story = {
   name: 'Ordered List met vergrote tekstafstand',
   decorators: [LargeLetterSpacingDecorator, LargeWordSpacingDecorator, LargeLineHeightDecorator],
@@ -1135,7 +892,6 @@ De tekstafstand is vergroot volgens [WCAG Succescriterium 1.4.12 Tekstafstand](h
   },
 };
 
-// Original: Ordered List met tekst vergroot naar 200%
 export const OrderedList200PercentZoom: Story = {
   name: 'Ordered List met tekst vergroot naar 200%',
   decorators: [UserPreference2rem],
@@ -1161,7 +917,6 @@ export const OrderedList200PercentZoom: Story = {
   },
 };
 
-// Original: Ordered List in Forced Colors modus
 export const OrderedListForcedColors: Story = {
   name: 'Ordered List in Forced Colors modus',
   globals: { forcedColors: 'active' },
@@ -1183,10 +938,6 @@ export const OrderedListForcedColors: Story = {
   },
 };
 
-// <ol class="nl-ordered-list" role="list">
-//   <li class="nl-ordered-list__item">Doet u uw aanvraag op een werkdag voor 14.00 uur? U kunt uw paspoort of ID-kaart de werkdag na uw aanvraag ophalen vanaf 12.00 uur.</li>
-// </ol>
-// Original: Ordered List met 1 list item
 export const OrderedListOneItem: Story = {
   name: 'Ordered List met één item',
   render: (args) => (
@@ -1208,7 +959,6 @@ export const OrderedListOneItem: Story = {
   },
 };
 
-// Original: Ordered List met zeer veel list items (meer dan geadviseerde 3)
 export const OrderedListSoManyItems: Story = {
   name: 'Ordered List met zeer veel items',
   render: (args) => (
@@ -1256,7 +1006,6 @@ export const OrderedListSoManyItems: Story = {
   },
 };
 
-// Original: Ordered List op een breed scherm (in tegenstelling tot de mobiele test)
 export const OrderedListVeryLargeScreen: Story = {
   name: 'Ordered List op breed scherm',
   globals: { viewport: { value: 'desktop' } },
@@ -1280,7 +1029,6 @@ export const OrderedListVeryLargeScreen: Story = {
   },
 };
 
-// Original: Ordered List met Link in list items (ie een soort Link List? is dat een goed idee? nav component icm andere componenten)
 export const OrderedListLinkInItem: Story = {
   name: 'Ordered List met NL Link-componenten',
   render: (args) => (
@@ -1307,7 +1055,6 @@ export const OrderedListLinkInItem: Story = {
   },
 };
 
-// Original: Ordered List met tabel in een list item (is dat een goed idee? nav component icm andere componenten / uitgebreide use cases)
 export const OrderedListTableInItem: Story = {
   name: 'Ordered List met tabel',
   render: (args) => (
@@ -1353,21 +1100,17 @@ export const OrderedListTableInItem: Story = {
   },
 };
 
-// <p>Rotondekunstprijs prijswinnaars pagina 2 van 3:</p>
-// <ol class="nl-ordered-list" role="list" reversed start="10">
-//   <li class="nl-ordered-list__item">Vis op wielen</li>
-//   <li class="nl-ordered-list__item">Licht Piramide</li>
-//   <li class="nl-ordered-list__item">Berm</li>
-// </ol>
-// Original: Ordered List met reversed en start
 export const OrderedListReversedAndStart: Story = {
   name: 'Ordered List met HTML-attributen reversed en start',
   render: (args) => (
-    <OrderedList {...args} reversed start={10}>
-      <OrderedListItem>Vis op wielen</OrderedListItem>
-      <OrderedListItem>Licht Piramide</OrderedListItem>
-      <OrderedListItem>Berm</OrderedListItem>
-    </OrderedList>
+    <>
+      <p>Rotondekunstprijs prijswinnaars pagina 2 van 3:</p>
+      <OrderedList {...args} reversed start={10}>
+        <OrderedListItem>Vis op wielen</OrderedListItem>
+        <OrderedListItem>Licht Piramide</OrderedListItem>
+        <OrderedListItem>Berm</OrderedListItem>
+      </OrderedList>
+    </>
   ),
   args: {},
   parameters: {
@@ -1380,7 +1123,6 @@ export const OrderedListReversedAndStart: Story = {
   },
 };
 
-// Original: Ordered List met type="A" en start
 export const OrderedListUpperCaseAlphabeticAndStart: Story = {
   name: 'Ordered List met HTML-attributen type="A" en start',
   render: (args) => (
@@ -1401,7 +1143,6 @@ export const OrderedListUpperCaseAlphabeticAndStart: Story = {
   },
 };
 
-// Original: Ordered List met lang="ar" en reversed
 export const OrderedListLangArabicReversed: Story = {
   name: 'Ordered List met HTML-attributen lang="ar" en reversed',
   render: (args) => (
@@ -1422,7 +1163,6 @@ export const OrderedListLangArabicReversed: Story = {
   },
 };
 
-// Original: Eentje met CSS reset voor alles
 export const OrderedListCssResetFull: Story = {
   name: 'Ordered List met CSS reset op component en thema',
   decorators: [CandidateDisableCssDecorator],
@@ -1444,7 +1184,6 @@ export const OrderedListCssResetFull: Story = {
   },
 };
 
-// Original: Eentje met CSS reset voor de Component
 export const OrderedListCssResetComponent: Story = {
   name: 'Ordered List met CSS reset op component',
   render: () => (
@@ -1465,7 +1204,6 @@ export const OrderedListCssResetComponent: Story = {
   },
 };
 
-// Original: Wel de component CSS maar niet de thema CSS.
 export const OrderedListCssResetTheme: Story = {
   name: 'Ordered List met CSS reset op thema',
   globals: { storyRootClassname: '' },
@@ -1487,7 +1225,6 @@ export const OrderedListCssResetTheme: Story = {
   },
 };
 
-// Original: Eentje waar alle CSS naar een invalid value word gezet, wat betekent dat user-agent dan ook niet meer lekker gaat.
 export const OrderedListInvalidCssValues: Story = {
   name: 'Ordered List met ongeldige CSS voor alle properties',
   decorators: [
