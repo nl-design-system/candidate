@@ -6,7 +6,7 @@ export interface TextInputProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode; // Needed in template file, feel free to remove
 }
 
-export const TextInput = forwardRef<HTMLDivElement, TextInputProps>(function TextInput(props, forwardedRef) {
+export const TextInput = forwardRef<HTMLDivElement, TextInputProps>((props, forwardedRef) => {
   const { children, className, ...restProps } = props;
 
   return (

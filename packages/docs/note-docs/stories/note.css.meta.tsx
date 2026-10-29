@@ -8,17 +8,10 @@ const ATTRIBUTES = 'attributes';
 const CHILDREN = 'children';
 
 const meta = {
-  parameters: {
-    docs: {
-      description: {
-        // component: 'Als de `purpose` prop is gezet, kan er optioneel een `hint` mee gegeven worden',
-      },
-    },
-  },
   argTypes: {
     nlNote: {
       name: 'nl-note',
-      description: 'De basis class van dit component',
+      description: 'De basis class van de component.',
       control: false,
       type: { name: 'other', value: 'string', required: true },
       table: {
@@ -29,16 +22,9 @@ const meta = {
     children: {
       table: { disable: true },
     },
+    // TODO: Ontwikkelfase: aanvullen adhv acceptance-criteria
   },
-  args: {
-    nlButton: undefined,
-    children: 'Note',
-  },
-  component: ({ className, ...props }) => {
-    const classes = className || '';
-
-    return <Note {...props} className={classes} />;
-  },
+  component: (props) => <Note {...props} />,
 } satisfies Meta;
 
 export default meta;

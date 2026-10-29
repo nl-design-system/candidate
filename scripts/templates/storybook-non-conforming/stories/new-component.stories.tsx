@@ -1,57 +1,63 @@
+import { merge } from 'lodash-es';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/new-component-css/src/new-component.scss';
 import packageJSON from '../../components-react/new-component-react/package.json';
-import { NewComponent } from '../../components-react/new-component-react/src/new-component';
+import { NewComponent as NewComponentComponent } from '../../components-react/new-component-react/src/new-component';
 import componentMarkdown from '../../docs/new-component-docs/docs/component.md?raw';
+import reactMeta from '../../docs/new-component-docs/stories/new-component.react.meta';
 
 const meta = {
-  argTypes: {
-    // Vul aan door developer
-  },
-  component: NewComponent,
-  decorators: [ExampleBodyTextDecorator],
-  parameters: {
-    docs: {
-      description: {
-        component: componentMarkdown,
-      },
-      source: {
-        type: 'dynamic',
-      },
+  ...merge({
+    ...reactMeta,
+
+    args: {
+      // Vul aan door developer
     },
-    externalLinks: [
-      {
-        name: 'Open op NL Design System',
-        url: 'https://nldesignsystem.nl/new-component',
+    decorators: [ExampleBodyTextDecorator],
+    globals: {
+      dir: 'ltr',
+      lang: 'nl',
+    },
+    parameters: {
+      // TODO: When component is implemented, enable Chromatic
+      chromatic: { disableSnapshot: true },
+      docs: {
+        description: {
+          component: componentMarkdown,
+        },
+        source: {
+          type: 'dynamic',
+        },
       },
-      {
-        name: 'Open op GitHub',
-        url: packageJSON.homepage,
-      },
-    ],
-  },
+      externalLinks: [
+        {
+          name: 'Open op NL Design System',
+          url: 'https://nldesignsystem.nl/new-component',
+        },
+        {
+          name: 'Open op GitHub',
+          url: packageJSON.homepage,
+        },
+      ],
+    },
+  }),
   title: 'Componenten/New Component',
-} satisfies Meta<typeof NewComponent>;
+} satisfies Meta<typeof NewComponentComponent>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SomeStory: Story = {
-  name: 'Some Story',
-  decorators: ExampleBodyTextDecorator,
-  globals: {
-    dir: 'ltr',
-    lang: 'nl',
-  },
+export const NewComponent: Story = {
+  name: 'New Component',
   args: {
     children: 'New Component',
   },
   parameters: {
     docs: {
       description: {
-        story: `Some Description`,
+        story: 'New Component',
       },
     },
     status: { type: [] },

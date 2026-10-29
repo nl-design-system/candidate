@@ -6,6 +6,6 @@ type Story = StoryObj<OrderedListProps>;
 export const OrderedList: Story = {
   name: 'Ordered List',
   args: {
-    children: `Ordered List`,
+    children: 'Ordered List',
   },
 };
