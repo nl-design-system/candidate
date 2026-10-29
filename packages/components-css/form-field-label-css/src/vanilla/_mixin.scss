@@ -1,0 +1,31 @@
+@use "../mixin";
+
+@mixin nl-html--form-field-label {
+  label {
+    @include mixin.nl-form-field-label;
+  }
+
+  label:has([type="checkbox" i], [type="radio" i]) {
+    @include mixin.nl-form-field-label--option;
+  }
+
+  // Must come after the option selector, so a disabled option gets the disabled color
+  label:has([type="checkbox" i]:disabled, [type="radio" i]:disabled) {
+    @include mixin.nl-form-field-label--disabled;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) label {
+    @include mixin.nl-form-field-label--inherit;
+  }
+
+  // Forcefully apply CSS system-color values using `!important`.
+  @media screen and (forced-colors: active) {
+    label {
+      @include mixin.nl-form-field-label--forced-colors;
+    }
+
+    label:has([type="checkbox" i]:disabled, [type="radio" i]:disabled) {
+      @include mixin.nl-form-field-label--forced-colors-disabled;
+    }
+  }
+}
