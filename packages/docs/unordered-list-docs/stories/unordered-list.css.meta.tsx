@@ -55,7 +55,6 @@ const meta = {
         type: { summary: undefined },
       },
     },
-    // TODO: Ontwikkelfase: aanvullen adhv acceptance-criteria
   },
   component: (props) => <UnorderedList {...props} />,
 } satisfies Meta;
