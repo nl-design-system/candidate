@@ -21,7 +21,7 @@ const meta = {
     },
     children: {
       control: false,
-      description: 'Eén of meer `UnorderedListItem` componenten.',
+      description: 'De inhoud van de lijst, doorgaans één of meer `UnorderedListItem` componenten.',
       table: {
         category: API,
         type: { summary: 'ReactNode' },
