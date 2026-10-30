@@ -28,6 +28,10 @@ Enum
 - Default
 - Custom
 
+##### Marker Text (design)
+
+String
+
 ##### Children
 
 HTML (code) / Text - string (design)
