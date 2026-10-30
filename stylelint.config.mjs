@@ -1,6 +1,16 @@
 export default {
   extends: ['stylelint-config-standard-scss'],
   ignoreFiles: ['node_modules', '**/dist/**/*', '**/coverage/**/*'],
+  overrides: [
+    {
+      // Keep the component selectors at class specificity, so themes can override them with a single class.
+      // `::marker` is ignored: a pseudo-element cannot be styled without adding to the specificity.
+      files: ['packages/components-css/ordered-list-css/src/ordered-list.scss'],
+      rules: {
+        'selector-max-specificity': ['0,1,0', { ignoreSelectors: ['::marker'] }],
+      },
+    },
+  ],
   plugins: ['stylelint-order', 'stylelint-use-logical'],
   rules: {
     'alpha-value-notation': ['percentage'],
