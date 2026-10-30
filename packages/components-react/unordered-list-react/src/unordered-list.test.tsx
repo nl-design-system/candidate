@@ -30,7 +30,7 @@ const markerIcon = (
 const renderWithMarker = (marker: ReactNode = markerIcon) =>
   renderList(
     {},
-    <UnorderedListItem marker={marker} markerLabel="Leesteken">
+    <UnorderedListItem marker={marker} markerLabel="Leesteken.">
       Item 1
     </UnorderedListItem>,
   );
@@ -271,14 +271,14 @@ describe('Unordered List Custom Marker when `marker` is provided', () => {
       it('supports phrasing content in the marker label', () => {
         const { container } = renderWithMarker();
         const label = container.querySelector('.nl-unordered-list__marker-label');
-        expect(label).toHaveTextContent('Leesteken');
+        expect(label).toHaveTextContent('Leesteken.');
       });
 
       it('ends the marker label with a non-breaking space in the same text node', () => {
         const { container } = renderWithMarker();
         const label = container.querySelector('.nl-unordered-list__marker-label');
         expect(label?.childNodes).toHaveLength(1);
-        expect(label?.textContent).toBe('Leesteken\u{A0}');
+        expect(label?.textContent).toBe('Leesteken.\u{A0}');
       });
     });
   });
