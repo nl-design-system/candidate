@@ -3,15 +3,13 @@ import { cleanup, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { TextInput } from './css';
 
-const text = 'Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen.';
-
 afterEach(() => {
   cleanup();
 });
 
 describe('TextInput (css import)', () => {
   it('injects a <style> block into the document', () => {
-    render(<TextInput>{text}</TextInput>);
+    render(<TextInput />);
     const style = document.querySelector('style');
 
     expect(style).toBeInTheDocument();

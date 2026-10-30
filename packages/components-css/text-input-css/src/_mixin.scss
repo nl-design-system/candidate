@@ -1,3 +1,133 @@
+/*
+ * States change `--_nl-text-input-border-width` and `--_nl-text-input-border-color`. The extra border width is an
+ * inset `box-shadow`, so the layout doesn't shift.
+ */
 @mixin nl-text-input {
-  /* TODO: Add styling */
+  --_nl-text-input-border-color: var(--nl-text-input-border-color);
+  --_nl-text-input-border-width: var(--nl-text-input-border-width);
+
+  background-color: var(--nl-text-input-background-color);
+  border-color: var(--_nl-text-input-border-color);
+  border-radius: var(--nl-text-input-border-radius);
+  border-style: solid;
+  border-width: var(--nl-text-input-border-width);
+  box-shadow: inset 0 0 0 calc(var(--_nl-text-input-border-width) - var(--nl-text-input-border-width))
+    var(--_nl-text-input-border-color);
+  box-sizing: border-box;
+  color: var(--nl-text-input-color);
+  column-gap: var(--nl-text-input-column-gap);
+  font-family: var(--nl-text-input-font-family);
+  font-size: var(--nl-text-input-font-size);
+  font-weight: var(--nl-text-input-font-weight);
+  line-height: var(--nl-text-input-line-height);
+
+  /* Don't overflow the container on a small screen. */
+  max-inline-size: 100%;
+  min-inline-size: var(--nl-text-input-min-inline-size);
+  padding-block-end: var(--nl-text-input-padding-block-end);
+  padding-block-start: var(--nl-text-input-padding-block-start);
+  padding-inline-end: var(--nl-text-input-padding-inline-end);
+  padding-inline-start: var(--nl-text-input-padding-inline-start);
+}
+
+/* Forced Colors mode removes `box-shadow`: use a real border, so the invalid state doesn't rely on color only. */
+@mixin nl-text-input--forced-colors {
+  border-width: var(--_nl-text-input-border-width);
+}
+
+@mixin nl-text-input__placeholder {
+  color: var(--nl-text-input-placeholder-color, var(--nl-text-input-color));
+
+  /* Firefox lowers the placeholder opacity by default. */
+  opacity: 100%;
+}
+
+/* State tokens fall back to the default tokens. */
+@mixin nl-text-input--hover {
+  --_nl-text-input-border-width: var(--nl-text-input-hover-border-width, var(--nl-text-input-border-width));
+}
+
+/*
+ * The `focus-border-*` tokens style the focus ring, the border itself doesn't change: a solid border next to the
+ * dashed ring would hide the dashes. The fallbacks keep the focus visible without tokens.
+ */
+@mixin nl-text-input--focus-visible {
+  background-color: var(--nl-text-input-focus-background-color, var(--nl-text-input-background-color));
+  color: var(--nl-text-input-focus-color, var(--nl-text-input-color));
+  outline-color: var(--nl-text-input-focus-border-color, currentcolor);
+  outline-offset: 0;
+  outline-style: dashed;
+  outline-width: var(--nl-text-input-focus-border-width, 2px);
+}
+
+@mixin nl-text-input--invalid {
+  --_nl-text-input-border-color: var(--nl-text-input-invalid-border-color, var(--nl-text-input-border-color));
+  --_nl-text-input-border-width: var(--nl-text-input-invalid-border-width, var(--nl-text-input-border-width));
+
+  background-color: var(--nl-text-input-invalid-background-color, var(--nl-text-input-background-color));
+  color: var(--nl-text-input-invalid-color, var(--nl-text-input-color));
+}
+
+@mixin nl-text-input--read-only {
+  --_nl-text-input-border-color: var(--nl-text-input-read-only-border-color, var(--nl-text-input-border-color));
+
+  background-color: var(--nl-text-input-read-only-background-color, var(--nl-text-input-background-color));
+  color: var(--nl-text-input-read-only-color, var(--nl-text-input-color));
+}
+
+@mixin nl-text-input--disabled {
+  --_nl-text-input-border-color: var(--nl-text-input-disabled-border-color, var(--nl-text-input-border-color));
+
+  background-color: var(--nl-text-input-disabled-background-color, var(--nl-text-input-background-color));
+  color: var(--nl-text-input-disabled-color, var(--nl-text-input-color));
+  cursor: not-allowed;
+}
+
+@mixin nl-text-input--forced-colors-disabled {
+  border-color: GrayText;
+  color: GrayText;
+}
+
+@mixin nl-text-input--xs {
+  inline-size: var(--nl-text-input-xs-inline-size);
+}
+
+@mixin nl-text-input--sm {
+  inline-size: var(--nl-text-input-sm-inline-size);
+}
+
+@mixin nl-text-input--md {
+  inline-size: var(--nl-text-input-md-inline-size);
+}
+
+@mixin nl-text-input--lg {
+  inline-size: var(--nl-text-input-lg-inline-size);
+}
+
+@mixin nl-text-input--xl {
+  inline-size: var(--nl-text-input-xl-inline-size);
+}
+
+@mixin nl-text-input--stretch {
+  inline-size: var(--nl-text-input-stretch-inline-size, 100%);
+}
+
+@mixin nl-text-input--numeric {
+  /* Digits of equal size are easier to check. */
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+@mixin nl-text-input--password {
+  /* No ligatures, and a slashed zero if the font supports it (OpenType `zero`). */
+  font-variant-ligatures: none;
+  font-variant-numeric: slashed-zero;
+}
+
+@mixin nl-text-input--password-visible {
+  @include nl-text-input--password;
+}
+
+@mixin nl-text-input--url {
+  /* No ligatures, so each character can be checked. */
+  font-variant-ligatures: none;
 }
