@@ -12,3 +12,8 @@
   --nl-form-field-description-color: currentColor;
   --nl-form-field-description-disabled-color: currentColor;
 }
+
+[data-forced-colors="active"] .nl-unordered-list {
+  --nl-unordered-list-color: currentColor;
+  --nl-unordered-list-marker-color: currentColor;
+}
