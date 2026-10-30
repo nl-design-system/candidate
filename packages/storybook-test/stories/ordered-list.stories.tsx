@@ -479,7 +479,6 @@ export const OrderedListHidden: Story = {
 
 export const OrderedListDirParentOnly: Story = {
   name: 'Ordered List met Arabische tekst waarbij HTML-attribuut dir alleen op HTML-element ol staat',
-  globals: { lang: 'ar', dir: 'rtl' },
   render: (args) => (
     <OrderedList {...args} lang="ar" dir="rtl">
       <OrderedListItem>تحميل المستندات</OrderedListItem>
