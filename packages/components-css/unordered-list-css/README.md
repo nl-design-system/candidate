@@ -68,7 +68,7 @@ If you use SCSS:
 ## Usage
 
 Always add `role="list"` to the `<ul>` element. WebKit browsers remove list semantics when `list-style-type`
-is set to `none` via CSS, for example by a theme or a reset stylesheet; the `role="list"` attribute restores them.
+is overridden via CSS; the `role="list"` attribute restores them.
 
 ```html
 <ul class="nl-unordered-list" role="list">
