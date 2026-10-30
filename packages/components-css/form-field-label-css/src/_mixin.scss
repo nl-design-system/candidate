@@ -1,3 +1,33 @@
 @mixin nl-form-field-label {
-  /* TODO: Add styling */
+  box-sizing: border-box;
+  color: var(--nl-form-field-label-color);
+  font-family: var(--nl-form-field-label-font-family);
+  font-size: var(--nl-form-field-label-font-size);
+  font-weight: var(--nl-form-field-label-font-weight);
+  line-height: var(--nl-form-field-label-line-height);
+}
+
+@mixin nl-form-field-label--option {
+  color: var(--nl-form-field-label-option-color);
+  font-weight: var(--nl-form-field-label-option-font-weight);
+}
+
+@mixin nl-form-field-label--disabled {
+  color: var(--nl-form-field-label-disabled-color);
+}
+
+@mixin nl-form-field-label--inherit {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+@mixin nl-form-field-label--forced-colors {
+  color: currentColor !important;
+}
+
+@mixin nl-form-field-label--forced-colors-disabled {
+  color: GrayText !important;
 }

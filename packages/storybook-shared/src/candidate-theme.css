@@ -22,4 +22,12 @@ These component tokens can be removed once this pull request https://github.com/
   --nl-form-field-error-message-margin-block-start: var(--basis-space-none);
   --nl-form-field-error-message-margin-block-end: var(--basis-space-none);
   --nl-form-field-error-message-icon-size: var(--basis-size-icon-md);
+  --nl-form-field-label-color: var(--basis-color-default-color-document);
+  --nl-form-field-label-font-family: var(--basis-text-font-family-default);
+  --nl-form-field-label-font-size: var(--basis-text-font-size-md);
+  --nl-form-field-label-font-weight: var(--basis-text-font-weight-bold);
+  --nl-form-field-label-line-height: var(--basis-text-line-height-md);
+  --nl-form-field-label-disabled-color: var(--basis-color-disabled-color-subtle);
+  --nl-form-field-label-option-color: var(--basis-color-default-color-document);
+  --nl-form-field-label-option-font-weight: var(--basis-text-font-weight-default);
 }
