@@ -55,12 +55,6 @@ export default meta;
 
 type Story = StoryObj<UnorderedListProps>;
 
-// <ul class="nl-unordered-list">
-//   <li class="nl-unordered-list__item">Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.</li>
-//   <li class="nl-unordered-list__item">Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.</li>
-//   <li class="nl-unordered-list__item">Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</li>
-// </ul>
-// Original: Unordered List zonder `role="list"`
 export const UnorderedListNoRole: Story = {
   name: 'Fout: Unordered List zonder HTML-attribuut role="list"',
   render: () => (
@@ -79,7 +73,7 @@ export const UnorderedListNoRole: Story = {
       description: {
         story: `Bezoekers zien een lijst, maar screenreadergebruikers krijgen niet te horen dat dit een ongeordende lijst is. De items lijken als een groep bij elkaar te horen, maar zonder de juiste semantiek is niet duidelijk dat het om een ongeordende lijst gaat.
 
-Het probleem ontstaat omdat het HTML-element \`ul\` niet als lijst wordt herkend in WebKit-browsers in combinatie met de CSS \`list-style: none\`. Voeg het HTML-attribuut \`role="list"\` toe, zodat de reeks als ongeordende lijst wordt herkend en correct wordt voorgelezen.
+Het probleem ontstaat omdat WebKit-browsers het HTML-element \`ul\` niet meer als lijst herkennen zodra de markers met CSS worden verborgen, bijvoorbeeld met \`list-style: none\` of een Custom Marker. Of dat gebeurt, hangt af van de CSS van de pagina en het thema. Voeg daarom altijd het HTML-attribuut \`role="list"\` toe, zodat de reeks als ongeordende lijst wordt herkend en correct wordt voorgelezen.
 
 De React-component zet \`role="list"\` automatisch; deze fout ontstaat alleen bij HTML met de CSS classes.`,
       },
@@ -87,23 +81,6 @@ De React-component zet \`role="list"\` automatisch; deze fout ontstaat alleen bi
   },
 };
 
-// <ul class="nl-unordered-list">
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg><!-- bolletje --></svg></span></span>
-//       <span class="nl-unordered-list__marker-label">Leesteken.&nbsp;</span>
-//     </span>
-//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
-//   </li>
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg><!-- bolletje --></svg></span></span>
-//       <span class="nl-unordered-list__marker-label">Leesteken.&nbsp;</span>
-//     </span>
-//     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
-//   </li>
-// </ul>
-// Original: Unordered List met custom marker zonder `role="list"`
 export const UnorderedListCustomMarkerNoRole: Story = {
   name: 'Fout: Unordered List met Custom Marker zonder HTML-attribuut role="list"',
   render: () => (
@@ -147,12 +124,6 @@ De React-component zet \`role="list"\` automatisch; deze fout ontstaat alleen bi
   },
 };
 
-// <ul class="nl-unordered-list" role="list" tabindex="0">
-//   <li class="nl-unordered-list__item">Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.</li>
-//   <li class="nl-unordered-list__item">Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.</li>
-//   <li class="nl-unordered-list__item">Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</li>
-// </ul>
-// Original: Unordered List met `tabindex`
 export const UnorderedListTabIndex: Story = {
   name: 'Fout: Unordered List met HTML-attribuut tabindex',
   render: (args) => (
@@ -178,21 +149,6 @@ Het probleem ontstaat omdat een niet-interactief element via het HTML-attribuut 
   },
 };
 
-// <ul class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker">
-//       <span aria-hidden="true">👁️‍🗨️</span>
-//     </span>
-//     Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.
-//   </li>
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker">
-//       <span aria-hidden="true">👁️‍🗨️</span>
-//     </span>
-//     Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.
-//   </li>
-// </ul>
-// Original: Unordered List met custom marker (Unicode emoji) zonder toegankelijk alternatief
 export const UnorderedListEmojiNoAlt: Story = {
   name: 'Fout: Unordered List met Unicode emoji Custom Marker zonder toegankelijk alternatief',
   render: (args) => (
@@ -216,16 +172,6 @@ Het probleem ontstaat omdat de emoji als marker is gebruikt zonder toegankelijke
   },
 };
 
-// <style>
-//   .nl-unordered-list--example-emoji-marker > li { list-style-type: none; }
-//   .nl-unordered-list--example-emoji-marker > li::before { content: "👁️‍🗨️ "; }
-// </style>
-// <ul class="nl-unordered-list nl-unordered-list--example-emoji-marker" role="list">
-//   <li class="nl-unordered-list__item">Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.</li>
-//   <li class="nl-unordered-list__item">Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.</li>
-//   <li class="nl-unordered-list__item">Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</li>
-// </ul>
-// Original: Unordered List met custom marker (Unicode emoji) via CSS `content`
 export const UnorderedListEmojiAltInCssContent: Story = {
   name: 'Fout: Unordered List met Unicode emoji Custom Marker via CSS-eigenschap content',
   render: (args) => (
@@ -250,16 +196,6 @@ Het probleem ontstaat omdat de marker via de CSS-eigenschap \`content\` is toege
   },
 };
 
-// <style>
-//   .nl-unordered-list--example-image-marker > li:nth-child(-n + 2) { list-style-image: url("data:image/svg+xml,<!-- vinkje -->"); }
-//   .nl-unordered-list--example-image-marker > li:nth-child(3) { list-style-image: url("data:image/svg+xml,<!-- kruis -->"); }
-// </style>
-// <ul class="nl-unordered-list nl-unordered-list--example-image-marker" role="list">
-//   <li class="nl-unordered-list__item">Minimaal 10 karakters lang.</li>
-//   <li class="nl-unordered-list__item">Minimaal één cijfer.</li>
-//   <li class="nl-unordered-list__item">Minimaal één speciaal karakter.</li>
-// </ul>
-// Original: Unordered List met custom marker via `list-style-image` gecombineerd met `::marker`
 export const UnorderedListListStyleImage: Story = {
   name: 'Fout: Unordered List met Custom Marker via CSS-eigenschap list-style-image en pseudo-element marker',
   render: (args) => (
@@ -280,17 +216,6 @@ Het probleem ontstaat omdat de marker via de CSS-eigenschap \`list-style-image\`
   },
 };
 
-// <style>
-//   .nl-unordered-list--example-counter-marker { counter-reset: punt; }
-//   .nl-unordered-list--example-counter-marker > li { list-style-type: none; }
-//   .nl-unordered-list--example-counter-marker > li::before { counter-increment: punt; content: counter(punt, disc) " Let op: "; }
-// </style>
-// <ul class="nl-unordered-list nl-unordered-list--example-counter-marker" role="list">
-//   <li class="nl-unordered-list__item">Kinderen jonger dan 12 jaar hebben toestemming nodig bij de aanvraag van een ID-kaart.</li>
-//   <li class="nl-unordered-list__item">Kinderen jonger dan 18 jaar hebben toestemming nodig bij de aanvraag van een paspoort.</li>
-//   <li class="nl-unordered-list__item">Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</li>
-// </ul>
-// Original: Unordered List met custom markers via `counter-reset` / `counter-increment` in CSS `content`
 export const UnorderedListCounterContent: Story = {
   name: 'Fout: Unordered List met Custom Marker via CSS-eigenschappen counter-reset en counter-increment in CSS-eigenschap content',
   render: (args) => (
@@ -315,27 +240,6 @@ Het probleem ontstaat omdat de tekst met de CSS-eigenschappen \`counter-reset\` 
   },
 };
 
-// <ul class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg><!-- vinkje --></svg></span></span>
-//     </span>
-//     Minimaal 10 karakters lang.
-//   </li>
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg><!-- vinkje --></svg></span></span>
-//     </span>
-//     Minimaal één cijfer.
-//   </li>
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg><!-- kruis --></svg></span></span>
-//     </span>
-//     Minimaal één speciaal karakter.
-//   </li>
-// </ul>
-// Original: Unordered List met SVG's als bullets zonder toegankelijke implementatie
 export const UnorderedListSVGNotAccessible: Story = {
   name: "Fout: Unordered List met SVG's als leestekens zonder toegankelijke implementatie",
   render: (args) => (
@@ -382,32 +286,8 @@ Dit kan via een zichtbare tekst, een visueel verstopte tekst of het WAI-ARIA-att
   },
 };
 
-// <ul class="nl-unordered-list" role="list">
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg><!-- vinkje --></svg></span></span>
-//       <span class="nl-unordered-list__marker-label">Check Icoon.&nbsp;</span>
-//     </span>
-//     Minimaal 10 karakters lang.
-//   </li>
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg><!-- vinkje --></svg></span></span>
-//       <span class="nl-unordered-list__marker-label">Check Icoon.&nbsp;</span>
-//     </span>
-//     Minimaal één cijfer.
-//   </li>
-//   <li class="nl-unordered-list__item">
-//     <span class="nl-unordered-list__marker">
-//       <span aria-hidden="true"><span class="nl-icon" aria-hidden="true"><svg><!-- kruis --></svg></span></span>
-//       <span class="nl-unordered-list__marker-label">Kruis Icoon.&nbsp;</span>
-//     </span>
-//     Minimaal één speciaal karakter.
-//   </li>
-// </ul>
-// Original: Unordered List met Custom Marker met Informatieve Icon met foutieve alternatieve tekst. Voorbeeldcode: <UnorderedListItem marker={<svg><title>Number One Icon</title>...</svg>} />
 export const UnorderedListInformativeIconBadAlt: Story = {
-  name: 'Fout: Unordered List met Custom Marker met informatieve icoon met ontoegankelijke tekst',
+  name: 'Fout: Unordered List met Custom Marker met informatief icoon met ontoegankelijke tekst',
   render: (args) => (
     <UnorderedList {...args}>
       <UnorderedListItem
@@ -445,7 +325,7 @@ export const UnorderedListInformativeIconBadAlt: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een informatieve icoon als marker, maar screenreadergebruikers krijgen een ontoegankelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de items moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
+        story: `Bezoekers zien een informatief icoon als marker, maar screenreadergebruikers krijgen een ontoegankelijke boodschap over wat die marker betekent. Hierdoor voelt de lijst minder logisch en kunnen de items moeilijker worden begrepen. Visueel is de marker duidelijk, maar de informatie over de marker is niet toegankelijk.
 
 Het probleem ontstaat omdat de alternatieve tekst van de marker de naam van de icoon bevat (bijvoorbeeld "Check Icoon."), in plaats van de boodschap van de icoon (bijvoorbeeld "Voltooid.").
 
