@@ -2,7 +2,6 @@ import type { Meta } from '@storybook/react-vite';
 import { TextInput as TextInputComponent } from '@nl-design-system-candidate/text-input-react/css';
 
 const PROPS = 'Props';
-
 const API = 'API';
 
 const meta = {

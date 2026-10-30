@@ -16,4 +16,8 @@ describe('NewComponent (css import)', () => {
 
     expect(style).toBeInTheDocument();
   });
+
+  it('exports NewComponent', () => {
+    expect(NewComponent).toBeDefined();
+  });
 });
