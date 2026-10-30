@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/vitest';
 import { Icon } from '@nl-design-system-candidate/icon-react';
-import { IconPointFilled } from '@tabler/icons-react';
+import { IconPointFilled as ExampleIcon } from '@tabler/icons-react';
 import { cleanup, render } from '@testing-library/react';
 import { createRef, type ReactNode } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
@@ -23,7 +23,7 @@ const renderList = (
 
 const markerIcon = (
   <Icon>
-    <IconPointFilled />
+    <ExampleIcon />
   </Icon>
 );
 
