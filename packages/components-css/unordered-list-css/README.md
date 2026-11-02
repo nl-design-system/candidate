@@ -146,6 +146,22 @@ Depending on the tools used, it may be necessary to configure Sass with `loadPat
 `@nl-design-system-candidate/unordered-list-css` can be found in the `node_modules` folder.
 See [Configuring Sass with `loadPaths`](https://github.com/nl-design-system/candidate/tree/main/packages/components-css#configuring-sass-with-loadpaths) for more information.
 
+## Available attributes
+
+The component accepts all attributes that a native HTML `<ul>` element accepts.
+See the [`<ul>` HTML unordered list element on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul#attributes) for a complete overview.
+
+Some attributes need extra attention:
+
+### Always add `role="list"`
+
+See [Usage](#usage). Without `role="list"`, WebKit browsers may no longer recognize the list as a list.
+
+### Do not add `tabindex`
+
+A list is not interactive. With `tabindex`, keyboard users land on the list in the focus order, which is
+confusing.
+
 ## Design Tokens
 
 All NL Design System components are white label. Use Unordered List design tokens to ensure it matches your brand styles. For more information about design tokens, see
