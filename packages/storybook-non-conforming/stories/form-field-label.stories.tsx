@@ -204,7 +204,7 @@ export const FormFieldLabelNestedInputGroup: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Hier wordt een Text Input in het label genest, waardoor ze direct naast elkaar staan. Dit slot is bedoeld voor keuzerondjes en selectievakjes, omdat het daar het klikgebied van een klein bedieningselement vergroot. Op kleinere schermen, hoge zoomniveaus en bij lange tekstuele labels verslechtert dit de bediening. Plaats de Text Input in plaats daarvan onder het label.`,
       },
     },
   },
