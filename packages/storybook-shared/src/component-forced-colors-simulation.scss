@@ -21,3 +21,7 @@
 [data-forced-colors="active"] .nl-text-input {
   border-width: var(--_nl-text-input-border-width) !important;
 }
+
+[data-forced-colors="active"] .nl-text-input:where(:hover, .nl-text-input--hover):not(.nl-text-input--invalid) {
+  --_nl-text-input-border-width: var(--nl-text-input-border-width) !important;
+}
