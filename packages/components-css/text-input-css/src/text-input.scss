@@ -11,12 +11,14 @@
   @include mixin.nl-text-input__placeholder;
 }
 
-/* No hover style on fields that can't be changed. */
-.nl-text-input:where(
-  :hover:not(:disabled, [readonly], .nl-text-input--disabled, .nl-text-input--read-only),
-  .nl-text-input--hover
-) {
-  @include mixin.nl-text-input--hover;
+/* No hover style on fields that can't be changed, or in Forced Colors mode, where it would shift the layout. */
+@media (forced-colors: none) {
+  .nl-text-input:where(
+    :hover:not(:disabled, [readonly], .nl-text-input--disabled, .nl-text-input--read-only),
+    .nl-text-input--hover
+  ) {
+    @include mixin.nl-text-input--hover;
+  }
 }
 
 .nl-text-input:where(:focus-visible, .nl-text-input--focus-visible) {

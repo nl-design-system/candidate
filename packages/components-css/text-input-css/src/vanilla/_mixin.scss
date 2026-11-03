@@ -13,8 +13,10 @@ $nl-text-input-types: ':not([type]), [type="text" i], [type="email" i], [type="u
     @include mixin.nl-text-input__placeholder;
   }
 
-  input:where(#{$nl-text-input-types}):where(:hover:not(:disabled, [readonly])) {
-    @include mixin.nl-text-input--hover;
+  @media (forced-colors: none) {
+    input:where(#{$nl-text-input-types}):where(:hover:not(:disabled, [readonly])) {
+      @include mixin.nl-text-input--hover;
+    }
   }
 
   input:where(#{$nl-text-input-types}):where(:focus-visible) {
