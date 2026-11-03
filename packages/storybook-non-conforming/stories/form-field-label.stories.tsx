@@ -192,7 +192,7 @@ export const FormFieldLabelHTMLForAndMismatchedNestedInput: Story = {
   parameters: {
     docs: {
       description: {
-        story: `...`,
+        story: `Het label is hier niet goed gekoppeld, omdat de waarde van HTML-attribuut for niet overeenkomt met de HTML-attribuut id van het invoerveld. Hierdoor heeft het invoerveld een verkeerde of geen toegankelijke naam. Zorg dat HTML-attributen for en id's overeenkomen, of laat beide weg bij geneste invoervelden.`,
       },
     },
   },
