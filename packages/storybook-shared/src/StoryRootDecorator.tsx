@@ -1,6 +1,7 @@
 import type { Decorator } from '@storybook/react-vite';
 import { useEffect, type CSSProperties } from 'react';
 import './forced-colors-simulation.css';
+import './storybook-inputs.css';
 
 export const StoryRootDecorator: Decorator = (Story, context) => {
   const { storyRootClassname, dir, lang, title, writingMode, fontSize, zoom, forcedColors } = context.globals;

@@ -1,0 +1,21 @@
+:where(
+  [data-story-root]
+    input:is(
+      :not([type]),
+      [type="date" i],
+      [type="datetime-local" i],
+      [type="email" i],
+      [type="month" i],
+      [type="number" i],
+      [type="password" i],
+      [type="search" i],
+      [type="tel" i],
+      [type="text" i],
+      [type="time" i],
+      [type="url" i],
+      [type="week" i]
+    ):not([class])
+) {
+  box-sizing: border-box;
+  max-inline-size: 100%;
+}
