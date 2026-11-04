@@ -1080,14 +1080,7 @@ export const FormFieldDescriptionLargeText: Story = {
           Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.
         </FormFieldDescription>
         <div>
-          <input
-            // Ensure the input shrinks with the available space at high zoom levels.
-            style={{ boxSizing: 'border-box', maxInlineSize: '100%' }}
-            id={INPUT_ID}
-            aria-describedby={DESCRIPTION_ID}
-            type="text"
-            autoComplete="postal-code"
-          />
+          <input id={INPUT_ID} aria-describedby={DESCRIPTION_ID} type="text" autoComplete="postal-code" />
         </div>
       </>
     );
