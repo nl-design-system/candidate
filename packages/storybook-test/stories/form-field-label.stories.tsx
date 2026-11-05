@@ -706,3 +706,17 @@ export const FormFieldLabelInvalidCssValues: Story = {
     },
   },
 };
+
+// Use the following word for the test: <label>Onvolledigheidscontrolemechanismevalidatieprocedure</label>
+export const FormFieldLabelWordBreak: Story = {
+  name: 'Form Field Label met woorden die niet op 1 regel passen',
+  args: {},
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De label bevat buitengewoon lange woorden. Woorden worden afgebroken aan het einde van de regel en vervolgd op de volgende regel. Tekst valt niet buiten beeld.',
+      },
+    },
+  },
+};
