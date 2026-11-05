@@ -277,7 +277,6 @@ export const FormFieldLabelLangLTR: Story = {
   // Example code
   // render: () => {
   //   const INPUT_ID = 'FormFieldLabelLangLTR';
-  //   const ERROR_ID = `${INPUT_ID}-error`;
   //   return (
   //     <>
   //       <div>
@@ -286,9 +285,6 @@ export const FormFieldLabelLangLTR: Story = {
   //       <div>
   //         <input
   //           id={INPUT_ID}
-  //           aria-describedby={ERROR_ID}
-  //           aria-invalid="true"
-  //           aria-required="true"
   //           type="text"
   //           autoComplete="postal-code"
   //         />
@@ -313,7 +309,6 @@ export const FormFieldLabelLangRTL: Story = {
   // Example code
   // render: () => {
   //   const INPUT_ID = 'FormFieldLabelLangRTL';
-  //   const ERROR_ID = `${INPUT_ID}-error`;
   //   return (
   //     <>
   //       <div lang="ar" dir="rtl">
@@ -322,9 +317,6 @@ export const FormFieldLabelLangRTL: Story = {
   //       <div lang="ar" dir="rtl">
   //         <input
   //           id={INPUT_ID}
-  //           aria-describedby={ERROR_ID}
-  //           aria-invalid="true"
-  //           aria-required="true"
   //           type="text"
   //           autoComplete="postal-code"
   //         />
@@ -349,7 +341,6 @@ export const FormFieldLabelVerticalText: Story = {
   // Example code
   // render: () => {
   //   const INPUT_ID = 'FormFieldLabelVerticalText';
-  //   const ERROR_ID = `${INPUT_ID}-error`;
   //   return (
   //     <>
   //       <div>
@@ -358,9 +349,6 @@ export const FormFieldLabelVerticalText: Story = {
   //       <div>
   //         <input
   //           id={INPUT_ID}
-  //           aria-describedby={ERROR_ID}
-  //           aria-invalid="true"
-  //           aria-required="true"
   //           type="text"
   //           autoComplete="postal-code"
   //         />
