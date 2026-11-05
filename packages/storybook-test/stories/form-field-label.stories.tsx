@@ -510,7 +510,7 @@ export const FormFieldLabelSmallScreen: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een voorbeeldweergave van een label op een klein scherm. Het label blijft goed leesbaar en de tekst valt niet buiten het zichtbare venster.`,
+        story: `Een label op een klein scherm. Het label blijft goed leesbaar en de tekst valt niet buiten het zichtbare venster.`,
       },
     },
   },
@@ -522,7 +522,7 @@ export const FormFieldLabelVeryLargeScreen: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een voorbeeldweergave van een label op een breed scherm. De opmaak blijft gelijk met de weergave op kleinere schermen.`,
+        story: `Een label op een breed scherm. De opmaak blijft gelijk met de weergave op kleinere schermen.`,
       },
     },
   },
