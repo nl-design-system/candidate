@@ -58,9 +58,9 @@ export const FormFieldLabelTabIndex: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers die met het toetsenbord navigeren komen onbedoeld in de focusvolgorde van de label terecht, terwijl de label niet interactief is. Dat voelt onlogisch en verwart de navigatie. Bij een klik op de label hoort de focus naar het gekoppelde formulierveld te gaan.
+        story: `Bezoekers die met het toetsenbord navigeren komen onbedoeld in de focusvolgorde van het label terecht, terwijl het label niet interactief is. Dat voelt onlogisch en verwart de navigatie. Bij een klik op het label hoort de focus naar het gekoppelde formulierveld te gaan.
 
-Het probleem ontstaat omdat een niet-interactief element via het HTML-attribuut \`tabindex\` focusbaar is gemaakt. Verwijder het HTML-attribuut \`tabindex\`, zodat de label niet extra in de keyboardnavigatie verschijnt en de focusvolgorde logisch blijft.`,
+Het probleem ontstaat omdat een niet-interactief element via het HTML-attribuut \`tabindex\` focusbaar is gemaakt. Verwijder het HTML-attribuut \`tabindex\`, zodat het label niet extra in de keyboardnavigatie verschijnt en de focusvolgorde logisch blijft.`,
       },
     },
   },
@@ -106,7 +106,7 @@ export const FormFieldLabelAsDisplayBlock: Story = {
 };
 
 export const FormFieldLabelRequiredTextInLabel: Story = {
-  name: "Fout: Form Field Label met 'verplicht' tekst in de label in plaats van in Form Field Label Suffix",
+  name: "Fout: Form Field Label met 'verplicht' tekst in het label in plaats van in Form Field Label Suffix",
   args: {},
   parameters: {
     docs: {
@@ -118,7 +118,7 @@ export const FormFieldLabelRequiredTextInLabel: Story = {
 };
 
 export const FormFieldLabelOptionalTextInLabel: Story = {
-  name: "Fout: Form Field Label met 'optioneel' tekst in de label in plaats van in Form Field Label Suffix",
+  name: "Fout: Form Field Label met 'optioneel' tekst in het label in plaats van in Form Field Label Suffix",
   args: {},
   parameters: {
     docs: {
@@ -172,7 +172,7 @@ export const FormFieldLabelInvalidAriaLabelledBy: Story = {
 // <input type="text" aria-label="Postcode" aria-describedby="postcode-description" id="postcode-input" />
 // <FormFieldDescription id="postcode-description">Een postcode bestaat uit 4 cijfers, een spatie en 2 letters. Bijvoorbeeld: 1234 AB.</FormFieldDescription>
 // </FormField>
-// `Fout: Form Field Label met aria-label waardoor de label overschreven wordt `,
+// `Fout: Form Field Label met aria-label waardoor het label overschreven wordt `,
 // TODO:
 export const FormFieldLabelAriaLabel: Story = {
   name: 'Form Field Label met aria-label op invoer-element dat Form Field Label overschrijft',
@@ -385,7 +385,7 @@ export const FormFieldLabelContainsDescriptionText: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Hier wordt toelichtingstekst in de label geplaatst. Dat moet niet, omdat het label kort en specifiek moet blijven. Gebruik de Form Field Description voor aanvullende uitleg.`,
+        story: `Hier wordt toelichtingstekst in het label geplaatst. Dat moet niet, omdat het label kort en specifiek moet blijven. Gebruik de Form Field Description voor aanvullende uitleg.`,
       },
     },
   },

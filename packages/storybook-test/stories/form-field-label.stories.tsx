@@ -360,7 +360,7 @@ export const FormFieldLabelVerticalText: Story = {
     docs: {
       description: {
         story:
-          'De hele pagina staat in verticale tekstrichting, aangezet via de CSS-eigenschap `writingMode`. De label en het invoerveld passen zich allemaal aan de verticale richting aan. De taal is aangegeven met het HTML-attribuut `lang`.',
+          'De hele pagina staat in verticale tekstrichting, aangezet via de CSS-eigenschap `writingMode`. Het label en het invoerveld passen zich allemaal aan de verticale richting aan. De taal is aangegeven met het HTML-attribuut `lang`.',
       },
     },
   },
@@ -650,7 +650,7 @@ export const FormFieldLabelCssResetFull: Story = {
     docs: {
       description: {
         story:
-          'Een label waarin de styling de component en het thema niet worden toegepast. De combinatie van de HTML en de browser styling houdt de label visueel bruikbaar en toegankelijk.',
+          'Een label waarin de styling de component en het thema niet worden toegepast. De combinatie van de HTML en de browser styling houdt het label visueel bruikbaar en toegankelijk.',
       },
     },
   },
@@ -663,7 +663,7 @@ export const FormFieldLabelCssResetComponent: Story = {
     docs: {
       description: {
         story:
-          'Een label waarin de styling van de component niet wordt toegepast, maar de styling van het thema wel. De combinatie van de HTML, de browser styling en de thema styling houdt de label visueel bruikbaar en toegankelijk.',
+          'Een label waarin de styling van de component niet wordt toegepast, maar de styling van het thema wel. De combinatie van de HTML, de browser styling en de thema styling houdt het label visueel bruikbaar en toegankelijk.',
       },
     },
   },
@@ -676,7 +676,7 @@ export const FormFieldLabelCssResetTheme: Story = {
     docs: {
       description: {
         story:
-          'Een label waarin de styling van de component wel wordt toegepast, maar de styling van het thema niet. De combinatie van de HTML, de browser styling en de component styling houdt de label visueel bruikbaar en toegankelijk.',
+          'Een label waarin de styling van de component wel wordt toegepast, maar de styling van het thema niet. De combinatie van de HTML, de browser styling en de component styling houdt het label visueel bruikbaar en toegankelijk.',
       },
     },
   },
