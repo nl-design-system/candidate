@@ -270,40 +270,109 @@ export const FormFieldLabelHidden: Story = {
   },
 };
 
-export const FormFieldLabelLang: Story = {
-  name: 'Form Field Label met HTML-attribuut lang',
+export const FormFieldLabelLangLTR: Story = {
+  name: 'Form Field Label in het Engels',
   args: {},
+  globals: { dir: 'ltr', lang: 'en' },
+  // Example code
+  // render: () => {
+  //   const INPUT_ID = 'FormFieldLabelLangLTR';
+  //   const ERROR_ID = `${INPUT_ID}-error`;
+  //   return (
+  //     <>
+  //       <div>
+  //         <label htmlFor={INPUT_ID}>Postcode</label>
+  //       </div>
+  //       <div>
+  //         <input
+  //           id={INPUT_ID}
+  //           aria-describedby={ERROR_ID}
+  //           aria-invalid="true"
+  //           aria-required="true"
+  //           type="text"
+  //           autoComplete="postal-code"
+  //         />
+  //       </div>
+  //     </>
+  //   );
+  // },
   parameters: {
     docs: {
       description: {
         story:
-          'Een label met Arabische tekst, dit is een taal die van rechts naar links wordt gelezen. De taal van het label wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`. Een screenreader spreekt de tekst hierdoor uit met de uitspraak die bij die taal hoort.',
+          'De label staat in het Engels, terwijl de rest van de pagina in het Nederlands is. De afwijkende taal is expliciet aangegeven, zodat de tekst correct wordt uitgesproken door een screenreader. De afwijkende taal is aangegeven met het HTML-attribuut `lang`.',
       },
     },
   },
 };
 
-// TODO:
-export const FormFieldLabelDir: Story = {
-  name: 'Form Field Label met HTML-attribuut dir',
+export const FormFieldLabelLangRTL: Story = {
+  name: 'Form Field Label in het Arabisch',
   args: {},
+  globals: { dir: 'ltr', lang: 'ar' },
+  // Example code
+  // render: () => {
+  //   const INPUT_ID = 'FormFieldLabelLangRTL';
+  //   const ERROR_ID = `${INPUT_ID}-error`;
+  //   return (
+  //     <>
+  //       <div lang="ar" dir="rtl">
+  //         <label htmlFor={INPUT_ID}>الرمز البريدي</label>
+  //       </div>
+  //       <div lang="ar" dir="rtl">
+  //         <input
+  //           id={INPUT_ID}
+  //           aria-describedby={ERROR_ID}
+  //           aria-invalid="true"
+  //           aria-required="true"
+  //           type="text"
+  //           autoComplete="postal-code"
+  //         />
+  //       </div>
+  //     </>
+  //   );
+  // },
   parameters: {
     docs: {
       description: {
-        story: `Een label in een andere schrijfrichting. Zo geef je de tekstrichting van de tekst in het label aan, bijvoorbeeld rechts-naar-links voor Arabisch.`,
+        story:
+          'De label is in het Arabisch, een taal met een andere schrijf- en leesrichting. De richting van de tekst past bij de de taal. De taal is aangegeven met het HTML-attribuut `lang`. De richting is aangegeven met het HTML-attribuut `dir`, zodat de tekst van rechts naar links wordt weergegeven.',
       },
     },
   },
 };
 
-export const FormFieldLabelDirRTL: Story = {
-  name: 'Form Field Label met schrijfrichting via HTML-attribuut dir="rtl"',
+export const FormFieldLabelVerticalText: Story = {
+  name: 'Form Field Label in het Japans',
   args: {},
+  globals: { dir: 'ltr', lang: 'ja', writingMode: 'vertical-rl' },
+  // Example code
+  // render: () => {
+  //   const INPUT_ID = 'FormFieldLabelVerticalText';
+  //   const ERROR_ID = `${INPUT_ID}-error`;
+  //   return (
+  //     <>
+  //       <div>
+  //         <label htmlFor={INPUT_ID}>郵便番号</label>
+  //       </div>
+  //       <div>
+  //         <input
+  //           id={INPUT_ID}
+  //           aria-describedby={ERROR_ID}
+  //           aria-invalid="true"
+  //           aria-required="true"
+  //           type="text"
+  //           autoComplete="postal-code"
+  //         />
+  //       </div>
+  //     </>
+  //   );
+  // },
   parameters: {
     docs: {
       description: {
         story:
-          'Een label die rechts-naar-links wordt weergegeven. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`. De tekst loopt van rechts naar links.',
+          'De hele pagina staat in verticale tekstrichting, aangezet via de CSS-eigenschap `writingMode`. De label en het invoerveld passen zich allemaal aan de verticale richting aan. De taal is aangegeven met het HTML-attribuut `lang`.',
       },
     },
   },
