@@ -156,7 +156,7 @@ export const OrderedListAriaPosSetSize: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Bezoekers zien een lijst met twee genummerde items, maar screenreadergebruikers horen een andere positie en een ander aantal, bijvoorbeeld "2 van 5" en "4 van 5". De extra WAI-ARIA-attributen overschrijven de informatie die de browser al uit de HTML-lijststructuur haalt.
+        story: `Bezoekers zien een lijst met twee genummerde items, maar screenreadergebruikers horen dat de lijst uit vijf items bestaat. De nummers 1 en 2 worden wel goed voorgelezen. De extra WAI-ARIA-attributen overschrijven de informatie die de browser al uit de HTML-lijststructuur haalt.
 
 Het probleem ontstaat doordat de WAI-ARIA-attributen \`aria-posinset\` en \`aria-setsize\` op de items worden gebruikt in plaats van de semantiek van de HTML-lijststructuur. Maak geen gebruik van deze WAI-ARIA-attributen, zodat de positie en het aantal items correct worden voorgelezen.`,
       },
