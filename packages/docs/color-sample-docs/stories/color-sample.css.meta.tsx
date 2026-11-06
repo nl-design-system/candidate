@@ -5,6 +5,11 @@ const CLASSES = 'classes';
 
 const meta = {
   argTypes: {
+    value: {
+      control: 'color',
+      type: { name: 'other', value: 'color', required: true },
+      table: { category: 'API', type: { summary: 'Een CSS color, bijvoorbeeld: #007DAD of deeppink' } },
+    },
     nlColorSample: {
       name: 'nl-color-sample',
       description: 'De basis class van dit component',

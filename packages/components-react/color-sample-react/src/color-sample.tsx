@@ -19,12 +19,14 @@ export const ColorSample = forwardRef<SVGSVGElement, ColorSampleProps>(function 
       xmlns="http://www.w3.org/2000/svg"
       height="16"
       width="16"
+      viewBox="0 0 32 32"
       className={cn('nl-color-sample', className)}
       style={{ ...style, color: value }}
+      preserveAspectRatio="none"
       ref={forwardedRef}
     >
       {hasLabel && <title>{label}</title>}
-      <path d="M0 0H32V32H0Z" fill="currentcolor" />
+      <path d="M0 0H32V32H0Z" fill="currentColor" />
     </svg>
   );
 });

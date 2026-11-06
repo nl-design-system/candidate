@@ -1,7 +1,7 @@
 import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { useId } from 'react';
+import { CSSProperties, useId } from 'react';
 import '../../components-css/color-sample-css/src/color-sample.scss';
 import packageJSON from '../../components-react/color-sample-react/package.json';
 import { ColorSample } from '../../components-react/color-sample-react/src/color-sample';
@@ -65,9 +65,23 @@ import {
   WCAG22_413_STATUS_MESSAGES,
 } from '../src/WcagTests';
 
+const customSizeStyle: CSSProperties = {
+  '--nl-color-sample-inline-size': '3rem',
+  '--nl-color-sample-block-size': '3rem',
+};
+
+const roundStyle: CSSProperties = {
+  ...customSizeStyle,
+  '--nl-color-sample-border-radius': '50%',
+};
+
+const aspectRatioStyle: CSSProperties = {
+  '--nl-color-sample-inline-size': '4rem',
+  '--nl-color-sample-block-size': '3rem',
+};
+
 const meta = {
   argTypes: {
-    'aria-labelledby': { control: 'text', table: { category: 'API' } },
     value: { control: 'color', table: { category: 'API' } },
   },
   component: ColorSample,
@@ -152,7 +166,15 @@ const meta = {
     },
     tokens,
   },
+  render(props, context) {
+    const id = useId();
 
+    return (
+      <Paragraph>
+        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
+      </Paragraph>
+    );
+  },
   title: 'Componenten/Color Sample',
 } satisfies Meta<typeof ColorSample>;
 
@@ -189,42 +211,22 @@ De Color Sample en de tekst staan in dezelfde Paragraph, dus het is duidelijk da
     },
     status: { type: [] },
   },
-  render(props, context) {
-    const id = useId();
-
-    return (
-      <Paragraph>
-        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
-      </Paragraph>
-    );
-  },
 };
 
 export const SoloColorSample: Story = {
   name: 'Color Sample als zelfstandige afbeelding met toegankelijke naam',
-  args: {
-    ['aria-label']: 'De kleur "#154273".',
-    value: '#154273',
-  },
-  decorators: [
-    (Story, context) => (
-      <>
-        <Paragraph>{Story()}</Paragraph>
-        <Paragraph> {context.args['aria-label']}</Paragraph>
-      </>
-    ),
-    ...meta.decorators,
-  ],
+  args: { value: '#154273' },
   globals: {
     dir: 'ltr',
     lang: 'nl',
     title: 'De kleur "#154273".',
   },
   parameters: {
+    ariaLabelledBy: 'De kleur "#154273".',
     docs: {
       description: {
         story:
-          'Een kleurstaal met expliciete beschrijving in een `aria-label` attribuut, die helemaal los staat in een element staat die bedoeld is om gerelateerde inhoud te groeperen, zoals een Paragraph, Table Cell of List Item. Deze vorm mag alleen gebruikt worden als de kleur elders in de context toegelicht is.',
+          'Een kleurstaal met expliciete beschrijving in een `aria-labelledby` attribuut, die helemaal los staat in een element die bedoeld is om gerelateerde inhoud te groeperen, zoals een Paragraph, Table Cell of List Item. Deze vorm mag alleen gebruikt worden als de kleur elders in de context toegelicht is.',
       },
     },
     testResult: {
@@ -238,6 +240,18 @@ export const SoloColorSample: Story = {
       pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
     status: { type: [] },
+  },
+  render(props, context) {
+    const id = useId();
+
+    return (
+      <>
+        <Paragraph>
+          <ColorSample {...props} aria-labelledby={id} />
+        </Paragraph>
+        <Paragraph id={id}>{context.parameters['ariaLabelledBy']}</Paragraph>
+      </>
+    );
   },
 };
 
@@ -254,7 +268,7 @@ export const White: Story = {
     docs: {
       description: {
         story:
-          'Een kleurstaal met voor de kleur "wit". De kleurstaal is te herkennen op een lichte achtergrondkleur door een border-color met voldoende contrast.',
+          'Een kleurstaal voor de kleur "wit". De kleurstaal is te herkennen op een lichte achtergrondkleur door een border-color met voldoende contrast.',
       },
     },
     testResult: {
@@ -268,15 +282,6 @@ export const White: Story = {
       pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
     status: { type: [] },
-  },
-  render(props, context) {
-    const id = useId();
-
-    return (
-      <Paragraph>
-        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
-      </Paragraph>
-    );
   },
 };
 
@@ -292,7 +297,7 @@ export const Black: Story = {
     ariaLabelledBy: 'De kleur "zwart".',
     docs: {
       description: {
-        story: 'Een kleurstaal met voor de kleur "zwart".',
+        story: 'Een kleurstaal voor de kleur "zwart".',
       },
     },
     testResult: {
@@ -307,15 +312,6 @@ export const Black: Story = {
     },
     status: { type: [] },
   },
-  render(props, context) {
-    const id = useId();
-
-    return (
-      <Paragraph>
-        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
-      </Paragraph>
-    );
-  },
 };
 
 export const CssColorCode: Story = {
@@ -324,6 +320,7 @@ export const CssColorCode: Story = {
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'De kleur "#ff1493".',
   },
   parameters: {
     ariaLabelledBy: 'De kleur "#ff1493".',
@@ -344,15 +341,6 @@ export const CssColorCode: Story = {
     },
     status: { type: [] },
   },
-  render(props, context) {
-    const id = useId();
-
-    return (
-      <Paragraph>
-        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
-      </Paragraph>
-    );
-  },
 };
 
 export const TransparentColorSample: Story = {
@@ -361,6 +349,7 @@ export const TransparentColorSample: Story = {
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'De 100% transparante kleur "#ffffff00".',
   },
   parameters: {
     ariaLabelledBy: 'De 100% transparante kleur "#ffffff00".',
@@ -382,15 +371,6 @@ export const TransparentColorSample: Story = {
     },
     status: { type: [] },
   },
-  render(props, context) {
-    const id = useId();
-
-    return (
-      <Paragraph>
-        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
-      </Paragraph>
-    );
-  },
 };
 
 export const SemiTransparentColorSample: Story = {
@@ -399,6 +379,7 @@ export const SemiTransparentColorSample: Story = {
   globals: {
     dir: 'ltr',
     lang: 'nl',
+    title: 'De semi-transparante kleur "#ff14937f".',
   },
   parameters: {
     ariaLabelledBy: 'De semi-transparante kleur "#ff14937f".',
@@ -419,15 +400,6 @@ export const SemiTransparentColorSample: Story = {
       pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
     status: { type: [] },
-  },
-  render(props, context) {
-    const id = useId();
-
-    return (
-      <Paragraph>
-        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
-      </Paragraph>
-    );
   },
 };
 
@@ -458,15 +430,6 @@ export const Arabic: Story = {
       pass: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_131_INFO_AND_RELATIONSHIPS],
     },
     status: { type: [] },
-  },
-  render(props, context) {
-    const id = useId();
-
-    return (
-      <Paragraph>
-        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
-      </Paragraph>
-    );
   },
 };
 
@@ -499,13 +462,64 @@ export const Japanese: Story = {
     },
     status: { type: [] },
   },
-  render(props, context) {
-    const id = useId();
+};
 
-    return (
-      <Paragraph>
-        <ColorSample {...props} aria-labelledby={id} /> <span id={id}>{context.parameters['ariaLabelledBy']}</span>
-      </Paragraph>
-    );
+export const AangepasteGrootte: Story = {
+  name: 'Color Sample met een aangepaste grootte',
+  args: { style: customSizeStyle, value: 'deeppink' },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'De kleur "deeppink".',
+  },
+  parameters: {
+    ariaLabelledBy: 'De kleur "deeppink".',
+    docs: {
+      description: {
+        story:
+          'Een kleurstaal met een grotere afmeting dan de standaardgrootte. De grootte is in te stellen via de custom properties `--nl-color-sample-inline-size` en `--nl-color-sample-block-size`.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const RondeVorm: Story = {
+  name: 'Color Sample met een ronde vorm',
+  args: { style: roundStyle, value: 'deeppink' },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'De kleur "deeppink".',
+  },
+  parameters: {
+    ariaLabelledBy: 'De kleur "deeppink".',
+    docs: {
+      description: {
+        story:
+          'Een ronde kleurstaal, in plaats van de standaard rechthoekige vorm. De vorm is aan te passen via de custom property `--nl-color-sample-border-radius`; een waarde van `50%` maakt de kleurstaal rond.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const AangepasteBreedteHoogteVerhouding: Story = {
+  name: 'Color Sample met een aangepaste breedte-hoogteverhouding',
+  args: { style: aspectRatioStyle, value: 'deeppink' },
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+    title: 'De kleur "deeppink".',
+  },
+  parameters: {
+    ariaLabelledBy: 'De kleur "deeppink".',
+    docs: {
+      description: {
+        story:
+          'Een kleurstaal die breder is dan hoog, met een breedte-hoogteverhouding van 4:3 in plaats van vierkant. De custom properties `--nl-color-sample-inline-size` en `--nl-color-sample-block-size` zijn onafhankelijk van elkaar in te stellen om dit te bereiken.',
+      },
+    },
+    status: { type: [] },
   },
 };
