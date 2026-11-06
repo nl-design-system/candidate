@@ -2,12 +2,14 @@ import type { Decorator } from '@storybook/react-vite';
 import './ExampleBodyText.css';
 
 export const ExampleBodyTextDecorator: Decorator = (Story) => (
-  <div className="example-body-text" lang="nl">
+  <div className="example-body-text" lang="en">
     <p>Test Render</p>
-    <p>gegevensverwerkingsfout&shy;melding</p>
+    <p>Pneumonoultramicroscopicsilicovolcanoconiosis</p>
     <div style={{ width: '100px' }}>
-      <p>gegevensverwerkingsfout&shy;melding</p>
+      <p>Pneumonoultramicroscopicsilicovolcanoconiosis</p>
     </div>
-    <Story />
+    <div lang="nl">
+      <Story />
+    </div>
   </div>
 );
