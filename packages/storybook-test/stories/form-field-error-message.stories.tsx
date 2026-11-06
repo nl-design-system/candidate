@@ -101,7 +101,7 @@ AlternativeHTMLFormFieldErrorMessage.displayName = 'AlternativeHTMLFormFieldErro
 const meta = {
   ...merge({
     ...reactMeta,
-    decorators: ExampleBodyTextDecorator,
+    decorators: [ExampleBodyTextDecorator],
     globals: {
       dir: 'ltr',
       lang: 'nl',

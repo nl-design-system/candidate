@@ -150,7 +150,7 @@ export const FormFieldErrorMessageAsSpans: Story = {
     dir: 'ltr',
     lang: 'nl',
   },
-  decorators: CandidateDisableCssDecorator,
+  decorators: [CandidateDisableCssDecorator],
   render: () => {
     const INPUT_ID = 'FormFieldErrorMessageAsSpans';
     const ERROR_ID = `${INPUT_ID}-error`;
