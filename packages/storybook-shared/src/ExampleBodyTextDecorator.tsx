@@ -3,7 +3,6 @@ import './ExampleBodyText.css';
 
 export const ExampleBodyTextDecorator: Decorator = (Story) => (
   <div className="example-body-text" lang="nl">
-    <p>Test Render</p>
     <div style={{ width: '100px' }} lang="en">
       <p>Uncharacteristically Interdisciplinary Overintellectualization Incomprehensibilities</p>
     </div>
