@@ -14,6 +14,7 @@ import reactMeta from '../../docs/form-field-label-docs/stories/form-field-label
 import tokens from '../../tokens/form-field-label-tokens/tokens.json';
 import { LargeLetterSpacingDecorator, LargeLineHeightDecorator, LargeWordSpacingDecorator } from '../src/TextDecorator';
 import type { PropsWithChildren } from 'react';
+import { FormToggleStory } from './FormToggle';
 // import { } from '../src/WcagTests'; // Vul aan door toegankelijkheidsexpert
 
 const AlternativeHTMLFormFieldLabel = ({
@@ -748,6 +749,31 @@ export const FormFieldLabelDisabledForcedColorsMode: Story = {
       description: {
         story:
           'Het disabled label blijft goed leesbaar in de modus voor hoge contrastkleurinstellingen. De tekstkleur is de systeemkleur `GrayText`, net als bij disabled invoervelden. Dit is een gesimuleerde weergave binnen Storybook (via de toolbar-knop "Forced Colors"), controleer voor definitieve verificatie ook de echte Forced Colors mode via de browser DevTools of het besturingssysteem.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+const FORM_TOGGLE_INPUT_ID = 'C3E2A1B4-9F7D-4E6C-8A5B-1D2E3F4A5B6C';
+
+export const FormFieldLabelWithFormToggle: Story = {
+  name: 'Form Field Label option met een Form Toggle',
+  args: {
+    children: 'Meldingen ontvangen',
+    input: <FormToggleStory id={FORM_TOGGLE_INPUT_ID} />,
+    type: 'option',
+  },
+  render: (args) => (
+    <div className="utrecht-theme">
+      <FormFieldLabelComponent {...args} />
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Het label bevat een Form Toggle, die vóór de tekst staat. Een screenreader leest het label voor bij focus op de toggle.',
       },
     },
     status: { type: [] },
