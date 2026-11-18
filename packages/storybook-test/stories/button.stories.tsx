@@ -29,6 +29,8 @@ import acceptanceCriteria from '../../docs/button-docs/docs/acceptance-criteria.
 import componentMarkdown from '../../docs/button-docs/docs/component.md?raw';
 import reactMeta from '../../docs/button-docs/stories/button.react.meta';
 import * as ButtonStories from '../../docs/button-docs/stories/button.stories';
+import acceptanceCriteriaData from '../../docs/button-docs/stories/acceptance-criteria';
+import commonAcceptanceCriteriaData from '../src/common-acceptance-criteria';
 import tokens from '../../tokens/button-tokens/tokens.json';
 import { LinkButton } from './link-button';
 import {
@@ -117,6 +119,7 @@ const meta = {
     },
     parameters: {
       acceptanceCriteria,
+      acceptanceCriteriaData: [...acceptanceCriteriaData, ...commonAcceptanceCriteriaData],
       docs: {
         components: {
           DocsStory: CustomDocsStory,
@@ -3173,6 +3176,7 @@ export const LinkIconOnly: Story = {
     label: 'Vorige',
   },
   parameters: {
+    acceptanceCriteriaList: ['fc6d4ad0-d3a1-4382-99c6-a2fed6ca0bdf'],
     docs: {
       description: {
         story:
@@ -3369,6 +3373,7 @@ export const ButtonKlein: Story = {
     },
   },
   parameters: {
+    acceptanceCriteriaList: ['a897be30-519a-4df5-8541-f95d714a5721'],
     docs: {
       description: {
         story:
