@@ -9,6 +9,8 @@ import packageJSON from '../../components-react/number-badge-react/package.json'
 import { NumberBadge } from '../../components-react/number-badge-react/src/number-badge';
 import componentMarkdown from '../../docs/number-badge-docs/docs/component.md?raw';
 import tokens from '../../tokens/number-badge-tokens/tokens.json';
+import { CustomDocsStory } from '../config/custom-docs';
+import { WCAG22_AA_LEVEL } from '../src/WcagTests';
 
 const meta = {
   argTypes: {
@@ -22,6 +24,9 @@ const meta = {
   component: NumberBadge,
   parameters: {
     docs: {
+      components: {
+        DocsStory: CustomDocsStory,
+      },
       description: {
         component: componentMarkdown,
       },
@@ -39,6 +44,15 @@ const meta = {
         url: packageJSON.homepage,
       },
     ],
+    testResult: {
+      notApplicable: [
+        // Vul aan door toegankelijkheidsexpert
+      ],
+      notTested: [
+        // TODO: Configure `notTested` with WCAG SC's that must explicitly be marked as "tested" for each story
+        ...WCAG22_AA_LEVEL,
+      ],
+    },
     tokens,
   },
   title: 'Componenten/Number Badge',

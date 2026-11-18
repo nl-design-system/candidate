@@ -7,6 +7,8 @@ import packageJSON from '../../components-react/mark-react/package.json';
 import { Mark } from '../../components-react/mark-react/src/mark';
 import componentMarkdown from '../../docs/mark-docs/docs/component.md?raw';
 import tokens from '../../tokens/mark-tokens/tokens.json';
+import { CustomDocsStory } from '../config/custom-docs';
+import { WCAG22_AA_LEVEL } from '../src/WcagTests';
 
 const meta = {
   argTypes: {
@@ -16,6 +18,9 @@ const meta = {
   decorators: [ExampleBodyTextDecorator],
   parameters: {
     docs: {
+      components: {
+        DocsStory: CustomDocsStory,
+      },
       description: {
         component: componentMarkdown,
       },
@@ -34,6 +39,15 @@ const meta = {
       },
     ],
     tokens,
+    testResult: {
+      notApplicable: [
+        // Vul aan door toegankelijkheidsexpert
+      ],
+      notTested: [
+        // TODO: Configure `notTested` with WCAG SC's that must explicitly be marked as "tested" for each story
+        ...WCAG22_AA_LEVEL,
+      ],
+    },
   },
   title: 'Componenten/Mark',
 } satisfies Meta<typeof Mark>;

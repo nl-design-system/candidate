@@ -99,6 +99,7 @@ const ButtonDecorator: Decorator = (Story) => (
   </div>
 );
 import { useArgs } from 'storybook/preview-api';
+import { CustomDocsStory } from '../config/custom-docs';
 
 const meta = {
   ...merge({
@@ -117,6 +118,9 @@ const meta = {
     parameters: {
       acceptanceCriteria,
       docs: {
+        components: {
+          DocsStory: CustomDocsStory,
+        },
         description: {
           component: componentMarkdown,
         },

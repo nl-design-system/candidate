@@ -8,6 +8,8 @@ import '../../components-css/skip-link-css/src/test.scss';
 import packageJSON from '../../components-react/skip-link-react/package.json';
 import { SkipLink } from '../../components-react/skip-link-react/src/skip-link';
 import tokens from '../../tokens/skip-link-tokens/tokens.json';
+import { CustomDocsStory } from '../config/custom-docs';
+import { WCAG22_AA_LEVEL } from '../src/WcagTests';
 
 interface ExamplePageProps {
   organisation: ReactNode;
@@ -140,6 +142,9 @@ const meta = {
   decorators: [ExamplePageDecorator, ExampleBodyTextDecorator],
   parameters: {
     docs: {
+      components: {
+        DocsStory: CustomDocsStory,
+      },
       description: {
         component: 'Component beschrijving',
       },
@@ -158,6 +163,15 @@ const meta = {
       },
     ],
     tokens,
+    testResult: {
+      notApplicable: [
+        // Vul aan door toegankelijkheidsexpert
+      ],
+      notTested: [
+        // TODO: Configure `notTested` with WCAG SC's that must explicitly be marked as "tested" for each story
+        ...WCAG22_AA_LEVEL,
+      ],
+    },
   },
   title: 'Componenten/Skip Link',
 } satisfies Meta<typeof SkipLink>;
