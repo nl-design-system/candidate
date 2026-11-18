@@ -2,7 +2,7 @@ import { DocsHeader } from '@nl-design-system-candidate/storybook-shared/src/Doc
 import { Description, Stories } from '@storybook/addon-docs/blocks';
 import { AcceptanceCriteria } from './AcceptanceCriteria';
 import { DesignTokens } from './DesignTokens';
-import { TestReport } from './TestReport';
+import { AcceptanceCriteriaOverviewChecklist } from './AcceptanceCriteriaChecklist';
 
 export const DocsPage = () => (
   <>
@@ -11,6 +11,6 @@ export const DocsPage = () => (
     <Stories />
     <DesignTokens />
     <AcceptanceCriteria />
-    <TestReport />
+    <AcceptanceCriteriaOverviewChecklist />
   </>
 );
