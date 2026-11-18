@@ -45,17 +45,17 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.28.5",
+    "@babel/preset-env": "7.28.6",
     "@babel/preset-react": "7.28.5",
     "@babel/preset-typescript": "7.28.5",
-    "@babel/runtime": "7.28.4",
+    "@babel/runtime": "7.28.6",
     "@nl-design-system/rollup-config-react-component": "1.0.7",
-    "@types/react": "19.2.7",
-    "react": "19.2.3",
-    "rimraf": "6.1.0",
-    "rollup": "4.62.2",
+    "@types/react": "19.2.18",
+    "react": "19.2.9",
+    "rimraf": "6.1.4",
+    "rollup": "4.62.5",
     "typescript": "5.9.3",
-    "vitest": "4.1.8"
+    "vitest": "4.1.12"
   },
   "peerDependencies": {
     "@babel/runtime": "^7",
