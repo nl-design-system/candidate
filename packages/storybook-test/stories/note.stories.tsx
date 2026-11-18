@@ -8,6 +8,8 @@ import reactMeta from '../../docs/note-docs/stories/note.react.meta';
 import tokens from '../../tokens/note-tokens/tokens.json';
 import '../../components-css/note-css/src/note.scss';
 import '../../components-css/note-css/src/test.scss';
+import { CustomDocsStory } from '../config/custom-docs';
+import { WCAG22_AA_LEVEL } from '../src/WcagTests';
 
 const NoteDecorator: Decorator = (Story) => (
   <div className="test">
@@ -33,6 +35,9 @@ const meta = {
       chromatic: { disableSnapshot: true },
       acceptanceCriteria,
       docs: {
+        components: {
+          DocsStory: CustomDocsStory,
+        },
         description: {
           component: componentMarkdown,
         },
@@ -55,7 +60,8 @@ const meta = {
           // Vul aan door toegankelijkheidsexpert
         ],
         notTested: [
-          // Vul aan door toegankelijkheidsexpert
+          // TODO: Configure `notTested` with WCAG SC's that must explicitly be marked as "tested" for each story
+          ...WCAG22_AA_LEVEL,
         ],
       },
       tokens,

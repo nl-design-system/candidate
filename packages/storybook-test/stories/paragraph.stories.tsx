@@ -63,6 +63,7 @@ import {
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
 } from '../src/WcagTests';
+import { CustomDocsStory } from '../config/custom-docs';
 
 const meta = {
   argTypes: {
@@ -174,6 +175,9 @@ export const Default: Story = {
   },
   parameters: {
     docs: {
+      components: {
+        DocsStory: CustomDocsStory,
+      },
       description: {
         story: 'Dit voorbeeld toont een alinea die bestaat uit 1 korte zin',
       },

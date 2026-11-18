@@ -64,6 +64,7 @@ import {
 } from '../src/WcagTests';
 import tokens from '../../tokens/code-tokens/tokens.json';
 import '../../components-css/code-css/src/code.scss';
+import { CustomDocsStory } from '../config/custom-docs';
 
 const meta = {
   argTypes: {
@@ -73,6 +74,9 @@ const meta = {
   decorators: [ExampleBodyTextDecorator],
   parameters: {
     docs: {
+      components: {
+        DocsStory: CustomDocsStory,
+      },
       description: {
         component: componentMarkdown,
       },

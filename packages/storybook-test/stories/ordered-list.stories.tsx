@@ -5,6 +5,8 @@ import packageJSON from '../../components-react/ordered-list-react/package.json'
 import { OrderedList } from '../../components-react/ordered-list-react/src/ordered-list';
 import componentMarkdown from '../../docs/ordered-list-docs/docs/component.md?raw';
 import tokens from '../../tokens/ordered-list-tokens/tokens.json';
+import { CustomDocsStory } from '../config/custom-docs';
+import { WCAG22_AA_LEVEL } from '../src/WcagTests';
 // import { } from '../src/WcagTests'; // Vul aan door toegankelijkheidsexpert
 
 const meta = {
@@ -17,6 +19,9 @@ const meta = {
     // TODO: When component is implemented, enable Chromatic
     chromatic: { disableSnapshot: true },
     docs: {
+      components: {
+        DocsStory: CustomDocsStory,
+      },
       description: {
         component: componentMarkdown,
       },
@@ -39,7 +44,8 @@ const meta = {
         // Vul aan door toegankelijkheidsexpert
       ],
       notTested: [
-        // Vul aan door toegankelijkheidsexpert
+        // TODO: Configure `notTested` with WCAG SC's that must explicitly be marked as "tested" for each story
+        ...WCAG22_AA_LEVEL,
       ],
       pass: [],
     },

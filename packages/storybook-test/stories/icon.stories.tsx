@@ -65,6 +65,7 @@ import {
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
 } from '../src/WcagTests';
+import { CustomDocsStory } from '../config/custom-docs';
 
 const meta = {
   args: {
@@ -94,6 +95,11 @@ const meta = {
     dir: 'ltr',
   },
   parameters: {
+    docs: {
+      components: {
+        DocsStory: CustomDocsStory,
+      },
+    },
     source: {
       type: 'dynamic',
     },

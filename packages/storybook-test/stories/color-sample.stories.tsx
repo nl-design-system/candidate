@@ -64,6 +64,7 @@ import {
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
 } from '../src/WcagTests';
+import { CustomDocsStory } from '../config/custom-docs';
 
 const meta = {
   argTypes: {
@@ -74,6 +75,9 @@ const meta = {
   decorators: [ExampleBodyTextDecorator],
   parameters: {
     docs: {
+      components: {
+        DocsStory: CustomDocsStory,
+      },
       description: {
         component: componentMarkdown,
       },

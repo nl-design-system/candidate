@@ -7,6 +7,8 @@ import packageJSON from '../../components-react/data-badge-react/package.json';
 import { DataBadge } from '../../components-react/data-badge-react/src/data-badge';
 import componentMarkdown from '../../docs/data-badge-docs/docs/component.md?raw';
 import tokens from '../../tokens/data-badge-tokens/tokens.json';
+import { CustomDocsStory } from '../config/custom-docs';
+import { WCAG22_AA_LEVEL } from '../src/WcagTests';
 
 const meta = {
   argTypes: {
@@ -18,6 +20,9 @@ const meta = {
   decorators: [ExampleBodyTextDecorator],
   parameters: {
     docs: {
+      components: {
+        DocsStory: CustomDocsStory,
+      },
       description: {
         component: componentMarkdown,
       },
@@ -36,6 +41,15 @@ const meta = {
       },
     ],
     tokens,
+    testResult: {
+      notApplicable: [
+        // Vul aan door toegankelijkheidsexpert
+      ],
+      notTested: [
+        // TODO: Configure `notTested` with WCAG SC's that must explicitly be marked as "tested" for each story
+        ...WCAG22_AA_LEVEL,
+      ],
+    },
   },
   title: 'Componenten/Data Badge',
 } satisfies Meta<typeof DataBadge>;

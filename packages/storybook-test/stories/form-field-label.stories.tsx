@@ -4,6 +4,8 @@ import packageJSON from '../../components-react/form-field-label-react/package.j
 import { FormFieldLabel } from '../../components-react/form-field-label-react/src/form-field-label';
 import componentMarkdown from '../../docs/form-field-label-docs/docs/component.md?raw';
 import tokens from '../../tokens/form-field-label-tokens/tokens.json';
+import { CustomDocsStory } from '../config/custom-docs';
+import { WCAG22_AA_LEVEL } from '../src/WcagTests';
 // import { } from '../src/WcagTests'; // Vul aan door toegankelijkheidsexpert
 
 const meta = {
@@ -15,6 +17,9 @@ const meta = {
     // TODO: When component is implemented, enable Chromatic
     chromatic: { disableSnapshot: true },
     docs: {
+      components: {
+        DocsStory: CustomDocsStory,
+      },
       description: {
         component: componentMarkdown,
       },
@@ -37,7 +42,8 @@ const meta = {
         // Vul aan door toegankelijkheidsexpert
       ],
       notTested: [
-        // Vul aan door toegankelijkheidsexpert
+        // TODO: Configure `notTested` with WCAG SC's that must explicitly be marked as "tested" for each story
+        ...WCAG22_AA_LEVEL,
       ],
       pass: [],
     },
