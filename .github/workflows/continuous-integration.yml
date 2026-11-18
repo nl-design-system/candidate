@@ -81,6 +81,15 @@ jobs:
       - name: Lint
         run: pnpm run lint
 
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Test
+        run: pnpm run --if-present lint-build
+
       - name: Check if a changeset is needed
         id: changeset
         # ONLY run this step if:
@@ -131,6 +140,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --ignore-scripts --frozen-lockfile
 
+      - name: Clean
+        run: pnpm run clean
+
       - name: Build
         run: pnpm run build
 
@@ -168,10 +180,13 @@ jobs:
         run: pnpm install --ignore-scripts --frozen-lockfile
 
       - name: Build
-        run: pnpm run build
+        run: pnpm run --if-present test
+
+      - name: Build
+        run: pnpm run --if-present build
 
       - name: Test
-        run: pnpm run test:coverage
+        run: pnpm run --if-present test-build
 
       - name: Upload coverage-report artifact
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
