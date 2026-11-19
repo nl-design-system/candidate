@@ -16,20 +16,46 @@ const meta = {
         category: PROPS,
         type: {
           summary: 'Examples',
-          detail: 'id="my-element"\nlang="nl"\ndir="ltr"',
+          detail: 'htmlFor="my-input"\nid="my-element"\nlang="nl"',
         },
       },
     },
-    // TODO: Ontwikkelfase: moet de children verstopt? Doe dan `children: { table: { disable: true } }`
     children: {
       control: false,
-      description: 'De content van de component.',
+      description: 'Inhoud in de vorm van phrasing content met uitzondering van interactive content.',
       table: {
         category: API,
         type: { summary: 'ReactNode' },
       },
     },
-    // TODO: Ontwikkelfase: aanvullen adhv acceptance-criteria
+    type: {
+      control: 'select',
+      options: [undefined, 'option', 'inherit'],
+      description:
+        'Voegt de CSS class `nl-form-field-label--option` toe om aan te geven dat het gekoppelde formulierelement een radio, checkbox of switch is. Gebruik `inherit` om alle styling van het parent-element over te nemen, bijvoorbeeld wanneer je de component binnen een HTML `h1` element gebruikt.',
+      table: {
+        category: PROPS,
+        type: { summary: "'option' | 'inherit'" },
+      },
+    },
+    input: {
+      control: false,
+      description:
+        'Inhoud in de vorm van een radio, checkbox of switch. Verplicht bij `type="option"`, en niet toegestaan bij andere waarden van `type`.',
+      table: {
+        category: PROPS,
+        type: { summary: 'ReactNode' },
+      },
+    },
+    disabled: {
+      control: 'boolean',
+      description:
+        'Voegt de CSS class `nl-form-field-label--disabled` toe om aan te geven dat het gekoppelde formulierelement is uitgeschakeld. Niet toegestaan bij `type="inherit"`.',
+      table: {
+        category: PROPS,
+        type: { summary: 'boolean' },
+      },
+    },
   },
   component: FormFieldLabel,
 } satisfies Meta<typeof FormFieldLabel>;
