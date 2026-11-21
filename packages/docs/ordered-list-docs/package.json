@@ -27,7 +27,7 @@
   "devDependencies": {
     "@nl-design-system-candidate/ordered-list-react": "workspace:*",
     "@storybook/react-vite": "10.6.7",
-    "@types/react": "19.2.7",
-    "react": "19.2.3"
+    "@types/react": "19.3.0",
+    "react": "19.3.1"
   }
 }

@@ -4,8 +4,8 @@
   "private": true,
   "devDependencies": {
     "@nl-design-system-candidate/paragraph-react": "workspace:*",
-    "@types/react": "19.2.7",
-    "react": "19.2.3",
+    "@types/react": "19.3.0",
+    "react": "19.3.1",
     "@nl-design-system/tsconfig": "1.0.5",
     "@storybook/addon-docs": "10.6.7",
     "@storybook/react-vite": "10.6.7"
