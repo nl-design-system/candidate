@@ -129,9 +129,9 @@ const CommonData = () => (
   </>
 );
 
-const Result = ({ label, list }: { label: string; list: WcagTest[] }) =>
+const Result = ({ label, list, open }: { label: string; list: WcagTest[]; open?: boolean }) =>
   list.length > 0 ? (
-    <details>
+    <details open={open}>
       <summary>
         {label}: {list.length}
       </summary>
@@ -212,10 +212,10 @@ export const SimpleTestReport = ({
       </dl>
       <ul>
         <li>
-          <Result label="Voldoet" list={testResult.pass} />
+          <Result label="Voldoet" list={testResult.pass} open />
         </li>
         <li>
-          <Result label="Voldoet niet" list={testResult.fail} />
+          <Result label="Voldoet niet" list={testResult.fail} open />
         </li>
         <li>
           <Result label="Kan niet worden vastgesteld" list={testResult.cannotTell} />
