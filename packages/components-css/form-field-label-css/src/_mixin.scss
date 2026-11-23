@@ -1,6 +1,7 @@
 @mixin nl-form-field-label {
   box-sizing: border-box;
   color: var(--nl-form-field-label-color);
+  display: inline;
   font-family: var(--nl-form-field-label-font-family);
   font-size: var(--nl-form-field-label-font-size);
   font-weight: var(--nl-form-field-label-font-weight);
@@ -25,9 +26,9 @@
 }
 
 @mixin nl-form-field-label--forced-colors {
-  color: currentColor !important;
+  color: currentColor;
 }
 
 @mixin nl-form-field-label--forced-colors-disabled {
-  color: GrayText !important;
+  color: GrayText;
 }

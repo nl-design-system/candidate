@@ -18,13 +18,9 @@
 }
 
 /**
- * Forcefully apply CSS system-color values using `!important`.
+ * Apply CSS system-color values in Forced Colors mode.
  */
 @media screen and (forced-colors: active) {
-  .nl-form-field-label {
-    @include mixin.nl-form-field-label--forced-colors;
-  }
-
   .nl-form-field-label--disabled {
     @include mixin.nl-form-field-label--forced-colors-disabled;
   }
