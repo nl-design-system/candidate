@@ -3,3 +3,25 @@
 .nl-form-field-label {
   @include mixin.nl-form-field-label;
 }
+
+.nl-form-field-label--option {
+  @include mixin.nl-form-field-label--option;
+}
+
+/* Must come after `--option`, so a disabled option gets the disabled color */
+.nl-form-field-label--disabled {
+  @include mixin.nl-form-field-label--disabled;
+}
+
+.nl-form-field-label--inherit {
+  @include mixin.nl-form-field-label--inherit;
+}
+
+/**
+ * Apply CSS system-color values in Forced Colors mode.
+ */
+@media screen and (forced-colors: active) {
+  .nl-form-field-label--disabled {
+    @include mixin.nl-form-field-label--forced-colors-disabled;
+  }
+}

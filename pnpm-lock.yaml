@@ -125,7 +125,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-css/alert-css:
     devDependencies:
@@ -366,7 +366,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/button-react:
     dependencies:
@@ -421,7 +421,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/code-block-react:
     dependencies:
@@ -464,7 +464,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/code-react:
     dependencies:
@@ -504,7 +504,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/color-sample-react:
     dependencies:
@@ -544,7 +544,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/data-badge-react:
     dependencies:
@@ -584,7 +584,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/form-field-description-react:
     dependencies:
@@ -627,7 +627,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/form-field-error-message-react:
     dependencies:
@@ -667,7 +667,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/form-field-label-react:
     dependencies:
@@ -710,7 +710,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/form-field-status-react:
     dependencies:
@@ -750,7 +750,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/heading-react:
     dependencies:
@@ -790,7 +790,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/icon-react:
     dependencies:
@@ -833,7 +833,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/link-react:
     dependencies:
@@ -876,7 +876,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/mark-react:
     dependencies:
@@ -916,7 +916,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/note-react:
     dependencies:
@@ -959,7 +959,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/number-badge-react:
     dependencies:
@@ -999,7 +999,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/ordered-list-react:
     dependencies:
@@ -1042,7 +1042,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/paragraph-react:
     dependencies:
@@ -1085,7 +1085,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/skip-link-react:
     dependencies:
@@ -1128,7 +1128,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/text-area-react:
     dependencies:
@@ -1168,7 +1168,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/text-input-react:
     dependencies:
@@ -1211,7 +1211,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/components-react/unordered-list-react:
     dependencies:
@@ -1254,7 +1254,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/docs/alert-docs:
     devDependencies:
@@ -1777,7 +1777,7 @@ importers:
         version: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/storybook-non-conforming:
     devDependencies:
@@ -1852,7 +1852,7 @@ importers:
         version: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/storybook-shared:
     devDependencies:
@@ -1943,6 +1943,12 @@ importers:
       '@types/react-dom':
         specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.26)
+      '@utrecht/design-tokens':
+        specifier: 8.0.0
+        version: 8.0.0
+      '@utrecht/form-toggle-css':
+        specifier: 3.0.1
+        version: 3.0.1
       '@utrecht/icon-css':
         specifier: 3.0.1
         version: 3.0.1
@@ -1972,7 +1978,7 @@ importers:
         version: 7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+        version: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   packages/tokens/alert-tokens: {}
 
@@ -3192,6 +3198,9 @@ packages:
     peerDependencies:
       storybook: ^10.0.0
 
+  '@fontsource-variable/noto-sans@5.2.10':
+    resolution: {integrity: sha512-wyFgKkFu7jki5kEL8qv7avjQ8rxHX0J/nhLWvbR9T0hOH1HRKZEvb9EW9lMjZfWHHfEzKkYf5J+NadwgCS7TXA==}
+
   '@fontsource/fira-code@5.2.7':
     resolution: {integrity: sha512-tnB9NNund9TwIym8/7DMJe573nlPEQb+fKUV5GL8TBYXjIhDvL0D7mgmNVNQUPhXp+R7RylQeiBdkA4EbOHPGQ==}
 
@@ -4377,6 +4386,12 @@ packages:
   '@utrecht/components@6.1.0':
     resolution: {integrity: sha512-4EXubBfxuRgO7jNiI5/E4Tk2BZGiWS3JwuYCDZf7QPMQ0fMtrHDh9SEm0UErJd+CxVVG7Bcy/fQvYXh1ormCNA==}
     deprecated: 'Deprecated. Replaced by a separate package for each component, following the pattern: @utrecht/*-css. For example: @utrecht/button-css.'
+
+  '@utrecht/design-tokens@8.0.0':
+    resolution: {integrity: sha512-gY5CN2OHfp9X5+U8t2D9dugVwtXcUG/axWo/pudoUIRBwE+ll6l0vHhH1nAYefDUq1C4AyajtwwAesHS8aD+cg==}
+
+  '@utrecht/form-toggle-css@3.0.1':
+    resolution: {integrity: sha512-Bw8GrU71xZwbqb5g5UIjt3l2X7K28tTw78POFIcVkcYHFdWf91Cs5CJuCRmau/rjMT+7r3HS46UoN9qe2/xFfA==}
 
   '@utrecht/icon-css@3.0.1':
     resolution: {integrity: sha512-dZdJ3jH4/ThxOTni743cIYc/zBe7o18j6uHOJxYjydfL/kSivcLrmVwiIJq6T18bbKAKjLceYJ+SiL93Pnt+tw==}
@@ -7643,6 +7658,7 @@ packages:
       '@vitest/ui': 4.1.8
       happy-dom: '*'
       jsdom: '*'
+      vite: ^7.3.5
     peerDependenciesMeta:
       '@edge-runtime/vm':
         optional: true
@@ -9093,6 +9109,8 @@ snapshots:
       lodash: 4.18.1
       storybook: 10.6.7(@types/react@18.3.26)(prettier@3.6.2)(react@19.2.3)
 
+  '@fontsource-variable/noto-sans@5.2.10': {}
+
   '@fontsource/fira-code@5.2.7': {}
 
   '@fontsource/fira-sans@5.2.7': {}
@@ -10282,6 +10300,12 @@ snapshots:
     dependencies:
       clsx: 2.1.1
 
+  '@utrecht/design-tokens@8.0.0':
+    dependencies:
+      '@fontsource-variable/noto-sans': 5.2.10
+
+  '@utrecht/form-toggle-css@3.0.1': {}
+
   '@utrecht/icon-css@3.0.1': {}
 
   '@vitejs/plugin-react@4.7.0(supports-color@10.2.2)(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))':
@@ -10308,7 +10332,7 @@ snapshots:
       obug: 2.1.1
       std-env: 4.1.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0)
+      vitest: 4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
 
   '@vitest/expect@3.2.4':
     dependencies:
@@ -14049,7 +14073,7 @@ snapshots:
       sass: 1.94.1
       yaml: 2.9.0
 
-  vitest@4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(sass@1.94.1)(yaml@2.9.0):
+  vitest@4.1.8(@types/node@24.10.4)(@vitest/coverage-v8@4.1.8)(jsdom@27.2.0(supports-color@10.2.2))(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0)):
     dependencies:
       '@vitest/expect': 4.1.8
       '@vitest/mocker': 4.1.8(vite@7.3.6(@types/node@24.10.4)(sass@1.94.1)(yaml@2.9.0))
@@ -14076,17 +14100,7 @@ snapshots:
       '@vitest/coverage-v8': 4.1.8(vitest@4.1.8)
       jsdom: 27.2.0(supports-color@10.2.2)
     transitivePeerDependencies:
-      - jiti
-      - less
-      - lightningcss
       - msw
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - terser
-      - tsx
-      - yaml
 
   w3c-xmlserializer@5.0.0:
     dependencies:
