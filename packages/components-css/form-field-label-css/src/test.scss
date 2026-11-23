@@ -1,0 +1,14 @@
+@use "./mixin";
+
+/*
+ * Used for stories in Storybook
+ */
+
+/* Forced colors */
+.nl-form-field-label.nl-form-field-label--forced-colors-test {
+  @include mixin.nl-form-field-label--forced-colors;
+}
+
+.nl-form-field-label--disabled.nl-form-field-label--forced-colors-test {
+  @include mixin.nl-form-field-label--forced-colors-disabled;
+}

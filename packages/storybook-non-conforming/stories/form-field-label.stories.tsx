@@ -3,9 +3,10 @@ import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/form-field-label-css/src/form-field-label.scss';
 import packageJSON from '../../components-react/form-field-label-react/package.json';
-import { FormFieldLabel as FormFieldLabelComponent } from '../../components-react/form-field-label-react/src/form-field-label';
+import { FormFieldLabel } from '../../components-react/form-field-label-react/src/form-field-label';
 import componentMarkdown from '../../docs/form-field-label-docs/docs/component.md?raw';
 import reactMeta from '../../docs/form-field-label-docs/stories/form-field-label.react.meta';
+import type { CSSProperties } from 'react';
 
 const meta = {
   ...merge({
@@ -39,11 +40,11 @@ const meta = {
     },
   }),
   title: 'Componenten/Form Field Label',
-} satisfies Meta<typeof FormFieldLabelComponent>;
+} satisfies Meta<typeof FormFieldLabel>;
 
 export default meta;
 
-type Story = StoryObj<typeof FormFieldLabelComponent>;
+type Story = StoryObj<typeof FormFieldLabel>;
 
 export const FormFieldLabelWithoutRelationWithInput: Story = {
   name: 'Fout: Form Field Label niet gekoppeld aan het invoerveld',
@@ -52,7 +53,7 @@ export const FormFieldLabelWithoutRelationWithInput: Story = {
   },
   render: (args) => (
     <>
-      <FormFieldLabelComponent {...args} />
+      <FormFieldLabel {...args} />
       <div>
         <input id="F36DE513-C314-41B2-A48B-CDAA374D9D9D" type="text" autoComplete="postal-code" />
       </div>
@@ -121,7 +122,7 @@ export const FormFieldLabelAccessibleNameMismatch: Story = {
   },
   render: (args) => (
     <>
-      <FormFieldLabelComponent {...args} />
+      <FormFieldLabel {...args} />
       <div>
         <input
           id={ACCESSIBLE_NAME_MISMATCH_INPUT_ID}
@@ -150,9 +151,9 @@ export const FormFieldLabelWithInteractiveContent: Story = {
     type: 'option',
   },
   render: (args) => (
-    <FormFieldLabelComponent {...args}>
+    <FormFieldLabel {...args}>
       Ik ga akkoord met de <a href="https://example.com/voorwaarden">voorwaarden</a>
-    </FormFieldLabelComponent>
+    </FormFieldLabel>
   ),
   parameters: {
     docs: {
@@ -175,7 +176,7 @@ export const FormFieldLabelWithHeading: Story = {
   },
   render: (args) => (
     <>
-      <FormFieldLabelComponent {...args} />
+      <FormFieldLabel {...args} />
       <div>
         <input id={WITH_HEADING_INPUT_ID} type="text" autoComplete="name" />
       </div>
@@ -203,7 +204,7 @@ export const FormFieldLabelWithTabindexAttribute: Story = {
   },
   render: (args) => (
     <>
-      <FormFieldLabelComponent {...args} />
+      <FormFieldLabel {...args} />
       <div>
         <input id={WITH_TABINDEX_INPUT_ID} type="text" autoComplete="postal-code" />
       </div>
@@ -220,20 +221,22 @@ export const FormFieldLabelWithTabindexAttribute: Story = {
   },
 };
 
-const DISABLED_WITH_ENABLED_INPUT_ID = '4220CA51-907F-4AE1-85D3-1EF811EF1DE9';
+const LOW_CONTRAST_INPUT_ID = '4220CA51-907F-4AE1-85D3-1EF811EF1DE9';
 
-export const FormFieldLabelDisabledWithEnabledInput: Story = {
-  name: 'Fout: Form Field Label disabled bij een invoerveld dat niet disabled is',
+export const FormFieldLabelLowContrastWithEnabledInput: Story = {
+  name: 'Fout: Form Field Label met te laag contrast bij een invoerveld dat niet disabled is',
   args: {
     children: 'Postcode',
     disabled: true,
-    htmlFor: DISABLED_WITH_ENABLED_INPUT_ID,
+    htmlFor: LOW_CONTRAST_INPUT_ID,
+    // A disabled color with a contrast of 3:1 on white, allowed only for an inactive form field
+    style: { '--nl-form-field-label-disabled-color': '#949494' } as CSSProperties,
   },
   render: (args) => (
     <>
-      <FormFieldLabelComponent {...args} />
+      <FormFieldLabel {...args} />
       <div>
-        <input id={DISABLED_WITH_ENABLED_INPUT_ID} type="text" autoComplete="postal-code" />
+        <input id={LOW_CONTRAST_INPUT_ID} type="text" autoComplete="postal-code" />
       </div>
     </>
   ),
@@ -241,25 +244,7 @@ export const FormFieldLabelDisabledWithEnabledInput: Story = {
     docs: {
       description: {
         story:
-          'De Form Field Label heeft de `disabled` prop, maar het invoerveld heeft geen HTML-attribuut `disabled`. Het label ziet eruit alsof het invoerveld uitgeschakeld is, terwijl bezoekers het invoerveld nog gewoon kunnen gebruiken. De `disabled` prop verandert alleen de stijl van het label. Zet het HTML-attribuut `disabled` ook op het invoerveld zelf.',
-      },
-    },
-    status: { type: [] },
-  },
-};
-
-export const FormFieldLabelOptionWithTextInput: Story = {
-  name: 'Fout: Form Field Label option met een tekstveld',
-  args: {
-    children: 'Postcode',
-    input: <input type="text" name="postcode" autoComplete="postal-code" />,
-    type: 'option',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'De Form Field Label heeft de `option` variant met een tekstveld als `input`. De `option` variant is alleen bedoeld voor een radio button, checkbox of switch. Het label krijgt daardoor de styling van een keuzeoptie, terwijl het om een tekstveld gaat. Plaats de Form Field Label bij een tekstveld boven het invoerveld en koppel het label met het HTML-attribuut `for`.',
+          'De Form Field Label heeft de styling van de `disabled` variant, met een tekstkleur die een contrast van 3:1 heeft met de achtergrond. Een contrast lager dan 4,5:1 is alleen toegestaan voor tekst van een formulierveld dat niet actief is. Het invoerveld heeft geen HTML-attribuut `disabled`, en bezoekers kunnen het invoerveld nog gewoon gebruiken. Bezoekers met een visuele beperking kunnen het label daardoor slecht lezen. Dit voldoet niet aan [WCAG-criterium 1.4.3 Contrast (minimum)](https://nldesignsystem.nl/wcag/1.4.3/). Gebruik de `disabled` variant alleen wanneer het invoerveld zelf ook het HTML-attribuut `disabled` heeft.',
       },
     },
     status: { type: [] },

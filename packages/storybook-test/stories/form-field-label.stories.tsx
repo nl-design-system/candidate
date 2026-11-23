@@ -5,6 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import '../../components-css/form-field-description-css/src/form-field-description.scss';
 import '../../components-css/form-field-label-css/src/form-field-label.scss';
 import '../../components-css/form-field-label-css/src/html/form-field-label.scss';
+import '../../components-css/form-field-label-css/src/test.scss';
 import { FormFieldDescription } from '../../components-react/form-field-description-react/src/form-field-description';
 import packageJSON from '../../components-react/form-field-label-react/package.json';
 import { FormFieldLabel as FormFieldLabelComponent } from '../../components-react/form-field-label-react/src/form-field-label';
@@ -29,7 +30,7 @@ const AlternativeHTMLFormFieldLabel = ({
 AlternativeHTMLFormFieldLabel.displayName = 'AlternativeHTMLFormFieldLabel';
 
 const OptionCheckboxExample = () => (
-  <FormFieldLabelComponent type="option" input={<input type="checkbox" name="nieuwsbrief" />}>
+  <FormFieldLabelComponent type="option" input={<input type="checkbox" name="subscribe" />}>
     Ik wil de nieuwsbrief ontvangen
   </FormFieldLabelComponent>
 );
@@ -84,7 +85,7 @@ type Story = StoryObj<typeof FormFieldLabelComponent>;
 const DEFAULT_INPUT_ID = '5193A68B-F6C3-4D46-B45F-29AF0BA64D47';
 
 export const FormFieldLabel: Story = {
-  name: 'Form Field Label gekoppeld aan een HTML input element via for',
+  name: 'Form Field Label gekoppeld aan een HTML input element via label en for',
   args: {
     children: 'Postcode',
     htmlFor: DEFAULT_INPUT_ID,
@@ -101,7 +102,7 @@ export const FormFieldLabel: Story = {
     docs: {
       description: {
         story:
-          'De Form Field Label is gekoppeld aan het invoerveld via het HTML-attribuut `for`. De tekst van het label is de toegankelijke naam van het invoerveld. Een screenreader leest het label voor bij focus op het invoerveld. Een klik op het label zet de focus op het invoerveld.',
+          'De Form Field Label is gekoppeld aan het invoerveld via het HTML-element `label` met het attribuut `for`. De tekst van het label is de toegankelijke naam van het invoerveld. Een screenreader leest het label voor bij focus op het invoerveld. Een klik op het label zet de focus op het invoerveld.',
       },
     },
     status: { type: [] },
@@ -118,7 +119,7 @@ export const FormFieldLabelWithPhrasingContent: Story = {
   render: (args) => (
     <>
       <FormFieldLabelComponent {...args}>
-        E-mailadres <span>(niet verplicht)</span>
+        E-mailadres <small>(niet verplicht)</small>
       </FormFieldLabelComponent>
       <div>
         <input id={PHRASING_CONTENT_INPUT_ID} type="email" autoComplete="email" />
@@ -129,7 +130,7 @@ export const FormFieldLabelWithPhrasingContent: Story = {
     docs: {
       description: {
         story:
-          'Het label bevat tekst en een HTML-element `span`. De tekst in het HTML-element `span` krijgt de kleur en typografie van de Form Field Label en wordt inline weergegeven. De spatie tussen de tekst en het HTML-element `span` blijft behouden.',
+          'Het label bevat een extra tekst "(niet verplicht)" in het HTML-element `small`. De tekst in het HTML-element `small` krijgt de kleur en typografie van de Form Field Label en wordt inline weergegeven, maar dan kleiner. De spatie tussen de tekst en het HTML-element `small` blijft behouden.',
       },
     },
     status: { type: [] },
@@ -157,7 +158,7 @@ export const FormFieldLabelDisabled: Story = {
     docs: {
       description: {
         story:
-          'Het label heeft de kleur van een disabled Form Field Label. Het invoerveld heeft zelf ook het HTML-attribuut `disabled`, omdat de `disabled` prop alleen de stijl van het label verandert.',
+          'Het label heeft de kleur van een disabled Form Field Label. Het invoerveld heeft zelf ook het HTML-attribuut `disabled`, omdat de `disabled` styling met lagere contrasteisen alleen is toegestaan voor inactieve invoervelden.',
       },
     },
     status: { type: [] },
@@ -168,7 +169,7 @@ export const FormFieldLabelOptionCheckbox: Story = {
   name: 'Form Field Label option met een checkbox',
   args: {
     children: 'Ik wil de nieuwsbrief ontvangen',
-    input: <input type="checkbox" name="nieuwsbrief" />,
+    input: <input type="checkbox" name="subscribe" />,
     type: 'option',
   },
   parameters: {
@@ -190,7 +191,7 @@ export const FormFieldLabelOptionRadio: Story = {
     type: 'option',
   },
   render: (args) => (
-    <fieldset>
+    <fieldset role="radiogroup">
       <legend>Hoe wilt u contact?</legend>
       <div>
         <FormFieldLabelComponent {...args} />
@@ -217,26 +218,27 @@ export const FormFieldLabelOptionSwitch: Story = {
   name: 'Form Field Label option met een switch',
   args: {
     children: 'Meldingen ontvangen',
-    input: <input type="checkbox" role="switch" name="meldingen" />,
+    // React does not know the `switch` attribute yet: pass it as a string, so React renders it and TypeScript accepts it
+    input: <input type="checkbox" {...{ switch: '' }} name="notifications" />,
     type: 'option',
   },
   parameters: {
     docs: {
       description: {
         story:
-          'Het label bevat een switch, die vóór de tekst staat. De switch is een checkbox met het HTML-attribuut `role` met de waarde `switch`. Een screenreader leest het label voor bij focus op de switch.',
+          'Het label bevat een native switch, die vóór de tekst staat. De switch is een HTML-element `input` met het HTML-attribuut `type` met de waarde `checkbox` en het HTML-attribuut `switch`. Een screenreader leest het label voor bij focus op de switch. Op het moment van testen wordt de native switch alleen ondersteund in Safari, in andere browsers wordt een checkbox getoond. Zie [Can I use: HTML switch](https://caniuse.com/wf-switch-control) voor de actuele ondersteuning.',
       },
     },
     status: { type: [] },
   },
 };
 
-export const FormFieldLabelOptionDisabled: Story = {
-  name: 'Form Field Label option disabled',
+export const FormFieldLabelOptionDisabledWithCheckbox: Story = {
+  name: 'Form Field Label option disabled met een checkbox',
   args: {
     children: 'Ik wil de nieuwsbrief ontvangen',
     disabled: true,
-    input: <input type="checkbox" name="nieuwsbrief" disabled />,
+    input: <input type="checkbox" name="subscribe" disabled />,
     type: 'option',
   },
   parameters: {
@@ -271,7 +273,7 @@ export const FormFieldLabelOptionWithDescription: Story = {
     docs: {
       description: {
         story:
-          'De Form Field Description staat onder de Form Field Label met de checkbox. Bij een radio button, checkbox of switch staat de beschrijving niet tussen het label en het invoerveld, omdat het invoerveld in het label staat. De Form Field Description is gekoppeld aan de checkbox via het WAI-ARIA-attribuut `aria-describedby`. Een screenreader leest het label en de beschrijving voor bij focus op de checkbox.',
+          'De Form Field Description staat altijd buiten de Form Field Label, ook bij checkboxes, radio buttons en switches. De Form Field Label bevat alleen een korte, duidelijke labeltekst. De description geeft aanvullende informatie en wordt afzonderlijk voorgelezen door screenreaders.',
       },
     },
     status: { type: [] },
@@ -328,7 +330,7 @@ export const FormFieldLabelAsDiv: Story = {
     docs: {
       description: {
         story:
-          'De kleur en typografie van de component komen overeen met het design van de Form Field Label. Het label is opgemaakt met het HTML-element `div`. Een HTML-element `div` heeft geen HTML-attribuut `for`, daarom is het invoerveld gekoppeld via het WAI-ARIA-attribuut `aria-labelledby`. Een klik op het label zet de focus niet op het invoerveld.',
+          'De kleur en typografie van de component komen overeen met het design van de Form Field Label. Het label is opgemaakt met het HTML-element `div`. Een HTML-element `div` heeft geen HTML-attribuut `for`, daarom is het invoerveld gekoppeld via het WAI-ARIA-attribuut `aria-labelledby`. Een klik op het label zet de focus op het invoerveld. Dit gedrag werkt alleen wanneer de JavaScript beschikbaar is. De witruimte rechts van de Form Field Label is niet interactief, wanneer je naast de label klikt verplaatst de focus niet naar het invoerveld.',
       },
     },
     status: { type: [] },
@@ -357,7 +359,7 @@ export const FormFieldLabelAsSpan: Story = {
     docs: {
       description: {
         story:
-          'De kleur en typografie van de component komen overeen met het design van de Form Field Label. Het label is opgemaakt met het HTML-element `span`. Een HTML-element `span` heeft geen HTML-attribuut `for`, daarom is het invoerveld gekoppeld via het WAI-ARIA-attribuut `aria-labelledby`. Een klik op het label zet de focus niet op het invoerveld.',
+          'De kleur en typografie van de component komen overeen met het design van de Form Field Label. Het label is opgemaakt met het HTML-element `span`. Een HTML-element `span` heeft geen HTML-attribuut `for`, daarom is het invoerveld gekoppeld via het WAI-ARIA-attribuut `aria-labelledby`. Een klik op het label zet de focus niet op het invoerveld. Dit gedrag werkt alleen wanneer de JavaScript beschikbaar is. De witruimte rechts van de Form Field Label is niet interactief, wanneer je naast de label klikt verplaatst de focus niet naar  het invoerveld.',
       },
     },
     status: { type: [] },
@@ -370,18 +372,47 @@ export const FormFieldLabelNLHTMLAll: Story = {
     const INPUT_ID = '120F5DB0-24C7-40A0-911F-E9717C1B9BC0';
     return (
       <div className="nl-html nl-html--all">
-        <label htmlFor={INPUT_ID}>Postcode</label>
+        <label htmlFor={`${INPUT_ID}-postcode`}>Postcode</label>
         <div>
-          <input id={INPUT_ID} type="text" autoComplete="postal-code" />
+          <input id={`${INPUT_ID}-postcode`} type="text" autoComplete="postal-code" />
         </div>
-        <label>
-          <input type="checkbox" name="nieuwsbrief" /> Ik wil de nieuwsbrief ontvangen
-        </label>
+        <h1>
+          <label htmlFor={`${INPUT_ID}-name`}>Wat is uw naam?</label>
+        </h1>
         <div>
-          <label>
-            <input type="checkbox" name="sms" disabled /> Ik wil een sms ontvangen
-          </label>
+          <input id={`${INPUT_ID}-name`} type="text" autoComplete="name" />
         </div>
+        <fieldset>
+          <legend>Communicatievoorkeuren</legend>
+          <div>
+            <label>
+              <input type="checkbox" name="voorwaarden" /> Ik ga akkoord met de voorwaarden
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" {...{ switch: '' }} name="subscribe" /> Ik wil de nieuwsbrief ontvangen
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" {...{ switch: '' }} name="sms" disabled /> Ik wil een sms ontvangen
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Hoe wilt u contact?</legend>
+          <div>
+            <label>
+              <input type="radio" name="contact-all" value="email" /> Per e-mail
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="radio" name="contact-all" value="telefoon" /> Per telefoon
+            </label>
+          </div>
+        </fieldset>
       </div>
     );
   },
@@ -389,7 +420,7 @@ export const FormFieldLabelNLHTMLAll: Story = {
     docs: {
       description: {
         story:
-          'De labels zijn opgemaakt met het HTML-element `label` zonder classes, binnen een element met de class `nl-html--all`. De styling van de Form Field Label wordt automatisch toegepast. Een label met een checkbox of radio button krijgt de styling van de `option` variant. Een label met een disabled checkbox of radio button krijgt de styling van de `disabled` variant.',
+          'De labels zijn opgemaakt met het HTML-element `label` zonder classes, binnen een element met de class `nl-html--all`. De styling van de Form Field Label wordt automatisch toegepast. Een label binnen een HTML-element `h1` krijgt de styling van de `inherit` variant en neemt de typografie van de heading over. Een label met een checkbox, switch of radio button krijgt de styling van de `option` variant. Een label met een disabled switch krijgt de styling van de `disabled` variant. De switch is een HTML-element `input` met het HTML-attribuut `type` met de waarde `checkbox` en het HTML-attribuut `switch`. Op het moment van testen wordt de native switch alleen ondersteund in Safari, in andere browsers wordt een checkbox getoond. Zie [Can I use: HTML switch](https://caniuse.com/wf-switch-control) voor de actuele ondersteuning.',
       },
     },
     status: { type: [] },
@@ -402,15 +433,47 @@ export const FormFieldLabelNLHTMLFormFieldLabel: Story = {
     const INPUT_ID = 'DBBE33D2-7A11-4408-9291-BC16B20B1F1F';
     return (
       <div className="nl-html nl-html--form-field-label">
+        <label htmlFor={`${INPUT_ID}-postcode`}>Postcode</label>
+        <div>
+          <input id={`${INPUT_ID}-postcode`} type="text" autoComplete="postal-code" />
+        </div>
         <h1>
-          <label htmlFor={INPUT_ID}>Wat is uw naam?</label>
+          <label htmlFor={`${INPUT_ID}-name`}>Wat is uw naam?</label>
         </h1>
         <div>
-          <input id={INPUT_ID} type="text" autoComplete="name" />
+          <input id={`${INPUT_ID}-name`} type="text" autoComplete="name" />
         </div>
-        <label>
-          <input type="radio" name="contact" value="email" /> Per e-mail
-        </label>
+        <fieldset>
+          <legend>Communicatievoorkeuren</legend>
+          <div>
+            <label>
+              <input type="checkbox" name="voorwaarden" /> Ik ga akkoord met de voorwaarden
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" {...{ switch: '' }} name="subscribe" /> Ik wil de nieuwsbrief ontvangen
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" {...{ switch: '' }} name="sms" disabled /> Ik wil een sms ontvangen
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Hoe wilt u contact?</legend>
+          <div>
+            <label>
+              <input type="radio" name="contact-form-field-label" value="email" /> Per e-mail
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="radio" name="contact-form-field-label" value="telefoon" /> Per telefoon
+            </label>
+          </div>
+        </fieldset>
       </div>
     );
   },
@@ -418,7 +481,63 @@ export const FormFieldLabelNLHTMLFormFieldLabel: Story = {
     docs: {
       description: {
         story:
-          'De labels zijn opgemaakt met het HTML-element `label` zonder classes, binnen een element met de class `nl-html--form-field-label`. Een label binnen een HTML-element `h1` krijgt de styling van de `inherit` variant en neemt de typografie van de heading over. Een label met een radio button krijgt de styling van de `option` variant.',
+          'De labels zijn opgemaakt met het HTML-element `label` zonder classes, binnen een element met de class `nl-html--form-field-label`. De styling van de Form Field Label wordt automatisch toegepast. Een label binnen een HTML-element `h1` krijgt de styling van de `inherit` variant en neemt de typografie van de heading over. Een label met een checkbox, switch of radio button krijgt de styling van de `option` variant. Een label met een disabled switch krijgt de styling van de `disabled` variant. De switch is een HTML-element `input` met het HTML-attribuut `type` met de waarde `checkbox` en het HTML-attribuut `switch`. Op het moment van testen wordt de native switch alleen ondersteund in Safari, in andere browsers wordt een checkbox getoond. Zie [Can I use: HTML switch](https://caniuse.com/wf-switch-control) voor de actuele ondersteuning.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const FormFieldLabelNLHTMLHeadingLevels: Story = {
+  name: 'Form Field Label binnen de HTML-elementen `h1` tot en met `h6` in `nl-html--form-field-label`',
+  render: () => {
+    const INPUT_ID = '43964965-79F8-4F78-B699-0BEF1270B594';
+    return (
+      <div className="nl-html nl-html--form-field-label">
+        <h1>
+          <label htmlFor={`${INPUT_ID}-h1`}>Wat is uw naam? (h1)</label>
+        </h1>
+        <div>
+          <input id={`${INPUT_ID}-h1`} type="text" />
+        </div>
+        <h2>
+          <label htmlFor={`${INPUT_ID}-h2`}>Wat is uw naam? (h2)</label>
+        </h2>
+        <div>
+          <input id={`${INPUT_ID}-h2`} type="text" />
+        </div>
+        <h3>
+          <label htmlFor={`${INPUT_ID}-h3`}>Wat is uw naam? (h3)</label>
+        </h3>
+        <div>
+          <input id={`${INPUT_ID}-h3`} type="text" />
+        </div>
+        <h4>
+          <label htmlFor={`${INPUT_ID}-h4`}>Wat is uw naam? (h4)</label>
+        </h4>
+        <div>
+          <input id={`${INPUT_ID}-h4`} type="text" />
+        </div>
+        <h5>
+          <label htmlFor={`${INPUT_ID}-h5`}>Wat is uw naam? (h5)</label>
+        </h5>
+        <div>
+          <input id={`${INPUT_ID}-h5`} type="text" />
+        </div>
+        <h6>
+          <label htmlFor={`${INPUT_ID}-h6`}>Wat is uw naam? (h6)</label>
+        </h6>
+        <div>
+          <input id={`${INPUT_ID}-h6`} type="text" />
+        </div>
+      </div>
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De labels zijn opgemaakt met het HTML-element `label` zonder classes, binnen de HTML-elementen `h1`, `h2`, `h3`, `h4`, `h5` en `h6` in een element met de class `nl-html--form-field-label`. Een label binnen elk van deze headings krijgt de styling van de `inherit` variant en neemt de typografie van de heading over.',
       },
     },
     status: { type: [] },
@@ -439,6 +558,14 @@ export const FormFieldLabelTextSpacing: Story = {
       <div>
         <textarea id={TEXT_SPACING_INPUT_ID} />
       </div>
+      <Heading level={1}>
+        <FormFieldLabelComponent htmlFor={`${TEXT_SPACING_INPUT_ID}-heading`} type="inherit">
+          Wat is het adres waar u de afgelopen vijf jaar het langst heeft gewoond?
+        </FormFieldLabelComponent>
+      </Heading>
+      <div>
+        <input id={`${TEXT_SPACING_INPUT_ID}-heading`} type="text" autoComplete="street-address" />
+      </div>
       <FormFieldLabelComponent type="option" input={<input type="checkbox" name="contact" />}>
         Ik wil contact opnemen met een medewerker over dit probleem
       </FormFieldLabelComponent>
@@ -448,7 +575,7 @@ export const FormFieldLabelTextSpacing: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een Form Field Label met vergrootte tekstafstand. De tekst overlapt niet met andere onderdelen van de content of componenten.
+        story: `Een Form Field Label met vergrootte tekstafstand, als gewoon label, binnen een NL Heading en bij een checkbox. Het label binnen de heading neemt de typografie van de heading over, ook de vergrootte tekstafstand. De tekst overlapt niet met andere onderdelen van de content of componenten.
 
 De tekstafstand is vergroot volgens [WCAG Succescriterium 1.4.12 Tekstafstand](https://nldesignsystem.nl/wcag/1.4.12/):
 
@@ -511,7 +638,7 @@ export const FormFieldLabelLangRTL: Story = {
       <div>
         <input id={LANG_RTL_INPUT_ID} type="text" autoComplete="postal-code" />
       </div>
-      <FormFieldLabelComponent type="option" input={<input type="checkbox" name="nieuwsbrief" />}>
+      <FormFieldLabelComponent type="option" input={<input type="checkbox" name="subscribe" />}>
         أرغب في تلقي النشرة الإخبارية
       </FormFieldLabelComponent>
     </div>
@@ -547,7 +674,7 @@ export const FormFieldLabelVerticalText: Story = {
       <div>
         <input id={VERTICAL_TEXT_INPUT_ID} type="text" autoComplete="postal-code" />
       </div>
-      <FormFieldLabelComponent type="option" lang="ja" input={<input type="checkbox" name="nieuwsbrief" />}>
+      <FormFieldLabelComponent type="option" lang="ja" input={<input type="checkbox" name="subscribe" />}>
         ニュースレターを受け取る
       </FormFieldLabelComponent>
     </>
@@ -576,13 +703,7 @@ export const FormFieldLabelLargeText: Story = {
     <>
       <FormFieldLabelComponent {...args} />
       <div>
-        <input
-          // Ensure the input shrinks with the available space at high zoom levels.
-          style={{ boxSizing: 'border-box', maxInlineSize: '100%' }}
-          id={LARGE_TEXT_INPUT_ID}
-          type="text"
-          autoComplete="postal-code"
-        />
+        <input id={LARGE_TEXT_INPUT_ID} type="text" autoComplete="postal-code" />
       </div>
       <OptionCheckboxExample />
     </>
@@ -641,7 +762,7 @@ export const FormFieldLabelWordBreak: Story = {
       <div>
         <input id={WORD_BREAK_INPUT_ID} type="text" />
       </div>
-      <FormFieldLabelComponent type="option" input={<input type="checkbox" name="toestemming" />}>
+      <FormFieldLabelComponent type="option" input={<input type="checkbox" name="permission" />}>
         Ik geef toestemming voor de gegevensuitwisselingsovereenkomstvoorwaarden
       </FormFieldLabelComponent>
     </>
@@ -650,7 +771,7 @@ export const FormFieldLabelWordBreak: Story = {
     docs: {
       description: {
         story:
-          'Het label bevat buitengewoon lange woorden. Woorden worden afgebroken aan het einde van de regel en vervolgd op de volgende regel. Tekst valt niet buiten beeld.',
+          'Het label bevat buitengewoon lange woorden. Woorden worden afgebroken aan het einde van de regel en vervolgd op de volgende regel. Tekst valt niet buiten beeld. Het afbreken van woorden regelt de component niet zelf: gebruik de component in een context waarin woordafbreking goed is ingesteld.',
       },
     },
     status: { type: [] },
@@ -670,15 +791,9 @@ export const FormFieldLabelSmallViewport: Story = {
     <>
       <FormFieldLabelComponent {...args} />
       <div>
-        <input
-          // Ensure the input shrinks with the available space in a small viewport.
-          style={{ boxSizing: 'border-box', maxInlineSize: '100%' }}
-          id={SMALL_VIEWPORT_INPUT_ID}
-          type="text"
-          autoComplete="street-address"
-        />
+        <input id={SMALL_VIEWPORT_INPUT_ID} type="text" autoComplete="street-address" />
       </div>
-      <FormFieldLabelComponent type="option" input={<input type="checkbox" name="voorwaarden" />}>
+      <FormFieldLabelComponent type="option" input={<input type="checkbox" name="terms-and-conditions" />}>
         Ik heb de voorwaarden gelezen en ga ermee akkoord dat mijn gegevens worden gebruikt voor deze aanvraag
       </FormFieldLabelComponent>
     </>
@@ -701,6 +816,7 @@ export const FormFieldLabelForcedColorsMode: Story = {
   globals: { forcedColors: 'active' },
   args: {
     children: 'Postcode',
+    className: 'nl-form-field-label--forced-colors-test',
     htmlFor: FORCED_COLORS_INPUT_ID,
   },
   render: (args) => (
@@ -709,7 +825,13 @@ export const FormFieldLabelForcedColorsMode: Story = {
       <div>
         <input id={FORCED_COLORS_INPUT_ID} type="text" autoComplete="postal-code" />
       </div>
-      <OptionCheckboxExample />
+      <FormFieldLabelComponent
+        className="nl-form-field-label--forced-colors-test"
+        type="option"
+        input={<input type="checkbox" name="nieuwsbrief" />}
+      >
+        Ik wil de nieuwsbrief ontvangen
+      </FormFieldLabelComponent>
     </>
   ),
   parameters: {
@@ -730,6 +852,7 @@ export const FormFieldLabelDisabledForcedColorsMode: Story = {
   globals: { forcedColors: 'active' },
   args: {
     children: 'Postcode',
+    className: 'nl-form-field-label--forced-colors-test',
     disabled: true,
     htmlFor: DISABLED_FORCED_COLORS_INPUT_ID,
   },
@@ -739,7 +862,12 @@ export const FormFieldLabelDisabledForcedColorsMode: Story = {
       <div>
         <input id={DISABLED_FORCED_COLORS_INPUT_ID} type="text" autoComplete="postal-code" disabled />
       </div>
-      <FormFieldLabelComponent type="option" disabled input={<input type="checkbox" name="nieuwsbrief" disabled />}>
+      <FormFieldLabelComponent
+        className="nl-form-field-label--forced-colors-test"
+        type="option"
+        disabled
+        input={<input type="checkbox" name="subscribe" disabled />}
+      >
         Ik wil de nieuwsbrief ontvangen
       </FormFieldLabelComponent>
     </>

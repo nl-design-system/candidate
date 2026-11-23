@@ -38,7 +38,7 @@ export const FormFieldLabelOptionCheckbox: Story = {
   name: 'Form Field Label Option met Checkbox',
   args: {
     children: 'Ik wil de nieuwsbrief ontvangen',
-    input: <input type="checkbox" name="nieuwsbrief" />,
+    input: <input type="checkbox" name="subscribe" />,
     type: 'option',
   },
   parameters: {
