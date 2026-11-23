@@ -53,12 +53,12 @@ If you use SCSS:
 
 ## CSS classes
 
-| name                             | description                                                                                     |
-| -------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `.nl-form-field-label`           | The main class. Use it on a `<label>` element. A `<div>` or `<span>` element is also supported. |
-| `.nl-form-field-label--option`   | For a label that contains a radio button, checkbox or switch                                    |
-| `.nl-form-field-label--disabled` | For the label of a disabled form field                                                          |
-| `.nl-form-field-label--inherit`  | Inherits the text styles of the parent element, for example inside a heading                    |
+| name                             | description                                                                  |
+| -------------------------------- | ---------------------------------------------------------------------------- |
+| `.nl-form-field-label`           | The main class. Use it on a `<label>` element.                               |
+| `.nl-form-field-label--option`   | For a label that contains a radio button, checkbox or switch                 |
+| `.nl-form-field-label--disabled` | For the label of a disabled form field                                       |
+| `.nl-form-field-label--inherit`  | Inherits the text styles of the parent element, for example inside a heading |
 
 ### Valid combinations
 
@@ -80,13 +80,11 @@ If you use SCSS:
 | `nl-form-field-label--option`                 | Styles for a label that contains a radio, checkbox or switch |
 | `nl-form-field-label--disabled`               | Styles for the disabled state                                |
 | `nl-form-field-label--inherit`                | Styles to inherit the text styles of the parent element      |
-| `nl-form-field-label--forced-colors`          | Styles for forced colors mode                                |
 | `nl-form-field-label--forced-colors-disabled` | Styles for the disabled state in forced colors mode          |
 
 ## Usage
 
-Link the Form Field Label to the form control with the `for` attribute and the `id` of the form control. Don't put a
-`tabindex` on the label: the form control receives focus, not the label.
+Link the Form Field Label to the form control with the `for` attribute and the `id` of the form control.
 
 ```html
 <label class="nl-form-field-label" for="name">Name</label> <input id="name" autocomplete="name" type="text" />
