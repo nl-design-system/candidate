@@ -176,6 +176,23 @@ export const SimpleTestReport = ({
     <div key={story.id}>
       <Heading>{heading || story.name}</Heading>
       {isFullReport ? CommonData() : null}
+      <ul>
+        <li>
+          <Result label="Voldoet" list={testResult.pass} open />
+        </li>
+        <li>
+          <Result label="Voldoet niet" list={testResult.fail} open />
+        </li>
+        <li>
+          <Result label="Kan niet worden vastgesteld" list={testResult.cannotTell} />
+        </li>
+        <li>
+          <Result label="Niet van toepassing" list={testResult.notApplicable} />
+        </li>
+        <li>
+          <Result label="Niet getest" list={testResult.notTested} />
+        </li>
+      </ul>
       <dl>
         <div>
           <dt>URL voor de test:</dt>
@@ -210,23 +227,6 @@ export const SimpleTestReport = ({
           </div>
         ) : null}
       </dl>
-      <ul>
-        <li>
-          <Result label="Voldoet" list={testResult.pass} open />
-        </li>
-        <li>
-          <Result label="Voldoet niet" list={testResult.fail} open />
-        </li>
-        <li>
-          <Result label="Kan niet worden vastgesteld" list={testResult.cannotTell} />
-        </li>
-        <li>
-          <Result label="Niet van toepassing" list={testResult.notApplicable} />
-        </li>
-        <li>
-          <Result label="Niet getest" list={testResult.notTested} />
-        </li>
-      </ul>
     </div>
   );
 };
