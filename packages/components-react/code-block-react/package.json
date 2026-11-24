@@ -39,8 +39,8 @@
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs",
     "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/ ./coverage/",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
+    "test-build": "vitest run --coverage",
+    "test-build-fast": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc"
   },
