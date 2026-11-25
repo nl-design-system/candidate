@@ -211,4 +211,27 @@ const data: AcceptanceCriterium[] = [
   },
 ];
 
-export default data;
+export const extra: AcceptanceCriterium[] = [
+  {
+    // TODO: Uitzoeken: hoe gaan we om met het gebruik van patronen opnemen in acceptatiecriteria?
+    id: 'b21a9996-10e8-4fa5-a065-737f45bf5c17',
+    context: ['usage'],
+    sc: '',
+    status: '',
+    tags: ['designer', 'developer'],
+    // TODO: Dit is nog geen goede titel
+    title: 'Een Button die "bezig" is gebruikt het toegankelijke patroon.',
+  },
+  {
+    // TODO: Deze is nieuw
+    id: '164cfe8d-2216-429b-af15-1e1bc9bb1ceb',
+    context: ['usage'],
+    sc: '',
+    status: '',
+    tags: ['designer'],
+    title:
+      'Een inactieve component heeft een contrastratio van minimaal 4,5:1 met de achtergrondkleur, en daarmee is het contrast hoger dan het minimum 3,0:1 van WCAG.',
+  },
+];
+
+export default [...data, ...extra];
