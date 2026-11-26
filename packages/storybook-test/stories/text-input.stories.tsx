@@ -186,7 +186,7 @@ export const TextInputTypeEmail: Story = {
         <TextInput
           id="31a99b09-3a48-4867-bc3d-f5376f01ebf3"
           autoComplete="email"
-          defaultValue="jan.jansen@example.com"
+          defaultValue="jan.jansen@example.fi"
           type="email"
         />
       </div>
@@ -196,7 +196,7 @@ export const TextInputTypeEmail: Story = {
     docs: {
       description: {
         story:
-          'Een Text Input voor een e-mailadres. Elk teken wordt los getoond, zonder ligaturen, zodat je het e-mailadres teken voor teken kunt controleren.',
+          'Een Text Input voor een e-mailadres. Elk teken wordt los getoond, zodat je het e-mailadres teken voor teken kunt controleren en daarbij ook onderscheid kan maken tussen letters en ligaturen. In het e-mailadres worden de letters "f\u{200B}i" los van elkaar weergegeven, niet als "ﬁ" ligatuur (U+FB01).',
       },
     },
     status: { type: [] },
@@ -887,7 +887,7 @@ export const TextInputTypeDate: Story = {
     docs: {
       description: {
         story:
-          'Een Text Input met `type="date"`. Dit wordt ondersteund, maar raden we niet aan: de datumkiezer verschilt per browser en is niet altijd goed te gebruiken met hulpsoftware. Hetzelfde geldt voor `month`, `week`, `time` en `datetime-local`.',
+          'Een Text Input met `type="date"`. Dit wordt ondersteund door de Text Input, maar voor optimale gebruiksvriendelijkheid en toegankelijkheid raden we aan om een Date Picker of een Date Input Group te gebruiken.',
       },
     },
     status: { type: [] },
