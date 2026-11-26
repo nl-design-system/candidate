@@ -46,8 +46,9 @@ const meta = {
         defaultValue: { summary: 'text' },
       },
     },
-    size: {
-      description: 'Bepaalt de breedte van de Text Input. Voegt de class `nl-text-input--{size}` toe.',
+    valueSize: {
+      description:
+        'Bepaalt de breedte van de Text Input, passend bij de verwachte lengte van de waarde. Voegt de class `nl-text-input--{valueSize}` toe.',
       control: 'select',
       options: [undefined, 'xs', 'sm', 'md', 'lg', 'xl', 'stretch'],
       table: {

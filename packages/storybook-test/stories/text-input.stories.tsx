@@ -136,7 +136,7 @@ export const TextInputWithPlaceholder: Story = {
           id="25afdd81-db76-4987-ad47-4473b9dc3483"
           autoComplete="postal-code"
           placeholder="1234 AB"
-          size="xs"
+          valueSize="xs"
         />
       </div>
     </>
@@ -262,7 +262,7 @@ export const TextInputInputModeNumeric: Story = {
         <label htmlFor="16809ae1-9f36-4cd9-bd0b-21411193a838">Huisnummer</label>
       </div>
       <div>
-        <TextInput id="16809ae1-9f36-4cd9-bd0b-21411193a838" defaultValue="1011" inputMode="numeric" size="xs" />
+        <TextInput id="16809ae1-9f36-4cd9-bd0b-21411193a838" defaultValue="1011" inputMode="numeric" valueSize="xs" />
       </div>
     </>
   ),
@@ -395,7 +395,7 @@ export const TextInputUnmistakableReadOnly: Story = {
           className="nl-text-input--unmistakable"
           defaultValue="tok_8O0Il1rnmfi5S2Z"
           readOnly
-          size="lg"
+          valueSize="lg"
           style={{ fontFamily: 'var(--basis-text-font-family-monospace)' }}
         />
       </div>
@@ -563,6 +563,29 @@ export const TextInputRequired: Story = {
   },
 };
 
+export const TextInputSizeAttribute: Story = {
+  name: 'Text Input met size HTML-attribuut',
+  render: () => (
+    <>
+      <div>
+        <label htmlFor="400ef6b3-1c52-41f9-9f7b-ef65c0da7111">IBAN</label>
+      </div>
+      <div>
+        <TextInput id="400ef6b3-1c52-41f9-9f7b-ef65c0da7111" defaultValue="NL91ABNA0417164300" size={20} />
+      </div>
+    </>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een Text Input met het `size` HTML-attribuut. Het invoerveld is ongeveer 20 tekens breed, zodat het IBAN van 18 tekens er helemaal in past.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
 export const TextInputLangAR: Story = {
   name: 'Text Input in het Arabisch',
   globals: {
@@ -661,7 +684,7 @@ export const TextInputPlaceholderTextZoom: Story = {
           id="97b9d996-51f2-4de9-9e49-844bb662e50e"
           autoComplete="postal-code"
           placeholder="1234 AB"
-          size="xs"
+          valueSize="xs"
         />
       </div>
     </>
@@ -691,7 +714,7 @@ export const TextInputPlaceholderTextSpacing: Story = {
           id="d276482d-7afa-475a-a40c-f2b22d5d6b11"
           autoComplete="postal-code"
           placeholder="1234 AB"
-          size="sm"
+          valueSize="sm"
         />
       </div>
     </>
@@ -721,7 +744,12 @@ export const TextInputPageZoom: Story = {
         <label htmlFor="593ffb9e-32c8-43b8-8af8-4a3246f413d0">Naam</label>
       </div>
       <div>
-        <TextInput id="593ffb9e-32c8-43b8-8af8-4a3246f413d0" autoComplete="name" defaultValue="Jan Jansen" size="xl" />
+        <TextInput
+          id="593ffb9e-32c8-43b8-8af8-4a3246f413d0"
+          autoComplete="name"
+          defaultValue="Jan Jansen"
+          valueSize="xl"
+        />
       </div>
     </>
   ),
@@ -745,7 +773,12 @@ export const TextInputSmallViewport: Story = {
         <label htmlFor="d21cfd69-8772-41a6-9150-301f5ca07a92">Naam</label>
       </div>
       <div>
-        <TextInput id="d21cfd69-8772-41a6-9150-301f5ca07a92" autoComplete="name" defaultValue="Jan Jansen" size="xl" />
+        <TextInput
+          id="d21cfd69-8772-41a6-9150-301f5ca07a92"
+          autoComplete="name"
+          defaultValue="Jan Jansen"
+          valueSize="xl"
+        />
       </div>
     </>
   ),
@@ -856,7 +889,7 @@ export const TextInputTypeNumber: Story = {
         <label htmlFor="711a3fbf-8e58-4ad3-a92c-7a32885e9e0c">Aantal</label>
       </div>
       <div>
-        <TextInput id="711a3fbf-8e58-4ad3-a92c-7a32885e9e0c" defaultValue="3" size="xs" type="number" />
+        <TextInput id="711a3fbf-8e58-4ad3-a92c-7a32885e9e0c" defaultValue="3" valueSize="xs" type="number" />
       </div>
     </>
   ),

@@ -148,7 +148,7 @@ export const TextInputSizeTooSmall: Story = {
           id="fad7cf5c-4dd7-4046-9552-8c7e9567fa32"
           autoComplete="email"
           defaultValue="jan.jansen@voorbeeldgemeente.nl"
-          size="xs"
+          valueSize="xs"
           type="email"
         />
       </div>

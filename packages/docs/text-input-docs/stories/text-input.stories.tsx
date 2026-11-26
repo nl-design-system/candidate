@@ -63,10 +63,10 @@ export const TextInputType: Story = {
 };
 
 export const TextInputSize: Story = {
-  name: 'Text Input met size xs',
+  name: 'Text Input met value size xs',
   args: {
     defaultValue: '1234 AB',
-    size: 'xs',
+    valueSize: 'xs',
   },
   parameters: {
     docs: {

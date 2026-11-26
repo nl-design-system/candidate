@@ -73,16 +73,16 @@ a line of text, such as `checkbox` or `file`, are not supported.
 
 ```jsx
 <label htmlFor="postal-code">Postal code</label>
-<TextInput id="postal-code" autoComplete="postal-code" size="xs" />
+<TextInput id="postal-code" autoComplete="postal-code" valueSize="xs" />
 ```
 
-### Size
+### Value size
 
-Use the `size` prop to make the width of the input field match the expected length of the value: `xs`, `sm`, `md`,
-`lg`, `xl` or `stretch` for the full width of the container. The `size` prop replaces the `size` HTML attribute.
+Use the `valueSize` prop to make the width of the input field match the expected length of the value: `xs`, `sm`, `md`,
+`lg`, `xl` or `stretch` for the full width of the container. The native `size` HTML attribute is still supported.
 
 ```jsx
-<TextInput id="email" autoComplete="email" size="lg" type="email" />
+<TextInput id="email" autoComplete="email" valueSize="lg" type="email" />
 ```
 
 ### Invalid
@@ -107,15 +107,15 @@ are ignored.
 
 ## Props
 
-| Prop       | Description                                                                                       | Type                                                                                                                                     | Default  |
-| ---------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| `type`     | The `type` HTML attribute. Adds the `--url`, `--unmistakable` or `--numeric` class.               | `'text' \| 'email' \| 'url' \| 'tel' \| 'search' \| 'password' \| 'number' \| 'date' \| 'month' \| 'week' \| 'time' \| 'datetime-local'` | `'text'` |
-| `size`     | Width of the input field.                                                                         | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'stretch'`                                                                                      | —        |
-| `invalid`  | Shows the invalid state and sets `aria-invalid="true"`. Ignored when `disabled` is set.           | `boolean`                                                                                                                                | —        |
-| `disabled` | Disables the input field and adds the `--disabled` class.                                         | `boolean`                                                                                                                                | —        |
-| `readOnly` | Makes the value read-only and adds the `--read-only` class. Ignored when `disabled` is set.       | `boolean`                                                                                                                                | —        |
-| `required` | Sets the `required` HTML attribute.                                                               | `boolean`                                                                                                                                | —        |
-| `dir`      | Text direction of the value. Defaults to `auto`, so a value in another script is shown correctly. | `'auto' \| 'ltr' \| 'rtl'`                                                                                                               | `'auto'` |
+| Prop        | Description                                                                                       | Type                                                                                                                                     | Default  |
+| ----------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| `type`      | The `type` HTML attribute. Adds the `--url`, `--unmistakable` or `--numeric` class.               | `'text' \| 'email' \| 'url' \| 'tel' \| 'search' \| 'password' \| 'number' \| 'date' \| 'month' \| 'week' \| 'time' \| 'datetime-local'` | `'text'` |
+| `valueSize` | Width of the input field.                                                                         | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'stretch'`                                                                                      | —        |
+| `invalid`   | Shows the invalid state and sets `aria-invalid="true"`. Ignored when `disabled` is set.           | `boolean`                                                                                                                                | —        |
+| `disabled`  | Disables the input field and adds the `--disabled` class.                                         | `boolean`                                                                                                                                | —        |
+| `readOnly`  | Makes the value read-only and adds the `--read-only` class. Ignored when `disabled` is set.       | `boolean`                                                                                                                                | —        |
+| `required`  | Sets the `required` HTML attribute.                                                               | `boolean`                                                                                                                                | —        |
+| `dir`       | Text direction of the value. Defaults to `auto`, so a value in another script is shown correctly. | `'auto' \| 'ltr' \| 'rtl'`                                                                                                               | `'auto'` |
 
 In addition to the props above, `TextInput` accepts all standard HTML attributes of an `<input>` element (such as `id`,
 `name`, `value`, `placeholder` and `autoComplete`), and forwards a `ref` to the underlying `<input>` element.

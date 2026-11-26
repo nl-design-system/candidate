@@ -3,7 +3,7 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { TextInput } from './text-input';
-import type { TextInputSize, TextInputType } from './text-input';
+import type { TextInputType, TextInputValueSize } from './text-input';
 
 const displayName = 'TextInput';
 const extraClassName = 'nl-text-input--example-variant';
@@ -161,12 +161,23 @@ describe('Text Input', () => {
       expect(element).toHaveClass(cssClass);
     });
 
-    it.each<[TextInputSize]>([['xs'], ['sm'], ['md'], ['lg'], ['xl'], ['stretch']])('can set size `%s`', (size) => {
-      render(<TextInput size={size} />);
+    it.each<[TextInputValueSize]>([['xs'], ['sm'], ['md'], ['lg'], ['xl'], ['stretch']])(
+      'can set value size `%s`',
+      (valueSize) => {
+        render(<TextInput valueSize={valueSize} />);
+        const element = screen.getByRole('textbox');
+
+        expect(element).toHaveClass(`nl-text-input--${valueSize}`);
+        expect(element).not.toHaveAttribute('size');
+      },
+    );
+
+    it('supports the `size` HTML attribute', () => {
+      render(<TextInput size={20} />);
       const element = screen.getByRole('textbox');
 
-      expect(element).toHaveClass(`nl-text-input--${size}`);
-      expect(element).not.toHaveAttribute('size');
+      expect(element).toHaveAttribute('size', '20');
+      expect(element).toHaveClass('nl-text-input', { exact: true });
     });
 
     it('can be disabled', () => {

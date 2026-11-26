@@ -146,7 +146,7 @@ const meta = {
       },
     },
     invalid: { table: { disable: true } },
-    size: { table: { disable: true } },
+    valueSize: { table: { disable: true } },
   },
   component: ({
     className,
