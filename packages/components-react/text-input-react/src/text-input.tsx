@@ -41,8 +41,17 @@ const isNumeric = ({ type, inputMode, pattern }: Pick<TextInputProps, 'type' | '
   pattern === String.raw`\d*` ||
   pattern === '[0-9]*';
 
-const isUrl = ({ type, inputMode }: Pick<TextInputProps, 'type' | 'inputMode'>) =>
-  type === 'url' || type === 'email' || inputMode === 'url' || inputMode === 'email';
+const isUrl = ({ type, inputMode }: Pick<TextInputProps, 'type' | 'inputMode'>) => {
+  const normalizedType = type?.toLowerCase();
+  const normalizedInputMode = inputMode?.toLowerCase();
+
+  return (
+    normalizedType === 'url' ||
+    normalizedType === 'email' ||
+    normalizedInputMode === 'url' ||
+    normalizedInputMode === 'email'
+  );
+};
 
 export const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, forwardedRef) => {
   const {
