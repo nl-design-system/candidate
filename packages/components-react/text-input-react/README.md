@@ -99,6 +99,21 @@ Use `invalid` to show the invalid state. It also sets `aria-invalid="true"`. Lin
 Only use `aria-invalid` without `invalid` when you need to manage the accessible invalid state separately from the
 visual state, for example `aria-invalid="spelling"`.
 
+### Show password
+
+Use `passwordVisible` to show a password as text, for example with a "Show password" toggle button. It only works with
+`type="password"`. The `nl-text-input--unmistakable` class stays, so each character can be checked.
+
+```jsx
+const [passwordVisible, setPasswordVisible] = useState(false);
+
+<label htmlFor="password">Password</label>
+<TextInput id="password" autoComplete="current-password" passwordVisible={passwordVisible} type="password" />
+<button aria-controls="password" aria-pressed={passwordVisible} type="button" onClick={() => setPasswordVisible(!passwordVisible)}>
+  Show password
+</button>
+```
+
 ### Disabled and read-only
 
 Use `disabled` for an input field that cannot be used, and `readOnly` for a value that can be read and copied but not
@@ -107,15 +122,16 @@ are ignored.
 
 ## Props
 
-| Prop        | Description                                                                                       | Type                                                                                                                                     | Default  |
-| ----------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| `type`      | The `type` HTML attribute. Adds the `--url`, `--unmistakable` or `--numeric` class.               | `'text' \| 'email' \| 'url' \| 'tel' \| 'search' \| 'password' \| 'number' \| 'date' \| 'month' \| 'week' \| 'time' \| 'datetime-local'` | `'text'` |
-| `valueSize` | Width of the input field.                                                                         | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'stretch'`                                                                                      | —        |
-| `invalid`   | Shows the invalid state and sets `aria-invalid="true"`. Ignored when `disabled` is set.           | `boolean`                                                                                                                                | —        |
-| `disabled`  | Disables the input field and adds the `--disabled` class.                                         | `boolean`                                                                                                                                | —        |
-| `readOnly`  | Makes the value read-only and adds the `--read-only` class. Ignored when `disabled` is set.       | `boolean`                                                                                                                                | —        |
-| `required`  | Sets the `required` HTML attribute.                                                               | `boolean`                                                                                                                                | —        |
-| `dir`       | Text direction of the value. Defaults to `auto`, so a value in another script is shown correctly. | `'auto' \| 'ltr' \| 'rtl'`                                                                                                               | `'auto'` |
+| Prop              | Description                                                                                       | Type                                                                                                                                     | Default  |
+| ----------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| `type`            | The `type` HTML attribute. Adds the `--url`, `--unmistakable` or `--numeric` class.               | `'text' \| 'email' \| 'url' \| 'tel' \| 'search' \| 'password' \| 'number' \| 'date' \| 'month' \| 'week' \| 'time' \| 'datetime-local'` | `'text'` |
+| `valueSize`       | Width of the input field.                                                                         | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'stretch'`                                                                                      | —        |
+| `invalid`         | Shows the invalid state and sets `aria-invalid="true"`. Ignored when `disabled` is set.           | `boolean`                                                                                                                                | —        |
+| `disabled`        | Disables the input field and adds the `--disabled` class.                                         | `boolean`                                                                                                                                | —        |
+| `readOnly`        | Makes the value read-only and adds the `--read-only` class. Ignored when `disabled` is set.       | `boolean`                                                                                                                                | —        |
+| `passwordVisible` | Shows the password as text. Only works with `type="password"`.                                    | `boolean`                                                                                                                                | —        |
+| `required`        | Sets the `required` HTML attribute.                                                               | `boolean`                                                                                                                                | —        |
+| `dir`             | Text direction of the value. Defaults to `auto`, so a value in another script is shown correctly. | `'auto' \| 'ltr' \| 'rtl'`                                                                                                               | `'auto'` |
 
 In addition to the props above, `TextInput` accepts all standard HTML attributes of an `<input>` element (such as `id`,
 `name`, `value`, `placeholder` and `autoComplete`), and forwards a `ref` to the underlying `<input>` element.

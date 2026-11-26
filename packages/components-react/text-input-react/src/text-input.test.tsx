@@ -180,6 +180,31 @@ describe('Text Input', () => {
       expect(element).toHaveClass('nl-text-input', { exact: true });
     });
 
+    it('shows the password as text with `passwordVisible`', () => {
+      render(<TextInput passwordVisible type="password" />);
+      const element = screen.getByRole('textbox');
+
+      expect(element).toHaveAttribute('type', 'text');
+      expect(element).toHaveClass('nl-text-input--unmistakable');
+      expect(element).not.toHaveAttribute('passwordvisible');
+    });
+
+    it('hides the password without `passwordVisible`', () => {
+      const { container } = render(<TextInput passwordVisible={false} type="password" />);
+      const element = container.querySelector('.nl-text-input');
+
+      expect(element).toHaveAttribute('type', 'password');
+      expect(element).toHaveClass('nl-text-input--unmistakable');
+    });
+
+    it('ignores `passwordVisible` for other types', () => {
+      render(<TextInput passwordVisible type="email" />);
+      const element = screen.getByRole('textbox');
+
+      expect(element).toHaveAttribute('type', 'email');
+      expect(element).not.toHaveClass('nl-text-input--unmistakable');
+    });
+
     it('can be disabled', () => {
       render(<TextInput disabled />);
       const element = screen.getByRole('textbox');

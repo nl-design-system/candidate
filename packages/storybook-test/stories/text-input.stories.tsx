@@ -1,9 +1,12 @@
 import { merge } from 'lodash-es';
+import { useState } from 'react';
 import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import { ExampleBodyTextDecorator } from '@nl-design-system-candidate/storybook-shared/src/ExampleBodyTextDecorator';
+import '../../components-css/button-css/src/button.scss';
 import '../../components-css/form-field-error-message-css/src/form-field-error-message.scss';
 import '../../components-css/text-input-css/src/text-input.scss';
 import '../../components-css/text-input-css/src/html/text-input.scss';
+import { Button } from '../../components-react/button-react/src/button';
 import { FormFieldErrorMessage } from '../../components-react/form-field-error-message-react/src/form-field-error-message';
 import packageJSON from '../../components-react/text-input-react/package.json';
 import { TextInput } from '../../components-react/text-input-react/src/text-input';
@@ -337,9 +340,9 @@ export const TextInputPasswordVisible: Story = {
         <TextInput
           id="16625ba4-5337-462a-8b3c-8ed4de926509"
           autoComplete="current-password"
-          className="nl-text-input--unmistakable"
           defaultValue="O0Il1fi"
-          type="text"
+          passwordVisible
+          type="password"
         />
       </div>
     </>
@@ -349,6 +352,52 @@ export const TextInputPasswordVisible: Story = {
       description: {
         story:
           'Een wachtwoord dat zichtbaar is gemaakt. Tekens worden niet als ligatuur getoond, zodat je elk teken los ziet. Als het lettertype het ondersteunt, heeft de nul een streep, zodat je de letter `O` en het cijfer `0` uit elkaar kunt houden. Het lettertype van dit thema (Noto Sans) ondersteunt dat niet.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+const PasswordToggleExample = () => {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  return (
+    <div>
+      <div>
+        <label htmlFor="3e65fe89-4b45-491d-867c-974512c959ae">Wachtwoord</label>
+      </div>
+      <div>
+        <TextInput
+          id="3e65fe89-4b45-491d-867c-974512c959ae"
+          autoComplete="current-password"
+          defaultValue="O0Il1fi"
+          passwordVisible={passwordVisible}
+          type="password"
+        />
+      </div>
+      <p>
+        <Button
+          aria-controls="3e65fe89-4b45-491d-867c-974512c959ae"
+          pressed={passwordVisible}
+          purpose="secondary"
+          toggle
+          type="button"
+          onClick={() => setPasswordVisible(!passwordVisible)}
+        >
+          Toon wachtwoord
+        </Button>
+      </p>
+    </div>
+  );
+};
+
+export const TextInputPasswordToggle: Story = {
+  name: 'Text Input met een knop om het wachtwoord te tonen',
+  render: () => <PasswordToggleExample />,
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een wachtwoord met een knop om het wachtwoord te tonen of te verbergen. De knop is een toggle button: hulpsoftware meldt of de knop ingedrukt is. Als het wachtwoord zichtbaar is, worden tekens niet als ligatuur getoond, zodat je elk teken los ziet.',
       },
     },
     status: { type: [] },

@@ -82,6 +82,15 @@ const meta = {
         type: { summary: 'boolean' },
       },
     },
+    passwordVisible: {
+      description:
+        'Toont het wachtwoord als tekst: zet het `type` HTML-attribuut op `text`. Werkt alleen bij `type="password"`. De class `nl-text-input--unmistakable` blijft staan.',
+      control: 'boolean',
+      table: {
+        category: API,
+        type: { summary: 'boolean' },
+      },
+    },
     required: {
       description: 'Zet het `required` HTML-attribuut.',
       control: 'boolean',

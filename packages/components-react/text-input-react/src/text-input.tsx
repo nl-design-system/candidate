@@ -28,6 +28,8 @@ export interface TextInputProps extends Omit<InputHTMLAttributes<HTMLInputElemen
    * container. The native `size` HTML attribute is still supported.
    */
   valueSize?: TextInputValueSize;
+  /** Shows the password as text. Only works with `type="password"`. */
+  passwordVisible?: boolean;
 }
 
 const isNumeric = ({ type, inputMode, pattern }: Pick<TextInputProps, 'type' | 'inputMode' | 'pattern'>) =>
@@ -50,6 +52,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, fo
     disabled,
     inputMode,
     invalid,
+    passwordVisible,
     pattern,
     readOnly,
     type,
@@ -60,6 +63,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, fo
   // A disabled input cannot be changed or validated, so `disabled` wins from `invalid` and `readOnly`.
   const isInvalid = Boolean(invalid) && !disabled;
   const isReadOnly = Boolean(readOnly) && !disabled;
+  const isPassword = type === 'password';
 
   return (
     <input
@@ -71,7 +75,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, fo
           'nl-text-input--disabled': disabled,
           'nl-text-input--read-only': isReadOnly,
           [`nl-text-input--${valueSize}`]: valueSize,
-          'nl-text-input--unmistakable': type === 'password',
+          'nl-text-input--unmistakable': isPassword,
           'nl-text-input--url': isUrl({ type, inputMode }),
           'nl-text-input--numeric': isNumeric({ type, inputMode, pattern }),
         },
@@ -83,7 +87,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, fo
       pattern={pattern}
       readOnly={isReadOnly || undefined}
       ref={forwardedRef}
-      type={type ?? 'text'}
+      type={isPassword && passwordVisible ? 'text' : (type ?? 'text')}
       {...restProps}
     />
   );
