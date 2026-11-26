@@ -38,11 +38,14 @@
 @mixin nl-text-input__placeholder {
   color: var(--nl-text-input-placeholder-color, var(--nl-text-input-color));
 
-  /* Firefox lowers the placeholder opacity by default. */
+  /* Firefox lowers the placeholder opacity by default, revert that effect to avoid color contrast issues. */
   opacity: 100%;
 }
 
-/* State tokens fall back to the default tokens. */
+/* State tokens fall back to the default tokens.
+ * Do not use this state when the component is not interactive, for example when it is disabled or readonly.
+ * 
+ */
 @mixin nl-text-input--hover {
   --_nl-text-input-border-width: var(--nl-text-input-hover-border-width, var(--nl-text-input-border-width));
 }
