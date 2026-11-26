@@ -43,7 +43,6 @@ These component tokens can be removed once this pull request https://github.com/
   --nl-text-input-md-inline-size: 12rem;
   --nl-text-input-lg-inline-size: 19.1875rem;
   --nl-text-input-xl-inline-size: 28.75rem;
-  --nl-text-input-stretch-inline-size: 100%;
   --nl-text-input-placeholder-color: var(--basis-form-control-placeholder-color);
   --nl-text-input-hover-border-width: var(--basis-form-control-hover-border-width);
   --nl-text-input-focus-background-color: var(--basis-form-control-focus-background-color);
