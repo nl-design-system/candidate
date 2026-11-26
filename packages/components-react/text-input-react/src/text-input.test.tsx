@@ -7,7 +7,7 @@ import type { TextInputSize, TextInputType } from './text-input';
 
 const displayName = 'TextInput';
 const extraClassName = 'nl-text-input--example-variant';
-const typeClassNames = ['nl-text-input--password', 'nl-text-input--url', 'nl-text-input--numeric'];
+const typeClassNames = ['nl-text-input--unmistakable', 'nl-text-input--url', 'nl-text-input--numeric'];
 
 afterEach(() => {
   cleanup();
@@ -124,7 +124,7 @@ describe('Text Input', () => {
       ['search', null],
       ['email', 'nl-text-input--url'],
       ['url', 'nl-text-input--url'],
-      ['password', 'nl-text-input--password'],
+      ['password', 'nl-text-input--unmistakable'],
       ['tel', 'nl-text-input--numeric'],
       ['number', 'nl-text-input--numeric'],
       ['date', null],

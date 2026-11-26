@@ -56,13 +56,13 @@ Use `autoComplete` when the field asks for information about the user, such as a
 
 Use the `type` prop for the kind of text. The `TextInput` adds the matching CSS class automatically:
 
-| `type`            | CSS class                 |
-| ----------------- | ------------------------- |
-| `text` (default)  | —                         |
-| `email` and `url` | `nl-text-input--url`      |
-| `password`        | `nl-text-input--password` |
-| `tel`             | `nl-text-input--numeric`  |
-| `search`          | —                         |
+| `type`            | CSS class                     |
+| ----------------- | ----------------------------- |
+| `text` (default)  | —                             |
+| `email` and `url` | `nl-text-input--url`          |
+| `password`        | `nl-text-input--unmistakable` |
+| `tel`             | `nl-text-input--numeric`      |
+| `search`          | —                             |
 
 The `nl-text-input--numeric` class is also added for `inputMode="numeric"`, `inputMode="decimal"`, `inputMode="tel"`,
 `pattern="\d*"` and `pattern="[0-9]*"`. The `nl-text-input--url` class is also added for `inputMode="email"` and
@@ -109,7 +109,7 @@ are ignored.
 
 | Prop       | Description                                                                                       | Type                                                                                                                                     | Default  |
 | ---------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| `type`     | The `type` HTML attribute. Adds the `--url`, `--password` or `--numeric` class.                   | `'text' \| 'email' \| 'url' \| 'tel' \| 'search' \| 'password' \| 'number' \| 'date' \| 'month' \| 'week' \| 'time' \| 'datetime-local'` | `'text'` |
+| `type`     | The `type` HTML attribute. Adds the `--url`, `--unmistakable` or `--numeric` class.               | `'text' \| 'email' \| 'url' \| 'tel' \| 'search' \| 'password' \| 'number' \| 'date' \| 'month' \| 'week' \| 'time' \| 'datetime-local'` | `'text'` |
 | `size`     | Width of the input field.                                                                         | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'stretch'`                                                                                      | —        |
 | `invalid`  | Shows the invalid state and sets `aria-invalid="true"`. Ignored when `disabled` is set.           | `boolean`                                                                                                                                | —        |
 | `disabled` | Disables the input field and adds the `--disabled` class.                                         | `boolean`                                                                                                                                | —        |

@@ -46,7 +46,7 @@ $nl-text-input-types: ':not([type]), [type="text" i], [type="email" i], [type="u
   }
 
   input:where([type="password" i]) {
-    @include mixin.nl-text-input--password;
+    @include mixin.nl-text-input--unmistakable;
   }
 
   input:where([type="url" i], [type="email" i], [inputmode="email" i], [inputmode="url" i]) {

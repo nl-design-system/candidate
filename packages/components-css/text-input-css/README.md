@@ -53,25 +53,24 @@ If you use SCSS:
 
 ## CSS classes
 
-| name                               | description                                                                                         |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `.nl-text-input`                   | The main class. Use it on an `<input>` element.                                                     |
-| `.nl-text-input__placeholder`      | Placeholder styling for an element that is not an `<input>`. An `<input>` uses `::placeholder`.     |
-| `.nl-text-input--invalid`          | Invalid state. Combine it with `aria-invalid="true"`.                                               |
-| `.nl-text-input--disabled`         | Disabled state. `<input disabled>` gets this styling without the class.                             |
-| `.nl-text-input--read-only`        | Read-only state. `<input readonly>` gets this styling without the class.                            |
-| `.nl-text-input--hover`            | Hover state, for tests and documentation only.                                                      |
-| `.nl-text-input--focus-visible`    | Focus-visible state, for tests and documentation only.                                              |
-| `.nl-text-input--xs`               | Extra small width.                                                                                  |
-| `.nl-text-input--sm`               | Small width.                                                                                        |
-| `.nl-text-input--md`               | Medium width.                                                                                       |
-| `.nl-text-input--lg`               | Large width.                                                                                        |
-| `.nl-text-input--xl`               | Extra large width.                                                                                  |
-| `.nl-text-input--stretch`          | Full width of the container.                                                                        |
-| `.nl-text-input--numeric`          | For numbers, for example with `type="tel"` or `inputmode="numeric"`: all digits have the same size. |
-| `.nl-text-input--password`         | For `type="password"`: no ligatures, and a zero with a slash if the font supports it.               |
-| `.nl-text-input--password-visible` | For a password that is made visible with `type="text"`: same styling as `--password`.               |
-| `.nl-text-input--url`              | For `type="url"` and `type="email"`: no ligatures.                                                  |
+| name                            | description                                                                                                                                                                   |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.nl-text-input`                | The main class. Use it on an `<input>` element.                                                                                                                               |
+| `.nl-text-input__placeholder`   | Placeholder styling for an element that is not an `<input>`. An `<input>` uses `::placeholder`.                                                                               |
+| `.nl-text-input--invalid`       | Invalid state. Combine it with `aria-invalid="true"`.                                                                                                                         |
+| `.nl-text-input--disabled`      | Disabled state. `<input disabled>` gets this styling without the class.                                                                                                       |
+| `.nl-text-input--read-only`     | Read-only state. `<input readonly>` gets this styling without the class.                                                                                                      |
+| `.nl-text-input--hover`         | Hover state, for tests and documentation only.                                                                                                                                |
+| `.nl-text-input--focus-visible` | Focus-visible state, for tests and documentation only.                                                                                                                        |
+| `.nl-text-input--xs`            | Extra small width.                                                                                                                                                            |
+| `.nl-text-input--sm`            | Small width.                                                                                                                                                                  |
+| `.nl-text-input--md`            | Medium width.                                                                                                                                                                 |
+| `.nl-text-input--lg`            | Large width.                                                                                                                                                                  |
+| `.nl-text-input--xl`            | Extra large width.                                                                                                                                                            |
+| `.nl-text-input--stretch`       | Full width of the container.                                                                                                                                                  |
+| `.nl-text-input--numeric`       | For numbers, for example with `type="tel"` or `inputmode="numeric"`: all digits have the same size.                                                                           |
+| `.nl-text-input--unmistakable`  | For values where every character counts, like a password or a code: no ligatures, and a zero with a slash if the font supports it. Added automatically for `type="password"`. |
+| `.nl-text-input--url`           | For `type="url"` and `type="email"`: no ligatures.                                                                                                                            |
 
 Use a relative unit such as `rem` for the `--nl-text-input-{size}-inline-size` design tokens. With a `px` value the input
 field does not grow when a user enlarges the text, and the value or placeholder no longer fits.
@@ -83,14 +82,14 @@ Do not combine `--invalid` with `--disabled`, and do not combine `--disabled` wi
 Use `nl-html--text-input` or `nl-html--all` on a container to style `<input>` elements for one line of text without
 component classes. The states and types are detected automatically:
 
-| detected via                                                                                                                                      | styling       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `[aria-invalid="true"]`                                                                                                                           | `--invalid`   |
-| `[readonly]`                                                                                                                                      | `--read-only` |
-| `:disabled`                                                                                                                                       | `--disabled`  |
-| `[type="password"]`                                                                                                                               | `--password`  |
-| `[type="url"]`, `[type="email"]`, `[inputmode="email"]`, `[inputmode="url"]`                                                                      | `--url`       |
-| `[pattern="\d*"]`, `[pattern="[0-9]*"]`, `[type="tel"]`, `[type="number"]`, `[inputmode="numeric"]`, `[inputmode="decimal"]`, `[inputmode="tel"]` | `--numeric`   |
+| detected via                                                                                                                                      | styling          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `[aria-invalid="true"]`                                                                                                                           | `--invalid`      |
+| `[readonly]`                                                                                                                                      | `--read-only`    |
+| `:disabled`                                                                                                                                       | `--disabled`     |
+| `[type="password"]`                                                                                                                               | `--unmistakable` |
+| `[type="url"]`, `[type="email"]`, `[inputmode="email"]`, `[inputmode="url"]`                                                                      | `--url`          |
+| `[pattern="\d*"]`, `[pattern="[0-9]*"]`, `[type="tel"]`, `[type="number"]`, `[inputmode="numeric"]`, `[inputmode="decimal"]`, `[inputmode="tel"]` | `--numeric`      |
 
 ```html
 <div class="nl-html--text-input">
@@ -114,8 +113,7 @@ component classes. The states and types are detected automatically:
 | `nl-text-input--xs` to `nl-text-input--xl` | Styles for the sizes `xs`, `sm`, `md`, `lg` and `xl`                                                                            |
 | `nl-text-input--stretch`                   | Styles for the full width of the container                                                                                      |
 | `nl-text-input--numeric`                   | Styles for numbers                                                                                                              |
-| `nl-text-input--password`                  | Styles for a password                                                                                                           |
-| `nl-text-input--password-visible`          | Styles for a visible password                                                                                                   |
+| `nl-text-input--unmistakable`              | Styles for values where every character counts                                                                                  |
 | `nl-text-input--url`                       | Styles for a URL or email address                                                                                               |
 
 ## Usage

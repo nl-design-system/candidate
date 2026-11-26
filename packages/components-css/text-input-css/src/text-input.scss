@@ -76,12 +76,8 @@
   @include mixin.nl-text-input--numeric;
 }
 
-.nl-text-input--password {
-  @include mixin.nl-text-input--password;
-}
-
-.nl-text-input--password-visible {
-  @include mixin.nl-text-input--password-visible;
+.nl-text-input--unmistakable {
+  @include mixin.nl-text-input--unmistakable;
 }
 
 .nl-text-input--url {

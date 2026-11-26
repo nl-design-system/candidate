@@ -68,7 +68,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, fo
           'nl-text-input--disabled': disabled,
           'nl-text-input--read-only': isReadOnly,
           [`nl-text-input--${size}`]: size,
-          'nl-text-input--password': type === 'password',
+          'nl-text-input--unmistakable': type === 'password',
           'nl-text-input--url': isUrl({ type, inputMode }),
           'nl-text-input--numeric': isNumeric({ type, inputMode, pattern }),
         },

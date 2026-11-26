@@ -21,7 +21,7 @@ const meta = {
     },
     type: {
       description:
-        'Komt overeen met het `type` HTML-attribuut. Voegt de class `nl-text-input--password` toe bij `password`, `nl-text-input--url` bij `url` en `email`, en `nl-text-input--numeric` bij `tel` en `number`.',
+        'Komt overeen met het `type` HTML-attribuut. Voegt de class `nl-text-input--unmistakable` toe bij `password`, `nl-text-input--url` bij `url` en `email`, en `nl-text-input--numeric` bij `tel` en `number`.',
       control: 'select',
       options: [
         'text',

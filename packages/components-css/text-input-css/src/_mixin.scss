@@ -117,14 +117,10 @@
   font-variant-numeric: lining-nums tabular-nums;
 }
 
-@mixin nl-text-input--password {
-  /* No ligatures, and a slashed zero if the font supports it (OpenType `zero`). */
+@mixin nl-text-input--unmistakable {
+  /* For values where every character counts, like a password or a code. No ligatures, and a slashed zero if the font supports it (OpenType `zero`). */
   font-variant-ligatures: none;
   font-variant-numeric: slashed-zero;
-}
-
-@mixin nl-text-input--password-visible {
-  @include nl-text-input--password;
 }
 
 @mixin nl-text-input--url {

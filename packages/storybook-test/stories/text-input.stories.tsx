@@ -337,7 +337,7 @@ export const TextInputPasswordVisible: Story = {
         <TextInput
           id="16625ba4-5337-462a-8b3c-8ed4de926509"
           autoComplete="current-password"
-          className="nl-text-input--password-visible"
+          className="nl-text-input--unmistakable"
           defaultValue="O0Il1fi"
           type="text"
         />
@@ -349,6 +349,63 @@ export const TextInputPasswordVisible: Story = {
       description: {
         story:
           'Een wachtwoord dat zichtbaar is gemaakt. Tekens worden niet als ligatuur getoond, zodat je elk teken los ziet. Als het lettertype het ondersteunt, heeft de nul een streep, zodat je de letter `O` en het cijfer `0` uit elkaar kunt houden. Het lettertype van dit thema (Noto Sans) ondersteunt dat niet.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const TextInputUnmistakable: Story = {
+  name: 'Text Input met tekens die je niet kunt verwarren',
+  render: () => (
+    <>
+      <div>
+        <label htmlFor="807427e6-a615-433c-9910-8c7c72bc8d28">Code</label>
+      </div>
+      <div>
+        <TextInput
+          id="807427e6-a615-433c-9910-8c7c72bc8d28"
+          className="nl-text-input--unmistakable"
+          defaultValue="Ofi0"
+        />
+      </div>
+    </>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een Text Input waarin elk teken telt. De letters `f` en `i` worden niet als ligatuur `fi` getoond, zodat je elk teken los ziet. Als het lettertype het ondersteunt, heeft de nul een streep, zodat je de letter `O` en het cijfer `0` uit elkaar kunt houden.',
+      },
+    },
+    status: { type: [] },
+  },
+};
+
+export const TextInputUnmistakableReadOnly: Story = {
+  name: 'Text Input read-only met een toegangstoken',
+  render: () => (
+    <>
+      <div>
+        <label htmlFor="97a03dbe-4fe4-4e52-8d0e-f8299552475e">Toegangstoken</label>
+      </div>
+      <div>
+        <TextInput
+          id="97a03dbe-4fe4-4e52-8d0e-f8299552475e"
+          className="nl-text-input--unmistakable"
+          defaultValue="tok_8O0Il1rnmfi5S2Z"
+          readOnly
+          size="lg"
+          style={{ fontFamily: 'var(--basis-text-font-family-monospace)' }}
+        />
+      </div>
+    </>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een read-only Text Input met een toegangstoken dat je kunt lezen en kopiëren. Het token bevat tekens die je snel verwart, zoals `O` en `0`, `I`, `l` en `1`, en `rn` en `m`. Een monospace-lettertype geeft elk teken dezelfde breedte en dit lettertype geeft de nul een streep, zodat je het token teken voor teken kunt overnemen. Tekens worden niet als ligatuur getoond.',
       },
     },
     status: { type: [] },

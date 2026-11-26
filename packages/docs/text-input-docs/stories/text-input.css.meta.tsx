@@ -75,10 +75,10 @@ const meta = {
         type: { summary: undefined },
       },
     },
-    stylePasswordVisible: {
-      name: 'nl-text-input--password-visible',
+    styleUnmistakable: {
+      name: 'nl-text-input--unmistakable',
       description:
-        'Voor een wachtwoord dat zichtbaar gemaakt is met `type="text"`: dezelfde styling als `nl-text-input--password`.',
+        'Voor een waarde waarbij elk teken telt, zoals een wachtwoord of een code: geen ligaturen, en een nul met een streep als het lettertype dat ondersteunt. Wordt automatisch toegevoegd bij `type="password"`.',
       control: 'boolean',
       table: {
         category: CLASSES,
@@ -153,7 +153,7 @@ const meta = {
     styleDisabled,
     styleInvalid,
     styleNumeric,
-    stylePasswordVisible,
+    styleUnmistakable,
     styleReadOnly,
     styleSize,
     styleUrl,
@@ -167,7 +167,7 @@ const meta = {
       styleSize && `nl-text-input--${styleSize}`,
       styleNumeric && 'nl-text-input--numeric',
       styleUrl && 'nl-text-input--url',
-      stylePasswordVisible && 'nl-text-input--password-visible',
+      styleUnmistakable && 'nl-text-input--unmistakable',
     ]
       .filter(Boolean)
       .join(' ');
