@@ -14,7 +14,7 @@ $nl-text-input-types: ':not([type]), [type="text" i], [type="email" i], [type="u
   }
 
   @media (forced-colors: none) {
-    input:where(#{$nl-text-input-types}):where(:hover:not(:disabled, [readonly])) {
+    input:where(#{$nl-text-input-types}):where(:hover:not(:disabled, :read-only)) {
       @include mixin.nl-text-input--hover;
     }
   }
@@ -23,11 +23,11 @@ $nl-text-input-types: ':not([type]), [type="text" i], [type="email" i], [type="u
     @include mixin.nl-text-input--focus-visible;
   }
 
-  input:where(#{$nl-text-input-types}):where([aria-invalid="true" i]) {
+  input:where(#{$nl-text-input-types}):where([aria-invalid="true" i], :user-invalid) {
     @include mixin.nl-text-input--invalid;
   }
 
-  input:where(#{$nl-text-input-types}):where([readonly]) {
+  input:where(#{$nl-text-input-types}):where(:read-only) {
     @include mixin.nl-text-input--read-only;
   }
 
