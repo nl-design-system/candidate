@@ -11,16 +11,6 @@
   @include mixin.nl-text-input__placeholder;
 }
 
-/* No hover style on fields that can't be changed, or in Forced Colors mode, where it would shift the layout. */
-@media (forced-colors: none) {
-  .nl-text-input:where(
-    :hover:not(:disabled, [readonly], .nl-text-input--disabled, .nl-text-input--read-only),
-    .nl-text-input--hover
-  ) {
-    @include mixin.nl-text-input--hover;
-  }
-}
-
 .nl-text-input:where(:focus-visible, .nl-text-input--focus-visible) {
   @include mixin.nl-text-input--focus-visible;
 }
@@ -35,17 +25,6 @@
 
 .nl-text-input:where(:disabled, .nl-text-input--disabled) {
   @include mixin.nl-text-input--disabled;
-}
-
-/* Browsers don't use `GrayText` for `<input disabled>` in Forced Colors mode. */
-@media screen and (forced-colors: active) {
-  .nl-text-input {
-    @include mixin.nl-text-input--forced-colors;
-  }
-
-  .nl-text-input:where(:disabled, .nl-text-input--disabled) {
-    @include mixin.nl-text-input--forced-colors-disabled;
-  }
 }
 
 .nl-text-input--xs {
@@ -82,4 +61,25 @@
 
 .nl-text-input--url {
   @include mixin.nl-text-input--url;
+}
+
+/* Browsers don't use `GrayText` for `<input disabled>` in Forced Colors mode. */
+@media screen and (forced-colors: active) {
+  .nl-text-input {
+    @include mixin.nl-text-input--forced-colors;
+  }
+
+  .nl-text-input:where(:disabled, .nl-text-input--disabled) {
+    @include mixin.nl-text-input--forced-colors-disabled;
+  }
+}
+
+/* No hover style on fields that can't be changed, or in Forced Colors mode, where it would shift the layout. */
+@media (forced-colors: none) {
+  .nl-text-input:where(
+    :hover:not(:disabled, [readonly], .nl-text-input--disabled, .nl-text-input--read-only),
+    .nl-text-input--hover
+  ) {
+    @include mixin.nl-text-input--hover;
+  }
 }
