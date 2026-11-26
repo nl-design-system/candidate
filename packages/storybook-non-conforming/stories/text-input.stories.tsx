@@ -189,7 +189,7 @@ export const TextInputDisabledAndReadOnly: Story = {
     docs: {
       description: {
         story:
-          'De Text Input is tegelijk disabled en read-only. Een read-only waarde kun je lezen en kopiëren, een disabled Text Input kun je niet gebruiken. Samen is onduidelijk wat de bezoeker met het veld kan. Kies één van beide. De React component negeert `readOnly` als `disabled` gezet is.',
+          'De Text Input is tegelijk disabled en read-only. Een read-only waarde kun je lezen en kopiëren, een disabled Text Input kun je niet gebruiken. Samen is onduidelijk wat de bezoeker met het veld kan. Kies één van beide.',
       },
     },
     status: { type: [] },
@@ -220,7 +220,7 @@ export const TextInputInvalidAndDisabled: Story = {
     docs: {
       description: {
         story:
-          'De Text Input is tegelijk invalid en disabled. Je kunt de fout niet herstellen, omdat je de Text Input niet kunt gebruiken. De React component negeert `invalid` als `disabled` gezet is.',
+          'De Text Input is tegelijk invalid en disabled. Je kunt de fout niet herstellen, omdat je de Text Input niet kunt gebruiken.',
       },
     },
     status: { type: [] },

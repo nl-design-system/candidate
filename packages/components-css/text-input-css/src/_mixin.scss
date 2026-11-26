@@ -75,8 +75,10 @@
   color: var(--nl-text-input-read-only-color, var(--nl-text-input-color));
 }
 
+/* Resets the border width, in case `--invalid` is also set. */
 @mixin nl-text-input--disabled {
   --_nl-text-input-border-color: var(--nl-text-input-disabled-border-color, var(--nl-text-input-border-color));
+  --_nl-text-input-border-width: var(--nl-text-input-border-width);
 
   background-color: var(--nl-text-input-disabled-background-color, var(--nl-text-input-background-color));
   color: var(--nl-text-input-disabled-color, var(--nl-text-input-color));

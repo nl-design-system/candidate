@@ -21,7 +21,7 @@ export type TextInputValueSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'stretch';
 export interface TextInputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'children' | 'type'> {
   /** The `type` HTML attribute. Types for one line of text only, `checkbox`, `file` etc. are not supported. */
   type?: TextInputType;
-  /** Shows the invalid state and sets `aria-invalid="true"`. Ignored when `disabled` is set. */
+  /** Shows the invalid state and sets `aria-invalid="true"`. Don't combine with `disabled`. */
   invalid?: boolean;
   /**
    * Visual size of the input field, to match the expected length of the value. Use `stretch` for the full width of the
@@ -60,20 +60,17 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, fo
     ...restProps
   } = props;
 
-  // A disabled input cannot be changed or validated, so `disabled` wins from `invalid` and `readOnly`.
-  const isInvalid = Boolean(invalid) && !disabled;
-  const isReadOnly = Boolean(readOnly) && !disabled;
   const isPassword = type === 'password';
 
   return (
     <input
-      aria-invalid={disabled ? undefined : (ariaInvalid ?? (isInvalid || undefined))}
+      aria-invalid={ariaInvalid ?? (invalid || undefined)}
       className={clsx(
         'nl-text-input',
         {
-          'nl-text-input--invalid': isInvalid,
+          'nl-text-input--invalid': invalid,
           'nl-text-input--disabled': disabled,
-          'nl-text-input--read-only': isReadOnly,
+          'nl-text-input--read-only': readOnly,
           [`nl-text-input--${valueSize}`]: valueSize,
           'nl-text-input--unmistakable': isPassword,
           'nl-text-input--url': isUrl({ type, inputMode }),
@@ -85,7 +82,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>((props, fo
       disabled={disabled}
       inputMode={inputMode}
       pattern={pattern}
-      readOnly={isReadOnly || undefined}
+      readOnly={readOnly}
       ref={forwardedRef}
       type={isPassword && passwordVisible ? 'text' : (type ?? 'text')}
       {...restProps}

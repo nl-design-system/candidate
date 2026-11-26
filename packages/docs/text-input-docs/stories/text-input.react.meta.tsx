@@ -58,7 +58,7 @@ const meta = {
     },
     invalid: {
       description:
-        'Voegt de class `nl-text-input--invalid` toe en zet het `aria-invalid="true"` HTML-attribuut. Wordt genegeerd als `disabled` gezet is.',
+        'Voegt de class `nl-text-input--invalid` toe en zet het `aria-invalid="true"` HTML-attribuut. Niet combineren met `disabled`.',
       control: 'boolean',
       table: {
         category: API,
@@ -75,7 +75,7 @@ const meta = {
     },
     readOnly: {
       description:
-        'Voegt de class `nl-text-input--read-only` toe en zet het `readonly` HTML-attribuut. Wordt genegeerd als `disabled` gezet is.',
+        'Voegt de class `nl-text-input--read-only` toe en zet het `readonly` HTML-attribuut. Niet combineren met `disabled`.',
       control: 'boolean',
       table: {
         category: API,

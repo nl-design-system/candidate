@@ -117,8 +117,7 @@ const [passwordVisible, setPasswordVisible] = useState(false);
 ### Disabled and read-only
 
 Use `disabled` for an input field that cannot be used, and `readOnly` for a value that can be read and copied but not
-changed. `disabled` cannot be combined with `readOnly` or `invalid`: when `disabled` is set, `readOnly` and `invalid`
-are ignored.
+changed. Don't combine `disabled` with `readOnly` or `invalid`.
 
 ## Props
 
@@ -126,9 +125,9 @@ are ignored.
 | ----------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | -------- |
 | `type`            | The `type` HTML attribute. Adds the `--url`, `--unmistakable` or `--numeric` class.               | `'text' \| 'email' \| 'url' \| 'tel' \| 'search' \| 'password' \| 'number' \| 'date' \| 'month' \| 'week' \| 'time' \| 'datetime-local'` | `'text'` |
 | `valueSize`       | Width of the input field.                                                                         | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'stretch'`                                                                                      | —        |
-| `invalid`         | Shows the invalid state and sets `aria-invalid="true"`. Ignored when `disabled` is set.           | `boolean`                                                                                                                                | —        |
+| `invalid`         | Shows the invalid state and sets `aria-invalid="true"`. Don't combine with `disabled`.            | `boolean`                                                                                                                                | —        |
 | `disabled`        | Disables the input field and adds the `--disabled` class.                                         | `boolean`                                                                                                                                | —        |
-| `readOnly`        | Makes the value read-only and adds the `--read-only` class. Ignored when `disabled` is set.       | `boolean`                                                                                                                                | —        |
+| `readOnly`        | Makes the value read-only and adds the `--read-only` class. Don't combine with `disabled`.        | `boolean`                                                                                                                                | —        |
 | `passwordVisible` | Shows the password as text. Only works with `type="password"`.                                    | `boolean`                                                                                                                                | —        |
 | `required`        | Sets the `required` HTML attribute.                                                               | `boolean`                                                                                                                                | —        |
 | `dir`             | Text direction of the value. Defaults to `auto`, so a value in another script is shown correctly. | `'auto' \| 'ltr' \| 'rtl'`                                                                                                               | `'auto'` |

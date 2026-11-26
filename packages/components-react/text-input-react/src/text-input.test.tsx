@@ -253,23 +253,5 @@ describe('Text Input', () => {
       expect(element).toHaveClass('nl-text-input--invalid');
       expect(element).toHaveAttribute('aria-invalid', 'false');
     });
-
-    it('is not read-only when it is disabled', () => {
-      render(<TextInput disabled readOnly />);
-      const element = screen.getByRole('textbox');
-
-      expect(element).toBeDisabled();
-      expect(element).not.toHaveAttribute('readonly');
-      expect(element).not.toHaveClass('nl-text-input--read-only');
-    });
-
-    it('is not invalid when it is disabled', () => {
-      render(<TextInput disabled invalid />);
-      const element = screen.getByRole('textbox');
-
-      expect(element).toBeDisabled();
-      expect(element).not.toHaveAttribute('aria-invalid');
-      expect(element).not.toHaveClass('nl-text-input--invalid');
-    });
   });
 });
