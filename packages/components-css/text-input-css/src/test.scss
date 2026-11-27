@@ -1,0 +1,19 @@
+@use "./mixin";
+
+/*
+ * Used for stories in Storybook
+ */
+
+/* Forced colors */
+.nl-text-input.nl-text-input--forced-colors-test {
+  @include mixin.nl-text-input--forced-colors;
+}
+
+.nl-text-input.nl-text-input--forced-colors-test:where(:disabled, .nl-text-input--disabled) {
+  @include mixin.nl-text-input--forced-colors-disabled;
+}
+
+/* No hover style in Forced Colors mode, see `text-input.scss`. */
+.nl-text-input.nl-text-input--forced-colors-test:where(:hover, .nl-text-input--hover):not(.nl-text-input--invalid) {
+  --_nl-text-input-border-width: var(--nl-text-input-border-width);
+}

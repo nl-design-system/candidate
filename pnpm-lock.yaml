@@ -1901,6 +1901,12 @@ importers:
       '@nl-design-system-candidate/text-area-react':
         specifier: workspace:*
         version: link:../components-react/text-area-react
+      '@nl-design-system-candidate/text-input-docs':
+        specifier: workspace:*
+        version: link:../docs/text-input-docs
+      '@nl-design-system-candidate/text-input-react':
+        specifier: workspace:*
+        version: link:../components-react/text-input-react
       '@nl-design-system-candidate/unordered-list-docs':
         specifier: workspace:*
         version: link:../docs/unordered-list-docs
@@ -1925,6 +1931,9 @@ importers:
       '@tabler/icons-react':
         specifier: 3.35.0
         version: 3.35.0(react@19.2.3)
+      '@types/lodash-es':
+        specifier: 4.17.12
+        version: 4.17.12
       '@types/react':
         specifier: 18.3.26
         version: 18.3.26
@@ -1997,6 +2006,9 @@ importers:
       '@types/lodash':
         specifier: 4.17.20
         version: 4.17.20
+      '@types/lodash-es':
+        specifier: 4.17.12
+        version: 4.17.12
       '@types/react':
         specifier: 18.3.26
         version: 18.3.26
