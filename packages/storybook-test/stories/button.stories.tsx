@@ -89,7 +89,7 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../src/WcagTests';
+} from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
 import '../../components-css/icon-css/src/icon.scss';
 import '../../components-css/button-css/src/button.scss';
 import '../../components-css/button-css/src/test.scss';
@@ -101,7 +101,7 @@ const ButtonDecorator: Decorator = (Story) => (
   </div>
 );
 import { useArgs } from 'storybook/preview-api';
-import { CustomDocsStory } from '../config/custom-docs';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
 
 const meta = {
   ...merge({

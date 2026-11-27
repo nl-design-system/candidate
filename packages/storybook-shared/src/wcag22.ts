@@ -20,14 +20,14 @@ export const deprecatedCriteria = [
     sc: '4.1.1',
     since: 'WCAG22',
     title: 'Parsing',
-    url: 'https://www.w3.org/TR/WCAG21/#parsing',
+    id: 'https://www.w3.org/TR/WCAG21/#parsing',
   },
 ];
 
 export const successCriteria: SuccessCriterium[] = [
   ...wcag21.map((obj) => ({
     ...obj,
-    url: obj.url.replace(/WCAG21/i, 'WCAG22'),
+    id: obj.id.replace(/WCAG21/i, 'WCAG22'),
   })),
   {
     conformance: 'AA',
@@ -37,7 +37,7 @@ export const successCriteria: SuccessCriterium[] = [
     sc: '2.4.11',
     since: 'WCAG22',
     title: 'Focus Not Obscured (Minimum)',
-    url: 'https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum',
+    id: 'https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum',
   },
   {
     conformance: 'AAA',
@@ -47,7 +47,7 @@ export const successCriteria: SuccessCriterium[] = [
     sc: '2.4.12',
     since: 'WCAG22',
     title: 'Focus Not Obscured (Enhanced)',
-    url: 'https://www.w3.org/TR/WCAG22/#focus-not-obscured-enhanced',
+    id: 'https://www.w3.org/TR/WCAG22/#focus-not-obscured-enhanced',
   },
   {
     conformance: 'AAA',
@@ -57,7 +57,7 @@ export const successCriteria: SuccessCriterium[] = [
     sc: '2.4.13',
     since: 'WCAG22',
     title: 'Focus Appearance',
-    url: 'https://www.w3.org/TR/WCAG22/#focus-appearance',
+    id: 'https://www.w3.org/TR/WCAG22/#focus-appearance',
   },
   {
     conformance: 'AA',
@@ -67,7 +67,7 @@ export const successCriteria: SuccessCriterium[] = [
     sc: '2.5.7',
     since: 'WCAG22',
     title: 'Dragging Movements',
-    url: 'https://www.w3.org/TR/WCAG22/#dragging-movements',
+    id: 'https://www.w3.org/TR/WCAG22/#dragging-movements',
   },
   {
     conformance: 'AA',
@@ -77,7 +77,7 @@ export const successCriteria: SuccessCriterium[] = [
     sc: '2.5.8',
     since: 'WCAG22',
     title: 'Target Size (minimum)',
-    url: 'https://www.w3.org/TR/WCAG22/#target-size-minimum',
+    id: 'https://www.w3.org/TR/WCAG22/#target-size-minimum',
   },
   {
     conformance: 'A',
@@ -87,7 +87,7 @@ export const successCriteria: SuccessCriterium[] = [
     sc: '3.2.6',
     since: 'WCAG22',
     title: 'Consistent Help',
-    url: 'https://www.w3.org/TR/WCAG22/#consistent-help',
+    id: 'https://www.w3.org/TR/WCAG22/#consistent-help',
   },
   {
     conformance: 'A',
@@ -97,7 +97,7 @@ export const successCriteria: SuccessCriterium[] = [
     sc: '3.3.7',
     since: 'WCAG22',
     title: 'Redundant Entry',
-    url: 'https://www.w3.org/TR/WCAG22/#redundant-entry',
+    id: 'https://www.w3.org/TR/WCAG22/#redundant-entry',
   },
   {
     conformance: 'AA',
@@ -107,7 +107,7 @@ export const successCriteria: SuccessCriterium[] = [
     sc: '3.3.8',
     since: 'WCAG22',
     title: 'Accessible Authentication (Minimum)',
-    url: 'https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum',
+    id: 'https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum',
   },
   {
     conformance: 'AAA',
@@ -117,14 +117,16 @@ export const successCriteria: SuccessCriterium[] = [
     sc: '3.3.9',
     since: 'WCAG22',
     title: 'Accessible Authentication (Enhanced)',
-    url: 'https://www.w3.org/TR/WCAG22/#accessible-authentication-enhanced',
+    id: 'https://www.w3.org/TR/WCAG22/#accessible-authentication-enhanced',
   },
 ]
   .sort((a, b) => versionSort(a.sc, b.sc))
   .map((sc) => ({
     ...sc,
-    fragment: new URL(sc.url).hash.replace(/^#/, ''),
+    url: sc.id,
+    fragment: new URL(sc.id).hash.replace(/^#/, ''),
+    title: `WCAG-succescriterium ${sc.sc}: ${sc.nl.title}`,
   }))
   .filter(({ sc }) => deprecatedCriteria.every((deprecated) => deprecated.sc !== sc));
 
-export const successCriteriaMap = new Map(successCriteria.map((data) => [data.sc, data]));
+export const successCriteriaMap = new Map(successCriteria.map((data) => [data.id, data]));

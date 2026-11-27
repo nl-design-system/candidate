@@ -7,8 +7,8 @@ import packageJSON from '../../components-react/mark-react/package.json';
 import { Mark } from '../../components-react/mark-react/src/mark';
 import componentMarkdown from '../../docs/mark-docs/docs/component.md?raw';
 import tokens from '../../tokens/mark-tokens/tokens.json';
-import { CustomDocsStory } from '../config/custom-docs';
-import { WCAG22_AA_LEVEL } from '../src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
+import { WCAG22_AA_LEVEL } from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
 
 const meta = {
   argTypes: {

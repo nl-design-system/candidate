@@ -8,8 +8,8 @@ import '../../components-css/skip-link-css/src/test.scss';
 import packageJSON from '../../components-react/skip-link-react/package.json';
 import { SkipLink } from '../../components-react/skip-link-react/src/skip-link';
 import tokens from '../../tokens/skip-link-tokens/tokens.json';
-import { CustomDocsStory } from '../config/custom-docs';
-import { WCAG22_AA_LEVEL } from '../src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
+import { WCAG22_AA_LEVEL } from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
 
 interface ExamplePageProps {
   organisation: ReactNode;

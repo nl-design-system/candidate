@@ -11,13 +11,12 @@ export interface AcceptanceCriterium {
 
 export function AcceptanceCriteriaOverviewChecklist() {
   const meta = useOf<'meta'>('meta');
-  const acceptanceCriteriaData =
-    (meta.csfFile?.meta?.parameters && meta.csfFile?.meta?.parameters['acceptanceCriteriaData']) || [];
+  const acceptanceCriteriaData: Map<string, AcceptanceCriterium> =
+    (meta.csfFile?.meta?.parameters && meta.csfFile?.meta?.parameters['acceptanceCriteriaData']) || new Map();
 
-  if (acceptanceCriteriaData.length === 0) {
+  if (acceptanceCriteriaData.size === 0) {
     return null;
   }
-
   const stories = Object.values(meta.csfFile?.stories || {});
 
   const storyAcceptanceCriteria = new Set(
@@ -26,9 +25,9 @@ export function AcceptanceCriteriaOverviewChecklist() {
 
   return (
     <div>
-      <h2>Acceptatiecriteria</h2>
+      <h2>Acceptatiecriteria ({acceptanceCriteriaData.size})</h2>
       <ul>
-        {acceptanceCriteriaData.map(({ id, title }) => {
+        {acceptanceCriteriaData.values().map(({ id, title }) => {
           const isSuccess = storyAcceptanceCriteria.has(id);
           return (
             <li key={id}>
@@ -45,33 +44,40 @@ export function AcceptanceCriteriaOverviewChecklist() {
 }
 
 export interface AcceptanceCriteriaStoryChecklistProps {
-  acceptanceCriteriaData: AcceptanceCriterium[];
+  acceptanceCriteriaData: Map<string, AcceptanceCriterium>;
   storyAcceptanceCriteria: string[];
+  headingLevel: number;
 }
 
 export const AcceptanceCriteriaStoryChecklist = ({
   acceptanceCriteriaData,
   storyAcceptanceCriteria,
+  headingLevel,
 }: AcceptanceCriteriaStoryChecklistProps) => {
+  const Heading = `h${headingLevel}`;
   return (
     <div>
-      <h4>Acceptatiecriteria</h4>
-      <ul>
-        {storyAcceptanceCriteria.map((id) => {
-          const data = acceptanceCriteriaData.find(({ id: uuid }) => id === uuid);
-          return (
-            <li key={id}>
-              {data ? (
-                <a href={`https://nldesignsystem.nl/button#${id}`} target="_new">
-                  {data.title}
-                </a>
-              ) : (
-                `Onbekend criterium: ${id}`
-              )}
-            </li>
-          );
-        })}
-      </ul>
+      <Heading>Acceptatiecriteria</Heading>
+      {acceptanceCriteriaData.size > 0 ? (
+        <ul>
+          {storyAcceptanceCriteria.map((id) => {
+            const data = acceptanceCriteriaData.get(id);
+            return (
+              <li key={id}>
+                {data ? (
+                  <a href={`https://nldesignsystem.nl/button#${id}`} target="_new">
+                    {data.title}
+                  </a>
+                ) : (
+                  `Onbekend criterium: ${id}`
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <p>Geen acceptatiecriteria bekend.</p>
+      )}
     </div>
   );
 };

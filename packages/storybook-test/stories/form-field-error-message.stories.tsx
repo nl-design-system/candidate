@@ -15,6 +15,8 @@ import componentMarkdown from '../../docs/form-field-error-message-docs/docs/com
 import reactMeta from '../../docs/form-field-error-message-docs/stories/form-field-error-message.react.meta';
 import tokens from '../../tokens/form-field-error-message-tokens/tokens.json';
 import type { AriaRole, PropsWithChildren, ReactNode } from 'react';
+import acceptanceCriteriaData from '../../docs/form-field-error-message-docs/stories/acceptance-criteria';
+import commonAcceptanceCriteriaData from '../src/common-acceptance-criteria';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -71,8 +73,8 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../src/WcagTests';
-import { CustomDocsStory } from '../config/custom-docs';
+} from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
 
 const AlternativeHTMLFormFieldErrorMessage = ({
   Component = 'div',
@@ -109,6 +111,7 @@ const meta = {
     },
     parameters: {
       acceptanceCriteria,
+      acceptanceCriteriaData: [...acceptanceCriteriaData, ...commonAcceptanceCriteriaData],
       docs: {
         components: {
           DocsStory: CustomDocsStory,
@@ -213,6 +216,26 @@ export const FormFieldErrorMessageShort: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19', // geldt voor alle stories
+      '130fe27f-7630-40db-a479-963c86298b88', // geldt voor alle stories
+      'e5c4ef36-5555-49e4-967f-f7b9e6d89b70',
+      '99f56c88-a693-4841-83f8-f41618c8d734',
+      'b690ee59-cc33-4f93-a71b-a6ab10a89e07',
+      'e5c4ef36-5555-49e4-967f-f7b9e6d89b70', // geldt voor alle stories
+      '99f56c88-a693-4841-83f8-f41618c8d734', // geldt voor alle stories
+      'b690ee59-cc33-4f93-a71b-a6ab10a89e07', // geldt voor alle stories van de React en HTML component, niet per se voor Web Component in de toekomst
+      '0d27fb23-e119-4547-93a0-d230661880d7',
+      'd4605c1b-bd63-492b-9da4-8bf8a468bfb9', // geldt voor alle stories
+      'e786e707-6c44-4d86-996b-f804983171e9', // geldt voor alle stories
+      'c6dc7a97-a1ab-467a-a60c-e42dc089c141', // geldt voor alle stories
+      'c0a1405a-43fc-4abf-a742-dc20b58f3eb7', // geldt voor alle stories, behalve forced colors mode, daar "not applicable" in principe, omdat forced colors mode ook low contrast mode kan zijn
+      'c7844d4e-a2fc-4dbe-a138-e0f6a6cd1b49', // TODO: geldt voor alle stories, maar moet eigenlijk per individuele story beoordeeld worden
+      '207f2245-6163-41ee-9d99-571d63305259', // TODO: geldt voor alle stories, maar moet eigenlijk per individuele story beoordeeld worden
+      'b459074a-2b78-4f0a-9c7f-dad68f1afafa', // geldt voor alle stories
+      'b5dc4cd8-3461-471d-8d70-37f4da0ab55e', // geldt voor alle stories
+      '1f655eaf-ddd4-4fea-9652-2d95155370ae', // geldt voor alle stories
+    ],
     docs: {
       description: {
         story:
@@ -270,6 +293,7 @@ export const FormFieldErrorMessageLong: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -333,6 +357,7 @@ export const FormFieldErrorMessageMultiple: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -390,6 +415,7 @@ export const FormFieldErrorMessageWithParagraphComponent: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -430,6 +456,7 @@ export const FormFieldErrorMessageWithTwoParagraphComponent: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -471,6 +498,11 @@ export const FormFieldErrorMessageLangLTR: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19',
+      '130fe27f-7630-40db-a479-963c86298b88',
+      'e7c5e770-08ab-4882-a3ce-6b5da83e0c5f',
+    ],
     docs: {
       description: {
         story:
@@ -527,6 +559,11 @@ export const FormFieldErrorMessageLangRTL: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19',
+      '130fe27f-7630-40db-a479-963c86298b88',
+      'db46b84e-c927-4fe4-9129-6581d369aceb',
+    ],
     docs: {
       description: {
         story:
@@ -583,6 +620,11 @@ export const FormFieldErrorMessageVerticalText: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19',
+      '130fe27f-7630-40db-a479-963c86298b88',
+      'ef625a00-8dd7-402d-bedd-acfad6311a8e',
+    ],
     docs: {
       description: {
         story:
@@ -647,6 +689,11 @@ export const FormFieldErrorMessageVerticalTextWithIcon: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'df6b87a1-a564-41c1-9de2-5ec21b360e4c',
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19',
+      '130fe27f-7630-40db-a479-963c86298b88',
+    ],
     docs: {
       description: {
         story:
@@ -703,6 +750,11 @@ export const FormFieldErrorMessageLargeText: Story = {
   },
   globals: { zoom: 2 },
   parameters: {
+    acceptanceCriteriaList: [
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19',
+      '130fe27f-7630-40db-a479-963c86298b88',
+      '651fc175-1d61-4fa6-ac95-32cba79a72a9',
+    ],
     docs: {
       description: {
         story:
@@ -759,6 +811,7 @@ export const FormFieldErrorMessageTextZoom: Story = {
   },
   globals: { fontSize: '32px' },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -814,6 +867,7 @@ export const FormFieldErrorMessageAboveTextInput: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -869,6 +923,7 @@ export const FormFieldErrorMessageBelowTextInputViaStyling: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19'],
     docs: {
       description: {
         story:
@@ -926,6 +981,12 @@ export const FormFieldErrorMessageWordBreak: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19',
+      '130fe27f-7630-40db-a479-963c86298b88',
+      '09025312-2f1a-4f30-8f06-8a8ff8d3dc86',
+      '982229f0-d889-472b-acb4-4e61961405ba',
+    ],
     docs: {
       description: {
         story:
@@ -984,6 +1045,12 @@ export const FormFieldErrorMessageSmallViewport: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19',
+      '130fe27f-7630-40db-a479-963c86298b88',
+      '982229f0-d889-472b-acb4-4e61961405ba',
+      '0fb6490a-169a-43f5-92e5-c0e6575bc893',
+    ],
     docs: {
       description: {
         story:
@@ -1047,6 +1114,12 @@ export const FormFieldErrorMessageForcedColorsMode: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'df6b87a1-a564-41c1-9de2-5ec21b360e4c',
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19',
+      '130fe27f-7630-40db-a479-963c86298b88',
+      'd0f97da6-9c70-45fb-b825-b71d651942da',
+    ],
     docs: {
       description: {
         story:
@@ -1100,6 +1173,7 @@ export const FormFieldErrorMessageWithCode: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -1162,6 +1236,11 @@ export const FormFieldErrorMessageWithIcon: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'df6b87a1-a564-41c1-9de2-5ec21b360e4c',
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19',
+      '130fe27f-7630-40db-a479-963c86298b88',
+    ],
     docs: {
       description: {
         story:
@@ -1217,6 +1296,7 @@ export const FormFieldErrorMessageCompact: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -1282,6 +1362,11 @@ export const FormFieldErrorMessageParagraphElementWrapper: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'fc238498-2c3e-4187-bbbb-999d53fd5f19',
+      '130fe27f-7630-40db-a479-963c86298b88',
+      '7eb4a112-4a17-45d1-a178-7ab973cb3a5d',
+    ],
     docs: {
       description: {
         story:
@@ -1347,6 +1432,7 @@ export const FormFieldErrorMessageParagraphElementIcon: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -1412,6 +1498,7 @@ export const FormFieldErrorMessageParagraphElementContent: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -1477,6 +1564,7 @@ export const FormFieldErrorMessageSpanElementWrapper: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -1542,6 +1630,7 @@ export const FormFieldErrorMessageSpanElementIcon: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:
@@ -1607,6 +1696,7 @@ export const FormFieldErrorMessageSpanElementContent: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['fc238498-2c3e-4187-bbbb-999d53fd5f19', '130fe27f-7630-40db-a479-963c86298b88'],
     docs: {
       description: {
         story:

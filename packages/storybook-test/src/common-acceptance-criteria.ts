@@ -14,17 +14,7 @@ const data: AcceptanceCriterium[] = [
     sc: '2.5.8',
     status: '',
     tags: ['designer', 'developer'],
-    title: 'De button heeft een minimale grootte van 24 bij 24 pixels.',
-  },
-  {
-    // TODO: Uitzoeken: hoe gaan we om met het gebruik van patronen opnemen in acceptatiecriteria?
-    id: 'b21a9996-10e8-4fa5-a065-737f45bf5c17',
-    context: ['usage'],
-    sc: '',
-    status: '',
-    tags: ['designer', 'developer'],
-    // TODO: Dit is nog geen goede titel
-    title: 'Een Button die "bezig" is gebruikt het toegankelijke patroon.',
+    title: 'De interactieve component heeft een minimale grootte van 24 bij 24 pixels.',
   },
   {
     // TODO: Uitzoeken: hoe gaan we om met acceptatiecriteria uit de Definition of Done?
@@ -126,6 +116,54 @@ const data: AcceptanceCriterium[] = [
     // TODO: Dit is nog geen goede titel
     title:
       'De component klopt visueel wanneer alternatieve HTML-elementen worden gebruikt, zoals `div`, `span` en custom elements.',
+  },
+  {
+    id: 'b459074a-2b78-4f0a-9c7f-dad68f1afafa',
+    context: ['component'],
+    sc: '',
+    status: '',
+    tags: ['developer'],
+    title: 'De component werkt ook met een Content-Security-Policy waar inline CSS niet is toegestaan.',
+  },
+  {
+    id: 'b5dc4cd8-3461-471d-8d70-37f4da0ab55e',
+    context: ['component'],
+    sc: '',
+    status: '',
+    tags: ['developer'],
+    title: 'De component werkt ook zonder JavaScript.',
+  },
+  {
+    id: '1f655eaf-ddd4-4fea-9652-2d95155370ae',
+    context: ['component'],
+    sc: '',
+    status: '',
+    tags: ['developer'],
+    title: 'De component kan met dezelfde slots ook gemaakt worden als Web Component.',
+  },
+  {
+    id: 'fa9cd3f7-17e1-4cfb-8593-315a080af636',
+    context: ['component'],
+    sc: '',
+    status: '',
+    tags: ['developer'],
+    title: 'De component heeft API namen die niet conflicteren met globale HTML attributen.',
+  },
+  {
+    id: '936ca0fa-5c08-4aaa-a30a-ab8056c12404',
+    sc: '',
+    context: ['component'],
+    status: '',
+    tags: ['developer'],
+    title: 'De design tokens van het Voorbeeld thema voldoen aan alle eisen.',
+  },
+  {
+    id: 'ff8df8c2-e4d2-44b2-a2c2-a29ff9c02c50',
+    sc: '',
+    context: ['component'],
+    status: '',
+    tags: ['developer'],
+    title: 'De design tokens hebben metadata in `tokens.json`',
   },
 ];
 

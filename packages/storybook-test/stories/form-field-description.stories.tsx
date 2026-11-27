@@ -10,8 +10,14 @@ import acceptanceCriteria from '../../docs/form-field-description-docs/docs/acce
 import componentMarkdown from '../../docs/form-field-description-docs/docs/component.md?raw';
 import reactMeta from '../../docs/form-field-description-docs/stories/form-field-description.react.meta';
 import tokens from '../../tokens/form-field-description-tokens/tokens.json';
-import { LargeLetterSpacingDecorator, LargeLineHeightDecorator, LargeWordSpacingDecorator } from '../src/TextDecorator';
+import {
+  LargeLetterSpacingDecorator,
+  LargeLineHeightDecorator,
+  LargeWordSpacingDecorator,
+} from '@nl-design-system-candidate/storybook-shared/src/TextDecorator';
 import type { PropsWithChildren } from 'react';
+import acceptanceCriteriaData from '../../docs/form-field-description-docs/stories/acceptance-criteria';
+import commonAcceptanceCriteriaData from '../src/common-acceptance-criteria';
 import {
   WCAG22_111_NON_TEXT_CONTENT,
   WCAG22_121_AUDIO_ONLY_AND_VIDEO_ONLY_PRERECORDED,
@@ -68,8 +74,8 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../src/WcagTests';
-import { CustomDocsStory } from '../config/custom-docs';
+} from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
 
 const AlternativeHTMLFormFieldDescription = ({
   children,
@@ -91,6 +97,23 @@ const meta = {
     },
     parameters: {
       acceptanceCriteria,
+      acceptanceCriteriaList: [...acceptanceCriteriaData, ...commonAcceptanceCriteriaData],
+      acceptanceCriteriaResult: {
+        pass: [
+          // 'e7c5e770-08ab-4882-a3ce-6b5da83e0c5f', // geldt voor alle stories, behalve RTL/writingmode
+          '377816a3-3bd8-4973-ba0a-85a3a9a1fca0', // geldt voor alle stories
+          '1a9edae4-c716-41ae-a456-7eb94d6c9e83', // geldt voor alle stories
+          '970e2771-8e8c-455d-b7d3-dba2136b58a6', // geldt voor alle stories
+          // 'afdf1dad-b5d6-4ceb-a8e0-4625b5d9ddd2', // TODO: geldt voor alle stories, maar zou eigenlijk via Design Tokens JSON validatie gecheckt moeten worden. We moeten de uitkomst van de validaties tonen.
+          'b443377e-8391-47e8-93e3-1609edb5a5a4', // geldt voor alle stories
+          '714ae310-075a-4bfc-a849-15336ed21b05', // geldt voor alle stories
+          '98f9decb-51e8-4603-a42d-b3373d56d28f', // geldt voor alle stories
+          '972859ae-1f02-4ba1-9240-cc5e4d88b009', // geldt voor alle stories
+          '4638bcd8-8a55-4549-96a8-eb0da762d629', // geldt voor alle stories
+        ],
+        notTested: [...acceptanceCriteriaData.map(({ id }) => id), ...commonAcceptanceCriteriaData.map(({ id }) => id)],
+      },
+
       docs: {
         components: {
           DocsStory: CustomDocsStory,
@@ -196,6 +219,26 @@ export const FormFieldDescriptionWithParagraphElement: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: [
+      'e7c5e770-08ab-4882-a3ce-6b5da83e0c5f', // geldt voor alle stories, behalve RTL/writingmode
+      '377816a3-3bd8-4973-ba0a-85a3a9a1fca0', // geldt voor alle stories
+      '1a9edae4-c716-41ae-a456-7eb94d6c9e83', // geldt voor alle stories
+      '5c004bbb-66c4-46ea-932d-d1a568f2d872', // TODO: geldt voor alle stories, maar moet per story beoordeeld worden
+      '970e2771-8e8c-455d-b7d3-dba2136b58a6', // geldt voor alle stories
+      'afdf1dad-b5d6-4ceb-a8e0-4625b5d9ddd2', // TODO: geldt voor alle stories, maar zou eigenlijk via Design Tokens JSON validatie gecheckt moeten worden. We moeten de uitkomst van de validaties tonen.
+      'b443377e-8391-47e8-93e3-1609edb5a5a4', // geldt voor alle stories
+      '714ae310-075a-4bfc-a849-15336ed21b05', // geldt voor alle stories
+      '98f9decb-51e8-4603-a42d-b3373d56d28f', // geldt voor alle stories
+      '972859ae-1f02-4ba1-9240-cc5e4d88b009', // geldt voor alle stories
+      '4638bcd8-8a55-4549-96a8-eb0da762d629', // geldt voor alle stories
+    ],
+    acceptanceCriteriaResult: {
+      pass: [
+        'e7c5e770-08ab-4882-a3ce-6b5da83e0c5f',
+        '5c004bbb-66c4-46ea-932d-d1a568f2d872',
+        'afdf1dad-b5d6-4ceb-a8e0-4625b5d9ddd2', // TODO: geldt voor alle stories, maar zou eigenlijk via Design Tokens JSON validatie gecheckt moeten worden. We moeten de uitkomst van de validaties tonen.
+      ],
+    },
     docs: {
       description: {
         story: 'De kleur en typografie van de tekst komen overeen met het design van de Form Field Description.',
@@ -940,6 +983,7 @@ export const FormFieldDescriptionLangLTR: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['8cceca7c-6dbe-4295-8bf2-27f6a1158741'],
     docs: {
       description: {
         story:
@@ -991,6 +1035,7 @@ export const FormFieldDescriptionLangRTL: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['db46b84e-c927-4fe4-9129-6581d369aceb'],
     docs: {
       description: {
         story:
@@ -1043,6 +1088,7 @@ export const FormFieldDescriptionVerticalText: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['ef625a00-8dd7-402d-bedd-acfad6311a8e'],
     docs: {
       description: {
         story:
@@ -1139,6 +1185,7 @@ export const FormFieldDescriptionTextZoom: Story = {
   },
   globals: { fontSize: '32px' },
   parameters: {
+    acceptanceCriteriaList: ['5538d899-4b37-4994-9a58-e879bc2f4d96', '501a29fa-6f26-4ba6-9f65-fd2805056a3e'],
     docs: {
       description: {
         story:
@@ -1288,6 +1335,7 @@ export const FormFieldDescriptionForcedColorsMode: Story = {
     );
   },
   parameters: {
+    acceptanceCriteriaList: ['d0f97da6-9c70-45fb-b825-b71d651942da'],
     docs: {
       description: {
         story:

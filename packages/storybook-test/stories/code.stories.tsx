@@ -61,10 +61,10 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../src/WcagTests';
+} from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
 import tokens from '../../tokens/code-tokens/tokens.json';
 import '../../components-css/code-css/src/code.scss';
-import { CustomDocsStory } from '../config/custom-docs';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
 
 const meta = {
   argTypes: {

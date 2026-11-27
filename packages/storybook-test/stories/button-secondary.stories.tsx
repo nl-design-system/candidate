@@ -62,7 +62,7 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../src/WcagTests';
+} from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
 
 const { secondary, ...tokens } = allTokens.nl.button;
 

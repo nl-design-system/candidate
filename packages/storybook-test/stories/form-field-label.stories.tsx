@@ -4,9 +4,9 @@ import packageJSON from '../../components-react/form-field-label-react/package.j
 import { FormFieldLabel } from '../../components-react/form-field-label-react/src/form-field-label';
 import componentMarkdown from '../../docs/form-field-label-docs/docs/component.md?raw';
 import tokens from '../../tokens/form-field-label-tokens/tokens.json';
-import { CustomDocsStory } from '../config/custom-docs';
-import { WCAG22_AA_LEVEL } from '../src/WcagTests';
-// import { } from '../src/WcagTests'; // Vul aan door toegankelijkheidsexpert
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
+import { WCAG22_AA_LEVEL } from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
+// import { } from '@nl-design-system-candidate/storybook-shared/src/WcagTests'; // Vul aan door toegankelijkheidsexpert
 
 const meta = {
   argTypes: {

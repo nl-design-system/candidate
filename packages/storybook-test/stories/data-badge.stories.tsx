@@ -7,8 +7,8 @@ import packageJSON from '../../components-react/data-badge-react/package.json';
 import { DataBadge } from '../../components-react/data-badge-react/src/data-badge';
 import componentMarkdown from '../../docs/data-badge-docs/docs/component.md?raw';
 import tokens from '../../tokens/data-badge-tokens/tokens.json';
-import { CustomDocsStory } from '../config/custom-docs';
-import { WCAG22_AA_LEVEL } from '../src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
+import { WCAG22_AA_LEVEL } from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
 
 const meta = {
   argTypes: {

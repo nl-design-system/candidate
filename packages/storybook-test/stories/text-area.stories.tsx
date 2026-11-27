@@ -8,8 +8,8 @@ import reactMeta from '../../docs/text-area-docs/stories/text-area.react.meta';
 import tokens from '../../tokens/text-area-tokens/tokens.json';
 import '../../components-css/text-area-css/src/text-area.scss';
 import '../../components-css/text-area-css/src/test.scss';
-import { CustomDocsStory } from '../config/custom-docs';
-import { WCAG22_AA_LEVEL } from '../src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
+import { WCAG22_AA_LEVEL } from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
 
 const TextAreaDecorator: Decorator = (Story) => (
   <div className="test">
