@@ -117,7 +117,7 @@ const [passwordVisible, setPasswordVisible] = useState(false);
 ### Disabled and read-only
 
 Use `disabled` for an input field that cannot be used, and `readOnly` for a value that can be read and copied but not
-changed. Don't combine `disabled` with `readOnly` or `invalid`.
+changed.
 
 ## Props
 
