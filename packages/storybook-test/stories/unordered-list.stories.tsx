@@ -213,6 +213,7 @@ export const UnorderedListDefault: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -226,7 +227,7 @@ export const UnorderedListDefault: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -256,6 +257,7 @@ export const UnorderedListNestedUnorderedList: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -269,7 +271,7 @@ export const UnorderedListNestedUnorderedList: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -301,6 +303,7 @@ export const UnorderedListNestedOrderedList: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -314,7 +317,7 @@ export const UnorderedListNestedOrderedList: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -355,6 +358,7 @@ export const UnorderedListThreeLevelsNesting: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -368,7 +372,7 @@ export const UnorderedListThreeLevelsNesting: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -397,6 +401,7 @@ De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -411,7 +416,7 @@ De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="
         WCAG22_243_FOCUS_ORDER,
         WCAG22_312_LANGUAGE_OF_PARTS,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT],
+      notTested: [],
     },
   },
 };
@@ -440,6 +445,7 @@ De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -454,7 +460,7 @@ De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut \`lang="
         WCAG22_243_FOCUS_ORDER,
         WCAG22_312_LANGUAGE_OF_PARTS,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT],
+      notTested: [],
     },
   },
 };
@@ -680,6 +686,7 @@ export const UnorderedListDirParentOnly: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -694,7 +701,7 @@ export const UnorderedListDirParentOnly: Story = {
         WCAG22_243_FOCUS_ORDER,
         WCAG22_312_LANGUAGE_OF_PARTS,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT],
+      notTested: [],
     },
   },
 };
@@ -722,6 +729,7 @@ De styling wordt behouden door de NL HTML-component, deze past de styling van de
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -735,7 +743,7 @@ De styling wordt behouden door de NL HTML-component, deze past de styling van de
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -763,6 +771,7 @@ De styling wordt behouden door de NL HTML-component, deze past de styling van de
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -776,7 +785,7 @@ De styling wordt behouden door de NL HTML-component, deze past de styling van de
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -894,6 +903,7 @@ export const UnorderedListHTMLParagraphsInListItem: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -907,7 +917,7 @@ export const UnorderedListHTMLParagraphsInListItem: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -938,6 +948,7 @@ export const UnorderedListNLParagraphsInListItem: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -951,7 +962,7 @@ export const UnorderedListNLParagraphsInListItem: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -985,6 +996,7 @@ export const UnorderedListColumnLayout: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -998,7 +1010,7 @@ export const UnorderedListColumnLayout: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1028,6 +1040,7 @@ export const UnorderedListLongItemAcrossColumns: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1041,7 +1054,7 @@ export const UnorderedListLongItemAcrossColumns: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1108,6 +1121,7 @@ Toetsenbordgebruikers kunnen het scrollgebied bereiken met de Tab-toets en daarn
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1121,7 +1135,7 @@ Toetsenbordgebruikers kunnen het scrollgebied bereiken met de Tab-toets en daarn
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1194,6 +1208,7 @@ export const UnorderedListRichTextEditorNLParagraph: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1207,7 +1222,7 @@ export const UnorderedListRichTextEditorNLParagraph: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1248,6 +1263,7 @@ export const UnorderedListRichTextEditorNested: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1261,7 +1277,7 @@ export const UnorderedListRichTextEditorNested: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1286,6 +1302,7 @@ export const UnorderedListCentered: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1299,7 +1316,7 @@ export const UnorderedListCentered: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1334,6 +1351,7 @@ De tekstafstand is vergroot volgens [WCAG Succescriterium 1.4.12 Tekstafstand](h
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1347,7 +1365,7 @@ De tekstafstand is vergroot volgens [WCAG Succescriterium 1.4.12 Tekstafstand](h
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1377,6 +1395,7 @@ export const UnorderedList200PercentZoom: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1390,7 +1409,7 @@ export const UnorderedList200PercentZoom: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1416,6 +1435,7 @@ export const UnorderedListForcedColors: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1429,7 +1449,7 @@ export const UnorderedListForcedColors: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1455,6 +1475,7 @@ export const UnorderedListOneItem: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1468,7 +1489,7 @@ export const UnorderedListOneItem: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1520,6 +1541,7 @@ export const UnorderedListSoManyItems: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1533,7 +1555,7 @@ export const UnorderedListSoManyItems: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1561,6 +1583,7 @@ export const UnorderedListVeryLargeScreen: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1574,7 +1597,7 @@ export const UnorderedListVeryLargeScreen: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1605,6 +1628,7 @@ export const UnorderedListLinkInItem: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1618,7 +1642,7 @@ export const UnorderedListLinkInItem: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1668,6 +1692,7 @@ export const UnorderedListTableInItem: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1681,7 +1706,7 @@ export const UnorderedListTableInItem: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1707,6 +1732,7 @@ export const UnorderedListCssResetFull: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1720,7 +1746,7 @@ export const UnorderedListCssResetFull: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1745,6 +1771,7 @@ export const UnorderedListCssResetComponent: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1758,7 +1785,7 @@ export const UnorderedListCssResetComponent: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1784,6 +1811,7 @@ export const UnorderedListCssResetTheme: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1797,7 +1825,7 @@ export const UnorderedListCssResetTheme: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1837,6 +1865,7 @@ export const UnorderedListInvalidCssValues: Story = {
     testResult: {
       date: '2026-11-27',
       pass: [
+        WCAG22_111_NON_TEXT_CONTENT,
         WCAG22_131_INFO_AND_RELATIONSHIPS,
         WCAG22_142_AUDIO_CONTROL,
         WCAG22_143_CONTRAST_MINIMUM,
@@ -1850,7 +1879,7 @@ export const UnorderedListInvalidCssValues: Story = {
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
       ],
-      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
