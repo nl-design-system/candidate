@@ -246,6 +246,14 @@ describe('Text Input', () => {
       expect(element).not.toHaveClass('nl-text-input--invalid');
     });
 
+    it('can combine the invalid styling with the HTML-attribute `aria-invalid="grammar"`', () => {
+      render(<TextInput invalid aria-invalid="grammar" />);
+      const element = screen.getByRole('textbox');
+
+      expect(element).toHaveClass('nl-text-input--invalid');
+      expect(element).toHaveAttribute('aria-invalid', 'grammar');
+    });
+
     it('can show the invalid styling without setting `aria-invalid="true"`', () => {
       render(<TextInput invalid aria-invalid={false} />);
       const element = screen.getByRole('textbox');
