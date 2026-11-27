@@ -93,7 +93,23 @@ const meta = {
     },
     parameters: {
       acceptanceCriteria,
-      acceptanceCriteriaData: [...acceptanceCriteriaData, ...commonAcceptanceCriteriaData],
+      acceptanceCriteriaList: [...acceptanceCriteriaData, ...commonAcceptanceCriteriaData],
+      acceptanceCriteriaResult: {
+        pass: [
+          // 'e7c5e770-08ab-4882-a3ce-6b5da83e0c5f', // geldt voor alle stories, behalve RTL/writingmode
+          '377816a3-3bd8-4973-ba0a-85a3a9a1fca0', // geldt voor alle stories
+          '1a9edae4-c716-41ae-a456-7eb94d6c9e83', // geldt voor alle stories
+          '970e2771-8e8c-455d-b7d3-dba2136b58a6', // geldt voor alle stories
+          // 'afdf1dad-b5d6-4ceb-a8e0-4625b5d9ddd2', // TODO: geldt voor alle stories, maar zou eigenlijk via Design Tokens JSON validatie gecheckt moeten worden. We moeten de uitkomst van de validaties tonen.
+          'b443377e-8391-47e8-93e3-1609edb5a5a4', // geldt voor alle stories
+          '714ae310-075a-4bfc-a849-15336ed21b05', // geldt voor alle stories
+          '98f9decb-51e8-4603-a42d-b3373d56d28f', // geldt voor alle stories
+          '972859ae-1f02-4ba1-9240-cc5e4d88b009', // geldt voor alle stories
+          '4638bcd8-8a55-4549-96a8-eb0da762d629', // geldt voor alle stories
+        ],
+        notTested: [...acceptanceCriteriaData.map(({ id }) => id), ...commonAcceptanceCriteriaData.map(({ id }) => id)],
+      },
+
       docs: {
         components: {
           DocsStory: CustomDocsStory,
@@ -212,6 +228,13 @@ export const FormFieldDescriptionWithParagraphElement: Story = {
       '972859ae-1f02-4ba1-9240-cc5e4d88b009', // geldt voor alle stories
       '4638bcd8-8a55-4549-96a8-eb0da762d629', // geldt voor alle stories
     ],
+    acceptanceCriteriaResult: {
+      pass: [
+        'e7c5e770-08ab-4882-a3ce-6b5da83e0c5f',
+        '5c004bbb-66c4-46ea-932d-d1a568f2d872',
+        'afdf1dad-b5d6-4ceb-a8e0-4625b5d9ddd2', // TODO: geldt voor alle stories, maar zou eigenlijk via Design Tokens JSON validatie gecheckt moeten worden. We moeten de uitkomst van de validaties tonen.
+      ],
+    },
     docs: {
       description: {
         story: 'De kleur en typografie van de tekst komen overeen met het design van de Form Field Description.',

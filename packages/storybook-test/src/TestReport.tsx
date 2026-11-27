@@ -1,8 +1,7 @@
 import { useOf } from '@storybook/addon-docs/blocks';
 import without from 'lodash-es/without';
 import { TestResult } from './TestResult';
-import { successCriteria, versionSort } from './wcag22';
-import { isWcagTest, WcagTest } from './WcagTests';
+import { WcagTest } from './WcagTests';
 
 interface Baseline {
   date: string;
@@ -40,38 +39,38 @@ const baselineVersions: Baseline[] = [
 
 export const isNlDesginSystemTest = (testId: string) => testId === 'https://example.com/';
 
-export const isTestId = (testId: string) => isWcagTest(testId) || isNlDesginSystemTest(testId);
-
-interface WcagReference {
-  href: string;
-  linkText: string;
-  sortKey: string;
+interface TestReference<T = string> {
+  href?: string;
+  label: T;
+  sortKey?: string;
 }
 
-const createWcagReferences = (list: WcagTest[]): WcagReference[] =>
-  list
-    .map((test: WcagTest) => {
-      const successCriteriumData = successCriteria.find(({ url }) => url === test);
-      const href = successCriteriumData ? `https://nldesignsystem.nl/wcag/${successCriteriumData.sc}` : test;
-      const linkText = successCriteriumData
-        ? `WCAG-succescriterium ${successCriteriumData.sc} ${successCriteriumData.nl.title}`
-        : test;
-      const sortKey = successCriteriumData ? successCriteriumData.sc : '';
-      return {
-        href,
-        linkText,
-        sortKey,
-      };
-    })
-    .sort((a, b) => versionSort(a.sortKey, b.sortKey));
+export interface AcceptanceCriterium {
+  id: string;
+  title: string;
+}
+
+const createAcceptanceCriteriaReferences = (
+  data: Map<string, AcceptanceCriterium>,
+  list: TestReference[],
+): TestReference[] =>
+  list.map(({ label: id }: TestReference) => {
+    const ac = data.get(id);
+    const href = ac ? `https://nldesignsystem.nl/wcag/${ac.id}` : id;
+    const label = ac ? ac.title : id;
+    return {
+      href,
+      label,
+    };
+  });
 
 export const createTestResult = (parameters: object & Partial<TestResult>) => {
   const empty: string[] = [];
-  const cannotTell = [...new Set(parameters.cannotTell || empty)].filter((testId) => isTestId(testId));
-  const notApplicable = (parameters.notApplicable || empty).filter((testId) => isTestId(testId));
-  const pass = (parameters.pass || empty).filter((testId) => isTestId(testId));
-  const fail = (parameters.fail || empty).filter((testId) => isTestId(testId));
-  const notTested = (parameters.notTested || empty).filter((testId) => isTestId(testId));
+  const cannotTell = [...new Set(parameters.cannotTell || empty)];
+  const notApplicable = parameters.notApplicable || empty;
+  const pass = parameters.pass || empty;
+  const fail = parameters.fail || empty;
+  const notTested = parameters.notTested || empty;
 
   const all: WcagTest[] = [...cannotTell, ...fail, ...notApplicable, ...notTested, ...pass];
 
@@ -98,7 +97,7 @@ const extendAudit = (partialAudit: Partial<TestResult>, baseAudit: Partial<TestR
   cannotTell = without(cannotTell, ...fail, ...pass);
   pass = without(pass, ...fail);
 
-  const all: WcagTest[] = [...cannotTell, ...fail, ...notApplicable, ...notTested, ...pass];
+  const all: string[] = [...cannotTell, ...fail, ...notApplicable, ...notTested, ...pass];
 
   return {
     ...baseAudit,
@@ -129,20 +128,15 @@ const CommonData = () => (
   </>
 );
 
-const Result = ({ label, list, open }: { label: string; list: WcagTest[]; open?: boolean }) =>
+const Result = ({ label, list, open }: { label: string; list: { href?: string; label: string }[]; open?: boolean }) =>
   list.length > 0 ? (
     <details open={open}>
       <summary>
         {label}: {list.length}
       </summary>
       <ul>
-        {createWcagReferences(list).map(({ href, linkText }) => {
-          return (
-            <li key={href}>
-              {'Test gebaseerd op: '}
-              <a href={href}>{linkText}</a>
-            </li>
-          );
+        {list.map(({ href, label }) => {
+          return <li key={href}>{href ? <a href={href}>{label}</a> : label}</li>;
         })}
       </ul>
     </details>
@@ -153,16 +147,20 @@ const Result = ({ label, list, open }: { label: string; list: WcagTest[]; open?:
   );
 
 interface SimpleTestReportProps {
+  acceptanceCriteria?: Map<string, AcceptanceCriterium>;
   isFullReport: boolean;
   story: Story;
   testResult: TestResult;
-  url: string;
+  url?: string;
   baseline?: Baseline;
   heading?: string;
   headingLevel?: number;
 }
+const createReference = (str: string): TestReference => ({ label: str });
+const createReferences = (strings: string[]): TestReference[] => strings.map((x) => createReference(x));
 
 export const SimpleTestReport = ({
+  acceptanceCriteria = new Map(),
   story,
   url,
   isFullReport,
@@ -172,42 +170,62 @@ export const SimpleTestReport = ({
   headingLevel,
 }: SimpleTestReportProps) => {
   const Heading = `h${headingLevel ?? 3}`;
+
   return (
-    <div key={story.id}>
+    <div>
       <Heading>{heading || story.name}</Heading>
       {isFullReport ? CommonData() : null}
       <ul>
         <li>
-          <Result label="Voldoet" list={testResult.pass} open />
+          <Result
+            label="Voldoet"
+            list={createAcceptanceCriteriaReferences(acceptanceCriteria, createReferences(testResult.pass))}
+            open
+          />
         </li>
         <li>
-          <Result label="Voldoet niet" list={testResult.fail} open />
+          <Result
+            label="Voldoet niet"
+            list={createAcceptanceCriteriaReferences(acceptanceCriteria, createReferences(testResult.fail))}
+            open
+          />
         </li>
         <li>
-          <Result label="Kan niet worden vastgesteld" list={testResult.cannotTell} />
+          <Result
+            label="Kan niet worden vastgesteld"
+            list={createAcceptanceCriteriaReferences(acceptanceCriteria, createReferences(testResult.cannotTell))}
+          />
         </li>
         <li>
-          <Result label="Niet van toepassing" list={testResult.notApplicable} />
+          <Result
+            label="Niet van toepassing"
+            list={createAcceptanceCriteriaReferences(acceptanceCriteria, createReferences(testResult.notApplicable))}
+          />
         </li>
         <li>
-          <Result label="Niet getest" list={testResult.notTested} />
+          <Result
+            label="Niet getest"
+            list={createAcceptanceCriteriaReferences(acceptanceCriteria, createReferences(testResult.notTested))}
+          />
         </li>
       </ul>
       <dl>
-        <div>
-          <dt>URL voor de test:</dt>
-          <dd>
-            <a
-              href={url}
-              target="wcag_evaluation"
-              aria-label={`${
-                (story.parameters && story.parameters['globals'] && story.parameters['globals'].title) || story.name
-              } (opent in nieuw venster)`}
-            >
-              <code>{url}</code> (opent in nieuw venster)
-            </a>
-          </dd>
-        </div>
+        {url && (
+          <div>
+            <dt>URL voor de test:</dt>
+            <dd>
+              <a
+                href={url}
+                target="wcag_evaluation"
+                aria-label={`${
+                  (story.parameters && story.parameters['globals'] && story.parameters['globals'].title) || story.name
+                } (opent in nieuw venster)`}
+              >
+                <code>{url}</code> (opent in nieuw venster)
+              </a>
+            </dd>
+          </div>
+        )}
         {testResult.date ? (
           <div>
             <dt>Datum van de test:</dt>
@@ -232,24 +250,34 @@ export const SimpleTestReport = ({
 };
 
 interface StoryTestReportProps {
+  acceptanceCriteria?: Map<string, AcceptanceCriterium>;
   story: Story;
   baseAudit: Partial<TestResult>;
+  partialAudit: Partial<TestResult>;
   heading?: string;
   headingLevel?: number;
 }
 
-export const StoryTestReport = ({ story, baseAudit, heading, headingLevel }: StoryTestReportProps) => {
+export const StoryTestReport = ({
+  acceptanceCriteria,
+  story,
+  baseAudit,
+  heading,
+  headingLevel,
+  partialAudit,
+}: StoryTestReportProps) => {
   const isFullReport = false;
   const baseUrl = typeof location === 'undefined' ? '' : location.href;
-  const relativeUrl = `./iframe.html?${new URLSearchParams({
-    id: story.id,
-    args: '',
-    globals: '',
-    viewMode: 'story',
-  }).toString()}`;
-  const url = baseUrl ? new URL(relativeUrl, baseUrl).href : relativeUrl;
+  const relativeUrl = story
+    ? `./iframe.html?${new URLSearchParams({
+        id: story.id,
+        args: '',
+        globals: '',
+        viewMode: 'story',
+      }).toString()}`
+    : undefined;
+  const url = baseUrl && relativeUrl ? new URL(relativeUrl, baseUrl).href : relativeUrl;
 
-  const partialAudit = createTestResult((story.parameters && story.parameters['testResult']) || {});
   const testResult = baseAudit ? extendAudit(partialAudit, baseAudit) : partialAudit;
 
   const baseline =
@@ -259,8 +287,8 @@ export const StoryTestReport = ({ story, baseAudit, heading, headingLevel }: Sto
 
   return (
     <SimpleTestReport
-      key={story.id}
       story={story}
+      acceptanceCriteria={acceptanceCriteria}
       testResult={testResult}
       baseline={baseline}
       url={url}
