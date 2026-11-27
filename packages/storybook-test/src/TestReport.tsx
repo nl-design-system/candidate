@@ -36,6 +36,11 @@ const baselineVersions: Baseline[] = [
     href: 'https://nldesignsystem.nl/baseline/2026-09/',
     text: 'NL Design System Baseline: september 2026',
   },
+  {
+    date: '2026-11-27',
+    href: 'https://nldesignsystem.nl/baseline/2026-11/',
+    text: 'NL Design System Baseline: november 2026',
+  },
 ];
 
 export const isNlDesginSystemTest = (testId: string) => testId === 'https://example.com/';
