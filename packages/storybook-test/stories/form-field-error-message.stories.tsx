@@ -73,8 +73,8 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../src/WcagTests';
-import { CustomDocsStory } from '../config/custom-docs';
+} from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
 
 const AlternativeHTMLFormFieldErrorMessage = ({
   Component = 'div',

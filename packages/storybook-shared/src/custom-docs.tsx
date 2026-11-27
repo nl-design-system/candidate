@@ -1,7 +1,7 @@
 import { DocsStory, useOf, type DocsStoryProps } from '@storybook/addon-docs/blocks';
-import { AcceptanceCriterium, createTestResult, StoryTestReport } from '../src/TestReport';
-import { TestResult } from '../src/TestResult';
-import { successCriteriaMap as wcagAcceptanceCriteria } from '../src/wcag22';
+import { AcceptanceCriterium, createTestResult, StoryTestReport } from './TestReport';
+import { TestResult } from './TestResult';
+import { successCriteriaMap as wcagAcceptanceCriteria } from './wcag22';
 
 const createAcceptanceCriteriaMap = (list: AcceptanceCriterium[]): Map<string, AcceptanceCriterium> =>
   new Map(list.map((data) => [data.id, data]));

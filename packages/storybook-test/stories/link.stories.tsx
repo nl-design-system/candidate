@@ -9,8 +9,8 @@ import packageJSON from '../../components-react/link-react/package.json';
 import { Link } from '../../components-react/link-react/src/link';
 import componentMarkdown from '../../docs/link-docs/docs/component.md?raw';
 import tokens from '../../tokens/link-tokens/tokens.json';
-import { CustomDocsStory } from '../config/custom-docs';
-import { WCAG22_AA_LEVEL } from '../src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
+import { WCAG22_AA_LEVEL } from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
 
 const ExampleImage = () => (
   <svg

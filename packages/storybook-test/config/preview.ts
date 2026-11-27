@@ -7,7 +7,7 @@ import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
 import '@nl-design-system-candidate/storybook-shared/src/candidate-theme.css';
 import '@nl-design-system-candidate/storybook-shared/src/component-forced-colors-simulation.scss';
 import type { Preview } from '@storybook/react-vite';
-import { DocsPage } from '../src/DocsPage';
+import { DocsPage } from '@nl-design-system-candidate/storybook-shared/src/DocsPage';
 import { statuses } from './statuses';
 import { viewports } from './viewports';
 

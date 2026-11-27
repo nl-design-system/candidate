@@ -8,8 +8,8 @@ import reactMeta from '../../docs/form-field-status-docs/stories/form-field-stat
 import tokens from '../../tokens/form-field-status-tokens/tokens.json';
 import '../../components-css/form-field-status-css/src/form-field-status.scss';
 import '../../components-css/form-field-status-css/src/test.scss';
-import { CustomDocsStory } from '../config/custom-docs';
-import { WCAG22_AA_LEVEL } from '../src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
+import { WCAG22_AA_LEVEL } from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
 
 const FormFieldStatusDecorator: Decorator = (Story) => (
   <div className="test">

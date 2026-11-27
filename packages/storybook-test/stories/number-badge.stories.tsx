@@ -9,8 +9,8 @@ import packageJSON from '../../components-react/number-badge-react/package.json'
 import { NumberBadge } from '../../components-react/number-badge-react/src/number-badge';
 import componentMarkdown from '../../docs/number-badge-docs/docs/component.md?raw';
 import tokens from '../../tokens/number-badge-tokens/tokens.json';
-import { CustomDocsStory } from '../config/custom-docs';
-import { WCAG22_AA_LEVEL } from '../src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
+import { WCAG22_AA_LEVEL } from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
 
 const meta = {
   argTypes: {

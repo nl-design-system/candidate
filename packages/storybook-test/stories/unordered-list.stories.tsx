@@ -5,9 +5,9 @@ import packageJSON from '../../components-react/unordered-list-react/package.jso
 import { UnorderedList } from '../../components-react/unordered-list-react/src/unordered-list';
 import componentMarkdown from '../../docs/unordered-list-docs/docs/component.md?raw';
 import tokens from '../../tokens/unordered-list-tokens/tokens.json';
-import { CustomDocsStory } from '../config/custom-docs';
-import { WCAG22_AA_LEVEL } from '../src/WcagTests';
-// import { } from '../src/WcagTests'; // Vul aan door toegankelijkheidsexpert
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
+import { WCAG22_AA_LEVEL } from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
+// import { } from '@nl-design-system-candidate/storybook-shared/src/WcagTests'; // Vul aan door toegankelijkheidsexpert
 
 const meta = {
   argTypes: {

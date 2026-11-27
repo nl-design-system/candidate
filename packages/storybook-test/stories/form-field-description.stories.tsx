@@ -10,7 +10,11 @@ import acceptanceCriteria from '../../docs/form-field-description-docs/docs/acce
 import componentMarkdown from '../../docs/form-field-description-docs/docs/component.md?raw';
 import reactMeta from '../../docs/form-field-description-docs/stories/form-field-description.react.meta';
 import tokens from '../../tokens/form-field-description-tokens/tokens.json';
-import { LargeLetterSpacingDecorator, LargeLineHeightDecorator, LargeWordSpacingDecorator } from '../src/TextDecorator';
+import {
+  LargeLetterSpacingDecorator,
+  LargeLineHeightDecorator,
+  LargeWordSpacingDecorator,
+} from '@nl-design-system-candidate/storybook-shared/src/TextDecorator';
 import type { PropsWithChildren } from 'react';
 import acceptanceCriteriaData from '../../docs/form-field-description-docs/stories/acceptance-criteria';
 import commonAcceptanceCriteriaData from '../src/common-acceptance-criteria';
@@ -70,8 +74,8 @@ import {
   WCAG22_338_ACCESSIBLE_AUTHENTICATION_MINIMUM,
   WCAG22_412_NAME_ROLE_VALUE,
   WCAG22_413_STATUS_MESSAGES,
-} from '../src/WcagTests';
-import { CustomDocsStory } from '../config/custom-docs';
+} from '@nl-design-system-candidate/storybook-shared/src/WcagTests';
+import { CustomDocsStory } from '@nl-design-system-candidate/storybook-shared/src/custom-docs';
 
 const AlternativeHTMLFormFieldDescription = ({
   children,
