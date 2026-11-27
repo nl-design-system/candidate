@@ -6,6 +6,7 @@ import '../../components-css/button-css/src/button.scss';
 import '../../components-css/form-field-error-message-css/src/form-field-error-message.scss';
 import '../../components-css/text-input-css/src/text-input.scss';
 import '../../components-css/text-input-css/src/html/text-input.scss';
+import '../../components-css/text-input-css/src/test.scss';
 import { Button } from '../../components-react/button-react/src/button';
 import { FormFieldErrorMessage } from '../../components-react/form-field-error-message-react/src/form-field-error-message';
 import packageJSON from '../../components-react/text-input-react/package.json';
@@ -851,13 +852,24 @@ export const TextInputForcedColorsMode: Story = {
         <label htmlFor="2db884ee-9882-4482-b388-0c532789cf10">Naam</label>
       </div>
       <div>
-        <TextInput id="2db884ee-9882-4482-b388-0c532789cf10" autoComplete="name" defaultValue="Jan Jansen" />
+        <TextInput
+          id="2db884ee-9882-4482-b388-0c532789cf10"
+          autoComplete="name"
+          className="nl-text-input--forced-colors-test"
+          defaultValue="Jan Jansen"
+        />
       </div>
       <div>
         <label htmlFor="5740e3a5-0033-44d3-9c57-7ccc0a7970f5">Naam</label>
       </div>
       <div>
-        <TextInput id="5740e3a5-0033-44d3-9c57-7ccc0a7970f5" autoComplete="name" defaultValue="Jan Jansen" disabled />
+        <TextInput
+          id="5740e3a5-0033-44d3-9c57-7ccc0a7970f5"
+          autoComplete="name"
+          className="nl-text-input--forced-colors-test"
+          defaultValue="Jan Jansen"
+          disabled
+        />
       </div>
     </>
   ),

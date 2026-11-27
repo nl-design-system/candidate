@@ -88,9 +88,10 @@
   cursor: not-allowed;
 }
 
+/* Forcefully apply CSS system-color values using `!important`. */
 @mixin nl-text-input--forced-colors-disabled {
-  border-color: GrayText;
-  color: GrayText;
+  border-color: GrayText !important;
+  color: GrayText !important;
 }
 
 @mixin nl-text-input--xs {
