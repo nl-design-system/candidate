@@ -14,6 +14,8 @@ import { TextInput } from '../../components-react/text-input-react/src/text-inpu
 import acceptanceCriteria from '../../docs/text-input-docs/docs/acceptance-criteria.md?raw';
 import componentMarkdown from '../../docs/text-input-docs/docs/component.md?raw';
 import reactMeta from '../../docs/text-input-docs/stories/text-input.react.meta';
+import acceptanceCriteriaData from '../../docs/text-input-docs/stories/acceptance-criteria';
+import { CustomDocsStory } from '../config/custom-docs';
 import tokens from '../../tokens/text-input-tokens/tokens.json';
 import { FormFieldDescription } from '../../components-react/form-field-description-react/src/form-field-description';
 import {
@@ -101,10 +103,14 @@ const meta = {
       lang: 'nl',
     },
     parameters: {
+      acceptanceCriteria,
+      acceptanceCriteriaData,
       // TODO: When component is implemented, enable Chromatic
       chromatic: { disableSnapshot: true },
-      acceptanceCriteria,
       docs: {
+        components: {
+          DocsStory: CustomDocsStory,
+        },
         description: {
           component: componentMarkdown,
         },
