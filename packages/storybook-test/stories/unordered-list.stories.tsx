@@ -506,9 +506,8 @@ export const UnorderedListCustomMarkerNoLabel: Story = {
         WCAG22_222_PAUSE_STOP_HIDE,
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
-        WCAG22_312_LANGUAGE_OF_PARTS,
       ],
-      notTested: [],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -562,9 +561,8 @@ export const UnorderedListCustomMarkerLabel: Story = {
         WCAG22_222_PAUSE_STOP_HIDE,
         WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
         WCAG22_243_FOCUS_ORDER,
-        WCAG22_312_LANGUAGE_OF_PARTS,
       ],
-      notTested: [],
+      notTested: [WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -641,6 +639,24 @@ export const UnorderedListHidden: Story = {
           'Een ongeordende lijst die verborgen is voor bezoekers en voor screenreadergebruikers. De inhoud is aanwezig in de code, maar niet zichtbaar en niet voorleesbaar.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -660,6 +676,25 @@ export const UnorderedListDirParentOnly: Story = {
         story:
           'Een ongeordende lijst met Arabische tekst, de markers staan aan de rechterkant en de tekst loopt van rechts naar links. De taal van de lijst wordt ingesteld op Arabisch via het HTML-attribuut `lang="ar"`. De schrijfrichting is ingesteld via het HTML-attribuut `dir="rtl"`.',
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+        WCAG22_312_LANGUAGE_OF_PARTS,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT],
     },
   },
 };
@@ -684,6 +719,24 @@ export const UnorderedListNLHTMLAll: Story = {
 De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ul\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--all\` class.`,
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -706,6 +759,24 @@ export const UnorderedListNLHTMLUnorderedList: Story = {
 
 De styling wordt behouden door de NL HTML-component, deze past de styling van de NL Unordered List-component toe op alle \`ul\` HTML-elementen en onderliggende \`li\` HTML-elementen binnen een element met de \`nl-html--unordered-list\` class.`,
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -733,6 +804,24 @@ export const UnorderedListAlternativeHTMLDivs: Story = {
           'Een ongeordende lijst opgemaakt met meerdere HTML-elementen `div`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. Screenreadergebruikers krijgen daardoor de juiste informatie: een lijst met drie items. Visueel staan de items onder elkaar en krijgen ze de typografie en inspringing van de component, maar zonder bolletjes. Alleen de HTML-elementen `ul` en `li` krijgen bolletjes van de browser.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -759,6 +848,24 @@ export const UnorderedListAlternativeHTMLSpans: Story = {
           'Een ongeordende lijst opgemaakt met meerdere HTML-elementen `span`. Deze elementen hebben niet de juiste semantiek voor een lijst met items, de HTML-attributen `role="list"` en `role="listitem"` worden gebruikt om de semantiek toe te voegen. Screenreadergebruikers krijgen daardoor de juiste informatie: een lijst met drie items. Visueel ziet het er niet uit als een lijst: de items lopen zonder bolletjes achter elkaar door als één doorlopende tekst, omdat het HTML-element `span` een inline element is. Alleen de HTML-elementen `ul` en `li` krijgen bolletjes van de browser.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -783,6 +890,24 @@ export const UnorderedListHTMLParagraphsInListItem: Story = {
       description: {
         story: `Een ongeordende lijst waarvan het eerste item begint met platte tekst, gevolgd door twee alinea's in HTML-elementen \`p\`. De alinea's staan recht onder de tekst van het item, niet onder het bolletje. De witruimte tussen de alinea's komt uit de alinea-witruimte van het thema. Screenreadergebruikers horen een lijst met drie items, waarbij beide alinea's bij het eerste item horen.`,
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -809,6 +934,24 @@ export const UnorderedListNLParagraphsInListItem: Story = {
         story:
           "Een ongeordende lijst waarvan het eerste item begint met platte tekst, gevolgd door twee NL Paragraph-componenten. De alinea's staan recht onder de tekst van het item, niet onder het bolletje. De witruimte tussen de alinea's komt uit de alinea-witruimte van het thema. Screenreadergebruikers horen een lijst met drie items, waarbij beide alinea's bij het eerste item horen.",
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -839,6 +982,24 @@ export const UnorderedListColumnLayout: Story = {
           'Een ongeordende lijst verdeeld over meerdere kolommen. De items worden van boven naar beneden gevuld en gaan door in de volgende kolom. De logische volgorde van de items blijft onveranderd.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -863,6 +1024,24 @@ export const UnorderedListLongItemAcrossColumns: Story = {
         story:
           'Een ongeordende lijst verdeeld over meerdere kolommen. De tekst van een item loopt door in de volgende kolom. De marker van het item blijft in de eerste kolom staan.',
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -926,6 +1105,24 @@ export const UnorderedListHorizontalScrollMobile: Story = {
 Toetsenbordgebruikers kunnen het scrollgebied bereiken met de Tab-toets en daarna scrollen met de pijltjestoetsen. Screenreadergebruikers horen het gebied als "Benodigdheden paspoortaanvraag" en daarna de lijst met de items.`,
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -951,6 +1148,24 @@ export const UnorderedListRichTextEditorParagraph: Story = {
           'Een ongeordende lijst zoals een Rich Text Editor die kan opslaan, zonder CSS classes binnen een element met de `nl-html--all` class. Het tweede item begint met platte tekst; na het indrukken van Enter volgt een alinea in het HTML-element `p`. De alinea staat recht onder de tekst van het item, niet onder het bolletje. De witruimte boven en onder de alinea komt uit de alinea-witruimte van het thema; is die 0, dan sluit de alinea direct aan op de tekst ervoor en op het volgende item. Screenreadergebruikers horen een lijst met drie items, waarbij de alinea bij het tweede item hoort.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -975,6 +1190,24 @@ export const UnorderedListRichTextEditorNLParagraph: Story = {
         story:
           'Een ongeordende lijst zoals een Rich Text Editor die kan opslaan, zonder CSS classes binnen een element met de `nl-html--all` class. Het tweede item begint met platte tekst; na het indrukken van Enter volgt een alinea als NL Paragraph-component. De alinea staat recht onder de tekst van het item, niet onder het bolletje. De witruimte boven en onder de alinea komt uit de alinea-witruimte van het thema; is die 0, dan sluit de alinea direct aan op de tekst ervoor en op het volgende item. Screenreadergebruikers horen een lijst met drie items, waarbij de alinea bij het tweede item hoort.',
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1012,6 +1245,24 @@ export const UnorderedListRichTextEditorNested: Story = {
           'Een ongeordende lijst zoals een Rich Text Editor die kan opslaan, zonder CSS classes binnen een element met de `nl-html--all` class. Items beginnen met platte tekst, gevolgd door een geneste ongeordende lijst, een link of een geneste geordende lijst. De geneste lijsten springen in onder de tekst van hun item, de geneste ongeordende lijst krijgt een ander leesteken en de geordende lijst krijgt nummers, zodat de hiërarchie zichtbaar blijft. Screenreadergebruikers horen de geneste lijsten als lijsten binnen het bijbehorende item.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -1031,6 +1282,24 @@ export const UnorderedListCentered: Story = {
         story:
           'Een gecentreerde lijst. In plaats van links uitgelijnd, is de tekst in het midden uitgelijnd. Het bolletje staat direct voor de tekst van elk item, zodat duidelijk blijft welk bolletje bij welk item hoort. Screenreadergebruikers horen de lijst en de items, net als bij een links uitgelijnde lijst.',
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1062,6 +1331,24 @@ De tekstafstand is vergroot volgens [WCAG Succescriterium 1.4.12 Tekstafstand](h
 - Woordafstand: minimaal 16% van de lettergrootte`,
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -1087,6 +1374,24 @@ export const UnorderedList200PercentZoom: Story = {
           'Een ongeordende lijst waarvan de tekst 200% vergroot is, zoals een bezoeker dat kan instellen als standaard lettergrootte in de browser. De markers groeien mee met de tekst en de inspringing groeit mee, zodat de markers niet over de tekst heen vallen. Er gaat geen content verloren en er hoeft niet horizontaal gescrold te worden om de tekst te kunnen lezen.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -1108,6 +1413,24 @@ export const UnorderedListForcedColors: Story = {
           'Een ongeordende lijst in forced colors modus. Forced colors is een instelling waarbij het besturingssysteem van de bezoeker een eigen kleurenschema afdwingt op alle content, bijvoorbeeld voor mensen met een visuele beperking die veel baat hebben bij hoog contrast. De markers en de tekst van de lijst krijgen allebei de tekstkleur van dat kleurenschema, zodat ze goed zichtbaar blijven.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -1128,6 +1451,24 @@ export const UnorderedListOneItem: Story = {
         story:
           'Een ongeordende lijst bestaande uit één item. Ook met één item wordt de lijst als lijst herkend door screenreaders en krijgt het item een marker.',
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1176,6 +1517,24 @@ export const UnorderedListSoManyItems: Story = {
           'Een ongeordende lijst bestaande uit 30 items. Ook met heel veel items blijft de opmaak goed toegepast en begint de tekst van alle items op dezelfde plek. Screenreadergebruikers horen dat de lijst 30 items bevat.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -1198,6 +1557,24 @@ export const UnorderedListVeryLargeScreen: Story = {
         story:
           'Een ongeordende lijst, weergegeven op een heel breed scherm (1920 pixels). Ook op een breed scherm wordt de opmaak goed toegepast: de markers blijven dicht bij de tekst staan en de inspringing wordt niet breder.',
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1224,6 +1601,24 @@ export const UnorderedListLinkInItem: Story = {
         story:
           'Een ongeordende lijst waarin elk item een link bevat. De markers zelf zijn geen onderdeel van de link en niet klikbaar. Toetsenbordgebruikers gaan met de Tab-toets van link naar link, in de volgorde van de lijst; de lijst zelf krijgt geen focus.',
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1270,6 +1665,24 @@ export const UnorderedListTableInItem: Story = {
           'Een ongeordende lijst waarin een van de items een tabel bevat. De tabel staat onder de tekst van het item en springt mee in, zodat duidelijk is dat de tabel bij dat item hoort. Screenreadergebruikers horen de tabel met haar bijschrift binnen het tweede item.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -1291,6 +1704,24 @@ export const UnorderedListCssResetFull: Story = {
           'Een ongeordende lijst waarin de styling van de component en het thema niet worden toegepast. De browser toont de lijst met zijn eigen lettertype, bolletjes en inspringing. De combinatie van de HTML en de browser styling houdt de lijst visueel bruikbaar en toegankelijk.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -1310,6 +1741,24 @@ export const UnorderedListCssResetComponent: Story = {
         story:
           'Een ongeordende lijst zonder de CSS classes van de component, binnen een pagina waarop het thema wel actief is. Het thema levert alleen design tokens; zonder component classes gebruikt de lijst die niet, dus de lijst krijgt het lettertype, de bolletjes en de inspringing van de browser. De combinatie van de HTML en de browser styling houdt de lijst visueel bruikbaar en toegankelijk.',
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1331,6 +1780,24 @@ export const UnorderedListCssResetTheme: Story = {
         story:
           'Een ongeordende lijst waarin de styling van de component wel wordt toegepast, maar de styling van het thema niet. De combinatie van de HTML, de browser styling en de component styling houdt de lijst visueel bruikbaar en toegankelijk.',
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
@@ -1367,6 +1834,24 @@ export const UnorderedListInvalidCssValues: Story = {
           'Een ongeordende lijst waarvan alle design tokens een ongeldige waarde hebben, bijvoorbeeld een kleur van `10px` of een inspringing van `red`. De browser negeert die waarden en valt terug op de overgeërfde of standaardwaarde van elke eigenschap. De lijst blijft visueel bruikbaar en toegankelijk.',
       },
     },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
+    },
   },
 };
 
@@ -1387,6 +1872,24 @@ export const UnorderedListNoMarkers: Story = {
 
 De markers zijn verborgen met de CSS-eigenschap \`list-style-type: ""\` in plaats van \`none\`, en de lijst heeft het HTML-attribuut \`role="list"\`. Zo blijft de lijst ook in WebKit-browsers herkenbaar als lijst en horen screenreadergebruikers dat het een lijst met drie items is.`,
       },
+    },
+    testResult: {
+      date: '2026-11-27',
+      pass: [
+        WCAG22_131_INFO_AND_RELATIONSHIPS,
+        WCAG22_142_AUDIO_CONTROL,
+        WCAG22_143_CONTRAST_MINIMUM,
+        WCAG22_144_RESIZE_TEXT,
+        WCAG22_1410_REFLOW,
+        WCAG22_1411_NON_TEXT_CONTRAST,
+        WCAG22_1412_TEXT_SPACING,
+        WCAG22_212_NO_KEYBOARD_TRAP,
+        WCAG22_211_KEYBOARD,
+        WCAG22_222_PAUSE_STOP_HIDE,
+        WCAG22_231_THREE_FLASHES_OR_BELOW_THRESHOLD,
+        WCAG22_243_FOCUS_ORDER,
+      ],
+      notTested: [WCAG22_111_NON_TEXT_CONTENT, WCAG22_312_LANGUAGE_OF_PARTS],
     },
   },
 };
